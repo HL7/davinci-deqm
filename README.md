@@ -24,7 +24,7 @@ http://build.fhir.org/ig/HL7/deqm/build.log
 
 ### Dependencies Files
 
-For implementation guides that are dependent upon US-Core the most current definitions and validation pack files are available for download here:
+The following package file contains an NPM package file "hl7.fhir.deqm" with all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this version of the Implementation Guides. This file should be the first choice whenever generating any implementation artifacts since it contains all of the rules about what makes the profiles valid. Implementers will still need to be familiar with the content of the specification and profiles that apply in order to make a conformant implementation. See the overview on validating FHIR profiles and resource
 
-- [validator pack](http://build.fhir.org/ig/HL7/deqm/validator.pack)
-- [definitions.json.zip](http://build.fhir.org/ig/HL7/deqm/definitions.json.zip)
+- [package](http://build.fhir.org/ig/HL7/deqm/package.tgz)
+
