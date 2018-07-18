@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
+	<id value="davinci-profiles"/>
+	<url value="http://hl7.org/fhir/ig/davinci/CodeSystem/davinci-profiles"/>
+	<version value="1.0.0"/>
+	<name value="Davinci_Profiles"/>
+	<title value="Davinci Profiles"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2018-06-24"/>
+	<description value="Codes that represent the Da Vinci project set of profiles.  The concept codes are equivalent to the StructureDefinition.id, the Display to the StructureDefinition. element and the defiinition are from the StructureDefinition.description"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<caseSensitive value="true"/>
+	<valueSet value="http://hl7.org/fhir/ig/davinci/ValueSet/davinci-profiles"/>
+	<content value="complete"/>
+	<concept>
+		<code value="coverage-davinci"/>
+		<display value="Da Vinci Coverage Profile"/>
+		<definition value="The Da Vinci Coverage Profile defines the constraints for representing the coverage where the Medication Reconciliation records are kept."/>
+	</concept>
+	<concept>
+		<code value="location-davinci"/>
+		<display value="Da Vinci Location Profile"/>
+		<definition value="The Da Vinci Location Profile defines the constraints for representing the coverage id."/>
+	</concept>
+	<concept>
+		<code value="measurereport-mrp"/>
+		<display value="Da Vinci MeasureReport MRP Profile"/>
+		<definition value="The Da Vinci MeasureReport MRP Profile is based on the Da Vinci MeasureReport Profile and constrains the `measure` element to medication reconciliation post-discharge and the `evaluatedResources` element to Task or Observation profiles."/>
+	</concept>
+	<concept>
+		<code value="measurereport-davinci"/>
+		<display value="Da Vinci MeasureReport Profile"/>
+		<definition value="The Da Vinci MeasureReport Profile."/>
+	</concept>
+	<concept>
+		<code value="organization-davinci"/>
+		<display value="Da Vinci Organization Profile"/>
+		<definition value="The Da Vinci Organization Profile defines the constraints for representing the organization whch is responsible for the Medication Reconciliation."/>
+	</concept>
+	<concept>
+		<code value="patient-davinci"/>
+		<display value="Da Vinci Patient Profile"/>
+		<definition value="The Da Vinci Patient Profile defines the constraints for representing a patient who is the subject of a Medication Reconciliation."/>
+	</concept>
+	<concept>
+		<code value="practitioner-davinci"/>
+		<display value="Da Vinci Practitioner Profile"/>
+		<definition value="The Da Vinci Practitioner Profile defines the constraints for representing the practitioner who is responsible for the Medication Reconciliation."/>
+	</concept>
+	<concept>
+		<code value="practitionerrole-davinci"/>
+		<display value="Da Vinci PractitionerRole Profile"/>
+		<definition value="The Da Vinci PractitionerRole Profile defines the constraints for representing the role which is responsible for the Medication Reconciliation."/>
+	</concept>
+	<concept>
+		<code value="observation-mrp"/>
+		<display value="Da Vinci Observation MRP Profile"/>
+		<definition value="The Da Vinci Observation MRP Profile is based upon the Da Vinci Observation Measure Profile and constrains the code(s) for representing the medication reconciliation post-discharge."/>
+	</concept>
+	<concept>
+		<code value="observation-measure"/>
+		<display value="Da Vinci Observation Measure Profile"/>
+		<definition value="The Da Vinci Observation Measure Profile defines the constraints for representing the completion of a quality measure."/>
+	</concept>
+	<concept>
+		<code value="task-mrp"/>
+		<display value="Da Vinci Task MRP Profile"/>
+		<definition value="The Da Vinci Task MRP Profile is based upon the Da Vinci Task Measure Profile and constrains the code(s) for representing the medication reconciliation post-discharge."/>
+	</concept>
+	<concept>
+		<code value="task-measure"/>
+		<display value="Da Vinci Task Measure Profile"/>
+		<definition value="The Da Vinci Task Measure Profile defines the constraints for representing the completion of a provider quality measure."/>
+	</concept>
+</CodeSystem>

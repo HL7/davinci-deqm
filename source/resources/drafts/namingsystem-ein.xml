@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NamingSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
+	<id value="ein"/>
+	<name value="Da Vinci EIN NamingSystem"/>
+	<status value="active"/>
+	<kind value="identifier"/>
+	<date value="2018-07-04"/>
+	<publisher value="Da Vinci Project"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="https://github.com/Healthedata1/DaVinci"/>
+		</telecom>
+	</contact>
+	<responsible value="HI Service Operator / NEHTA"/>
+	<type>
+		<coding>
+			<system value="http://hl7.org/fhir/v2/0203"/>
+			<code value="TAX"/>
+			<display value="Tax ID number"/>
+		</coding>
+		<text value="TAX"/>
+	</type>
+	<description value="Da Vinci EIN NamingSystem defines the uri for the constraints for an [Employer Identification Number (EIN)](https://www.irs.gov/businesses/small-businesses-self-employed/employer-id-numbers) is also known as a Federal Tax Identification Number (TIN), and is used to identify a business entity. The EID is represented in FHIR resources with dashes removed"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<usage value="Used in the United Staes to identify a business entity"/>
+	<uniqueId>
+		<type value="oid"/>
+		<value value="2.16.840.1.113883.4.4"/>
+		<comment value="This value is used in Australian CDA documents"/>
+	</uniqueId>
+	<uniqueId>
+		<type value="uri"/>
+		<value value="http://hl7.org/fhir/ig/davinci/sid/us-ein"/>
+		<preferred value="true"/>
+		<period>
+			<start value="2018-07-04"/>
+		</period>
+	</uniqueId>
+</NamingSystem>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-blah" />
+  <url value="http://fhir.org/guides/argonaut-clinicalnotes/StructureDefinition/extension-blah" />
+  <version value="0.0.0" />
+  <name value="Example Extension" />
+  <title value="Simple Extension" />
+  <status value="active" />
+  <date value="2017-02-15" />
+  <description value="an example of a simple extension." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Basic" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Example Extension" />
+      <definition value="an example of a simple extension." />
+      <max value="1" />
+      <isModifier value="false" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://fhir.org/guides/argonaut-clinicalnotes/StructureDefinition/extension-blah" />
+    </element>
+    <element id="Extension.valueCode">
+      <path value="Extension.valueCode" />
+      <sliceName value="valueCode" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="A bunch of example codes" />
+        <valueSetReference>
+          <reference value="http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/blah-codes" />
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

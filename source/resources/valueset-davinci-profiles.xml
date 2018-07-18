@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
+	<id value="davinci-profiles"/>
+	<url value="http://hl7.org/fhir/ig/davinci/ValueSet/davinci-profiles"/>
+	<version value="0.0.0"/>
+	<name value="Da Vinci Profiles"/>
+	<title value="Da Vinci Profiles"/>
+	<status value="active"/>
+	<date value="2018-06-25"/>
+	<description value="Codes that represent the Da Vinci project set of profiles.  The concept codes are equivalent to the StructureDefinition.id, the Display to the StructureDefinition. element and the defiinition are from the StructureDefinition.description."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="This Content is created by the Da Vinci project and HL7.  No copyright acknowledgement is needed, nor are there any license terms to adhere to"/>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/ig/davinci/CodeSystem/davinci-profiles"/>
+		<concept>
+			<code value="measurereport-mrp"></code>
+		</concept>
+		<concept>
+			<code value="observation-mrp"></code>
+		</concept>
+		<concept>
+			<code value="task-mrp"></code>
+		</concept>
+				<concept>
+			<code value="location-davinci"></code>
+		</concept>
+		<concept>
+			<code value="coverage-davinci"></code>
+		</concept>
+		<concept>
+			<code value="organization-davinci"></code>
+		</concept>
+				<concept>
+			<code value="patient-davinci"></code>
+		</concept>
+				<concept>
+			<code value="practitioner-davinci"></code>
+		</concept>
+		<concept>
+			<code value="practitionerrole-davinci"></code>
+		</concept>
+
+		</include>
+	</compose>
+</ValueSet>

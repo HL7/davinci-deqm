@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="template-basic" />
+  <url value="http://fhir.org/guides/argonaut-clinicalnotes/StructureDefinition/template-basic" />
+  <version value="0.0.0" />
+  <name value="Profile template-basic" />
+  <status value="active" />
+  <date value="2017-02-15" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Basic" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Basic" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Basic">
+      <path value="Basic" />
+      <definition value="This is a simple example Template." />
+      <constraint>
+        <key value="temp-1" />
+        <severity value="error" />
+        <human value="Identifier SHALL be greater than 5 characters" />
+        <expression value="Identifier.value.length()&gt;5" />
+        <xpath value="f:Identifier/f:value/string-length(@value)&gt;5" />
+      </constraint>
+      <mustSupport value="false" />
+      <isModifier value="false" />
+    </element>
+    <element id="Basic.extension">
+      <path value="Basic.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Basic.extension:Simple_Extension">
+      <path value="Basic.extension" />
+      <sliceName value="Simple_Extension" />
+      <short value="Example extension" />
+      <definition value="This is a simple extension applied to a Profile." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.org/guides/argonaut-clinicalnotes/StructureDefinition/extension-blah" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Basic.extension:Complex_Extension">
+      <path value="Basic.extension" />
+      <sliceName value="Complex_Extension" />
+      <short value="Example complex extension" />
+      <definition value="This is a complex extension applied to a Profile." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.org/guides/argonaut-clinicalnotes/StructureDefinition/extension-complex" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Basic.identifier">
+      <path value="Basic.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Basic.code">
+      <path value="Basic.code" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Basic.code.coding">
+      <path value="Basic.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Basic.code.coding.code">
+      <path value="Basic.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="diet" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Basic.subject">
+      <path value="Basic.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+  </differential>
+</StructureDefinition>

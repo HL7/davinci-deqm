@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/fhir-all.xsd">
+	<id value="mrp-example1"/>
+	<extension url="http://hl7.org/fhir/ig/davinci/StructureDefinition/extension-task-location">
+		<valueReference>
+			<reference value="Location/hl7east"/>
+		</valueReference>
+	</extension>
+	<status value="completed"/>
+	<intent value="order"/>
+	<code>
+		<coding>
+			<system value="http://www.ama-assn.org/go/cpt"/>
+			<code value="1111F"> </code>
+			<display value="Medication Reconciliation "/>
+		</coding>
+		<text value="Medication Reconciliation"/>
+	</code>
+	<!-- what is MRP focus -  if needed - going to be?  multiple MedStatements or List -->
+	<!--
+	<focus>
+		<reference value="MedicationRequest/medrx002"/>
+	</focus>
+-->
+	<for>
+		<reference value="Patient/example"/>
+	</for>
+	<authoredOn value="2018-06-11"/>
+	<lastModified value="2018-06-11"/>
+	<owner>
+		<extension url="http://hl7.org/fhir/ig/davinci/StructureDefinition/extension-prr">
+			<valueReference>
+				<reference value="PractitionerRole/example"/>
+			</valueReference>
+		</extension>
+	</owner>
+</Task>

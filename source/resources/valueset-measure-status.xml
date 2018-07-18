@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="measure-status"/>
+
+  <url value="http://hl7.org/fhir/ig/davinci/ValueSet/measure-status"/>
+  <version value="0.0.0"/>
+  <name value="Da Vinci Measure Status Result Values"/>
+  <title value="Da Vinci Measure Status Result Values"/>
+  <status value="active"/>
+  <date value="2018-06-19"/>
+  <description value="Measure status result values when using `Observation` for reporting quality measure to payers."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This Content is created by the Da Vinci project and HL7.  No copyright acknowledgement is needed, nor are there any license terms to adhere to"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/event-status"/>
+    </include>
+  </compose>
+</ValueSet>
