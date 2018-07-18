@@ -4,27 +4,26 @@ layout: default
 active: downloads
 ---
 
-**Validator Pack and Definitions:**
+**NPM Package**
 
-The following file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this Implementation Guides.:
+The following package file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this version of the Implementation Guides.:
 
-- [Validator Pack](validator.pack)
-
-In addition there are format specific definitions files.
-- [XML](definitions.xml.zip)
-- [JSON](definitions.json.zip)
-- [TTL](definitions.ttl.zip)
-
-These files should be the first choice whenever generating any implementation artifacts since they contain all of the rules about what makes these US-Core profiles valid. Implementers will still need to be familiar with the content of the specification and profiles that apply in order to make a conformant implementation.  See the overview on [validating FHIR profiles and resources]({{ site.data.fhir.path }}/validation.html)
+- [Package](../output/package.tgz)
 
 **Schematrons** are also available and listed below:
 
-- [Schematrons](#)
+- [...TODO...](#)
 
-**Examples:** all the examples that are used in this Implementation Guide available for download:
+**Examples**
 
-- [XML](examples.xml.zip)
-- [JSON](examples.json.zip)
-- [TTl](examples.ttl.zip)
+all the examples that are used in this Implementation Guide available for download:
 
-{% include link-list.md %}
+- [XML](../output/examples.xml.zip)
+- [JSON](../output/examples.json.zip)
+
+**Downloadable Copy of Entire Specification**
+
+A downloadable version is available so this Implementation Guide can be hosted locally:
+
+- [Downloadable Copy](full-ig.zip)
+
