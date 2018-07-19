@@ -25,7 +25,7 @@ no-inactive-codes,FALSE
 broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
-canonicalBase,http://hl7.org/fhir/ig/davinci
+canonicalBase,http://github.com/HL7/davinci-deqm
 dependencyList.name,uscore
 dependencyList.location,http://hl7.org/fhir/us/core
 dependencyList.source,dependencies/uscore-vp
@@ -36,4 +36,4 @@ logging,progress
 topofpage,TRUE
 allviews,TRUE
 mappings,FALSE
-npm-name,healthedatainc.davinci
+npm-name,hl7.fhir.davinci.deqm

@@ -1024,7 +1024,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
     <Cell ss:StyleID="s79" ss:HRef="http://www.fhir.org/guides/test3/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/ig/davinci/StructureDefinition/ext-</Data></Cell>
+      ss:Type="String">http://github.com/HL7/davinci-deqm/StructureDefinition/ext-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -1359,7 +1359,7 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Organization){http://hl7.org/fhir/ig/davinci/StructureDefinition/organization-davinci}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Organization){http://github.com/HL7/davinci-deqm/StructureDefinition/organization-davinci}</Data></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1471,7 +1471,7 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Task){http://hl7.org/fhir/ig/davinci/StructureDefinition/task-mrp}|Reference(Observation){http://hl7.org/fhir/ig/davinci/StructureDefinition/observation-mrp}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Task){http://github.com/HL7/davinci-deqm/StructureDefinition/task-mrp}|Reference(Observation){http://github.com/HL7/davinci-deqm/StructureDefinition/observation-mrp}</Data></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s106"/>

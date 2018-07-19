@@ -2,7 +2,7 @@
 <OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
 	<!--********************meta*************************-->
 	<id value="submit-data"/>
-	<url value="http://hl7.org/fhir/ig/davinci/OperationDefinition/submit-data"/>
+	<url value="http://github.com/HL7/davinci-deqm/OperationDefinition/submit-data"/>
 	<version value="0.0.0"/>
 	<name value="Da Vinci Submit Measure Data OperationDefinition"/>
 	<status value="active"/>
