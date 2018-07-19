@@ -3,7 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="measure-code"/>
 
-  <url value="http://github.com/HL7/davinci-deqm/ValueSet/measure-code"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/measure-code"/>
   <version value="0.0.0"/>
   <name value="Da Vinci Measure Code Values"/>
   <title value="Da Vinci Measure Code Values"/>

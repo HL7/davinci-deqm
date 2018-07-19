@@ -18,12 +18,12 @@
 		<end value="2018-07-11"/>
 	</period>
 	<evaluatedResources>
-		<extension url="http://github.com/HL7/davinci-deqm/StructureDefinition/extension-referenceAny">
+		<extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny">
 			<valueReference>
 				<reference value="Task/mrp-example1"/>
 			</valueReference>
 		</extension>
-		<extension url="http://github.com/HL7/davinci-deqm/StructureDefinition/extension-referenceAny">
+		<extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny">
 			<valueReference>
 				<reference value="Task/mrp-example1"/>
 			</valueReference>

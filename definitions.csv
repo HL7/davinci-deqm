@@ -25,7 +25,7 @@ no-inactive-codes,FALSE
 broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
-canonicalBase,http://github.com/HL7/davinci-deqm
+canonicalBase,http://hl7.org/fhir/us/davinci-deqm
 dependencyList.name,uscore
 dependencyList.location,http://hl7.org/fhir/us/core
 dependencyList.source,dependencies/uscore-vp

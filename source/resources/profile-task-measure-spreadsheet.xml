@@ -1039,7 +1039,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="String">http://github.com/HL7/davinci-deqm/StructureDefinition/ext-</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -1541,7 +1541,7 @@
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Practitioner){http://github.com/HL7/davinci-deqm/StructureDefinition/practitioner-davinci}</Data><NamedCell
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Practitioner){http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-davinci}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -4308,9 +4308,9 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">Either a reference to Practitioner or a reference to PractitionerRole using the Da Vinci PractitionerRole extension.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s101"><Data ss:Type="String">not(extension('http://github.com/HL7/davinci-deqm/StructureDefinition/ext-practitionerrole') and reference.startWith('Practitioner'))</Data><NamedCell
+    <Cell ss:StyleID="s101"><Data ss:Type="String">not(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practitionerrole') and reference.startWith('Practitioner'))</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s123"><Data ss:Type="String">not(f:extension/@url='http://github.com/HL7/davinci-deqm/StructureDefinition/ext-practitionerrole and starts-with(f:reference/@value,'Practitioner')) </Data><NamedCell
+    <Cell ss:StyleID="s123"><Data ss:Type="String">not(f:extension/@url='http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practitionerrole and starts-with(f:reference/@value,'Practitioner')) </Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="45">
@@ -4319,7 +4319,7 @@
     <Cell ss:StyleID="s101"><Data ss:Type="String">error</Data></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">Task.authoredOn</Data></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">Datetime must be at least to day.</Data></Cell>
-    <Cell ss:StyleID="s125"><Data ss:Type="String">not(extension('http://github.com/HL7/davinci-deqm/StructureDefinition/ext-practitionerrole') and reference.startWith('Practitioner'))</Data></Cell>
+    <Cell ss:StyleID="s125"><Data ss:Type="String">not(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practitionerrole') and reference.startWith('Practitioner'))</Data></Cell>
     <Cell ss:StyleID="s123"><Data ss:Type="String">f:matches(authoredOn,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="45">
@@ -4328,7 +4328,7 @@
     <Cell ss:StyleID="s101"><Data ss:Type="String">error</Data></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">Task.lastModified</Data></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">Datetime must be at least to day.</Data></Cell>
-    <Cell ss:StyleID="s125"><Data ss:Type="String">not(extension('http://github.com/HL7/davinci-deqm/StructureDefinition/ext-practitionerrole') and reference.startWith('Practitioner'))</Data></Cell>
+    <Cell ss:StyleID="s125"><Data ss:Type="String">not(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practitionerrole') and reference.startWith('Practitioner'))</Data></Cell>
     <Cell ss:StyleID="s123"><Data ss:Type="String">f:matches(lastModified,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="30">
@@ -6918,7 +6918,7 @@
     <Cell ss:StyleID="s150"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s150"><Data ss:Type="String">extensible</Data></Cell>
     <Cell ss:StyleID="s150"><Data ss:Type="String">yes</Data></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="String">http://github.com/HL7/davinci-deqm/ValueSet/measure-code</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/ValueSet/measure-code</Data></Cell>
     <Cell ss:StyleID="s150"/>
     <Cell ss:StyleID="s150"/>
     <Cell ss:StyleID="s150"/>

@@ -139,7 +139,7 @@
                 "evaluatedResources": {
                     "extension": [
                         {
-                            "url": "http://github.com/HL7/davinci-deqm/StructureDefinition/extension-referenceAny",
+                            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
                             "valueReference": {
                                 "reference": "Obs/mrp-example1"
                             }
@@ -424,12 +424,12 @@
                 "id": "mrp-example1",
                 "meta": {
                     "profile": [
-                        "http://github.com/HL7/davinci-deqm/StructureDefinition/mrp-observation"
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/mrp-observation"
                     ]
                 },
                 "extension": [
                     {
-                        "url": "http://github.com/HL7/davinci-deqm/StructureDefinition/ext-location",
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-location",
                         "valueReference": {
                             "reference": "https://vonk.furore.com/Location/hl7east"
                         }
@@ -440,7 +440,7 @@
                     {
                       "coding": [
                       {
-                        "system": "http://github.com/HL7/davinci-deqm/CodeSystem/observation-category",
+                        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/observation-category",
                         "code": "administrative",
                         "display": "Administrative"
                       }
@@ -466,7 +466,7 @@
                     {
                         "extension": [
                             {
-                                "url": "http://github.com/HL7/davinci-deqm/StructureDefinition/ext-practiitionerRole",
+                                "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practiitionerRole",
                                 "valueReference": {
                                     "reference": "PractitionerRole/example"
                                 }
