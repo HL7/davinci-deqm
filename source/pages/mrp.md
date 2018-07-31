@@ -22,8 +22,11 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ##  Introduction
 
-- Provider will `POST` a MeasureReport with associated resources to provide the MRP attestation and the supporting evidence required by the payers.
+The MRP Use Case fulfils the following HEDIS Measure...
 
+The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
+
+{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption="MRP Technical Workflow" %}
 
 **Summary of FHIR Artifacts used for Medication Reconciliation**
 

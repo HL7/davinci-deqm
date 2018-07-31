@@ -507,9 +507,14 @@ li a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not(
 }
 
 .figure-img-narrow{
-  height: 0181px;
+  height: 181px;
   width: 740px;
 }
+
+.figure-img-portrait{
+  width: 100%%;
+}
+
 
 /*--------- change example button color------*/
 
