@@ -3,13 +3,42 @@
 
 **Scenario:**
 
-Provider X submits MRP data for Patient Y to Payer Z.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Task as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.
+ Payer Z fetches MRP data from Provider X for Patient Z
 
 **Request using `POST`**
 
-`POST [base]/Measure/measure-mrp/$submit-data`
+`POST [base]/MeasureReport/measure-mrp/$collect-data`
 
 **Request body**
+
+~~~
+{
+   "resourceType":"Parameters",
+   "parameter":[
+      {
+         "name":"patient",
+         "valueReference":"{"reference" : "Patient/patient-z"}"
+      },
+      {
+         "name":"practitioner",
+         "valueReference":"{"reference" : "Practitioner/provider-x"}"
+      },
+      {
+         "name":"periodStart",
+         "valueDate":"Practitioner/2018-06-19"
+       }
+    ]
+ }
+~~~
+
+**Response**
+
+~~~
+HTTP/1.1 200 OK
+[other headers]
+~~~
+
+**Response body**
 
 ~~~
 {
@@ -58,11 +87,4 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
 
     ]
  }
-~~~
-
-**Response**
-
-~~~
-HTTP/1.1 200 OK
-[other headers]
 ~~~

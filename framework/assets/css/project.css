@@ -498,3 +498,23 @@ li a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not(
     text-decoration: none;
     padding-left: 3px;
 }
+
+
+/*--------- make all figures the same siz------e*/
+.figure-img{
+  height: 415px;
+  width: 740px;
+}
+
+.figure-img-narrow{
+  height: 0181px;
+  width: 740px;
+}
+
+/*--------- change example button color------e*/
+
+.btn-info {
+  color: #ffffff;
+  background-color: #778b90;
+  border-color: #5bc0de;
+}

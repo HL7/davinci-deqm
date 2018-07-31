@@ -4,7 +4,7 @@ layout: default
 active: downloads
 ---
 
-**NPM Package**
+**Package File**
 
 The following package file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this version of the Implementation Guides.:
 

@@ -4,7 +4,7 @@
 	<id value="collect-data"/>
 	<url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/collect-data"/>
 	<version value="0.0.0"/>
-	<name value="Da Vinci Collect Measure Data OperationDefinition"/>
+	<name value="DEQM Collect Measure Data OperationDefinition"/>
 	<status value="active"/>
 	<kind value="operation"/>
 	<date value="2018-06-30"/>
@@ -15,7 +15,7 @@
 			<value value="https://github.com/Healthedata1/DaVinci"/>
 		</telecom>
 	</contact>
-	<description value="The Collect Measure Data operation returns a `Bundle` of profiled resources that satisfy the required data requirements for a measure definition for a patient."/>
+	<description value="The Collect Measure Data operation returns the MeasureReport resource and required patient resources that satisfy the data requirements for a given Measure definition."/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -27,7 +27,13 @@
 	<!--********************end meta*************************-->
 	<idempotent value="true"/>
 	<code value="collect-data"/>
-	<comment value="The effect of invoking this operation on is to fetch a `Bundle` of resources needed for reporting a measure for a patient.  The id of the instance endpoint,  for example 'measure-mrp'  in `[base]/MeasureReport/measure-mrp/$collectData` determines which measure data is returned.  The required data for each measure is discoverable by invoking the [`$[measure]-requirements`](todo.html) operation on the payer's `Measure` endpoint."/>
+	<comment value="* The effect of invoking this operation is to gather the data required for reporting a measure for a patient.
+&#x000A;
+* The id of the instance endpoint,  for example 'measure-mrp'  in `[base]/MeasureReport/measure-mrp/$collectData` determines which measure data is returned.
+&#x000A;
+* The required data for each measure is discoverable by invoking the [`$[measure]-requirements`](todo.html) operation on the payer's `Measure` endpoint.
+&#x000A;
+* If the lastReceivedOn parameter is supplied, only data that is new or has been changed since the lastReceivedOn date is included in the response"/>
 	<resource value="MeasureReport"/>
 	<system value="false"/>
 	<type value="false"/>
@@ -70,7 +76,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Patient to evaluate against. This is a reference to a [Da Vinci Patient Profile](StructureDefinition-patient-davinci.html) e.g. 'Patient/123'.  If not specified, the measure will be evaluated for all patients that meet the requirements of the measure. If specified, only the referenced patient will be evaluated."/>
+    <documentation value="Patient to evaluate against. This is a reference to a [QI Core Patient]({{site.data.fhir.qicore}}StructureDefinition-qicore-patient.html) Profile e.g. 'Patient/123'.  If not specified, the measure will be evaluated for all patients that meet the requirements of the measure. If specified, only the referenced patient will be evaluated."/>
     <type value="uri"/>
 
   </parameter>
@@ -79,7 +85,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Practitioner to evaluate. This is a reference to a [Da Vinci Practitioner Profile](StructureDefinition-practitioner-davinci.html) e.g. 'Practitioner/123'. If specified, the measure will be evaluated only for patients whose primary practitioner is the identified practitioner"/>
+    <documentation value="Practitioner to evaluate. This is a reference to a [DEQM Practitioner](StructureDefinition-practitioner-deqm.html) e.g. 'Practitioner/123'. If specified, the measure will be evaluated only for patients whose primary practitioner is the identified practitioner"/>
     <type value="uri"/>
   </parameter>
   <parameter>
@@ -87,15 +93,24 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="The date the results of this measure were last received. This parameter is only valid for patient-level reports and is used to indicate when the last time a result for this patient was received. This information can be used to limit the set of resources returned for a patient-level report"/>
+    <documentation value="The date the results of this measure were last received. This parameter is only valid for patient-level reports and is used to indicate when the last time a result for this patient was received.  If the lastReceivedOn parameter is supplied, only data that is new or has been changed since the lastReceivedOn date is included in the response"/>
     <type value="dateTime"/>
   </parameter>
 	<parameter>
-		<name value="return"/>
+		<name value="measureReport"/>
 		<use value="out"/>
-		<min value="0"/>
+		<min value="1"/>
 		<max value="1"/>
-		<documentation value="`Bundle` of required profiles for the measure"/>
-		<type value="Bundle"/>
+		<documentation value="A MeasureReport of type `data-collection` detailing the results of the operation"/>
+		<type value="MeasureReport"/>
 	</parameter>
+  <parameter>
+    <name value="resource"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="The result resources that make up the data-of-interest for the measure"/>
+    <type value="Resource"/>
+  </parameter>
+
 </OperationDefinition>

@@ -2,6 +2,15 @@
 title: Medication Reconciliation Process
 layout: default
 active: guidance
+topofpage: true
+r4: http://build.fhir.org/
+r3: http://hl7.org/fhir/STU3/
+qi_r4: todo.html
+qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
+deqm_r4: todo.html
+deqm_r3: ''
+hedis_r4: todo.html
+hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
 {:.no_toc}
@@ -18,19 +27,23 @@ active: guidance
 
 **Summary of FHIR Artifacts used for Medication Reconciliation**
 
+## FHIR Resource Overview
 
-Resources supported for this use case:
+#### Resources supported for this use case:
+{:.no_toc}
 
-1. Coverage [Davinci Coverage]
-1. Encounter [US Core Encounter]
-1. Location [US Core Location]
-1. Measure [MRP Measure]
-1. MeasureReport [MRP MeasureReport]
-1. Observation [MRP Observation]
-1. Organization [Davinci Organization]
-1. Patient: [US Core Patient]
-1. Practitioner [Davinci Practitioner]
-1. Task [MRP Task]
+|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+|---|---|---|---|
+|Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]|
+|Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
+|Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
+|Measure|HEDIS MRP Measure Profile|[HEDIS MRP Measure (STU3)]|[HEDIS MRP Measure (R4)]|
+|MeasureReport|DEQM MRP MeasureReport Profile|[DEQM MRP MeasureReport (STU3)]|[DEQM MRP MeasureReport (R4)]|
+|Observation|HEDIS MRP Observation Profile|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
+|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
+|Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
 <!--
 |Resource|Argo DSTU2|US Core STU3|Argonaut/USCore R4|
@@ -47,43 +60,100 @@ Resources supported for this use case:
 
 -->
 
-### FHIR Resource Overview
+## MRP FHIR Transactions:
 
-#### Option 1: MRP using Task (TODO: remove PractitionerRole add Encounter)
+{% include img.html img="mrp-wf-overview.jpg" caption="MRP FHIR transactions" %}
 
-{% include img.html img="MRP-Task.png" caption="Option 1: MRP using Task" %}
+### Gather Data Requirements From Payer
 
-Option 1 Example:  A provider `POST`s the following MRP resources to the payer:
 
-- Location
-- Measure
-- MeasureReport
-- Organization
-- Patient
-- Practitioner
-- PractitionerRole
-- Task
+In this optional step, the payer queries the payer for the which resources are needed for MRP measure reporting.
 
-{% include examplebutton.html example="mrp-task-collection-bundle" %}
+{% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)
+The required data for each Measure is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.
+
+#### APIs
+{:.no_toc}
+
+These artifacts are used in this transaction:
+
+[Data Requirements] operation
+
+#### Usage
+{:.no_toc}
+
+Using Both `GET` and `POST` Syntax the operation can be invoked as follows:
+
+`GET|[base]/Measure/measure-mrp/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
+`POST|[base]/Measure/measure-mrp/$data-requirements`
+
+{% include examplebutton.html example="measure-requirements" b_title = "Example Data Requirements operation" %}
 
 ---
 
-#### Option 2: MRP using Observation (TODO: remove PractitionerRole add Encounter)
+### Submit Data to Payer
 
-{% include img.html img="MRP-Observation.png" caption="Option 2: MRP using Observation" %}
+{% include img-narrow.html img="submit-mrp-data.jpg" caption="Submit data Operation" %}
 
-{% include examplebutton.html example="mrp-obs-collection-bundle" %}
+#### Submit Data to a Payer's Measure endpoint
+{:.no_toc}
 
+Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  For the MRP use the provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
+
+#### Graph of MRP resources for this option:
+{:.no_toc}
+
+{% include img.html img="mrp-task.jpg" caption="Option 1: MRP using Task" %}
+
+{% include img.html img="mrp-observation.jpg" caption="Option 2: MRP using Observation" %}
+
+#### APIs
+{:.no_toc}
+
+These artifacts are used in this transaction:
+
+1. [Submit Data] operation
+1. DEQM Coverage Profile
+1. QI Core Encounter Profile
+1. QI Core Location Profile
+1. HEDIS MRP Measure Profile
+1. DEQM MRP MeasureReport Profile
+1. DEQM Organization Profile
+1. QI Core Patient Profile
+1. DEQM Practitioner Profile
+1. HEDIS MRP Task Profile or HEDIS MRP Observation Profile
+
+#### Usage
+{:.no_toc}
+
+A provider `POST`s the MRP resources to the payer using:
+
+`POST|[base]/Measure/measure-mrp/$submit-data`
+
+
+
+{% include examplebutton.html example="submit-data" b_title = "Example Submit Data operation using Task option" %}
+
+<!--
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)
+-->
+
+
+{% include examplebutton.html example="submit-data-observation"  b_title = "Example Submit Data operation using Operation option" %}
+
+<!-- >[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)
+-->
 
 ---
+<!--{% raw %}
 
 ### Usage
 
 example how to use a button to expand an inline example....
 
 {% include examplebutton.html example="foo" %}
+
+{% endraw %}-->
 
 {% include link-list.md %}

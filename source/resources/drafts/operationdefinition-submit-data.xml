@@ -15,13 +15,13 @@
 			<value value="https://github.com/Healthedata1/DaVinci"/>
 		</telecom>
 	</contact>
-	<description value="The effect of invoking this operation on a `MeasureReport` instance endpoint is to POST a `Bundle` of resources needed for reporting a `Measure`.
+	<description value="The effect of invoking this operation on a `Measure` instance endpoint is to POST a collection of resources needed for reporting a measure.
 &#x000A;
 
-* The Submit Measure Data operation POSTs the MeasureReport and required associated resources to the payer's `MeasureReport` endpoint. The operation is for a single measure definition and a single patient or grouup.
+* The Submit Measure Data operation POSTs the `MeasureReport` and required associated resources to the payer's `Measure` endpoint. The operation is for a single measure definition and a single patient or grouup.
 &#x000A;
 
-* The operation is posted to the measure instance endpoint represented by the MeasureReport target 'id' as shown in the example below.
+* The operation is posted to the measure instance endpoint represented by the resource target 'id' as shown in the example below.
 &#x000A;
 
 * When a payload is posted to one of these endpoits, the payer will process the data based on the the specific measure and return an OperationOutcome representing the acceptance or rejection of the report."/>
@@ -36,8 +36,8 @@
 	<!--********************end meta*************************-->
 	<idempotent value="false"/>
 	<code value="submit-data"/>
-	<comment value="Note: The required data for each Measure is discoverd by invoking the [`$[measure]-requirements`](todo.html) operation on the payer's `Measure` endpoint."/>
-	<resource value="MeasureReport"/>
+	<comment value="Note: The required data for each Measure is discoverd by invoking the [Data Requirements] operation on the payer's `Measure/[measure-id]` endpoint."/>
+	<resource value="resource"/>
 	<system value="false"/>
 	<type value="false"/>
 	<instance value="true"/>

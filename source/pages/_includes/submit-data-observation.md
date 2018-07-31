@@ -1,9 +1,8 @@
 ### Examples
-{:.no_toc}
 
 **Scenario:**
 
-Provider X submits MRP data for Patient Y to Payer Z.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Task as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.
+Provider X submits MRP data for Patient Y to Payer Z.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Observation as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.
 
 **Request using `POST`**
 
@@ -22,7 +21,7 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
       },
       {
         "name":"resource",
-        "resource":"{"resourceType": "Task",
+        "resource":"{"resourceType": "observation",
         ...}
       },
       {
