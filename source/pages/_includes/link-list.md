@@ -25,6 +25,7 @@
 [Home]: index.html "Home Page"
 [Measure Observation]: StructureDefinition-observation-measure.html
 [Measure Task]: StructureDefinition-task-measure.html
+[Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
 [Medication Reconciliation (MRP)]: mrp.html
 [Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support "US Core definition of *Must Support*"
 [Profiles]: profiles.html "Profiles and Extensions Page"

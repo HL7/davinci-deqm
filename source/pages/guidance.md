@@ -119,7 +119,7 @@ Subscriptions allow for a Provider to notify the Payer when Measure data can be 
 In addition to the resources listed above, the following artifacts are used in the subscription transactions:
 
 1. DEQM Subscription Profile [DEQM Subscription (STU3)] [DEQM Subscription (R4)]
-1. QI Core Trigger event Extension.. and others
+1. Some Measure Subscription Extension or [Subscription Trigger event Extension]
 1. Collect Data operation: [Collect Data (STU3)] or [Collect Data (R4)]
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
@@ -139,7 +139,7 @@ To unsubscribe:
 #### Usage - Notifications
 {:.no_toc}
 
-The standard FHIR Subscription API describe the REST Hook channel as follows:
+There are several architectures to implement the subscription notifications such as "point to point" notificatin or using a “feed handler” and an intermediary system. The standard FHIR Subscription API describe the REST Hook channel as follows:
 
 `POST [app notification endpoint]`
 
