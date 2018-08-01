@@ -44,16 +44,45 @@ For all of these methods:
      |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
      |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
 
-<br/ >
 <br />
 
 ### Option 1: Submit Data operation
 
-{% include img-narrow.html img="submit-data.jpg" caption="Submit data Operation" %}
 
-In this scenario, the Provider initiates a *Submit Data* operation to share all the quality reporting data with the Payer (Aggregator).  The Measure will define the necessary data needed to evaluate it. In some case, it will be possible to discover what data ( e.g., resources) are required by performing the Data Requirements operation on a Payer's measure endpoint.  The submitted data is used to evaluate the measure operation.
+In this scenario, the Provider initiates a *Submit Data* operation to share all the quality reporting data with the Payer (Aggregator).  To discover what data ( e.g., resources) are needed in the *Submit Data* payload for a particular measure, a *Data Requirements* operation is invoked on a Payer's measure endpoint.  The Measure will define the necessary data needed for the Payer uses the submitted data to evaluate the measure.
 
-#### APIs
+{% include img.html img="mrp-wf-overview.jpg" caption="MRP FHIR transactions" %}
+
+#### Gather Data Requirements From Payer
+
+In this optional step, the payer queries the payer for the which resources/profiles are needed for MRP measure reporting.  *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Payer.
+
+{% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
+
+##### APIs
+{:.no_toc}
+
+In addition to the resources listed above, the following artifacts are used in this transaction:
+
+1. [Data Requirements] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
+
+##### Usage
+{:.no_toc}
+
+ The required data for each Measure is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.  Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
+
+`GET|[base]/Measure/measure-mrp/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
+`POST|[base]/Measure/measure-mrp/$data-requirements`
+
+{% include examplebutton.html example="measure-requirements" b_title = "Example Data Requirements operation" %}
+
+### Submit Data Operation
+
+Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to to Payer as supporting evidence and for evaluation of the measure.
+
+{% include img-narrow.html img="submit-mrp-data.jpg" caption="Submit data Operation" %}
+
+##### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
@@ -61,11 +90,10 @@ In addition to the resources listed above, the following artifacts are used in t
 1. [Submit Data] operation  ( Note - the same operation is used for both version STU3 and R4 transaction)
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
-
-#### Usage
+##### Usage
 {:.no_toc}
 
-Using the `POST` Syntax, the operation can be invoked by the Provider:
+Using the `POST` Syntax, the operation can be invoked by the Payer:
 
 `POST|[base]/Measure/[measure-id]/$submit-data`
 
@@ -73,9 +101,15 @@ Using the `POST` Syntax, the operation can be invoked by the Provider:
 
 ### Option 2: Collect Data operation
 
-{% include img-narrow.html img="collect-data.jpg" caption="Collect data Operation" %}
+In this scenario, the Payer (Aggregator) initiates a *Collect Data* operation to gather all the quality reporting data for a particular measure from the Provider.  In response to the operation, the Provider will return the Measure data.  The Measure itself defines the necessary data needed to evaluate it. As in the case above, discovery of what data ( e.g., resources) are required is done through the *Data Requirements* operation on a Payer's measure endpoint and the returned resources and profiles are referenced in the `MeasureReport.evaluatedResources` element.
 
-In this scenario, the Payer (Aggregator) initiates a *Collect Data* operation to gather all the quality reporting data for a particular measure from the Provider.  In response to the operation, the Provider will return the Measure data.  The Measure itself defines the necessary data needed to evaluate it. In some case, it will be possible to discover what data ( e.g., resources) are required by performing the Data Requirements operation on a Payer's measure endpoint.  The returned data is used to evaluate the measure operation.
+{% include img.html img="collect-data-steps.jpg" caption="MRP FHIR transactions" %}
+
+#### Collect Data Operation
+
+Payer will use the Collect Data operation to request a MeasureReport and the  supporting evidence and for evaluation of a measure.
+
+{% include img-narrow.html img="collect-data.jpg" caption="Collect data Operation" %}
 
 #### APIs
 {:.no_toc}
@@ -106,6 +140,12 @@ Using only the `POST` Syntax, the operation can be invoked by the Payer:
 {% include examplebutton.html example="collect-data" b_title = "Example Collect Data (STU3) operation" %}
 
 {% include examplebutton.html example="collect-data-r4" b_title = "Example Collect Data (R4) operation" %}
+
+#### Data Requirements Operation
+
+In order to complete the transaction the Provider may need to discover the required data for each Measure is discovered by invoking the [Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint. This operation is discussed in the [section above](#gather-data-requirements-from-payer)
+
+<br />
 
 ### Option 3: Subscription service combined with the  Collect Data operation
 

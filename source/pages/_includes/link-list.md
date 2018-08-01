@@ -2,15 +2,13 @@
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [DEQM Coverage (R4)]: todo.html
 [DEQM Coverage (STU3)]: {{page.deqm_r3}}StructureDefinition-coverage-DEQM.html
-[DEQM MRP MeasureReport (R4)]: todo.html
-[DEQM MRP MeasureReport (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-mrp.html
 [DEQM MeasureReport (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-DEQM.html
 [DEQM MeasureReport (R4)]: todo.html
 [DEQM Organization (R4)]: todo.html
 [DEQM Organization (STU3)]: {{page.deqm_r3}}StructureDefinition-organization-DEQM.html
 [DEQM Practitioner (R4)]:todo.html
 [DEQM Practitioner (STU3)]: {{page.deqm_r3}}StructureDefinition-practitioner-DEQM.html
-[Data Requirements]: {{site.data.fhir.path}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
+[Data Requirements]: {{page.r4}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
 [Downloads]: downloads.html "Downloads Page"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}} "FHIR Specification Home Page"
 [Guidance]: guidance.html  "General Guidance Page"

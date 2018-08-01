@@ -41,7 +41,7 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
 |Measure|HEDIS MRP Measure Profile|[HEDIS MRP Measure (STU3)]|[HEDIS MRP Measure (R4)]|
-|MeasureReport|DEQM MRP MeasureReport Profile|[DEQM MRP MeasureReport (STU3)]|[DEQM MRP MeasureReport (R4)]|
+|MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
 |Observation|HEDIS MRP Observation Profile|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
@@ -86,7 +86,7 @@ These artifacts are used in this transaction:
 #### Usage
 {:.no_toc}
 
-Using Both `GET` and `POST` Syntax the operation can be invoked as follows:
+Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
 
 `GET|[base]/Measure/measure-mrp/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
 `POST|[base]/Measure/measure-mrp/$data-requirements`
@@ -121,7 +121,7 @@ These artifacts are used in this transaction:
 1. QI Core Encounter Profile
 1. QI Core Location Profile
 1. HEDIS MRP Measure Profile
-1. DEQM MRP MeasureReport Profile
+1. DEQM MeasureReport Profile
 1. DEQM Organization Profile
 1. QI Core Patient Profile
 1. DEQM Practitioner Profile
