@@ -25,43 +25,30 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 <!-- end TOC -->
 
-###  Introduction
+##  Summary
 
-Introduction text here....
+The purpose of this implementation guide is to define a set of FHIR profiles with extensions and bindings needed to support value based care data exchange. The profiles in this implementation guide derive from and extend the [QI Core profiles] where available to provide a common foundation for building, sharing, and evaluating knowledge artifacts for value based care data exchange in the US Realm.
 
+As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
 
-#### Jekyll Site Variables ( for editorial use )
+##  Background
 
-These are the site variables defined [here](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation#Jekyll):
+This Implementation Guide derived from the [US Core], [QI Core],and [HEDIS] profiles with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of HL7 Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. The HL7 CQI Work Group maintains this Implementation Guide, co-sponsored by the Clinical Decision Support (CDS) HL7 Work Group, to inform electronic clinical quality improvement (i.e., measurement and decision support). This Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the U.S. Realm.
 
-- IG Business version specification (defined in ig.json)- {% raw %}{{site.data.fhir.ig.version}} {% endraw %} = {{site.data.fhir.ig.version}}
+Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models.
 
-- IG status (defined in ig.xml)- {% raw %}{{site.data.fhir.ig.status}} {% endraw %} = {{site.data.fhir.ig.status}}
+To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common:
 
-- Whether is experimental IG (defined in ig.xml) - {% raw %}{{site.data.fhir.ig.experimental}} {% endraw %} = {{site.data.fhir.ig.experimental}}
+- Standards (FHIR)
+- Implementation guides
+- Reference implementations
 
-- IG Publisher name (defined in ig.xml) - {% raw %}{{site.data.fhir.ig.publisher}} {% endraw %} = {{site.data.fhir.ig.publisher}}
+This Implementation Guide is the first step in creating these common artifacts.
 
-- dependency url - e.g. "uscore" : Base url of a dependency implementation Guide (defined in ig.json) -  {% raw %} {{site.data.fhir.uscore}} {% endraw %}= {{site.data.fhir.uscore}}
+## FHIR Profiles and Operations
 
-- igName : Title of the implementation Guide (defined in ig.xml) -  {% raw %} {{site.data.fhir.igName}} {% endraw %}= {{site.data.fhir.igName}}
+This Guide (IG) defines a set of FHIR operations, profiles and extensions to create interoperable, quality-focused applications. Payers and providers need common transport tools to share the data required to reflect complete and accurate quality measures. Existing [QI-Core] and [HEDIS] profiles are used as well as DEQM profiles derived from them. These profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm. This IG will leverage STU3 in order to take advantage of FHIR currently in production and R4 to better utilize the additional Resources and elements available in R4.  For elements added in R4, extensions will be created for the STU3 version.  This  IG also utilizes standard FHIR Operations and Subscription transactions to exchange quality data.
 
-- path : path to the main FHIR specification (defined in ig.json)-  {% raw %} {{site.data.fhir.path}} {% endraw %}= {{site.data.fhir.path}}
-
-- canonical : canonical path to this specification (defined in ig.json)-  {% raw %} {{site.data.fhir.canonical}} {% endraw %} = {{site.data.fhir.canonical}}
-
-- errorCount : number of errors in the build file (not including HTML validation errors) -  {% raw %} {{site.data.fhir.errorCount}} {% endraw %} = {{site.data.fhir.errorCount}}
-
-- version : version of FHIR -  {% raw %} {{site.data.fhir.version}} {% endraw %} = {{site.data.fhir.version}}
-
-- revision : revision of FHIR -  {% raw %} {{site.data.fhir.revision}} {% endraw %} = {{site.data.fhir.revision}}
-
-- versionFull : version-revision -  {% raw %} {{site.data.fhir.versionFull}} {% endraw %} = {{site.data.fhir.versionFull}}
-
-- totalFiles : total number of files found by the build -  {% raw %} {{site.data.fhir.totalFiles}} {% endraw %} = {{site.data.fhir.totalFiles}}
-
-- processedFiles : number of files genrated by the build -  {% raw %} {{site.data.fhir.processedFiles}} {% endraw %} = {{site.data.fhir.processedFiles}}
-
-- genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -  {% raw %} {{site.data.fhir.genDate}} {% endraw %} = {{site.data.fhir.genDate}}
+<br />
 
 {% include link-list.md %}

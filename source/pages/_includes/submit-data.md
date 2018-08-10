@@ -47,11 +47,6 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
       },
       {
         "name":"resource",
-        "resource":"{"resourceType": "Encounter",
-        ...}
-      },
-      {
-        "name":"resource",
         "resource":"{"resourceType": "Coverage",
         ...}
       },

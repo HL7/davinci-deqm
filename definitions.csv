@@ -1,7 +1,7 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
 igtemplate-dir,/Users/ehaas/Documents/FHIR/IG-Template2/
 working-dir,/Users/ehaas/Documents/FHIR/DaVinci/
-title,DaVinci Data Exchange For Quality Measures
+title,Data Exchange For Quality Measures
 status,draft
 publisher,DaVinci Project
 extensions,ext-location|ext-practitionerRole|ext-referenceAny

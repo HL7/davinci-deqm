@@ -22,7 +22,19 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ##  Introduction
 
-The MRP Use Case fulfils the following HEDIS Measure...
+The Medication Reconciliation Use Case defines the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member. This attestation message can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge.   (Any necessary documentation will also be put in the record…)
+
+In the case of medication reconciliation after discharge from the hospital, the patient’s discharge medication(s) is compared with the medication(s) the patient was taking prior to hospitalization. This can avoid medication errors such as omissions, duplications, dosing errors or drug interactions, and should be done at every transition of care in which new medications are ordered or existing orders are rewritten.
+
+In the past, attestation to the reconciliation had been done by posting a CPT2 code on a claim typically for a small monetary amount that was then denied by the payer and had to be written off by the provider.  This is a cumbersome process and most providers are no longer doing this.
+
+Payers and providers need common standards to share the data required to complete medication reconciliation at all transitions of care, for care management plans, and during medication changes. Proof of 30 day medication reconciliations is increasingly required for value based care incentives.  Providers and care coordinators face the challenge of collecting accurate and complete patient medication records across care settings. Today’s manual and ad hoc processes are costly and will not scale. Vendors are actively leveraging FHIR resources to improve partner’s access to patient medication history by unlocking existing silos of this critical data from vendor systems, healthcare operations systems and provider EHRs.
+
+As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring workgroup, Clinical Quality Information, and incorporated as part of the standard balloting process. The current roadmap follows closely behind the base FHIR roadmap, and QI Core Implementation Guide.
+
+Exchange of the reconciled medication list, indication of conversations with the patient, and notification of discharge from inpatient systems are out of scope for this version of the use case.
+
+### Summary MRP Technical Workflow
 
 The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 
@@ -48,33 +60,19 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-<!--
-|Resource|Argo DSTU2|US Core STU3|Argonaut/USCore R4|
-|---|---|---|---|
-|Patient|Y|Y|Pending  publication of R4|
-|Practitioner|Y|Y|Pending  publication of R4|
-|Organization|Y|Y|Pending  publication of R4|
-|Location|N|Y|Pending  publication of R4|
-|PractionerRole|N|Y|Pending  publication of R4|
-|Procedure|Y|Y|Pending  publication of R4|
-|Coverage|N|N|No Plans|
-|Observation|Y ( as vitals, lab results, smoking|Y ( as vitals, lab results, smoking|Pending  publication of R4|
-|Task|N|N|No Plans|
-
--->
 
 ## MRP FHIR Transactions:
 
-{% include img.html img="mrp-wf-overview.jpg" caption="MRP FHIR transactions" %}
+{% include img.html img="mrp-wf-overview.jpg" %}
 
 ### Gather Data Requirements From Payer
 
 
-In this optional step, the payer queries the payer for the which resources are needed for MRP measure reporting.
+In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
 
-The required data for each Measure is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.
+The required data for MRP is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.
 
 #### APIs
 {:.no_toc}
@@ -102,9 +100,9 @@ Using either the `GET` and `POST` Syntax the operation can be invoked as follows
 #### Submit Data to a Payer's Measure endpoint
 {:.no_toc}
 
-Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  For the MRP use the provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
+Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  (Note that the Collect Data and Subscription Operations are not supported for this use case.)  For MRP the Provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
 
-#### Graph of MRP resources for this option:
+#### Graph of MRP resources:
 {:.no_toc}
 
 {% include img.html img="mrp-task.jpg" caption="Option 1: MRP using Task" %}
@@ -143,7 +141,7 @@ A provider `POST`s the MRP resources to the payer using:
 -->
 
 
-{% include examplebutton.html example="submit-data-observation"  b_title = "Example Submit Data operation using Operation option" %}
+{% include examplebutton.html example="submit-data-observation"  b_title = "Example Submit Data operation using Observation option" %}
 
 <!-- >[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)
 -->

@@ -23,19 +23,23 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ## Introduction
 
-...todo...
+This Guide (IG) defines a set of FHIR operations for Exchange of Quality Measure Data between Data "Aggregator's" and Providers.  Three methods of exchanging of data quality information are detailed below:
 
-## Operations for Exchange of Data for Quality Measures between Payer and Provider EHR
+1. Submit Data operation
+1. Collect Data operation
+1. Subscription service.  
 
-Three methods of exchanging of data quality information are detailed below.  They include a 1) Submit Data operation, 2)  Collect Data operation, and 3) a Subscription service combined with the  Collect Data operation.  These transactions are triggered by use case specific clinical or adminisrative events such as a completed 30 day MRP.
+These transactions are triggered by use case specific clinical or administrative events such as a completed 30 day MRP.
 
-For all of these methods:
+### General Preconditions and Assumptions
 
- - The Payer is assumed to be the “Aggregator” of the individual events in the measure
- - When using MeasureReport, the Measure resources will define the actual Measure requested or posted
- - It not assumed that CQL will be used by the Provider.
- - CQL may or may not be used by the Payer (Aggregator).
- - The following resources are used in these transactions:
+- The "Aggregator" may be a Payer or another organization that is monitoring clinical quality measure.
+- When using MeasureReport, the Measure resources will define the actual Measure requested or posted
+- CQL may or may not be used by the Aggregator.
+- It assumed that CQL will *not* be used by the Provider.
+
+### Profiles
+- The following resources are used in all these transactions:
 
      |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
      |---|---|---|---|
@@ -44,18 +48,26 @@ For all of these methods:
      |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
      |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
 
+- Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
+
+#### Graph of DEQM Resources:
+{:.no_toc}
+
+{% include img.html img="measure-resource-graph.jpg" caption="DEQM Resource Graph" %}
+
 <br />
 
 ### Option 1: Submit Data operation
 
 
-In this scenario, the Provider initiates a *Submit Data* operation to share all the quality reporting data with the Payer (Aggregator).  To discover what data ( e.g., resources) are needed in the *Submit Data* payload for a particular measure, a *Data Requirements* operation is invoked on a Payer's measure endpoint.  The Measure will define the necessary data needed for the Payer uses the submitted data to evaluate the measure.
+In this scenario, the Provider initiates a *Submit Data* operation to share all the quality reporting data with the Aggregator.  To discover what data ( e.g., resources) are needed in the *Submit Data* payload for a particular measure, a *Data Requirements* operation **MAY** be invoked on a Aggregator's measure instance endpoint.  The Measure will define the necessary data that needs to be submitted in order for the Aggregator to evaluate the measure.
 
-{% include img.html img="mrp-wf-overview.jpg" caption="MRP FHIR transactions" %}
+{% include img.html img="mrp-wf-overview.jpg" %}
 
-#### Gather Data Requirements From Payer
+#### Gather Data Requirements From Aggregator
+{:.no_toc}
 
-In this optional step, the payer queries the payer for the which resources/profiles are needed for MRP measure reporting.  *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Payer.
+In this *optional* step, the provider queries the aggregator for which resources/profiles are needed for reporting a given measure.  *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Aggregator .
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
 
@@ -69,18 +81,20 @@ In addition to the resources listed above, the following artifacts are used in t
 ##### Usage
 {:.no_toc}
 
- The required data for each Measure is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.  Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
+ The required data for each Measure is discovered by invoking the [Data Requirements] operation on the aggregator's `Measure/[measure-id]` endpoint.  Using either the `GET` and `POST` Syntax, the operation can be invoked as follows:
 
-`GET|[base]/Measure/measure-mrp/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
-`POST|[base]/Measure/measure-mrp/$data-requirements`
+`GET|[base]/Measure/[measure-id]/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
+
+`POST|[base]/Measure/[measure-id]/$data-requirements`
 
 {% include examplebutton.html example="measure-requirements" b_title = "Example Data Requirements operation" %}
 
 ### Submit Data Operation
+{:.no_toc}
 
-Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to to Payer as supporting evidence and for evaluation of the measure.
+Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to to Aggregator  as supporting evidence and for evaluation of the measure.
 
-{% include img-narrow.html img="submit-mrp-data.jpg" caption="Submit data Operation" %}
+{% include img-narrow.html img="submit-data.jpg" caption="Submit data Operation" %}
 
 ##### APIs
 {:.no_toc}
@@ -93,7 +107,7 @@ In addition to the resources listed above, the following artifacts are used in t
 ##### Usage
 {:.no_toc}
 
-Using the `POST` Syntax, the operation can be invoked by the Payer:
+Using the `POST` Syntax, the operation can be invoked by the Aggregator :
 
 `POST|[base]/Measure/[measure-id]/$submit-data`
 
@@ -101,13 +115,14 @@ Using the `POST` Syntax, the operation can be invoked by the Payer:
 
 ### Option 2: Collect Data operation
 
-In this scenario, the Payer (Aggregator) initiates a *Collect Data* operation to gather all the quality reporting data for a particular measure from the Provider.  In response to the operation, the Provider will return the Measure data.  The Measure itself defines the necessary data needed to evaluate it. As in the case above, discovery of what data ( e.g., resources) are required is done through the *Data Requirements* operation on a Payer's measure endpoint and the returned resources and profiles are referenced in the `MeasureReport.evaluatedResources` element.
+In this scenario, the Aggregator initiates a *Collect Data* operation to gather all the quality reporting data for a particular measure from the Provider.  In response to the operation, the Provider will return the Measure data.  The Measure itself defines the necessary data needed to evaluate it. As in the case above, discovery of what data ( e.g., resources) are required is done through the *Data Requirements* operation on a Aggregator 's measure endpoint and the returned resources and profiles are referenced in the `MeasureReport.evaluatedResources` element.
 
-{% include img.html img="collect-data-steps.jpg" caption="MRP FHIR transactions" %}
+{% include img.html img="collect-data-steps.jpg" %}
 
 #### Collect Data Operation
+{:.no_toc}
 
-Payer will use the Collect Data operation to request a MeasureReport and the  supporting evidence and for evaluation of a measure.
+Aggregator will use the Collect Data operation to request a MeasureReport and the  supporting evidence and for evaluation of a measure from a Provider.
 
 {% include img-narrow.html img="collect-data.jpg" caption="Collect data Operation" %}
 
@@ -123,50 +138,49 @@ In addition to the resources listed above, the following artifacts are used in t
 #### Usage
 {:.no_toc}
 
-**Collect Data (STU3):**
+**Collect Data (STU3 and R4):**
 
-Using either the `GET` or `POST` Syntax, the operation can be invoked by the Payer:
+Using either the `GET` or `POST` Syntax, the operation can be invoked by the Aggregator :
 
 `GET|[base]/Measure/[measure-id]/$collect-data&[parameters]`
 
 `POST|[base]/Measure/[measure-id]/$collect-data`
 
-**Collect Data (R4):**
 
-Using only the `POST` Syntax, the operation can be invoked by the Payer:
-
-`POST|[base]/Measure/[measure-id]/$collect-data`
-
-{% include examplebutton.html example="collect-data" b_title = "Example Collect Data (STU3) operation" %}
-
-{% include examplebutton.html example="collect-data-r4" b_title = "Example Collect Data (R4) operation" %}
+{% include examplebutton.html example="collect-data" b_title = "Example Collect Data operation" %}
 
 #### Data Requirements Operation
+{:.no_toc}
 
-In order to complete the transaction the Provider may need to discover the required data for each Measure is discovered by invoking the [Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint. This operation is discussed in the [section above](#gather-data-requirements-from-payer)
+In order to complete the transaction the Provider may need to discover the required data for each Measure by invoking the [Data Requirements] operation on the aggregator 's `Measure/[measure-id]` endpoint. This operation is discussed in the [section above](#gather-data-requirements-from-aggregator )
 
 <br />
 
 ### Option 3: Subscription service combined with the  Collect Data operation
 
+Subscriptions allow for a Provider to notify the Aggregator  when Measure data can be collected.  The notification triggers are based upon the clinical and/or administrative event in the Aggregator  system.  Once a Aggregator is notified, the measure data can be collected using the the *Collect Data* operation described above.
+
+{% include img.html img="subscribe-data-steps.jpg" %}
+
+#### Subscribe for Measure Data
+{:.no_toc}
+
+The Aggregator must first subscribe to the Provider for a notification for a particular measure.  An Aggregator may also unsubscribe to a measure subscription.
+
 {% include img-narrow.html img="subscribe-data.jpg" caption="Subscription Service" %}
 
-Subscriptions allow for a Provider to notify the Payer when Measure data can be collected. The Payer must first subscribe to the Provider for a notification for a particular measure. The notification triggers are based upon the clinical and/or administrative event in the Payer system.  Once a Payer is notified, the measure data can be collected using the the *Collect Data* operation described above.  A Payer may also unsubscribe to a measure subscription.
-
-#### APIs
+##### APIs
 {:.no_toc}
 
-In addition to the resources listed above, the following artifacts are used in the subscription transactions:
+The following artifacts are used in the subscription transaction:
 
 1. DEQM Subscription Profile [DEQM Subscription (STU3)] [DEQM Subscription (R4)]
-1. Some Measure Subscription Extension or [Subscription Trigger event Extension]
-1. Collect Data operation: [Collect Data (STU3)] or [Collect Data (R4)]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. [Measure Subscription Extension] or [Subscription Trigger event Extension] **TODO DISCUSS**
 
-#### Usage - Subscribe/Unsubscribe
+##### Usage
 {:.no_toc}
 
-To subscribe for measure notifications , The Payer SHALL use the standard FHIR [Subscription] API as follows:
+To subscribe for measure notifications , The Aggregator  SHALL use the standard FHIR [Subscription] API as follows:
 
 `POST [base]/Subscription`
 
@@ -176,14 +190,32 @@ To unsubscribe:
 
 {% include examplebutton.html example="subscribe-measure" b_title = "Example Subscription Transaction" %}
 
-#### Usage - Notifications
+#### Get Data Requirements
 {:.no_toc}
 
-There are several architectures to implement the subscription notifications such as "point to point" notificatin or using a “feed handler” and an intermediary system. The standard FHIR Subscription API describe the REST Hook channel as follows:
+The Provider may need to discover the required data for each Measure by invoking the [Data Requirements] operation on the aggregator 's `Measure/[measure-id]` endpoint. This operation is discussed in the [section above](#gather-data-requirements-from-aggregator )
+
+#### Measure Notifications
+{:.no_toc}
+
+The Provider notifies the Aggregator when measure data is available. How the Payer determines this is out of scope for this guide.  There are several architectures to implement the subscription notifications such as "point to point" notification or using a “feed handler” and an intermediary system.
+
+{% include img-narrow.html img="measure-notifications.jpg" caption="Measure Notifications" %}
+
+##### Usage
+{:.no_toc}
+
+ The standard FHIR Subscription API describe the REST Hook channel as follows:
 
 `POST [app notification endpoint]`
 
 {% include examplebutton.html example="measure-notification" b_title = "Example Subscription Notification" %}
+
+#### Collect Data Operation
+{:.no_toc}
+
+Upon notification, the Aggregator uses the Collect Data operation to request a MeasureReport and the supporting evidence from a Provider.  This operations is discussed in the section above.
+
 
 ## Must Support
 
