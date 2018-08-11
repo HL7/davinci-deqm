@@ -47,7 +47,7 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 #### Resources supported for this use case:
 {:.no_toc}
 
-|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+|Resource|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
 |Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|

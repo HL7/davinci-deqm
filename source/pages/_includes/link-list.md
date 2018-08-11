@@ -37,11 +37,11 @@
 [QI Core Patient (R4)]: todo.html
 [QI Core Patient (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-patient.html
 [Submit Data]:{{page.r4}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
-[QI Core Profiles]: {{page.qi_r3}}
-[Collect Data (STU3)]:{{page.deqm_r3}}OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
-[Collect Data (R4)]:{{page.r4}}measure-operation-collect-data.html "The effect of invoking this operation on a Measure instance endpoint is to POST a collection of resources needed for reporting a measure"
-[Terminology]:terminology.html "Terminology Page"
-[Subscription]:{{page.r3}}subscription.html
-[US Core]:http://hl7.org/fhir/us/core/
-[QI Core]:{{page.qi_r3}}
-[HEDIS]:{{page.hedis_r3}}
+[QI Core Profiles]: {{page.qi_r3}}index.html
+[Collect Data (STU3)]: {{page.deqm_r3}}OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
+[Collect Data (R4)]: {{page.r4}}measure-operation-collect-data.html "The effect of invoking this operation on a Measure instance endpoint is to POST a collection of resources needed for reporting a measure"
+[Terminology]: terminology.html "Terminology Page"
+[Subscription]: {{page.r3}}subscription.html
+[US Core]: http://hl7.org/fhir/us/core/
+[QI Core]: {{page.qi_r3}}index.html
+[HEDIS]: {{page.hedis_r3}}index.html

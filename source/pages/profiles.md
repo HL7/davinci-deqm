@@ -3,58 +3,54 @@ title: Profiles defined as part of this Guide
 layout: default
 active: profiles
 ---
-#### Profiles
+## Profiles
 
-The following Profiles have been defined for this implementation guide.
+### Profiles used in this GUIDE are listed below by use case:
+{:.no_toc}
 
-<!-- all profiles
+#### Common to all Quality Measures Implementation Use Cases:
+{:.no_toc}
 
-1. Coverage [Davinci Coverage]
-1. Encounter [US Core Encounter]
-1. Location [US Core Location]
-1. Measure [MRP Measure]
-1. MeasureReport [DaVinci MeasureReport]
-1. MeasureReport [MRP MeasureReport]
-1. Observation [Measure Observation]
-1. Observation [MRP Observation]
-1. Organization [Davinci Organization]
-1. Patient: [US Core Patient]
-1. Practitioner [Davinci Practitioner]
-1. Task [Measure Task]
-1. Task [MRP Task]
+|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+|---|---|---|---|
+|Measure|HEDIS Measure Profiles|[HEDIS Measure Profiles(STU3)]|[HEDIS Measure Profiles (R4)]|
+|MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
+|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
 
--->
+#### MRP
+{:.no_toc}
 
-Da Vinci Profiles (Supported accross all measures)
+|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+|---|---|---|---|
+|Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]|
+|Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
+|Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
+|Measure|HEDIS MRP Measure Profile|[HEDIS MRP Measure (STU3)]|[HEDIS MRP Measure (R4)]|
+|MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
+|Observation|HEDIS MRP Observation Profile|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
+|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
+|Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-1. Coverage [Davinci Coverage]
-1. MeasureReport [DaVinci MeasureReport]
-1. Observation [Measure Observation]
-1. Organization [Davinci Organization]
-1. Practitioner [Davinci Practitioner]
-1. Task [Measure Task]
+### Profiles defined for this implementation guide:
+{:.no_toc}
 
-
-Da Vinci MRP Specific Profiles:
-
-
-1. Measure [MRP Measure]
-1. MeasureReport [MRP MeasureReport]
-1. Observation [MRP Observation]
-1. Task [MRP Task]
-
-<!--{% raw %}
-{% include list-profiles.xhtml %}
-{% endraw %}
--->
+|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+|---|---|---|---|
+|Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]||
+|MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
+|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 
 <br />
 
-#### Extensions:
+## Extensions
 
-These extensions have been defined for this implementation guide.
+### Extensions defined for this implementation guide:
+{:.no_toc}
 
-{% include list-extensions.xhtml %}
 
 <br />
 

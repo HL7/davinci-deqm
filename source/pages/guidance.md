@@ -23,7 +23,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ## Introduction
 
-This Guide (IG) defines a set of FHIR operations for Exchange of Quality Measure Data between Data "Aggregator's" and Providers.  Three methods of exchanging of data quality information are detailed below:
+This Guide (IG) defines a set of [FHIR operations] for Exchange of Quality Measure Data between Data "Aggregator's" and Providers.  Three methods of exchanging of data quality information are detailed below:
 
 1. Submit Data operation
 1. Collect Data operation
@@ -41,7 +41,7 @@ These transactions are triggered by use case specific clinical or administrative
 ### Profiles
 - The following resources are used in all these transactions:
 
-     |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+     |Resource|Profile Name|Link to STU3 Profile|Link to R4 Profile|
      |---|---|---|---|
      |Measure|HEDIS Measure Profiles|[HEDIS Measure Profiles(STU3)]|[HEDIS Measure Profiles (R4)]|
      |MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
