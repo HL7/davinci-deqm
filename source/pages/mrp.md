@@ -47,12 +47,12 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 #### Resources supported for this use case:
 {:.no_toc}
 
-|Resource|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
 |Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
-|Measure|HEDIS MRP Measure Profile|[HEDIS MRP Measure (STU3)]|[HEDIS MRP Measure (R4)]|
+|Measure|DEQM Measure Profiles|[DEQM Measure (STU3)]|[DEQM Measure  (R4)]|
 |MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
 |Observation|HEDIS MRP Observation Profile|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|

@@ -41,12 +41,13 @@ These transactions are triggered by use case specific clinical or administrative
 ### Profiles
 - The following resources are used in all these transactions:
 
-     |Resource|Profile Name|Link to STU3 Profile|Link to R4 Profile|
-     |---|---|---|---|
-     |Measure|HEDIS Measure Profiles|[HEDIS Measure Profiles(STU3)]|[HEDIS Measure Profiles (R4)]|
-     |MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
-     |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-     |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+    |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+    |---|---|---|---|
+    |Measure|DEQM Measure Profiles|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
+    |MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
+    |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+    |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+    |Subscription|DEQM Subscription Profile|[DEQM Subscription (STU3)]|[DEQM Subscription (R4)]|
 
 - Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
 
@@ -158,14 +159,14 @@ In order to complete the transaction the Provider may need to discover the requi
 
 ### Option 3: Subscription service combined with the  Collect Data operation
 
-Subscriptions allow for a Provider to notify the Aggregator  when Measure data can be collected.  The notification triggers are based upon the clinical and/or administrative event in the Aggregator  system.  Once a Aggregator is notified, the measure data can be collected using the the *Collect Data* operation described above.
+Subscriptions allow for a Provider to notify the Aggregator when Measure data can be collected.  The notification triggers are based on whether the Provider's system has determined that it has the requisite measure data the subscriber needs for the measure, or if the information has been updated.  Once a Aggregator is notified, the measure data can be collected using the the [*Collect Data*](#collect-data-operation) operation described above.
 
 {% include img.html img="subscribe-data-steps.jpg" %}
 
 #### Subscribe for Measure Data
 {:.no_toc}
 
-The Aggregator must first subscribe to the Provider for a notification for a particular measure.  An Aggregator may also unsubscribe to a measure subscription.
+The Aggregator must first subscribe to the Provider for a notification for a particular measure. An Aggregator may also unsubscribe to a measure subscription.
 
 {% include img-narrow.html img="subscribe-data.jpg" caption="Subscription Service" %}
 
@@ -175,7 +176,7 @@ The Aggregator must first subscribe to the Provider for a notification for a par
 The following artifacts are used in the subscription transaction:
 
 1. DEQM Subscription Profile [DEQM Subscription (STU3)] [DEQM Subscription (R4)]
-1. [Measure Subscription Extension] or [Subscription Trigger event Extension] **TODO DISCUSS**
+1. DEQM Measure Subscription Extension [Measure Subscription (STU3)] [Measure Subscription (R4)]
 
 ##### Usage
 {:.no_toc}
@@ -193,19 +194,19 @@ To unsubscribe:
 #### Get Data Requirements
 {:.no_toc}
 
-The Provider may need to discover the required data for each Measure by invoking the [Data Requirements] operation on the aggregator 's `Measure/[measure-id]` endpoint. This operation is discussed in the [section above](#gather-data-requirements-from-aggregator )
+The DEQM Subscription Profile allows the subscriber to send a *DEQM Measure instance id*.  By invoking the $data-requirements operation (see [above](#gather-data-requirements-from-aggregator)) on a subscriber’s Measure instance endpoint, the server can discover what data is needed to calculate by a subscriber for particular measure.  This information is necessary to correctly trigger a notification when the requisite data is available.
 
 #### Measure Notifications
 {:.no_toc}
 
-The Provider notifies the Aggregator when measure data is available. How the Payer determines this is out of scope for this guide.  There are several architectures to implement the subscription notifications such as "point to point" notification or using a “feed handler” and an intermediary system.
+The Provider notifies the Aggregator when measure data is available. Exactly, how this notification is triggered is out of scope for this guide.  Note that  several architectures to implement the subscription notifications such as "point to point" notification or using a “feed handler” as an intermediary system, are available.
 
 {% include img-narrow.html img="measure-notifications.jpg" caption="Measure Notifications" %}
 
 ##### Usage
 {:.no_toc}
 
- The standard FHIR Subscription API describe the REST Hook channel as follows:
+ The standard FHIR Subscription API describes the REST Hook channel as follows:
 
 `POST [app notification endpoint]`
 

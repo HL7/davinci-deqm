@@ -1,5 +1,5 @@
 **Measure Notification:**
 
-`POST https://feed-handler.com/notification`
+`POST https://payersystem.com/fhirserver/on-measure-subscription-mrp`
 
 **** No notification body****
