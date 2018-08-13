@@ -139,7 +139,7 @@
                 "evaluatedResources": {
                     "extension": [
                         {
-                            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
+                            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-referenceAny",
                             "valueReference": {
                                 "reference": "Obs/mrp-example1"
                             }

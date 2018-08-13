@@ -131,7 +131,7 @@
                 "evaluatedResources": {
                     "extension": [
                         {
-                            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
+                            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-referenceAny",
                             "valueReference": {
                                 "reference": "Task/mrp-example1"
                             }

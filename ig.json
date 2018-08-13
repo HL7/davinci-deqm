@@ -1,1 +1,161 @@
-{"spreadsheets": ["profile-coverage-davinci-spreadsheet.xml", "profile-measurereport-davinci-spreadsheet.xml", "profile-organization-davinci-spreadsheet.xml", "profile-practitioner-davinci-spreadsheet.xml"], "fixed-business-version": "0.0.0", "tool": "jekyll", "mappings": "false", "npm-name": "hl7.fhir.davinci.deqm", "html-template": "html-template.html", "gen-examples": "false", "logging": ["progress"], "swagger": [{"capabilities": "server", "mode": "single"}], "resources": {"StructureDefinition/measurereport-davinci": {"base": "StructureDefinition-measurereport-davinci.html", "defns": "StructureDefinition-measurereport-davinci-definitions.html"}, "CapabilityStatement/server": {"base": "CapabilityStatement-server.html", "source": "capabilitystatement-server.xml"}, "ValueSet/measure-code": {"base": "ValueSet-measure-code.html", "source": "valueset-measure-code.xml"}, "ValueSet/davinci-profiles": {"base": "ValueSet-davinci-profiles.html", "source": "valueset-davinci-profiles.xml"}, "ValueSet/measure-status": {"base": "ValueSet-measure-status.html", "source": "valueset-measure-status.xml"}, "CodeSystem/davinci-profiles": {"base": "CodeSystem-davinci-profiles.html", "source": "codesystem-davinci-profiles.xml"}, "StructureDefinition/coverage-davinci": {"base": "StructureDefinition-coverage-davinci.html", "defns": "StructureDefinition-coverage-davinci-definitions.html"}, "CodeSystem/observation-category": {"base": "CodeSystem-observation-category.html", "source": "codesystem-observation-category.xml"}, "OperationDefinition/collect-data": {"base": "OperationDefinition-collect-data.html", "source": "operationdefinition-collect-data.xml"}, "ValueSet/organization-type": {"base": "ValueSet-organization-type.html", "source": "valueset-observation-type.xml"}, "StructureDefinition/ext-referenceAny": {"base": "StructureDefinition-ext-referenceAny.html", "defns": "StructureDefinition-ext-referenceAny-definitions.html"}, "StructureDefinition/practitioner-davinci": {"base": "StructureDefinition-practitioner-davinci.html", "defns": "StructureDefinition-practitioner-davinci-definitions.html"}, "CapabilityStatement/client": {"base": "CapabilityStatement-client.html", "source": "capabilitystatement-client.xml"}, "StructureDefinition/organization-davinci": {"base": "StructureDefinition-organization-davinci.html", "defns": "StructureDefinition-organization-davinci-definitions.html"}}, "working-dir": "/Users/ehaas/Documents/FHIR/DaVinci/", "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm", "jurisdiction": "US", "topofpage": "true", "license": "CC0-1.0", "version": "3.0.1", "allviews": "true", "title": "Data Exchange For Quality Measures", "paths": {"txCache": "generated_output/txCache", "resources": ["source/resources", "source/examples"], "qa": "generated_output/qa", "output": "output", "pages": ["framework", "source/pages"], "temp": "generated_output/temp", "specification": "http://hl7.org/fhir"}, "broken-links": "warning", "pub_url": "ehaas@healthedatainc.com", "no-inactive-codes": "false", "igtemplate-dir": "/Users/ehaas/Documents/FHIR/IG-Template2/", "extraTemplates": ["mappings"], "do-transforms": "false", "defaults": {"StructureDefinition": {"template-base": "sd.html", "template-mappings": "sd-mappings.html", "template-defns": "sd-definitions.html"}, "OperationDefinition": {"template-base": "base.html"}, "CapabilityStatement": {"template-base": "base.html"}, "CodeSystem": {"template-base": "base.html"}, "StructureMap": {"content": false, "template-base": "ex.html", "script": false, "profiles": false}, "Any": {"template-base": "base.html", "template-format": "format.html"}, "SearchParameter": {"template-base": "base.html"}, "ValueSet": {"template-base": "base.html"}, "ConceptMap": {"template-base": "base.html"}}, "dependencyList": [{"location": "http://hl7.org/fhir/us/core", "version": "dev", "name": "uscore", "source": "dependencies/uscore-vp"}], "status": "draft", "extensions": ["ext-referenceAny"], "publisher": "DaVinci Project", "sct-edition": "http://snomed.info/sct/731000124108", "source": "ig.xml"}
+{
+  "spreadsheets": [
+    "profile-coverage-deqm-spreadsheet.xml",
+    "profile-measurereport-deqm-spreadsheet.xml",
+    "profile-organization-deqm-spreadsheet.xml",
+    "profile-practitioner-deqm-spreadsheet.xml"
+  ],
+  "jurisdiction": "US",
+  "gen-examples": "false",
+  "resources": {
+    "StructureDefinition/coverage-deqm": {
+      "defns": "StructureDefinition-coverage-deqm-definitions.html",
+      "base": "StructureDefinition-coverage-deqm.html"
+    },
+    "StructureDefinition/measurereport-deqm": {
+      "defns": "StructureDefinition-measurereport-deqm-definitions.html",
+      "base": "StructureDefinition-measurereport-deqm.html"
+    },
+    "CodeSystem/davinci-profiles": {
+      "source": "codesystem-davinci-profiles.xml",
+      "base": "CodeSystem-davinci-profiles.html"
+    },
+    "OperationDefinition/collect-data": {
+      "source": "operationdefinition-collect-data.xml",
+      "base": "OperationDefinition-collect-data.html"
+    },
+    "StructureDefinition/extension-referenceAny": {
+      "defns": "StructureDefinition-extension-referenceAny-definitions.html",
+      "base": "StructureDefinition-extension-referenceAny.html"
+    },
+    "CapabilityStatement/server": {
+      "source": "capabilitystatement-server.xml",
+      "base": "CapabilityStatement-server.html"
+    },
+    "StructureDefinition/organization-deqm": {
+      "defns": "StructureDefinition-organization-deqm-definitions.html",
+      "base": "StructureDefinition-organization-deqm.html"
+    },
+    "ValueSet/organization-type": {
+      "source": "valueset-observation-type.xml",
+      "base": "ValueSet-organization-type.html"
+    },
+    "ValueSet/davinci-profiles": {
+      "source": "valueset-davinci-profiles.xml",
+      "base": "ValueSet-davinci-profiles.html"
+    },
+    "CapabilityStatement/client": {
+      "source": "capabilitystatement-client.xml",
+      "base": "CapabilityStatement-client.html"
+    },
+    "ValueSet/measure-status": {
+      "source": "valueset-measure-status.xml",
+      "base": "ValueSet-measure-status.html"
+    },
+    "ValueSet/measure-code": {
+      "source": "valueset-measure-code.xml",
+      "base": "ValueSet-measure-code.html"
+    },
+    "StructureDefinition/practitioner-deqm": {
+      "defns": "StructureDefinition-practitioner-deqm-definitions.html",
+      "base": "StructureDefinition-practitioner-deqm.html"
+    },
+    "CodeSystem/observation-category": {
+      "source": "codesystem-observation-category.xml",
+      "base": "CodeSystem-observation-category.html"
+    }
+  },
+  "extraTemplates": [
+    "mappings"
+  ],
+  "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm",
+  "no-inactive-codes": "false",
+  "npm-name": "hl7.fhir.davinci.deqm",
+  "license": "CC0-1.0",
+  "fixed-business-version": "0.0.0",
+  "source": "ig.xml",
+  "extensions": [
+    "extension-referenceAny"
+  ],
+  "paths": {
+    "qa": "generated_output/qa",
+    "output": "output",
+    "pages": [
+      "framework",
+      "source/pages"
+    ],
+    "resources": [
+      "source/resources",
+      "source/examples"
+    ],
+    "txCache": "generated_output/txCache",
+    "temp": "generated_output/temp",
+    "specification": "http://hl7.org/fhir"
+  },
+  "logging": [
+    "progress"
+  ],
+  "pub_url": "ehaas@healthedatainc.com",
+  "publisher": "DaVinci Project",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "dependencyList": [
+    {
+      "name": "qicore",
+      "location": "http://hl7.org/fhir//us/qicore",
+      "version": "current"
+    }
+  ],
+  "working-dir": "/Users/ehaas/Documents/FHIR/DaVinci/",
+  "status": "draft",
+  "topofpage": "true",
+  "do-transforms": "false",
+  "allviews": "true",
+  "defaults": {
+    "StructureMap": {
+      "template-base": "ex.html",
+      "content": false,
+      "script": false,
+      "profiles": false
+    },
+    "CodeSystem": {
+      "template-base": "base.html"
+    },
+    "SearchParameter": {
+      "template-base": "base.html"
+    },
+    "OperationDefinition": {
+      "template-base": "base.html"
+    },
+    "Any": {
+      "template-base": "base.html",
+      "template-format": "format.html"
+    },
+    "StructureDefinition": {
+      "template-base": "sd.html",
+      "template-mappings": "sd-mappings.html",
+      "template-defns": "sd-definitions.html"
+    },
+    "ValueSet": {
+      "template-base": "base.html"
+    },
+    "CapabilityStatement": {
+      "template-base": "base.html"
+    },
+    "ConceptMap": {
+      "template-base": "base.html"
+    }
+  },
+  "tool": "jekyll",
+  "title": "Data Exchange For Quality Measures",
+  "swagger": [
+    {
+      "mode": "single",
+      "capabilities": "server"
+    }
+  ],
+  "mappings": "false",
+  "version": "3.0.1",
+  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/IG-Template2/",
+  "broken-links": "warning",
+  "html-template": "html-template.html"
+}

@@ -4,7 +4,7 @@ working-dir,/Users/ehaas/Documents/FHIR/DaVinci/
 title,Data Exchange For Quality Measures
 status,draft
 publisher,DaVinci Project
-extensions,ext-referenceAny
+extensions,extension-referenceAny
 searches,
 codesystems,
 valuesets,
@@ -26,10 +26,9 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm
-dependencyList.name,uscore
-dependencyList.location,http://hl7.org/fhir/us/core
-dependencyList.source,dependencies/uscore-vp
-dependencyList.version,dev
+dependencyList.name,qicore
+dependencyList.location,http://hl7.org/fhir/qicore
+dependencyList.version,current
 special-urls,
 tool,jekyll
 logging,progress
