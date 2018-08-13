@@ -48,9 +48,12 @@ active: profiles
 
 ## Extensions
 
-### Extensions defined for this implementation guide:
+### *STU3* Extensions defined for this implementation guide:
 {:.no_toc}
 
+|Extension Name|Context|Link to STU3 Profile|Link to R4 Profile|
+|---|---|---|---|
+|Reference Any|DEQM Measure Report Profile|[Reference Any (STU3)]|N/A||
 
 <br />
 

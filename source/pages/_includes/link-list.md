@@ -26,6 +26,7 @@
 [Home]: index.html "Home Page"
 [Measure Observation]: StructureDefinition-observation-measure.html
 [Measure Task]: StructureDefinition-task-measure.html
+[Must Support]: guidance.html#must-support
 [Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
 [Medication Reconciliation (MRP)]: mrp.html
 [Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support "US Core definition of *Must Support*"
@@ -34,8 +35,10 @@
 [QI Core Encounter (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-encounter.html
 [QI Core Location (R4)]: todo.html
 [QI Core Location (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-location.html
+[QI Core *Must Support*]: {{page.qi_r3}}index.html#mustsupport
 [QI Core Patient (R4)]: todo.html
 [QI Core Patient (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-patient.html
+[Reference Any (STU3)]: {{page.deqm_r3}}StructureDefinition-extension-referenceAny.html
 [Submit Data]:{{page.r4}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [QI Core Profiles]: {{page.qi_r3}}index.html
 [Collect Data (STU3)]: {{page.deqm_r3}}OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."

@@ -24,7 +24,7 @@
   <WindowWidth>25260</WindowWidth>
   <WindowTopX>-15</WindowTopX>
   <WindowTopY>6825</WindowTopY>
-  <ActiveSheet>1</ActiveSheet>
+  <ActiveSheet>2</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -962,7 +962,7 @@
    x:FullRows="1" ss:StyleID="s69" ss:DefaultColumnWidth="65.25"
    ss:DefaultRowHeight="15">
    <Column ss:StyleID="s69" ss:Width="98.25"/>
-   <Column ss:StyleID="s69" ss:AutoFitWidth="0" ss:Width="363"/>
+   <Column ss:StyleID="s69" ss:AutoFitWidth="0" ss:Width="648.75"/>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s70"><Data ss:Type="String">Name</Data></Cell>
     <Cell ss:StyleID="s71"><Data ss:Type="String">Value</Data></Cell>
@@ -988,7 +988,7 @@
     <Cell ss:StyleID="s76" ss:HRef="http://hl7.org/special/committees/[WG page name]"><Data
       ss:Type="String">https://github.com/Healthedata1/DaVinci</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="69">
+   <Row ss:AutoFitHeight="0" ss:Height="18.75">
     <Cell ss:StyleID="s74"><Data ss:Type="String">code</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">˙</Data></Cell>
    </Row>
@@ -1039,7 +1039,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -1059,7 +1058,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>19</ActiveRow>
+     <ActiveRow>23</ActiveRow>
+     <ActiveCol>0</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1184,7 +1184,7 @@
     <Cell ss:StyleID="s96"/>
     <Cell ss:StyleID="s97"/>
     <Cell ss:StyleID="s97"/>
-    <Cell ss:StyleID="s96"><Data ss:Type="String">Practitioner{http://hl7.org/fhir/qicore/StructureDefinition/qicore-practitioner}</Data></Cell>
+    <Cell ss:StyleID="s96"><Data ss:Type="String">Practitioner{http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner}</Data></Cell>
     <Cell ss:StyleID="s97"/>
     <Cell ss:StyleID="s97"/>
     <Cell ss:StyleID="s97"/>
@@ -4039,6 +4039,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -4059,8 +4060,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>35</ActiveRow>
-     <ActiveCol>7</ActiveCol>
+     <ActiveRow>11</ActiveRow>
+     <ActiveCol>8</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -4,22 +4,26 @@ source file: source/pages/\_includes/{{id}}-intro.md
 
 {{site.data.structuredefinitions.[id].description}}
 
-#### Scope and Usage
-
-scope and usage text here
-
 #### Mandatory Data Elements and Terminology
 
-The following data-elements are mandatory (i.e data MUST be present). blah blah blah
+The following data-elements are mandatory (i.e data MUST be present).
 
-**must have:**
+**Each {{site.data.structuredefinitions.[id].type}} must have:**
 
-1. blah
-1. blah
-1. blah
+1. A NPI identifier
+
+<!--
+
+Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
+
+1. The beneficiary
+
+-->
 
 **Additional Profile specific implementation guidance:**
 
+None
+
 #### Examples
 
-- list examples here
+- [{{id}}-example-1](todo.html)

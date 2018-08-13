@@ -219,8 +219,8 @@ Upon notification, the Aggregator uses the Collect Data operation to request a M
 
 ## Must Support
 
-- This guide adopts the QI Core definition for *[Must Support]* and add the following expectations:
+- This guide adopts the [QI Core *Must Support*] definition with the following additional expectations:
 
-- The receiver of data may not be able to complete processing and may "error out" if a Must Support element is unavailable.
+1.  The receiver of data may not be able to complete processing and may "error out" if a Must Support element is unavailable.
 
 {% include link-list.md %}
