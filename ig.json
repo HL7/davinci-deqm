@@ -101,8 +101,8 @@
   "dependencyList": [
     {
       "name": "qicore",
-      "location": "http://hl7.org/fhir//us/qicore",
-      "version": "current"
+      "location": "http://hl7.org/fhir/us/qicore",
+      "version": "dev"
     }
   ],
   "working-dir": "/Users/ehaas/Documents/FHIR/DaVinci/",
