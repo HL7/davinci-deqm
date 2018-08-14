@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
+	<id value="organization-type"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/organization-type"/>
+	<name value="organization-type"/>
+	<title value="DEQM Organization Type Value Set"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<date value="2018-08-13T23:59:31+00:00"/>
+	<publisher value="Davinci Project"/>
+	<description value="Da Vinci Organization type codes limited to `TAX` for Tax Identifier Number (TIN) and `PRN` for National Provider identifer (NPI)."/>
+	<immutable value="true"/>
+	<compose>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+			<concept>
+				<code value="TAX"/>
+				<display value="Tax ID number"></display>
+			</concept>
+			<concept>
+				<code value="PRN"/>
+				<display value="Provider number"></display>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

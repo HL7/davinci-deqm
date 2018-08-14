@@ -4,7 +4,7 @@
 
 **Request body**
 
-Option 1: using the Measure Subscription modifier extension to modify to the criteria element for event based triggers as shown below...
+Using the Measure Subscription modifier extension to modify to the criteria element to define the measure instance id
 
 ~~~
 <?xml version="1.0" encoding="UTF-8"?>
@@ -35,6 +35,8 @@ Option 1: using the Measure Subscription modifier extension to modify to the cri
   </channel>  
 </Subscription>
 ~~~
+
+<!--
 
 Option 2: using the Argonaut Scheduling extensions:
 
@@ -68,6 +70,7 @@ Option 2: using the Argonaut Scheduling extensions:
 }
 ~~~
 
+-->
 
 **Response**
 

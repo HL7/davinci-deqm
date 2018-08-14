@@ -4,7 +4,7 @@ working-dir,/Users/ehaas/Documents/FHIR/DaVinci/
 title,Data Exchange For Quality Measures
 status,draft
 publisher,DaVinci Project
-extensions,extension-referenceAny
+extensions,extension-referenceAny|extension-measureSubscription
 searches,
 codesystems,
 valuesets,
