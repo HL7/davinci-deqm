@@ -13,10 +13,10 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 ## Profiles
 
-### Profiles used in this GUIDE are listed below by use case:
+### Profiles Listed By Use Case
 {:.no_toc}
 
-#### Common to all Quality Measures Implementation Use Cases:
+#### Common to All Quality Measures Implementation Use Cases
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -45,7 +45,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-### Profiles defined for this implementation guide:
+### Profiles Defined in this Implementation Guide
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|

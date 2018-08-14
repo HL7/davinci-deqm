@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
+	<id value="improvement-notation"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/CodeSystem/improvement-notation"/>
+	<version value="0.0.0"/>
+	<name value="MeasureImprovementNotation"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<date value="2018-08-13T20:24:35-07:00"/>
+	<publisher value="The Da Vinci Project"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+		</telecom>
+		<telecom>
+			<system value="email"/>
+		</telecom>
+	</contact>
+	<description value="Improvement notation for a measure (e.g. increase or decrease)"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<caseSensitive value="true"/>
+	<valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/improvement-notation"/>
+	<content value="complete"/>
+	<concept>
+		<code value="increase"/>
+		<display value="Increase"/>
+		<definition value="Improvement is notated as an *increase* in the measure score"/>
+	</concept>
+	<concept>
+		<code value="decrease"/>
+		<display value="Decrease"/>
+		<definition value="Improvement is notated as a *decrease* in the measure score"/>
+	</concept>
+</CodeSystem>

@@ -24,12 +24,13 @@
 	<acceptUnknown value="extensions"/>
 	<format value="xml"/>
 	<format value="json"/>
-
+<!--
 	<profile>
 
 		<reference value="http://fhir.org/guides/argonaut-clinicalnotes/StructureDefinition/template-basic"/>
 		<display value="StructureDefinition-template-basic"/>
 	</profile>
+-->
 	<rest>
 		<mode value="client"/>
 

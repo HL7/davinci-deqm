@@ -23,11 +23,11 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ## Introduction
 
-Clinical Quality Measures are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. However, the data-of-interest for a particular quality measure is often spread throughout multiple organizations and systems. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data. This Guide (IG) defines a set of [FHIR operations] that provide a framework to enable the Exchange of Quality Measure Data between Data "Aggregators" (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients).  This guide describes three methods of exchanging data quality information:
+Clinical Quality Measures are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. However, the data-of-interest for a particular quality measure is often spread throughout multiple organizations and systems. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data. This Guide (IG) uses a set of [FHIR operations] that provide a framework to enable the Exchange of Quality Measure Data between Data "Aggregators" (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients).  This guide describes three methods of exchanging data quality information:
 
-1. Submit Data operation
-1. Collect Data operation
-1. Subscription service.  
+1. Measurement data may be submitted to the Aggregator by the Provider using the [Submit Data operation](#submit-data)
+1. Measurement data may be requested from the Provider by the Aggregator using the [Collect Data operation](#collect-data)
+1. The Aggregator may subscribe to a Provider's [Subscription service](#pub-sub) to be notified when the measurement data is available.  
 
 These transactions are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation.
 
@@ -62,6 +62,7 @@ These transactions are triggered by use case specific clinical or administrative
 <br />
 
 ### Option 1: Submit Data operation
+{: #submit-data}
 
 The *Submit Data* operation allows a Provider to submit data-of-interest for a particular quality measure. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.
 
@@ -81,12 +82,12 @@ In this *optional* step, the provider queries the aggregator for which resources
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. [Data Requirements] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
+1. Data Requirements: [$data-requirements (R4)] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
 
 ##### Usage
 {:.no_toc}
 
- The required data for each Measure is discovered by invoking the [Data Requirements] operation on the aggregator's `Measure/[measure-id]` endpoint.  Using either the `GET` or `POST` Syntax, the operation can be invoked as follows:
+ The required data for each Measure is discovered by invoking the *Data Requirements* operation on the aggregator's `Measure/[measure-id]` endpoint.  Using either the `GET` or `POST` Syntax, the operation can be invoked as follows:
 
 `GET|[base]/Measure/[measure-id]/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
 
@@ -108,7 +109,7 @@ Once the Provider understands the data requirements, they will use the Submit Da
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. [Submit Data] operation  ( Note - the same operation is used for both version STU3 and R4 transaction)
+1. Submit Data operation: [$submit-data (R4)]  ( Note - the same operation is used for both version STU3 and R4 transaction)
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 ##### Usage
@@ -121,6 +122,7 @@ Using the `POST` Syntax, the operation can be invoked by the Provider:
 {% include examplebutton.html example="submit-data" b_title = "Example Submit Data operation" %}
 
 ### Option 2: Collect Data operation
+{: #collect-data}
 
 In this scenario, the Aggregator initiates a *Collect Data* operation to gather any available quality reporting data for a particular measure from the Provider.  In response to the operation, the Provider returns a MeasureReport containing data relevant to the Measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
 
@@ -131,7 +133,7 @@ As with the Submit Data case above, discovery of what data (i.e. resources) are 
 #### Collect Data Operation
 {:.no_toc}
 
-The Aggregator uses a Collect Data operation to request any available relevant data for the evaluation of a particular measure from a Provider. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Provider to limit the response to only data that has been entered or changed since the last received on date. 
+The Aggregator uses a Collect Data operation to request any available relevant data for the evaluation of a particular measure from a Provider. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Provider to limit the response to only data that has been entered or changed since the last received on date.
 
 Note that implementing this scenario requires that the Provider system understand the data requirements for the measure in order to provide the data. As with the Submit Data operation, the implementation can either manually determine the relevant data using the measure definition, or the implementation can use the *Data Requirements* operation to determine relevant data.
 
@@ -142,7 +144,7 @@ Note that implementing this scenario requires that the Provider system understan
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Collect Data operation: [Collect Data (STU3)] or [Collect Data (R4)]
+1. Collect Data operation:[$collect-data (STU3)] or [$collect-data (R4)]
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 
@@ -163,11 +165,12 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Agg
 #### Data Requirements Operation
 {:.no_toc}
 
-In order to complete the transaction the Provider may need to discover the required data for each Measure by invoking the [Data Requirements] operation on the aggregator 's `Measure/[measure-id]` endpoint. This operation is discussed in the [section above](#gather-data-requirements-from-aggregator )
+In order to complete the transaction the Provider may need to discover the required data for each Measure by invoking the *Data Requirements* operation on the aggregator 's `Measure/[measure-id]` endpoint. This operation is discussed in the [section above](#gather-data-requirements-from-aggregator )
 
 <br />
 
 ### Option 3: Subscription service combined with the  Collect Data operation
+{: #pub-sub}
 
 Subscriptions allow for a Provider to notify the Aggregator whenever new Measure data is available.  Effectively, the Aggregator subscribes to the Provider's system using the Measure as the criteria. It is a short-hand for subscribing to all the data-of-interest (as defined by the data requirements) for the measure, but using the Measure as the subscription point allows the implementation to determine the most efficient approach to notification. For example, notifications can be batched on a periodic basis, or they can be performed along transactional boundaries within the implementing system.
 
