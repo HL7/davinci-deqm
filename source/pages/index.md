@@ -27,13 +27,13 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ##  Summary
 
-The purpose of this implementation guide is to define a set of FHIR profiles with extensions and bindings needed to support value based care data exchange. The profiles in this implementation guide derive from and extend the [QI Core profiles] where available to provide a common foundation for building, sharing, and evaluating knowledge artifacts for value based care data exchange in the US Realm.
+The purpose of this implementation guide is to support value based care data exchange. The profiles in this implementation guide derive from and extend the [QI Core profiles] where available to provide a common foundation for building, sharing, and evaluating knowledge artifacts for value based care data exchange in the US Realm.
 
 As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
 
 ##  Background
 
-This Implementation Guide derived from the [US Core], [QI Core],and [HEDIS] profiles with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of HL7 Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. The HL7 CQI Work Group maintains this Implementation Guide, co-sponsored by the Clinical Decision Support (CDS) HL7 Work Group, to inform electronic clinical quality improvement (i.e., measurement and decision support). This Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the U.S. Realm.
+This Implementation Guide derived from the [US Core], [QI Core], and [HEDIS] profiles with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of HL7 Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. The HL7 CQI Work Group maintains this Implementation Guide, co-sponsored by the Clinical Decision Support (CDS) HL7 Work Group, to inform electronic clinical quality improvement (i.e., measurement and decision support). This Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the U.S. Realm.
 
 Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models.
 
