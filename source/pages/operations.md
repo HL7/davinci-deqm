@@ -12,8 +12,6 @@ hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
-
-
 ## Operations Listed By Use Case
 {:.no_toc}
 
