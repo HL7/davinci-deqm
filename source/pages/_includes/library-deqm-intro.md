@@ -10,9 +10,9 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
-1. A canonical url defined
-1. At least one identifier
-1. A  content version
+1. A canonical url
+1. An identifier
+1. A content version
 1. A valid, machine-friendly name
 1. A human-friendly title
 1. A date the library content was last changed
