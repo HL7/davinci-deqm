@@ -7,6 +7,8 @@
 [Data Requirements]: {{page.r4}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
 [DEQM Coverage (R4)]: r4todo.html
 [DEQM Coverage (STU3)]: {{page.deqm_r3}}StructureDefinition-coverage-deqm.html
+[DEQM Library (R4)]: todo.html
+[DEQM Library (STU3)]: {{page.deqm_r3}}StructureDefinition-library-deqm.html
 [DEQM Measure (R4)]: todo.html
 [DEQM Measure (STU3)]: {{page.deqm_r3}}StructureDefinition-measure-deqm.html
 [DEQM MeasureReport (R4)]: todo.html
@@ -14,7 +16,7 @@
 [Measure Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-deqm.html
 [Measure Subscription (R4)]: todo.html
 [DEQM Organization (R4)]: r4todo.html
-[DEQM Organization (STU3)]: {{page.deqm_r3}}StructureDefinition-extension-measureSubscription.html
+[DEQM Organization (STU3)]: {{page.deqm_r3}}StructureDefinition-organization-deqm.html
 [DEQM Practitioner (R4)]:r4todo.html
 [DEQM Practitioner (STU3)]: {{page.deqm_r3}}StructureDefinition-practitioner-deqm.html
 [DEQM Subscription (R4)]: todo.html

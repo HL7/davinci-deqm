@@ -15,7 +15,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 **Additional Profile specific implementation guidance:**
 
 - This profile adds a modifier extension to modify the value of the `criteria` element to a *DEQM Measure instance id*.
--  By by invoking the [$data-requirements operation](measure-operations.html#data-requirements) on a subscriber’s (Aggregator) endpoint for the Measure instance specified in `criteria` , the server can discover what data is needed to calculate that particular measure.
+-  By invoking the [$data-requirements operation](measure-operations.html#data-requirements) on a subscriber’s (Aggregator) endpoint for the Measure instance specified in `criteria` , the server can discover what data is needed to calculate that particular measure.
 - The system sends a notification to the subscriber, if it has determined that it has the requisite measure data the subscriber needs for the measure, or if the information has been updated.
 None
 

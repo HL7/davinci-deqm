@@ -11,14 +11,16 @@ deqm_r3: ''
 hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
-#### Value Sets
+## Value Sets
 
 These value sets have been defined for this implementation guide:
 {% include list-simple-valuesets.xhtml %}
 
-#### Code Systems
+## Code Systems
 
 **Code systems published in this IG** - Includes US Core defined code systems and externally defined code systems
 {% include list-simple-codesystems.xhtml %}
 
 {% include link-list.md %}
+
+<br />

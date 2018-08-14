@@ -41,13 +41,15 @@ These transactions are triggered by use case specific clinical or administrative
 ### Profiles
 - The following resources are used in all these transactions:
 
-    |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
-    |---|---|---|---|
-    |Measure|DEQM Measure Profiles|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
-    |MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
-    |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-    |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
-    |Subscription|DEQM Subscription Profile|[DEQM Subscription (STU3)]|[DEQM Subscription (R4)]|
+  |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
+  |---|---|---|---|
+  |Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
+  |Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
+  |MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
+  |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+  |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+  |Subscription|DEQM Subscription Profile|[DEQM Subscription (STU3)]|[DEQM Subscription (R4)]|
+
 
 - Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
 
