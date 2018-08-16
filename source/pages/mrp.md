@@ -22,7 +22,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ##  Introduction
 
-The Medication Reconciliation Use Case defines the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member. This attestation message can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge.   (Any necessary documentation will also be put in the record…)
+The Medication Reconciliation Use Case defines the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member. This attestation message can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge.   (Any necessary documentation will also be put in the record)
 
 In the case of medication reconciliation after discharge from the hospital, the patient’s discharge medication(s) is compared with the medication(s) the patient was taking prior to hospitalization. This can avoid medication errors such as omissions, duplications, dosing errors or drug interactions, and should be done at every transition of care in which new medications are ordered or existing orders are rewritten.
 
@@ -68,7 +68,7 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 ### Gather Data Requirements From Payer
 
 
-In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.
+In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
 
@@ -79,7 +79,7 @@ The required data for MRP is discovered by invoking the|[Data Requirements] oper
 
 These artifacts are used in this transaction:
 
-[Data Requirements] operation
+1. Data Requirements: [$data-requirements (R4)] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
 
 #### Usage
 {:.no_toc}
@@ -114,7 +114,7 @@ Provider will use the Submit Data operation to submit a MeasureReport and the re
 
 These artifacts are used in this transaction:
 
-1. [Submit Data] operation
+1. Submit Data operation: [$submit-data (R4)]  ( Note - the same operation is used for both version STU3 and R4 transaction)
 1. DEQM Coverage Profile
 1. QI Core Encounter Profile
 1. QI Core Location Profile
