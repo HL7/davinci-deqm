@@ -27,28 +27,78 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ##  Summary
 
-The purpose of this implementation guide is to support value based care data exchange. The profiles in this implementation guide derive from and extend the [QI Core profiles] where available to provide a common foundation for building, sharing, and evaluating knowledge artifacts for value based care data exchange in the US Realm.
+The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the U.S. Realm.
 
-As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
-
-##  Background
-
-This Implementation Guide derived from the [US Core], [QI Core], and [HEDIS] profiles with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of HL7 Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. The HL7 CQI Work Group maintains this Implementation Guide, co-sponsored by the Clinical Decision Support (CDS) HL7 Work Group, to inform electronic clinical quality improvement (i.e., measurement and decision support). This Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the U.S. Realm.
-
-Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models.
-
-To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common:
+Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models. To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common.  This Implementation Guide is the first step in creating these common artifacts.
 
 - Standards (FHIR)
 - Implementation guides
 - Reference implementations
 
-This Implementation Guide is the first step in creating these common artifacts.
+This Implementation Guide is based upon the prior work from the [US Core], [QI Core], and [HEDIS] Implementation Guides and their artifacts with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of HL7 Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
 
-## FHIR Profiles and Operations
+## Background
 
-This Guide (IG) defines a set of FHIR operations, profiles and extensions to create interoperable, quality-focused applications. Payers and providers need common transport tools to share the data required to reflect complete and accurate quality measures. Existing [QI-Core] and [HEDIS] profiles are used as well as DEQM profiles derived from them. These profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm. This IG will leverage STU3 in order to take advantage of FHIR currently in production and R4 to better utilize the additional Resources and elements available in R4.  For elements added in R4, extensions will be created for the STU3 version.  This  IG also utilizes standard FHIR Operations and Subscription transactions to exchange quality data.
+Clinical quality measures (CQMs) are tools that help measure and track the quality of health care services that eligible professionals (EPs), eligible hospitals, and critical access hospitals (CAHs) provide. Measuring and reporting CQMs helps to ensure that our health care system is delivering effective, safe, efficient, patient-centered, equitable, and timely care. CQMs measure many aspects of patient care, including:[^1]
+
+- Patient and Family Engagement
+- Patient Safety
+- Care Coordination
+- Population/Public Health
+- Efficient Use of Healthcare Resources
+- Clinical Process/Effectiveness
+
+### Who are all the players in the Quality space?[^2]
+{:.no_toc}
+
+- Policy Directions on Quality
+     - National Priorities Partnership, National Quality Strategy, CMS, ONC
+- Measure Requesters
+    - External demands of quality measures for accountability (CMS, NCQA, PCPI, The Joint Commission)
+    - Internal demands for quality measures for improvement (quality improvement programs)
+- Measure Developers (organizations that define clinical quality measure)
+    -  National Quality Forum, Measurement Development Partnership, NCQA, The Joint Commission
+- Standards Developers
+    - HL7, IHE, IHTSDO, Others
+- EHR/Tool Developers
+    - EHR vendors, quality reporting tool developers
+- Measure Reporters and Users
+    - Aggregators (organizations that collects measure data): Health Plans, Public Programs, Others
+    - Providers: Healthcare organizations
+
+### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
+{:.no_toc}
+
+The Data Exchange For Quality Measures Implementation Guide fits into the clinical quality measures ecosystem at the interface between the Measure Reporters and User as illustrated in the figure[^2] below with the red oval:
+
+{% include img-portrait.html img="DEQM_ecosystem.jpg" %}
+
+For further information about the Clinical Quality Framework see this [CQF overview].
+
+## How to read this Guide
+
+This Guide is divided into several pages which are listed at the top of each page in the menu bar.
+
+- [Home]\: The home page provides the introduction and background for the Data Exchange For Quality Measures Implementation Guide.
+
+- [Guidelines and Overview]\: This page provides general guidance on a set of FHIR transactions that provide a general framework to enable the Exchange of Quality Measure Data between Data “Aggregators” (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients).
+
+- Use cases:
+    - [Medication Reconciliation (MRP)]\: This page provides specific guidance on the FHIR API surrounding the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member.
+
+- [Profiles and Extensions]\: This page lists the set of Profile and Extension that are used in the DEQM transactions to exchange quality data.
+
+- [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
+
+- [Terminology]\: This page lists the value sets and code system defined in the DEQM guide and used in the DEQM transactions to exchange quality data.
+
+- [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
+
+- [Downloads]\: This page provides links to downloadable artifacts for implementations.
 
 <br />
+
+[^1]: https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/ClinicalQualityMeasures.html
+[^2]: https://www.hl7.org/documentcenter/public_temp_6C1C8F48-1C23-BA17-0C77FDFC69A7B6F1/calendarofevents/himss/2017/Health%20IT%20Enabled%20Quality%20Measurement%20and%20Improvement_The%20HL7%20Clinical%20Quality%20Work%20Group.pdf
 
 {% include link-list.md %}

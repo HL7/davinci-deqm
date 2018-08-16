@@ -9,7 +9,7 @@
   <Author>Grahame</Author>
   <LastAuthor>Eric Haas</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2018-06-20T05:03:34Z</LastSaved>
+  <LastSaved>2018-08-16T02:01:40Z</LastSaved>
   <Version>12.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
@@ -24,7 +24,7 @@
   <WindowWidth>25260</WindowWidth>
   <WindowTopX>-15</WindowTopX>
   <WindowTopY>6825</WindowTopY>
-  <ActiveSheet>2</ActiveSheet>
+  <ActiveSheet>7</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -459,7 +459,7 @@
    <Interior/>
   </Style>
   <Style ss:ID="s112">
-   <Font ss:FontName="Verdana" ss:Size="12" ss:Color="#333333"/>
+   <Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="12" ss:Color="#333333"/>
   </Style>
   <Style ss:ID="s113">
    <Alignment ss:Vertical="Top" ss:WrapText="1"/>
@@ -911,6 +911,9 @@
    </Borders>
    <Interior/>
   </Style>
+  <Style ss:ID="s170">
+   <Font ss:FontName="Consolas" x:Family="Modern" ss:Size="9" ss:Color="#005C00"/>
+  </Style>
  </Styles>
  <Worksheet ss:Name="Instructions">
   <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="5" x:FullColumns="1"
@@ -1290,8 +1293,9 @@
     <Cell ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">qualification</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">Practitioner.qualification</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1317,15 +1321,16 @@
     <Cell ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">qualification.code</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">Practitioner.qualification.code</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">QualificationCode</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -4039,7 +4044,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -4060,8 +4064,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>11</ActiveRow>
-     <ActiveCol>8</ActiveCol>
+     <ActiveRow>6</ActiveRow>
+     <ActiveCol>11</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -6628,12 +6632,12 @@
     <Cell ss:StyleID="s157"/>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s106"><Data ss:Type="String">QualificationCode</Data></Cell>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s137"/>
-    <Cell ss:StyleID="s137"/>
-    <Cell ss:StyleID="s137"/>
-    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s137"><Data ss:Type="String">value set</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="String">required</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="String">required</Data></Cell>
+    <Cell ss:StyleID="s170"><Data ss:Type="String"> http://terminology.hl7.org/ValueSet/v2-2.7-0360</Data></Cell>
     <Cell ss:StyleID="s137"/>
     <Cell ss:StyleID="s137"/>
     <Cell ss:StyleID="s137"/>
@@ -7089,6 +7093,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -7108,9 +7113,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>2</ActiveRow>
-     <ActiveCol>0</ActiveCol>
-     <RangeSelection>R3</RangeSelection>
+     <ActiveRow>5</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

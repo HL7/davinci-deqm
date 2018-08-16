@@ -1,10 +1,13 @@
+[Capability statements]: capstatements.html
 [Clinical Decision Support (CDS)]: http://www.hl7.org/Special/committees/dss/index.cfm
 [Clinical Quality Information (CQI)]: http://www.hl7.org/Special/committees/cqi/index.cfm
 [$collect-data (R4)]: {{page.r4}}measure-operation-collect-data.html "The effect of invoking this operation on a Measure instance endpoint is to POST a collection of resources needed for reporting a measure"
 [$collect-data (STU3)]: {{page.deqm_r3}}OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
+[CQF overview]: (http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework)
 [$data-requirements (R4)]: {{page.r4}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
+[Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [DEQM Coverage (R4)]: r4todo.html
 [DEQM Coverage (STU3)]: {{page.deqm_r3}}StructureDefinition-coverage-deqm.html
 [DEQM Library (R4)]: todo.html
@@ -22,9 +25,10 @@
 [DEQM Subscription (R4)]: todo.html
 [DEQM Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-subscription-deqm.html
 [Downloads]: downloads.html "Downloads Page"
+[Extensions]: profiles.html#extensions "Profiles and Extensions Page"
 [FHIR operations]: {{page.r4}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}} "FHIR Specification Home Page"
-[Guidance]: guidance.html  "General Guidance Page"
+[Guidelines and Overview]: guidance.html  "General Guidance Page"
 [HEDIS MRP Measure (R4)]: r4todo.html
 [HEDIS MRP Measure (STU3)]: {{page.hedis_r3}}StructureDefinition-measure-mrp.html
 [HEDIS MRP Observation (R4)]: todo.html
@@ -38,7 +42,9 @@
 [Medication Reconciliation (MRP)]: mrp.html
 [Must Support]: {{page.qi_r3}}index.html#mustsupport "QI Core definition of *Must Support*"
 [Must Support]: guidance.html#must-support
-[Profiles]: profiles.html "Profiles and Extensions Page"
+[Operations]: operations.html "Operations Page"
+[Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
+[Profiles]: profiles.html#profiles "Profiles and Extensions Page"
 [QI Core *Must Support*]: {{page.qi_r3}}index.html#mustsupport "QI Core definition of *Must Support*"
 [QI Core Encounter (R4)]: r4todo.html
 [QI Core Encounter (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-encounter.html
