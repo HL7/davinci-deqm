@@ -37,7 +37,7 @@
 	</uniqueId>
 	<uniqueId>
 		<type value="uri"/>
-		<value value="http://hl7.org/fhir/us/davinci-deqm/sid/us-ein"/>
+		<value value="http://hl7.org/fhir/us/davinci-deqm-stu3/sid/us-ein"/>
 		<preferred value="true"/>
 		<period>
 			<start value="2018-07-04"/>

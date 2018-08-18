@@ -20,8 +20,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:cbaa3bd8-b311-49cf-9d09-fa621bfc521a",
-    "timestamp" : "2018-08-14T16:08:24.827Z",
+    "identifier" : "urn:uuid:4e1f24cc-4c5c-46f6-a96b-a4a149b8e8db",
+    "timestamp" : "2018-08-18T05:51:58.009Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -69,30 +69,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "id" : "organization-type",
-  "url" : "http://hl7.org/fhir/us/davinci-deqm/ValueSet/organization-type",
-  "version" : "0.0.0",
-  "name" : "organization-type",
-  "title" : "DEQM Organization Type Value Set",
-  "status" : "draft",
-  "experimental" : false,
-  "date" : "2018-08-13T16:59:31-07:00",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "US",
-      "display" : "United States of America"
-    }]
-  }],
-  "immutable" : true,
   "expansion" : {
-    "identifier" : "urn:uuid:6fdfee89-d41e-426f-a700-2ca9d0c8aa93",
-    "timestamp" : "2018-08-14T16:08:41.874Z",
+    "identifier" : "urn:uuid:2b72562b-7316-428a-a5ab-b3e3aa57ce89",
+    "timestamp" : "2018-08-18T05:52:09.431Z",
     "parameter" : [{
-      "name" : "expansion-source",
-      "valueString" : "ValueSet/organization-type"
-    },
-    {
       "name" : "limitedExpansion",
       "valueString" : "-1"
     },

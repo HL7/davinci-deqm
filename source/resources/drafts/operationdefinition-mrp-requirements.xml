@@ -2,7 +2,7 @@
 <OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
 	<!--********************meta*************************-->
 	<id value="mrp-requirements"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/mrp-requirements"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm-stu3/OperationDefinition/mrp-requirements"/>
 	<version value="0.0.0"/>
 	<name value="Option 1: Da Vinci  MRP Requirements OperationDefinition"/>
 	<status value="active"/>
@@ -49,7 +49,7 @@
 		<type value="code"/>
 		<binding>
 			<strength value="required"></strength>
-			<valueSetUri value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/davinci-profiles"></valueSetUri>
+			<valueSetUri value="http://hl7.org/fhir/us/davinci-deqm-stu3/ValueSet/davinci-profiles"></valueSetUri>
 		</binding>
 	</parameter>
 <!--	

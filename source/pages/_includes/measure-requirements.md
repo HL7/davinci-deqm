@@ -61,7 +61,7 @@ HTTP/1.1 200 OK
       {
          "type":"MeasureReport",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/measurereport-mrp"
+            "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/measurereport-mrp"
          ]
       },
       {
@@ -85,19 +85,19 @@ HTTP/1.1 200 OK
       {
          "type":"Task",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/task-mrp"
+            "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/task-mrp"
          ]
       },
       {
          "type":"Organization",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-davinci"
+            "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/organization-davinci"
          ]
       },
       {
          "type":"Practitioner",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-davinci"
+            "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/practitioner-davinci"
          ]
       }
    ]
