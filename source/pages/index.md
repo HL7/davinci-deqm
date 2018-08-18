@@ -16,7 +16,6 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 <!-- add to  preprocesser to update the title to IG name -->
 {% include publish-box.html %}
 
-
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
 
 * Do not remove this line (it will not be displayed)
@@ -73,7 +72,7 @@ The Data Exchange For Quality Measures Implementation Guide fits into the clinic
 
 {% include img-portrait.html img="DEQM_ecosystem.jpg" %}
 
-For further information about the Clinical Quality Framework see this [CQF overview].
+For further information about the [Clinical Quality Framework].
 
 ## How to read this Guide
 
@@ -97,6 +96,22 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Downloads]\: This page provides links to downloadable artifacts for implementations.
 
 <br />
+
+---
+
+**This Implementation Guide was made possible by the thoughtful contributions of the following people and organizations:**
+
+- *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*
+
+- *Eric Haas, Health eData Inc*
+- *Bryn Rhodes*
+- *Viet Nguyen, Stratametrics*
+- *Jocelyn Keegan, Point of Care Partners*
+- *Robert Dieterle, EnableCare*
+- *Lloyd Mckenzie, Gevity*
+- *Grahame Grieve*
+
+---
 
 [^1]: https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/ClinicalQualityMeasures.html
 [^2]: https://www.hl7.org/documentcenter/public_temp_6C1C8F48-1C23-BA17-0C77FDFC69A7B6F1/calendarofevents/himss/2017/Health%20IT%20Enabled%20Quality%20Measurement%20and%20Improvement_The%20HL7%20Clinical%20Quality%20Work%20Group.pdf

@@ -5,24 +5,24 @@
 [$collect-data (STU3)]: {{page.deqm_r3}}OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
-[CQF overview]: (http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework)
+[Clinical Quality Framework]: http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework&oldid=158051
 [$data-requirements (R4)]: {{page.r4}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [DEQM Coverage (R4)]: r4todo.html
 [DEQM Coverage (STU3)]: {{page.deqm_r3}}StructureDefinition-coverage-deqm.html
-[DEQM Library (R4)]: todo.html
+[DEQM Library (R4)]: r4todo.html
 [DEQM Library (STU3)]: {{page.deqm_r3}}StructureDefinition-library-deqm.html
-[DEQM Measure (R4)]: todo.html
+[DEQM Measure (R4)]: r4todo.html
 [DEQM Measure (STU3)]: {{page.deqm_r3}}StructureDefinition-measure-deqm.html
-[DEQM MeasureReport (R4)]: todo.html
+[DEQM MeasureReport (R4)]: r4todo.html
 [DEQM MeasureReport (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-deqm.html
 [Measure Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-deqm.html
-[Measure Subscription (R4)]: todo.html
+[Measure Subscription (R4)]: r4todo.html
 [DEQM Organization (R4)]: r4todo.html
 [DEQM Organization (STU3)]: {{page.deqm_r3}}StructureDefinition-organization-deqm.html
-[DEQM Practitioner (R4)]:r4todo.html
+[DEQM Practitioner (R4)]: r4todo.html
 [DEQM Practitioner (STU3)]: {{page.deqm_r3}}StructureDefinition-practitioner-deqm.html
-[DEQM Subscription (R4)]: todo.html
+[DEQM Subscription (R4)]: r4todo.html
 [DEQM Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-subscription-deqm.html
 [Downloads]: downloads.html "Downloads Page"
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
@@ -31,9 +31,9 @@
 [Guidelines and Overview]: guidance.html  "General Guidance Page"
 [HEDIS MRP Measure (R4)]: r4todo.html
 [HEDIS MRP Measure (STU3)]: {{page.hedis_r3}}StructureDefinition-measure-mrp.html
-[HEDIS MRP Observation (R4)]: todo.html
+[HEDIS MRP Observation (R4)]: r4todo.html
 [HEDIS MRP Observation (STU3)]: {{page.hedis_r3}}StructureDefinition-observation-mrp.html
-[HEDIS MRP Task (R4)]: todo.html
+[HEDIS MRP Task (R4)]: r4todo.html
 [HEDIS MRP Task (STU3)]: {{page.hedis_r3}}StructureDefinition-task-mrp.html
 [HEDIS]: {{page.hedis_r3}}index.html
 [Home]: index.html "Home Page"

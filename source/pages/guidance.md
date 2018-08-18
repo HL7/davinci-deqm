@@ -190,8 +190,8 @@ The Aggregator must first subscribe to the Provider for a notification for a par
 
 The following artifacts are used in the subscription transaction:
 
-1. DEQM Subscription Profile [DEQM Subscription (STU3)] [DEQM Subscription (R4)]
-1. DEQM Measure Subscription Extension [Measure Subscription (STU3)] [Measure Subscription (R4)]
+1. DEQM Subscription Profile [DEQM Subscription (STU3)] or [DEQM Subscription (R4)]
+1. DEQM Measure Subscription Extension [Measure Subscription (STU3)] or [Measure Subscription (R4)]
 
 ##### Usage
 {:.no_toc}

@@ -4,4 +4,4 @@ layout: default
 active: todo
 ---
 
-     ...TODO... We anticipate very few structural changes in R4,  however these profiles are derived from US Core and/or QI Core profiles that have not yet been defined for R4 ...
+     US Core and QI Core profiles and the DEQM Profiles derived from them have not yet been defined for FHIR Version R4.  We anticipate very few structural changes in R4.  A future release of this guide will include these profiles when available.
