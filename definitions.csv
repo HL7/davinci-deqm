@@ -28,7 +28,7 @@ do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm
 dependencyList.name,deqmr4|qicore
 dependencyList.location,http://hl7.org/fhir/us/davinci-deqm|http://hl7.org/fhir/us/qicore
-dependencyList.version,dev|dev
+dependencyList.version,current|dev
 special-urls,
 tool,jekyll
 logging,progress
