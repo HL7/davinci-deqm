@@ -26,13 +26,13 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm
-dependencyList.name,qicore
-dependencyList.location,http://hl7.org/fhir/us/qicore
-dependencyList.version,dev
+dependencyList.name,deqmr4|qicore
+dependencyList.location,http://hl7.org/fhir/us/davinci-deqm-r4|http://hl7.org/fhir/us/qicore
+dependencyList.version,dev|dev
 special-urls,
 tool,jekyll
 logging,progress
 topofpage,TRUE
 allviews,TRUE
 mappings,FALSE
-npm-name,hl7.fhir.davinci.deqm
+npm-name,hl7.fhir.davinci.deqm.r3

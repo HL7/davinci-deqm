@@ -13,12 +13,62 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 ## Value Sets
 
-These value sets have been defined for this implementation guide:
+### Value Sets Listed By Use Case
+{:.no_toc}
+
+#### Common to All Quality Measures Implementation Use Cases
+{:.no_toc}
+
+- LibraryType
+- Jurisdiction ValueSet
+- DefinitionTopic
+- Measure PublicationStatus
+- Jurisdiction ValueSet
+- Measure DefinitionTopic
+- MeasureScoring
+- MeasureType
+- MeasurePopulationType
+- MeasureReport Status
+- DEQM Organization Type Value Set
+- USPS Two Letter Alphabetic Codes
+- PublicationStatus
+- SubscriptionStatus
+
+#### MRP
+{:.no_toc}
+
+- LibraryType
+- Jurisdiction ValueSet
+- DefinitionTopic
+- Measure PublicationStatus
+- Jurisdiction ValueSet
+- Measure DefinitionTopic
+- MeasureScoring
+- MeasureType
+- MeasurePopulationType
+- MeasureReport Status
+- DEQM Organization Type Value Set
+- USPS Two Letter Alphabetic Codes
+- PublicationStatus
+- EncounterStatus
+- ActEncounterCode
+- EncounterType
+- Encounter Reason Codes
+- AdmitSource
+- DischargeDisposition
+- LocationStatus
+- ServiceDeliveryLocationRoleType
+- Hl7 v2-2.7 Table 0360
+
+### Value Sets Defined in this Implementation Guide
+{:.no_toc}
+
 {% include list-simple-valuesets.xhtml %}
 
 ## Code Systems
 
-**Code systems published in this IG** - Includes US Core defined code systems and externally defined code systems
+**Code systems published in this IG** - Includes DEQM defined code systems and externally defined code systems
+
 {% include list-simple-codesystems.xhtml %}
 
 {% include link-list.md %}
