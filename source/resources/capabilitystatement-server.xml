@@ -6,7 +6,7 @@
 		<div xmlns="http://www.w3.org/1999/xhtml">
 <ul><li>FHIR Version: 3.0.0</li><li>Supported formats: xml, json</li><li>Published: 2017-03-08</li><li>Published by: Health eData Inc</li></ul><p>The Section describes the expected capabilities etc...yet to be completed....</p></div>
 </text>
-	<url value="http://hl7.org/fhir/us/davinci-deqm-stu3/CapabilityStatement/server"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/CapabilityStatement/server"/>
 	<name value="Server"/>
 	<status value="draft"/>
 	<date value="2017-03-08"/>

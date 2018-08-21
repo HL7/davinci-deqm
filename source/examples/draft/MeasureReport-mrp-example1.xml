@@ -18,12 +18,12 @@
 		<end value="2018-07-11"/>
 	</period>
 	<evaluatedResources>
-		<extension url="http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-referenceAny">
+		<extension url="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-referenceAny">
 			<valueReference>
 				<reference value="Task/mrp-example1"/>
 			</valueReference>
 		</extension>
-		<extension url="http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-referenceAny">
+		<extension url="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-referenceAny">
 			<valueReference>
 				<reference value="Task/mrp-example1"/>
 			</valueReference>

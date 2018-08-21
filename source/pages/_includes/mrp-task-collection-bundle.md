@@ -131,7 +131,7 @@
                 "evaluatedResources": {
                     "extension": [
                         {
-                            "url": "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-referenceAny",
+                            "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-referenceAny",
                             "valueReference": {
                                 "reference": "Task/mrp-example1"
                             }
@@ -404,7 +404,7 @@
                 "id": "mrp-example1",
                 "extension": [
                     {
-                        "url": "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-location",
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-location",
                         "valueReference": {
                             "reference": "https://vonk.furore.com/Location/hl7east"
                         }
@@ -430,7 +430,7 @@
                 "owner": {
                     "extension": [
                         {
-                            "url": "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-practitionerrole",
+                            "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-practitionerrole",
                             "valueReference": {
                                 "reference": "PractitionerRole/example"
                             }

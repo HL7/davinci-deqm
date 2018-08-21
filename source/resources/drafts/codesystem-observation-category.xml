@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="observation-category"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm-stu3/CodeSystem/observation-category"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/CodeSystem/observation-category"/>
 	<version value="1.0.0"/>
 	<name value="Davinci_Observation_Category_Codes"/>
 	<title value="Davinci Observation Category Codes"/>
@@ -17,7 +17,7 @@
 		</coding>
 	</jurisdiction>
 	<caseSensitive value="true"/>
-	<valueSet value="http://hl7.org/fhir/us/davinci-deqm-stu3/ValueSet/observation-category"/>
+	<valueSet value="http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/observation-category"/>
 	<content value="complete"/>
 	<concept>
 		<code value="administrative"/>

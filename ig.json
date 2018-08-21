@@ -1,7 +1,7 @@
 {
   "allviews" : "true",
   "broken-links" : "warning",
-  "canonicalBase" : "http://hl7.org/fhir/us/davinci-deqm-stu3",
+  "canonicalBase" : "http://hl7.org/fhir/us/davinci-deqm/STU3",
   "defaults" : {
     "Any" : {
       "template-base" : "base.html",

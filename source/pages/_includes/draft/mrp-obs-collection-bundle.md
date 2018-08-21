@@ -139,7 +139,7 @@
                 "evaluatedResources": {
                     "extension": [
                         {
-                            "url": "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-referenceAny",
+                            "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-referenceAny",
                             "valueReference": {
                                 "reference": "Obs/mrp-example1"
                             }
@@ -424,12 +424,12 @@
                 "id": "mrp-example1",
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/mrp-observation"
+                        "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/mrp-observation"
                     ]
                 },
                 "extension": [
                     {
-                        "url": "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-location",
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-location",
                         "valueReference": {
                             "reference": "https://vonk.furore.com/Location/hl7east"
                         }
@@ -440,7 +440,7 @@
                     {
                       "coding": [
                       {
-                        "system": "http://hl7.org/fhir/us/davinci-deqm-stu3/CodeSystem/observation-category",
+                        "system": "http://hl7.org/fhir/us/davinci-deqm/STU3/CodeSystem/observation-category",
                         "code": "administrative",
                         "display": "Administrative"
                       }
@@ -466,7 +466,7 @@
                     {
                         "extension": [
                             {
-                                "url": "http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/ext-practiitionerRole",
+                                "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-practiitionerRole",
                                 "valueReference": {
                                     "reference": "PractitionerRole/example"
                                 }

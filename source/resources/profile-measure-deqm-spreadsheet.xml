@@ -987,7 +987,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
     <Cell ss:StyleID="s79" ss:HRef="http://www.fhir.org/guides/test3/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/extension-</Data></Cell>
+      ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -1761,7 +1761,7 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..*</Data></Cell>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference{http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/library-deqm}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference{http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/library-deqm}</Data></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s112"/>
     <Cell ss:StyleID="s106"/>
@@ -6314,7 +6314,7 @@
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">no</Data></Cell>
-    <Cell ss:StyleID="s169"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm-stu3/ValueSet/improvement-notation</Data></Cell>
+    <Cell ss:StyleID="s169"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/improvement-notation</Data></Cell>
     <Cell ss:StyleID="s168"><Data ss:Type="String">Improvement notation for a measure (e.g. increase or decrease)</Data></Cell>
     <Cell ss:StyleID="s135"/>
     <Cell ss:StyleID="s135"/>

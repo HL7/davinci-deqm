@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
 	<id value="improvement-notation"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm-stu3/ValueSet/improvement-notation"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/improvement-notation"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:2.16.840.1.113883.4.642.3.0"/>
@@ -18,7 +18,7 @@
 	<immutable value="true"/>
 	<compose>
 		<include>
-			<system value="http://hl7.org/fhir/us/davinci-deqm-stu3/CodeSystem/improvement-notation"/>
+			<system value="http://hl7.org/fhir/us/davinci-deqm/STU3/CodeSystem/improvement-notation"/>
 		</include>
 	</compose>
 </ValueSet>

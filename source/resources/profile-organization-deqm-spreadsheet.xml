@@ -1007,7 +1007,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s115"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm-stu3/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -4034,7 +4034,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">Organization.identifier</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s101"><Data ss:Type="String">If present, `Identifier.type` SHALL be 'PRN' when  `Identifier.system` = 'http://hl7.org/fhir/sid/us-npi' and 'TAX' when  `Identifier.system` = 'http://hl7.org/fhir/us/davinci-deqm-stu3/sid/us-tin'.</Data><NamedCell
+    <Cell ss:StyleID="s101"><Data ss:Type="String">If present, `Identifier.type` SHALL be 'PRN' when  `Identifier.system` = 'http://hl7.org/fhir/sid/us-npi' and 'TAX' when  `Identifier.system` = 'http://hl7.org/fhir/us/davinci-deqm/STU3/sid/us-tin'.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s100"><Data ss:Type="String">((type.coding.where(code = 'PRN').exists()  and system = 'http://hl7.org/fhir/sid/us-npi')  or (type.coding.where(code = 'TAX').exists()  and system = 'urn:oid:2.16.840.1.113883.4.4')) or type.empty()</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -6544,7 +6544,7 @@
     <Cell ss:StyleID="s137"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">no</Data></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm-stu3/ValueSet/organization-type</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/organization-type</Data></Cell>
     <Cell ss:StyleID="s137"/>
     <Cell ss:StyleID="s137"/>
     <Cell ss:StyleID="s137"/>

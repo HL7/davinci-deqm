@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
 	<id value="davinci-profiles"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm-stu3/ValueSet/davinci-profiles"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/davinci-profiles"/>
 	<version value="0.0.0"/>
 	<name value="Da Vinci Profiles"/>
 	<title value="Da Vinci Profiles"/>
@@ -18,7 +18,7 @@
 	<copyright value="This Content is created by the Da Vinci project and HL7.  No copyright acknowledgement is needed, nor are there any license terms to adhere to"/>
 	<compose>
 		<include>
-			<system value="http://hl7.org/fhir/us/davinci-deqm-stu3/CodeSystem/davinci-profiles"/>
+			<system value="http://hl7.org/fhir/us/davinci-deqm/STU3/CodeSystem/davinci-profiles"/>
 		<concept>
 			<code value="measurereport-mrp"></code>
 		</concept>
