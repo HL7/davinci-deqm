@@ -14,7 +14,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
 <!-- add to  preprocesser to update the title to IG name -->
-{% include publish-box.html %}
+
 
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
 
