@@ -89,7 +89,7 @@ Using either the `GET` and `POST` Syntax the operation can be invoked as follows
 `GET|[base]/Measure/measure-mrp/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
 `POST|[base]/Measure/measure-mrp/$data-requirements`
 
-{% include examplebutton.html example="measure-requirements" b_title = "Example Data Requirements operation" %}
+{% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
 
 ---
 
@@ -134,7 +134,7 @@ A provider `POST`s the MRP resources to the payer using:
 
 
 
-{% include examplebutton.html example="submit-data" b_title = "Example Submit Data operation using Task option" %}
+{% include examplebutton.html example="submit-data-example" b_title = "Example Submit Data operation using Task option" %}
 
 <!--
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)

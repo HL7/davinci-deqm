@@ -95,7 +95,7 @@ In addition to the resources listed above, the following artifacts are used in t
 
 Note the use of the `periodStart` and `periodEnd` parameters supports description of data requirements that filter based on the reporting period. For example, a measure may require data for a certain procedure within the last three years, and the data requirements returned will reflect that period.
 
-{% include examplebutton.html example="measure-requirements" b_title = "Example Data Requirements operation" %}
+{% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
 
 ### Submit Data Operation
 {:.no_toc}
@@ -119,7 +119,8 @@ Using the `POST` Syntax, the operation can be invoked by the Provider:
 
 `POST|[base]/Measure/[measure-id]/$submit-data`
 
-{% include examplebutton.html example="submit-data" b_title = "Example Submit Data operation" %}
+{% include examplebutton.html example="submit-data-example" b_title = "Example Submit Data operation" %}
+
 
 ### Option 2: Collect Data operation
 {: #collect-data}
@@ -160,7 +161,7 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Agg
 `POST|[base]/Measure/[measure-id]/$collect-data`
 
 
-{% include examplebutton.html example="collect-data" b_title = "Example Collect Data operation" %}
+{% include examplebutton.html example="collect-data-example" b_title = "Example Collect Data operation" %}
 
 #### Data Requirements Operation
 {:.no_toc}
@@ -204,7 +205,7 @@ To unsubscribe:
 
 `Delete [base]/Subscription/[id]`
 
-{% include examplebutton.html example="subscribe-measure" b_title = "Example Subscription Transaction" %}
+{% include examplebutton.html example="subscribe-measure-example" b_title = "Example Subscription Transaction" %}
 
 #### Get Data Requirements
 {:.no_toc}
@@ -225,7 +226,7 @@ The Provider notifies the Aggregator when measure data is available. Exactly, ho
 
 `POST [app notification endpoint]`
 
-{% include examplebutton.html example="measure-notification" b_title = "Example Subscription Notification" %}
+{% include examplebutton.html example="measure-notification-example" b_title = "Example Subscription Notification" %}
 
 #### Collect Data Operation
 {:.no_toc}
