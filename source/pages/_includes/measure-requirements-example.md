@@ -53,7 +53,7 @@ HTTP/1.1 200 OK
       {
          "type":"depends-on",
          "resource":{
-            "reference":"Library/library-mrp-model-definition"
+            "reference":"http://hl7.org/fhir/us/hedis/Library/library-mrp-logic"
          }
       }
    ],
@@ -61,43 +61,43 @@ HTTP/1.1 200 OK
       {
          "type":"MeasureReport",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/measurereport-mrp"
+            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/measurereport-deqm"
          ]
       },
       {
          "type":"Patient",
          "profile":[
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
          ]
       },
       {
          "type":"Encounter",
          "profile":[
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
          ]
       },
       {
          "type":"Location",
          "profile":[
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"
          ]
       },
       {
          "type":"Task",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/task-mrp"
+            "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-task"
          ]
       },
       {
          "type":"Organization",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-davinci"
+            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
          ]
       },
       {
          "type":"Practitioner",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-davinci"
+            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
          ]
       }
    ]

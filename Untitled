@@ -1,0 +1,51 @@
+1) add extension for order of items in array.
+
+ reply to this https://www.hl7.org/fhir/json.html - The order of properties of an object is not
+significant in the JSON representation, though order within an array SHALL be maintained
+
+discuss how to deal with hidden items used for score and std dev.
+
+2)  language question
+
+3) cumulative scoring
+
+
+4)  look at all q-a's not just one
+
+5) so can go back and redo an answer
+
+6) fix refresh issue and uniqueness of questions
+
+
+
+"contained": [
+      {
+          "copyright": "You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.",
+          "date": "2018-09-05T18:12:57.526093",
+          "id": "contained-adaptive-questionnaire-example-sampler",
+          "item": [
+              {
+                  "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g2.q1",
+                  "extension": [
+                      {
+                          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                          "valueDecimal": 17
+                      }
+                  "extension": [
+                          {
+                              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-order",
+                              "valueInteger": 1, 2, etc ( order in which the item was created )
+                          }
+
+                  ],
+                  "linkId": "g2.q1",
+                  "repeats": false,
+                  "required": true,
+                  "text": "Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.",
+                  "type": "boolean"
+              },
+              {
+                  "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g13.q1",
+                  "extension": [
+                      {
+                          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
