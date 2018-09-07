@@ -11,7 +11,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 1. A status
 1. A measure report type hardcoded to "individual"
-1. The reference to the [Measure]({{site.data.fhir.path}}/measure.html)
+1. The reference to the [Measure]({{site.data.fhir.path}}measure.html)
 1. A patient the report is for
 1. The date the report was generated
 1. The organization that reported the data

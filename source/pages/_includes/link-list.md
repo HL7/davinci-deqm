@@ -27,7 +27,7 @@
 [Downloads]: downloads.html "Downloads Page"
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
 [FHIR operations]: {{page.r4}}operations.html "Extended Operations on the RESTful API"
-[FHIR Version 3.0.1]: {{site.data.fhir.path}} "FHIR Specification Home Page"
+[FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Guidelines and Overview]: guidance.html  "General Guidance Page"
 [HEDIS MRP Measure (R4)]: r4todo.html
 [HEDIS MRP Measure (STU3)]: {{page.hedis_r3}}StructureDefinition-measure-mrp.html
@@ -37,11 +37,11 @@
 [HEDIS MRP Task (STU3)]: {{page.hedis_r3}}StructureDefinition-task-mrp.html
 [HEDIS]: {{page.hedis_r3}}index.html
 [Home]: index.html "Home Page"
+[Measure]: {{site.data.fhir.path}}measure.html
 [Measure Observation]: StructureDefinition-observation-measure.html
 [Measure Task]: StructureDefinition-task-measure.html
 [Medication Reconciliation (MRP)]: mrp.html
-[Must Support]: {{page.qi_r3}}index.html#mustsupport "QI Core definition of *Must Support*"
-[Must Support]: guidance.html#must-support
+[Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
 [Operations]: operations.html "Operations Page"
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
