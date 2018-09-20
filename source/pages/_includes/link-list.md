@@ -30,11 +30,11 @@
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Guidelines and Overview]: guidance.html  "General Guidance Page"
 [HEDIS MRP Measure (R4)]: r4todo.html
-[HEDIS MRP Measure (STU3)]: {{page.hedis_r3}}StructureDefinition-measure-mrp.html
+[HEDIS MRP Measure (STU3)]: {{page.hedis_r3}}Measure-measure-mrp.html
 [HEDIS MRP Observation (R4)]: r4todo.html
-[HEDIS MRP Observation (STU3)]: {{page.hedis_r3}}StructureDefinition-observation-mrp.html
+[HEDIS MRP Observation (STU3)]: {{page.hedis_r3}}hedis-observation.html
 [HEDIS MRP Task (R4)]: r4todo.html
-[HEDIS MRP Task (STU3)]: {{page.hedis_r3}}StructureDefinition-task-mrp.html
+[HEDIS MRP Task (STU3)]: {{page.hedis_r3}}hedis-task.html
 [HEDIS]: {{page.hedis_r3}}index.html
 [Home]: index.html "Home Page"
 [Measure]: {{site.data.fhir.path}}measure.html
