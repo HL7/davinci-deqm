@@ -1,0 +1,181 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "ig",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/source/resources"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/source/examples"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/framework"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/source/pages"
+  }],
+  "url" : "http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig",
+  "version" : "0.1.0",
+  "name" : "Data Exchange For Quality Measures",
+  "status" : "draft",
+  "experimental" : true,
+  "publisher" : "DaVinci Project",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "packageId" : "hl7.fhir.us.davinci-deqm.stu3",
+  "license" : "CC0-1.0",
+  "fhirVersion" : "3.0.1",
+  "dependsOn" : [{
+    "id" : "qicore",
+    "uri" : "http://hl7.org/fhir/us/qicore",
+    "packageId" : "hl7.fhir.us.qicore",
+    "version" : "dev"
+  }],
+  "definition" : {
+    "package" : [{
+      "id" : "p1",
+      "name" : "base"
+    }],
+    "resource" : [{
+      "reference" : {
+        "reference" : "StructureDefinition/extension-measureSubscription"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-referenceAny"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/organization-type"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/improvement-notation"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/subscription-deqm"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/practitioner-deqm"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/organization-deqm"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/measurereport-deqm"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/measure-deqm"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/library-deqm"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/coverage-deqm"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "OperationDefinition/collect-data"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/improvement-notation"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/server"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/client"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    }],
+    "page" : {
+      "nameUrl" : "index.md",
+      "title" : "Data Exchange For Quality Measures Homepage",
+      "generation" : "html"
+    },
+    "parameter" : [{
+      "code" : "apply-business-version",
+      "value" : "0.1.0"
+    },
+    {
+      "code" : "html-template",
+      "value" : "html-template.html"
+    },
+    {
+      "code" : "apply-jurisdiction",
+      "value" : "true"
+    },
+    {
+      "code" : "generate-json",
+      "value" : "true"
+    },
+    {
+      "code" : "generate-xml",
+      "value" : "true"
+    },
+    {
+      "code" : "generate-turtle",
+      "value" : "true"
+    }]
+  }
+}

@@ -28,7 +28,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the U.S. Realm.
 
-Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models. To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common.  This Implementation Guide is the first step in creating these common artifacts.
+Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models. To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common information models and data exchange standards.  This Implementation Guide is the first step in creating them.
 
 - Standards (FHIR)
 - Implementation guides
@@ -80,7 +80,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction and background for the Data Exchange For Quality Measures Implementation Guide.
 
-- [Guidelines and Overview]\: This page provides general guidance on a set of FHIR transactions that provide a general framework to enable the Exchange of Quality Measure Data between Data “Aggregators” (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients).
+- [Guidance and Overview]\: This page provides general guidance on a set of FHIR transactions that provide a general framework to enable the Exchange of Quality Measure Data between Data “Aggregators” (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients).
 
 - Use cases:
     - [Medication Reconciliation (MRP)]\: This page provides specific guidance on the FHIR API surrounding the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member.

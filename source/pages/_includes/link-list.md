@@ -28,7 +28,7 @@
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
 [FHIR operations]: {{page.r4}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
-[Guidelines and Overview]: guidance.html  "General Guidance Page"
+[Guidance and Overview]: guidance.html  "General Guidance Page"
 [HEDIS MRP Measure (R4)]: r4todo.html
 [HEDIS MRP Measure (STU3)]: {{page.hedis_r3}}Measure-measure-mrp.html
 [HEDIS MRP Observation (R4)]: r4todo.html

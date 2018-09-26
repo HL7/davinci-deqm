@@ -1,5 +1,6 @@
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "system" : "urn:iso:std:iso:3166",
   "code" : "US"
@@ -10,6 +11,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "coding" : [{
     "system" : "urn:iso:std:iso:3166",
@@ -39,5 +41,16 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "Unable to find value set http://hl7.org/fhir/ValueSet/usps-state"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "US",
+  "display" : "United States of America"
+}, "valueSet" :null}####
+v: {
+  "display" : "United States of America",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

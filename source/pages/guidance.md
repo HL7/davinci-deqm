@@ -97,7 +97,7 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 
 {% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
 
-### Submit Data Operation
+#### Submit Data Operation
 {:.no_toc}
 
 Once the Provider understands the data requirements, they will use the Submit Data operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to the Aggregator. The Aggregator simply accepts the submitted data; there is no expectation that the Aggregator will actually evaluate the quality measure in response to every Submit Data.

@@ -43,6 +43,7 @@ Thumbs.db
 # FHIR IG Publisher local build directories #
 #############################################
 
+ballot
 generated_output/qa
 generated_output/temp
 #docs  #if not using Git-Pages

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ig"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/source/resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/source/examples"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/framework"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/source/pages"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig"/>
+  <version value="0.1.0"/>
+  <name value="Data Exchange For Quality Measures"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="DaVinci Project"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.us.davinci-deqm.stu3"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="3.0.1"/>
+  <dependsOn id="qicore">
+    <uri value="http://hl7.org/fhir/us/qicore"/>
+    <packageId value="hl7.fhir.us.qicore"/>
+    <version value="dev"/>
+  </dependsOn>
+  <definition>
+    <package id="p1">
+      <name value="base"/>
+    </package>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-measureSubscription"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-referenceAny"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/organization-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/improvement-notation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/subscription-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/practitioner-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/organization-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/measurereport-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/measure-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/library-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/coverage-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="OperationDefinition/collect-data"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/improvement-notation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/server"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/client"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <package value="p1"/>
+    </resource>
+    <page>
+      <nameUrl value="index.md"/>
+      <title value="Data Exchange For Quality Measures Homepage"/>
+      <generation value="html"/>
+    </page>
+    <parameter>
+      <code value="apply-business-version"/>
+      <value value="0.1.0"/>
+    </parameter>
+    <parameter>
+      <code value="html-template"/>
+      <value value="html-template.html"/>
+    </parameter>
+    <parameter>
+      <code value="apply-jurisdiction"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-xml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-turtle"/>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>
