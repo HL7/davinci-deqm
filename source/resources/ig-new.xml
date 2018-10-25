@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ig"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/source/resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/source/examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci/source/pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig"/>
   <version value="0.1.0"/>
@@ -35,130 +35,247 @@
     <version value="dev"/>
   </dependsOn>
   <definition>
-    <package id="p1">
+    <grouping id="p1">
       <name value="base"/>
-    </package>
+    </grouping>
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-measureSubscription"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-referenceAny"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/organization-type"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/improvement-notation"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/subscription-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/practitioner-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/organization-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/measurereport-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/measure-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/library-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/coverage-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="OperationDefinition/collect-data"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/improvement-notation"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CapabilityStatement/server"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CapabilityStatement/client"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <page>
-      <nameUrl value="index.md"/>
+      <nameUrl value="index.html"/>
       <title value="Data Exchange For Quality Measures Homepage"/>
       <generation value="html"/>
+      <page>
+        <nameUrl value="guidance.html"/>
+        <title value="Guidance and Overview"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="mrp.html"/>
+          <title value="Medication Reconciliation (MRP)"/>
+          <generation value="html"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles/Extensions"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="StructureDefinition-coverage-deqm.html"/>
+          <title value="StructureDefinition Coverage Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-library-deqm.html"/>
+          <title value="StructureDefinition Library Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-measure-deqm.html"/>
+          <title value="StructureDefinition Measure Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-measurereport-deqm.html"/>
+          <title value="StructureDefinition Measurereport Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-organization-deqm.html"/>
+          <title value="StructureDefinition Organization Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-practitioner-deqm.html"/>
+          <title value="StructureDefinition Practitioner Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-subscription-deqm.html"/>
+          <title value="StructureDefinition Subscription Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-measureSubscription.html"/>
+          <title value="StructureDefinition Extension measureSubscription"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-referenceAny.html"/>
+          <title value="StructureDefinition Extension referenceAny"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="operations.html"/>
+        <title value="Operations"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="OperationDefinition-collect-data.html"/>
+          <title value="OperationDefinition Collect Data"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="ValueSet-improvement-notation.html"/>
+          <title value="ValueSet Improvement Notation"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-organization-type.html"/>
+          <title value="ValueSet Organization Type"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CodeSystem-improvement-notation.html"/>
+          <title value="CodeSystem Improvement Notation"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="capstatements.html"/>
+        <title value="Capability Statements"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="CapabilityStatement-client.html"/>
+          <title value="CapabilityStatement Client"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-server.html"/>
+          <title value="CapabilityStatement Server"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="all-examples.html"/>
+        <title value="All Examples"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="toc.html"/>
+        <title value="Table of Contents"/>
+        <generation value="html"/>
+      </page>
     </page>
     <parameter>
-      <code value="apply-business-version"/>
-      <value value="0.1.0"/>
-    </parameter>
-    <parameter>
-      <code value="html-template"/>
-      <value value="html-template.html"/>
-    </parameter>
-    <parameter>
-      <code value="apply-jurisdiction"/>
-      <value value="true"/>
+      <code value="apply"/>
+      <value value="jurisdiction"/>
     </parameter>
     <parameter>
       <code value="generate-json"/>

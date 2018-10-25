@@ -11,12 +11,12 @@ deqm_r3: ''
 hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
-## Value Sets
+### Value Sets
 
-### Value Sets Listed By Use Case
+#### Value Sets Listed By Use Case
 {:.no_toc}
 
-#### Common to All Quality Measures Implementation Use Cases
+##### Common to All Quality Measures Implementation Use Cases
 {:.no_toc}
 
 - LibraryType
@@ -34,7 +34,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 - PublicationStatus
 - SubscriptionStatus
 
-#### MRP
+##### MRP
 {:.no_toc}
 
 - LibraryType
@@ -60,12 +60,12 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 - ServiceDeliveryLocationRoleType
 - Hl7 v2-2.7 Table 0360
 
-### Value Sets Defined in this Implementation Guide
+#### Value Sets Defined in this Implementation Guide
 {:.no_toc}
 
 {% include list-simple-valuesets.xhtml %}
 
-## Code Systems
+### Code Systems
 
 **Code systems published in this IG** - Includes DEQM defined code systems and externally defined code systems
 

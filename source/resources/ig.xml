@@ -20,8 +20,78 @@
     <!-- insert resources --><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-measureSubscription"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-referenceAny"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="ValueSet/organization-type"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="ValueSet/improvement-notation"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/subscription-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/practitioner-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/organization-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/measurereport-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/measure-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/library-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/coverage-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="OperationDefinition/collect-data"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CodeSystem/improvement-notation"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/server"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/client"/></sourceReference></resource>
   </package>
   <page>
-    <source value="index.md"/>
+    <!-- ============ Home Page =============== -->
+
+    <source value="index.html"/>
     <title value="Data Exchange For Quality Measures Homepage"/>
     <kind value="page"/>
-  </page>
+    <!-- ============ Guidance Page =============== -->
+
+      <page><source value="guidance.html"/><title value="Guidance and Overview"/><kind value="page"/></page>
+      <!-- ============ Use Cases Page =============== -->
+      <page><source value="usecases.html"/><title value="Use Cases"/><kind value="page"/>
+      <!-- ============ Use Cases =============== -->
+      <page><source value="mrp.html"/><title value="Medication Reconciliation (MRP)"/><kind value="page"/></page>
+      <!-- ============ End Use Cases =============== -->
+    </page>
+      <!-- ============ Profiles Page =============== -->
+      <page><source value="profiles.html"/><title value="Profiles/Extensions"/><kind value="page"/>
+      <!-- ============ Profiles and examples=============== -->
+        <page><source value="StructureDefinition-coverage-deqm.html"/><title value="StructureDefinition Coverage Deqm"/><kind value="resource"/></page>
+        <page><source value="StructureDefinition-library-deqm.html"/><title value="StructureDefinition Library Deqm"/><kind value="resource"/></page>
+        <page><source value="StructureDefinition-measure-deqm.html"/><title value="StructureDefinition Measure Deqm"/><kind value="resource"/></page>
+        <page><source value="StructureDefinition-measurereport-deqm.html"/><title value="StructureDefinition Measurereport Deqm"/><kind value="resource"/></page>
+        <page><source value="StructureDefinition-organization-deqm.html"/><title value="StructureDefinition Organization Deqm"/><kind value="resource"/></page>
+        <page><source value="StructureDefinition-practitioner-deqm.html"/><title value="StructureDefinition Practitioner Deqm"/><kind value="resource"/></page>
+        <page><source value="StructureDefinition-subscription-deqm.html"/><title value="StructureDefinition Subscription Deqm"/><kind value="resource"/></page>
+        <!-- ============ End Profiles and examples=============== -->
+
+        <!-- ============ Extensions and examples=============== -->
+        <page><source value="StructureDefinition-extension-measureSubscription.html"/><title value="StructureDefinition Extension measureSubscription"/><kind value="resource"/></page>
+        <page><source value="StructureDefinition-extension-referenceAny.html"/><title value="StructureDefinition Extension referenceAny"/><kind value="resource"/></page>
+        <!-- ============ End Extensions and examples=============== -->
+
+      </page>
+      <!-- ============ Operations Page =============== -->
+      <page><source value="operations.html"/><title value="Operations"/><kind value="page"/>
+      <!-- ============ Operations and examples  =============== -->
+        <page><source value="OperationDefinition-collect-data.html"/><title value="OperationDefinition Collect Data"/><kind value="resource"/></page>
+        <!-- ============ End Operations and examples  =============== -->
+      </page>
+      <!-- ============ Terminology Page =============== -->
+    <page><source value="terminology.html"/><title value="Terminology"/><kind value="page"/>
+    <!-- ============ ValueSet   =============== -->
+        <page><source value="ValueSet-improvement-notation.html"/><title value="ValueSet Improvement Notation"/><kind value="resource"/></page>
+        <page><source value="ValueSet-organization-type.html"/><title value="ValueSet Organization Type"/><kind value="resource"/></page>
+        <!-- ============ End ValueSet   =============== -->
+        <!-- ============ CodeSystems  =============== -->
+        <page><source value="CodeSystem-improvement-notation.html"/><title value="CodeSystem Improvement Notation"/><kind value="resource"/></page>
+        <!-- ============ End CodeSystems  =============== -->
+        <!-- ============ ConceptMaps   =============== -->
+
+        <!-- ============ End ConceptMaps   =============== -->
+      </page>
+<!-- ============ SearchParameter Page =============== -->
+
+<!-- ============ SearchParameters =============== -->
+
+<!-- ============ End SearchParameters  =============== -->
+<!-- ============ CapabilityStatement Page =============== -->
+
+      <page><source value="capstatements.html"/><title value="Capability Statements"/><kind value="page"/>
+      <!-- ============ CapabilityStatements    =============== -->
+        <page><source value="CapabilityStatement-client.html"/><title value="CapabilityStatement Client"/><kind value="resource"/></page>
+        <page><source value="CapabilityStatement-server.html"/><title value="CapabilityStatement Server"/><kind value="resource"/></page>
+        <!-- ============ End CapabilityStatements    =============== -->
+      </page>
+      <!-- ============ Security Page =============== -->
+
+      <!-- ============ Downloads Page =============== -->
+      <page><source value="downloads.html"/><title value="Downloads"/><kind value="page"/></page>
+      <!-- ============ Examples Page=============== -->
+      <page><source value="all-examples.html"/><title value="All Examples"/><kind value="page"/></page>
+
+      <!-- ============ Table of Contents =============== -->
+      <page><source value="toc.html"/><title value="Table of Contents"/><kind value="page"/></page>
+    </page>
 </ImplementationGuide>

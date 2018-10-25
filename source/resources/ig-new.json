@@ -3,19 +3,19 @@
   "id" : "ig",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/source/resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/source/examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci/source/pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig",
   "version" : "0.1.0",
@@ -31,7 +31,7 @@
   }],
   "packageId" : "hl7.fhir.us.davinci-deqm.stu3",
   "license" : "CC0-1.0",
-  "fhirVersion" : "3.0.1",
+  "fhirVersion" : ["3.0.1"],
   "dependsOn" : [{
     "id" : "qicore",
     "uri" : "http://hl7.org/fhir/us/qicore",
@@ -39,7 +39,7 @@
     "version" : "dev"
   }],
   "definition" : {
-    "package" : [{
+    "grouping" : [{
       "id" : "p1",
       "name" : "base"
     }],
@@ -48,122 +48,239 @@
         "reference" : "StructureDefinition/extension-measureSubscription"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/extension-referenceAny"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "ValueSet/organization-type"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "ValueSet/improvement-notation"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/subscription-deqm"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/practitioner-deqm"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/organization-deqm"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/measurereport-deqm"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/measure-deqm"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/library-deqm"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/coverage-deqm"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "OperationDefinition/collect-data"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/improvement-notation"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/server"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/client"
       },
       "exampleBoolean" : false,
-      "package" : "p1"
+      "groupingId" : "p1"
     }],
     "page" : {
-      "nameUrl" : "index.md",
+      "nameUrl" : "index.html",
       "title" : "Data Exchange For Quality Measures Homepage",
-      "generation" : "html"
+      "generation" : "html",
+      "page" : [{
+        "nameUrl" : "guidance.html",
+        "title" : "Guidance and Overview",
+        "generation" : "html"
+      },
+      {
+        "nameUrl" : "usecases.html",
+        "title" : "Use Cases",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "mrp.html",
+          "title" : "Medication Reconciliation (MRP)",
+          "generation" : "html"
+        }]
+      },
+      {
+        "nameUrl" : "profiles.html",
+        "title" : "Profiles/Extensions",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "StructureDefinition-coverage-deqm.html",
+          "title" : "StructureDefinition Coverage Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-library-deqm.html",
+          "title" : "StructureDefinition Library Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-measure-deqm.html",
+          "title" : "StructureDefinition Measure Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-measurereport-deqm.html",
+          "title" : "StructureDefinition Measurereport Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-organization-deqm.html",
+          "title" : "StructureDefinition Organization Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-practitioner-deqm.html",
+          "title" : "StructureDefinition Practitioner Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-subscription-deqm.html",
+          "title" : "StructureDefinition Subscription Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-measureSubscription.html",
+          "title" : "StructureDefinition Extension measureSubscription",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-referenceAny.html",
+          "title" : "StructureDefinition Extension referenceAny",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "operations.html",
+        "title" : "Operations",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "OperationDefinition-collect-data.html",
+          "title" : "OperationDefinition Collect Data",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "ValueSet-improvement-notation.html",
+          "title" : "ValueSet Improvement Notation",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-organization-type.html",
+          "title" : "ValueSet Organization Type",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CodeSystem-improvement-notation.html",
+          "title" : "CodeSystem Improvement Notation",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "capstatements.html",
+        "title" : "Capability Statements",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "CapabilityStatement-client.html",
+          "title" : "CapabilityStatement Client",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-server.html",
+          "title" : "CapabilityStatement Server",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
+        "generation" : "html"
+      },
+      {
+        "nameUrl" : "all-examples.html",
+        "title" : "All Examples",
+        "generation" : "html"
+      },
+      {
+        "nameUrl" : "toc.html",
+        "title" : "Table of Contents",
+        "generation" : "html"
+      }]
     },
     "parameter" : [{
-      "code" : "apply-business-version",
-      "value" : "0.1.0"
-    },
-    {
-      "code" : "html-template",
-      "value" : "html-template.html"
-    },
-    {
-      "code" : "apply-jurisdiction",
-      "value" : "true"
+      "code" : "apply",
+      "value" : "jurisdiction"
     },
     {
       "code" : "generate-json",

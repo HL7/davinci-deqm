@@ -36,7 +36,7 @@ Interoperability challenges have limited many stakeholders in the healthcare com
 
 This Implementation Guide is based upon the prior work from the [US Core], [QI Core], and [HEDIS] Implementation Guides and their artifacts with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of HL7 Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
 
-## Background
+### Background
 
 Clinical quality measures (CQMs) are tools that help measure and track the quality of health care services that eligible professionals (EPs), eligible hospitals, and critical access hospitals (CAHs) provide. Measuring and reporting CQMs helps to ensure that our health care system is delivering effective, safe, efficient, patient-centered, equitable, and timely care. CQMs measure many aspects of patient care, including:[^1]
 
@@ -47,7 +47,7 @@ Clinical quality measures (CQMs) are tools that help measure and track the quali
 - Efficient Use of Healthcare Resources
 - Clinical Process/Effectiveness
 
-### Who are all the players in the Quality space?[^2]
+#### Who are all the players in the Quality space?[^2]
 {:.no_toc}
 
 - Policy Directions on Quality
@@ -65,7 +65,7 @@ Clinical quality measures (CQMs) are tools that help measure and track the quali
     - Aggregators (organizations that collects measure data): Health Plans, Public Programs, Others
     - Providers: Healthcare organizations
 
-### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
+#### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
 {:.no_toc}
 
 The Data Exchange For Quality Measures Implementation Guide fits into the clinical quality measures ecosystem at the interface between the Measure Reporters and User as illustrated in the figure[^2] below with the red oval:
@@ -74,7 +74,7 @@ The Data Exchange For Quality Measures Implementation Guide fits into the clinic
 
 For further information about the [Clinical Quality Framework].
 
-## How to read this Guide
+### How to read this Guide
 
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 

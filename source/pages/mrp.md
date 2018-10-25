@@ -34,7 +34,7 @@ As an HL7 FHIR Implementation Guide, changes to this specification are managed b
 
 Exchange of the reconciled medication list, indication of conversations with the patient, and notification of discharge from inpatient systems are out of scope for this version of the use case.
 
-### Summary MRP Technical Workflow
+#### Summary MRP Technical Workflow
 
 The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 
@@ -42,9 +42,9 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 **Summary of FHIR Artifacts used for Medication Reconciliation**
 
-## FHIR Resource Overview
+### FHIR Resource Overview
 
-#### Resources supported for this use case:
+##### Resources supported for this use case:
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -61,11 +61,11 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-## MRP FHIR Transactions:
+### MRP FHIR Transactions:
 
 {% include img.html img="mrp-wf-overview.jpg" %}
 
-### Gather Data Requirements From Payer
+#### Gather Data Requirements From Payer
 
 
 In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
@@ -74,14 +74,14 @@ In this optional step, the Provider queries the Payer("Aggregator") for which re
 
 The required data for MRP is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.
 
-#### APIs
+##### APIs
 {:.no_toc}
 
 These artifacts are used in this transaction:
 
 1. Data Requirements: [$data-requirements (R4)] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
 
-#### Usage
+##### Usage
 {:.no_toc}
 
 Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
@@ -93,23 +93,23 @@ Using either the `GET` and `POST` Syntax the operation can be invoked as follows
 
 ---
 
-### Submit Data to Payer
+#### Submit Data to Payer
 
 {% include img-narrow.html img="submit-mrp-data.jpg" caption="Submit data Operation" %}
 
-#### Submit Data to a Payer's Measure endpoint
+##### Submit Data to a Payer's Measure endpoint
 {:.no_toc}
 
 Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  (Note that the Collect Data and Subscription Operations are not supported for this use case.)  For MRP the Provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
 
-#### Graph of MRP resources:
+##### Graph of MRP resources:
 {:.no_toc}
 
 {% include img.html img="mrp-task.jpg" caption="Option 1: MRP using Task" %}
 
 {% include img.html img="mrp-observation.jpg" caption="Option 2: MRP using Observation" %}
 
-#### APIs
+##### APIs
 {:.no_toc}
 
 These artifacts are used in this transaction:
@@ -125,7 +125,7 @@ These artifacts are used in this transaction:
 1. DEQM Practitioner Profile
 1. HEDIS MRP Task Profile or HEDIS MRP Observation Profile
 
-#### Usage
+##### Usage
 {:.no_toc}
 
 A provider `POST`s the MRP resources to the payer using:
@@ -149,7 +149,7 @@ A provider `POST`s the MRP resources to the payer using:
 ---
 <!--{% raw %}
 
-### Usage
+#### Usage
 
 example how to use a button to expand an inline example....
 

@@ -12,7 +12,7 @@ hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
-## Click on the links below to download the file
+### Click on the links below to download the file
 
 **Package File**
 

@@ -4,7 +4,7 @@ source file: source/pages/\_includes/{{id}}-intro.md
 
 {{site.data.structuredefinitions.[id].description}}
 
-#### Mandatory Data Elements and Terminology
+##### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present).
 
@@ -19,6 +19,6 @@ The following data-elements are mandatory (i.e data MUST be present).
 - The system sends a notification to the subscriber, if it has determined that it has the requisite measure data the subscriber needs for the measure, or if the information has been updated.
 None
 
-#### Examples
+##### Examples
 
 - [{{id}}-example-1](todo.html)

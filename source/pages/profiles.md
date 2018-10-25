@@ -11,7 +11,7 @@ deqm_r3: ''
 hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
-## Profiles
+### Profiles
 
    Payers and providers need common transport tools to share the data required to reflect complete and accurate quality measures. Existing QI-Core and HEDIS profiles are used as well as DEQM profiles defined in this guide and which are derived from them. All of these profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm. This IG will leverage STU3 in order to take advantage of FHIR currently in production and R4 to better utilize the additional Resources and elements available in R4.  For elements added in R4, extensions have been created for the STU3 version.
 
@@ -20,10 +20,10 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
        structural changes in R4.  A future release of this guide will include
        these profiles when available.
 
-### Profiles Listed By Use Case
+#### Profiles Listed By Use Case
 {:.no_toc}
 
-#### Common to All Quality Measures Implementation Use Cases
+##### Common to All Quality Measures Implementation Use Cases
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -35,7 +35,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
 |Subscription|DEQM Subscription Profile|[DEQM Subscription (STU3)]|[DEQM Subscription (R4)]|
 
-#### MRP
+##### MRP
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -52,7 +52,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-### Profiles Defined in this Implementation Guide
+#### Profiles Defined in this Implementation Guide
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -67,7 +67,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 <br />
 
-## Extensions
+### Extensions
 
 ### *STU3* Extensions defined for this implementation guide:
 {:.no_toc}

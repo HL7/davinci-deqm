@@ -12,10 +12,10 @@ hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
-## Operations Listed By Use Case
+### Operations Listed By Use Case
 {:.no_toc}
 
-### Common to All Quality Measures Implementation Use Cases
+#### Common to All Quality Measures Implementation Use Cases
 {:.no_toc}
 
 |Name|Link to STU3 Operation|Link to R4 Operation|
@@ -24,14 +24,14 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 |Data Requirements Operation|N/A[^1]|[$data-requirements (R4)]
 |Submit Data Operation|N/A[^1]|[$submit-data (R4)]
 
-### MRP
+#### MRP
 {:.no_toc}
 
 |Name|Link to STU3 Operation|Link to R4 Operation|
 |---|---|---|
 |Submit Data Operation|N/A[^1]|[$submit-data (R4)]
 
-## Operations Defined in this Implementation Guide
+### Operations Defined in this Implementation Guide
 {:.no_toc}
 
 Collect Data Operation: [$collect-data (STU3)]
