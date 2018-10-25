@@ -71,10 +71,9 @@ site.historypath = {{ site.historypath }}
 
 {% assign title = p.name | remove: ".html" | remove: ".md" | split: '-' %}
 
-&lt;page&gt;
-&lt;source value=&quot;{{ p.path | replace: ".md" , ".html" }}&quot;/&gt;
-&lt;title value=&quot;{% for word in title %}{{ word | capitalize }} {% endfor %}&quot;/&gt;
-&lt;kind
+&lt;page&gt;&lt;source
+value=&quot;{{ p.path | replace: ".md" , ".html" }}&quot;/&gt;&lt;title
+value=&quot;{% for word in title %}{{ word | capitalize }} {% endfor %}&quot;/&gt;&lt;kind
 
 {% assign kind = "page" %}
 {% for e in site.example_types %}
@@ -91,8 +90,9 @@ site.historypath = {{ site.historypath }}
 {% endfor %}
 
 
-value=&quot;{{ kind }}&quot;/&gt;
-&lt;/page&gt;<br /><br />
+value=&quot;{{ kind }}&quot;/&gt;&lt;/page&gt;
+<br />
+<br />
 
 
 {% endunless %}
@@ -110,10 +110,9 @@ value=&quot;{{ kind }}&quot;/&gt;
 {% assign title = p.name | remove: ".html" | remove: ".md" | split: '-' %}
 
 
-&lt;page&gt;
-&lt;nameUrl value=&quot;{{ p.path }}&quot;/&gt;
-&lt;title value=&quot;{% for word in title %}{{ word | capitalize }} {% endfor %}&quot;/&gt;
-&lt;generation
+&lt;page&gt;&lt;nameUrl
+value=&quot;{{ p.path | replace: ".md" , ".html" }}&quot;/&gt;&lt;title
+value=&quot;{% for word in title %}{{ word | capitalize }} {% endfor %}&quot;/&gt;&lt;generation
 
 {% assign generation = "markdown" %}
 {% for e in site.resource_types %}
@@ -123,7 +122,9 @@ value=&quot;{{ kind }}&quot;/&gt;
 {% endif %}
 {% endfor %}
 
-value=&quot;{{ generation }}&quot;/&gt;&lt;/page&gt;<br /><br />
+value=&quot;{{ generation }}&quot;/&gt;&lt;/page&gt;
+<br />
+<br />
 
 
 {% endunless %}
