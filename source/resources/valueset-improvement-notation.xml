@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
+<ValueSet xmlns="http://hl7.org/fhir">
 	<id value="improvement-notation"/>
 	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/improvement-notation"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:2.16.840.1.113883.4.642.3.0"/>
 	</identifier>
-	<version value="3.0.1"></version>
+	<version value="0.1.0"/>
 	<name value="improvement-notation"/>
 	<title value="DEQM Improvement Notation Value Set"/>
 	<status value="draft"/>
 	<experimental value="false"/>
 	<date value="2018-08-13T23:59:31+00:00"/>
 	<publisher value="Davinci Project"/>
-
 	<description value="Improvement notation for a measure (e.g. increase or decrease)."/>
 	<immutable value="true"/>
 	<compose>

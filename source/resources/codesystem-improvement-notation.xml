@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
+<CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="improvement-notation"/>
 	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/CodeSystem/improvement-notation"/>
-	<version value="0.0.0"/>
+	<version value="0.1.0"/>
 	<name value="MeasureImprovementNotation"/>
 	<status value="draft"/>
 	<experimental value="false"/>
