@@ -54,13 +54,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/organization-type"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/improvement-notation"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -145,50 +138,20 @@
     </resource>
     <page>
       <nameUrl value="index.html"/>
-      <title value="Data Exchange For Quality Measures Homepage"/>
+      <title value="Home"/>
       <generation value="html"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Guidance and Overview"/>
+        <title value="General Guidance"/>
         <generation value="html"/>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Use Cases"/>
-        <generation value="html"/>
-        <page>
-          <nameUrl value="mrp.html"/>
-          <title value="Medication Reconciliation (MRP)"/>
-          <generation value="html"/>
-        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
-        <title value="Profiles/Extensions"/>
+        <title value="Profiles and Extensions"/>
         <generation value="html"/>
         <page>
-          <nameUrl value="StructureDefinition-coverage-deqm.html"/>
-          <title value="StructureDefinition Coverage Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-library-deqm.html"/>
-          <title value="StructureDefinition Library Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-measure-deqm.html"/>
-          <title value="StructureDefinition Measure Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-measurereport-deqm.html"/>
-          <title value="StructureDefinition Measurereport Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-organization-deqm.html"/>
-          <title value="StructureDefinition Organization Deqm"/>
+          <nameUrl value="StructureDefinition-subscription-deqm.html"/>
+          <title value="StructureDefinition Subscription Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -197,8 +160,28 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-subscription-deqm.html"/>
-          <title value="StructureDefinition Subscription Deqm"/>
+          <nameUrl value="StructureDefinition-organization-deqm.html"/>
+          <title value="StructureDefinition Organization Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-measurereport-deqm.html"/>
+          <title value="StructureDefinition MeasureReport Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-measure-deqm.html"/>
+          <title value="StructureDefinition Measure Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-library-deqm.html"/>
+          <title value="StructureDefinition Library Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-coverage-deqm.html"/>
+          <title value="StructureDefinition Coverage Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -232,30 +215,35 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="ValueSet-organization-type.html"/>
-          <title value="ValueSet Organization Type"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="CodeSystem-improvement-notation.html"/>
           <title value="CodeSystem Improvement Notation"/>
           <generation value="generated"/>
         </page>
       </page>
       <page>
+        <nameUrl value="searchparameters.html"/>
+        <title value="Search Parameters"/>
+        <generation value="html"/>
+      </page>
+      <page>
         <nameUrl value="capstatements.html"/>
         <title value="Capability Statements"/>
         <generation value="html"/>
-        <page>
-          <nameUrl value="CapabilityStatement-client.html"/>
-          <title value="CapabilityStatement Client"/>
-          <generation value="generated"/>
-        </page>
         <page>
           <nameUrl value="CapabilityStatement-server.html"/>
           <title value="CapabilityStatement Server"/>
           <generation value="generated"/>
         </page>
+        <page>
+          <nameUrl value="CapabilityStatement-client.html"/>
+          <title value="CapabilityStatement Client"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="html"/>
       </page>
       <page>
         <nameUrl value="downloads.html"/>
@@ -270,7 +258,7 @@
       <page>
         <nameUrl value="toc.html"/>
         <title value="Table of Contents"/>
-        <generation value="html"/>
+        <generation value="generated"/>
       </page>
     </page>
     <parameter>

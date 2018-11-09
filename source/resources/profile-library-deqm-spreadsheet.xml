@@ -11,7 +11,7 @@
   <LastAuthor>Eric Haas</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
   <LastSaved>2018-07-04T17:54:10Z</LastSaved>
-  <Version>16.00</Version>
+  <Version>12.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <WorkbookGuid dt:dt="string">495b73df-e263-4753-9e44-2f316028eef1</WorkbookGuid>
@@ -26,8 +26,8 @@
   </SupBook>
   <WindowHeight>10725</WindowHeight>
   <WindowWidth>21570</WindowWidth>
-  <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
+  <WindowTopX>32760</WindowTopX>
+  <WindowTopY>32760</WindowTopY>
   <ActiveSheet>1</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
@@ -992,7 +992,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String"> DEQM Library Profile</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">DEQM Library Profile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.name</Data></Cell>
@@ -1074,7 +1074,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>11</ActiveRow>
+     <ActiveRow>23</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -59,13 +59,6 @@
     },
     {
       "reference" : {
-        "reference" : "ValueSet/organization-type"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
         "reference" : "ValueSet/improvement-notation"
       },
       "exampleBoolean" : false,
@@ -150,50 +143,20 @@
     }],
     "page" : {
       "nameUrl" : "index.html",
-      "title" : "Data Exchange For Quality Measures Homepage",
+      "title" : "Home",
       "generation" : "html",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Guidance and Overview",
+        "title" : "General Guidance",
         "generation" : "html"
       },
       {
-        "nameUrl" : "usecases.html",
-        "title" : "Use Cases",
-        "generation" : "html",
-        "page" : [{
-          "nameUrl" : "mrp.html",
-          "title" : "Medication Reconciliation (MRP)",
-          "generation" : "html"
-        }]
-      },
-      {
         "nameUrl" : "profiles.html",
-        "title" : "Profiles/Extensions",
+        "title" : "Profiles and Extensions",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "StructureDefinition-coverage-deqm.html",
-          "title" : "StructureDefinition Coverage Deqm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-library-deqm.html",
-          "title" : "StructureDefinition Library Deqm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-measure-deqm.html",
-          "title" : "StructureDefinition Measure Deqm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-measurereport-deqm.html",
-          "title" : "StructureDefinition Measurereport Deqm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-organization-deqm.html",
-          "title" : "StructureDefinition Organization Deqm",
+          "nameUrl" : "StructureDefinition-subscription-deqm.html",
+          "title" : "StructureDefinition Subscription Deqm",
           "generation" : "generated"
         },
         {
@@ -202,8 +165,28 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-subscription-deqm.html",
-          "title" : "StructureDefinition Subscription Deqm",
+          "nameUrl" : "StructureDefinition-organization-deqm.html",
+          "title" : "StructureDefinition Organization Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-measurereport-deqm.html",
+          "title" : "StructureDefinition MeasureReport Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-measure-deqm.html",
+          "title" : "StructureDefinition Measure Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-library-deqm.html",
+          "title" : "StructureDefinition Library Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-coverage-deqm.html",
+          "title" : "StructureDefinition Coverage Deqm",
           "generation" : "generated"
         },
         {
@@ -237,30 +220,35 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "ValueSet-organization-type.html",
-          "title" : "ValueSet Organization Type",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "CodeSystem-improvement-notation.html",
           "title" : "CodeSystem Improvement Notation",
           "generation" : "generated"
         }]
       },
       {
+        "nameUrl" : "searchparameters.html",
+        "title" : "Search Parameters",
+        "generation" : "html"
+      },
+      {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-client.html",
-          "title" : "CapabilityStatement Client",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "CapabilityStatement-server.html",
           "title" : "CapabilityStatement Server",
           "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-client.html",
+          "title" : "CapabilityStatement Client",
+          "generation" : "generated"
         }]
+      },
+      {
+        "nameUrl" : "security.html",
+        "title" : "Security",
+        "generation" : "html"
       },
       {
         "nameUrl" : "downloads.html",
@@ -275,7 +263,7 @@
       {
         "nameUrl" : "toc.html",
         "title" : "Table of Contents",
-        "generation" : "html"
+        "generation" : "generated"
       }]
     },
     "parameter" : [{

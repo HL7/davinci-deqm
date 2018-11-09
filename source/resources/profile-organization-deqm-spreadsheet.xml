@@ -7,10 +7,10 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Grahame</Author>
-  <LastAuthor>Richard J. Ettema (AEGIS.net)</LastAuthor>
+  <LastAuthor>Eric Haas</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2018-10-31T18:03:00Z</LastSaved>
-  <Version>16.00</Version>
+  <LastSaved>2018-11-09T01:09:29Z</LastSaved>
+  <Version>12.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
@@ -22,9 +22,9 @@
   </SupBook>
   <WindowHeight>12165</WindowHeight>
   <WindowWidth>28800</WindowWidth>
-  <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
-  <ActiveSheet>2</ActiveSheet>
+  <WindowTopX>32760</WindowTopX>
+  <WindowTopY>32760</WindowTopY>
+  <ActiveSheet>3</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -573,7 +573,6 @@
     <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="3"/>
     <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -589,7 +588,7 @@
    <Protection/>
   </Style>
   <Style ss:ID="s130">
-   <Font ss:FontName="Verdana" ss:Size="12" ss:Color="#333333"/>
+   <Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="12" ss:Color="#333333"/>
   </Style>
   <Style ss:ID="s131">
    <Alignment ss:Vertical="Top" ss:WrapText="1"/>
@@ -1087,8 +1086,9 @@
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="123.75"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="29.25" ss:Span="1"/>
    <Column ss:Index="12" ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="107.25"/>
-   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="60" ss:Span="1"/>
-   <Column ss:Index="15" ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="81"/>
+   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="253.5"/>
+   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="60"/>
+   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="81"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="36.75"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="120.75"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="161.25"/>
@@ -1274,8 +1274,8 @@
     <Cell ss:StyleID="s107"><Data ss:Type="String">CodeableConcept</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">OrganizationType</Data></Cell>
     <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/v2/0203&quot;,&quot;code&quot;:&quot;PRN&quot;}]}</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
@@ -1361,8 +1361,8 @@
     <Cell ss:StyleID="s107"><Data ss:Type="String">CodeableConcept</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">OrganizationType</Data></Cell>
     <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/v2/0203&quot;,&quot;code&quot;:&quot;TAX&quot;}]}</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
@@ -3968,7 +3968,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -3989,7 +3988,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveCol>0</ActiveCol>
+     <ActiveRow>15</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -4044,17 +4043,17 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s107"><Data ss:Type="String">dv-1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s102"><Data ss:Type="String">type must match system</Data><NamedCell
+    <Cell ss:StyleID="s101"><Data ss:Type="String">NPI or EIN</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s102"><Data ss:Type="String">error</Data><NamedCell
+    <Cell ss:StyleID="s101"><Data ss:Type="String">error</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s102"><Data ss:Type="String">Organization.identifier</Data><NamedCell
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Organization.identifier</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s102"><Data ss:Type="String">If present, `Identifier.type` SHALL be 'http://hl7.org/fhir/v2/0203|PRN' when `Identifier.system` = 'http://hl7.org/fhir/sid/us-npi', or `Identifier.type` SHALL be 'http://hl7.org/fhir/v2/0203|TAX' when `Identifier.system` = 'urn:oid:2.16.840.1.113883.4.4'.</Data><NamedCell
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Either an NPI or EIN (TIN) identifier SHALL be present</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s101"><Data ss:Type="String">type.empty() or (type.coding.where(system = 'http://hl7.org/fhir/v2/0203' and code = 'PRN').exists() and system = 'http://hl7.org/fhir/sid/us-npi') or (type.coding.where(system = 'http://hl7.org/fhir/v2/0203' and code = 'TAX').exists() and system = 'urn:oid:2.16.840.1.113883.4.4')</Data><NamedCell
+    <Cell ss:StyleID="s101"><Data ss:Type="String">(identifier.system = 'urn:oid:2.16.840.1.113883.4.4') or (identifier.system = 'http://hl7.org/fhir/sid/us-npi')</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s128"><Data ss:Type="String">TODO</Data><NamedCell
+    <Cell ss:StyleID="s128"><Data ss:Type="String">f:system[@value='urn:oid:2.16.840.1.113883.4.4' or @value='http://hl7.org/fhir/sid/us-npi']</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -4494,6 +4493,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -4513,7 +4513,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveCol>0</ActiveCol>
+     <ActiveRow>12</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -7034,7 +7035,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveCol>0</ActiveCol>
+     <ActiveRow>17</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -47,7 +47,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 - MeasureType
 - MeasurePopulationType
 - MeasureReport Status
-- DEQM Organization Type Value Set
+- Identifier Type Codes
 - USPS Two Letter Alphabetic Codes
 - PublicationStatus
 - EncounterStatus
