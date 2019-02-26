@@ -61,3 +61,5 @@
 [Subscription]: {{page.r3}}subscription.html
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
+[Colon Cancer Screening (COL)]: col.html
+[Venous Thromboembolism Measures (VTE-1)]: vte1.html

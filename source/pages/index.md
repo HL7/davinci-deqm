@@ -85,6 +85,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 - Use cases:
     - [Medication Reconciliation (MRP)]\: This page provides specific guidance on the FHIR API surrounding the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member.
 
+    - [Colon Cancer Screening (COL)]\: ...TODO...
+
+    - [Venous Thromboembolism Measures (VTE-1)]\: ...TODO...
+
 - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are used in the DEQM transactions to exchange quality data.
 
 - [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
