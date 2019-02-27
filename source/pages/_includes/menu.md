@@ -16,7 +16,7 @@
     <a href="mrp.html">Medication Reconciliation (MRP)</a>
     </li>
     <li>
-    <a href="col.html">Colon Cancer Screening Use Case (COL)</a>
+    <a href="col.html">Colon Cancer Screening (COL)</a>
     </li>
     <li>
     <a href="vte1.html">Venous Thromboembolism Measures (VTE-1)</a>

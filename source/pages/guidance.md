@@ -57,7 +57,7 @@ These transactions are triggered by use case specific clinical or administrative
 ##### Graph of DEQM Resources:
 {:.no_toc}
 
-{% include img.html img="measure-resource-graph.jpg" caption="DEQM Resource Graph" %}
+{% include img.html img="measure-resource-graph.svg" caption="DEQM Resource Graph" %}
 
 <br />
 
