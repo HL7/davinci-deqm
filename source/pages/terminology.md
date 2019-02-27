@@ -23,7 +23,6 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 - Jurisdiction ValueSet
 - DefinitionTopic
 - Measure PublicationStatus
-- Jurisdiction ValueSet
 - Measure DefinitionTopic
 - MeasureScoring
 - MeasureType
@@ -41,7 +40,6 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 - Jurisdiction ValueSet
 - DefinitionTopic
 - Measure PublicationStatus
-- Jurisdiction ValueSet
 - Measure DefinitionTopic
 - MeasureScoring
 - MeasureType

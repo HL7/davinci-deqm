@@ -34,7 +34,7 @@ Interoperability challenges have limited many stakeholders in the healthcare com
 - Implementation guides
 - Reference implementations
 
-This Implementation Guide is based upon the prior work from the [US Core], [QI Core], and [HEDIS] Implementation Guides and their artifacts with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of HL7 Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
+This Implementation Guide is based upon the prior work from the [US Core], [QI Core], and [HEDIS] Implementation Guides and their artifacts with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of Health Level Seven International Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
 
 ### Background
 
@@ -51,18 +51,18 @@ Clinical quality measures (CQMs) are tools that help measure and track the quali
 {:.no_toc}
 
 - Policy Directions on Quality
-     - National Priorities Partnership, National Quality Strategy, CMS, ONC
+     - National Priorities Partnership, National Quality Strategy, Centers for Medicare & Medicaid Services (CMS), Office of the National Coordinator for Health Information Technology (ONC)
 - Measure Requesters
-    - External demands of quality measures for accountability (CMS, NCQA, PCPI, The Joint Commission)
+    - External demands of quality measures for accountability (CMS, National Committee for Quality Assurance [NCQA], PCPI, The Joint Commission)
     - Internal demands for quality measures for improvement (quality improvement programs)
 - Measure Developers (organizations that define clinical quality measure)
-    -  National Quality Forum, Measurement Development Partnership, NCQA, The Joint Commission
+    -  Measurement Development Partnership, NCQA, The Joint Commission, and others
 - Standards Developers
-    - HL7, IHE, IHTSDO, Others
-- EHR/Tool Developers
+    - HL7, Integrating the Healthcare Enterprise (IHE), International Health Terminology Standards Development Organisation (IHTSDO), and others
+- Electronic Health Record (EHR)/Tool Developers
     - EHR vendors, quality reporting tool developers
 - Measure Reporters and Users
-    - Aggregators (organizations that collects measure data): Health Plans, Public Programs, Others
+    - Aggregators (organizations that collects measure data): Health Plans, Public Programs, and others
     - Providers: Healthcare organizations
 
 #### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
@@ -89,7 +89,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
     - [Venous Thromboembolism Measures (VTE-1)]\: ...TODO...
 
-- [Profiles and Extensions]\: This page lists the set of Profile and Extension that are used in the DEQM transactions to exchange quality data.
+- [Profiles and Extensions]\: This page lists the set of Profile and Extension that are used in the Data Exchange For Quality Measures (DEQM) transactions to exchange quality data.
 
 - [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
 
