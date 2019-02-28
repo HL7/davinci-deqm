@@ -20,6 +20,12 @@
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="DaVinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -54,49 +60,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/improvement-notation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/subscription-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/practitioner-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/organization-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/measurereport-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/measure-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/library-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -110,14 +74,21 @@
     </resource>
     <resource>
       <reference>
-        <reference value="OperationDefinition/collect-data"/>
+        <reference value="StructureDefinition/organization-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/improvement-notation"/>
+        <reference value="StructureDefinition/practitioner-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/individual-measurereport-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -131,7 +102,49 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/improvement-notation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/library-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/summary-measurereport-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/client"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="OperationDefinition/collect-data"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/measure-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/improvement-notation"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -155,8 +168,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-practitioner-deqm.html"/>
-          <title value="StructureDefinition Practitioner Deqm"/>
+          <nameUrl value="StructureDefinition-coverage-deqm.html"/>
+          <title value="StructureDefinition Coverage Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -165,13 +178,13 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-measurereport-deqm.html"/>
-          <title value="StructureDefinition MeasureReport Deqm"/>
+          <nameUrl value="StructureDefinition-practitioner-deqm.html"/>
+          <title value="StructureDefinition Practitioner Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-measure-deqm.html"/>
-          <title value="StructureDefinition Measure Deqm"/>
+          <nameUrl value="StructureDefinition-individual-measurereport-deqm.html"/>
+          <title value="StructureDefinition Individual MeasureReport Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -180,8 +193,13 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-coverage-deqm.html"/>
-          <title value="StructureDefinition Coverage Deqm"/>
+          <nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/>
+          <title value="StructureDefinition Summary MeasureReport Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-measure-deqm.html"/>
+          <title value="StructureDefinition Measure Deqm"/>
           <generation value="generated"/>
         </page>
         <page>

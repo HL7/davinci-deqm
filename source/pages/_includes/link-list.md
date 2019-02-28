@@ -14,8 +14,10 @@
 [DEQM Library (STU3)]: {{page.deqm_r3}}StructureDefinition-library-deqm.html
 [DEQM Measure (R4)]: r4todo.html
 [DEQM Measure (STU3)]: {{page.deqm_r3}}StructureDefinition-measure-deqm.html
-[DEQM MeasureReport (R4)]: r4todo.html
-[DEQM MeasureReport (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-deqm.html
+[DEQM Individual MeasureReport Profile (STU3)]: StructureDefinition-individual-measurereport-deqm.html
+[DEQM Summary MeasureReport Profile (STU3)]: StructureDefinition-summary-measurereport-deqm.html
+[DEQM Individual MeasureReport Profile (R4)]: r4todo.html
+[DEQM Summary MeasureReport Profile (R4)]: r4todo.html
 [Measure Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-deqm.html
 [Measure Subscription (R4)]: r4todo.html
 [DEQM Organization (R4)]: r4todo.html
@@ -61,5 +63,7 @@
 [Subscription]: {{page.r3}}subscription.html
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
-[Colon Cancer Screening (COL)]: col.html
-[Venous Thromboembolism Measures (VTE-1)]: vte1.html
+[Colorectal Cancer Screening (COL)]: col.html
+[Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
+[NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1
+[HEDIS Measure Description for Colorectal Cancer Screening]: http://build.fhir.org/ig/cqframework/hedis-ig/cql/stu3/col-logic.cql.html

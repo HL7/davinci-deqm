@@ -1,0 +1,43 @@
+list of Profiles
+
+need cds-hooks guidance see CRD guide for what to Sat
+
+hedis ig link  http://build.fhir.org/ig/cqframework/hedis-ig/
+
+change names to profile names - todo later... 
+
+intro/background link to
+
+diagrams reflect bundle the test done.
+
+Linda to add notions of EXCEPTIONS
+
+need population data.
+
+review of prior work links to HEDIS and ECQM
+
+dashes are optional
+
+apply gforge comments
+
+measure report Summary
+
+Bryn's comments:
+
+Broad strokes, we need to:
+* Apply all the outstanding trackers (the most significant changes have to do with the public health input, but are fairly well documented in the trackers)
+* Add the measure reporting use case, Yan has input here based on the QRDA Gap Analysis
+* Add the colorectal cancer screening content (some of this content will actually go in the Quality Measure IG and just be referenced from DEQM)
+* Add the stroke measure content (again, the actual measure content will go in the Quality Measure IG and just be referenced from DEQM)
+
+rename measurereport to DEQM Individual MeasureReport done
+add DEQM Summary MeasureReport done
+
+list of Profiles COL and VTL-1
+
+change names to : done
+
+Venous Thromboembolism Prophylaxis (VTE-1)
+and
+
+Colorectal Cancer Screening

@@ -54,7 +54,7 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
 |Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
 |Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
-|MeasureReport|DEQM MeasureReport Profile|[DEQM MeasureReport (STU3)]|[DEQM MeasureReport (R4)]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |Observation|HEDIS MRP Observation Profile|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
@@ -119,7 +119,7 @@ These artifacts are used in this transaction:
 1. QI Core Encounter Profile
 1. QI Core Location Profile
 1. HEDIS MRP Measure Profile
-1. DEQM MeasureReport Profile
+1. DEQM Individual MeasureReport Profile
 1. DEQM Organization Profile
 1. QI Core Patient Profile
 1. DEQM Practitioner Profile
