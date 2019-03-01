@@ -87,7 +87,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
     - [Colorectal Cancer Screening (COL)]\: The colonoscopy measure (HEDIS Colorectal Cancer Screening/CMS130) is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening services during the measurement period.
 
-    - [Venous Thromboembolism Prophylaxis (VTE-1)]\: ...TODO...
+    - [Venous Thromboembolism Prophylaxis (VTE-1)]\: VTE-1 is an example based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the Preventative Care Meaningful Measure Area.
 
 - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are used in the Data Exchange For Quality Measures (DEQM) transactions to exchange quality data.
 

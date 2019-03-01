@@ -69,3 +69,5 @@
 [HEDIS Measure Description for Colorectal Cancer Screening]: http://build.fhir.org/ig/cqframework/hedis-ig/cql/stu3/col-logic.cql.html
 [Do Not Perform (STU3)]: StructureDefinition-extension-doNotPerform.html
 [Do Not Perform (R4)]:{{page.r4}}extension-request-donotperform.html
+[Quality Measure Implementation Guide]: http://build.fhir.org/ig/cqframework/cqf-measures/index.html
+[CMS 108v7]: https://ecqi.healthit.gov/ecqm/measures/cms108v7

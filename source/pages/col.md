@@ -125,8 +125,8 @@ These artifacts are used in this transaction:
 
 Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
 
-`GET|[base]/Measure/measure-mrp/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
-`POST|[base]/Measure/measure-mrp/$data-requirements`
+`GET|[base]/Measure/measure-col/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
+`POST|[base]/Measure/measure-col/$data-requirements`
 
 {% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
 
@@ -137,7 +137,7 @@ Using either the `GET` and `POST` Syntax the operation can be invoked as follows
     ....todo review if this is a step and update example....
 
 
-{% include img-narrow.html img="submit-mrp-data.jpg" caption="Submit data Operation" %}
+{% include img-narrow.html img="submit-col-data.jpg" caption="Submit data Operation" %}
 
 ##### Submit Data to a Payer's Measure endpoint
 {:.no_toc}
