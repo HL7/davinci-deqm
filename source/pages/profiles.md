@@ -2,7 +2,7 @@
 title: Profiles defined as part of this Guide
 layout: default
 active: profiles
-r4: http://build.fhir.org/
+r4: http://hl7.org/fhir/R4/
 r3: http://hl7.org/fhir/STU3/
 qi_r4: todo.html
 qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
@@ -76,8 +76,9 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 |Extension Name|Context|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
-|Reference Any|DEQM Measure Report Profile|[Reference Any (STU3)]|N/A[^1]|
-|Measure Subscription|DEQM Subscription Profile|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
+|Do Not Perform|DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
+|Reference Any|DEQM Measure Report Extension|[Reference Any (STU3)]|N/A[^1]|
+|Measure Subscription|DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
 
 <br />
 

@@ -67,3 +67,5 @@
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1
 [HEDIS Measure Description for Colorectal Cancer Screening]: http://build.fhir.org/ig/cqframework/hedis-ig/cql/stu3/col-logic.cql.html
+[Do Not Perform (STU3)]: StructureDefinition-extension-doNotPerform.html
+[Do Not Perform (R4)]:{{page.r4}}extension-request-donotperform.html

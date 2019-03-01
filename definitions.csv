@@ -6,7 +6,7 @@ status,draft
 publisher,DaVinci Project
 contact_system,url
 contact_value,http://www.hl7.org/Special/committees/cqi/index.cfm
-extensions,extension-referenceAny|extension-measureSubscription
+extensions,extension-referenceAny|extension-measureSubscription|extension-doNotPerform
 searches,
 codesystems,
 valuesets,

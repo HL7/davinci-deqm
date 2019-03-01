@@ -51,6 +51,13 @@
     }],
     "resource" : [{
       "reference" : {
+        "reference" : "StructureDefinition/extension-doNotPerform"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-measureSubscription"
       },
       "exampleBoolean" : false,
@@ -205,6 +212,11 @@
         {
           "nameUrl" : "StructureDefinition-measure-deqm.html",
           "title" : "StructureDefinition Measure Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-doNotPerform.html",
+          "title" : "StructureDefinition Extension doNotPerform",
           "generation" : "generated"
         },
         {

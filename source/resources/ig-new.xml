@@ -46,6 +46,13 @@
     </grouping>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-doNotPerform"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-measureSubscription"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -200,6 +207,11 @@
         <page>
           <nameUrl value="StructureDefinition-measure-deqm.html"/>
           <title value="StructureDefinition Measure Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-doNotPerform.html"/>
+          <title value="StructureDefinition Extension doNotPerform"/>
           <generation value="generated"/>
         </page>
         <page>
