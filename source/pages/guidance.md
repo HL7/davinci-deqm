@@ -35,7 +35,9 @@ These transactions are triggered by use case specific clinical or administrative
 
 - The "Aggregator" may be a Payer or another organization that is monitoring various clinical quality measures for the members of a population.
 - The Measure resource is used to provide both human- and machine-readable definitions of a quality measure
-- The MeasureReport resource is used as a quality-focused container for the exchange of quality information, not necessarily as a report of the actual measure score for a particular measure
+- The MeasureReport provides an association to a specific quality measure and links the submitted data together to simplify processing for the receiver. 
+  - The required data is represented in the referenced resources defined by the MeasureReport.
+  - The focus of the measure can be an individual or a group. For use cases where the focus is an individual the DEQM Individual MeasureReport Profile is used, when the focus is a group of individuals the DEQM Summary MeasureReport Profile is used.
 - Aggregators *may* process CQL, but are not required to in order to support the exchange scenarios described in this Guide
 - Providers do *not* need to use CQL to support the exchange scenarios described in this Guide.
 
