@@ -31,7 +31,7 @@ Clinical Quality Measures are a common tool used throughout healthcare to help e
 
 These transactions are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation.
 
-#### General Preconditions and Assumptions
+#### Preconditions and Assumptions
 
 - The "Aggregator" may be a Payer or another organization that is monitoring various clinical quality measures for the members of a population.
 - The Measure resource is used to provide both human- and machine-readable definitions of a quality measure
@@ -62,7 +62,7 @@ These transactions are triggered by use case specific clinical or administrative
 
 <br />
 
-#### Option 1: Submit Data operation
+#### Submit Data operation
 {: #submit-data}
 
 The *Submit Data* operation allows a Provider to submit data-of-interest for a particular quality measure. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.
@@ -123,7 +123,7 @@ Using the `POST` Syntax, the operation can be invoked by the Provider:
 {% include examplebutton.html example="submit-data-example" b_title = "Example Submit Data operation" %}
 
 
-#### Option 2: Collect Data operation
+#### Collect Data operation
 {: #collect-data}
 
 In this scenario, the Aggregator initiates a *Collect Data* operation to gather any available quality reporting data for a particular measure from the Provider.  In response to the operation, the Provider returns a MeasureReport containing data relevant to the Measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
@@ -171,7 +171,7 @@ In order to complete the transaction the Provider may need to discover the requi
 
 <br />
 
-#### Option 3: Subscription service combined with the  Collect Data operation
+#### Subscriptions
 {: #pub-sub}
 
 Subscriptions allow for a Provider to notify the Aggregator whenever new Measure data is available.  Effectively, the Aggregator subscribes to the Provider's system using the Measure as the criteria. It is a short-hand for subscribing to all the data-of-interest (as defined by the data requirements) for the measure, but using the Measure as the subscription point allows the implementation to determine the most efficient approach to notification. For example, notifications can be batched on a periodic basis, or they can be performed along transactional boundaries within the implementing system.
