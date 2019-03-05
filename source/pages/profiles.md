@@ -13,7 +13,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 ### Profiles
 
-   Payers and providers need common transport tools to share the data required to reflect complete and accurate quality measures. Existing QI-Core and HEDIS profiles are used as well as DEQM profiles defined in this guide and which are derived from them. All of these profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm. This IG will leverage STU3 in order to take advantage of FHIR currently in production and R4 to better utilize the additional Resources and elements available in R4.  For elements added in R4, extensions have been created for the STU3 version.
+   Payers and providers need common data specification, measure specification, report initiation, and transport to share the data required to reflect accurate quality measures. Existing QI-Core and HEDIS profiles are used as well as DEQM profiles derived from QI-Core and HEDIS profiles and defined in this guide. All of these profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm. This IG will leverage STU3 in order to take advantage of FHIR currently in production and R4 to better utilize the additional Resources and elements available in R4.  For elements added in R4, extensions have been created for the STU3 version.
 
       US Core and QI Core profiles and the DEQM Profiles derived from them have
        not yet been defined for FHIR Version R4.  We anticipate very few
