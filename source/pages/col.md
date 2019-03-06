@@ -53,7 +53,7 @@ The technical Workflow is outlined in the following figure.
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure (STU3)]|[QI Core Procedure (R4)]|
 
-### Graph of COL resources:
+### Graph of COL Resources:
 
 In a screening measure, you report both what is done that meets the screening requirement as well as information that would exclude the patient from being required to meet the measure.
 
