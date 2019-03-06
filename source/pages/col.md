@@ -42,7 +42,7 @@ The technical Workflow is outlined in the following figure.
 |DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport (STU3)]|[QI Core DiagnosticReport (R4)]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
 |Library|CFQM Library Profile|[CFQM Library (STU3)]|[CFQM Library (R4)]|
-|Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
+|Location|QI Core Location7 Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
 |Measure|CFQM Measure Profile|[CFQM Measure (STU3)]|[CFQM Measure (R4)]|
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
@@ -83,7 +83,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
  {% include img.html img="DEQM Resource Diagram - COL3.jpg" %}
 
 #### Option 4: MeasureReport using Condition
- {:.no_toc}
+{:.no_toc}
 
  An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows the related resources that can be used to represent when you need to send a Condition that represents an exclusion to the measure.
 
@@ -93,63 +93,49 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 
 ### COL FHIR Transactions:
 
-#### Gather Data Requirements From Payer
+#### Data Exchange Interactions
 {:.no_toc}
 
-    ....todo review if this is a step and update example....
+1. Gather COL Data Requirements From Payer  (TODO link)
 
-In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
+        {  % include examplebutton.html example=col-requirements-example" b_title = "Example COL Data Requirements" % }
 
-{% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
+1. Exchange of Quality Measure Data (TODO link)
 
-The required data for COL is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.
+   - OPTION 1: Submit Data to a Payer/Aggregator's Measure endpoint
 
-##### APIs
+        Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  For COL the Provider may submit either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure* as the primary resource used to evaluate the measure.
+
+          {  % include examplebutton.html example=col-submit-example" b_title = "Example COL Submit Data" % }
+
+   - OPTION 2: Payer/Aggregator Collects Data from Provider
+
+    ....todo short Description
+
+        {  % include examplebutton.html example=col-collect-example" b_title = "Example COL Collect Data" % }
+
+
+   - OPTION 3: Payer/Aggregator Subscribes for Notification from Provider when data is available
+
+    ....todo short Description
+
+        {  % include examplebutton.html example=col-subscription-example" b_title = "Example COL Subscription" % }
+
+   - Note to Balloters if there is a use case for using CDS Hooks to report the COL Measure
+
+#### COL Measure Reporting Interactions:
 {:.no_toc}
 
-These artifacts are used in this transaction:
+1. Individual MeasureReport
 
-1. Data Requirements: [$data-requirements (R4)] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
+   Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-##### Usage
-{:.no_toc}
+      {  % include examplebutton.html example=col-indv-report-example" b_title = "Post Bundle with COL Individual MeasureReport" % }
 
-Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
+1. Summary MeasureReport
 
-`GET|[base]/Measure/measure-col/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
-`POST|[base]/Measure/measure-col/$data-requirements`
+   Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-{% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
-
----
-
-#### OPTION 1: Submit Data to Payer
-{:.no_toc}
-    ....todo review if this is a step and update example....
-
-
-{% include img-narrow.html img="submit-col-data.jpg" caption="Submit data Operation" %}
-
-##### Submit Data to a Payer's Measure endpoint
-{:.no_toc}
-
-Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  For COL the Provider may submit either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure as the primary resource used to evaluate the measure.
-
-#### OPTION 2: Collect Data from Provider
-{:.no_toc}
-    ....todo review if this is a step and update example....
-
-
-#### OPTION 3: Subscribe for Notification when data is available
-{:.no_toc}
-    ....todo review if this is a step and update example....
-
-
-#### OPTION 4: CDS Hooks
-{:.no_toc}
-
-    Note to Balloters if there is a use case for using CDS Hooks to report the COL Measure
-
-
+      {  % include examplebutton.html example=col-summary-report-example" b_title = "Post COL Summary MeasureReport" % }
 
 {% include link-list.md %}

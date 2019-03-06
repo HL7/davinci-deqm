@@ -61,47 +61,6 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-### MRP FHIR Transactions:
-
-{% include img.html img="mrp-wf-overview.jpg" %}
-
-#### Gather Data Requirements From Payer
-
-
-In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
-
-{% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
-
-The required data for MRP is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-mrp` endpoint.
-
-##### APIs
-{:.no_toc}
-
-These artifacts are used in this transaction:
-
-1. Data Requirements: [$data-requirements (R4)] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
-
-##### Usage
-{:.no_toc}
-
-Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
-
-`GET|[base]/Measure/measure-mrp/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
-`POST|[base]/Measure/measure-mrp/$data-requirements`
-
-{% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
-
----
-
-#### Submit Data to Payer
-
-{% include img-narrow.html img="submit-mrp-data.jpg" caption="Submit data Operation" %}
-
-##### Submit Data to a Payer's Measure endpoint
-{:.no_toc}
-
-Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  (Note that the Collect Data and Subscription Operations are not supported for this use case.)  For MRP the Provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
-
 ##### Graph of MRP resources:
 {:.no_toc}
 
@@ -109,30 +68,20 @@ Provider will use the Submit Data operation to submit a MeasureReport and the re
 
 {% include img.html img="mrp-observation.jpg" caption="Option 2: MRP using Observation" %}
 
-##### APIs
+### MRP FHIR Transactions:
+
+#### Data Exchange Interactions
 {:.no_toc}
 
-These artifacts are used in this transaction:
+1. Gather MRP Data Requirements From Payer
 
-1. Submit Data operation: [$submit-data (R4)]  ( Note - the same operation is used for both version STU3 and R4 transaction)
-1. DEQM Coverage Profile
-1. QI Core Encounter Profile
-1. QI Core Location Profile
-1. HEDIS MRP Measure Profile
-1. DEQM Individual MeasureReport Profile
-1. DEQM Organization Profile
-1. QI Core Patient Profile
-1. DEQM Practitioner Profile
-1. HEDIS MRP Task Profile or HEDIS MRP Observation Profile
+   In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
-##### Usage
-{:.no_toc}
+        {% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
 
-A provider `POST`s the MRP resources to the payer using:
+1. Exchange of Quality Measure Data
 
-`POST|[base]/Measure/measure-mrp/$submit-data`
-
-
+   Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  (Note that the Collect Data and Subscription Operations are not supported for this use case.)  For MRP the Provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
 
 {% include examplebutton.html example="submit-data-example" b_title = "Example Submit Data operation using Task option" %}
 
@@ -140,21 +89,23 @@ A provider `POST`s the MRP resources to the payer using:
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)
 -->
 
-
 {% include examplebutton.html example="submit-data-observation"  b_title = "Example Submit Data operation using Observation option" %}
 
-<!-- >[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)
--->
+#### MRP Measure Reporting Interactions:
+{:.no_toc}
 
----
-<!--{% raw %}
+1. Individual MeasureReport
 
-#### Usage
+  Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-example how to use a button to expand an inline example....
+     {  % include examplebutton.html example=col-indv-report-example" b_title = "Post Bundle with COL Individual MeasureReport" % }
 
-{% include examplebutton.html example="foo" %}
+1. Summary MeasureReport
 
-{% endraw %}-->
+  Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+
+     {  % include examplebutton.html example=col-summary-report-example" b_title = "Post COL Summary MeasureReport" % }
+
+{% include link-list.md %}
 
 {% include link-list.md %}

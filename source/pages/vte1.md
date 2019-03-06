@@ -17,44 +17,51 @@ Resources supported for this use case: ...ToDo...
 
 Graph of VTE Resources: …ToDo…
 
-### VTE Measure Transactions: ToDo
+### VTE-1 FHIR Transactions:
 
-In this optional step, the Provider queries the Payer(“Aggregator”) for which resources are needed for VTE measure reporting. Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
-
-{% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
-
-The required data for COL is discovered by invoking the|[Data Requirements] operation on the payer's `Measure/measure-vte1` endpoint.
-
-##### APIs
+#### Data Exchange Interactions
 {:.no_toc}
 
-These artifacts are used in this transaction:
+1. Gather VTE-1 Data Requirements From Payer  (TODO link)
 
-1. Data Requirements: [$data-requirements (R4)] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
+        {  % include examplebutton.html example=col-requirements-example" b_title = "Example VTE-1 Data Requirements" % }
 
-##### Usage
+1. Exchange of Quality Measure Data (TODO link)
+
+   - OPTION 1: Submit Data to a Payer/Aggregator's Measure endpoint
+
+       ....todo short Description
+
+          {  % include examplebutton.html example=col-submit-example" b_title = "Example VTE-1 Submit Data" % }
+
+   - OPTION 2: Payer/Aggregator Collects Data from Provider
+
+    ....todo short Description
+
+        {  % include examplebutton.html example=col-collect-example" b_title = "Example VTE-1 Collect Data" % }
+
+
+   - OPTION 3: Payer/Aggregator Subscribes for Notification from Provider when data is available
+
+    ....todo short Description
+
+        {  % include examplebutton.html example=col-subscription-example" b_title = "Example VTE-1 Subscription" % }
+
+   - Note to Balloters if there is a use case for using CDS Hooks to report the VTE-1 Measure
+
+#### VTE-1 Measure Reporting Interactions:
 {:.no_toc}
 
-Using either the `GET` and `POST` Syntax the operation can be invoked as follows:
+1. Individual MeasureReport
 
-`GET|[base]/Measure/measure-vte1/$data-requirements?periodStart={periodStart}&periodEnd={periodEnd}`
-`POST|[base]/Measure/measure-vte1/$data-requirements`
+   Aggregator pushed the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
-{% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
+      {  % include examplebutton.html example=col-indv-report-example" b_title = "Post Bundle with VTE-1 Individual MeasureReport" % }
 
----
+1. Summary MeasureReport
 
-#### OPTION 1: Submit Data to Payer
-{:.no_toc}
-    ....todo review if this is a step and update example....
+   Aggregator pushed the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
-
-{% include img-narrow.html img="submit-vte-data.jpg" caption="Submit data Operation" %}
-
-##### Submit Data to a Payer's Measure endpoint
-{:.no_toc}
-
-Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for VTE measure reporting to the payer.
-
+      {  % include examplebutton.html example=col-summary-report-example" b_title = "Post VTE-1 Summary MeasureReport" % }
 
 {% include link-list.md %}
