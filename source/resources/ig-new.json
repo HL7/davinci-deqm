@@ -51,6 +51,20 @@
     }],
     "resource" : [{
       "reference" : {
+        "reference" : "StructureDefinition/extension-certificationIdentifier"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-reportingVendor"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-dataCollectionType"
       },
       "exampleBoolean" : false,
@@ -231,6 +245,16 @@
         {
           "nameUrl" : "StructureDefinition-measure-deqm.html",
           "title" : "StructureDefinition Measure Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-certificationIdentifier.html",
+          "title" : "StructureDefinition Extension certificationIdentifier",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-reportingVendor.html",
+          "title" : "StructureDefinition Extension reportingVendor",
           "generation" : "generated"
         },
         {

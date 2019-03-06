@@ -46,6 +46,20 @@
     </grouping>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-certificationIdentifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-reportingVendor"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-dataCollectionType"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -226,6 +240,16 @@
         <page>
           <nameUrl value="StructureDefinition-measure-deqm.html"/>
           <title value="StructureDefinition Measure Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-certificationIdentifier.html"/>
+          <title value="StructureDefinition Extension certificationIdentifier"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-reportingVendor.html"/>
+          <title value="StructureDefinition Extension reportingVendor"/>
           <generation value="generated"/>
         </page>
         <page>

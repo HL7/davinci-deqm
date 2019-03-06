@@ -65,6 +65,8 @@ FHIR operations allows the implementation to be viewed as a 'black box' free to 
 
 <br />
 
+### Data Exchange
+
 #### Submit Data operation
 {: #submit-data}
 
@@ -236,6 +238,19 @@ The Provider notifies the Aggregator when measure data is available. Exactly, ho
 {:.no_toc}
 
 Upon notification, the Aggregator uses the Collect Data operation to request a MeasureReport and any relevant data from the notifying Provider.  This operation is discussed in the section above.
+
+### Measure Reporting
+
+Reporting - uses evaluateMeasure (Linda and Yan to add text to explain reporting, from QRDA and modified)
+
+#### Interactions - Eric
+{:.no_toc}
+
+##### Individual - Post Bundle with MeasureReport and evaluated resources
+{:.no_toc}
+
+##### Summary - Post MeasureReport.
+{:.no_toc}
 
 
 ### Must Support

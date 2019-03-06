@@ -38,6 +38,10 @@
 [DEQM Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-subscription-deqm.html
 [DEQM Summary MeasureReport Profile (R4)]: r4todo.html
 [DEQM Summary MeasureReport Profile (STU3)]: StructureDefinition-summary-measurereport-deqm.html
+[Reporting Vendor (R4)]: {{page.r4}}extension-request-reportingVendor.html
+[Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
+[Certification Identifier (R4)]: {{page.r4}}extension-request-certificationidentifier.html
+[Certification Identifier (STU3)]: StructureDefinition-extension-certificationidentifier.html
 [Do Not Perform (R4)]: {{page.r4}}extension-request-donotperform.html
 [Do Not Perform (STU3)]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"

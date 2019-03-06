@@ -907,6 +907,31 @@
    </Borders>
    <Interior/>
   </Style>
+  <Style ss:ID="s172">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s173">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders/>
+   <Interior ss:Color="#969696" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s174">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:ShrinkToFit="1"
+    ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="3"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s175">
+   <Font ss:FontName="Source Sans Pro" x:Family="Swiss" ss:Size="11"
+    ss:Color="#333333"/>
+  </Style>
  </Styles>
  <Worksheet ss:Name="Instructions">
   <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="5" x:FullColumns="1"
@@ -1051,7 +1076,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>3</ActiveRow>
+     <ActiveRow>19</ActiveRow>
+     <ActiveCol>0</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1064,7 +1090,7 @@
     ss:RefersTo="=measurereport-'\\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\[davinci]davinci'!R1C1:R103C26"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="29" ss:ExpandedRowCount="504" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="29" ss:ExpandedRowCount="510" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="65.25"
    ss:DefaultRowHeight="15">
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="150"/>
@@ -1072,8 +1098,9 @@
    <Column ss:StyleID="s84" ss:Width="201"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="122.25"/>
    <Column ss:StyleID="s85" ss:Width="68.25"/>
-   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="59.25" ss:Span="1"/>
-   <Column ss:Index="8" ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="305.25"/>
+   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="59.25"/>
+   <Column ss:StyleID="s85" ss:Width="246"/>
+   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="139.5"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="77.25"/>
    <Column ss:StyleID="s84" ss:Width="29.25"/>
    <Column ss:StyleID="s84" ss:Width="41.25"/>
@@ -1201,6 +1228,82 @@
     <Cell ss:StyleID="s103"/>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s174"><Data ss:Type="String">vendor</Data></Cell>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">extension</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.extension</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="String">Extension{#reportingVendor}</Data></Cell>
+    <Cell><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s172"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s173"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s174"><Data ss:Type="String">cehrt</Data></Cell>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">extension</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.extension</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="String">Extension{#certificationIdentifier}</Data></Cell>
+    <Cell ss:Index="14" ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">CMS EHR Certifciation ID</Data></Cell>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s172"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s173"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s174"/>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">extension.valueIdentifier</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.extension.valueIdentifier</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">1..1</Data></Cell>
+    <Cell ss:Index="12"><Data ss:Type="String">Identifier</Data></Cell>
+    <Cell ss:Index="14" ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">{&quot;system&quot; : &quot;urn:oid:2.16.840.1.113883.3.2074.1&quot;}</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s172"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s173"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
@@ -1248,7 +1351,7 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s108"/>
     <Cell ss:StyleID="s109"/>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">For individual quality measure reporting, this report is constrained to reporting on an individual</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">For individual quality meaure reporting, this report is constrained to reporting on an individual</Data></Cell>
     <Cell ss:StyleID="s109"/>
     <Cell ss:StyleID="s110"/>
     <Cell ss:StyleID="s110"/>
@@ -1295,7 +1398,7 @@
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..0</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1562,12 +1665,68 @@
     <Cell ss:StyleID="s111"/>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">see Yan's notes</Data></Cell>
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">measureScore</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">group.population.count</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.measureScore</Data></Cell>
+      ss:Type="String">MeasureReport.group.population.count</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:Index="13" ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">see Yan's notes</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s104"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">group.population.patients</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.group.population.patients</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">0..0</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:Index="13" ss:StyleID="s106"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s104"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.measureScore</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.group.measureScore</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -1594,9 +1753,9 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1623,9 +1782,9 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">!stratifier.identifier</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.identifier</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.!stratifier.identifier</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.identifier</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1652,9 +1811,9 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.stratum</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1681,9 +1840,9 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum.identifier</Data></Cell>
-    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum.identifier</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.identifier</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=&quot;!&quot;&amp;R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">!MeasureReport.group.stratifier.stratum.identifier</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1710,14 +1869,14 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum.value</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.value</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum.value</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.stratum.value</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1739,14 +1898,14 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum.population</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.population</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum.population</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.stratum.population</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1768,14 +1927,14 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum.population.identifier</Data></Cell>
-    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum.population.identifier</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.population.identifier</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=&quot;!&quot;&amp;R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">!MeasureReport.group.stratifier.stratum.population.identifier</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1797,14 +1956,14 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum.population.code</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.population.code</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum.population.code</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.stratum.population.code</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1826,11 +1985,40 @@
     <Cell ss:Index="4" ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum.population.count</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.population.count</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum.population.count</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.stratum.population.count</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s115"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s104"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.population.patients</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.group.stratifier.stratum.population.patients</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">0..0</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1857,14 +2045,14 @@
     <Cell ss:StyleID="s104"/>
     <Cell ss:StyleID="s105"/>
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">stratifier.stratum.population.measureScore</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">group.stratifier.stratum.measureScore</Data></Cell>
     <Cell ss:StyleID="s107" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.stratifier.stratum.population.measureScore</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.stratum.measureScore</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -5889,29 +6077,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <FreezePanes/>
-   <FrozenNoSplit/>
-   <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>1</TopRowBottomPane>
-   <SplitVertical>8</SplitVertical>
-   <LeftColumnRightPane>9</LeftColumnRightPane>
-   <ActivePane>0</ActivePane>
+   <LeftColumnVisible>7</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-    </Pane>
-    <Pane>
-     <Number>1</Number>
-     <ActiveCol>1</ActiveCol>
-    </Pane>
-    <Pane>
-     <Number>2</Number>
-    </Pane>
-    <Pane>
-     <Number>0</Number>
-     <ActiveRow>17</ActiveRow>
-     <ActiveCol>0</ActiveCol>
-     <RangeSelection>R17C1:R18C1</RangeSelection>
+     <ActiveRow>13</ActiveRow>
+     <ActiveCol>14</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -6442,8 +6613,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>21</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>6</ActiveRow>
+     <ActiveCol>7</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -76,12 +76,14 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ### *STU3* Extensions defined for this implementation guide:
 {:.no_toc}
 
-|Extension Name|Context|Link to STU3 Profile|Link to R4 Profile|
-|---|---|---|---|
-|Data Collection Type|DEQM Data Collection Type Extension|[Data Collection Type (STU3)]|N/A[^1]|
-|Do Not Perform|DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
-|Reference Any|DEQM Measure Report Extension|[Reference Any (STU3)]|N/A[^1]|
-|Measure Subscription|DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
+|Extension Name|Link to STU3 Profile|Link to R4 Profile|
+|---|---|---|
+|DEQM Certification Identifier Extension|[Certification Identifier (STU3)]|[Certification Identifier (R4)]|
+|DEQM Data Collection Type Extension|[Data Collection Type (STU3)]|N/A[^1]|
+|DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
+|DEQM Measure Report Extension|[Reference Any (STU3)]|N/A[^1]|
+|DEQM Reporting Vendor Extension|[Reporting Vendor (STU3)]|[Reporting Vendor (R4)]|
+|DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
 
 <br />
 
