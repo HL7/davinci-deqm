@@ -4,8 +4,25 @@
   <li>
     <a href="index.html">Home</a>
   </li>
-  <li>
-  <a href="guidance.html">Interactions</a>  <!-- General guidance for individual measures -->
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Guidance<b class="caret">
+    </b>  <!-- Da Vinci Individual Measures Use Cases -->
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+    <a href="guidance.html">General Guidance</a>
+    </li>
+    <li>
+    <a href="guidance.html">Data Exchange</a>
+    </li>
+    <li>
+    <a href="guidance.html">Individual Reporting</a>
+    </li>
+    <li>
+    <a href="guidance.html">Summary Reporting</a>
+    </li>
+  </ul>
+</li>
   </li>
   <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Examples<b class="caret">

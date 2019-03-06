@@ -61,3 +61,136 @@ get ri data.
 CQFM? Library and Measures.... or HEDIS? or DEQM?
 
 Update all the measures.
+
+For this afternoon, walk the IG layout
+  look for ToDo's and assign
+ Note any needs for trackers
+
+Home Page - shared with Measure IG
+  Then Guide specific material - Links at top
+
+Guidance and Overview
+  Data Exchange
+  	Interactions - add batch to Collect Data)
+  	  Submit
+  	  Collect
+  	  Subscription
+  	Profiling
+  Reporting - uses evaluateMeasure
+  	Interactions -
+    Individual -Post Bundle with MeasureReport
+    Summary - Post MeasureReport
+
+Use Case Tab becomes Examples
+MRP
+	Overview
+		Data Flow
+	Exchange Guidance - triggering when provider pushes "attest button"
+	  Interactions - Submit
+	What you exchange - profiles
+	Reporting
+	  Individual
+	  Summary
+Colorectal Cancer – Remove the repeating general information about each operation. Link back to the Interactions page. Keep the information in the example. Use the data from prior Connectathons - Bryn
+	Overview
+	  	Data Flow
+	FHIR Resource Overview
+		Update DEQM profiles to called cqfm measures
+		Linda will mark up this section and send to Eric
+Data Exchange Guidance - triggering
+		 Interactions -
+	  	Submit - when EHR receives/creates record
+	  Collect Data - when payer has claim (batch of Collect Data)
+	  Subscription
+	What you exchange - Profiles including DEQM Data Exchange MeasureReport (includes all resources submitter has for the measure)
+	Reporting
+	  	Individual - Profiles including DEQM Individual MeasureReport (includes all resources used in calculating measure)
+	  	Summary - Profile on DEQM Summary MeasureReport
+VTE - http://build.fhir.org/ig/HL7/davinci-deqm/vte1.html
+  Overview
+	  Data Flow
+	Exchange Guidance - triggering
+	 Interactions -
+	  Submit - when EHR receives/creates record
+	  Collect Data - when payer has claim (batch of Collect Data)
+	  Subscription
+	What you exchange - Profiles including DEQM Data Exchange MeasureReport (includes all resources submitter has for the measure)
+	Reporting
+	  Individual - Profiles including DEQM Individual MeasureReport (includes all resources used in calculating measure)
+
+
+
+
+Deadline goals - all content by COB Wednesday
+
+- Awaiting feedback on Bryn's Introductory page by tomorrow to add to the Measure IG. Then it can be added to
+
+http://build.fhir.org/ig/cqframework/cqf-measures/
+1.      Quality Improvement Ecosystem: review QRDA/HQMF for narratives that could reuse for this section - Yan
+2.      Review Quality Measurement Standard Landscape section (homepage)– Rose
+	- Send to Bryn
+3.      Review Data Model Standards Landscape section – Ben
+4.      Review Quality Reporting Scenarios section (homepage)– Michael
+	- Send to Eric
+5.      Review the edits made to Home page and Guidance and Overview page (prior to Bryn’s new updates) provided by Yan – Linda
+6. 	COL Example page
+	- CLinical and administrative narrative - Viet
+	- Transaction flow diagram - Viet
+	- Sample data - ??
+7.	Technical Artifacts
+	- Profiles - should be added to IG (but not final) - Bryn to work with Eric to clarify profiles, particulary MeasureReport
+		- add language to Landscape regarding using QiCore Profiles when available (Bryn)
+8.	Linda and Yan to work on
+2.1.1 Quality Reporting: Measure and MeasureReport Resources
+9. 	Guidance and Overview
+  Data Exchange (done)
+  			Interactions -
+  		  		Submit-data
+  	  			Collect-data – Describe how a payer would request data for a set of patients (returned as a batch? – Bryn)
+  	 	 Subscription
+  		Profiling (see profile page)
+  Reporting - uses evaluateMeasure (Linda and Yan to add text to explain reporting, from QRDA and modified)
+  	Interactions - Eric
+    		Individual - Post Bundle with MeasureReport and evaluated resources
+    		Summary - Post MeasureReport.
+	Note – evaluateMeasure requires a FHIR endpoint that supports the operation and has the data.
+
+
+Bryn and Eric to work on - http://build.fhir.org/ig/HL7/davinci-deqm/StructureDefinition-summary-measurereport-deqm.html
+
+We are not supporting the subject-list type of MeasureReport – Will need to add a note in the General Guidance
+
+
+5/6/19 Notes
+Yanyan – VTE1 measure conversion is in progress. Not sure if the conversion to FHIR will be complete by 3/24. Primarily the CQL components.
+	Rob 	– profile list should be ok
+Bryn – VTE1 is ok for the initial review Friday 3/8
+What’s a good scope of what we provide in the ballot?
+VTE1
+-	Measure profiles – ok
+-	CQL timing constrains done
+-	Base definitions – still a lot of work in order to support measure calculation
+-	Bryn – to assist by drafting the VTE details for Yanyan to review
+Rob – changes made to VTE page.
+-	Eric needs list of VTE1 FHIR Profiles – get from Bryn/Rob
+-	Process visio diagrams
+o	Need input from Yanyan and EHR vendors for details
+o	What interactions do we need diagrams
+	Does an aggregator need this measure in real-time? Data-submission type MeasureReport
+•	Realtime may be more of a CDS
+•	Window is a hospitalization, not a calendar period
+•	Ask reviewers for ballot comments on data exchange
+	Or do they only need the report
+o	In IG, we would need:
+	Individual report
+	Summary report – in case it may be important for a specific payer program
+-	W.r.t. MeasureReport profiles. We will keep the profile named DEQM Data Exchange MeasureReport (uses type data-collection)
+Linda/Yan – Interactions page will be very long
+	 Would like to separate the Interactions page to sub pages for Data Exchange and Measure Reporting Pages
+-	Yan and Linda will provide content to support these two sub-pages
+
+
+Viet to add text to explain how we picked certain examples and add it to the General Guidance page and provide a link to this explaination in each specific example.
+
+Remove details on Terminology page and write in:
+Please refer to specific FHIR resources and profiles for each measure’s requirements for guidance in appropriate use of value sets, terminologies and code system.
