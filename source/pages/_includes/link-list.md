@@ -2,6 +2,7 @@
 [^1]: A Measure element in R4
 [^3]: Changes to the QI-Core Observation and Task profiles are being proposed based on the HEDIS Task and Observation profiles that may lead to these profiles being replaced by the QI Core profiles.
 [^4]: Changes to QI Core and US Core Organization and Practitioner  profiles are being proposed based on the DEQM Organization and Practitioner profiles that may lead to this profiles being replaced by the QI Core profile.
+[^5]: May includes DEQM defined code systems and externally defined code systems
 [$collect-data (R4)]: {{page.r4}}measure-operation-collect-data.html "The effect of invoking this operation on a Measure instance endpoint is to POST a collection of resources needed for reporting a measure"
 [$collect-data (STU3)]: {{page.deqm_r3}}OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$data-requirements (R4)]: {{page.r4}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"

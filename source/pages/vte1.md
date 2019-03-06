@@ -74,32 +74,8 @@ When a patient has an inpatient encounter, is not either pregnant or currently d
 #### Data Exchange Interactions
 {:.no_toc}
 
-1. Gather VTE-1 Data Requirements From Payer  (TODO link)
-
-        {  % include examplebutton.html example=col-requirements-example" b_title = "Example VTE-1 Data Requirements" % }
-
-1. Exchange of Quality Measure Data (TODO link)
-
-   - OPTION 1: Submit Data to a Payer/Aggregator's Measure endpoint
-
-       ....todo short Description
-
-          {  % include examplebutton.html example=col-submit-example" b_title = "Example VTE-1 Submit Data" % }
-
-   - OPTION 2: Payer/Aggregator Collects Data from Provider
-
-    ....todo short Description
-
-        {  % include examplebutton.html example=col-collect-example" b_title = "Example VTE-1 Collect Data" % }
-
-
-   - OPTION 3: Payer/Aggregator Subscribes for Notification from Provider when data is available
-
-    ....todo short Description
-
-        {  % include examplebutton.html example=col-subscription-example" b_title = "Example VTE-1 Subscription" % }
-
-   - Note to Balloters if there is a use case for using CDS Hooks to report the VTE-1 Measure
+   Note to Balloters: We are actively seeking feedback on whether VTE-1 Data Exchange interactions are appropriate or useful for hospital systems.
+   {:.note-to-balloters}
 
 #### VTE-1 Measure Reporting Interactions:
 {:.no_toc}

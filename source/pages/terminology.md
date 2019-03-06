@@ -11,61 +11,16 @@ deqm_r3: ''
 hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
+
+See the individual measure definitions and FHIR profiles for the specific terminology bindings.
+
 ### Value Sets
-
-#### Value Sets Listed By Use Case
-{:.no_toc}
-
-##### Common to All Quality Measures Implementation Use Cases
-{:.no_toc}
-
-- LibraryType
-- Jurisdiction ValueSet
-- DefinitionTopic
-- Measure PublicationStatus
-- Measure DefinitionTopic
-- MeasureScoring
-- MeasureType
-- MeasurePopulationType
-- MeasureReport Status
-- DEQM Organization Type Value Set
-- USPS Two Letter Alphabetic Codes
-- PublicationStatus
-- SubscriptionStatus
-
-##### MRP
-{:.no_toc}
-
-- LibraryType
-- Jurisdiction ValueSet
-- DefinitionTopic
-- Measure PublicationStatus
-- Measure DefinitionTopic
-- MeasureScoring
-- MeasureType
-- MeasurePopulationType
-- MeasureReport Status
-- Identifier Type Codes
-- USPS Two Letter Alphabetic Codes
-- PublicationStatus
-- EncounterStatus
-- ActEncounterCode
-- EncounterType
-- Encounter Reason Codes
-- AdmitSource
-- DischargeDisposition
-- LocationStatus
-- ServiceDeliveryLocationRoleType
-- Hl7 v2-2.7 Table 0360
-
-#### Value Sets Defined in this Implementation Guide
 {:.no_toc}
 
 {% include list-simple-valuesets.xhtml %}
 
-### Code Systems
-
-**Code systems published in this IG** - Includes DEQM defined code systems and externally defined code systems
+### Code Systems[^5]
+{:.no_toc}
 
 {% include list-simple-codesystems.xhtml %}
 
