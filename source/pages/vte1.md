@@ -17,7 +17,7 @@ The technical Workflow is outlined in the following figure.
 
     ...todo  WF figure and text ...
 
-**Summary of FHIR Artifacts used for Colorectal Cancer Screening**
+**Summary of FHIR Artifacts used for Venous Thromboembolism Prophylaxis Use Case**
 
 
 ### FHIR Resource Overview
