@@ -23,13 +23,14 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 #### Profiles Listed By Use Case
 {:.no_toc}
 
-##### Common to All Quality Measures Implementation Use Cases
+##### Common to All Quality Measures Implementation Interactions
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
 |Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
 |Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
+|Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
@@ -61,6 +62,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 |Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]||
 |Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
 |Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
+|Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
@@ -76,6 +78,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 |Extension Name|Context|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
+|Data Collection Type|DEQM Data Collection Type Extension|[Data Collection Type (STU3)]|N/A[^1]|
 |Do Not Perform|DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
 |Reference Any|DEQM Measure Report Extension|[Reference Any (STU3)]|N/A[^1]|
 |Measure Subscription|DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|

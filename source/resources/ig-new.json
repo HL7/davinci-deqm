@@ -51,6 +51,13 @@
     }],
     "resource" : [{
       "reference" : {
+        "reference" : "StructureDefinition/extension-dataCollectionType"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-doNotPerform"
       },
       "exampleBoolean" : false,
@@ -79,6 +86,13 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/indv-measurereport-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/coverage-deqm"
       },
       "exampleBoolean" : false,
@@ -100,13 +114,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/individual-measurereport-deqm"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
         "reference" : "CapabilityStatement/server"
       },
       "exampleBoolean" : false,
@@ -115,6 +122,13 @@
     {
       "reference" : {
         "reference" : "ValueSet/improvement-notation"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/datax-measurereport-deqm"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -180,6 +194,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-indv-measurereport-deqm.html",
+          "title" : "StructureDefinition Indv MeasureReport Deqm",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-coverage-deqm.html",
           "title" : "StructureDefinition Coverage Deqm",
           "generation" : "generated"
@@ -195,8 +214,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-individual-measurereport-deqm.html",
-          "title" : "StructureDefinition Individual MeasureReport Deqm",
+          "nameUrl" : "StructureDefinition-datax-measurereport-deqm.html",
+          "title" : "StructureDefinition Datax MeasureReport Deqm",
           "generation" : "generated"
         },
         {
@@ -212,6 +231,11 @@
         {
           "nameUrl" : "StructureDefinition-measure-deqm.html",
           "title" : "StructureDefinition Measure Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-dataCollectionType.html",
+          "title" : "StructureDefinition Extension dataCollectionType",
           "generation" : "generated"
         },
         {

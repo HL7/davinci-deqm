@@ -46,6 +46,13 @@
     </grouping>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-dataCollectionType"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-doNotPerform"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -74,6 +81,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/indv-measurereport-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/coverage-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -95,13 +109,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/individual-measurereport-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CapabilityStatement/server"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -110,6 +117,13 @@
     <resource>
       <reference>
         <reference value="ValueSet/improvement-notation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/datax-measurereport-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -175,6 +189,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-indv-measurereport-deqm.html"/>
+          <title value="StructureDefinition Indv MeasureReport Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-coverage-deqm.html"/>
           <title value="StructureDefinition Coverage Deqm"/>
           <generation value="generated"/>
@@ -190,8 +209,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-individual-measurereport-deqm.html"/>
-          <title value="StructureDefinition Individual MeasureReport Deqm"/>
+          <nameUrl value="StructureDefinition-datax-measurereport-deqm.html"/>
+          <title value="StructureDefinition Datax MeasureReport Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -207,6 +226,11 @@
         <page>
           <nameUrl value="StructureDefinition-measure-deqm.html"/>
           <title value="StructureDefinition Measure Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-dataCollectionType.html"/>
+          <title value="StructureDefinition Extension dataCollectionType"/>
           <generation value="generated"/>
         </page>
         <page>
