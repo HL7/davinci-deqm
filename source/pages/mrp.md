@@ -49,17 +49,19 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
-|Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]|
+|Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|[QI Core Coverage (R4)]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
-|Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
-|Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
-|Observation|HEDIS MRP Observation Profile|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
-|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+|Library|CQFM Library Profile|[CQFM Library (STU3)]|[CQFM Library (R4)]|
+|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
+|Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
+|Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
+|Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
+|Observation|HEDIS MRP Observation Profile[^3]|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
+|Organization|DEQM Organization Profile[^4]|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
-|Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
+|Practitioner|DEQM Practitioner Profile[^4]|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
+|Task|HEDIS MRP Task Profile[^3]|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
 ##### Graph of MRP resources:
 {:.no_toc}
@@ -105,7 +107,5 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
   Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
      {  % include examplebutton.html example=col-summary-report-example" b_title = "Post COL Summary MeasureReport" % }
-
-{% include link-list.md %}
 
 {% include link-list.md %}

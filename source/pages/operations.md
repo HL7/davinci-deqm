@@ -21,15 +21,15 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 |Name|Link to STU3 Operation|Link to R4 Operation|
 |---|---|---|
 |Collect Data Operation|[$collect-data (STU3)]|[$collect-data (R4)]
-|Data Requirements Operation|N/A[^1]|[$data-requirements (R4)]
-|Submit Data Operation|N/A[^1]|[$submit-data (R4)]
+|Data Requirements Operation|N/A[^2]|[$data-requirements (R4)]
+|Submit Data Operation|N/A[^2]|[$submit-data (R4)]
 
 #### MRP
 {:.no_toc}
 
 |Name|Link to STU3 Operation|Link to R4 Operation|
 |---|---|---|
-|Submit Data Operation|N/A[^1]|[$submit-data (R4)]
+|Submit Data Operation|N/A[^2]|[$submit-data (R4)]
 
 ### Operations Defined in this Implementation Guide
 {:.no_toc}
@@ -37,7 +37,5 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 Collect Data Operation: [$collect-data (STU3)]
 
 {% include link-list.md %}
-
-[^1]: The same operation is used for both version STU3 and R4 transaction
 
 <br />

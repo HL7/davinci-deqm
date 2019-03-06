@@ -85,6 +85,4 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 <br />
 
-[^1]: A Measure element in R4
-
 {% include link-list.md %}
