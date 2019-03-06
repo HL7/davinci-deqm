@@ -21,6 +21,35 @@ Data exchange
 Reporting
 
 GF#18760 for adding reporting of results.
+GF#20504 for adding COL usecase
 create new trackers for COl and VTE1
 
 linking back to base specification - broader thna the cross ig home page content
+
+
+content by end of day tomorrow
+
+use QI core profiles where available
+
+as illustrated by the followin examples yada  as
+
+discussed in the data standards landscape.
+
+for evaluateMeasure   - get ballot comments..on it
+
+report pushing reports  using POST FHIRRESTfully...
+
+POST Bundle for ind reporting
+POST MeasureReport for summaries...
+
+subject list note.
+
+for examples remove the repeating interactions and point to interaction page.
+
+
+get ri data.
+
+
+CQFM? Library and Measures.... or HEDIS? or DEQM?
+
+Update all the measures.

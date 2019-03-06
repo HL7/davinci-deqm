@@ -28,39 +28,30 @@ The technical Workflow is outlined in the following figure.
 
     ...todo  WF figure and text ...
 
-**Summary of FHIR Artifacts used for Medication Reconciliation**
+**Summary of FHIR Artifacts used for Colorectal Cancer Screening**
 
 ### FHIR Resource Overview
 
 #### Resources supported for this use case:
 {:.no_toc}
 
-    ....todo ...
-    DEQM Individual Measure Report  do we need Summary measure report too?
-    QI Core Measure (Bryn is that right or will one be profiled under QI Measure IG?)  is it  DEQM ? or QI Core ?
-    QI Core Observation is it  Hedis COL ? or HEDIS or QI Core ?
-    QI Core Coverage  is it QI Core coverage or DEQM Coverage?
-    Using Task?
-    Change all HEDIS MRP to HEDIS COL?
-
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
 |Condition|QI Core Condition Profile|[QI Core Condition (STU3)]|[QI Core Condition (R4)]|
-|Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]|
+|Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|[QI Core Coverage (R4)]|
 |DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport (STU3)]|[QI Core DiagnosticReport (R4)]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
-|Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
+|Library|CFQM Library Profile|[CFQM Library (STU3)]|[CFQM Library (R4)]|
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
-|Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
+|Measure|CFQM Measure Profile|[CFQM Measure (STU3)]|[CFQM Measure (R4)]|
+|Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
-|Observation|HEDIS MRP Observation Profile|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
+|Observation|QI Core Observation Profile|[QI Core Observation (STU3)]|[QI Core Observation (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure (STU3)]|[QI Core Procedure (R4)]|
-|Task|HEDIS MRP Task Profile|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
-
 
 ### Graph of COL resources:
 
@@ -79,7 +70,7 @@ When certain laboratory results are done in a specified time period, the patient
 #### Option 2:MeasureReport using DiagnosticReport
 {:.no_toc}
 
-Another way a COL screening measure is met is when certain procedures are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this meaure. The following diagram shows how that would be represented in a DEQM Individual MeasureReport with associated resources.
+Another way a COL screening measure is met is when certain procedures are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how that would be represented in a DEQM Individual MeasureReport with associated resources.
 
 
 {% include img.html img="DEQM Resource Diagram - COL2.jpg" %}

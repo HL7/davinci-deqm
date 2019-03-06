@@ -1,8 +1,13 @@
+
 [$collect-data (R4)]: {{page.r4}}measure-operation-collect-data.html "The effect of invoking this operation on a Measure instance endpoint is to POST a collection of resources needed for reporting a measure"
 [$collect-data (STU3)]: {{page.deqm_r3}}OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$data-requirements (R4)]: {{page.r4}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
 [$submit-data (R4)]:{{page.r4}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Capability statements]: capstatements.html
+[CFQM Library (R4)]: r4todo.html
+[CFQM Library (STU3)]: {{site.cqfm_r3}}StructureDefinition-cqfm-measure.html
+[CFQM Measure (R4)]: r4todo.html
+[CFQM Measure (STU3)]: {{site.cqfm_r3}}StructureDefinition-cqfm-measure.html
 [Clinical Decision Support (CDS)]: http://www.hl7.org/Special/committees/dss/index.cfm
 [Clinical Quality Framework]: http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework&oldid=158051
 [Clinical Quality Information (CQI)]: http://www.hl7.org/Special/committees/cqi/index.cfm
@@ -52,19 +57,29 @@
 [Measure Task]: StructureDefinition-task-measure.html
 [Measure]: {{site.data.fhir.path}}measure.html
 [Medication Reconciliation (MRP)]: mrp.html
-[Medication Reconciliation Post-Discharge (MRP)]: mrp.html
+[Medication Reconciliation Post-Discharge (MRP)]: mrp.ht
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
 [NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1
 [Operations]: operations.html "Operations Page"
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
 [QI Core *Must Support*]: {{page.qi_r3}}index.html#mustsupport "QI Core definition of *Must Support*"
+[QI Core Condition (R4)]: r4todo.html
+[QI Core Condition (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-condition.html
+[QI Core Coverage (R4)]: r4todo.html
+[QI Core Coverage (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-coverage.html
+[QI Core DiagnosticReport (R4)]: r4todo.html
+[QI Core DiagnosticReport (STU3)]:{{page.qi_r3}}StructureDefinition-qicore-diagnosticreport.html
 [QI Core Encounter (R4)]: r4todo.html
 [QI Core Encounter (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-encounter.html
 [QI Core Location (R4)]: r4todo.html
 [QI Core Location (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-location.html
+[QI Core Observation (R4)]: r4todo.html
+[QI Core Observation (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-observation.html
 [QI Core Patient (R4)]: r4todo.html
 [QI Core Patient (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-patient.html
+[QI Core Procedure (R4)]: r4todo.html
+[QI Core Procedure (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-procedure.html
 [QI Core Profiles]: {{page.qi_r3}}index.html
 [QI Core]: {{page.qi_r3}}index.html
 [Quality Measure Implementation Guide]: http://build.fhir.org/ig/cqframework/cqf-measures/index.html
