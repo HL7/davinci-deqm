@@ -4,11 +4,11 @@ source file: source/pages/\_includes/{{id}}-intro.md
 
 {{site.data.structuredefinitions.[id].description}}
 
-#### Scope and Usage
+### Scope and Usage
 
 scope and usage text here
 
-#### Mandatory Data Elements and Terminology
+### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present). blah blah blah
 
@@ -20,6 +20,6 @@ The following data-elements are mandatory (i.e data MUST be present). blah blah 
 
 **Additional Profile specific implementation guidance:**
 
-#### Examples
+### Examples
 
-- list examples here
+{% include datax-measurereports.md %}

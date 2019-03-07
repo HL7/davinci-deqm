@@ -1,0 +1,39 @@
+{
+  "fullUrl": "https://api-v5-stu3.hspconsortium.org/DaVinciDemoPayer/open/MeasureReport/ace5605d-7abf-a83f-6c48-704c1ea9352f",
+  "resource": {
+    "resourceType": "MeasureReport",
+    "id": "ace5605d-7abf-a83f-6c48-704c1ea9352f",
+    "meta": {
+      "versionId": "1",
+      "lastUpdated": "2018-11-13T15:34:40.000+00:00",
+      "profile": [
+        "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/measurereport-deqm"
+      ]
+    },
+    "status": "complete",
+    "type": "individual",
+    "measure": {
+      "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
+    },
+    "patient": {
+      "reference": "Patient/patient01"
+    },
+    "date": "2018-11-13T15:34:18.234Z",
+    "period": {
+      "start": "2018-11-13T15:34:18.234Z",
+      "end": "2018-11-13T15:34:18.234Z"
+    },
+    "evaluatedResources": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/ig/davinci/StructureDefinition/extension-referenceAny",
+          "valueReference": {
+            "reference": "Task/398c5447-55a3-c94f-ba13-c699f0fe5f11"
+          }
+        }
+      ]
+    }
+  },
+  "search": {
+    "mode": "match"
+  }

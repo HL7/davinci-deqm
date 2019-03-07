@@ -3,7 +3,7 @@ source file: source/pages/\_includes/{{id}}-intro.md
 
 {{site.data.structuredefinitions.[id].description}}
 
-##### Mandatory Data Elements and Terminology
+#### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present).
 
@@ -25,6 +25,6 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](
 
 None
 
-##### Examples
+#### Examples
 
-- [{{id}}-example-1](todo.html)
+{% include indv-measurereports.md %}

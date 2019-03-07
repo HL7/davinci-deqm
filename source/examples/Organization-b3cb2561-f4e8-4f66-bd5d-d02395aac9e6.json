@@ -1,0 +1,12 @@
+{
+   "id": "b3cb2561-f4e8-4f66-bd5d-d02395aac9e6",
+   "meta": {
+      "lastUpdated": "2018-11-13T17:00:47.000+00:00",
+      "profile": [
+         "http://hl7.org/fhir/ig/davinci/StructureDefinition/organization-davinci"
+      ],
+      "versionId": "3"
+   },
+   "name": "Pink Elephant Municipal Hospital",
+   "resourceType": "Organization"
+}

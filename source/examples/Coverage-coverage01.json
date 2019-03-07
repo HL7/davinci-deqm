@@ -1,0 +1,33 @@
+{
+   "id": "coverage01",
+   "meta": {
+      "lastUpdated": "2019-02-11T14:19:25.000+00:00",
+      "profile": [
+         "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/coverage-deqm"
+      ],
+      "versionId": "2"
+   },
+   "beneficiary": {
+      "reference": "Patient/patient01"
+   },
+   "payor": [
+      {
+         "reference": "Organization/organization04"
+      }
+   ],
+   "policyHolder": {
+      "reference": "Patient/patient01"
+   },
+   "relationship": {
+      "coding": [
+         {
+            "code": "self"
+         }
+      ]
+   },
+   "subscriber": {
+      "reference": "Patient/patient01"
+   },
+   "subscriberId": "A123456789",
+   "resourceType": "Coverage"
+}

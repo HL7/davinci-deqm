@@ -12,8 +12,7 @@ hedis_r4: todo.html
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
-See the individual measure definitions and FHIR profiles for the specific terminology bindings.
-
+Refer to the specific FHIR resources and profiles for each measure’s requirements for guidance in appropriate use of value sets, terminologies and code systems.
 
 ### Value Sets
 {:.no_toc}

@@ -1,0 +1,40 @@
+{
+   "id": "practitioner01",
+   "meta": {
+      "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+      "profile": [
+         "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
+      ],
+      "versionId": "4"
+   },
+   "active": true,
+   "gender": "male",
+   "identifier": [
+      {
+         "system": "http://hl7.org/fhir/sid/us-npi",
+         "type": {
+            "coding": [
+               {
+                  "code": "PRN",
+                  "display": "Provider number",
+                  "system": "http://hl7.org/fhir/v2/0203"
+               }
+            ]
+         },
+         "use": "official",
+         "value": "456789123"
+      }
+   ],
+   "name": [
+      {
+         "family": "Hale",
+         "given": [
+            "Cody"
+         ],
+         "suffix": [
+            "MD"
+         ]
+      }
+   ],
+   "resourceType": "Practitioner"
+}

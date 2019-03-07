@@ -1,0 +1,44 @@
+{
+   "id": "Practitioner-9876",
+   "meta": {
+      "lastUpdated": "2018-10-26T16:09:52.000+00:00",
+      "versionId": "1"
+   },
+   "address": [
+      {
+         "city": "Fairfax",
+         "line": [
+            "8224 Healthcare Drive"
+         ],
+         "state": "VA",
+         "use": "work"
+      }
+   ],
+   "birthDate": "1966-10-07",
+   "gender": "male",
+   "identifier": [
+      {
+         "system": "http://happyvalley.com/practitioner",
+         "value": "Practitioner-9876"
+      }
+   ],
+   "name": [
+      {
+         "family": "HeartbeatqgOZv",
+         "given": [
+            "ThomasqgOZv"
+         ],
+         "prefix": [
+            "Dr"
+         ]
+      }
+   ],
+   "telecom": [
+      {
+         "system": "phone",
+         "use": "work",
+         "value": "(914) 914-8224"
+      }
+   ],
+   "resourceType": "Practitioner"
+}

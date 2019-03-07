@@ -1,0 +1,23 @@
+{
+   "id": "Bo8MKQGudc3p-418647-qgOZv",
+   "meta": {
+      "lastUpdated": "2018-10-26T00:49:06.000+00:00",
+      "versionId": "3"
+   },
+   "active": true,
+   "identifier": [
+      {
+         "system": "http://happyvalley.com/organization",
+         "use": "official",
+         "value": "Bo8MKQGudc3p418647qgOZv"
+      }
+   ],
+   "name": "HL7 International Ij9rWp9VIW",
+   "telecom": [
+      {
+         "system": "phone",
+         "value": "(+1) 914-914-8224"
+      }
+   ],
+   "resourceType": "Organization"
+}

@@ -1,0 +1,60 @@
+{
+   "id": "organization02",
+   "meta": {
+      "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+      "profile": [
+         "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+      ],
+      "versionId": "3"
+   },
+   "active": true,
+   "address": [
+      {
+         "city": "Englewood",
+         "country": "USA",
+         "line": [
+            "3 Sherwood St."
+         ],
+         "postalCode": "07631",
+         "state": "NJ"
+      }
+   ],
+   "identifier": [
+      {
+         "assigner": {
+            "display": "www.irs.gov"
+         },
+         "system": "urn:oid:2.16.840.1.113883.4.4",
+         "type": {
+            "coding": [
+               {
+                  "code": "TAX",
+                  "display": "Tax ID number",
+                  "system": "http://hl7.org/fhir/v2/0203"
+               }
+            ]
+         },
+         "use": "official",
+         "value": "234567891"
+      }
+   ],
+   "name": "DaVinciHospital02",
+   "telecom": [
+      {
+         "system": "phone",
+         "value": "(+1) 551-555-1212"
+      }
+   ],
+   "type": [
+      {
+         "coding": [
+            {
+               "code": "prov",
+               "display": "Healthcare Provider",
+               "system": "http://hl7.org/fhir/organization-type"
+            }
+         ]
+      }
+   ],
+   "resourceType": "Organization"
+}

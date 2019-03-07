@@ -25,7 +25,7 @@
 </li>
   </li>
   <li class="dropdown">
-    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Examples<b class="caret">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Example Use Cases<b class="caret">
     </b>  <!-- Da Vinci Individual Measures Use Cases -->
   </a>
   <ul class="dropdown-menu">
