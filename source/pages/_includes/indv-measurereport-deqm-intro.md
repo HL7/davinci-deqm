@@ -1,6 +1,4 @@
 {% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
-
 {{site.data.structuredefinitions.[id].description}}
 
 #### Mandatory Data Elements and Terminology
@@ -16,10 +14,11 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. The date the report was generated
 1. The organization that reported the data
 1. The reporting period
+1. The results of the calculation (the Measure Score)
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
 
-1. Reference to all the resources involved in producing the report
+1. Reference to *all* the resources involved in producing the report
 
 **Additional Profile specific implementation guidance:**
 
@@ -28,3 +27,5 @@ None
 #### Examples
 
 {% include indv-measurereports.md %}
+
+{% include link-list.md %}

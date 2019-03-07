@@ -13,13 +13,13 @@
     <a href="guidance.html">General Guidance</a>
     </li>
     <li>
-    <a href="guidance.html">Data Exchange</a>
+    <a href="datax.html">Data Exchange</a>
     </li>
     <li>
-    <a href="guidance.html">Individual Reporting</a>
+    <a href="indv-reporting.html">Individual Reporting</a>
     </li>
     <li>
-    <a href="guidance.html">Summary Reporting</a>
+    <a href="summary-reporting.html">Summary Reporting</a>
     </li>
   </ul>
 </li>

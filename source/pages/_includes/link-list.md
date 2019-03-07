@@ -21,6 +21,7 @@
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type (STU3)]: StructureDefinition-extension-dataCollectionType.html
+[DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Coverage (R4)]: r4todo.html
 [DEQM Coverage (STU3)]: {{page.deqm_r3}}StructureDefinition-coverage-deqm.html
 [DEQM Data Exchange MeasureReport Profile (R4)]: r4todo.html
@@ -97,3 +98,6 @@
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
+[MeasureReport]: {site.data.fhir.path}}measurereport.html
+[QRDA Category 1 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
+[QRDA Category 3 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture

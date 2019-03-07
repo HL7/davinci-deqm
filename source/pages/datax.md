@@ -1,5 +1,5 @@
 ---
-title: General Guidance and Definitions for Data Exchange Interactions
+title: Data Exchange Interactions
 layout: default
 active: guidance
 topofpage: true
@@ -25,7 +25,10 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 Clinical Quality Measures are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of "data-of-interest" is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data-of-interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.  
 
-Transactions between Data "Aggregators" (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation. Note that triggering is implementation specific and out of scope for this IG. This guide describes three methods of exchanging data quality information using a set of [FHIR operations] that provide a framework to enable the Exchange of Quality Measure Data:
+
+Transactions between Data "Aggregators" (organizations that want to evaluate quality measures), Providers (organizations that deliver care to patients) and "Receivers" are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation. Note that triggering is implementation specific and out of scope for this IG. This Implementation Guide (IG) describes three methods of exchanging data quality information using a set of [FHIR operations] that provide a framework to enable the Exchange of Quality Measure Data:
+
+Transactions between Data "Aggregators" (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation. Note that triggering is implementation specific and out of scope for this IG. This Implementation Guide (IG) describes three methods of exchanging data quality information using a set of [FHIR operations] that provide a framework to enable the Exchange of Quality Measure Data:
 
 1. Measurement data may be submitted to the Aggregator by the Provider using the [Submit Data operation](#submit-data)
 1. Measurement data may be requested from the Provider by the Aggregator using the [Collect Data operation](#collect-data)
@@ -33,40 +36,38 @@ Transactions between Data "Aggregators" (organizations that want to evaluate qua
 
 FHIR operations allows the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
 
-#### Preconditions and Assumptions
+### Preconditions and Assumptions
 
 - The "Aggregator" may be a Payer or another organization that is monitoring various clinical quality measures for the members of a population.
 - The Measure resource is used to provide both human- and machine-readable definitions of a quality measure
-- The MeasureReport provides an associat
+- The MeasureReport provides an association to a specific quality measure and links the submitted data together to simplify processing for the receiver.
+- The required data is represented in the referenced resources defined by the MeasureReport.
+- The focus of the measure can be an individual or a group. For use cases where the focus is an individual the DEQM Individual MeasureReport Profile is used, when the focus is a group of individuals the DEQM Summary MeasureReport Profile is used.
+- Aggregators and providers *should* both use a common clinical quallity language (CQL) that would allow the same measures to be applied in healthcare and at the aggregator. This would also enable the application of the same measures across populations that span multiple Aggregators (payers).
 
-ion to a specific quality measure and links the submitted data together to simplify processing for the receiver.
-  - The required data is represented in the referenced resources defined by the MeasureReport.
-  - The focus of the measure can be an individual or a group. For use cases where the focus is an individual the DEQM Individual MeasureReport Profile is used, when the focus is a group of individuals the DEQM Summary MeasureReport Profile is used.
-- Aggregators *may* process CQL, but are not required to in order to support the exchange scenarios described in this Guide
-- Providers do *not* need to use CQL to support the exchange scenarios described in this Guide.
+### Profiles
 
-#### Profiles
 - The following resources are used in all these transactions:
 
   |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
      |---|---|---|---|
   |Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
   |Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
-  |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
-  |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
-     |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-     |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+  |MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
+  |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
+  |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
   |Subscription|DEQM Subscription Profile|[DEQM Subscription (STU3)]|[DEQM Subscription (R4)]|
-
 
 - Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
 
-##### Graph of DEQM Resources:
+#### Graph of DEQM Resources:
 {:.no_toc}
 
 {% include img.html img="measure-resource-graph.svg" caption="DEQM Resource Graph" %}
 
 <br />
+
+### Data Exchange
 
 #### Submit Data operation
 {: #submit-data}
@@ -80,7 +81,7 @@ To discover what data (i.e. resources) are relevant in the *Submit Data* payload
 ##### Gather Data Requirements From Aggregator
 {:.no_toc}
 
-In this *optional* step, the provider queries the aggregator for which resources/profiles are needed for reporting a given measure. To support the *Submit Data* operation, an implementation needs to know what data to provide as the payload for the operation. This can be done manually by reviewing the measure definition to determine what data needs to be submitted, or it can be automated using the *Data Requirements* operation. *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Aggregator .
+In this step, the provider queries a common knowledge store for profiles needed for reporting a given measure and how the sending of those data should be initiated. Common data profiles have been developed through a multi-stakeholder consensus-based development process and will be made available from the common site. To support the *Submit Data* operation, an implementation needs to know specifically what data are required to provide as the payload for the operation. This can be done manually by reviewing the measure definition to determine what data needs to be submitted and it is automated by using the *Data Requirements* operation. *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Aggregator.
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
 
@@ -240,11 +241,5 @@ The Provider notifies the Aggregator when measure data is available. Exactly, ho
 
 Upon notification, the Aggregator uses the Collect Data operation to request a MeasureReport and any relevant data from the notifying Provider.  This operation is discussed in the section above.
 
-
-### Must Support
-
-- This guide adopts the [QI Core *Must Support*] definition with the following additional expectations:
-
-1.  The receiver of data may not be able to complete processing and may report an error if a Must Support element is unavailable.
 
 {% include link-list.md %}

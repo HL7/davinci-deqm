@@ -107,6 +107,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*
 
+- *Linda Michaelsen, Optum*
 - *Eric Haas, Health eData Inc*
 - *Bryn Rhodes*
 - *Viet Nguyen, Stratametrics*
