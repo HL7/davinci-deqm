@@ -112,3 +112,6 @@
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
+[Individual Measure Reporting Interactions]: indv-reporting.html
+[Data Exchange]: datax.html
+[Summary Measure Reporting Interactions]: summary-reporting.html

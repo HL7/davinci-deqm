@@ -27,7 +27,6 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Library|CFQM Library Profile|[CFQM Library (STU3)]|[CFQM Library (R4)]|
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
 |Measure|CFQM Measure Profile|[CFQM Measure (STU3)]|[CFQM Measure (R4)]|
-|Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
 |MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration (STU3)]|[DEQM MedicationAdministration (R4)]|
@@ -37,6 +36,8 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure (STU3)]|[QI Core Procedure (R4)]|
+|ProcedureRequest|QI Core ProcedureRequest Profile|[QI Core ProcedureRequest (STU3)]|[QI Core ProcedureRequest (R4)]|
+
 
 ## Graph of VTE Resources:
 
@@ -65,6 +66,34 @@ When a patient has an inpatient encounter, is not either pregnant or currently d
 
 {% include img.html img="DEQM Resource Diagram - VTE3.jpg" %}
 
+### Option 4: Measure Report Using Encounter
+{:.no_toc}
+
+When a patient has an inpatient encounter where the encounter is <2 days long, or when the encounter is includes an ICU stay of 1 or more days, the patient can be excluded from the measure for the qualifying encounter. Codes for the ICU facility location will come from the HL7 ServiceDeliveryLocationRoleType valueset.
+
+{% include img.html img="DEQM Resource Diagram - VTE4.jpg" %}
+
+### Option 5: Measure Report Using Encounter
+{:.no_toc}
+
+When a patient has an inpatient encounter and is principally diagnosed with either a mental health condition, or a stroke (either hemorrhagic or ischemic), they are excluded from the numerator of the measure. Codes for the diagnoses will come from the respective valuesets from the measure.
+
+{% include img.html img="DEQM Resource Diagram - VTE5.jpg" %}
+
+### Option 6: Measure Report Using Procedure/Request and Encounter
+{:.no_toc}
+
+When a patient has an inpatient encounter, during which they are provided Comfort Measures within 1 day of being admitted or 1 day of a surgical procedure for which they were admitted, these Comfort Measures satisfy the numerator logic for the measure. The surgical procedure is defined by the presence of a code from the “general or neuraxial anesthesia” value set present in the measure. The Comfort measures are represented by either a Procedure or a ProcedureRequest with a code from the “Comfort Measures” value set present in the measure.
+
+{% include img.html img="DEQM Resource Diagram - VTE6.jpg" %}
+
+### Option 7: MeasureReport using Medication/Device request or use statment
+{:.no_toc}
+
+When a patient has an inpatient encounter, during which they should be given VTE prophylaxis, but they are not given said prophylaxis, the patient’s record must document a reason the medication/device was not provided. This reason must be coded, and must come from either the “medical reason” or “patient refusal” value sets, as stated in the measure logic. If these criteria are met, the patient will have been found to satisfy the requirements of the measure.
+
+{% include img.html img="DEQM Resource Diagram - VTE7.jpg" %}
+
 ## VTE-1 Data Exchange Interactions
 
    Note to Balloters: We are actively seeking feedback on whether VTE-1 Data Exchange interactions are appropriate or useful for hospital systems.
@@ -83,6 +112,9 @@ Aggregator pushed the Bundle of supporting resource with VTE-1 Individual Measur
 
 ### Summary MeasureReport
 {:.no_toc}
+
+Note to Balloters: The Summary MeasureReport is not currently used for program level reporting.  We are actively seeking input on potential uses for the summary report for VTE or other measures.
+{:.note-to-balloters}
 
 Aggregator pushed the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
