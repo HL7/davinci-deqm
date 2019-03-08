@@ -38,12 +38,13 @@ This Implementation Guide is based upon the prior work from the [US Core], [QI C
 
 ### Background
 
-Clinical quality measures (CQMs) are tools that help measure and track the quality of health care services that eligible professionals (EPs), eligible hospitals, and critical access hospitals (CAHs) provide. Measuring and reporting CQMs helps to ensure that our health care system is delivering effective, safe, efficient, patient-centered, equitable, and timely care. CQMs measure many aspects of patient care, including:[^1]
+Clinical quality measures (CQMs) are tools that help measure and track the quality of health care services that eligible professionals (EPs), eligible hospitals, and critical access hospitals (CAHs) provide. Measuring and reporting CQMs helps to ensure that our health care system is delivering effective, safe, efficient, patient-centered, equitable, and timely care. CQMs measure many aspects of healthcare and population health, including:[^1]
 
 - Patient and Family Engagement
 - Patient Safety
 - Care Coordination
-- Population/Public Health
+- Public Health
+- Population Health Management
 - Efficient Use of Healthcare Resources
 - Clinical Process/Effectiveness
 
