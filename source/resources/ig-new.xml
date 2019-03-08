@@ -53,27 +53,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Practitioner/OLqNdBzF-OLqNdBzF-76952"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/3"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Organization/b3cb2561-f4e8-4f66-bd5d-d02395aac9e6"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Coverage/coverage01"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -82,20 +61,6 @@
     <resource>
       <reference>
         <reference value="Organization/organization03"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/Practioner-76952"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/Practitioner-9876"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -130,20 +95,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Coverage/Coverage-2143"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/Practitioner-76952"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Practitioner/practitioner01"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -151,28 +102,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Practitioner/5ae1aa28-9f06-4823-b074-54bcb11b86dc"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Coverage/cf-1549031394388"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Coverage/coverage02"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Coverage/ea66f949-4617-411a-be93-7e2443dde95e"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -187,20 +117,6 @@
     <resource>
       <reference>
         <reference value="Coverage/coverage03"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Organization/Bo8MKQGudc3p-418647-qgOZv"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Organization/Organization-2134"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>

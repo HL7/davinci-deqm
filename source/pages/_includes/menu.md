@@ -5,7 +5,7 @@
     <a href="index.html">Home</a>
   </li>
   <li class="dropdown">
-    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Guidance<b class="caret">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Framework<b class="caret">
     </b>  <!-- Da Vinci Individual Measures Use Cases -->
   </a>
   <ul class="dropdown-menu">
