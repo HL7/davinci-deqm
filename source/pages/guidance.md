@@ -68,8 +68,10 @@ The [DEQM Individual MeasureReport Profile] is used when a measure is reported a
 
 The [DEQM Summary MeasureReport Profile] is used when a measure is reported an aggregator for  for a group of patients. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA Category 3 report].  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.
 
-While there are several differences among these profiles, you can determine the profile can be determined by the meta profile tag or by the `type` element as described above.  
-FHIR allows for a fourth type of MeasureReport, subject-list. This would be similar to what was proposed to be a [QRDA Category 2 report].  However, this level of measure reporting is out of scope for this version of the Implementation Guide. Reviewers are asked to comment if they believe there is a need for this profile in future versions of this IG.
+While there are several differences among these profiles, technically the profiles can be differentiated by eithder the meta profile tag or the `type` element as described above.
+
+FHIR allows for a fourth type of Measure Reporting, "Patient List Reporting.  which is similar to a [QRDA Category 2 report].  This level of measure reporting is out of scope for this version of the Implementation Guide. We are actively seeking input from balloter if they believe there is a need for this profile in a future version of this IG.
+{:.note-to-balloters}
 
 ## Other profiles
 

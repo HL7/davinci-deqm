@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ig"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig"/>
   <version value="0.1.0"/>
@@ -158,13 +158,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-notDone"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/extension-referenceAny"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -173,6 +166,13 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/subscription-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/medicationrequest-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -194,6 +194,13 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/organization-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/deviceusestatement-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -242,14 +249,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/devicerequest-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/deviceusestatement-deqm"/>
+        <reference value="CapabilityStatement/client"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -257,20 +257,6 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/medicationadministration-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/medicationrequest-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/client"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -296,6 +282,13 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/devicerequest-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
     <page>
       <nameUrl value="index.html"/>
       <title value="Home"/>
@@ -315,6 +308,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-medicationrequest-deqm.html"/>
+          <title value="StructureDefinition MedicationRequest Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-indv-measurereport-deqm.html"/>
           <title value="StructureDefinition Indv MeasureReport Deqm"/>
           <generation value="generated"/>
@@ -325,28 +323,13 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-devicerequest-deqm.html"/>
-          <title value="StructureDefinition DeviceRequest Deqm"/>
+          <nameUrl value="StructureDefinition-organization-deqm.html"/>
+          <title value="StructureDefinition Organization Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
           <nameUrl value="StructureDefinition-deviceusestatement-deqm.html"/>
           <title value="StructureDefinition DeviceUseStatement Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-medicationadministration-deqm.html"/>
-          <title value="StructureDefinition MedicationAdministration Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-medicationrequest-deqm.html"/>
-          <title value="StructureDefinition MedicationRequest Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-organization-deqm.html"/>
-          <title value="StructureDefinition Organization Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -370,8 +353,18 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-medicationadministration-deqm.html"/>
+          <title value="StructureDefinition MedicationAdministration Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-measure-deqm.html"/>
           <title value="StructureDefinition Measure Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-devicerequest-deqm.html"/>
+          <title value="StructureDefinition DeviceRequest Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -397,11 +390,6 @@
         <page>
           <nameUrl value="StructureDefinition-extension-measureSubscription.html"/>
           <title value="StructureDefinition Extension measureSubscription"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-extension-notDone.html"/>
-          <title value="StructureDefinition Extension notDone"/>
           <generation value="generated"/>
         </page>
         <page>
