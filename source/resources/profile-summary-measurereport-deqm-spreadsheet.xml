@@ -7,9 +7,9 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Grahame</Author>
-  <LastAuthor>User</LastAuthor>
+  <LastAuthor>Eric Haas</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2019-03-05T21:19:03Z</LastSaved>
+  <LastSaved>2019-03-08T08:06:02Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
@@ -17,14 +17,14 @@
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
   <SupBook>
-   <Path>\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
+   <Path>ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
    <SheetName>davinci</SheetName>
   </SupBook>
-  <WindowHeight>16040</WindowHeight>
-  <WindowWidth>27240</WindowWidth>
-  <WindowTopX>1960</WindowTopX>
+  <WindowHeight>17040</WindowHeight>
+  <WindowWidth>28040</WindowWidth>
+  <WindowTopX>380</WindowTopX>
   <WindowTopY>460</WindowTopY>
-  <ActiveSheet>1</ActiveSheet>
+  <ActiveSheet>2</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -1055,7 +1055,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -1075,7 +1074,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>7</ActiveRow>
+     <ActiveRow>27</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1085,7 +1084,7 @@
  <Worksheet ss:Name="summary-measurereport-deqm">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="=measurereport-'\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\[davinci]davinci'!R1C1:R103C26"
+    ss:RefersTo="=measurereport-'ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\[davinci]davinci'!R1C1:R103C26"
     ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="29" ss:ExpandedRowCount="510" x:FullColumns="1"
@@ -1260,7 +1259,8 @@
       ss:Type="String">MeasureReport.extension</Data></Cell>
     <Cell ss:Index="10"><Data ss:Type="String">0..1</Data></Cell>
     <Cell ss:Index="12"><Data ss:Type="String">Extension{#certificationIdentifier}</Data></Cell>
-    <Cell ss:Index="14" ss:StyleID="s106"/>
+    <Cell><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -6074,12 +6074,13 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <LeftColumnVisible>7</LeftColumnVisible>
+   <Selected/>
+   <LeftColumnVisible>5</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>13</ActiveRow>
-     <ActiveCol>14</ActiveCol>
+     <ActiveRow>5</ActiveRow>
+     <ActiveCol>9</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

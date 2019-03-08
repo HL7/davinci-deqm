@@ -17,14 +17,14 @@
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
   <SupBook>
-   <Path>ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
+   <Path>/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources/ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
    <SheetName>davinci</SheetName>
   </SupBook>
-  <WindowHeight>16040</WindowHeight>
-  <WindowWidth>27240</WindowWidth>
-  <WindowTopX>1180</WindowTopX>
-  <WindowTopY>1460</WindowTopY>
-  <ActiveSheet>1</ActiveSheet>
+  <WindowHeight>17040</WindowHeight>
+  <WindowWidth>28040</WindowWidth>
+  <WindowTopX>380</WindowTopX>
+  <WindowTopY>460</WindowTopY>
+  <ActiveSheet>2</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -1051,7 +1051,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -1082,10 +1081,10 @@
  <Worksheet ss:Name="indv-measurereport-deqm">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="=measurereport-'ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\[davinci]davinci'!R1C1:R103C26"
+    ss:RefersTo="=measurereport-'/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources/ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\[davinci]davinci'!R1C1:R103C26"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="28" ss:ExpandedRowCount="510" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="28" ss:ExpandedRowCount="511" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="65"
    ss:DefaultRowHeight="15">
    <Column ss:StyleID="s84" ss:Width="195"/>
@@ -1292,6 +1291,34 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">{&quot;system&quot; : &quot;urn:oid:2.16.840.1.113883.3.2074.1&quot;}</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s104"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s105"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">status</Data></Cell>
+    <Cell ss:StyleID="s107" ss:Formula="=R2C7&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.status</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s108"/>
@@ -6042,12 +6069,13 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
    <TopRowBottomPane>2</TopRowBottomPane>
    <SplitVertical>7</SplitVertical>
-   <LeftColumnRightPane>18</LeftColumnRightPane>
+   <LeftColumnRightPane>11</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
    <Panes>
     <Pane>
@@ -6063,7 +6091,9 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>3</ActiveRow>
+     <ActiveRow>12</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+     <RangeSelection>R12C6:R13C6</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
