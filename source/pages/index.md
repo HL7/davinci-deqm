@@ -65,6 +65,8 @@ Clinical quality measures (CQMs) are tools that help measure and track the quali
 - Measure Reporters and Users
     - Aggregators (organizations that collects measure data): Health Plans, Public Programs, and others
     - Providers: Healthcare organizations
+- Public Health
+    - Pan American Health Organization (PAHO), World Health Organization (WHO), National Institutes of Health (NIH), American Medical Association (AMA)
 
 #### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
 {:.no_toc}
