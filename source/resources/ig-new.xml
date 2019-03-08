@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ig"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"/>
+    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/examples"/>
+    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/framework"/>
+    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
+    <valueString value="/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig"/>
   <version value="0.1.0"/>
@@ -158,6 +158,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-notDone"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-referenceAny"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -235,6 +242,34 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/devicerequest-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/deviceusestatement-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/medicationadministration-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/medicationrequest-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/client"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -290,6 +325,26 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-devicerequest-deqm.html"/>
+          <title value="StructureDefinition DeviceRequest Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-deviceusestatement-deqm.html"/>
+          <title value="StructureDefinition DeviceUseStatement Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-medicationadministration-deqm.html"/>
+          <title value="StructureDefinition MedicationAdministration Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-medicationrequest-deqm.html"/>
+          <title value="StructureDefinition MedicationRequest Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-organization-deqm.html"/>
           <title value="StructureDefinition Organization Deqm"/>
           <generation value="generated"/>
@@ -342,6 +397,11 @@
         <page>
           <nameUrl value="StructureDefinition-extension-measureSubscription.html"/>
           <title value="StructureDefinition Extension measureSubscription"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-notDone.html"/>
+          <title value="StructureDefinition Extension notDone"/>
           <generation value="generated"/>
         </page>
         <page>

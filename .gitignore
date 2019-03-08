@@ -69,3 +69,5 @@ tmp*.xml
 ~*.docx
 ~*.xlsx
 ~*.pptx
+
+.idea/

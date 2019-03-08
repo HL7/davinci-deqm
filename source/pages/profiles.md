@@ -25,11 +25,15 @@ these profiles when available.
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
 |Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]||
+|DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest (STU3)]|[DEQM DeviceRequest (R4)]|
+|DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement (STU3)]|[DEQM DeviceUseStatement (R4)]|
 |Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
 |Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
+|MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration (STU3)]|[DEQM MedicationAdministration (R4)]|
+|MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest (STU3)]|[DEQM MedicationRequest (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Subscription|DEQM Subscription Profile|[DEQM Subscription (STU3)]|[DEQM Subscription (R4)]|
@@ -44,6 +48,7 @@ these profiles when available.
 |DEQM Data Collection Type Extension|[Data Collection Type (STU3)]|N/A[^1]|
 |DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
 |DEQM Measure Report Extension|[Reference Any (STU3)]|N/A[^1]|
+|DEQM Not Done Extension|[Not Done (STU3)]|[Not Done (R4)]|
 |DEQM Reporting Vendor Extension|[Reporting Vendor (STU3)]|[Reporting Vendor (R4)]|
 |DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
 

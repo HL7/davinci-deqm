@@ -40,10 +40,20 @@
 [DEQM Practitioner (STU3)]: {{page.deqm_r3}}StructureDefinition-practitioner-deqm.html
 [DEQM Subscription (R4)]: r4todo.html
 [DEQM Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-subscription-deqm.html
+[DEQM DeviceRequest (R4)]: r4todo.html
+[DEQM DeviceRequest (STU3)]: {{page.deqm_r3}}StructureDefinition-devicerequest-deqm.html
+[DEQM DeviceUseStatement (R4)]: r4todo.html
+[DEQM DeviceUseStatement (STU3)]: {{page.deqm_r3}}StructureDefinition-deviceusestatement-deqm.html
+[DEQM MedicationAdministration (R4)]: r4todo.html
+[DEQM MedicationAdministration (STU3)]: {{page.deqm_r3}}StructureDefinition-medicationadministration-deqm.html
+[DEQM MedicationRequest (R4)]: r4todo.html
+[DEQM MedicationRequest (STU3)]: {{page.deqm_r3}}StructureDefinition-medicationrequest-deqm.html
 [DEQM Summary MeasureReport Profile (R4)]: r4todo.html
 [DEQM Summary MeasureReport Profile (STU3)]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform (R4)]: {{page.r4}}extension-request-donotperform.html
 [Do Not Perform (STU3)]: StructureDefinition-extension-doNotPerform.html
+[Not Done (R4)]: {{page.r4}}extension-request-notDone.html
+[Not Done (STU3)]: StructureDefinition-extension-notDone.html
 [Downloads]: downloads.html "Downloads Page"
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
 [FHIR operations]: {{page.r4}}operations.html "Extended Operations on the RESTful API"

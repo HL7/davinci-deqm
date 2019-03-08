@@ -3,19 +3,19 @@
   "id" : "ig",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"
+    "valueString" : "/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/examples"
+    "valueString" : "/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/framework"
+    "valueString" : "/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"
+    "valueString" : "/Users/christopherschuler/Documents/workspace/dcg/repos/deqm-fork/davinci-deqm/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig",
   "version" : "0.1.0",
@@ -163,6 +163,13 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/extension-notDone"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-referenceAny"
       },
       "exampleBoolean" : false,
@@ -240,6 +247,34 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/devicerequest-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/deviceusestatement-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/medicationadministration-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/medicationrequest-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/client"
       },
       "exampleBoolean" : false,
@@ -295,6 +330,26 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-devicerequest-deqm.html",
+          "title" : "StructureDefinition DeviceRequest Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-deviceusestatement-deqm.html",
+          "title" : "StructureDefinition DeviceUseStatement Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-medicationadministration-deqm.html",
+          "title" : "StructureDefinition MedicationAdministration Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-medicationrequest-deqm.html",
+          "title" : "StructureDefinition MedicationRequest Deqm",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-organization-deqm.html",
           "title" : "StructureDefinition Organization Deqm",
           "generation" : "generated"
@@ -347,6 +402,11 @@
         {
           "nameUrl" : "StructureDefinition-extension-measureSubscription.html",
           "title" : "StructureDefinition Extension measureSubscription",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-notDone.html",
+          "title" : "StructureDefinition Extension notDone",
           "generation" : "generated"
         },
         {

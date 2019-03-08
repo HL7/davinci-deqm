@@ -20,8 +20,8 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |---|---|---|---|
 |Condition|QI Core Condition Profile|[QI Core Condition (STU3)]|[QI Core Condition (R4)]|
 |Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|[QI Core Coverage (R4)]|
-|DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement (STU3)]|[QI Core DeviceUseStatement (R4)]|
-|DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest (STU3)]|[QI Core DeviceRequest (R4)]|
+|DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest (STU3)]|[DEQM DeviceRequest (R4)]|
+|DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement (STU3)]|[DEQM DeviceUseStatement (R4)]|
 |DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport (STU3)]|[QI Core DiagnosticReport (R4)]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
 |Library|CFQM Library Profile|[CFQM Library (STU3)]|[CFQM Library (R4)]|
@@ -29,8 +29,8 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Measure|CFQM Measure Profile|[CFQM Measure (STU3)]|[CFQM Measure (R4)]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
-|MedicationAdministration|QI Core MedicationAdministration Profile|[QI Core MedicationAdministration (STU3)]|[QI Core MedicationAdministration (R4)]|
-|MedicationStatement|QI Core MedicationStatement Profile|[QI Core MedicationStatement (STU3)]|[QI Core MedicationStatement (R4)]|
+|MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration (STU3)]|[DEQM MedicationAdministration (R4)]|
+|MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest (STU3)]|[DEQM MedicationRequest (R4)]|
 |Observation|QI Core Observation Profile|[QI Core Observation (STU3)]|[QI Core Observation (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
