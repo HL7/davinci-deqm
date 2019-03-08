@@ -40,6 +40,8 @@
 [DEQM Practitioner (STU3)]: {{page.deqm_r3}}StructureDefinition-practitioner-deqm.html
 [DEQM Subscription (R4)]: r4todo.html
 [DEQM Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-subscription-deqm.html
+[DEQM DeviceRequest (R4)]: r4todo.html
+[DEQM DeviceRequest (STU3)]: {{page.deqm_r3}}StructureDefinition-devicerequest-deqm.html
 [DEQM DeviceUseStatement (R4)]: r4todo.html
 [DEQM DeviceUseStatement (STU3)]: {{page.deqm_r3}}StructureDefinition-deviceusestatement-deqm.html
 [DEQM Summary MeasureReport Profile (R4)]: r4todo.html

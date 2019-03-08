@@ -163,6 +163,13 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/extension-notDone"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-referenceAny"
       },
       "exampleBoolean" : false,
@@ -240,6 +247,20 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/devicerequest-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/deviceusestatement-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/client"
       },
       "exampleBoolean" : false,
@@ -295,6 +316,16 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-devicerequest-deqm.html",
+          "title" : "StructureDefinition DeviceRequest Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-deviceusestatement-deqm.html",
+          "title" : "StructureDefinition DeviceUseStatement Deqm",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-organization-deqm.html",
           "title" : "StructureDefinition Organization Deqm",
           "generation" : "generated"
@@ -347,6 +378,11 @@
         {
           "nameUrl" : "StructureDefinition-extension-measureSubscription.html",
           "title" : "StructureDefinition Extension measureSubscription",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-notDone.html",
+          "title" : "StructureDefinition Extension notDone",
           "generation" : "generated"
         },
         {
