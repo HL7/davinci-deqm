@@ -156,7 +156,7 @@ http://build.fhir.org/ig/cqframework/cqf-measures/
 	Note – evaluateMeasure requires a FHIR endpoint that supports the operation and has the data.
 
 
-Bryn and Eric to work on - http://build.fhir.org/ig/HL7/davinci-deqm/StructureDefinition-summary-measurereport-deqm.html
+Bryn and Eric to work on - http://build.fhir.org/ig/HL7/davinci-deqm/StructureDefinition-summary-measurereport-deqm.html - done - finish narrative
 
 We are not supporting the subject-list type of MeasureReport – Will need to add a note in the General Guidance
 
@@ -192,5 +192,5 @@ Linda/Yan – Interactions page will be very long
 
 Viet to add text to explain how we picked certain examples and add it to the General Guidance page and provide a link to this explaination in each specific example.
 
-Remove details on Terminology page and write in:
-Please refer to specific FHIR resources and profiles for each measure’s requirements for guidance in appropriate use of value sets, terminologies and code system.
+Remove details on Terminology page and write in: -done
+Please refer to specific FHIR resources and profiles for each measure’s requirements for guidance in appropriate use of value sets, terminologies and code system. -done

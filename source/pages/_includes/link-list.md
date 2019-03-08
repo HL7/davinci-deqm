@@ -1,5 +1,5 @@
-[^2]: The same operation is used for both version STU3 and R4 transaction
 [^1]: A Measure element in R4
+[^2]: The same operation is used for both version STU3 and R4 transaction
 [^3]: Changes to the QI-Core Observation and Task profiles are being proposed based on the HEDIS Task and Observation profiles that may lead to these profiles being replaced by the QI Core profiles.
 [^4]: Changes to QI Core and US Core Organization and Practitioner  profiles are being proposed based on the DEQM Organization and Practitioner profiles that may lead to this profiles being replaced by the QI Core profile.
 [^5]: May includes DEQM defined code systems and externally defined code systems
@@ -8,6 +8,8 @@
 [$data-requirements (R4)]: {{page.r4}}/measure-operations.html#data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
 [$submit-data (R4)]:{{page.r4}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Capability statements]: capstatements.html
+[Certification Identifier (R4)]: {{page.r4}}extension-request-certificationidentifier.html
+[Certification Identifier (STU3)]: StructureDefinition-extension-certificationidentifier.html
 [CFQM Library (R4)]: r4todo.html
 [CFQM Library (STU3)]: {{site.cqfm_r3}}StructureDefinition-cqfm-measure.html
 [CFQM Measure (R4)]: r4todo.html
@@ -21,9 +23,9 @@
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type (STU3)]: StructureDefinition-extension-dataCollectionType.html
-[DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Coverage (R4)]: r4todo.html
 [DEQM Coverage (STU3)]: {{page.deqm_r3}}StructureDefinition-coverage-deqm.html
+[DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Data Exchange MeasureReport Profile (R4)]: r4todo.html
 [DEQM Data Exchange MeasureReport Profile (STU3)]: StructureDefinition-datax-measurereport-deqm.html
 [DEQM Individual MeasureReport Profile (R4)]: r4todo.html
@@ -40,10 +42,6 @@
 [DEQM Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-subscription-deqm.html
 [DEQM Summary MeasureReport Profile (R4)]: r4todo.html
 [DEQM Summary MeasureReport Profile (STU3)]: StructureDefinition-summary-measurereport-deqm.html
-[Reporting Vendor (R4)]: {{page.r4}}extension-request-reportingVendor.html
-[Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
-[Certification Identifier (R4)]: {{page.r4}}extension-request-certificationidentifier.html
-[Certification Identifier (STU3)]: StructureDefinition-extension-certificationidentifier.html
 [Do Not Perform (R4)]: {{page.r4}}extension-request-donotperform.html
 [Do Not Perform (STU3)]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"
@@ -51,6 +49,7 @@
 [FHIR operations]: {{page.r4}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Guidance and Overview]: guidance.html  "General Guidance Page"
+[HEDIS Colorectal Cancer Screening/CMS130]: http://build.fhir.org/ig/cqframework/hedis-ig/cql/stu3/col-logic.cql.html
 [HEDIS Measure Description for Colorectal Cancer Screening]: http://build.fhir.org/ig/cqframework/hedis-ig/cql/stu3/col-logic.cql.html
 [HEDIS MRP Measure (R4)]: r4todo.html
 [HEDIS MRP Measure (STU3)]: {{page.hedis_r3}}Measure-measure-mrp.html
@@ -65,6 +64,7 @@
 [Measure Subscription (STU3)]: {{page.deqm_r3}}StructureDefinition-measurereport-deqm.html
 [Measure Task]: StructureDefinition-task-measure.html
 [Measure]: {{site.data.fhir.path}}measure.html
+[MeasureReport]: {site.data.fhir.path}}measurereport.html
 [Medication Reconciliation (MRP)]: mrp.html
 [Medication Reconciliation Post-Discharge (MRP)]: mrp.ht
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
@@ -91,13 +91,14 @@
 [QI Core Procedure (STU3)]: {{page.qi_r3}}StructureDefinition-qicore-procedure.html
 [QI Core Profiles]: {{page.qi_r3}}index.html
 [QI Core]: {{page.qi_r3}}index.html
+[QRDA Category 1 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
+[QRDA Category 3 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
 [Quality Measure Implementation Guide]: http://build.fhir.org/ig/cqframework/cqf-measures/index.html
 [Reference Any (STU3)]: {{page.deqm_r3}}StructureDefinition-extension-referenceAny.html
+[Reporting Vendor (R4)]: {{page.r4}}extension-request-reportingVendor.html
+[Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
 [Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
 [Subscription]: {{page.r3}}subscription.html
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
-[MeasureReport]: {site.data.fhir.path}}measurereport.html
-[QRDA Category 1 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
-[QRDA Category 3 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture

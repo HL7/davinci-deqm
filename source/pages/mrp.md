@@ -20,7 +20,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 * Do not remove this line (it will not be displayed)
 {:toc}
 
-##  Introduction
+## Introduction
 
 The Medication Reconciliation Use Case defines the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member. This attestation message can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge.   (Any necessary documentation will also be put in the record)
 
@@ -34,17 +34,9 @@ As an HL7 FHIR Implementation Guide, changes to this specification are managed b
 
 Exchange of the reconciled medication list, indication of conversations with the patient, and notification of discharge from inpatient systems are out of scope for this version of the use case.
 
-#### Summary MRP Technical Workflow
+## FHIR Resource Overview
 
-The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
-
-{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption="MRP Technical Workflow" %}
-
-**Summary of FHIR Artifacts used for Medication Reconciliation**
-
-### FHIR Resource Overview
-
-##### Resources supported for this use case:
+### Resources supported for this use case:
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -63,27 +55,31 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 |Practitioner|DEQM Practitioner Profile[^4]|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile[^3]|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-##### Graph of MRP resources:
-{:.no_toc}
+## Graph of MRP resources:
+
+For MRP the Provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
 
 {% include img.html img="mrp-task.jpg" caption="Option 1: MRP using Task" %}
 
 {% include img.html img="mrp-observation.jpg" caption="Option 2: MRP using Observation" %}
 
-### MRP FHIR Transactions:
+## MRP Data Exchange Interactions
 
-#### Data Exchange Interactions
+### Gather Data Requirements From Payer (TODO link)
 {:.no_toc}
-
-1. Gather MRP Data Requirements From Payer
 
    In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
         {% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
 
-1. Exchange of Quality Measure Data
+### Data Exchange Using The Submit Data Operation (TODO link)
+{:.no_toc}
 
-   Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  (Note that the Collect Data and Subscription Operations are not supported for this use case.)  For MRP the Provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
+Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
+
+The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
+
+{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption=" Technical Workflow" %}
 
 {% include examplebutton.html example="submit-data-example" b_title = "Example Submit Data operation using Task option" %}
 
@@ -93,19 +89,24 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 {% include examplebutton.html example="submit-data-observation"  b_title = "Example Submit Data operation using Observation option" %}
 
-#### MRP Measure Reporting Interactions:
-{:.no_toc}
+### MRP Measure Reporting Interactions:
 
-1. Individual MeasureReport
+#### Individual MeasureReport
 
-  Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-     {  % include examplebutton.html example=col-indv-report-example" b_title = "Post Bundle with COL Individual MeasureReport" % }
+{ % include img-portrait.html img="MRP Worklow Diagram - Data Exchange Indv report.jpg" caption = "Technical Workflow" % }
 
-1. Summary MeasureReport
+{  % include examplebutton.html example=mrp-indv-report-example" b_title = "Post Bundle with COL Individual MeasureReport" % }
 
-  Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+#### Summary MeasureReport
 
-     {  % include examplebutton.html example=col-summary-report-example" b_title = "Post COL Summary MeasureReport" % }
+Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+
+{ % include img-portrait.html img="MRP Worklow Diagram - Data Exchange Summary report.jpg" caption = "Technical Workflow" % }
+
+{  % include examplebutton.html example=mrp-summary-report-example" b_title = "Post COL Summary MeasureReport" % }
+
+---
 
 {% include link-list.md %}
