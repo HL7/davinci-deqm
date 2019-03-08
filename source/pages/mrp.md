@@ -22,7 +22,7 @@ hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 
 ## Introduction
 
-The Medication Reconciliation Use Case defines the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member. This attestation message can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge.   (Any necessary documentation will also be put in the record)
+The Medication Reconciliation Use Case defines the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member. The Medication Reconciliation Process (MRP) use case covers both the request to send attestation information and the unsolicitated submission of that data. This attestation message is intended to be performed by the next provider where the patient returns for follow-up and can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge. (Any necessary documentation will also be put in the record)
 
 In the case of medication reconciliation after discharge from the hospital, the patient’s discharge medication(s) is compared with the medication(s) the patient was taking prior to hospitalization. This can avoid medication errors such as omissions, duplications, dosing errors or drug interactions, and should be done at every transition of care in which new medications are ordered or existing orders are rewritten.
 
