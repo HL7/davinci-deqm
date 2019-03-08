@@ -261,6 +261,20 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/medicationadministration-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/medicationrequest-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/client"
       },
       "exampleBoolean" : false,
@@ -323,6 +337,16 @@
         {
           "nameUrl" : "StructureDefinition-deviceusestatement-deqm.html",
           "title" : "StructureDefinition DeviceUseStatement Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-medicationadministration-deqm.html",
+          "title" : "StructureDefinition MedicationAdministration Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-medicationrequest-deqm.html",
+          "title" : "StructureDefinition MedicationRequest Deqm",
           "generation" : "generated"
         },
         {

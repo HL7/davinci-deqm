@@ -30,6 +30,8 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
+|MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration (STU3)]|[DEQM MedicationAdministration (R4)]|
+|MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest (STU3)]|[DEQM MedicationRequest (R4)]|
 |Observation|QI Core Observation Profile|[QI Core Observation (STU3)]|[QI Core Observation (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|

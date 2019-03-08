@@ -228,6 +228,14 @@
     "StructureDefinition/devicerequest-deqm":{
       "base":"StructureDefinition-devicerequest-deqm.html",
       "defns":"StructureDefinition-devicerequest-deqm-definitions.html"
+    },
+    "StructureDefinition/medicationadministration-deqm":{
+      "base":"StructureDefinition-medicationadministration-deqm.html",
+      "defns":"StructureDefinition-medicationadministration-deqm-definitions.html"
+    },
+    "StructureDefinition/medicationrequest-deqm":{
+      "base":"StructureDefinition-medicationrequest-deqm.html",
+      "defns":"StructureDefinition-medicationrequest-deqm-definitions.html"
     }
   },
   "extensions":[
@@ -253,7 +261,9 @@
     "profile-indv-measurereport-deqm-spreadsheet.xml",
     "profile-subcription-deqm-spreadsheet.xml",
     "profile-deviceusestatement-deqm-spreadsheet.xml",
-    "profile-devicerequest-deqm-spreadsheet.xml"
+    "profile-devicerequest-deqm-spreadsheet.xml",
+    "profile-medicationadministration-deqm-spreadsheet.xml",
+    "profile-medicationrequest-deqm-spreadsheet.xml"
   ],
   "license":"CC0-1.0",
   "version":"3.0.1",

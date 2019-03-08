@@ -256,6 +256,20 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/medicationadministration-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/medicationrequest-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/client"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -318,6 +332,16 @@
         <page>
           <nameUrl value="StructureDefinition-deviceusestatement-deqm.html"/>
           <title value="StructureDefinition DeviceUseStatement Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-medicationadministration-deqm.html"/>
+          <title value="StructureDefinition MedicationAdministration Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-medicationrequest-deqm.html"/>
+          <title value="StructureDefinition MedicationRequest Deqm"/>
           <generation value="generated"/>
         </page>
         <page>

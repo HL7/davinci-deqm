@@ -208,6 +208,18 @@
     <resource>
       <example value="false" />
       <sourceReference>
+        <reference value="StructureDefinition/medicationadministration-deqm" />
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false" />
+      <sourceReference>
+        <reference value="StructureDefinition/medicationrequest-deqm" />
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false" />
+      <sourceReference>
         <reference value="CapabilityStatement/client" />
       </sourceReference>
     </resource>
@@ -271,6 +283,16 @@
       <page>
         <source value="StructureDefinition-deviceusestatement-deqm.html" />
         <title value="StructureDefinition DeviceUseStatement Deqm" />
+        <kind value="resource" />
+      </page>
+      <page>
+        <source value="StructureDefinition-medicationadministration-deqm.html" />
+        <title value="StructureDefinition MedicationAdministration Deqm" />
+        <kind value="resource" />
+      </page>
+      <page>
+        <source value="StructureDefinition-medicationrequest-deqm.html" />
+        <title value="StructureDefinition MedicationRequest Deqm" />
         <kind value="resource" />
       </page>
       <page>
