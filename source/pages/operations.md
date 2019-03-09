@@ -24,8 +24,8 @@ Collect Data Operation: [$collect-data (STU3)]
 |Name|Link to STU3 Operation|Link to R4 Operation|
 |---|---|---|
 |Collect Data Operation|[$collect-data (STU3)]|[$collect-data (R4)]
-|Data Requirements Operation|N/A[^2]|[$data-requirements (R4)]
-|Submit Data Operation|N/A[^2]|[$submit-data (R4)]
+|Data Requirements Operation|N/A[^7]|[$data-requirements (R4)]
+|Submit Data Operation|N/A[^7]|[$submit-data (R4)]
 
 
 {% include link-list.md %}

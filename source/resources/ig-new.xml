@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ig"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DEQM\source\resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DEQM\source\examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DEQM\framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DEQM\source\pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig"/>
   <version value="0.1.0"/>
@@ -38,7 +38,12 @@
   <dependsOn id="qicore">
     <uri value="http://hl7.org/fhir/us/qicore"/>
     <packageId value="hl7.fhir.us.qicore"/>
-    <version value="dev"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="uscore">
+    <uri value="http://hl7.org/fhir/us/core"/>
+    <packageId value="hl7.fhir.us.core"/>
+    <version value="2.0.0"/>
   </dependsOn>
   <definition>
     <grouping id="p1">
@@ -47,6 +52,20 @@
     <resource>
       <reference>
         <reference value="Organization/organization02"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/patient02"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/patient03"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -117,6 +136,13 @@
     <resource>
       <reference>
         <reference value="Coverage/coverage03"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/patient01"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>

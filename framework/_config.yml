@@ -1,7 +1,10 @@
-historypath : "http://hl7.org/fhir/us/davinci-deqm/history.html" # complete path to IG history file
+historypath : "http://www.hl7.org/fhir/us/davinci-deqm/history.cfml" # complete path to IG history file
 summaries: false #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials
 build: ci  # choice of ci|ballot|version
+qi_r3: http://hl7.org/fhir/us/qicore
+cqfm_r3:
+r4: http://hl7.org/fhir/R4/
 example_types:
 - Account
 - ActivityDefinition

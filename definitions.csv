@@ -28,9 +28,9 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm/STU3
-dependencyList.name,qicore
-dependencyList.location,http://hl7.org/fhir/us/qicore
-dependencyList.version,dev
+dependencyList.name,qicore|uscore
+dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core
+dependencyList.version,current|2.0.0
 special-urls,
 tool,jekyll
 logging,progress
