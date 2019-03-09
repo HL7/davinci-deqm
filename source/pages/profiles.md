@@ -2,14 +2,6 @@
 title: Profiles and Extension defined as part of this Guide
 layout: default
 active: profiles
-r4: http://hl7.org/fhir/R4/
-r3: http://hl7.org/fhir/STU3/
-qi_r4: todo.html
-qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
-deqm_r4: todo.html
-deqm_r3: ''
-hedis_r4: todo.html
-hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
    Payers and providers need common data specification, measure specification, report initiation, and transport to share the data required to reflect accurate quality measures. Existing QI-Core and HEDIS profiles are used as well as DEQM profiles derived from QI-Core and HEDIS profiles and defined in this guide. All of these profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm. This IG will leverage STU3 in order to take advantage of FHIR currently in production and R4 to better utilize the additional Resources and elements available in R4.  For elements added in R4, extensions have been created for the STU3 version.
@@ -48,7 +40,6 @@ these profiles when available.
 |DEQM Data Collection Type Extension|[Data Collection Type (STU3)]|N/A[^6]|
 |DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
 |DEQM Measure Report Extension|[Reference Any (STU3)]|N/A[^6]|
-|DEQM Not Done Extension|[Not Done (STU3)]|[Not Done (R4)]|
 |DEQM Reporting Vendor Extension|[Reporting Vendor (STU3)]|[Reporting Vendor (R4)]|
 |DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
 

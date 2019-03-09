@@ -22,7 +22,6 @@
     <a href="summary-reporting.html">Summary Reporting</a>
     </li>
   </ul>
-</li>
   </li>
   <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Example Use Cases<b class="caret">
