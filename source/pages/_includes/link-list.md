@@ -62,8 +62,8 @@
 [FHIR operations]: {{site.r4}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [General Guidance]: guidance.html  "General Guidance Page"
-[HEDIS Colorectal Cancer Screening/CMS130]: http://build.fhir.org/ig/cqframework/hedis-ig/cql/stu3/col-logic.cql.html
-[HEDIS Measure Description for Colorectal Cancer Screening]: http://build.fhir.org/ig/cqframework/hedis-ig/cql/stu3/col-logic.cql.html
+[HEDIS Colorectal Cancer Screening/CMS130]: {{site.hedis_r3}}cql/stu3/col-logic.cql.html
+[HEDIS Measure Description for Colorectal Cancer Screening]: {{site.hedis_r3}}cql/stu3/col-logic.cql.html
 [HEDIS MRP Measure (R4)]: r4todo.html
 [HEDIS MRP Measure (STU3)]: {{site.hedis_r3}}Measure-measure-mrp.html
 [HEDIS MRP Observation (R4)]: r4todo.html
@@ -114,7 +114,7 @@
 [Reporting Vendor (R4)]: r4todo.html
 [Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
 [Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
-[Subscription]: {{site.r3}}subscription.html
+[Subscription]: {{site.r3}}/subscription.html
 [Summary Reporting]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
