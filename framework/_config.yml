@@ -6,6 +6,7 @@ qi_r3: http://hl7.org/fhir/us/qicore/
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 cqfm_r3: http://build.fhir.org/ig/cqframework/cqf-measures/
 r4: http://hl7.org/fhir/R4/
+r3: http://hl7.org/fhir/R3/
 example_types:
 - Account
 - ActivityDefinition

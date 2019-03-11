@@ -42,15 +42,12 @@ various quality reporting programs.
 ### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
-[The Clinical Quality Framework (CQF) Implementation
-Guide](http://hl7.org/fhir/STU3/cqif/cqif-quality-reporting.html)
+The [Quality Reporting] Page in the R4 Release of the FHIR Specification
 provides an overview of CQM structures, how CQMs are represented using
 the Measure resource, and are reported using the MeasureReport resource.
-As indicated in the [Reporting Individual
-Data](http://hl7.org/fhir/STU3/cqif/cqif-quality-reporting.html#reporting-individual-data)
-section, when using a MeasureReport resource to represent the results of
+The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of
 an individual calculation, the MeasureReport SHALL have a
-MeasureReport.type code of \"individual\" and SHALL have a reference to
+MeasureReport.type code of `individual` and SHALL have a reference to
 a patient that is the subject of the report. In addition, the result
 SHOULD include a references to the patient-specific resources that were used to calculate the result.
 

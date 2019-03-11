@@ -16,6 +16,8 @@ Refer to the specific FHIR resources and profiles for each measure’s requireme
 
 {% include list-simple-codesystems.xhtml %}
 
-{% include link-list.md %}
+---
 
 <br />
+
+{% include link-list.md %}

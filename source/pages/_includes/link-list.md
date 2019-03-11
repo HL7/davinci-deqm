@@ -109,12 +109,13 @@
 [QI Core]: {{site.qi_r3}}index.html
 [QRDA Category 1 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
 [QRDA Category 3 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
-[Quality Measure Implementation Guide]: http://build.fhir.org/ig/cqframework/cqf-measures/index.html
+[Quality Reporting]: {{site.r4}}clinicalreasoning-quality-reporting.html
+[Reporting Individual Data]: {{site.r4}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
 [Reference Any (STU3)]: StructureDefinition-extension-referenceAny.html
 [Reporting Vendor (R4)]: r4todo.html
 [Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
 [Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
-[Subscription]: {{site.r3}}/subscription.html
+[Subscription]: {{site.data.fhir.path}}subscription.html
 [Summary Reporting]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
