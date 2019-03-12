@@ -46,3 +46,13 @@ these profiles when available.
 <br />
 
 {% include link-list.md %}
+~~~
+Profile Name Conformance Type
+{% for i in site.data.structuredefinitions %}
+ {%- assign hash = i[1] %}
+{%- if hash.type != "Extension" %}
+{{hash.url}}\tDEQM {{hash.type}}Profile\tSHALL\t{{hash.type}}
+
+{%- endif %}
+{%- endfor %}
+~~~

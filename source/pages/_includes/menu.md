@@ -59,10 +59,19 @@
 </a>
 <ul class="dropdown-menu">
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-producer-client.html">Conformance requirements for Producer Client</a>
   </li>
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-producer-server.html">Conformance requirements for Producer Server</a>
+  </li>
+  <li>
+    <a href="CapabilityStatement-aggregator-client.html">Conformance requirements for Aggregator Client</a>
+  </li>
+  <li>
+    <a href="CapabilityStatement-aggregator-server.html">Conformance requirements for Aggregator Server</a>
+  </li>
+  <li>
+      <a href="CapabilityStatement-receiver-server.html">Conformance requirements for Receiver Server</a>
   </li>
 </ul>
 </li>

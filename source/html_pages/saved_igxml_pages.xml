@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Pages -->
 <!-- ============ Home Page =============== -->
 <page>
@@ -9,7 +10,6 @@
     <source value="framework.html"/>
     <title value="Framework"/>
     <kind value="page"/>
-
     <page>
       <source value="guidance.html"/>
       <title value="General Guidance"/>
@@ -30,16 +30,13 @@
       <title value="Summary Reporting"/>
       <kind value="page"/>
     </page>
-
   </page>
   <!-- ============ End Framework Page =============== -->
-
   <!-- ============ Use Cases Page =============== -->
   <page>
     <source value="usecases.html"/>
     <title value="Example Use Cases"/>
     <kind value="page"/>
-
     <page>
       <source value="mrp.html"/>
       <title value="Medication Reconciliation Post-Discharge (MRP)"/>
@@ -55,10 +52,8 @@
       <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
       <kind value="page"/>
     </page>
-
   </page>
   <!-- ============ End Use Cases Page =============== -->
-
   <!-- ============ Profiles Page =============== -->
   <page>
     <source value="profiles.html"/>
@@ -167,7 +162,6 @@
     <!-- ============ End Extensions and examples =============== -->
   </page>
   <!-- ============ End Profiles Page =============== -->
-
   <!-- ============ Operations Page =============== -->
   <page>
     <source value="operations.html"/>
@@ -183,7 +177,6 @@
     <!-- ============ End Operations and examples  =============== -->
   </page>
   <!-- ============ End Operations Page =============== -->
-
   <!-- ============ Terminology Page =============== -->
   <page>
     <source value="terminology.html"/>
@@ -210,61 +203,65 @@
     <!-- ============ End ConceptMaps   =============== -->
   </page>
   <!-- ============ End Terminology Page =============== -->
-
-  <!-- ============ SearchParameter Page ===============
-  <page>
-    <source value="searchparameters.html"/>
-    <title value="Search Parameters"/>
-    <kind value="page"/> -->
-    <!-- ============ SearchParameters =============== -->
-    <!-- insert searchparameters -->
-    <!-- ============ End SearchParameters  ===============
-  </page> -->
+  <!-- ============ SearchParameter Page ===============  <page>
+  <source value="searchparameters.html"/>
+  <title value="Search Parameters"/>
+  <kind value="page"/> -->
+  <!-- ============ SearchParameters =============== -->
+  <!-- insert searchparameters -->
+  <!-- ============ End SearchParameters  ===============  </page> -->
   <!-- ============ End SearchParameter Page =============== -->
-
-  <!-- ============ CapabilityStatement Page =============== -->
+  <!-- ============ CapabilityStatements    =============== -->
+  <!-- insert capabilitystatements -->
   <page>
-    <source value="capstatements.html"/>
-    <title value="Capability Statements"/>
-    <kind value="page"/>
-    <!-- ============ CapabilityStatements    =============== -->
-    <!-- insert capabilitystatements -->
-    <page>
-      <source value="CapabilityStatement-server.html"/>
-      <title value="CapabilityStatement Server"/>
-      <kind value="resource"/>
-    </page>
-    <page>
-      <source value="CapabilityStatement-client.html"/>
-      <title value="CapabilityStatement Client"/>
-      <kind value="resource"/>
-    </page>
-    <!-- ============ End CapabilityStatements    =============== -->
+    <source value="CapabilityStatement-producer-server.html"/>
+    <title value="CapabilityStatement Producer Server"/>
+    <kind value="resource"/>
   </page>
-  <!-- ============  End CapabilityStatement Page =============== -->
-
-  <!-- ============ Security Page ===============
   <page>
-    <source value="security.html"/>
-    <title value="Security"/>
-    <kind value="page"/>
-  </page> -->
-  <!-- ============ Downloads Page =============== -->
-  <page>
-    <source value="downloads.html"/>
-    <title value="Downloads"/>
-    <kind value="page"/>
+    <source value="CapabilityStatement-aggregator-server.html"/>
+    <title value="CapabilityStatement Aggregator Server"/>
+    <kind value="resource"/>
   </page>
-  <!-- ============ Examples Page=============== -->
   <page>
-    <source value="all-examples.html"/>
-    <title value="All Examples"/>
-    <kind value="page"/>
+    <source value="CapabilityStatement-receiver-server.html"/>
+    <title value="CapabilityStatement Receiver Server"/>
+    <kind value="resource"/>
   </page>
-  <!-- ============ Table of Contents =============== -->
   <page>
-    <source value="toc.html"/>
-    <title value="Table of Contents"/>
-    <kind value="toc"/>
+    <source value="CapabilityStatement-aggregator-client.html"/>
+    <title value="CapabilityStatement Aggregator Client"/>
+    <kind value="resource"/>
   </page>
+  <page>
+    <source value="CapabilityStatement-producer-client.html"/>
+    <title value="CapabilityStatement Producer Client"/>
+    <kind value="resource"/>
+  </page>
+  <!-- ============ End CapabilityStatements    =============== -->
+</page>
+<!-- ============ End CapabilityStatements page   =============== -->
+<!-- ============ Security Page ===============  <page>
+<source value="security.html"/>
+<title value="Security"/>
+<kind value="page"/>
+</page> -->
+<!-- ============ Downloads Page =============== -->
+<page>
+  <source value="downloads.html"/>
+  <title value="Downloads"/>
+  <kind value="page"/>
+</page>
+<!-- ============ Examples Page=============== -->
+<page>
+  <source value="all-examples.html"/>
+  <title value="All Examples"/>
+  <kind value="page"/>
+</page>
+<!-- ============ Table of Contents =============== -->
+<page>
+  <source value="toc.html"/>
+  <title value="Table of Contents"/>
+  <kind value="toc"/>
+</page>
 </page>
