@@ -80,6 +80,7 @@ The Data Exchange For Quality Measures Implementation Guide fits into the clinic
 The Quality Improvement Ecosystem begins with information, preferably evidence-based from research public health surveillance, and data mining and other analyses performed by third parties such as payers. Such information indicates existing status and knowledge about a given clinical topic. Stakeholders such as professional societies, public health and governmental bodies and healthcare insurers have various methods for publishing such information to assure awareness among consumers, healthcare practitioners and healthcare organizations about what is known and suggested methods for managing the clinical topic. Ideally, suggested management efforts are captured and documented in guidelines based on collaboration among clinical subject matter experts, terminologists, informaticists, clinicians and consumers. Subsequent steps translate these clinical guidelines into clinical decision support (CDS) artifacts to incorporate valuable clinical recommendations and actions directly within clinical workflow. To adequately impact clinical care for clinicians and patients requires local implementation activities. Ideally, the clinical guidelines and CDS include methods for evaluating what successful implementation means, i.e., whether the clinical care ultimately provided included processes that addressed the intent of the guideline and if it achieved the desired outcomes.  To close the loop and enable continuous improvement the results of such measurement analytics must be reported for aggregate review. Reporting also serves the purpose of evaluating clinical performance and outcomes for healthcare organizations, for public health and for payers. For additional information about idealized processes for moving evidence and information from guidelines to CDS and measurement, refer to an effort by the Centers for Disease Control and Prevention (CDC) called Adapting Clinical Guidelines for the Digital Age.[^4]
 
 #### Quality Measurement Standards Landscape
+{:.no_toc}
 
 This implementation guide is part of a larger FHIR-based quality improvement and quality measurement standards landscape, depicted in the following diagram:
 
@@ -100,30 +101,36 @@ The left side of the quality measurement standards landscape diagram depicts the
 The shaded areas underlying the stakeholders depict the various standards[^5] involved:
 
 ##### Fast Healthcare Interoperability Resources (FHIR)
+{:.no_toc}
 
 Fast Healthcare Interoperability Resources, or FHIR, is an HL7 platform specification for healthcare that supports exchange of healthcare information between systems. FHIR is universally applicable, meaning that it can be used in a broad variety of implementation environments. The platform provides layers of implementation that support foundational protocols; base implementation functionality such as conformance and terminology; administrative functionality to represent patients, care teams, locations, and organizations; healthcare processes including clinical and diagnostic information, as well as medication, workflow, and financial; and finally, a clinical reasoning layer that provides support for the representation of knowledge and reasoning about healthcare.
 
 The quality measurement standards landscape makes use of all these layers of FHIR: the foundational and implementation layers to define interactions and profiles; the administrative and process layers to represent the data of interest for quality measurement; and the clinical reasoning layer to specify and support evaluation and reporting of quality measures.
 
 ##### Clinical Quality Language (CQL)
+{:.no_toc}
 
 Clinical Quality Language, or CQL, is an HL7 cross-paradigm specification that defines a high-level, domain-specific language focused on clinical quality and targeted for use by measure and decision support artifact authors. In addition, the specification describes a machine-readable canonical representation called Expression Logical Model (ELM) targeted at implementations and designed to facilitate sharing and evaluation of clinical knowledge.
 
 This ability to render clinical knowledge in a high-level human-readable form as well as an intermediate-level, platform-independent machine-readable form makes CQL an ideal mechanism for specifying the criteria involved in quality measures.
 
 ##### FHIR Quality Measure Implementation Guide
+{:.no_toc}
 
 The FHIR Quality Measure Implementation Guide defines conformance profiles and guidance focused on the specification of quality measures using the FHIR Measure and Library resources. The IG does not standardize the content of any particular measure, rather it defines the standard approach to the representation of that content so that quality measure specifiers can define and share standardized FHIR-based electronic Clinical Quality Measures (eCQMs).
 
 ##### Quality Improvement Core Implementation Guide (QI Core)
+{:.no_toc}
 
 The Quality Improvement Core Implementation Guide, or QI-Core, defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. Importantly, the scope of QI Core includes both quality measurement and decision support to ensure that knowledge expressed can be shared across both domains. QI Core is derived from US Core, meaning that where possible, QI Core profiles are based on US Core to ensure alignment with and support for quality improvement data within healthcare systems in the US Realm.
 
 ##### Data Exchange for Quality Measures (DEQM)
+{:.no_toc}
 
 The Data Exchange for Quality Measures Implementation Guide, or DEQM, provides a framework that defines conformance profiles and guidance to enable the exchange of quality information and quality measure reporting. The DEQM expects to use quality measures specified in accordance with the Quality Measure IG and QI Core.
 
 #### Data Model Standards Landscape
+{:.no_toc}
 
 The quality improvement ecosystem covers every aspect of the healthcare delivery system, and needs to be able to represent information across that entire spectrum. FHIR provides a foundation for representation of this information in a universally applicable way. In particular cases, more specificity is required to capture the intended meaning of healthcare information. As FHIR is more and more broadly adopted, consensus among participating stakeholders on the use of particular profiles and patterns enables semantic interoperability for more use cases.
 
@@ -145,6 +152,7 @@ This layering of profiles balances the relative adoption and implementation matu
 * <b>Promote data-related profiles.</b> When it becomes necessary to define a data-related profile at the measurement-specific level (in DEQM or HEDIS for example), steps should be taken to promote that profile to the broadest consensus group possible.
 
 ##### FHIR Version Support
+{:.no_toc}
 
 * <b>FHIR DSTU2</b> - This version has broad support among US-based vendors as it is the basis for the Argonaut profiles. Most major vendors today support some subset of this version of FHIR.
 * <b>FHIR STU3</b> - This is the version that US Core, QI Core, and many other implementation guides are based on. There is broad vendor support for this version.
@@ -159,6 +167,7 @@ This implementation guide describes two groups of quality reporting scenarios. E
 {% include img-portrait.html img="quality-reporting-scenarios.png" %}
 
 #### Exchange Scenarios
+{:.no_toc}
 
 Exchange scenarios are used to exchange subsets of the data-of-interest for a measure or set of measures throughout the measurement period. These scenarios enable providers and quality stakeholders such as payers, accountable care organizations, and other secondary use partners to keep better track of how patients are performing with respect to a particular quality measure during the measurement cycle.
 
@@ -169,6 +178,7 @@ Exchange scenarios are used to exchange subsets of the data-of-interest for a me
 1. <b>Subscription</b> - Used to allow the producing system to notify the consuming system when new or updated data-of-interest for a measure is available
 
 #### Reporting Scenarios
+{:.no_toc}
 
 Reporting scenarios are used to report the results of quality measures on patients or populations at the end of a reporting period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement program or initiative by a payer or other quality improvement stakeholder.
 
