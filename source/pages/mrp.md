@@ -3,14 +3,6 @@ title: Medication Reconciliation Process
 layout: default
 active: guidance
 topofpage: true
-r4: http://build.fhir.org/
-r3: http://hl7.org/fhir/STU3/
-qi_r4: todo.html
-qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
-deqm_r4: todo.html
-deqm_r3: ''
-hedis_r4: todo.html
-hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
 {:.no_toc}
@@ -49,11 +41,11 @@ Exchange of the reconciled medication list, indication of conversations with the
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
-|Observation|HEDIS MRP Observation Profile[^3]|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
+|Observation|HEDIS MRP Observation Profile[^8]|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
 |Organization|DEQM Organization Profile[^4]|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
 |Practitioner|DEQM Practitioner Profile[^4]|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
-|Task|HEDIS MRP Task Profile[^3]|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
+|Task|HEDIS MRP Task Profile[^8]|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
 ## Graph of MRP resources:
 

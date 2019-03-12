@@ -3,14 +3,6 @@ title: General Guidance and Definitions
 layout: default
 active: guidance
 topofpage: true
-r4: http://build.fhir.org/
-r3: http://hl7.org/fhir/STU3/
-qi_r4: todo.html
-qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
-deqm_r4: todo.html
-deqm_r3: ''
-hedis_r4: todo.html
-hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
 
@@ -27,7 +19,7 @@ Clinical Quality Measures are a common tool used throughout healthcare to help e
 
 The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for two purposes in the Quality Measure Ecosystem.  The first interaction is when a producer, such as a practitioner, or owner of data needs to exchange that data with a consumer of that data, such as a payer, a registry or public health.  We call this the [Data Exchange Scenario]. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract.
 
-The second scenario defined in this guide is when a measure report needs to be exchanged with another entity. FHIR allows for three possible types of reports that can be shared - the [Individual Measure Report], the [Summary Report] and the Subject-List Report.  This guide addresses the Individual Measure Report and the Summary Report.  Reviewers are asked to comment if a Subject-List Report would be useful.  Examples of these reports are Individual Measure Reports that are used by hospitals to report a measure and Summary Reports that could be given to a payer on their yearly eCQM results for specific measures.
+The second scenario defined in this guide is when a measure report needs to be exchanged with another entity. FHIR allows for three possible types of reports that can be shared - the [Individual Report], the [Summary Report] and the Subject-List Report.  This guide addresses the Individual Measure Report and the Summary Report.  Reviewers are asked to comment if a Subject-List Report would be useful.  Examples of these reports are Individual Measure Reports that are used by hospitals to report a measure and Summary Reports that could be given to a payer on their yearly eCQM results for specific measures.
 
 ## Preconditions and Assumptions
 

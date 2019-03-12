@@ -3,14 +3,6 @@ title: Data Exchange Interactions
 layout: default
 active: guidance
 topofpage: true
-r4: http://build.fhir.org/
-r3: http://hl7.org/fhir/STU3/
-qi_r4: todo.html
-qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
-deqm_r4: todo.html
-deqm_r3: ''
-hedis_r4: todo.html
-hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
 
@@ -96,7 +88,7 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 ##### Submit Data Operation
 {:.no_toc}
 
-Once the Provider understands the data requirements, they will use the Submit Data operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to the Aggregator. The Aggregator simply accepts the submitted data; there is no expectation that the Aggregator will actually evaluate the quality measure in response to every Submit Data.
+Once the Provider understands the data requirements, they will use the Submit Data operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to the Aggregator. There is no exception that the submitted data represents all the data-of-interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Aggregator simply accepts the submitted data; there is no expectation that the Aggregator will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
 
 {% include img-narrow.html img="submit-data.jpg" caption="Submit data Operation" %}
 

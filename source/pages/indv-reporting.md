@@ -3,14 +3,6 @@ title: Individual Measure Reporting Interactions
 layout: default
 active: guidance
 topofpage: true
-r4: http://build.fhir.org/
-r3: http://hl7.org/fhir/STU3/
-qi_r4: todo.html
-qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
-deqm_r4: todo.html
-deqm_r3: ''
-hedis_r4: todo.html
-hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
 {:.no_toc}
@@ -50,15 +42,12 @@ various quality reporting programs.
 ### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
-[The Clinical Quality Framework (CQF) Implementation
-Guide](http://hl7.org/fhir/STU3/cqif/cqif-quality-reporting.html)
+The [Quality Reporting] Page in the R4 Release of the FHIR Specification
 provides an overview of CQM structures, how CQMs are represented using
 the Measure resource, and are reported using the MeasureReport resource.
-As indicated in the [Reporting Individual
-Data](http://hl7.org/fhir/STU3/cqif/cqif-quality-reporting.html#reporting-individual-data)
-section, when using a MeasureReport resource to represent the results of
+The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of
 an individual calculation, the MeasureReport SHALL have a
-MeasureReport.type code of \"individual\" and SHALL have a reference to
+MeasureReport.type code of `individual` and SHALL have a reference to
 a patient that is the subject of the report. In addition, the result
 SHOULD include a references to the patient-specific resources that were used to calculate the result.
 
@@ -134,7 +123,18 @@ The following resources are used in all individual reporting transactions.
 
 Depending on the specific Measure and Interaction, various DEQM and QI Core Profiles are used in addition to the profiles listed above.
 
-## POST Data Operation
+## Individual Measure Reporting
+
+When the results of a quality measure are completed they are POSTed to the quality measure Receiver's FHIR Server. The Individual MeasureReport and all the referenced resources are bundled together as a set of `POST` interactions and sent as a single [batch or transaction] interaction using the Standard FHIR API.
+
+{% include img-narrow.html img="indv_report_post.jpg" caption="POST Individual Report" %}
+
+### Usage
+{:.no_toc}
+
+`POST|[base]`
+
+{ % include examplebutton.html example="post-indv-report-example" b_title = "POST Individual Report" % }
 
 <br />
 

@@ -42,7 +42,13 @@
     "id" : "qicore",
     "uri" : "http://hl7.org/fhir/us/qicore",
     "packageId" : "hl7.fhir.us.qicore",
-    "version" : "dev"
+    "version" : "current"
+  },
+  {
+    "id" : "uscore",
+    "uri" : "http://hl7.org/fhir/us/core",
+    "packageId" : "hl7.fhir.us.core",
+    "version" : "2.0.0"
   }],
   "definition" : {
     "grouping" : [{
@@ -52,6 +58,20 @@
     "resource" : [{
       "reference" : {
         "reference" : "Organization/organization02"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Patient/patient02"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Patient/patient03"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
@@ -128,6 +148,13 @@
     },
     {
       "reference" : {
+        "reference" : "Patient/patient01"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-certificationIdentifier"
       },
       "exampleBoolean" : false,
@@ -177,6 +204,20 @@
     },
     {
       "reference" : {
+        "reference" : "CapabilityStatement/producer-server"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/aggregator-server"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/medicationrequest-deqm"
       },
       "exampleBoolean" : false,
@@ -219,7 +260,7 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/server"
+        "reference" : "CapabilityStatement/receiver-server"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -254,13 +295,6 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/client"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/medicationadministration-deqm"
       },
       "exampleBoolean" : false,
@@ -276,6 +310,20 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/measure-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/aggregator-client"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/producer-client"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -299,9 +347,49 @@
       "title" : "Home",
       "generation" : "html",
       "page" : [{
-        "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
-        "generation" : "html"
+        "nameUrl" : "framework.html",
+        "title" : "Framework",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "guidance.html",
+          "title" : "General Guidance",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "datax.html",
+          "title" : "Data Exchange",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "indv-reporting.html",
+          "title" : "Individual Reporting",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "summary-reporting.html",
+          "title" : "Summary Reporting",
+          "generation" : "html"
+        }]
+      },
+      {
+        "nameUrl" : "usecases.html",
+        "title" : "Example Use Cases",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "mrp.html",
+          "title" : "Medication Reconciliation Post-Discharge (MRP)",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "col.html",
+          "title" : "Colorectal Cancer Screening (COL)",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "vte1.html",
+          "title" : "Venous Thromboembolism Prophylaxis (VTE-1)",
+          "generation" : "html"
+        }]
       },
       {
         "nameUrl" : "profiles.html",
@@ -429,29 +517,34 @@
         }]
       },
       {
-        "nameUrl" : "searchparameters.html",
-        "title" : "Search Parameters",
-        "generation" : "html"
-      },
-      {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-server.html",
-          "title" : "CapabilityStatement Server",
+          "nameUrl" : "CapabilityStatement-producer-server.html",
+          "title" : "CapabilityStatement Producer Server",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-client.html",
-          "title" : "CapabilityStatement Client",
+          "nameUrl" : "CapabilityStatement-aggregator-server.html",
+          "title" : "CapabilityStatement Aggregator Server",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-receiver-server.html",
+          "title" : "CapabilityStatement Receiver Server",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-aggregator-client.html",
+          "title" : "CapabilityStatement Aggregator Client",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-producer-client.html",
+          "title" : "CapabilityStatement Producer Client",
           "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "security.html",
-        "title" : "Security",
-        "generation" : "html"
       },
       {
         "nameUrl" : "downloads.html",

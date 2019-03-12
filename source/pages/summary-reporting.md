@@ -3,14 +3,6 @@ title: Summary Measure Reporting Interactions
 layout: default
 active: guidance
 topofpage: true
-r4: http://build.fhir.org/
-r3: http://hl7.org/fhir/STU3/
-qi_r4: todo.html
-qi_r3: http://build.fhir.org/ig/cqframework/qi-core/
-deqm_r4: todo.html
-deqm_r3: ''
-hedis_r4: todo.html
-hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
 ---
 
 
@@ -55,7 +47,24 @@ The following resources are used in the summary reporting scenario:
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 
-## POST Data Operation
+## Summary Measure Reporting
+
+When the results of a quality measure are completed for populations at the end of a reporting period, they are POSTed to the quality measure Receiver's FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resourcess are bundled together as a set of `POST` interactions and sent as a single [batch or transaction] interaction using the Standard FHIR API.
+
+{% include img-narrow.html img="summ_report_post.jpg" caption="POST Summary Report" %}
+
+### Usage
+{:.no_toc}
+
+for a single MeasureReport:
+
+`POST|[base]/MeasureReport`
+
+for a Bundle Transaction:
+
+`POST|[base]`
+
+{ % include examplebutton.html example="post-summ-report-example" b_title = "POST Individual Report" % }
 
 <br />
 

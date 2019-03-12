@@ -20,7 +20,7 @@ paths.temp,generated_output/temp
 paths.output,output
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
-paths.specification,http://hl7.org/fhir
+paths.specification,http://hl7.org/fhir/STU3/
 jurisdiction,US
 sct-edition,http://snomed.info/sct/731000124108
 no-inactive-codes,FALSE
@@ -28,9 +28,9 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm/STU3
-dependencyList.name,qicore
-dependencyList.location,http://hl7.org/fhir/us/qicore
-dependencyList.version,dev
+dependencyList.name,qicore|uscore
+dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core
+dependencyList.version,current|2.0.0
 special-urls,
 tool,jekyll
 logging,progress
