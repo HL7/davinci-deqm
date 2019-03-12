@@ -347,9 +347,49 @@
       "title" : "Home",
       "generation" : "html",
       "page" : [{
-        "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
-        "generation" : "html"
+        "nameUrl" : "framework.html",
+        "title" : "Framework",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "guidance.html",
+          "title" : "General Guidance",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "datax.html",
+          "title" : "Data Exchange",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "indv-reporting.html",
+          "title" : "Individual Reporting",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "summary-reporting.html",
+          "title" : "Summary Reporting",
+          "generation" : "html"
+        }]
+      },
+      {
+        "nameUrl" : "usecases.html",
+        "title" : "Example Use Cases",
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "mrp.html",
+          "title" : "Medication Reconciliation Post-Discharge (MRP)",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "col.html",
+          "title" : "Colorectal Cancer Screening (COL)",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "vte1.html",
+          "title" : "Venous Thromboembolism Prophylaxis (VTE-1)",
+          "generation" : "html"
+        }]
       },
       {
         "nameUrl" : "profiles.html",
@@ -477,11 +517,6 @@
         }]
       },
       {
-        "nameUrl" : "searchparameters.html",
-        "title" : "Search Parameters",
-        "generation" : "html"
-      },
-      {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
         "generation" : "html",
@@ -510,11 +545,6 @@
           "title" : "CapabilityStatement Producer Client",
           "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "security.html",
-        "title" : "Security",
-        "generation" : "html"
       },
       {
         "nameUrl" : "downloads.html",

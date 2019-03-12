@@ -47,7 +47,24 @@ The following resources are used in the summary reporting scenario:
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 
-## POST Data Operation
+## Summary Measure Reporting
+
+When the results of a quality measure are completed for populations at the end of a reporting period, they are POSTed to the quality measure Receiver's FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resourcess are bundled together as a set of `POST` interactions and sent as a single [batch or transaction] interaction using the Standard FHIR API.
+
+{% include img-narrow.html img="summ_report_post.jpg" caption="POST Summary Report" %}
+
+### Usage
+{:.no_toc}
+
+for a single MeasureReport:
+
+`POST|[base]/MeasureReport`
+
+for a Bundle Transaction:
+
+`POST|[base]`
+
+{ % include examplebutton.html example="post-summ-report-example" b_title = "POST Individual Report" % }
 
 <br />
 

@@ -123,7 +123,18 @@ The following resources are used in all individual reporting transactions.
 
 Depending on the specific Measure and Interaction, various DEQM and QI Core Profiles are used in addition to the profiles listed above.
 
-## POST Data Operation
+## Individual Measure Reporting
+
+When the results of a quality measure are completed they are POSTed to the quality measure Receiver's FHIR Server. The Individual MeasureReport and all the referenced resources are bundled together as a set of `POST` interactions and sent as a single [batch or transaction] interaction using the Standard FHIR API.
+
+{% include img-narrow.html img="indv_report_post.jpg" caption="POST Individual Report" %}
+
+### Usage
+{:.no_toc}
+
+`POST|[base]`
+
+{ % include examplebutton.html example="post-indv-report-example" b_title = "POST Individual Report" % }
 
 <br />
 
