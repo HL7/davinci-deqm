@@ -1,0 +1,41 @@
+{
+  "resourceType": "Task",
+  "id": "Task01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-task"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://www.acme.org/tasks",
+      "value": "19009"
+    }
+  ],
+  "status": "completed",
+  "intent": "plan",
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "code": "1111F",
+        "display": "Medication Reconciliation"
+      }
+    ]
+  },
+  "for": {
+    "reference": "Patient/patient01"
+  },
+  "context": {
+    "reference": "Encounter/Encounter01"
+  },
+  "executionPeriod": {
+    "start": "2017-06-11",
+    "end": "2017-06-11"
+  },
+  "authoredOn": "2018-09-25T14:24:23.584Z",
+  "owner": {
+    "reference": "Practitioner/practitioner01"
+  }
+}

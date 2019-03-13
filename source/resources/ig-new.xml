@@ -65,6 +65,34 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Location/location03"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MeasureReport/summ-measurereport01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MeasureReport/datax-measurereport02"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/location02"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Patient/patient03"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -100,6 +128,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Observation/observation01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Measure/measure-mrp"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -114,6 +149,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Encounter/Encounter01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Practitioner/practitioner01"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -122,6 +164,27 @@
     <resource>
       <reference>
         <reference value="Coverage/coverage02"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/location01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MeasureReport/datax-measurereport01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Task/Task01"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -341,49 +404,9 @@
       <title value="Home"/>
       <generation value="html"/>
       <page>
-        <nameUrl value="framework.html"/>
-        <title value="Framework"/>
+        <nameUrl value="guidance.html"/>
+        <title value="General Guidance"/>
         <generation value="html"/>
-        <page>
-          <nameUrl value="guidance.html"/>
-          <title value="General Guidance"/>
-          <generation value="html"/>
-        </page>
-        <page>
-          <nameUrl value="datax.html"/>
-          <title value="Data Exchange"/>
-          <generation value="html"/>
-        </page>
-        <page>
-          <nameUrl value="indv-reporting.html"/>
-          <title value="Individual Reporting"/>
-          <generation value="html"/>
-        </page>
-        <page>
-          <nameUrl value="summary-reporting.html"/>
-          <title value="Summary Reporting"/>
-          <generation value="html"/>
-        </page>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Example Use Cases"/>
-        <generation value="html"/>
-        <page>
-          <nameUrl value="mrp.html"/>
-          <title value="Medication Reconciliation Post-Discharge (MRP)"/>
-          <generation value="html"/>
-        </page>
-        <page>
-          <nameUrl value="col.html"/>
-          <title value="Colorectal Cancer Screening (COL)"/>
-          <generation value="html"/>
-        </page>
-        <page>
-          <nameUrl value="vte1.html"/>
-          <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
-          <generation value="html"/>
-        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -511,6 +534,11 @@
         </page>
       </page>
       <page>
+        <nameUrl value="searchparameters.html"/>
+        <title value="Search Parameters"/>
+        <generation value="html"/>
+      </page>
+      <page>
         <nameUrl value="capstatements.html"/>
         <title value="Capability Statements"/>
         <generation value="html"/>
@@ -539,6 +567,11 @@
           <title value="CapabilityStatement Producer Client"/>
           <generation value="generated"/>
         </page>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="html"/>
       </page>
       <page>
         <nameUrl value="downloads.html"/>

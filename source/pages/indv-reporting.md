@@ -134,7 +134,7 @@ When the results of a quality measure are completed they are POSTed to the quali
 
 `POST|[base]`
 
-{ % include examplebutton.html example="post-indv-report-example" b_title = "POST Individual Report" % }
+{ % include examplebutton.html example="post-indv-report-example" b_title = "Click Here To See POST Individual Report" % }
 
 <br />
 

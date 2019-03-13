@@ -57,14 +57,14 @@ For MRP the Provider may submit either a *Task* resource or an *Observation* res
 
 ## MRP Data Exchange Interactions
 
-### Gather Data Requirements From Payer (TODO link)
+### Gather Data Requirements From Payer
 {:.no_toc}
 
    In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
-        {% include examplebutton.html example="measure-requirements-example" b_title = "Example Data Requirements operation" %}
+        {% include examplebutton.html example="measure-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
-### Data Exchange Using The Submit Data Operation (TODO link)
+### Data Exchange Using The Submit Data Operation
 {:.no_toc}
 
 Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
@@ -73,31 +73,31 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 {% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption=" Technical Workflow" %}
 
-{% include examplebutton.html example="submit-data-example" b_title = "Example Submit Data operation using Task option" %}
+{% include examplebutton.html example="submit-data-task" b_title = "Click Here To See Example Submit Data operation using Task option" %}
 
 <!--
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22fbcdcc6df16bace3b0)
 -->
 
-{% include examplebutton.html example="submit-data-observation"  b_title = "Example Submit Data operation using Observation option" %}
+{% include examplebutton.html example="submit-data-observation"  b_title = "Click Here To See Example Submit Data operation using Observation option" %}
 
-### MRP Measure Reporting Interactions:
+## MRP Measure Reporting Interactions:
 
-#### Individual MeasureReport
+### Individual MeasureReport
 
-Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+Aggregator pushes the Bundle of supporting resource with MRP Individual MeasureReport Bundle to the end user.
 
 { % include img-portrait.html img="MRP Worklow Diagram - Data Exchange Indv report.jpg" caption = "Technical Workflow" % }
 
-{  % include examplebutton.html example=mrp-indv-report-example" b_title = "Post Bundle with COL Individual MeasureReport" % }
+{  % include examplebutton.html example=mrp-indv-report-example" b_title = "Click Here To See Post Bundle with MRP Individual MeasureReport" % }
 
-#### Summary MeasureReport
+### Summary MeasureReport
 
-Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+Aggregator pushes the MRP Summary MeasureReport to the end user.
 
 { % include img-portrait.html img="MRP Worklow Diagram - Data Exchange Summary report.jpg" caption = "Technical Workflow" % }
 
-{  % include examplebutton.html example=mrp-summary-report-example" b_title = "Post COL Summary MeasureReport" % }
+{% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See Example Post MRP Summary MeasureReport" %}
 
 ---
 

@@ -39,7 +39,7 @@ these profiles when available.
 |DEQM Certification Identifier Extension|[Certification Identifier (STU3)]|[Certification Identifier (R4)]|
 |DEQM Data Collection Type Extension|[Data Collection Type (STU3)]|N/A[^6]|
 |DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
-|DEQM Measure Report Extension|[Reference Any (STU3)]|N/A[^6]|
+|DEQM Reference Any Extension|[Reference Any (STU3)]|N/A[^6]|
 |DEQM Reporting Vendor Extension|[Reporting Vendor (STU3)]|[Reporting Vendor (R4)]|
 |DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
 

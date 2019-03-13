@@ -1,0 +1,47 @@
+{
+  "resourceType": "Observation",
+  "id": "observation01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-observation"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://acme.org/observation-category",
+          "code": "measure",
+          "display": "Measure"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "code": "1111F",
+        "display": "Medication Reconciliation"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient01"
+  },
+  "context": {
+    "reference": "Encounter/Encounter01"
+  },
+  "effectivePeriod": {
+    "start": "2018-09-29T14:15:04.424Z",
+    "end": "2018-09-29T14:15:04.424Z"
+  },
+  "issued": "2018-09-29T14:15:04.424Z",
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner01"
+    }
+  ],
+  "valueBoolean": true
+}

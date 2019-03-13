@@ -108,7 +108,7 @@ Aggregator pushed the Bundle of supporting resource with VTE-1 Individual Measur
 
 { % include img-portrait.html img="VTE Worklow Diagram - Data Exchange Summ report.jpg" caption = "Technical Workflow" % }
 
-{  % include examplebutton.html example=col-indv-report-example" b_title = "Post Bundle with VTE-1 Individual MeasureReport" % }
+{  % include examplebutton.html example=col-indv-report-example" b_title = "Click Here To See Post Bundle with VTE-1 Individual MeasureReport" % }
 
 ### Summary MeasureReport
 {:.no_toc}
@@ -120,7 +120,7 @@ Aggregator pushed the Bundle of supporting resource with VTE-1 Individual Measur
 
 { % include img-portrait.html img="VTE Worklow Diagram - Data Exchange Summ report.jpg" caption = "Technical Workflow" % }
 
-{  % include examplebutton.html example=col-summary-report-example" b_title = "Post VTE-1 Summary MeasureReport" % }
+{  % include examplebutton.html example=col-summary-report-example" b_title = "Click Here To See Post VTE-1 Summary MeasureReport" % }
 
 ___
 

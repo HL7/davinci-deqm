@@ -82,7 +82,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 ### Gather Data Requirements From Payer (TODO link)
 {:.no_toc}
 
-{  % include examplebutton.html example=col-requirements-example" b_title = "Example COL Data Requirements" % }
+{  % include examplebutton.html example=col-requirements-example" b_title = "Click Here To See Example COL Data Requirements" % }
 
 ### Exchange of Quality Measure Data Options (TODO link)
 {:.no_toc}
@@ -96,7 +96,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" caption = "Technical Workflow" %}
 
-{ % include examplebutton.html example=col-submit-example" b_title = "Example COL Submit Data" % }
+{ % include examplebutton.html example=col-submit-example" b_title = "Click Here To See Example COL Submit Data" % }
 
 #### Data Exchange Using The Collect Data Operation**
 {:.no_toc}
@@ -104,7 +104,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" caption = "Technical Workflow" %}
 
-{  % include examplebutton.html example=col-collect-example" b_title = "Example COL Collect Data" % }
+{  % include examplebutton.html example=col-collect-example" b_title = "Click Here To See Example COL Collect Data" % }
 
 #### Payer/Aggregator Subscribes for Notification when data is available**
 {:.no_toc}
@@ -112,7 +112,7 @@ Payer/Aggregator subscribes to the Provider for notification when Colorectal Can
 
 { % include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv subscribe.jpg" caption = "Technical Workflow" % }
 
-{  % include examplebutton.html example=col-subscription-example" b_title = "Example COL Subscription" % }
+{  % include examplebutton.html example=col-subscription-example" b_title = "Click Here To See Example COL Subscription" % }
 
 ## COL Measure Reporting Interactions:
 
@@ -124,7 +124,7 @@ Aggregator pushed the Bundle of supporting resource with COL Individual MeasureR
 { % include img-portrait.html img="COL Worklow Diagram - Data Exchange Indv report.jpg" caption = "Technical Workflow" % }
 
 
-{  % include examplebutton.html example=col-indv-report-example" b_title = "Post Bundle with COL Individual MeasureReport" % }
+{  % include examplebutton.html example=col-indv-report-example" b_title = "Click Here To See Post Bundle with COL Individual MeasureReport" % }
 
 ### Summary MeasureReport
 {:.no_toc}
@@ -133,7 +133,7 @@ Aggregator pushed the Bundle of supporting resource with COL Individual MeasureR
 
 { % include img-portrait.html img="COL Worklow Diagram - Data Exchange Summ report.jpg" caption = "Technical Workflow" % }
 
-{  % include examplebutton.html example=col-summary-report-example" b_title = "Post COL Summary MeasureReport" % }
+{  % include examplebutton.html example=col-summary-report-example" b_title = "Click Here To See Post COL Summary MeasureReport" % }
 
 ---
 

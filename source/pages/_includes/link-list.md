@@ -121,3 +121,4 @@
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [batch or transaction]: {{site.data.fhir.path}}http.html#transaction
+[Example MRP Submit Data Operation]: mrp.html#data-exchange-using-the-submit-data-operation

@@ -3,7 +3,7 @@
 
 **Scenario:**
 
-Provider X submits MRP data for Patient Y to Payer Z.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Observation as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.
+Provider X submits MRP data for Patient Y to Payer Z.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Task as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.
 
 **Request using `POST`**
 
@@ -18,9 +18,9 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
   "parameter": [
     {
       "name": "measure-report",
-      "resource":{
+      "resource": {
         "resourceType": "MeasureReport",
-        "id": "datax-measurereport02",
+        "id": "datax-measurereport01",
         "meta": {
           "versionId": "1",
           "lastUpdated": "2018-09-05T16:59:53.000+00:00",
@@ -41,7 +41,7 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
           "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
         },
         "patient": {
-          "reference": "Patient/patient02"
+          "reference": "Patient/patient01"
         },
         "date": "2018-09-05T16:59:52.404Z",
         "period": {
@@ -53,7 +53,7 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
             {
               "url": "http://hl7.org/fhir/ig/davinci/StructureDefinition/extension-referenceAny",
               "valueReference": {
-                "reference": "Observation/observation01"
+                "reference": "Task/Task01"
               }
             }
           ]
@@ -62,25 +62,22 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
     {
       "name": "resource",
       "resource": {
-        "resourceType": "Observation",
-        "id": "observation01",
+        "resourceType": "Task",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-observation"
+            "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-task"
           ]
         },
-        "status": "final",
-        "category": [
+        "id": "Task01",
+        "identifier": [
           {
-            "coding": [
-              {
-                "system": "http://acme.org/observation-category",
-                "code": "measure",
-                "display": "Measure"
-              }
-            ]
+            "system": "http://www.acme.org/tasks",
+            "value": "12345"
           }
         ],
+        "status": "completed",
+        "intent": "plan",
+        "priority": "routine",
         "code": {
           "coding": [
             {
@@ -90,25 +87,22 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
             }
           ]
         },
-        "subject": {
+        "for": {
           "reference": "Patient/patient01"
         },
         "context": {
-          "reference": "Encounter/Encounter01"
+          "reference": "Encounter/8592c13d-821a-bfef-74db-ae614e754d4f"
         },
-        "effectivePeriod": {
-          "start": "2018-09-29T14:15:04.424Z",
-          "end": "2018-09-29T14:15:04.424Z"
+        "authoredOn": "2018-12-12T17:54:03.934Z",
+        "executionPeriod": {
+          "start": "2018-12-12T17:54:03.934Z",
+          "end": "2018-12-12T17:54:03.934Z"
         },
-        "issued": "2018-09-29T14:15:04.424Z",
-        "performer": [
-          {
-            "reference": "Practitioner/practitioner01"
-          }
-        ],
-        "valueBoolean": true
+        "owner": {
+          "reference": "Practitioner/practitioner01"
+        }
       }
-,
+    },
     {
       "name": "resource",
       "resource": {
@@ -120,6 +114,10 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
           "profile": [
             "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
           ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jairo <b>WEBSTER </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr><tr><td>Address</td><td><span>7496 Beaver Ridge Ave </span><br/><span>Thornton </span><span>NJ </span><span>USA </span></td></tr><tr><td>Date of birth</td><td><span>16 December 1946</span></td></tr></tbody></table></div>"
         },
         "extension": [
           {
@@ -364,7 +362,7 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
       "name": "resource",
       "resource": {
         "resourceType": "Encounter",
-        "id": "Encounter01",
+        "id": "8592c13d-821a-bfef-74db-ae614e754d4f",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
@@ -530,7 +528,7 @@ Content-Type: application/fhir+json;charset=UTF-8
     {
       "response": {
         "status": "201 Created",
-        "location": "MeasureReport/datax-measurereport02/_history/1",
+        "location": "MeasureReport/datax-measurereport01/_history/1",
         "etag": "1",
         "lastModified": "2019-03-13T01:02:05.901+00:00"
       }
@@ -538,7 +536,7 @@ Content-Type: application/fhir+json;charset=UTF-8
     {
       "response": {
         "status": "201 Created",
-        "location": "Observation/observation01/_history/1",
+        "location": "Task/Task01/_history/1",
         "etag": "1",
         "lastModified": "2019-03-13T01:02:05.932+00:00"
       }
@@ -578,7 +576,7 @@ Content-Type: application/fhir+json;charset=UTF-8
     {
       "response": {
         "status": "201 Created",
-        "location": "Encounter/Encounter01/history/2",
+        "location": "Encounter/8592c13d-821a-bfef-74db-ae614e754d4f/_history/1",
         "etag": "1",
         "lastModified": "2019-03-13T01:02:05.965+00:00"
       }

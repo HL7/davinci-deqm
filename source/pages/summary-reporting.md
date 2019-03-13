@@ -64,7 +64,7 @@ for a Bundle Transaction:
 
 `POST|[base]`
 
-{ % include examplebutton.html example="post-summ-report-example" b_title = "POST Individual Report" % }
+{% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See POST summary Report Example" %}
 
 <br />
 

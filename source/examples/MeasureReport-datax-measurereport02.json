@@ -1,0 +1,41 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "datax-measurereport02",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2018-09-05T16:59:53.000+00:00",
+    "profile": [
+      "http://hl7.org/fhir/ig/davinci/StructureDefinition/datax-measurereport-deqm"
+    ]
+  },
+  "status": "complete",
+  "_type": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-dataCollectionType",
+        "valueBoolean": true
+      }
+    ]
+  },
+  "measure": {
+    "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
+  },
+  "patient": {
+    "reference": "Patient/patient02"
+  },
+  "date": "2018-09-05T16:59:52.404Z",
+  "period": {
+    "start": "2018-08-01",
+    "end": "2018-09-01"
+  },
+  "evaluatedResources": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/ig/davinci/StructureDefinition/extension-referenceAny",
+        "valueReference": {
+          "reference": "Observation/observation01"
+        }
+      }
+    ]
+  }
+}
