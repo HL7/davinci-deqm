@@ -32,6 +32,12 @@ Reporter X submits a MRP Summary Report for MRP for period P to Receiver Z.  The
       "reference":"Organization/organization01"
    },
    "group":[
+   {
+      "identifier":{
+         "system":"http://www.acme.org/groups",
+         "value":"112"
+      },
+
       {
          "population":[
             {
