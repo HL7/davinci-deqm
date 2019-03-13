@@ -33,38 +33,6 @@ This Implementation Guide is based upon the prior work from the [US Core], [QI C
 
 ## Background
 
-Clinical quality measures (CQMs) are tools that help measure and track the quality of health care services that eligible clinicians (ECs), eligible hospitals (EHs), and critical access hospitals (CAHs) provide. Measuring and reporting CQMs helps to ensure that our health care system is delivering effective, safe, efficient, patient-centered, equitable, and timely care. CQMs measure many aspects of patient care, including:[^1]
-
-- Patient and Family Engagement
-- Patient Safety
-- Care Coordination
-- Public Health
-- Population Health Management
-- Efficient Use of Healthcare Resources
-- Clinical Process/Effectiveness
-
-Before Electronic Health Record (EHR) systems, chart-abstracted CQMs were predominant. Modern EHR systems enable electronic CQMs, or eCQMs.
-
-### Who are all the players in the Quality space?[^2]
-{:.no_toc}
-
-- Policy Directors on Quality
-     - National Priorities Partnership, National Quality Strategy, Centers for Medicare & Medicaid Services (CMS), Office of the National Coordinator for Health Information Technology (ONC)
-- Measure Requesters
-    - External demands of quality measures for accountability (CMS, National Committee for Quality Assurance [NCQA], PCPI, The Joint Commission)
-    - Internal demands for quality measures for improvement (quality improvement programs)
-- Measure Developers (organizations that define clinical quality measure)
-    -  Measurement Development Partnership, NCQA, The Joint Commission, and others
-- Standards Developers
-    - HL7, Integrating the Healthcare Enterprise (IHE), International Health Terminology Standards Development Organisation (IHTSDO), and others
-- Electronic Health Record (EHR)/Tool Developers
-    - EHR vendors, quality reporting tool developers
-- Measure Reporters and Users
-    - Aggregators (organizations that collects measure data): Health Plans, Public Programs, and others
-    - Providers: Healthcare organizations
-- Public Health
-    - Pan American Health Organization (PAHO), World Health Organization (WHO), National Institutes of Health (NIH), American Medical Association (AMA)
-
 ### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
 {:.no_toc}
 
@@ -82,9 +50,11 @@ This implementation guide is part of a larger FHIR-based quality improvement and
 
 The left side of the quality measurement standards landscape diagram depicts the activities and standards associated with measure specification, while the right side depicts measure reporting.
 
-<b>Measure specification</b> involves the end product of the measure development process, a precisely specified, valid, reliable, and clinically significant measure specification to support accurate data representation and capture of quality measures.
+<b>Measure specification</b> involves the end product of the measure development process, a precisely specified, valid, reliable, and clinically significant measure specification to support accurate data representation and capture of quality measures. Clinical quality measures (CQMs) are tools that help measure and track the quality of health care services that eligible clinicians (ECs), eligible hospitals (EHs), and critical access hospitals (CAHs) provide. Measuring and reporting CQMs helps to ensure that our health care system is delivering effective, safe, efficient, patient-centered, equitable, and timely care. CQMs measure many aspects of patient care, including patient and family engagement, patient safety, care coordination, public health, population health management, efficient use of healthcare resources, and clinical process and effectiveness.[^1] Before Electronic Health Record (EHR) systems, chart-abstracted CQMs were predominant. Modern EHR systems enable electronic CQMs, or eCQMs.
 
-<b>Measure reporting</b> involves the data collection and aggregation, calculation and analytics, and ultimately reporting of quality measures.
+<b>Measure reporting</b> involves the data collection and aggregation, calculation and analytics, and ultimately reporting of quality measures. Measure reporting may be accomplished in different ways at various levels of the healthcare delivery system, from individual providers attesting to specific quality measures as part of federally-regulated healthcare quality initiatives, to provider organizations reporting to healthcare plans as part of payer quality improvement activities, to institutions reporting on the quality of their own healthcare delivery.
+
+Stakeholders in the quality space, represented by the three rounded rectangles in the foreground of the above diagram, fall into three broad categories:
 
 <b>Producers</b> in the diagram represent the various stakeholders involved in the creation of healthcare data. Producers can include providers and provider systems; patients, care teams, caregivers, and patient engagement systems; and other related clinical systems such as laboratory, clinic, and hospital information systems that are primary producers of patient healthcare information.
 
@@ -124,7 +94,7 @@ The quality improvement ecosystem covers every aspect of the healthcare delivery
 
 Within the US Realm, US Core profiles comprise this base consensus, and although it enables a variety of interoperability use cases, the profiles do not represent all of the requirements for quality improvement. The QI Core profiles are derived from US Core and provide this additional functionality.
 
-There are occassional instances where additional specificity or functionality is required explicitly for quality measurement, or a particular component within a quality measure. In these cases, additional profiles are defined within the DEQM, or by stakeholders such as measure developers or implementers. For example, the Medication Reconciliation Post Discharge measure example included in this implementation guide references the HEDIS Implementation Guide, which defines profiles specific to that particular HEDIS measure.
+There are occasional instances where additional specificity or functionality is required explicitly for quality measurement, or a particular component within a quality measure. In these cases, additional profiles are defined within the DEQM, or by stakeholders such as measure developers or implementers. For example, the Medication Reconciliation Post Discharge measure example included in this implementation guide references the HEDIS Implementation Guide, which defines profiles specific to that particular HEDIS measure.
 
 The following diagram depicts this data model standards landscape:
 
@@ -163,6 +133,8 @@ Exchange scenarios are used to exchange subsets of the data-of-interest for a me
 1. <b>Collect Data</b> - Used by a consuming system to collect a subset of the data-of-interest for a measure from a producing system
 1. <b>Subscription</b> - Used to allow the producing system to notify the consuming system when new or updated data-of-interest for a measure is available
 
+For these scenarios, the actors are Producers and Consumers, used in the same sense as the Producers and Consumers stakeholders in the Quality Measurement Standards Landscape diagram. Note that within any particular use case, different stakeholders will play the same roles. For example, a Provider may be playing the role of Producer in a particular exchange, while the Payer may be playing the role of Consumer.
+
 ### Reporting Scenarios
 
 Reporting scenarios are used to report the results of quality measures on patients or populations at the end of a reporting period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement program or initiative by a payer or other quality improvement stakeholder.
@@ -171,6 +143,12 @@ The reporting scenarios are:
 
 1. <b>Individual</b> - Used to report the results of a quality measure for a particular patient along with the complete set of data-of-interest to a quality reporting receiver
 1. <b>Summary</b> - Used to report the results of a quality measure for the applicable population to a quality reporting receiver
+
+For the reporting scenarios, the actors are Reporters and Receivers:
+
+**Reporters** are the actors submitting the results of a quality measure. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
+
+**Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
 ## How to read this Guide
 
