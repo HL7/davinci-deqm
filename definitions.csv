@@ -31,7 +31,7 @@ canonicalBase,http://hl7.org/fhir/us/davinci-deqm/STU3
 dependencyList.name,qicore|uscore
 dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core
 dependencyList.version,current|2.0.0
-special-urls,
+special-urls,https://ncqa.org/fhir/ig/Measure/measure-mrp
 tool,jekyll
 logging,progress
 topofpage,TRUE

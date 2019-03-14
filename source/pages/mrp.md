@@ -87,15 +87,17 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 Aggregator pushes the Bundle of supporting resource with MRP Individual MeasureReport Bundle to the end user.
 
-{ % include img-portrait.html img="MRP Worklow Diagram - Data Exchange Indv report.jpg" caption = "Technical Workflow" % }
+{% include img-portrait.html img="mrp_indv_report.jpg" caption = "Technical Workflow" %}
 
-{  % include examplebutton.html example=mrp-indv-report-example" b_title = "Click Here To See Post Bundle with MRP Individual MeasureReport" % }
+{% include examplebutton.html example="mrp-indv-report-example1" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Task" %}
+
+{% include examplebutton.html example="mrp-indv-report-example2" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Observation" %}
 
 ### Summary MeasureReport
 
 Aggregator pushes the MRP Summary MeasureReport to the end user.
 
-{ % include img-portrait.html img="MRP Worklow Diagram - Data Exchange Summary report.jpg" caption = "Technical Workflow" % }
+{% include img-portrait.html img="mrp_summ_report.jpg" caption = "Technical Workflow" %}
 
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See Example Post MRP Summary MeasureReport" %}
 

@@ -1,0 +1,75 @@
+{
+  "resourceType": "MeasureReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-certificationIdentifier",
+      "valueIdentifier": {
+        "system":"urn:oid:2.16.840.1.113883.3.2074.1",
+        "value": "0015HQN9BD3304E"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-reportingVendor",
+      "valueReference": {
+        "reference": "Organization/organization02"
+      }}
+  ],
+  "id": "indv-measurereport01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/indv-measurereport-deqm"
+    ]
+  },
+  "status": "complete",
+  "type": "individual",
+  "measure": {
+    "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
+  },
+  "patient": {
+    "reference": "Patient/patient01"
+  },
+  "date": "2018-09-05T16:59:52.404Z",
+  "period": {
+    "start": "2018-08-01",
+    "end": "2018-09-01"
+  },
+  "reportingOrganization": {
+    "reference": "Organization/organization01"
+  },
+  "group": [
+    {
+      "identifier": {
+        "system": "http://www.acme.org/groups",
+        "value": "112"
+      },
+      "population": [
+        {
+          "identifier": {
+            "system": "http://www.acme.org/populations",
+            "value": "11234"
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          }
+        }
+      ],
+      "measureScore": 100
+    }
+  ],
+  "evaluatedResources": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
+        "valueReference": {
+          "reference": "Task/Task01"
+        }
+      }
+    ]
+  }
+}

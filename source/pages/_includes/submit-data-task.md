@@ -25,7 +25,7 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
           "versionId": "1",
           "lastUpdated": "2018-09-05T16:59:53.000+00:00",
           "profile": [
-            "http://hl7.org/fhir/ig/davinci/StructureDefinition/datax-measurereport-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/datax-measurereport-deqm"
           ]
         },
         "status": "complete",
@@ -51,7 +51,7 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
         "evaluatedResources": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/ig/davinci/StructureDefinition/extension-referenceAny",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
               "valueReference": {
                 "reference": "Task/Task01"
               }

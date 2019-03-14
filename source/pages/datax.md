@@ -109,7 +109,7 @@ Using the `POST` Syntax, the operation can be invoked by the Provider:
 
 {% include examplebutton.html example="submit-data-example" b_title = "Click Here To See Example Submit Data Operation (edited for brevity)" %}
 
-For a complete un-edited example see the [Example MRP Submit Data Operation]
+For a complete un-edited example see the [MRP Submit Data Operation] example.
 
 ### Collect Data operation
 {: #collect-data}

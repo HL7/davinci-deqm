@@ -121,7 +121,7 @@ Payer/Aggregator subscribes to the Provider for notification when Colorectal Can
 
 Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-{ % include img-portrait.html img="COL Worklow Diagram - Data Exchange Indv report.jpg" caption = "Technical Workflow" % }
+{% include img-portrait.html img="col_indv_report.jpg" caption = "Technical Workflow" %}
 
 
 {  % include examplebutton.html example=col-indv-report-example" b_title = "Click Here To See Post Bundle with COL Individual MeasureReport" % }
@@ -131,7 +131,7 @@ Aggregator pushed the Bundle of supporting resource with COL Individual MeasureR
 
 Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-{ % include img-portrait.html img="COL Worklow Diagram - Data Exchange Summ report.jpg" caption = "Technical Workflow" % }
+{% include img-portrait.html img="col_summ_report.jpg" caption = "Technical Workflow" %}
 
 {  % include examplebutton.html example=col-summary-report-example" b_title = "Click Here To See Post COL Summary MeasureReport" % }
 
