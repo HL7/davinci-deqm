@@ -31,6 +31,41 @@ Interoperability challenges have limited many stakeholders in the healthcare com
 
 This Implementation Guide is based upon the prior work from the [US Core], [QI Core], and [HEDIS] Implementation Guides and their artifacts with support from the [Da Vinci] initiative which is a private effort to accelerate the adoption of Health Level Seven International Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard balloting process.
 
+## How to read this Guide
+
+This Guide is divided into several pages which are listed at the top of each page in the menu bar.
+
+- [Home]\: The home page provides the introduction and background for the Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures.
+
+- [Framework]\: These pages provides guidance on the set of FHIR transactions that provide a general framework to enable the exchange of measure data.
+
+  -  [General Guidance] gives overall guidance including preconditions, assumptions and an overview of the FHIR artifacts used in the different  reporting scenarios.
+
+  -  [Data Exchange] gives guidance on the interactions between Consumers and Producers to exchange the data-of-interest for a measure.
+
+  -  [Individual Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the individual reports for a measure.
+
+  -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
+
+- [Use cases]\: Three exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
+
+    - [Medication Reconciliation (MRP)]\: This example shows how to implement a data exchange, and individual and summary measure reporting for the medication reconciliation post-discharge measure.
+
+    - [Colorectal Cancer Screening (COL)]\: The colonoscopy measure (HEDIS Colorectal Cancer Screening/CMS130) is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening services during the measurement period.
+
+    - [Venous Thromboembolism Prophylaxis (VTE-1)]\: This example is based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the Preventative Care Meaningful Measure Area.
+
+- [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data.
+
+- [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
+
+- [Terminology]\: This page lists the value sets and code system defined in the DEQM guide and used in the DEQM transactions to exchange quality data.
+
+- [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
+
+- [Downloads]\: This page provides links to downloadable artifacts.
+
+
 ## Background
 
 ### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
@@ -150,30 +185,6 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
-## How to read this Guide
-
-This Guide is divided into several pages which are listed at the top of each page in the menu bar.
-
-- [Home]\: The home page provides the introduction and background for the Data Exchange For Quality Measures Implementation Guide.
-
-- [Framework]\: This page provides general guidance on a set of FHIR transactions that provide a general framework to enable the Exchange of Quality Measure Data between Data “Aggregators” (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients).
-
-- Use cases:
-    - [Medication Reconciliation (MRP)]\: This page provides specific guidance on the FHIR API surrounding the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member.
-
-    - [Colorectal Cancer Screening (COL)]\: The colonoscopy measure (HEDIS Colorectal Cancer Screening/CMS130) is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening services during the measurement period.
-
-    - [Venous Thromboembolism Prophylaxis (VTE-1)]\: VTE-1 is an example based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the Preventative Care Meaningful Measure Area.
-
-- [Profiles and Extensions]\: This page lists the set of Profile and Extension that are used in the Data Exchange For Quality Measures (DEQM) transactions to exchange quality data.
-
-- [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
-
-- [Terminology]\: This page lists the value sets and code system defined in the DEQM guide and used in the DEQM transactions to exchange quality data.
-
-- [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
-
-- [Downloads]\: This page provides links to downloadable artifacts for implementations.
 
 <br />
 

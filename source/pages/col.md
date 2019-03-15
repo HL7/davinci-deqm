@@ -90,7 +90,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 Note to Balloters: We are actively seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
 {:.note-to-balloters}
 
-#### Data Exchange Using The Submit Data Operation**
+#### Data Exchange Using The Submit Data Operation
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
@@ -98,7 +98,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 { % include examplebutton.html example=col-submit-example" b_title = "Click Here To See Example COL Submit Data" % }
 
-#### Data Exchange Using The Collect Data Operation**
+#### Data Exchange Using The Collect Data Operation
 {:.no_toc}
  Payer/Aggregator retrieves for Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.
 
@@ -106,7 +106,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {  % include examplebutton.html example=col-collect-example" b_title = "Click Here To See Example COL Collect Data" % }
 
-#### Payer/Aggregator Subscribes for Notification when data is available**
+#### Payer/Aggregator Subscribes for Notification when data is available
 {:.no_toc}
 Payer/Aggregator subscribes to the Provider for notification when Colorectal Cancer Screening data is available.  The Provider notifies the Aggregator when the data is available and Payer/Aggregator uses the Collect Data operations as described above to retrieve the data.
 

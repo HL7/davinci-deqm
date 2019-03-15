@@ -15,9 +15,9 @@
 [Certification Identifier (R4)]: r4todo.html
 [Certification Identifier (STU3)]: StructureDefinition-extension-certificationIdentifier.html
 [CFQM Library (R4)]: r4todo.html
-[CFQM Library (STU3)]: {{site.cqfm_r3}}StructureDefinition-cqfm-measure.html
+[CFQM Library (STU3)]: {{site.cqfm_r3}}StructureDefinition-library-cqfm.html
 [CFQM Measure (R4)]: r4todo.html
-[CFQM Measure (STU3)]: {{site.cqfm_r3}}StructureDefinition-cqfm-measure.html
+[CFQM Measure (STU3)]: {{site.cqfm_r3}}StructureDefinition-measure-cqfm.html
 [Clinical Decision Support (CDS)]: http://www.hl7.org/Special/committees/dss/index.cfm
 [Clinical Quality Framework]: http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework&oldid=158051
 [Clinical Quality Information (CQI)]: http://www.hl7.org/Special/committees/cqi/index.cfm
@@ -39,10 +39,6 @@
 [DEQM DeviceUseStatement (STU3)]: StructureDefinition-deviceusestatement-deqm.html
 [DEQM Individual MeasureReport Profile (R4)]: r4todo.html
 [DEQM Individual MeasureReport Profile (STU3)]: StructureDefinition-indv-measurereport-deqm.html
-[DEQM Library (R4)]: r4todo.html
-[DEQM Library (STU3)]: StructureDefinition-library-deqm.html
-[DEQM Measure (R4)]: r4todo.html
-[DEQM Measure (STU3)]: StructureDefinition-measure-deqm.html
 [DEQM MedicationAdministration (R4)]: r4todo.html
 [DEQM MedicationAdministration (STU3)]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest (R4)]: r4todo.html
@@ -72,7 +68,7 @@
 [HEDIS MRP Task (STU3)]: {{site.hedis_r3}}hedis-task.html
 [HEDIS]: {{site.hedis_r3}}index.html
 [Home]: index.html "Home Page"
-[Individual Reporting]: indv-reporting.html
+[Individual Report]: indv-reporting.html
 [Measure Observation]: StructureDefinition-observation-measure.html
 [Measure Subscription (R4)]: r4todo.html
 [Measure Subscription (STU3)]: StructureDefinition-subscription-deqm.html
@@ -116,10 +112,16 @@
 [Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
 [Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
 [Subscription]: {{site.data.fhir.path}}subscription.html
-[Summary Reporting]: summary-reporting.html
+[Summary Report]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [transaction interaction]: {{site.data.fhir.path}}http.html#transaction
 [MRP Submit Data Operation]: mrp.html#data-exchange-using-the-submit-data-operation
 [MRP Individual MeasureReport]: mrp.html#individual-measurereport
+[Framework]: framework.html
+[Use cases]: usecases.html
+[DEQM Data-Exchange MeasureReport Profile]: profiles.html#profiles
+[DEQM Summary MeasureReport Profile]: profiles.html#profiles
+[DEQM Individual MeasureReport Profile]: profiles.html#profiles
+[COL Collect Data Operation]: col.html#data-exchange-using-the-collect-data-operation

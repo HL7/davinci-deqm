@@ -18,7 +18,7 @@
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig",
-  "version" : "0.1.0",
+  "version" : "2.0.0",
   "name" : "Data Exchange For Quality Measures",
   "status" : "draft",
   "experimental" : true,
@@ -288,13 +288,6 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/aggregator-server"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/medicationrequest-deqm"
       },
       "exampleBoolean" : false,
@@ -310,6 +303,13 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/coverage-deqm"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/consumer-server"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -358,13 +358,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/library-deqm"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/summary-measurereport-deqm"
       },
       "exampleBoolean" : false,
@@ -386,14 +379,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/measure-deqm"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "CapabilityStatement/aggregator-client"
+        "reference" : "CapabilityStatement/reporter-client"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -408,6 +394,13 @@
     {
       "reference" : {
         "reference" : "CodeSystem/improvement-notation"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/consumer-client"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -473,11 +466,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-library-deqm.html",
-          "title" : "StructureDefinition Library Deqm",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-summary-measurereport-deqm.html",
           "title" : "StructureDefinition Summary MeasureReport Deqm",
           "generation" : "generated"
@@ -485,11 +473,6 @@
         {
           "nameUrl" : "StructureDefinition-medicationadministration-deqm.html",
           "title" : "StructureDefinition MedicationAdministration Deqm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-measure-deqm.html",
-          "title" : "StructureDefinition Measure Deqm",
           "generation" : "generated"
         },
         {
@@ -568,8 +551,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-aggregator-server.html",
-          "title" : "CapabilityStatement Aggregator Server",
+          "nameUrl" : "CapabilityStatement-consumer-server.html",
+          "title" : "CapabilityStatement Consumer Server",
           "generation" : "generated"
         },
         {
@@ -578,13 +561,18 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-aggregator-client.html",
-          "title" : "CapabilityStatement Aggregator Client",
+          "nameUrl" : "CapabilityStatement-reporter-client.html",
+          "title" : "CapabilityStatement Reporter Client",
           "generation" : "generated"
         },
         {
           "nameUrl" : "CapabilityStatement-producer-client.html",
           "title" : "CapabilityStatement Producer Client",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-consumer-client.html",
+          "title" : "CapabilityStatement Consumer Client",
           "generation" : "generated"
         }]
       },

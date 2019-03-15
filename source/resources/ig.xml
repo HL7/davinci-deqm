@@ -226,12 +226,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="CapabilityStatement/aggregator-server"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/medicationrequest-deqm"/>
       </sourceReference>
     </resource>
@@ -245,6 +239,12 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/coverage-deqm"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/consumer-server"/>
       </sourceReference>
     </resource>
     <resource>
@@ -286,12 +286,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/library-deqm"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/summary-measurereport-deqm"/>
       </sourceReference>
     </resource>
@@ -310,13 +304,7 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/measure-deqm"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CapabilityStatement/aggregator-client"/>
+        <reference value="CapabilityStatement/reporter-client"/>
       </sourceReference>
     </resource>
     <resource>
@@ -334,6 +322,12 @@
     <resource>
       <example value="false"/>
       <sourceReference>
+        <reference value="CapabilityStatement/consumer-client"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
         <reference value="StructureDefinition/devicerequest-deqm"/>
       </sourceReference>
     </resource>
@@ -343,57 +337,56 @@
     <source value="index.html"/>
     <title value="Home"/>
     <kind value="page"/>
-
-      <!-- ============ Framework Page =============== -->
+    <!-- ============ Framework Page =============== -->
+    <page>
+      <source value="framework.html"/>
+      <title value="Framework"/>
+      <kind value="page"/>
       <page>
-        <source value="framework.html"/>
-        <title value="Framework"/>
+        <source value="guidance.html"/>
+        <title value="General Guidance"/>
         <kind value="page"/>
-        <page>
-          <source value="guidance.html"/>
-          <title value="General Guidance"/>
-          <kind value="page"/>
-        </page>
-        <page>
-          <source value="datax.html"/>
-          <title value="Data Exchange"/>
-          <kind value="page"/>
-        </page>
-        <page>
-          <source value="indv-reporting.html"/>
-          <title value="Individual Reporting"/>
-          <kind value="page"/>
-        </page>
-        <page>
-          <source value="summary-reporting.html"/>
-          <title value="Summary Reporting"/>
-          <kind value="page"/>
-        </page>
       </page>
-      <!-- ============ End Framework Page =============== -->
-
-      <!-- ============ Use Cases Page =============== -->
       <page>
-        <source value="usecases.html"/>
-        <title value="Example Use Cases"/>
+        <source value="datax.html"/>
+        <title value="Data Exchange"/>
         <kind value="page"/>
-        <page>
-          <source value="mrp.html"/>
-          <title value="Medication Reconciliation Post-Discharge (MRP)"/>
-          <kind value="page"/>
-        </page>
-        <page>
-          <source value="col.html"/>
-          <title value="Colorectal Cancer Screening (COL)"/>
-          <kind value="page"/>
-        </page>
-        <page>
-          <source value="vte1.html"/>
-          <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
-          <kind value="page"/>
-        </page>
       </page>
-      <!-- ============ End Use Cases Page =============== -->
+      <page>
+        <source value="indv-reporting.html"/>
+        <title value="Individual Reporting"/>
+        <kind value="page"/>
+      </page>
+      <page>
+        <source value="summary-reporting.html"/>
+        <title value="Summary Reporting"/>
+        <kind value="page"/>
+      </page>
+    </page>
+    <!-- ============ End Framework Page =============== -->
+
+    <!-- ============ Use Cases Page =============== -->
+    <page>
+      <source value="usecases.html"/>
+      <title value="Example Use Cases"/>
+      <kind value="page"/>
+      <page>
+        <source value="mrp.html"/>
+        <title value="Medication Reconciliation Post-Discharge (MRP)"/>
+        <kind value="page"/>
+      </page>
+      <page>
+        <source value="col.html"/>
+        <title value="Colorectal Cancer Screening (COL)"/>
+        <kind value="page"/>
+      </page>
+      <page>
+        <source value="vte1.html"/>
+        <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
+        <kind value="page"/>
+      </page>
+    </page>
+    <!-- ============ End Use Cases Page =============== -->
 
     <!-- ============ Profiles Page =============== -->
     <page>
@@ -443,11 +436,6 @@
         <kind value="resource"/>
       </page>
       <page>
-        <source value="StructureDefinition-library-deqm.html"/>
-        <title value="StructureDefinition Library Deqm"/>
-        <kind value="resource"/>
-      </page>
-      <page>
         <source value="StructureDefinition-summary-measurereport-deqm.html"/>
         <title value="StructureDefinition Summary MeasureReport Deqm"/>
         <kind value="resource"/>
@@ -455,11 +443,6 @@
       <page>
         <source value="StructureDefinition-medicationadministration-deqm.html"/>
         <title value="StructureDefinition MedicationAdministration Deqm"/>
-        <kind value="resource"/>
-      </page>
-      <page>
-        <source value="StructureDefinition-measure-deqm.html"/>
-        <title value="StructureDefinition Measure Deqm"/>
         <kind value="resource"/>
       </page>
       <page>
@@ -541,7 +524,6 @@
       <!-- insert conceptmaps -->
       <!-- ============ End ConceptMaps   =============== -->
     </page>
-
     <!-- ============ CapabilityStatement Page =============== -->
     <page>
       <source value="capstatements.html"/>
@@ -555,8 +537,8 @@
         <kind value="resource"/>
       </page>
       <page>
-        <source value="CapabilityStatement-aggregator-server.html"/>
-        <title value="CapabilityStatement Aggregator Server"/>
+        <source value="CapabilityStatement-consumer-server.html"/>
+        <title value="CapabilityStatement Consumer Server"/>
         <kind value="resource"/>
       </page>
       <page>
@@ -565,13 +547,18 @@
         <kind value="resource"/>
       </page>
       <page>
-        <source value="CapabilityStatement-aggregator-client.html"/>
-        <title value="CapabilityStatement Aggregator Client"/>
+        <source value="CapabilityStatement-reporter-client.html"/>
+        <title value="CapabilityStatement Reporter Client"/>
         <kind value="resource"/>
       </page>
       <page>
         <source value="CapabilityStatement-producer-client.html"/>
         <title value="CapabilityStatement Producer Client"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="CapabilityStatement-consumer-client.html"/>
+        <title value="CapabilityStatement Consumer Client"/>
         <kind value="resource"/>
       </page>
       <!-- ============ End CapabilityStatements    =============== -->

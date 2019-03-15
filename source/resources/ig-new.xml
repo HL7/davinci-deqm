@@ -15,7 +15,7 @@
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig"/>
-  <version value="0.1.0"/>
+  <version value="2.0.0"/>
   <name value="Data Exchange For Quality Measures"/>
   <status value="draft"/>
   <experimental value="true"/>
@@ -282,13 +282,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/aggregator-server"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/medicationrequest-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -304,6 +297,13 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/coverage-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/consumer-server"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -352,13 +352,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/library-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/summary-measurereport-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -380,14 +373,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/measure-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/aggregator-client"/>
+        <reference value="CapabilityStatement/reporter-client"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -402,6 +388,13 @@
     <resource>
       <reference>
         <reference value="CodeSystem/improvement-notation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/consumer-client"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -467,11 +460,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-library-deqm.html"/>
-          <title value="StructureDefinition Library Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/>
           <title value="StructureDefinition Summary MeasureReport Deqm"/>
           <generation value="generated"/>
@@ -479,11 +467,6 @@
         <page>
           <nameUrl value="StructureDefinition-medicationadministration-deqm.html"/>
           <title value="StructureDefinition MedicationAdministration Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-measure-deqm.html"/>
-          <title value="StructureDefinition Measure Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -562,8 +545,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-aggregator-server.html"/>
-          <title value="CapabilityStatement Aggregator Server"/>
+          <nameUrl value="CapabilityStatement-consumer-server.html"/>
+          <title value="CapabilityStatement Consumer Server"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -572,13 +555,18 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-aggregator-client.html"/>
-          <title value="CapabilityStatement Aggregator Client"/>
+          <nameUrl value="CapabilityStatement-reporter-client.html"/>
+          <title value="CapabilityStatement Reporter Client"/>
           <generation value="generated"/>
         </page>
         <page>
           <nameUrl value="CapabilityStatement-producer-client.html"/>
           <title value="CapabilityStatement Producer Client"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-consumer-client.html"/>
+          <title value="CapabilityStatement Consumer Client"/>
           <generation value="generated"/>
         </page>
       </page>

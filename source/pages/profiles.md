@@ -19,8 +19,6 @@ these profiles when available.
 |Coverage|DEQM Coverage Profile|[DEQM Coverage (STU3)]|[DEQM Coverage (R4)]||
 |DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest (STU3)]|[DEQM DeviceRequest (R4)]|
 |DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement (STU3)]|[DEQM DeviceUseStatement (R4)]|
-|Library|DEQM Library Profile|[DEQM Library (STU3)]|[DEQM Library (R4)]|
-|Measure|DEQM Measure Profile|[DEQM Measure (STU3)]|[DEQM Measure (R4)]|
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
@@ -46,13 +44,3 @@ these profiles when available.
 <br />
 
 {% include link-list.md %}
-~~~
-Profile Name Conformance Type
-{% for i in site.data.structuredefinitions %}
- {%- assign hash = i[1] %}
-{%- if hash.type != "Extension" %}
-{{hash.url}}\tDEQM {{hash.type}}Profile\tSHALL\t{{hash.type}}
-
-{%- endif %}
-{%- endfor %}
-~~~

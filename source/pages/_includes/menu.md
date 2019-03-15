@@ -65,13 +65,16 @@
     <a href="CapabilityStatement-producer-server.html">Conformance requirements for Producer Server</a>
   </li>
   <li>
-    <a href="CapabilityStatement-aggregator-client.html">Conformance requirements for Aggregator Client</a>
+    <a href="CapabilityStatement-consumer-client.html">Conformance requirements for Consumer Client</a>
   </li>
   <li>
-    <a href="CapabilityStatement-aggregator-server.html">Conformance requirements for Aggregator Server</a>
+    <a href="CapabilityStatement-consumer-server.html">Conformance requirements for Consumer Server</a>
   </li>
   <li>
-      <a href="CapabilityStatement-receiver-server.html">Conformance requirements for Receiver Server</a>
+    <a href="CapabilityStatement-reporter-client.html">Conformance requirements for Reporter Client</a>
+  </li>
+  <li>
+    <a href="CapabilityStatement-receiver-server.html">Conformance requirements for Receiver Server</a>
   </li>
 </ul>
 </li>

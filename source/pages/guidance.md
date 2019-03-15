@@ -17,15 +17,11 @@ topofpage: true
 
 Clinical Quality Measures are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population.
 
-The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for two purposes in the Quality Measure Ecosystem.  The first interaction is when a producer, such as a practitioner, or owner of data needs to exchange that data with a consumer of that data, such as a payer, a registry or public health.  We call this the [Data Exchange Scenario]. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract.
+The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for two purposes in the Quality Measure Ecosystem.  The first interaction is when a Producer, such as a practitioner, or owner of data needs to exchange that data with a Consumer of that data, such as a payer, a registry or public health.  We call this the [Data Exchange] scenario. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract.
 
-The second scenario defined in this guide is when a measure report needs to be exchanged with another entity. FHIR allows for three possible types of reports that can be shared - the [Individual Report], the [Summary Report] and the Subject-List Report.  This guide addresses the Individual Measure Report and the Summary Report.  Reviewers are asked to comment if a Subject-List Report would be useful.  Examples of these reports are Individual Measure Reports that are used by hospitals to report a measure and Summary Reports that could be given to a payer on their yearly eCQM results for specific measures.
+The second scenario defined in this guide is when a Reporter needs to exchange a measure report with a Receiver. FHIR allows for three possible types of reports that can be transacted - the [Individual Report], the [Summary Report] and the *Subject-List Report*.  This guide addresses only the Individual Measure Report and the Summary Report.  As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver.  Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
 ## Preconditions and Assumptions
-
--   The "Aggregator" may be a Payer or another organization that is
-    monitoring various clinical quality measures for the members of a
-    population.
 
 -   The Measure resource is used to provide both human- and
     machine-readable definitions of a quality measure
@@ -37,37 +33,38 @@ The second scenario defined in this guide is when a measure report needs to be e
 -   The required data is represented in the referenced resources defined
     by the MeasureReport.
 
--   Aggregators and providers *should* both use a common clinical
-    quallity language (CQL) that would allow the same measures to be
+    -  Multiple MeasureReport may reference the same instance of a resource.
+
+-   Consumers and Producers *should* both use a common clinical
+    quality language (CQL) that would allow the same measures to be
     applied in healthcare and at the aggregator. This would also enable
     the application of the same measures across populations that span
-    multiple Aggregators (payers).
+    multiple Consumers (such as payers).
 
 ## DEQM MeasureReport Profiles:
 
-The MeasureReport resource is used as an organizer for both the data exchange scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 profiles on the MeasureReport resource.
+The MeasureReport resource is used as an organizer for both the data exchange scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
 
 ### Data Exchange
 
-When a data producer needs to send data to a data consumer, they use the
-[DEQM Data-Exchange MeasureReport Profile]. Along with the MeasureReport profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on. When a data producer, such as a practitioner,  sends a MeasureReport bundle, they may not have all the data that is required to calculate the measure report. One example might be because the measure requires outcome data from at a later point in time during the measurement period. Another example where the data producer may not have all the data would be continuous coverage period as the producer of the data may know the patient was covered on the day the patient was seen, the aggregator, in this case the payer, is the owner/"source of truth" for knowing all coverage information.  And therefore only the aggregator could determine if the continuous coverage period requirement is met.  Data Exchange is used to get the data from the producer to a consumer of the data.  This consumer might be a system that calculates the measure report but they could also be an aggregator who sends that data on to another system to do measure calculation and reporting.
+The [DEQM Data-Exchange MeasureReport Profile] is used to get the data from the producer to a consumer of the data.  The consumer might be a system that calculates the measure report but they could also be an aggregator who sends that data on to another system to do measure calculation and reporting.
+Along with Data-Exchange MeasureReport Profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on. When a data producer, such as a practitioner,  sends a MeasureReport bundle, they may not have all the data that is required to calculate the measure report. One example might be because the measure requires outcome data from at a later point in time during the measurement period. Another example where the data producer may not have all the data would be continuous coverage period as the producer of the data may know the patient was covered on the day the patient was seen.  The Consumer ( in this case the payer as aggregator) is the owner of all coverage information.  Therefore, only the consumer could determine if the continuous coverage period requirement is met.
 
 ### Measure Reporting
 
-Measure Reporting is done by an aggregators who has all of the data that is required to generate a report(s). Two profiles for measure reporting are being defined in this guide.
+Measure Reporting is done by an Reporter who has all of the data that is required to generate a report(s). Two profiles for measure reporting have been defined in this guide.
 
-The [DEQM Individual MeasureReport Profile] is used when a measure is reported an aggregator for one specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA Category 1 report].  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure.
+The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA Category 1 report].  The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
 
-The [DEQM Summary MeasureReport Profile] is used when a measure is reported an aggregator for  for a group of patients. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA Category 3 report].  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.
+The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure reporting period. It  includes the measure outcome data and is similar to a [QRDA Category 3 report].  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
 
-While there are several differences among these profiles, technically the profiles can be differentiated by either the meta profile tag or the `type` element as described above.
 
-FHIR allows for a fourth type of Measure Reporting, "Patient List Reporting.  which is similar to a [QRDA Category 2 report].  This level of measure reporting is out of scope for this version of the Implementation Guide. We are actively seeking input from balloter if they believe there is a need for this profile in a future version of this IG.
+FHIR allows for a fourth type of Measure Reporting, "Patient List Reporting.  which is similar to a [QRDA Category 2 report].  This level of measure reporting is out of scope for this version of the Implementation Guide. We are actively seeking input from balloters if they believe there is a need for this profile in a future version of this IG.
 {:.note-to-balloters}
 
-## Other profiles
+## Other Profiles Used In The Evaluation Of A Measure
 
-Depending on the specific Measure and Interaction, various DEQM and QI Core Profiles are used *in addition* to the profiles listed above
+Depending on the specific Measure and Interaction, various DEQM, QI Core, and CFQM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.
 
 ## Must Support
 
