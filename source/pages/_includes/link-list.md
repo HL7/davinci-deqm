@@ -68,7 +68,7 @@
 [HEDIS MRP Task (STU3)]: {{site.hedis_r3}}hedis-task.html
 [HEDIS]: {{site.hedis_r3}}index.html
 [Home]: index.html "Home Page"
-[Individual Report]: indv-reporting.html
+[Individual Reporting]: indv-reporting.html
 [Measure Observation]: StructureDefinition-observation-measure.html
 [Measure Subscription (R4)]: r4todo.html
 [Measure Subscription (STU3)]: StructureDefinition-subscription-deqm.html
@@ -112,7 +112,7 @@
 [Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
 [Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
 [Subscription]: {{site.data.fhir.path}}subscription.html
-[Summary Report]: summary-reporting.html
+[Summary Reporting]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html

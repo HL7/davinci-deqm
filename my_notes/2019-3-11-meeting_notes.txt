@@ -79,3 +79,9 @@ how are the CFQM measure profiles used in DEQM  should they be referenced in the
 do we need to make the QM ig a dependency of this ig?
 
 subscription triggering could use more work.
+
+fix Receiver Server  - get rid of ops. done
+
+update example scenario text too.
+
+Reorder the resources for the transaction bundle

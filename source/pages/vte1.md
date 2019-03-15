@@ -106,7 +106,8 @@ When a patient has an inpatient encounter, during which they should be given VTE
 
 Aggregator pushed the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
-{ % include img-portrait.html img="VTE Worklow Diagram - Data Exchange Summ report.jpg" caption = "Technical Workflow" % }
+Note to Balloters: We are actively seeking input on whether a technical workflow diagram  would be of value for this use case
+{:.note-to-balloters}
 
 {  % include examplebutton.html example=col-indv-report-example" b_title = "Click Here To See Post Bundle with VTE-1 Individual MeasureReport" % }
 
@@ -118,7 +119,9 @@ Note to Balloters: The Summary MeasureReport is not currently used for program l
 
 Aggregator pushed the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
-{ % include img-portrait.html img="VTE Worklow Diagram - Data Exchange Summ report.jpg" caption = "Technical Workflow" % }
+Note to Balloters: We are actively seeking input on whether a technical workflow diagram  would be of value for this use case
+{:.note-to-balloters}
+
 
 {  % include examplebutton.html example=col-summary-report-example" b_title = "Click Here To See Post VTE-1 Summary MeasureReport" % }
 
