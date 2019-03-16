@@ -23,7 +23,7 @@
   "status": "complete",
   "type": "individual",
   "measure": {
-    "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
+    "reference": "Measure/measure-mrp"
   },
   "patient": {
     "reference": "Patient/patient01"

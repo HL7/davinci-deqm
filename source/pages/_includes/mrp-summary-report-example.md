@@ -3,7 +3,7 @@
 
 **Scenario:**
 
-Reporter X submits a MRP Summary Report for MRP for period P to Receiver Z.  The body of the request is MeasureReport resource containing the required  summary data for MRP attestation for the period.  An HTTP Status success code is returned on successful submission.
+Payer X who is acting in the role of a Reporter submits a MRP Summary Report for MRP for period P to Receiver Z.  The body of the request is MeasureReport resource containing the required  summary data for MRP attestation for the period.  An HTTP Status success code is returned on successful submission.
 
 **POST Summary Report**
 
@@ -22,7 +22,7 @@ Reporter X submits a MRP Summary Report for MRP for period P to Receiver Z.  The
   "status": "complete",
   "type": "summary",
   "measure": {
-    "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
+    "reference": "Measure/measure-mrp"
   },
   "date": "2018-09-05T16:59:52.404Z",
   "period": {

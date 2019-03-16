@@ -3,7 +3,7 @@
 
 **Scenario:**
 
-Provider X submits MRP data for Patient Y to Payer Z.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Task as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.
+Provider X acting in the role of Producer submits MRP data for Patient Y to Payer Z who is acting in the role of Consumer.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Task as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.
 
 **Request using `POST`**
 
@@ -38,7 +38,7 @@ Provider X submits MRP data for Patient Y to Payer Z.  The body of the request i
           ]
         },
         "measure": {
-          "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
+          "reference": "Measure/measure-mrp"
         },
         "patient": {
           "reference": "Patient/patient01"

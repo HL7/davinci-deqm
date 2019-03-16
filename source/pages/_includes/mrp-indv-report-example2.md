@@ -197,7 +197,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                }
             ],
             "measure": {
-               "reference": "https://ncqa.org/fhir/ig/Measure/measure-mrp"
+               "reference": "Measure/measure-mrp"
             },
             "patient": {
                "reference": "Patient/patient01"

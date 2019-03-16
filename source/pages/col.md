@@ -16,8 +16,6 @@ topofpage: true
 
 The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening services during the measurement period.
 
-[HEDIS Measure Description for Colorectal Cancer Screening]
-
 ## FHIR Resource Overview
 
 ### Resources supported for this use case:
@@ -79,12 +77,16 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 
 ## COL Data Exchange Interactions
 
-### Gather Data Requirements From Payer (TODO link)
+In the following interactions, the Provider is acting in the role of the *Producer* and the Payer("Aggregator") is acting in the role of the *Consumer*.
+
+### Gather Data Requirements From Payer
 {:.no_toc}
+
+In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
 {  % include examplebutton.html example=col-requirements-example" b_title = "Click Here To See Example COL Data Requirements" % }
 
-### Exchange of Quality Measure Data Options (TODO link)
+### Exchange of Quality Measure Data Options
 {:.no_toc}
 
 Note to Balloters: We are actively seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
@@ -100,7 +102,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 #### Data Exchange Using The Collect Data Operation
 {:.no_toc}
- Payer/Aggregator retrieves for Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.
+ Payer/Aggregator retrieves Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.
 
 {% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" caption = "Technical Workflow" %}
 
@@ -112,14 +114,16 @@ Payer/Aggregator subscribes to the Provider for notification when Colorectal Can
 
 { % include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv subscribe.jpg" caption = "Technical Workflow" % }
 
-{  % include examplebutton.html example=col-subscription-example" b_title = "Click Here To See Example COL Subscription" % }
+{% include examplebutton.html example="subscribe-measure-example" b_title = "Click Here To See Example COL Subscription" %}
 
 ## COL Measure Reporting Interactions:
+
+In the following interactions, The Payer("Aggregator") is acting in the role of the *Reporter*.
 
 ### Individual MeasureReport
 {:.no_toc}
 
-Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+Payer pushes the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
 {% include img-portrait.html img="col_indv_report.jpg" caption = "Technical Workflow" %}
 
@@ -129,7 +133,7 @@ Aggregator pushed the Bundle of supporting resource with COL Individual MeasureR
 ### Summary MeasureReport
 {:.no_toc}
 
-Aggregator pushed the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+Payer pushes the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
 {% include img-portrait.html img="col_summ_report.jpg" caption = "Technical Workflow" %}
 

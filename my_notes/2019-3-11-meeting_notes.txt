@@ -76,7 +76,7 @@ funding for Montreal?
 
 how are the CFQM measure profiles used in DEQM  should they be referenced in the profiles?
 
-do we need to make the QM ig a dependency of this ig?
+do we need to make the hedis ig a dependency of this ig?  done for dev
 
 subscription triggering could use more work.
 
@@ -84,4 +84,6 @@ fix Receiver Server  - get rid of ops. done
 
 update example scenario text too.
 
-Reorder the resources for the transaction bundle
+Reorder the resources for the transaction bundle?
+
+QA through Framework - next use cases..

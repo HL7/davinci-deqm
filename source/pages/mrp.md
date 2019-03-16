@@ -14,17 +14,17 @@ topofpage: true
 
 ## Introduction
 
-The Medication Reconciliation Use Case defines the process by which a message can be sent from a provider EHR to a Payer attesting that a medication reconciliation post-discharge was performed on a covered member. The Medication Reconciliation Process (MRP) use case covers both the request to send attestation information and the unsolicitated submission of that data. This attestation message is intended to be performed by the next provider where the patient returns for follow-up and can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge. (Any necessary documentation will also be put in the record)
+The Medication Reconciliation Use Case defines the process by which the MRP Measure data can be exchanged between a provider acting in the role of the Producer to a Payer which is acting in the role of the Consumer.  MRP Measure is an attestation that a medication reconciliation post-discharge was performed on a covered member. This use case covers both the request to send attestation information and the unsolicitated submission of that data.
 
-In the case of medication reconciliation after discharge from the hospital, the patient’s discharge medication(s) is compared with the medication(s) the patient was taking prior to hospitalization. This can avoid medication errors such as omissions, duplications, dosing errors or drug interactions, and should be done at every transition of care in which new medications are ordered or existing orders are rewritten.
+## MRP Use Case Background
+
+In the case of medication reconciliation after discharge from the hospital, the patient’s discharge medication(s) is compared with the medication(s) the patient was taking prior to hospitalization. This can avoid medication errors such as omissions, duplications, dosing errors or drug interactions, and should be done at every transition of care in which new medications are ordered or existing orders are rewritten.  This attestation message is intended to be performed by the next provider where the patient returns for follow-up and can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge. (Any necessary documentation will also be put in the record)  
 
 In the past, attestation to the reconciliation had been done by posting a CPT2 code on a claim typically for a small monetary amount that was then denied by the payer and had to be written off by the provider.  This is a cumbersome process and most providers are no longer doing this.
 
-Payers and providers need common standards to share the data required to complete medication reconciliation at all transitions of care, for care management plans, and during medication changes. Proof of 30 day medication reconciliations is increasingly required for value based care incentives.  Providers and care coordinators face the challenge of collecting accurate and complete patient medication records across care settings. Today’s manual and ad hoc processes are costly and will not scale. Vendors are actively leveraging FHIR resources to improve partner’s access to patient medication history by unlocking existing silos of this critical data from vendor systems, healthcare operations systems and provider EHRs.
+Proof of 30 day medication reconciliations is increasingly required for value based care incentives.  Providers and care coordinators face the challenge of collecting accurate and complete patient medication records across care settings. Today’s manual and ad hoc processes are costly and will not scale.  Payers and providers need common standards to share the data required to complete medication reconciliation at all transitions of care, for care management plans, and during medication changes.  Vendors are actively leveraging FHIR resources to improve partner’s access to patient medication history by unlocking existing silos of this critical data from vendor systems, healthcare operations systems and provider EHRs.
 
-As an HL7 FHIR Implementation Guide, changes to this specification are managed by the sponsoring workgroup, Clinical Quality Information, and incorporated as part of the standard balloting process. The current roadmap follows closely behind the base FHIR roadmap, and QI Core Implementation Guide.
-
-Exchange of the reconciled medication list, indication of conversations with the patient, and notification of discharge from inpatient systems are out of scope for this version of the use case.
+Note that the exchange of the reconciled medication list, indication of conversations with the patient, and notification of discharge from inpatient systems are out of scope for this version of the use case.
 
 ## FHIR Resource Overview
 
@@ -49,13 +49,15 @@ Exchange of the reconciled medication list, indication of conversations with the
 
 ## Graph of MRP resources:
 
-For MRP the Provider may submit either a *Task* resource or an *Observation* resource as the primary resource used to evaluate the measure.
+For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure.
 
 {% include img.html img="mrp-task.jpg" caption="Option 1: MRP using Task" %}
 
 {% include img.html img="mrp-observation.jpg" caption="Option 2: MRP using Observation" %}
 
 ## MRP Data Exchange Interactions
+
+In the following interactions, the Provider is acting in the role of the *Producer* and the Payer("Aggregator") is acting in the role of the *Consumer*.
 
 ### Gather Data Requirements From Payer
 {:.no_toc}
@@ -67,7 +69,7 @@ For MRP the Provider may submit either a *Task* resource or an *Observation* res
 ### Data Exchange Using The Submit Data Operation
 {:.no_toc}
 
-Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
+The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the Payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
 
 The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 
@@ -83,9 +85,11 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 ## MRP Measure Reporting Interactions:
 
+In the following interactions,  The Payer("Aggregator") is acting in the role of the *Reporter*.
+
 ### Individual MeasureReport
 
-Aggregator pushes the Bundle of supporting resource with MRP Individual MeasureReport Bundle to the end user.
+The Payer("Aggregator") pushes the Bundle of supporting resources with the MRP Individual MeasureReport Bundle to the Receiver.
 
 {% include img-portrait.html img="mrp_indv_report.jpg" caption = "Technical Workflow" %}
 
@@ -95,7 +99,7 @@ Aggregator pushes the Bundle of supporting resource with MRP Individual MeasureR
 
 ### Summary MeasureReport
 
-Aggregator pushes the MRP Summary MeasureReport to the end user.
+The Payer("Aggregator") pushes the MRP Summary MeasureReport to the Receiver.
 
 {% include img-portrait.html img="mrp_summ_report.jpg" caption = "Technical Workflow" %}
 
