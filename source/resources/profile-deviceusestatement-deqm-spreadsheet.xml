@@ -991,7 +991,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.reference</Data></Cell>
     <Cell ss:StyleID="s76" ss:HRef="http://hl7.org/special/committees/[WG page name]"><Data
-      ss:Type="String">https://github.com/Healthedata1/DaVinci</Data></Cell>
+      ss:Type="String">http://www.hl7.org/Special/committees/cqi/index.cfm</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="69">
     <Cell ss:StyleID="s74"><Data ss:Type="String">code</Data></Cell>

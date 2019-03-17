@@ -4,12 +4,13 @@
 [^4]: Adapting Clinical Guidelines for the Digital Age <https://www.cdc.gov/ddphss/clinical-guidelines/index.html>
 [^5]: May includes DEQM defined code systems and externally defined code systems
 [^6]: A Measure element in R4
-[^7]: The same operation is used for both version STU3 and R4 transaction
 [^8]: Changes to the QI-Core Observation and Task profiles are being proposed based on the HEDIS Task and Observation profiles that may lead to these profiles being replaced by the QI Core profiles.
 [^9]: Changes to QI Core and US Core Organization and Practitioner  profiles are being proposed based on the DEQM Organization and Practitioner profiles that may lead to this profiles being replaced by the QI Core profile.
 [$collect-data (R4)]: {{site.r4}}measure-operation-collect-data.html "The effect of invoking this operation on a Measure instance endpoint is to POST a collection of resources needed for reporting a measure"
 [$collect-data (STU3)]: OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$data-requirements (R4)]: {{site.r4}}measure-operation-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
+[$data-requirements (STU3)]: OperationDefinition-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
+[$submit-data (STU3)]:OperationDefinition-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$submit-data (R4)]:{{site.r4}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Capability statements]: capstatements.html
 [Certification Identifier (R4)]: r4todo.html

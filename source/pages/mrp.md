@@ -64,7 +64,7 @@ In the following interactions, the Provider is acting in the role of the *Produc
 
    In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
-        {% include examplebutton.html example="measure-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
+        {% include examplebutton.html example="data-requirements" b_title = "Click Here To See Example Data Requirements operation" %}
 
 ### Data Exchange Using The Submit Data Operation
 {:.no_toc}

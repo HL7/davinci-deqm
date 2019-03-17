@@ -371,6 +371,13 @@
     },
     {
       "reference" : {
+        "reference" : "OperationDefinition/data-requirements"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/medicationadministration-deqm"
       },
       "exampleBoolean" : false,
@@ -379,6 +386,13 @@
     {
       "reference" : {
         "reference" : "OperationDefinition/collect-data"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "OperationDefinition/submit-data"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -522,8 +536,18 @@
         "title" : "Operations",
         "generation" : "html",
         "page" : [{
+          "nameUrl" : "OperationDefinition-data-requirements.html",
+          "title" : "OperationDefinition Data Requirements",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "OperationDefinition-collect-data.html",
           "title" : "OperationDefinition Collect Data",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "OperationDefinition-submit-data.html",
+          "title" : "OperationDefinition Submit Data",
           "generation" : "generated"
         }]
       },

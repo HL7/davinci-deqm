@@ -12,7 +12,7 @@
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="https://github.com/Healthedata1/DaVinci"/>
+			<value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
 		</telecom>
 	</contact>
 	<description value="The MRP Requirements Operation returns a `Parameter` listing the set of required profiles needed to report and attest to the medication reconciliation post-discharge (MRP) requirements"/>

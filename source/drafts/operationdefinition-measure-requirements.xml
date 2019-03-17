@@ -12,7 +12,7 @@
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="https://github.com/Healthedata1/DaVinci"/>
+			<value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
 		</telecom>
 	</contact>
 	<description value="The measure-requirements operation aggregates and returns the parameters and data requirements for the measure definition and all its dependencies either as a single module definition `Library`."/>

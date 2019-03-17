@@ -364,6 +364,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="OperationDefinition/data-requirements"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/medicationadministration-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -372,6 +379,13 @@
     <resource>
       <reference>
         <reference value="OperationDefinition/collect-data"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="OperationDefinition/submit-data"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -515,8 +529,18 @@
         <title value="Operations"/>
         <generation value="html"/>
         <page>
+          <nameUrl value="OperationDefinition-data-requirements.html"/>
+          <title value="OperationDefinition Data Requirements"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="OperationDefinition-collect-data.html"/>
           <title value="OperationDefinition Collect Data"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="OperationDefinition-submit-data.html"/>
+          <title value="OperationDefinition Submit Data"/>
           <generation value="generated"/>
         </page>
       </page>
