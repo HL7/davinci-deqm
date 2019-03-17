@@ -531,7 +531,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
 
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-task"
+                  "http://ncqa.org/fhir/us/hedis/StructureDefinition/hedis-task"
                ]
             },
             "authoredOn": "2018-09-25T14:24:23.584Z",
