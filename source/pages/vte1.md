@@ -50,49 +50,49 @@ Below is listed a resource diagram that meets a situation in the VTE measure.
 
 When a patient has an inpatient encounter, is not either pregnant or currently diagnosed with a Venous Thromboembolism, and is administered either Heparin, a Factor Xa Inhibitor, or Warfarin on the calendar day of admission or the day after, the process for VTE Prophylaxis has been met. The medications that qualify for the measure are listed in the value sets of codes in the measure documentation. Below is the data structure for what would be included with a DEQM Individual MeasureReport when the patient has been administered one of these medications to meet the measure.
 
-{% include img.html img="DEQM Resource Diagram - VTE1.jpg" %}
+{% include img.html img="DEQM Resource Diagram - VTE1.jpg" caption = "Figure 3-14" %}
 
 ### Option 2:Measure Report Using DeviceUseStatement/Encounter
 {:.no_toc}
 
 When a patient has an inpatient encounter, is not either pregnant or currently diagnosed with a Venous Thromboembolism, and has a device to prevent VTE on the calendar day of admission or the day after, the process for VTE Prophylaxis has been met. The devices that qualify for the measure are listed in the value sets of codes in the measure documentation. Below is the data structure for what would be included with a DEQM Individual MeasureReport when the patient has had one of these Devices applied to meet the measure.
 
-{% include img.html img="DEQM Resource Diagram - VTE2.jpg" %}
+{% include img.html img="DEQM Resource Diagram - VTE2.jpg" caption = "Figure 3-15" %}
 
 ### Option 3: Measure Report Using Observation
 {:.no_toc}
 
 When a patient has an inpatient encounter, is not either pregnant or currently diagnosed with a Venous Thromboembolism, and has been observed to have a low risk for VTE on the calendar day of admission or the day after, the process for VTE Prophylaxis has been met. The result codes that qualify as “low risk for VTE” are listed in the value sets of codes in the measure documentation. Below is the data structure for what would be included with a DEQM Individual MeasureReport when the patient has had this Observation made to meet the measure.
 
-{% include img.html img="DEQM Resource Diagram - VTE3.jpg" %}
+{% include img.html img="DEQM Resource Diagram - VTE3.jpg" caption = "Figure 3-16" %}
 
 ### Option 4: Measure Report Using Encounter
 {:.no_toc}
 
 When a patient has an inpatient encounter where the encounter is <2 days long, or when the encounter is includes an ICU stay of 1 or more days, the patient can be excluded from the measure for the qualifying encounter. Codes for the ICU facility location will come from the HL7 ServiceDeliveryLocationRoleType valueset.
 
-{% include img.html img="DEQM Resource Diagram - VTE4.jpg" %}
+{% include img.html img="DEQM Resource Diagram - VTE4.jpg" caption = "Figure 3-17" %}
 
 ### Option 5: Measure Report Using Encounter
 {:.no_toc}
 
 When a patient has an inpatient encounter and is principally diagnosed with either a mental health condition, or a stroke (either hemorrhagic or ischemic), they are excluded from the numerator of the measure. Codes for the diagnoses will come from the respective valuesets from the measure.
 
-{% include img.html img="DEQM Resource Diagram - VTE5.jpg" %}
+{% include img.html img="DEQM Resource Diagram - VTE5.jpg"  caption = "Figure 3-18" %}
 
 ### Option 6: Measure Report Using Procedure/Request and Encounter
 {:.no_toc}
 
 When a patient has an inpatient encounter, during which they are provided Comfort Measures within 1 day of being admitted or 1 day of a surgical procedure for which they were admitted, these Comfort Measures satisfy the numerator logic for the measure. The surgical procedure is defined by the presence of a code from the “general or neuraxial anesthesia” value set present in the measure. The Comfort measures are represented by either a Procedure or a ProcedureRequest with a code from the “Comfort Measures” value set present in the measure.
 
-{% include img.html img="DEQM Resource Diagram - VTE6.jpg" %}
+{% include img.html img="DEQM Resource Diagram - VTE6.jpg" caption = "Figure 3-19" %}
 
-### Option 7: MeasureReport using Medication/Device request or use statment
+### Option 7: MeasureReport using MedicationRequest, DeviceRequest, MedicationStatement, or DeviceUseStatement
 {:.no_toc}
 
 When a patient has an inpatient encounter, during which they should be given VTE prophylaxis, but they are not given said prophylaxis, the patient’s record must document a reason the medication/device was not provided. This reason must be coded, and must come from either the “medical reason” or “patient refusal” value sets, as stated in the measure logic. If these criteria are met, the patient will have been found to satisfy the requirements of the measure.
 
-{% include img.html img="DEQM Resource Diagram - VTE7.jpg" %}
+{% include img.html img="DEQM Resource Diagram - VTE7.jpg" caption = "Figure 3-20" %}
 
 ## VTE-1 Data Exchange Interactions
 

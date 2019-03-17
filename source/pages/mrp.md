@@ -51,9 +51,9 @@ Note that the exchange of the reconciled medication list, indication of conversa
 
 For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure.
 
-{% include img.html img="mrp-task.jpg" caption="Option 1: MRP using Task" %}
+{% include img.html img="mrp-task.jpg" caption="Figure 3-1 MRP using Task" %}
 
-{% include img.html img="mrp-observation.jpg" caption="Option 2: MRP using Observation" %}
+{% include img.html img="mrp-observation.jpg" caption="Figure 3-2 MRP using Observation" %}
 
 ## MRP Data Exchange Interactions
 
@@ -73,7 +73,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 
-{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption=" Technical Workflow" %}
+{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption="Figure 3-3 Submit Data Technical Workflow" %}
 
 {% include examplebutton.html example="submit-data-task" b_title = "Click Here To See Example Submit Data operation using Task option" %}
 
@@ -91,7 +91,7 @@ In the following interactions,  The Payer("Aggregator") is acting in the role of
 
 The Payer("Aggregator") pushes the Bundle of supporting resources with the MRP Individual MeasureReport Bundle to the Receiver.
 
-{% include img-portrait.html img="mrp_indv_report.jpg" caption = "Technical Workflow" %}
+{% include img-portrait.html img="mrp_indv_report.jpg" caption = "Figure 3-4 Individual Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="mrp-indv-report-example1" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Task" %}
 
@@ -101,7 +101,7 @@ The Payer("Aggregator") pushes the Bundle of supporting resources with the MRP I
 
 The Payer("Aggregator") pushes the MRP Summary MeasureReport to the Receiver.
 
-{% include img-portrait.html img="mrp_summ_report.jpg" caption = "Technical Workflow" %}
+{% include img-portrait.html img="mrp_summ_report.jpg" caption = "Figure 3-5 Summary Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See Example Post MRP Summary MeasureReport" %}
 

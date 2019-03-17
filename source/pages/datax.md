@@ -43,7 +43,7 @@ Depending on the specific Measure, various DEQM and QI Core Profiles are also us
 ### Graph of DEQM Resources:
 {:.no_toc}
 
-{% include img.html img="measure-resource-graph.svg" caption="DEQM Resource Graph" %}
+{% include img.html img="measure-resource-graph.svg" caption="Figure 2-1 DEQM Resource Graph" %}
 
 <br />
 
@@ -56,14 +56,14 @@ The *Submit Data* operation allows a Producer to submit data-of-interest for a p
 
 To discover what data (i.e. resources) are relevant in the *Submit Data* payload for a particular measure, a *Data Requirements* operation **MAY** be invoked on a Consumer's measure instance endpoint.  The response to this operation provides a list of Data Requirements which detail what data needs to be submitted in order for the Consumer to evaluate the measure.
 
-{% include img.html img="mrp-wf-overview.jpg" %}
+{% include img.html img="mrp-wf-overview.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
 #### Gather Data Requirements From Consumer
 {:.no_toc}
 
 In this step, the Producer queries a common knowledge store for profiles needed for reporting a given measure and how the sending of those data should be initiated. Common data profiles have been developed through a multi-stakeholder consensus-based development process and will be made available from the common site. To support the *Submit Data* operation, an implementation needs to know specifically what data are required to provide as the payload for the operation. This can be done manually by reviewing the measure definition to determine what data needs to be submitted and it is automated by using the *Data Requirements* operation. *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Consumer.
 
-{% include img-narrow.html img="data-requirement.jpg" caption="Data Requirements Operation" %}
+{% include img-narrow.html img="data-requirement.jpg" caption="Figure 2-3 Data Requirements Operation" %}
 
 ##### APIs
 {:.no_toc}
@@ -90,7 +90,7 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 
 Once the Producer understands the data requirements, they will use the *Submit Data* operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data-of-interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
 
-{% include img-narrow.html img="submit-data.jpg" caption="Submit data Operation" %}
+{% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submit data Operation" %}
 
 ##### APIs
 {:.no_toc}
@@ -118,7 +118,7 @@ In this scenario, the Consumer initiates a *Collect Data* operation to gather an
 
 As with the Submit Data case above, discovery of what CQM data (i.e. resources) are required is done through the *Data Requirements* operation on a Consumer's measure endpoint and the returned resources and profiles are referenced in the `MeasureReport.evaluatedResources` element.
 
-{% include img.html img="collect-data-steps.jpg" %}
+{% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 
 #### Collect Data Operation
 {:.no_toc}
@@ -127,7 +127,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
 Note that implementing this scenario requires that the Producer system understand the data requirements for the measure in order to provide the data. As with the Submit Data operation, the implementation can either manually determine the relevant data using the measure definition, or the implementation can use the *Data Requirements* operation to determine relevant data.
 
-{% include img-narrow.html img="collect-data.jpg" caption="Collect data Operation" %}
+{% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
 
 #### APIs
 {:.no_toc}
@@ -166,14 +166,14 @@ FHIR Subscriptions allow for a Producer to notify the Consumer whenever new CQM 
 
 The Consumer uses the *Collect Data* operation described above to request the relevant data after it is notified.
 
-{% include img.html img="subscribe-data-steps.jpg" %}
+{% include img.html  img="subscribe-data-steps.jpg"  caption ="Figure 2-7 Subscription Steps"%}
 
 #### Subscribe for Measure Data
 {:.no_toc}
 
 The Consumer must first subscribe to the Producer for a notification for a particular measure.  The Consumer may subsequently unsubscribe to a measure subscription.
 
-{% include img-narrow.html img="subscribe-data.jpg" caption="Subscription Service" %}
+{% include img-narrow.html img="subscribe-data.jpg" caption="Figure 2-8 Subscription Service" %}
 
 ##### APIs
 {:.no_toc}
@@ -206,7 +206,7 @@ The DEQM Subscription Profile allows the subscriber to send a *DEQM Measure inst
 
 The Producer notifies the Consumer when measure data is available. Exactly, how this notification is triggered is out of scope for this guide.  Note that  several architectures to implement the subscription notifications such as "point to point" notification or using a “feed handler” as an intermediary system are available.
 
-{% include img-narrow.html img="measure-notifications.jpg" caption="Measure Notifications" %}
+{% include img-narrow.html img="measure-notifications.jpg" caption="Figure 2-9 Measure Notifications" %}
 
 ##### Usage
 {:.no_toc}

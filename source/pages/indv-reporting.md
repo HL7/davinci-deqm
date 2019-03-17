@@ -121,7 +121,7 @@ When the results of a CQM are completed they are POSTed to the quality measure R
 
 Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single transaction as described below by packaging them all together in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced by multiple times, this may reduce the reporting overhead for the Reporter when compared to reporting each individual report separately.
 
-{% include img-narrow.html img="indv_report_post.jpg" caption="POST Individual Report" %}
+{% include img-narrow.html  img="indv_report_post.jpg" caption="Figure 2-10 POST Individual Report" %}
 
 ### Usage
 {:.no_toc}
