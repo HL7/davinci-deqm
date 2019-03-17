@@ -9,7 +9,7 @@
 [$collect-data (R4)]: {{site.r4}}measure-operation-collect-data.html "The effect of invoking this operation on a Measure instance endpoint is to POST a collection of resources needed for reporting a measure"
 [$collect-data (STU3)]: OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$data-requirements (R4)]: {{site.r4}}measure-operation-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
-[$data-requirements (STU3)]: OperationDefinition-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
+[$data-requirements (STU3)]: {{site.r3}}measure-operations.html#data-requirements "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
 [$submit-data (STU3)]:OperationDefinition-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$submit-data (R4)]:{{site.r4}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Capability statements]: capstatements.html

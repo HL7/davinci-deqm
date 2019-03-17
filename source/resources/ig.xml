@@ -23,62 +23,13 @@
 <!--   <source[x]>1..1 uri|Reference(Any) Location of the resource </source[x]> -->
 <!--    <exampleFor> 0..1 Reference(StructureDefinition) Resource this is an example of (if applicable) </exampleFor> -->
 <!-- </resource> -->
-    <!-- insert resources --><resource><example value="true"/><sourceReference><reference value="Organization/organization02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Patient/patient02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Location/location03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/summ-measurereport01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/datax-measurereport02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Location/location02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Patient/patient03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Coverage/coverage01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Organization/organization03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Practitioner/practitioner02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Organization/organization04"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Observation/observation01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/indv-measurereport01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Measure/measure-mrp"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Practitioner/practitioner03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/indv-measurereport02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Encounter/Encounter01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Practitioner/practitioner01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Coverage/coverage02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Location/location01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/datax-measurereport01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Task/Task01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Organization/organization01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Coverage/coverage03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Patient/patient01"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-certificationIdentifier"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-reportingVendor"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-dataCollectionType"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-doNotPerform"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-measureSubscription"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-referenceAny"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/subscription-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/producer-server"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/medicationrequest-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/indv-measurereport-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/coverage-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/consumer-server"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/organization-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/deviceusestatement-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/practitioner-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/receiver-server"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="ValueSet/improvement-notation"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/datax-measurereport-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/summary-measurereport-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="OperationDefinition/data-requirements"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/medicationadministration-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="OperationDefinition/collect-data"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="OperationDefinition/submit-data"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/reporter-client"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/producer-client"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CodeSystem/improvement-notation"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/consumer-client"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/devicerequest-deqm"/></sourceReference></resource>
+    <!-- insert resources --><resource><example value="true"/><sourceReference><reference value="Organization/organization02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Patient/patient02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Location/location03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/summ-measurereport01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/datax-measurereport02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Location/location02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Patient/patient03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Coverage/coverage01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Organization/organization03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Practitioner/practitioner02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Organization/organization04"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Observation/observation01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/indv-measurereport01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Measure/measure-mrp"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Practitioner/practitioner03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/indv-measurereport02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Encounter/Encounter01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Practitioner/practitioner01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Coverage/coverage02"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Location/location01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="MeasureReport/datax-measurereport01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Task/Task01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Organization/organization01"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Coverage/coverage03"/></sourceReference></resource><resource><example value="true"/><sourceReference><reference value="Patient/patient01"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-certificationIdentifier"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-reportingVendor"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-dataCollectionType"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-doNotPerform"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-measureSubscription"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/extension-referenceAny"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/subscription-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/producer-server"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/medicationrequest-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/indv-measurereport-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/coverage-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/consumer-server"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/organization-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/deviceusestatement-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/practitioner-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/receiver-server"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="ValueSet/improvement-notation"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/datax-measurereport-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/summary-measurereport-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/medicationadministration-deqm"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="OperationDefinition/collect-data"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="OperationDefinition/submit-data"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/reporter-client"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/producer-client"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CodeSystem/improvement-notation"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="CapabilityStatement/consumer-client"/></sourceReference></resource><resource><example value="false"/><sourceReference><reference value="StructureDefinition/devicerequest-deqm"/></sourceReference></resource>
   </package>
   <!-- ============ Home Page =============== -->
 <page><source value="index.html"/><title value="Home"/><kind value="page"/>
 
-  <!-- ============ Framework Page =============== -->
-  <page>
-    <source value="framework.html"/>
-    <title value="Framework"/>
-    <kind value="page"/>
-    <page>
-      <source value="guidance.html"/>
-      <title value="General Guidance"/>
-      <kind value="page"/>
-    </page>
-    <page>
-      <source value="datax.html"/>
-      <title value="Data Exchange"/>
-      <kind value="page"/>
-    </page>
-    <page>
-      <source value="indv-reporting.html"/>
-      <title value="Individual Reporting"/>
-      <kind value="page"/>
-    </page>
-    <page>
-      <source value="summary-reporting.html"/>
-      <title value="Summary Reporting"/>
-      <kind value="page"/>
-    </page>
-  </page>
-  <!-- ============ End Framework Page =============== -->
-
-  <!-- ============ Use Cases Page =============== -->
-  <page>
-    <source value="usecases.html"/>
-    <title value="Example Use Cases"/>
-    <kind value="page"/>
-    <page>
-      <source value="mrp.html"/>
-      <title value="Medication Reconciliation Post-Discharge (MRP)"/>
-      <kind value="page"/>
-    </page>
-    <page>
-      <source value="col.html"/>
-      <title value="Colorectal Cancer Screening (COL)"/>
-      <kind value="page"/>
-    </page>
-    <page>
-      <source value="vte1.html"/>
-      <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
-      <kind value="page"/>
-    </page>
-  </page>
-  <!-- ============ End Use Cases Page =============== -->
-
+  <!-- ============ Guidance Page =============== -->
+  <page><source value="guidance.html"/><title value="General Guidance"/><kind value="page"/></page>
 
   <!-- ============ Profiles Page =============== -->
   <page><source value="profiles.html"/><title value="Profiles and Extensions"/><kind value="page"/>
@@ -96,7 +47,7 @@
   <page><source value="operations.html"/><title value="Operations"/><kind value="page"/>
 
     <!-- ============ Operations and examples  =============== -->
-    <!-- insert operationdefinitions --><page><source value="OperationDefinition-data-requirements.html"/><title value="OperationDefinition Data Requirements"/><kind value="resource"/></page><page><source value="OperationDefinition-collect-data.html"/><title value="OperationDefinition Collect Data"/><kind value="resource"/></page><page><source value="OperationDefinition-submit-data.html"/><title value="OperationDefinition Submit Data"/><kind value="resource"/></page>
+    <!-- insert operationdefinitions --><page><source value="OperationDefinition-collect-data.html"/><title value="OperationDefinition Collect Data"/><kind value="resource"/></page><page><source value="OperationDefinition-submit-data.html"/><title value="OperationDefinition Submit Data"/><kind value="resource"/></page>
     <!-- ============ End Operations and examples  =============== -->
 
   </page>
@@ -117,6 +68,13 @@
 
   </page>
 
+  <!-- ============ SearchParameter Page =============== -->
+  <page><source value="searchparameters.html"/><title value="Search Parameters"/><kind value="page"/>
+
+  <!-- ============ SearchParameters =============== -->
+  <!-- insert searchparameters -->
+  <!-- ============ End SearchParameters  =============== -->
+  </page>
 
   <!-- ============ CapabilityStatement Page =============== -->
   <page><source value="capstatements.html"/><title value="Capability Statements"/><kind value="page"/>
@@ -127,6 +85,8 @@
 
   </page>
 
+  <!-- ============ Security Page =============== -->
+  <page><source value="security.html"/><title value="Security"/><kind value="page"/></page>
 
   <!-- ============ Downloads Page =============== -->
   <page><source value="downloads.html"/><title value="Downloads"/><kind value="page"/></page>

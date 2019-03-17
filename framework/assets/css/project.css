@@ -508,7 +508,14 @@ li a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not(
     text-decoration: none;
     padding-left: 3px;
 }
+/* and using the "external" class where want it specifically in a table */
 
+ a.external:after {
+    content: url(../images/external.png);
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}
 
 /*--------- make all figures the same siz------e*/
 .figure-img{
