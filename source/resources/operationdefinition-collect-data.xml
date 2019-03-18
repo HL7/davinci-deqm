@@ -4,7 +4,7 @@
 	<id value="collect-data"/>
 	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/OperationDefinition/collect-data"/>
 	<version value="0.1.0"/>
-	<name value="DEQM Collect Measure Data OperationDefinition"/>
+	<name value="collect_data"/>
 	<status value="active"/>
 	<kind value="operation"/>
 	<date value="2018-06-30"/>
@@ -12,7 +12,7 @@
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="https://github.com/Healthedata1/DaVinci"/>
+			<value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
 		</telecom>
 	</contact>
 	<description value="The Collect Measure Data operation returns the MeasureReport resource and required patient resources that satisfy the data requirements for a given Measure definition."/>

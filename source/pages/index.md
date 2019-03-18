@@ -73,7 +73,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 The Data Exchange For Quality Measures Implementation Guide fits into the clinical quality measures ecosystem at the interface between the Measure Reporters and User as illustrated in the figure[^2] below with the red oval:
 
-{% include img-portrait.html img="quality-improvement-ecosystem.png" %}
+{% include img-portrait.html caption = "Figure 1-1" img="quality-improvement-ecosystem.png" %}
 
 The Quality Improvement Ecosystem begins with information, preferably evidence-based from research public health surveillance, and data mining and other analyses performed by third parties such as payers. Such information indicates existing status and knowledge about a given clinical topic. Stakeholders such as professional societies, public health and governmental bodies and healthcare insurers have various methods for publishing such information to assure awareness among consumers, healthcare practitioners and healthcare organizations about what is known and suggested methods for managing the clinical topic. Ideally, suggested management efforts are captured and documented in guidelines based on collaboration among clinical subject matter experts, terminologists, informaticists, clinicians and consumers. Subsequent steps translate these clinical guidelines into clinical decision support (CDS) artifacts to incorporate valuable clinical recommendations and actions directly within clinical workflow. To adequately impact clinical care for clinicians and patients requires local implementation activities. Ideally, the clinical guidelines and CDS include methods for evaluating what successful implementation means, i.e., whether the clinical care ultimately provided included processes that addressed the intent of the guideline and if it achieved the desired outcomes.  To close the loop and enable continuous improvement the results of such measurement analytics must be reported for aggregate review. Reporting also serves the purpose of evaluating clinical performance and outcomes for healthcare organizations, for public health and for payers. For additional information about idealized processes for moving evidence and information from guidelines to CDS and measurement, refer to an effort by the Centers for Disease Control and Prevention (CDC) called Adapting Clinical Guidelines for the Digital Age.[^4]
 
@@ -81,7 +81,7 @@ The Quality Improvement Ecosystem begins with information, preferably evidence-b
 
 This implementation guide is part of a larger FHIR-based quality improvement and quality measurement standards landscape, depicted in the following diagram:
 
-{% include img-portrait.html img="quality-measurement-standards-landscape.png" %}
+{% include img-portrait.html caption = "Figure 1-2" img="quality-measurement-standards-landscape.png" %}
 
 The left side of the quality measurement standards landscape diagram depicts the activities and standards associated with measure specification, while the right side depicts measure reporting. Stakeholders and the roles they play are represented by the three rounded rectangles in the foreground. Note that the lists are representative of typical stakeholders, but that a single stakeholder may play any or all of the roles in this diagram. For example, an institution specifying its own measures for internal use would be the Producer, Consumer, and Specifier.
 
@@ -133,7 +133,7 @@ There are occasional instances where additional specificity or functionality is 
 
 The following diagram depicts this data model standards landscape:
 
-{% include img-portrait.html img="data-model-standards-landscape.png" %}
+{% include img-portrait.html caption = "Figure 1-3" img="data-model-standards-landscape.png" %}
 
 As illustrated, FHIR provides the foundation, and sets of profiles are built on top of FHIR that provide more and more focused use cases by constraining profiles and extending functionality to cover gaps. While the additional layers are necessary to represent specific operations and provide space for agreement among relevant stakeholders, the consensus-based standards development process is used to suggest changes to the layers below, resulting in an ever-broadening umbrella of interoperability.
 
@@ -156,7 +156,7 @@ The implementation guides in this landscape are currently focused on FHIR STU3, 
 
 This implementation guide describes two groups of quality reporting scenarios. Exchange scenarios, focused on exchanging subsets of the data-of-interest for a particular measure or set of measures throughout the reporting period, and Reporting scenarios, focused on communicating the results of a quality measure at the end of a reporting period as part of a quality improvement initiative.
 
-{% include img-portrait.html img="quality-reporting-scenarios.png" %}
+{% include img-portrait.html  caption = "Figure 1-4" img="quality-reporting-scenarios.png" %}
 
 ### Exchange Scenarios
 

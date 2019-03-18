@@ -12,9 +12,9 @@ Click Here To See Example Submit Data Operation (edited for brevity)
 
 For a complete un-edited example see the [Example MRP Submit Data Operation]
 qa/links  (some R3 and R4 canonicals not working  :-( )  fixed
-fix figures  only VTE left?
-add numbering captions to figures.
-apply all todos where needed.
+fix figures  only VTE left? and subscription
+add numbering captions to figures. -done
+apply all todos where needed.  -
 prepublish punchlist.
 
 
@@ -35,46 +35,44 @@ prepublish punchlist.
 The link 'http://hl7.org/fhir/R4/measure-operation-collect-data.html' for "$collect-data (R4)" cannot be resolved
 http://hl7.org/fhir/R4/operationdefinition.html
 
-update all An X playing the role of
+update all An X playing the role of -done
 
-Producer/Consumer/Reporter/Receiver
+Producer/Consumer/Reporter/Receiver -done
 
-MRP Individual and summary
+MRP Individual and summary done
 
 Summary report only resource or bundle. - both
 
-bundle post as transactions.
+bundle post as transactions. -done
 
 versions and STU?  STU 2, IG Version 2.0.0 build package file
 
-add copy to button
+add copy to button done
 
 'I'm reviewing the cap statements, and there are a few things that I don't understand, but there are also some profile links that I think we need to switch to point to the CQF Measures IG instead of the DEQM profile (for Library and Measure)'
 
 Add group identifier to summary measure - done
 
-swap out DEQM Library and Measure for other
+swap out DEQM Library and Measure for other - done
 
-fix xpath for invarients
+fix xpath for invarients - TODO!
 
 get response for post  ( may need to sort the resources in the Bundle )
 
 Title and version !!!
 
-add section on ind summ  - how to send >1 measurereport for > 1 patient
+done add section on ind summ  - how to send >1 measurereport for > 1 patient
 multiple measurereports and multiple patients and packaging them  many ways including patient list.  reference the same assoc resources in the same bundled package.
 
-create a
-
-Security section?  Refer to QI Core section on Security??
+create a Security section?  Refer to QI Core section on Security??
 
 Provenance?
 
-email lisa a snapshot of figure
+email lisa a snapshot of figure done  see comments
 
 funding for Montreal?
 
-how are the CFQM measure profiles used in DEQM  should they be referenced in the profiles?
+how are the CFQM measure profiles used in DEQM should they be referenced in the profiles?
 
 do we need to make the hedis ig a dependency of this ig?  done for dev
 
@@ -82,8 +80,8 @@ subscription triggering could use more work.
 
 fix Receiver Server  - get rid of ops. done
 
-update example scenario text too.
+update example scenario text too?
 
 Reorder the resources for the transaction bundle?
 
-QA through Framework - next use cases..
+QA done

@@ -66,7 +66,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
         "id": "observation01",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-observation"
+            "http://ncqa.org/fhir/us/hedis/StructureDefinition/hedis-observation"
           ]
         },
         "status": "final",

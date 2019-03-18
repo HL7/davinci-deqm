@@ -50,7 +50,7 @@ For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure*
 
 When certain laboratory results are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  Below is the data structure for what would be included with a DEQM Individual Measure Report when the patient has had a laboratory test to meet the screen measure.
 
-{% include img.html img="DEQM Resource Diagram - COL1.jpg" %}
+{% include img.html img="DEQM Resource Diagram - COL1.jpg" caption ="Figure 3-5 Measure Report Using Observation" %}
 
 ### Option 2:MeasureReport using DiagnosticReport
 {:.no_toc}
@@ -58,14 +58,14 @@ When certain laboratory results are done in a specified time period, the patient
 Another way a COL screening measure is met is when certain procedures are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how that would be represented in a DEQM Individual MeasureReport with associated resources.
 
 
-{% include img.html img="DEQM Resource Diagram - COL2.jpg" %}
+{% include img.html img="DEQM Resource Diagram - COL2.jpg" caption ="Figure 3-6 Measure Report Using DiagnosticReport" %}
 
 ### Option 3: MeasureReport using Procedure
 {:.no_toc}
 
 There are often times exclusions in a screening measure.  An exclusion is something that removes the requirement for a screening measure.  For example, a certain procedure removes the requirement for Colorectal Cancer Screening.  As with the other options, the measure defines the valueset/codes that constitute a qualifying procedure.  The following diagram shows how you would use a DEQM Individual MeasureReport and associated resources to report a procedure.
 
- {% include img.html img="DEQM Resource Diagram - COL3.jpg" %}
+ {% include img.html img="DEQM Resource Diagram - COL3.jpg" caption ="Figure 3-7 Measure Report Using Procedure"%}
 
 ### Option 4: MeasureReport using Condition
 {:.no_toc}
@@ -73,7 +73,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
  An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows the related resources that can be used to represent when you need to send a Condition that represents an exclusion to the measure.
 
 
- {% include img.html img="DEQM Resource Diagram - COL4.jpg" %}
+ {% include img.html img="DEQM Resource Diagram - COL4.jpg" caption ="Figure 3-8 Measure Report Using Condition"%}
 
 ## COL Data Exchange Interactions
 
@@ -96,7 +96,7 @@ Note to Balloters: We are actively seeking input on the feasibility and interest
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
-{% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" caption = "Technical Workflow" %}
+{% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" caption = "Figure 3-9 Submit Data Technical Workflow" %}
 
 {% include examplebutton.html example="col-submit-example" b_title = "Click Here To See Example COL Submit Data" %}
 
@@ -104,7 +104,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 {:.no_toc}
  Payer/Aggregator retrieves Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.
 
-{% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" caption = "Technical Workflow" %}
+{% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" caption = "Figure 3-10 collect Data Technical Workflow" %}
 
 {% include examplebutton.html example="col-collect-example" b_title = "Click Here To See Example COL Collect Data" %}
 
@@ -112,7 +112,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 {:.no_toc}
 Payer/Aggregator subscribes to the Provider for notification when Colorectal Cancer Screening data is available.  The Provider notifies the Aggregator when the data is available and Payer/Aggregator uses the Collect Data operations as described above to retrieve the data.
 
-{ % include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv subscribe.jpg" caption = "Technical Workflow" % }
+{ % include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv subscribe.jpg" caption = "Figure 3-11 Subscription Technical Workflow" % }
 
 {% include examplebutton.html example="subscribe-measure-example" b_title = "Click Here To See Example COL Subscription" %}
 
@@ -125,7 +125,7 @@ In the following interactions, The Payer("Aggregator") is acting in the role of 
 
 Payer pushes the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-{% include img-portrait.html img="col_indv_report.jpg" caption = "Technical Workflow" %}
+{% include img-portrait.html img="col_indv_report.jpg" caption = "Figure 3-12 Individual Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="col-indv-report-example" b_title = "Click Here To See Post Bundle with COL Individual MeasureReport" %}
 
@@ -134,7 +134,7 @@ Payer pushes the Bundle of supporting resource with COL Individual MeasureReport
 
 Payer pushes the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
 
-{% include img-portrait.html img="col_summ_report.jpg" caption = "Technical Workflow" %}
+{% include img-portrait.html img="col_summ_report.jpg" caption = "Figure 3-13 Summary Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="col-summary-report-example" b_title = "Click Here To See Post COL Summary MeasureReport" %}
 

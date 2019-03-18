@@ -1,12 +1,12 @@
-#### Examples
+### Examples
 
-**Scenario:** Payer Z acting in the role of the Consumer collect Patient Z's MRP data from Provider X which is acting in role of the Producer
+**Scenario:**
+
+Payer Z acting in the role of the Consumer collect Patient Z's MRP data from Provider X which is acting in role of the Producer
 
 **Request using GET Syntax**
 
 `GET [base]/MeasureReport/measure-mrp/$collect-data?patient=Patient/patient-z&provider=Practitioner/provider-x&periodStart=2018-06-19`
-
-
 
 **Request using POST Syntax**
 

@@ -385,6 +385,13 @@
     },
     {
       "reference" : {
+        "reference" : "OperationDefinition/submit-data"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/reporter-client"
       },
       "exampleBoolean" : false,
@@ -564,6 +571,11 @@
         "page" : [{
           "nameUrl" : "OperationDefinition-collect-data.html",
           "title" : "OperationDefinition Collect Data",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "OperationDefinition-submit-data.html",
+          "title" : "OperationDefinition Submit Data",
           "generation" : "generated"
         }]
       },

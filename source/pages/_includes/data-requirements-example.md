@@ -1,3 +1,5 @@
+### Example
+{:.no_toc}
 
 **Scenario**
 
@@ -85,7 +87,7 @@ HTTP/1.1 200 OK
       {
          "type":"Task",
          "profile":[
-            "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-task"
+            "http://ncqa.org/fhir/us/hedis/StructureDefinition/hedis-task"
          ]
       },
       {

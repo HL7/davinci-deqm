@@ -224,7 +224,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
 
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/us/hedis/StructureDefinition/hedis-observation"
+                  "http://ncqa.org/fhir/us/hedis/StructureDefinition/hedis-observation"
                ]
             },
             "category": [
