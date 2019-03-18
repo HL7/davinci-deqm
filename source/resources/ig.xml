@@ -117,6 +117,7 @@
     <!-- ============ End ConceptMaps   =============== -->
 
   </page>
+
   <!-- ============ CapabilityStatement Page =============== -->
   <page><source value="capstatements.html"/><title value="Capability Statements"/><kind value="page"/>
 
@@ -126,11 +127,17 @@
 
   </page>
 
+
   <!-- ============ Downloads Page =============== -->
   <page><source value="downloads.html"/><title value="Downloads"/><kind value="page"/></page>
 
   <!-- ============ Examples Page=============== -->
   <page><source value="all-examples.html"/><title value="All Examples"/><kind value="page"/></page>
+
+  
+    <!-- ============ Change Notes Page =============== -->
+    <page><source value="change-notes.html"/><title value="Change Notes"/><kind value="page"/></page>
+
 
   <!-- ============ Table of Contents =============== -->
   <page><source value="toc.html"/><title value="Table of Contents"/><kind value="toc"/></page>
