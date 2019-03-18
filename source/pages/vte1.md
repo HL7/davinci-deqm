@@ -109,7 +109,7 @@ Aggregator pushed the Bundle of supporting resource with VTE-1 Individual Measur
 Note to Balloters: We are actively seeking input on whether a technical workflow diagram  would be of value for this use case
 {:.note-to-balloters}
 
-{  % include examplebutton.html example=col-indv-report-example" b_title = "Click Here To See Post Bundle with VTE-1 Individual MeasureReport" % }
+{% include examplebutton.html example="vte-indv-report-example" b_title = "Click Here To See Post Bundle with VTE-1 Individual MeasureReport" %}
 
 ### Summary MeasureReport
 {:.no_toc}
@@ -119,11 +119,11 @@ Note to Balloters: The Summary MeasureReport is not currently used for program l
 
 Aggregator pushed the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
-Note to Balloters: We are actively seeking input on whether a technical workflow diagram  would be of value for this use case
+Note to Balloters: We are actively seeking input on whether a technical workflow diagram would be of value for this use case
 {:.note-to-balloters}
 
 
-{  % include examplebutton.html example=col-summary-report-example" b_title = "Click Here To See Post VTE-1 Summary MeasureReport" % }
+{% include examplebutton.html example="vte-summary-report-example" b_title = "Click Here To See Post VTE-1 Summary MeasureReport" %}
 
 ___
 

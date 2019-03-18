@@ -82,9 +82,9 @@ In the following interactions, the Provider is acting in the role of the *Produc
 ### Gather Data Requirements From Payer
 {:.no_toc}
 
-In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
+   In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
-{  % include examplebutton.html example=col-requirements-example" b_title = "Click Here To See Example COL Data Requirements" % }
+        {% include examplebutton.html example="col-requirements-example" b_title = "Click Here To See Example COL Data Requirements" %}
 
 ### Exchange of Quality Measure Data Options
 {:.no_toc}
@@ -98,7 +98,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" caption = "Technical Workflow" %}
 
-{ % include examplebutton.html example=col-submit-example" b_title = "Click Here To See Example COL Submit Data" % }
+{% include examplebutton.html example="col-submit-example" b_title = "Click Here To See Example COL Submit Data" %}
 
 #### Data Exchange Using The Collect Data Operation
 {:.no_toc}
@@ -106,7 +106,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" caption = "Technical Workflow" %}
 
-{  % include examplebutton.html example=col-collect-example" b_title = "Click Here To See Example COL Collect Data" % }
+{% include examplebutton.html example="col-collect-example" b_title = "Click Here To See Example COL Collect Data" %}
 
 #### Payer/Aggregator Subscribes for Notification when data is available
 {:.no_toc}
@@ -127,8 +127,7 @@ Payer pushes the Bundle of supporting resource with COL Individual MeasureReport
 
 {% include img-portrait.html img="col_indv_report.jpg" caption = "Technical Workflow" %}
 
-
-{  % include examplebutton.html example=col-indv-report-example" b_title = "Click Here To See Post Bundle with COL Individual MeasureReport" % }
+{% include examplebutton.html example="col-indv-report-example" b_title = "Click Here To See Post Bundle with COL Individual MeasureReport" %}
 
 ### Summary MeasureReport
 {:.no_toc}
@@ -137,7 +136,7 @@ Payer pushes the Bundle of supporting resource with COL Individual MeasureReport
 
 {% include img-portrait.html img="col_summ_report.jpg" caption = "Technical Workflow" %}
 
-{  % include examplebutton.html example=col-summary-report-example" b_title = "Click Here To See Post COL Summary MeasureReport" % }
+{% include examplebutton.html example="col-summary-report-example" b_title = "Click Here To See Post COL Summary MeasureReport" %}
 
 ---
 

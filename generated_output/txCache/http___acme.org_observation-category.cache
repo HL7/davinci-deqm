@@ -9,3 +9,23 @@ v: {
   "error" : "The code system \"http://acme.org/observation-category\" is not known; The code provided (http://acme.org/observation-category#measure) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://acme.org/observation-category",
+    "code" : "measure",
+    "display" : "Measure"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/observation-category"
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://acme.org/observation-category\" is not known; The code provided (http://acme.org/observation-category#measure) is not  valid in the value set Observation Category Codes"
+}
+-------------------------------------------------------------------------------------
