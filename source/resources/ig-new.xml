@@ -15,7 +15,7 @@
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig"/>
-  <version value="2.0.0"/>
+  <version value="0.2.0"/>
   <name value="Data Exchange For Quality Measures"/>
   <status value="draft"/>
   <experimental value="true"/>
