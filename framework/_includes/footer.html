@@ -17,11 +17,11 @@
 <div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
-    <p>{% if {{site.hl7_ig}} %}
+    <p>{% if {{site.hl7_ig}} == true %}
      © HL7.org {{site.data.info.copyrightyear}} (<a href="{{site.data.fhir.ig.contact[0].telecom[0]}}">{{site.data.fhir.ig.publisher}}</a>).
      {%- else %}
      <a href="{{site.data.fhir.ig.contact[0].telecom[0]}}">{{site.data.fhir.ig.publisher}} </a>
-     {%- endif %} {{site.data.fhir.packageId}}#{{site.data.fhir.igVer }} based on <a style="color: #81BEF7" href="{{site.data.fhir.path}}">FHIR v{{site.data.fhir.version}}</a> generated {{site.data.fhir.genDate | date: "%b %d, %Y"}}. <br/>
+     {%- endif %} {{site.data.fhir.packageId}}#{{site.data.fhir.igVer }} based on <a style="color: #81BEF7" href="{{site.data.fhir.path}}">FHIR v{{site.data.fhir.version}}</a> generated <span href="#" data-toggle="tooltip" data-placement="top" title="{{site.data.fhir.genDate}}">{{site.data.fhir.genDate | date: "%Y-%m-%d"}}</span>. <br/>
       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
       | <a style="color: #81BEF7" href="qa.html">QA Report</a>
       | <a style="color: #81BEF7" href="{{ site.historypath }}">Version History</a>
@@ -67,6 +67,10 @@
 <!-- add anchors before the closing body tag -->
 <script>
 anchors.add()
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 </script>
 
 </body>

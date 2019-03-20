@@ -1,7 +1,7 @@
 {
-   "package-id": "hl7.fhir.us.davinci-deqm.stu3",
+   "package-id": "hl7.fhir.us.davinci-deqm",
    "title": "Data Exchange For Quality Measures",
-   "canonical": "http://hl7.org/fhir/us/davinci-deqm/STU3",
+   "canonical": "http://hl7.org/fhir/us/davinci-deqm/",
    "introduction": "The purpose of this implementation guide is to support value based care data exchange in the US Realm.  It describes two groups of quality reporting scenarios. Exchange scenarios, focused on exchanging subsets of the data-of-interest for a particular measure or set of measures throughout the reporting period, and Reporting scenarios, focused on communicating the results of a quality measure at the end of a reporting period as part of a quality improvement initiative.  Note that the intent is to support multiple versions of FHIR and these versions are currently being published separately as noted below",
    "list": [
       {
@@ -34,7 +34,7 @@
          "date": "2018-09-01",
          "desc": "STU1 Ballot for FHIR R4 Version of DEQM",
          "changes": "",
-         "path": "http://www.hl7.org/fhir/us/davinci-deqm/2018Sep/index.html",
+         "path": "http://hl7.org/fhir/us/davinci-deqm/2018Sep/index.html",
          "status": "ballot",
          "sequence": "STU1"
       }
