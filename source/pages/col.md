@@ -52,7 +52,7 @@ When certain laboratory results are done in a specified time period, the patient
 
 {% include img.html img="DEQM Resource Diagram - COL1.jpg" caption ="Figure 3-5 Measure Report Using Observation" %}
 
-### Option 2:MeasureReport using DiagnosticReport
+### Option 2: MeasureReport using DiagnosticReport
 {:.no_toc}
 
 Another way a COL screening measure is met is when certain procedures are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how that would be represented in a DEQM Individual MeasureReport with associated resources.

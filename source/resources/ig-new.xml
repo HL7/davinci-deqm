@@ -20,12 +20,6 @@
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="DaVinci Project"/>
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
-    </telecom>
-  </contact>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -343,13 +337,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/improvement-notation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/datax-measurereport-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -393,13 +380,6 @@
     <resource>
       <reference>
         <reference value="CapabilityStatement/producer-client"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/improvement-notation"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -536,16 +516,6 @@
         <nameUrl value="terminology.html"/>
         <title value="Terminology"/>
         <generation value="html"/>
-        <page>
-          <nameUrl value="ValueSet-improvement-notation.html"/>
-          <title value="ValueSet Improvement Notation"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="CodeSystem-improvement-notation.html"/>
-          <title value="CodeSystem Improvement Notation"/>
-          <generation value="generated"/>
-        </page>
       </page>
       <page>
         <nameUrl value="searchparameters.html"/>

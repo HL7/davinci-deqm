@@ -23,12 +23,6 @@
   "status" : "draft",
   "experimental" : true,
   "publisher" : "DaVinci Project",
-  "contact" : [{
-    "telecom" : [{
-      "system" : "url",
-      "value" : "http://www.hl7.org/Special/committees/cqi/index.cfm"
-    }]
-  }],
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -350,13 +344,6 @@
     },
     {
       "reference" : {
-        "reference" : "ValueSet/improvement-notation"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/datax-measurereport-deqm"
       },
       "exampleBoolean" : false,
@@ -400,13 +387,6 @@
     {
       "reference" : {
         "reference" : "CapabilityStatement/producer-client"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/improvement-notation"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -542,17 +522,7 @@
       {
         "nameUrl" : "terminology.html",
         "title" : "Terminology",
-        "generation" : "html",
-        "page" : [{
-          "nameUrl" : "ValueSet-improvement-notation.html",
-          "title" : "ValueSet Improvement Notation",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "CodeSystem-improvement-notation.html",
-          "title" : "CodeSystem Improvement Notation",
-          "generation" : "generated"
-        }]
+        "generation" : "html"
       },
       {
         "nameUrl" : "searchparameters.html",
