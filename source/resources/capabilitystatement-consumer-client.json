@@ -24,7 +24,7 @@
       "json"
    ],
    "implementationGuide": [
-      "http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/ig",
+      "http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/hl7.fhir.us.davinci-deqm.stu3-0.2.0",
       "http://hl7.org/fhir/us/qicore/ImplementationGuide/qicore",
       "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/cqfmeasures"
    ],
