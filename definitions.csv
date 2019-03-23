@@ -3,9 +3,9 @@ igtemplate-dir,/Users/ehaas/Documents/FHIR/IG-Template2/
 working-dir,/Users/ehaas/Documents/FHIR/DaVinci/
 title,Data Exchange For Quality Measures
 status,draft
-publisher,DaVinci Project
-contact_system,url
-contact_value,http://www.hl7.org/Special/committees/cqi/index.cfm
+publisher,HL7 International - Financial Management Work Group
+contact.system,url
+contact.value,http://www.hl7.org/Special/committees/cqi/index.cfm
 extensions,extension-referenceAny|extension-measureSubscription|extension-doNotPerform|extension-dataCollectionType|extension-reportingVendor|extension-certificationIdentifier
 searches,
 codesystems,
