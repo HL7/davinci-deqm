@@ -13,7 +13,8 @@
       "source/pages"
     ],
     "qa": "generated_output/qa",
-    "temp": "generated_output/temp"
+    "temp": "generated_output/temp",
+    "history": "http://hl7.org/fhir/us/davinci-deqm/STU3/history.html"
   },
   "broken-links": "warning",
   "jurisdiction": "US",
