@@ -19,7 +19,13 @@
   <name value="Data Exchange For Quality Measures"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <publisher value="DaVinci Project"/>
+  <publisher value="HL7 International - Financial Management Work Group"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -403,9 +409,49 @@
       <title value="Home"/>
       <generation value="html"/>
       <page>
-        <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <nameUrl value="framework.html"/>
+        <title value="Framework"/>
         <generation value="html"/>
+        <page>
+          <nameUrl value="guidance.html"/>
+          <title value="General Guidance"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="datax.html"/>
+          <title value="Data Exchange"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="indv-reporting.html"/>
+          <title value="Individual Reporting"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="summary-reporting.html"/>
+          <title value="Summary Reporting"/>
+          <generation value="html"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Example Use Cases"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="mrp.html"/>
+          <title value="Medication Reconciliation Post-Discharge (MRP)"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="col.html"/>
+          <title value="Colorectal Cancer Screening (COL)"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="vte1.html"/>
+          <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
+          <generation value="html"/>
+        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -513,16 +559,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="terminology.html"/>
-        <title value="Terminology"/>
-        <generation value="html"/>
-      </page>
-      <page>
-        <nameUrl value="searchparameters.html"/>
-        <title value="Search Parameters"/>
-        <generation value="html"/>
-      </page>
-      <page>
         <nameUrl value="capstatements.html"/>
         <title value="Capability Statements"/>
         <generation value="html"/>
@@ -558,11 +594,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="security.html"/>
-        <title value="Security"/>
-        <generation value="html"/>
-      </page>
-      <page>
         <nameUrl value="downloads.html"/>
         <title value="Downloads"/>
         <generation value="html"/>
@@ -570,6 +601,11 @@
       <page>
         <nameUrl value="all-examples.html"/>
         <title value="All Examples"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="change-notes.html"/>
+        <title value="Change Notes"/>
         <generation value="html"/>
       </page>
       <page>
