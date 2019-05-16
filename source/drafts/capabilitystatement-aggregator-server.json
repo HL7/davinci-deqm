@@ -60,7 +60,7 @@
                "valueCode": "SHALL"
             }
          ],
-         "display": "DEQM Measure Profile",
+         "display": "CQFM Measure Profile",
          "reference": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/measure-deqm"
       },
       {

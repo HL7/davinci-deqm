@@ -993,7 +993,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String"> DEQM Measure Profile</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">CQFM Measure Profile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.name</Data></Cell>
@@ -1010,7 +1010,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell><Data ss:Type="String">The DEQM Measure Profile describes a shareable, published measure resource that can be used to define an electronic clinical quality measure</Data></Cell>
+    <Cell><Data ss:Type="String">The CQFM Measure Profile describes a shareable, published measure resource that can be used to define an electronic clinical quality measure</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>

@@ -199,7 +199,7 @@ To unsubscribe:
 #### Get Data Requirements
 {:.no_toc}
 
-The DEQM Subscription Profile allows the subscriber to send a *DEQM Measure instance id*.  By invoking the $data-requirements operation (see above) on a subscriber’s Measure instance endpoint, the server can discover what data is needed to calculate by a subscriber for particular measure.  This information is necessary to correctly trigger a notification when the requisite data is available.
+The DEQM Subscription Profile allows the subscriber to send a *CQFM Measure instance id*.  By invoking the $data-requirements operation (see above) on a subscriber’s Measure instance endpoint, the server can discover what data is needed to calculate by a subscriber for particular measure.  This information is necessary to correctly trigger a notification when the requisite data is available.
 
 #### Measure Notifications
 {:.no_toc}
