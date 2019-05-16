@@ -38,9 +38,9 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
 |Library|CFQM Library Profile|[CFQM Library (STU3)]|[CFQM Library (R4)]|
 |Measure|CQFM Measure Profile|[CFQM Measure (STU3)]|[CFQM Measure (R4)]|
-|Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
-|Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
-|Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
+|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
+|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
 |Observation|HEDIS MRP Observation Profile[^8]|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
 |Organization|DEQM Organization Profile[^9]|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
