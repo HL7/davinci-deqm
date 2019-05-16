@@ -31,8 +31,8 @@ The following resources are used in all data exchange transactions:
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
-|Library|CFQM Library Profile|[CFQM Library (STU3)]|[CFQM Library (R4)]|
-|Measure|CFQM Measure Profile|[CFQM Measure (STU3)]|[CFQM Measure (R4)]|
+|Library|CQFM Library Profile|[CQFM Library (STU3)]|[CQFM Library (R4)]|
+|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
 |MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|

@@ -64,7 +64,7 @@ FHIR allows for a fourth type of Measure Reporting, "Patient List Reporting.  wh
 
 ## Other Profiles Used In The Evaluation Of A Measure
 
-Depending on the specific Measure and Interaction, various DEQM, QI Core, and CFQM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.
+Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQFM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.
 
 ## Must Support
 

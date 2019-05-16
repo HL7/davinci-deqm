@@ -15,10 +15,10 @@
 [Capability statements]: capstatements.html
 [Certification Identifier (R4)]: r4todo.html
 [Certification Identifier (STU3)]: StructureDefinition-extension-certificationIdentifier.html
-[CFQM Library (R4)]: r4todo.html
-[CFQM Library (STU3)]: {{site.cqfm_r3}}StructureDefinition-library-cqfm.html
-[CFQM Measure (R4)]: r4todo.html
-[CFQM Measure (STU3)]: {{site.cqfm_r3}}StructureDefinition-measure-cqfm.html
+[CQFM Library (R4)]: r4todo.html
+[CQFM Library (STU3)]: {{site.cqfm_r3}}StructureDefinition-library-cqfm.html
+[CQFM Measure (R4)]: r4todo.html
+[CQFM Measure (STU3)]: {{site.cqfm_r3}}StructureDefinition-measure-cqfm.html
 [Clinical Decision Support (CDS)]: http://www.hl7.org/Special/committees/dss/index.cfm
 [Clinical Quality Framework]: http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework&oldid=158051
 [Clinical Quality Information (CQI)]: http://www.hl7.org/Special/committees/cqi/index.cfm

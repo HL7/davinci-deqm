@@ -33,7 +33,7 @@ The following resources are used in the summary reporting scenario:
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
 |---|---|---|---|
-|Measure|DEQM Measure Profile|[CFQM Measure (STU3)]|[CFQM Measure (R4)]|
+|Measure|DEQM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 
