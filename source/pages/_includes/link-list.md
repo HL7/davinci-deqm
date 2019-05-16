@@ -126,3 +126,4 @@
 [DEQM Summary MeasureReport Profile]: profiles.html#profiles
 [DEQM Individual MeasureReport Profile]: profiles.html#profiles
 [COL Collect Data Operation]: col.html#data-exchange-using-the-collect-data-operation
+[DEQM Measure Subscription Extension]: StructureDefinition-extension-measureSubscription.html

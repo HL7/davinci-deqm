@@ -1229,7 +1229,7 @@
     <Cell ss:StyleID="s99"><Data ss:Type="String">Extension{#measureSubscription}</Data></Cell>
     <Cell ss:StyleID="s99"><Data ss:Type="String">Y</Data></Cell>
     <Cell><Data ss:Type="String">Y</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension alters the definiton of the Subscription.criteria froma search string  to a Measure instance id.</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension alters the definition of the Subscription.criteria froma search string  to a Measure instance id.</Data></Cell>
     <Cell ss:StyleID="s99"/>
     <Cell ss:StyleID="s99"/>
     <Cell ss:StyleID="s99"/>
@@ -4401,16 +4401,16 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s99"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension alters the definiton of the Subscription.criteria froma search string  to a Measure instance id.</Data><NamedCell
+    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension alters the definition of the Subscription.criteria froma search string  to a Measure instance id.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s99"><Data ss:Type="String">MeasureSubscription</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s99"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s99"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s99"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension modifies the `criteria`  definiton to be a Measure instance id.</Data><NamedCell
+    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension modifies the `criteria`  definition to be a Measure instance id.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension modifies the `criteria`  definiton to be a Measure instance id.</Data><NamedCell
+    <Cell ss:StyleID="s99"><Data ss:Type="String">The extension modifies the `criteria`  definition to be a Measure instance id.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
