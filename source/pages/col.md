@@ -14,7 +14,7 @@ topofpage: true
 
 ##  Introduction
 
-The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening services during the measurement period.
+The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening for all patients in the population receiving care during the measurement period.
 
 ## FHIR Resource Overview
 
