@@ -68,7 +68,7 @@ When a patient has an inpatient encounter, is not either pregnant or currently d
 ### Option 4: Measure Report Using Encounter
 {:.no_toc}
 
-When a patient has an inpatient encounter where the encounter is <2 days long, or when the encounter is includes an ICU stay of 1 or more days, the patient can be excluded from the measure for the qualifying encounter. Codes for the ICU facility location will come from the HL7 ServiceDeliveryLocationRoleType valueset.
+When a patient has an inpatient encounter where the encounter is <2 days long, or when the encounter includes an ICU stay of 1 or more days, the patient can be excluded from the measure for the qualifying encounter. Codes for the ICU facility location will come from the HL7 ServiceDeliveryLocationRoleType valueset.
 
 {% include img.html img="DEQM Resource Diagram - VTE4.jpg" caption = "Figure 3-17" %}
 
