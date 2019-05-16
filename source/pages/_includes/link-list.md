@@ -127,3 +127,5 @@
 [DEQM Individual MeasureReport Profile]: profiles.html#profiles
 [COL Collect Data Operation]: col.html#data-exchange-using-the-collect-data-operation
 [DEQM Measure Subscription Extension]: StructureDefinition-extension-measureSubscription.html
+[Summary Measure Reporting Interactions]: summary-reporting.html
+[Individual Measure Reporting Interactions]: indv-reporting.html

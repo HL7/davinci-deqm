@@ -1,7 +1,7 @@
 {% assign id = {{page.id}} %}
 {{site.data.structuredefinitions.[id].description}}
 
-#### Mandatory Data Elements and Terminology
+### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present).
 
@@ -27,7 +27,7 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](
 
 None
 
-#### Examples
+### Examples
 
 {% include indv-measurereports.md %}
 

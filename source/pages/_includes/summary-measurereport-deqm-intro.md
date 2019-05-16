@@ -4,7 +4,7 @@
 
 {{site.data.structuredefinitions.[id].description}}
 
-#### Mandatory Data Elements and Terminology
+### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present).
 
