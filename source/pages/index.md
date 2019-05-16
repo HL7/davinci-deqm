@@ -30,7 +30,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction and background for the Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures.
 
-- [Framework]\: These pages provides guidance on the set of FHIR transactions that provide a general framework to enable the exchange of measure data.
+- [Framework]\: These pages provide guidance on the set of FHIR transactions that provide a general framework to enable the exchange of measure data.
 
   -  [General Guidance] gives overall guidance including preconditions, assumptions and an overview of the FHIR artifacts used in the different  reporting scenarios.
 
