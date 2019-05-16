@@ -52,8 +52,6 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
 
-- [Terminology]\: This page lists the value sets and code system defined in the DEQM guide and used in the DEQM transactions to exchange quality data.
-
 - [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
 
 - [Downloads]\: This page provides links to downloadable artifacts.
