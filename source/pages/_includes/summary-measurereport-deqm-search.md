@@ -1,6 +1,6 @@
 Framework:
 
-[ISummary Measure Reporting Interactions]
+[Summary Measure Reporting Interactions]
 
  <br />
 

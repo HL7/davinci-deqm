@@ -1,6 +1,6 @@
 
 {% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
+
 
 {{site.data.structuredefinitions.[page.id].description}}
 This extension corresponds to the [MeasureReportType](http://hl7.org/fhir/ValueSet/measure-report-type) code `data-collection` in the R4 version of MeasureReport.
