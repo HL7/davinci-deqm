@@ -22,7 +22,6 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|[QI Core Coverage (R4)]|
 |DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest (STU3)]|[DEQM DeviceRequest (R4)]|
 |DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement (STU3)]|[DEQM DeviceUseStatement (R4)]|
-|DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport (STU3)]|[QI Core DiagnosticReport (R4)]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
 |Library|CQFM Library Profile|[CQFM Library (STU3)]|[CQFM Library (R4)]|
 |Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
