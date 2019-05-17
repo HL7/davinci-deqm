@@ -58,7 +58,7 @@ To discover what data (i.e. resources) are relevant in the *Submit Data* payload
 
 {% include img.html img="mrp-wf-overview.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
-#### Gather Data Requirements From Consumer
+#### Gather Data Requirements from Consumer
 {:.no_toc}
 
 In this step, the Producer queries a common knowledge store for profiles needed for reporting a given measure and how the sending of those data should be initiated. Common data profiles have been developed through a multi-stakeholder consensus-based development process and will be made available from the common site. To support the *Submit Data* operation, an implementation needs to know specifically what data are required to provide as the payload for the operation. This can be done manually by reviewing the measure definition to determine what data needs to be submitted and it is automated by using the *Data Requirements* operation. *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Consumer.

@@ -62,7 +62,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 FHIR allows for a fourth type of Measure Reporting, *Subject List Reporting*.  which is similar to a [QRDA Category 2 report].  This level of measure reporting is out of scope for this version of the Implementation Guide. We are actively seeking input from balloters if they believe there is a need for this profile in a future version of this IG.
 {:.note-to-balloters}
 
-## Other Profiles Used In The Evaluation Of A Measure
+## Other Profiles Used in the Evaluation of a Measure
 
 Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQFM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.
 

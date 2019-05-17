@@ -59,7 +59,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ## Background
 
-### Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures Implementation Guide
+### Clinical Quality Measures Ecosystem and the Data Exchange for Quality Measures Implementation Guide
 {:.no_toc}
 
 The Data Exchange For Quality Measures Implementation Guide fits into the clinical quality measures ecosystem at the interface between the Measure Reporters and User as illustrated in the figure[^2] below with the red oval:

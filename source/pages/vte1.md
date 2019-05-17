@@ -13,7 +13,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 
 ## FHIR Resource Overview
 
-### Resources supported for this use case:
+### Resources supported for this Use Case:
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|

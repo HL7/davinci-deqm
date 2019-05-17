@@ -18,7 +18,7 @@ The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an examp
 
 ## FHIR Resource Overview
 
-### Resources supported for this use case:
+### Resources Supported for this Use Case:
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -45,14 +45,14 @@ In a screening measure, you report both what is done that meets the screening re
 
 For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure* is the primary resource used to evaluate the measure. Below are listed the resource diagrams that meet each situation in the COL screening measure.  
 
-### Option 1: Measure Report Using Observation
+### Option 1: MeasureReport Using Observation
 {:.no_toc}
 
 When certain laboratory results are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  Below is the data structure for what would be included with a DEQM Individual Measure Report when the patient has had a laboratory test to meet the screen measure.
 
 {% include img.html img="DEQM Resource Diagram - COL1.jpg" caption ="Figure 3-5 Measure Report Using Observation" %}
 
-### Option 2: MeasureReport using DiagnosticReport
+### Option 2: MeasureReport Using DiagnosticReport
 {:.no_toc}
 
 Another way a COL screening measure is met is when certain procedures are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how that would be represented in a DEQM Individual MeasureReport with associated resources.
@@ -60,14 +60,14 @@ Another way a COL screening measure is met is when certain procedures are perfor
 
 {% include img.html img="DEQM Resource Diagram - COL2.jpg" caption ="Figure 3-6 Measure Report Using DiagnosticReport" %}
 
-### Option 3: MeasureReport using Procedure
+### Option 3: MeasureReport Using Procedure
 {:.no_toc}
 
 There are often times exclusions in a screening measure.  An exclusion is something that removes the requirement for a screening measure.  For example, a certain procedure removes the requirement for Colorectal Cancer Screening.  As with the other options, the measure defines the valueset/codes that constitute a qualifying procedure.  The following diagram shows how you would use a DEQM Individual MeasureReport and associated resources to report a procedure.
 
  {% include img.html img="DEQM Resource Diagram - COL3.jpg" caption ="Figure 3-7 Measure Report Using Procedure"%}
 
-### Option 4: MeasureReport using Condition
+### Option 4: MeasureReport Using Condition
 {:.no_toc}
 
  An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows the related resources that can be used to represent when you need to send a Condition that represents an exclusion to the measure.
@@ -79,7 +79,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 
 In the following interactions, the Provider is acting in the role of the *Producer* and the Payer("Aggregator") is acting in the role of the *Consumer*.
 
-### Gather Data Requirements From Payer
+### Gather Data Requirements from Payer
 {:.no_toc}
 
    In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
@@ -92,7 +92,7 @@ In the following interactions, the Provider is acting in the role of the *Produc
 Note to Balloters: We are actively seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
 {:.note-to-balloters}
 
-#### Data Exchange Using The Submit Data Operation
+#### Data Exchange Using the Submit Data Operation
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
@@ -100,7 +100,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include examplebutton.html example="col-submit-example" b_title = "Click Here To See Example COL Submit Data" %}
 
-#### Data Exchange Using The Collect Data Operation
+#### Data Exchange Using the Collect Data Operation
 {:.no_toc}
  Payer/Aggregator retrieves Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.
 

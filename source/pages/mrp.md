@@ -28,7 +28,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 
 ## FHIR Resource Overview
 
-### Resources supported for this use case:
+### Resources supported for this Use Case:
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -47,7 +47,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile[^8]|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-## Graph of MRP resources:
+## Graph of MRP Resources:
 
 For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure.
 
@@ -59,14 +59,14 @@ For MRP either a *Task* resource or an *Observation* resource can be used as the
 
 In the following interactions, the Provider is acting in the role of the *Producer* and the Payer("Aggregator") is acting in the role of the *Consumer*.
 
-### Gather Data Requirements From Payer
+### Gather Data Requirements from Payer
 {:.no_toc}
 
    In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
         {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
-### Data Exchange Using The Submit Data Operation
+### Data Exchange Using the Submit Data Operation
 {:.no_toc}
 
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the Payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
