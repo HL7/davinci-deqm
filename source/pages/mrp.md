@@ -71,7 +71,7 @@ In the following interactions, the Provider is acting in the role of the *Produc
 
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the Payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
 
-The technical Workflow is outlined in the following figure.  The parts outlined in red are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
+The technical Workflow is outlined in the following figure.  The parts outlined in orange are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 
 {% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption="Figure 3-3 Submit Data Technical Workflow" %}
 
