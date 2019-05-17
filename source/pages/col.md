@@ -48,7 +48,7 @@ For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure*
 ### Option 1: MeasureReport Using Observation
 {:.no_toc}
 
-When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  Below is the data structure for what would be included with a DEQM Individual Measure Report when the patient has had a laboratory test to meet the screen measure.
+When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  The following resource graph diagram shows how a laboratory test to meet the screen measure would be represented using a DEQM Individual MeasureReport and its associated resources.  Note that the Practitioner and Organization are overlapped to indicate a choice of one or the other.
 
 {% include img.html img="DEQM Resource Diagram - COL1.jpg" caption ="Figure 3-5 Measure Report Using Observation" %}
 
