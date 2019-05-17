@@ -41,7 +41,7 @@ The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an examp
 
 ## Graph of COL Resources
 
-In a screening measure, you report both what is done that meets the screening requirement as well as information that would exclude the patient from being required to meet the measure.
+In a screening measure, it is reported both what is done that meets the screening requirement as well as information that would exclude the patient from being required to meet the measure.
 
 For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure* is the primary resource used to evaluate the measure. Below are listed the resource diagrams that meet each situation in the COL screening measure.  
 

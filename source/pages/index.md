@@ -185,7 +185,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 |CDS|Clinical Decision Support|
 |CMS |Centers for Medicare and Medicaid Services |
 |COL |Colorectal Cancer Screening Measure|
-|CQFM|Clinical Quality FHIR Measures|
+|CQFM|Clinical Quality Framework Measures|
 |CQL |Clinical Quality Language|
 |CQM |Clinical Quality Measures|
 |eCQM|electronic Clinical Quality Measures|
