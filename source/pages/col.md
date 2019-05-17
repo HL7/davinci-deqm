@@ -55,7 +55,7 @@ When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA ar
 ### Option 2: MeasureReport Using DiagnosticReport
 {:.no_toc}
 
-Another way a COL screening measure is met is when certain procedures are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how that would be represented in a DEQM Individual MeasureReport with associated resources.
+Another way a COL screening measure is met is when certain procedures such as flexible sigmoidoscopy and colonoscopy are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how a procedure report to meet a screening measure would be represented in a DEQM Individual MeasureReport and its associated resources.
 
 
 {% include img.html img="DEQM Resource Diagram - COL2.jpg" caption ="Figure 3-6 Measure Report Using DiagnosticReport" %}
