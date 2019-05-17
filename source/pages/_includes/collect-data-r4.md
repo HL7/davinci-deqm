@@ -17,11 +17,11 @@
    "parameter":[
       {
          "name":"patient",
-         "valueReference":"{"reference" : "Patient/patient-z"}"
+         "valueReference":"{"reference": "Patient/patient-z"}"
       },
       {
          "name":"practitioner",
-         "valueReference":"{"reference" : "Practitioner/provider-x"}"
+         "valueReference":"{"reference": "Practitioner/provider-x"}"
       },
       {
          "name":"periodStart",

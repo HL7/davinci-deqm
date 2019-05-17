@@ -70,7 +70,7 @@ general guidance provided here.
 ### How Much Data Should be Sent
 {:.no_toc}
 
-The recipient of the report may not have access to additional EHR data about an individual subject.  Therefore, it is important that the report includes all the data relevant to computing CQM criteria, as well as the other data defined in a CQM ( for example data for stratification, risk adjustment, etc). Data for every data element present in the EHR that is required by the referenced CQM shall be included in the resulting MeasureReport bundle - not just the data needed to compute criteria.
+The recipient of the report may not have access to additional EHR data about an individual subject.  Therefore, it is important that the report includes all the data relevant to computing CQM criteria, as well as the other data defined in a CQM (for example, data for stratification, risk adjustment, etc). Data for every data element present in the EHR that is required by the referenced CQM shall be included in the resulting MeasureReport bundle - not just the data needed to compute criteria.
 
 At the very least, an individual measure report should include:
 

@@ -43,7 +43,7 @@ Depending on the specific Measure, various DEQM and QI Core Profiles are also us
 ### Graph of DEQM Resources:
 {:.no_toc}
 
-The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1
+The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1:
 
 {% include img.html img="measure-resource-graph.svg" caption="Figure 2-1 DEQM Resource Graph" %}
 
@@ -145,7 +145,7 @@ In addition to the resources listed above, the following artifacts are used in t
 
 **Collect Data (STU3 and R4):**
 
-Using either the `GET` or `POST` Syntax, the operation can be invoked by the Consumer :
+Using either the `GET` or `POST` Syntax, the operation can be invoked by the Consumer:
 
 `GET|[base]/Measure/[measure-id]/$collect-data&[parameters]`
 
@@ -188,7 +188,7 @@ The following artifacts are used in the subscription transaction:
 ##### Usage
 {:.no_toc}
 
-To subscribe for measure notifications , The Consumer SHALL use the standard FHIR [Subscription] API as follows:
+To subscribe for measure notifications, The Consumer SHALL use the standard FHIR [Subscription] API as follows:
 
 `POST [base]/Subscription`
 
