@@ -70,7 +70,7 @@ Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQ
 
 - This guide adopts the [QI Core *Must Support*] definition with the following additional expectation:
 
-1.  The receiver of data may not be able to complete processing and may report an error if a Must Support element is unavailable.
+The receiver of data may not be able to complete processing and may report an error if a Must Support element is unavailable.
 
 <br />
 
