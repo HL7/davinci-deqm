@@ -63,7 +63,7 @@ Another way a COL screening measure is met is when certain procedures such as fl
 ### Option 3: MeasureReport Using Procedure
 {:.no_toc}
 
-There are often times exclusions in a screening measure.  An exclusion is something that removes the requirement for a screening measure.  For example, a certain procedure removes the requirement for Colorectal Cancer Screening.  As with the other options, the measure defines the valueset/codes that constitute a qualifying procedure.  The following diagram shows how you would use a DEQM Individual MeasureReport and associated resources to report a procedure.
+There are often times exclusions in a screening measure.  An exclusion is something that removes the requirement for a screening measure.  For example, a total colectomy removes the requirement for Colorectal Cancer Screening.  As with the other options, the measure defines the valueset/codes that constitute a qualifying procedure.  The following diagram shows how you would use a DEQM Individual MeasureReport and its associated resources to report a procedure.
 
  {% include img.html img="DEQM Resource Diagram - COL3.jpg" caption ="Figure 3-7 Measure Report Using Procedure"%}
 
