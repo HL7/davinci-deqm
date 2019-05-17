@@ -177,7 +177,27 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
+### Table of Acronyms
 
+|Acronym| Definition|
+|---|---|
+|API|Application Program Interface|
+|CDS|Clinical Decision Support|
+|CMS |Centers for Medicare and Medicaid Services |
+|COL |Colorectal Cancer Screening Measure|
+|CQFM|Clinical Quality FHIR Measures|
+|CQL |Clinical Quality Language|
+|CQM |Clinical Quality Measures|
+|eCQM|electronic Clinical Quality Measures|
+|DEQM|Data Exchange For Quality Measures|
+|EHR|Electronic Health Record|
+|FHIR|Fast Healthcare Interoperability Resources|
+|MRP|Medication Reconciliation Post-discharge Measure|
+|QDM|Quality Data Model|
+|R4|FHIR Release 4|
+|REST|Representational State Transfer|
+|STU3|FHIR Release 3 (STU)|
+|VTE|Venous Thromboembolism Prophylaxis|
 <br />
 
 ---
