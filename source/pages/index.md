@@ -177,7 +177,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
-### Table of Acronyms
+## Table of Acronyms
 
 |Acronym|Definition|
 |---|---|
