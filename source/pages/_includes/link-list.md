@@ -1,7 +1,7 @@
-[^1]: https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/ClinicalQualityMeasures.html
-[^2]: https://www.hl7.org/documentcenter/public_temp_6C1C8F48-1C23-BA17-0C77FDFC69A7B6F1/calendarofevents/himss/2017/Health%20IT%20Enabled%20Quality%20Measurement%20and%20Improvement_The%20HL7%20Clinical%20Quality%20Work%20Group.pdf
-[^3]: Health IT Enabled Quality Improvement - A Vision to Achieve Better Health and Health Care <https://www.healthit.gov/sites/default/files/HITEnabledQualityImprovement-111214.pdf>
-[^4]: Adapting Clinical Guidelines for the Digital Age <https://www.cdc.gov/ddphss/clinical-guidelines/index.html>
+[^1]: Clinical Quality Measures Basics. Retrieved from <https://www.cms.gov/Regulations-and-Guidance/Legislation/EHRIncentivePrograms/ClinicalQualityMeasures.html>
+[^2]: Suarez, W., Sethi, K., Craig, P., (February 20, 2017). Health IT Enabled Quality Measurement and Improvement: The HL7 Clinical Quality Information Workgroup. Retrieved from <https://www.hl7.org/documentcenter/public_temp_6C1C8F48-1C23-BA17-0C77FDFC69A7B6F1/calendarofevents/himss/2017/Health%20IT%20Enabled%20Quality%20Measurement%20and%20Improvement_The%20HL7%20Clinical%20Quality%20Work%20Group.pdf>
+[^3]: Health IT Enabled Quality Improvement - A Vision to Achieve Better Health and Health Care. Retrieved from <https://www.healthit.gov/sites/default/files/HITEnabledQualityImprovement-111214.pdf>
+[^4]: Adapting Clinical Guidelines for the Digital Age. Retrieved from <https://www.cdc.gov/ddphss/clinical-guidelines/index.html>
 [^5]: May includes DEQM defined code systems and externally defined code systems
 [^6]: A Measure element in R4
 [^8]: Changes to the QI-Core Observation and Task profiles are being proposed based on the HEDIS Task and Observation profiles that may lead to these profiles being replaced by the QI Core profiles.
