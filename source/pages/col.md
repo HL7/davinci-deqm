@@ -18,7 +18,7 @@ The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an examp
 
 ## FHIR Resource Overview
 
-### Resources Supported for this Use Case:
+### Resources Supported for this Use Case
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -39,7 +39,7 @@ The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an examp
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure (STU3)]|[QI Core Procedure (R4)]|
 
-## Graph of COL Resources:
+## Graph of COL Resources
 
 In a screening measure, you report both what is done that meets the screening requirement as well as information that would exclude the patient from being required to meet the measure.
 
@@ -116,7 +116,7 @@ Payer/Aggregator subscribes to the Provider for notification when Colorectal Can
 
 {% include examplebutton.html example="subscribe-measure-example" b_title = "Click Here To See Example COL Subscription" %}
 
-## COL Measure Reporting Interactions:
+## COL Measure Reporting Interactions
 
 In the following interactions, The Payer("Aggregator") is acting in the role of the *Reporter*.
 

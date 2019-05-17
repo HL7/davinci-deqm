@@ -28,7 +28,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 
 ## FHIR Resource Overview
 
-### Resources supported for this Use Case:
+### Resources supported for this Use Case
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -47,7 +47,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
 |Task|HEDIS MRP Task Profile[^8]|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
 
-## Graph of MRP Resources:
+## Graph of MRP Resources
 
 For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure.
 
@@ -83,7 +83,7 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 {% include examplebutton.html example="submit-data-observation"  b_title = "Click Here To See Example Submit Data operation using Observation option" %}
 
-## MRP Measure Reporting Interactions:
+## MRP Measure Reporting Interactions
 
 In the following interactions,  The Payer("Aggregator") is acting in the role of the *Reporter*.
 

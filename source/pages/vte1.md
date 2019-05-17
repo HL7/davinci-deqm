@@ -13,7 +13,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 
 ## FHIR Resource Overview
 
-### Resources supported for this Use Case:
+### Resources supported for this Use Case
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
@@ -38,7 +38,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |ProcedureRequest|QI Core ProcedureRequest Profile|[QI Core ProcedureRequest (STU3)]|[QI Core ProcedureRequest (R4)]|
 
 
-## Graph of VTE Resources:
+## Graph of VTE Resources
 
 This measure assesses the number of patients who received VTE prophylaxis or have documentation of why no VTE prophylaxis was given the day of or the day after hospital admission, or surgery end date for surgeries that start the day of or the day after hospital admission
 
@@ -98,7 +98,7 @@ When a patient has an inpatient encounter, during which they should be given VTE
    Note to Balloters: We are actively seeking feedback on whether VTE-1 Data Exchange interactions are appropriate or useful for hospital systems.
    {:.note-to-balloters}
 
-## VTE-1 Measure Reporting Interactions:
+## VTE-1 Measure Reporting Interactions
 
 ### Individual MeasureReport
 {:.no_toc}

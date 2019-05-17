@@ -40,7 +40,7 @@ The following resources are used in all data exchange transactions:
 
 Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
 
-### Graph of DEQM Resources:
+### Graph of DEQM Resources
 {:.no_toc}
 
 The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1:

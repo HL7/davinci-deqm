@@ -41,7 +41,7 @@ The second scenario defined in this guide is when a Reporter needs to exchange a
     the application of the same measures across populations that span
     multiple Consumers (such as payers).
 
-## DEQM MeasureReport Profiles:
+## DEQM MeasureReport Profiles
 
 The MeasureReport resource is used as an organizer for both the data exchange scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
 
