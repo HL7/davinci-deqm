@@ -57,12 +57,12 @@ For MRP either a *Task* resource or an *Observation* resource can be used as the
 
 ## MRP Data Exchange Interactions
 
-In the following interactions, the Provider is acting in the role of the *Producer* and the Payer("Aggregator") is acting in the role of the *Consumer*.
+In the following interactions, the Provider is acting in the role of the *Producer* and the Payer (“Aggregator”) is acting in the role of the *Consumer*.
 
 ### Gather Data Requirements from Payer
 {:.no_toc}
 
-   In this optional step, the Provider queries the Payer("Aggregator") for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
+   In this optional step, the Provider queries the Payer (“Aggregator”) for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
         {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
@@ -85,11 +85,11 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 ## MRP Measure Reporting Interactions
 
-In the following interactions,  The Payer("Aggregator") is acting in the role of the *Reporter*.
+In the following interactions,  The Payer ("Aggregator") is acting in the role of the *Reporter*.
 
 ### Individual MeasureReport
 
-The Payer("Aggregator") pushes the Bundle of supporting resources with the MRP Individual MeasureReport Bundle to the Receiver.
+The Payer (“Aggregator”) pushes the Bundle of supporting resources with the MRP Individual MeasureReport Bundle to the Receiver.
 
 {% include img-portrait.html img="mrp_indv_report.jpg" caption = "Figure 3-4 Individual Reporting Technical Workflow" %}
 
@@ -99,7 +99,7 @@ The Payer("Aggregator") pushes the Bundle of supporting resources with the MRP I
 
 ### Summary MeasureReport
 
-The Payer("Aggregator") pushes the MRP Summary MeasureReport to the Receiver.
+The Payer (“Aggregator”) pushes the MRP Summary MeasureReport to the Receiver.
 
 {% include img-portrait.html img="mrp_summ_report.jpg" caption = "Figure 3-5 Summary Reporting Technical Workflow" %}
 
