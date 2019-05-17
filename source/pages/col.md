@@ -70,7 +70,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 ### Option 4: MeasureReport Using Condition
 {:.no_toc}
 
- An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions such as colorectal cancer.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows how you would use a DEQM Individual MeasureReport and its associated resources to represent when you need to send a condition that represents an exclusion to the measure.
+ An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions such as colorectal cancer.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows how you would use a DEQM Individual MeasureReport and its associated resources to represent a condition that represents an exclusion to the measure.
 
 
  {% include img.html img="DEQM Resource Diagram - COL4.jpg" caption ="Figure 3-8 Measure Report Using Condition"%}
