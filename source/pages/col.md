@@ -108,7 +108,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include examplebutton.html example="col-collect-example" b_title = "Click Here To See Example COL Collect Data" %}
 
-#### Payer/Aggregator Subscribes for Notification when data is available
+#### Payer/Aggregator Subscribes for Notification when Data is Available
 {:.no_toc}
 Payer/Aggregator subscribes to the Provider for notification when Colorectal Cancer Screening data is available.  The Provider notifies the Aggregator when the data is available and Payer/Aggregator uses the Collect Data operations as described above to retrieve the data.
 
