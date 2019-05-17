@@ -23,7 +23,7 @@ Transactions between Consumers (organizations that want to evaluate quality meas
 1. CQM data may be requested from the Producer by the Consumer using the [Collect Data operation](#collect-data)
 1. The Consumer may subscribe to a Producer's [Subscription service](#pub-sub) to be notified when the CQM data is available.
 
-FHIR operations allows the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
+FHIR operations allow the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
 
 ## Profiles
 
