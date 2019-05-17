@@ -78,7 +78,7 @@ At the very least, an individual measure report should include:
 
 -  Stratification variables, supplemental data elements, risk adjustment variables, and any other data element specified in the referenced CQM(s)
 
-- the conclusive evidence needed to confirm that a criterion was met for that CQM.  For instance, a record for a patient who has been in the Intensive Care Unit undergoing continuous blood pressure monitoring may have much more blood pressure observations than are needed to compute the criteria.
+- The conclusive evidence needed to confirm that a criterion was met for that CQM.  For instance, a record for a patient who has been in the Intensive Care Unit undergoing continuous blood pressure monitoring may have much more blood pressure observations than are needed to compute the criteria.
 
 A quality program supporting the individual reporting scenario will
 often provide prescriptive guidelines that define additional data,
