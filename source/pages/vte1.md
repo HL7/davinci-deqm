@@ -40,9 +40,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 
 ## Graph of VTE Resources
 
-This measure assesses the number of patients who received VTE prophylaxis or have documentation of why no VTE prophylaxis was given the day of or the day after hospital admission, or surgery end date for surgeries that start the day of or the day after hospital admission
-
-Below is listed a resource diagram that meets a situation in the VTE measure.
+Resource graph diagrams that meets a situation in the VTE measure are listed below.
 
 ### Option 1: Measure Report Using MedicationAdministration
 {:.no_toc}
