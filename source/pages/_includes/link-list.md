@@ -129,3 +129,4 @@
 [DEQM Measure Subscription Extension]: StructureDefinition-extension-measureSubscription.html
 [Summary Measure Reporting Interactions]: summary-reporting.html
 [Individual Measure Reporting Interactions]: indv-reporting.html
+[Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html

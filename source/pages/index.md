@@ -197,7 +197,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 |R4|FHIR Release 4|
 |REST|Representational State Transfer|
 |STU3|FHIR Release 3 (STU)|
-|VTE|Venous Thromboembolism Prophylaxis|
+|VTE-1|Venous Thromboembolism Prophylaxis Measure|
 
 <br />
 
