@@ -38,9 +38,9 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |ProcedureRequest|QI Core ProcedureRequest Profile|[QI Core ProcedureRequest (STU3)]|[QI Core ProcedureRequest (R4)]|
 
 
-## Graph of VTE Resources
+## Graph of VTE-1 Resources
 
-Resource graph diagrams that meets a situation in the VTE measure are listed below.
+In this section we list resource graph diagrams for 7 clinical scenarios that meet the VTE-1 measure.
 
 ### Option 1: Measure Report Using MedicationAdministration
 {:.no_toc}
