@@ -43,12 +43,12 @@ The colonoscopy measure ([HEDIS Colorectal Cancer Screening/CMS130]) is an examp
 
 In a screening measure, it is reported both what is done that meets the screening requirement as well as information that would exclude the patient from being required to meet the measure.
 
-For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure* is the primary resource used to evaluate the measure. Below are listed the resource diagrams that meet each situation in the COL screening measure.  
+For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure* is the primary resource used to evaluate the measure. Below are listed the resource diagrams that meet each situation in the COL screening measure.  Note that overlapping boxes in the diagrams represents a choice of one or the resources.
 
 ### Option 1: MeasureReport Using Observation
 {:.no_toc}
 
-When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  The following resource graph diagram shows how a laboratory test to meet the screen measure would be represented using a DEQM Individual MeasureReport and its associated resources.  Note that the Practitioner and Organization are overlapped to indicate a choice of one or the other.
+When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  The following resource graph diagram shows how a laboratory test to meet the screen measure would be represented using a DEQM Individual MeasureReport and its associated resources.
 
 {% include img.html img="DEQM Resource Diagram - COL1.jpg" caption ="Figure 3-5 Measure Report Using Observation" %}
 

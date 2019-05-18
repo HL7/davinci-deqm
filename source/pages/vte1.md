@@ -40,7 +40,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 
 ## Graph of VTE-1 Resources
 
-In this section we list resource graph diagrams for 7 clinical scenarios that meet the VTE-1 measure.
+In this section we list resource graph diagrams for 7 clinical scenarios that meet the VTE-1 measure.  Note that overlapping boxes in the diagrams represents a choice of one the resources.
 
 ### Option 1: Measure Report Using MedicationAdministration
 {:.no_toc}
