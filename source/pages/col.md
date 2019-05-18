@@ -132,7 +132,7 @@ Payer pushes the Bundle of supporting resource with COL Individual MeasureReport
 ### Summary MeasureReport
 {:.no_toc}
 
-Payer pushes the Bundle of supporting resource with COL Summary MeasureReport Bundle to the end user.
+Payer pushes the COL Summary MeasureReport Bundle to the end user.
 
 {% include img-portrait.html img="col_summ_report.jpg" caption = "Figure 3-13 Summary Reporting Technical Workflow" %}
 
