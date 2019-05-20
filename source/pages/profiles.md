@@ -1,5 +1,5 @@
 ---
-title: Profiles and Extension defined as part of this Guide
+title: Profiles and Extensions defined as part of this Guide
 layout: default
 active: profiles
 ---
