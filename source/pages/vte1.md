@@ -80,7 +80,7 @@ When a patient has an inpatient encounter and is principally diagnosed with eith
 ### Option 6: Measure Report Using Procedure/ProcedureRequest and Encounter
 {:.no_toc}
 
-When a patient has an inpatient encounter, during which they are provided Comfort Measures within 1 day of being admitted or 1 day of a surgical procedure for which they were admitted, these Comfort Measures satisfy the numerator logic for the measure. The surgical procedure is defined by the presence of a code from the “general or neuraxial anesthesia” value set present in the measure. The Comfort measures are represented by either a Procedure or a ProcedureRequest with a code from the “Comfort Measures” value set present in the measure.  The following resource graph diagram shows when the patient has had this Encounter with a principle diagnosis to meet the measure.
+When a patient has an inpatient encounter, during which they are provided Comfort Measures within 1 day of being admitted or 1 day of a surgical procedure for which they were admitted, these Comfort Measures are excluded from the denominator of the measure. for the measure. The surgical procedure is defined by the presence of a code from the “general or neuraxial anesthesia” value set present in the measure. The Comfort measures are represented by either a Procedure or a ProcedureRequest with a code from the “Comfort Measures” value set present in the measure.  The following resource graph diagram shows when the patient has had this Encounter with a principle diagnosis to meet the measure.
 
 {% include img.html img="DEQM Resource Diagram - VTE6.jpg" caption = "Figure 3-19" %}
 
