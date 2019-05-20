@@ -170,7 +170,7 @@ The reporting scenarios are:
 
 1. **Individual** - Used to report the results of a quality measure for a particular patient along with the complete set of data-of-interest to a quality reporting receiver
 1. **Summary** - Used to report the results of a quality measure for the applicable population to a quality reporting receiver
-1.**Patient-List** - A patient list report that includes a listing of patients that satisfied each population criteria in the measure *NOTE: This reporting scenario is out of scope for this version of the Implementation Guide.*
+1. **Patient-List** - A patient list report that includes a listing of patients that satisfied each population criteria in the measure *NOTE: This reporting scenario is out of scope for this version of the Implementation Guide.*
 
 For the reporting scenarios, the actors are Reporters and Receivers:
 
