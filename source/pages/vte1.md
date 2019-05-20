@@ -119,7 +119,7 @@ When a patient has an inpatient encounter, during which they should be given ven
 ### Individual MeasureReport
 {:.no_toc}
 
-Aggregator pushes the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
+Reporter pushes the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
 Note to Balloters: We are actively seeking input on whether a technical workflow diagram  would be of value for this use case
 {:.note-to-balloters}
@@ -132,7 +132,7 @@ Note to Balloters: We are actively seeking input on whether a technical workflow
 Note to Balloters: The Summary MeasureReport is not currently used for program level reporting.  We are actively seeking input on potential uses for the summary report for VTE-1 or other measures.
 {:.note-to-balloters}
 
-Aggregator pushes the Bundle of supporting resource with VTE-1 Summary MeasureReport Bundle to the end user.
+Reporter posts the VTE-1 Summary MeasureReport to the Receiver.
 
 Note to Balloters: We are actively seeking input on whether a technical workflow diagram would be of value for this use case
 {:.note-to-balloters}
