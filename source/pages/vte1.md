@@ -129,10 +129,10 @@ Note to Balloters: We are actively seeking input on whether a technical workflow
 ### Summary MeasureReport
 {:.no_toc}
 
-Note to Balloters: The Summary MeasureReport is not currently used for program level reporting.  We are actively seeking input on potential uses for the summary report for VTE or other measures.
+Note to Balloters: The Summary MeasureReport is not currently used for program level reporting.  We are actively seeking input on potential uses for the summary report for VTE-1 or other measures.
 {:.note-to-balloters}
 
-Aggregator pushes the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
+Aggregator pushes the Bundle of supporting resource with VTE-1 Summary MeasureReport Bundle to the end user.
 
 Note to Balloters: We are actively seeking input on whether a technical workflow diagram would be of value for this use case
 {:.note-to-balloters}
