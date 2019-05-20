@@ -113,7 +113,7 @@ The Quality Improvement Core Implementation Guide, or QI-Core, defines a set of 
 
 #### Data Exchange for Quality Measures (DEQM)
 
-The Data Exchange for Quality Measures Implementation Guide, or DEQM, provides a framework that defines conformance profiles and guidance to enable the exchange of quality information and quality measure reporting. The DEQM expects to use quality measures specified in accordance with the Quality Measure IG and QI Core.
+The Data Exchange for Quality Measures Implementation Guide, or DEQM, provides a framework that defines conformance profiles and guidance to enable the exchange of quality information and quality measure reporting. The DEQM requires the use of quality measures specified in accordance with the Quality Measure IG and QI Core.
 
 ### Data Model Standards Landscape
 
