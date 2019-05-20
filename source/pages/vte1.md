@@ -49,7 +49,7 @@ When a patient has an inpatient encounter, is not either pregnant or currently d
 
 {% include img.html img="DEQM Resource Diagram - VTE1.jpg" caption = "Figure 3-14" %}
 
-### Option 2:Measure Report Using DeviceUseStatement/Encounter
+### Option 2:Measure Report Using DeviceUseStatement and Encounter
 {:.no_toc}
 
 When a patient has an inpatient encounter, is not either pregnant or currently diagnosed with a Venous Thromboembolism, and has a device to prevent VTE on the calendar day of admission or the day after, the process for VTE Prophylaxis has been met. The devices that qualify for the measure are listed in the value sets of codes in the measure documentation. The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has had one of these Devices applied to meet the measure.
