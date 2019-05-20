@@ -73,7 +73,7 @@ When a patient has an inpatient encounter where the encounter is <2 days long, o
 ### Option 5: Measure Report Using Encounter and Principle Diagnosis
 {:.no_toc}
 
-When a patient has an inpatient encounter and is principally diagnosed with either a mental health condition, or a stroke (either hemorrhagic or ischemic), they are excluded from the numerator of the measure. Codes for the diagnoses will come from the respective valuesets from the measure. The following resource graph diagram shows when the patient has had this Encounter with a principle diagnosis to meet the measure.
+When a patient has an inpatient encounter and is principally diagnosed with either a mental health condition, or a stroke (either hemorrhagic or ischemic), they are excluded from the denominator of the measure. Codes for the diagnoses will come from the respective valuesets from the measure. The following resource graph diagram shows when the patient has had this Encounter with a principle diagnosis to meet the measure.
 
 {% include img.html img="DEQM Resource Diagram - VTE5.jpg"  caption = "Figure 3-18" %}
 
