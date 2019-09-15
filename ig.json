@@ -335,7 +335,7 @@
   "dependencyList": [
     {
       "name": "qicore",
-      "version": "current",
+      "version": "3.2.0",
       "location": "http://hl7.org/fhir/us/qicore",
       "package": "hl7.fhir.us.qicore"
     },
@@ -348,8 +348,8 @@
     {
       "name": "ushedis",
       "version": "dev",
-      "location": "http://ncqa.org/fhir/us/hedis",
-      "package": "ncqa.fhir.us.hedis"
+      "location": "http://ncqa.org/fhir/hedis",
+      "package": "ncqa.fhir.hedis"
     }
   ],
   "license": "CC0-1.0",
