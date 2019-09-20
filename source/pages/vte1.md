@@ -7,7 +7,7 @@ topofpage: true
 
 ## Introduction
 
-The VTE measure assesses the number of patients who received VTE prophylaxis or have documentation why no VTE prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission.
+The VTE-1 measure assesses the number of patients who received venous thromboembolism (VTE) prophylaxis or have documentation why no venous thromboembolism prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission.
 
 The example presented is based on the QDM version of [CMS 108v7], which has been represented using profiles derived from [QI Core].  Additional information regarding the measure specification can be found in the [Quality Measure Implementation Guide]
 
@@ -48,7 +48,7 @@ In this section we list resource graph diagrams for 7 clinical scenarios that me
 VTE-1 has been met when a patient:
 
 1. has an inpatient encounter such as for a joint replacement procedure
-2. is not pregnant or currently diagnosed with a Venous Thromboembolism
+2. is not pregnant or currently diagnosed with a venous thromboembolism
 3. is administered either Heparin, a Factor Xa Inhibitor, or Warfarin on the calendar day of admission or the day after.
 
 The medications that qualify for the measure are listed in the value sets of codes in the measure documentation. The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has been administered one of these medications to meet the measure.
@@ -61,8 +61,8 @@ The medications that qualify for the measure are listed in the value sets of cod
 VTE-1 has been met when a patient:
 
 1. has an inpatient encounter such as for a joint replacement procedure
-2. is not pregnant or currently diagnosed with a Venous Thromboembolism
-3. has a device to prevent VTE on the calendar day of admission or the day after.
+2. is not pregnant or currently diagnosed with a venous thromboembolism
+3. has a device to prevent venous thromboembolism prophylaxis on the calendar day of admission or the day after.
 
 The devices that qualify for the measure are listed in the value sets of codes in the measure documentation. The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has had one of these Devices applied to meet the measure.
 
@@ -74,8 +74,8 @@ The devices that qualify for the measure are listed in the value sets of codes i
 VTE-1 has been met when a patient:
 
 1. has an inpatient encounter such as for a joint replacement procedure
-2. is not pregnant or currently diagnosed with a Venous Thromboembolism
-3. and has been assessed to have a low risk for VTE typically through laboratory testing, on the calendar day of admission or the day after.
+2. is not pregnant or currently diagnosed with a venous thromboembolism
+3. and has been assessed to have a low risk for venous thromboembolism prophylaxis typically through laboratory testing, on the calendar day of admission or the day after.
 
 The result codes that qualify as “low risk for VTE” are listed in the value sets of codes in the measure documentation. The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has had this Observation made to meet the measure.
 

@@ -123,7 +123,7 @@ In the following interactions, The Payer ("Aggregator") is acting in the role of
 ### Individual MeasureReport
 {:.no_toc}
 
-Payer in the role of the Reporter pushes the Bundle of supporting resource with COL Individual MeasureReport Bundle to the end user.
+Payer in the role of the Reporter pushes the Bundle of supporting resource with COL Individual MeasureReport resource to the end user.
 
 {% include img-portrait.html img="col_indv_report.jpg" caption = "Figure 3-12 Individual Reporting Technical Workflow" %}
 
