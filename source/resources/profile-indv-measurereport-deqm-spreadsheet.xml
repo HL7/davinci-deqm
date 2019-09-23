@@ -7,9 +7,9 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Grahame</Author>
-  <LastAuthor>User</LastAuthor>
+  <LastAuthor>Yan</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2019-03-06T17:08:28Z</LastSaved>
+  <LastSaved>2019-09-23T05:25:10Z</LastSaved>
   <Version>14.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
@@ -1105,10 +1105,10 @@
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="60" ss:Span="1"/>
    <Column ss:Index="17" ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="81"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="37.200000000000003"/>
-   <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="121.2"/>
+   <Column ss:StyleID="s84" ss:Width="239.4"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="160.80000000000001"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="114"/>
-   <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="135"/>
+   <Column ss:StyleID="s84" ss:Width="538.79999999999995"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="120"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="135"/>
    <Column ss:Index="26" ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="103.8"/>
@@ -1690,10 +1690,9 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">The score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%).</Data></Cell>
-    <Cell ss:StyleID="s109"/>
+    <Cell ss:Index="20" ss:StyleID="s109"/>
     <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s109"/>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%).</Data></Cell>
     <Cell ss:StyleID="s110"/>
     <Cell ss:StyleID="s110"/>
     <Cell ss:StyleID="s110"/>
@@ -6073,12 +6072,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>2</TopRowVisible>
+   <LeftColumnVisible>17</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>14</ActiveRow>
-     <RangeSelection>R15</RangeSelection>
+     <ActiveRow>15</ActiveRow>
+     <ActiveCol>21</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
