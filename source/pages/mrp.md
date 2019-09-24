@@ -51,9 +51,9 @@ Note that the exchange of the reconciled medication list, indication of conversa
 
 For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure.
 
-{% include img.html img="mrp-task.jpg" caption="Figure 3-1 MRP using Task" %}
+{% include img.html img="mrp-task.jpg" caption="Figure 3-1 MRP Using Task" %}
 
-{% include img.html img="mrp-observation.jpg" caption="Figure 3-2 MRP using Observation" %}
+{% include img.html img="mrp-observation.jpg" caption="Figure 3-2 MRP Using Observation" %}
 
 ## MRP Data Exchange Interactions
 
