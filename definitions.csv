@@ -29,9 +29,9 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm/STU3
-dependencyList.name,qicore|uscore|ushedis|cqfm
-dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://ncqa.org/fhir/us/hedis|http://hl7.org/fhir/us/cqfmeasures/2019May
-dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|ncqa.fhir.us.hedis|hl7.fhir.us.cqfmeasures
+dependencyList.name,qicore|uscore|cqfm
+dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures/2019May
+dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|hl7.fhir.us.cqfmeasures
 dependencyList.version,3.2.0|2.0.0|dev|0.1.0
 special-urls,
 tool,jekyll

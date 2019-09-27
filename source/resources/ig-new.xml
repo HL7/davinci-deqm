@@ -45,11 +45,6 @@
     <packageId value="hl7.fhir.us.core"/>
     <version value="2.0.0"/>
   </dependsOn>
-  <dependsOn id="ushedis">
-    <uri value="http://ncqa.org/fhir/us/hedis"/>
-    <packageId value="ncqa.fhir.us.hedis"/>
-    <version value="dev"/>
-  </dependsOn>
   <dependsOn id="cqfm">
     <uri value="http://hl7.org/fhir/us/cqfmeasures/2019May"/>
     <packageId value="hl7.fhir.us.cqfmeasures"/>

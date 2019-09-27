@@ -51,12 +51,6 @@
     "version" : "2.0.0"
   },
   {
-    "id" : "ushedis",
-    "uri" : "http://ncqa.org/fhir/us/hedis",
-    "packageId" : "ncqa.fhir.us.hedis",
-    "version" : "dev"
-  },
-  {
     "id" : "cqfm",
     "uri" : "http://hl7.org/fhir/us/cqfmeasures/2019May",
     "packageId" : "hl7.fhir.us.cqfmeasures",
