@@ -1,9 +1,10 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
+onlyJson,FALSE
 igtemplate-dir,/Users/ehaas/Documents/FHIR/IG-Template2/
 working-dir,/Users/ehaas/Documents/FHIR/DaVinci/
-title,Data Exchange For Quality Measures
+title,Data Exchange For Quality Measures STU3
 status,draft
-publisher,HL7 International - Financial Management Work Group
+publisher,HL7 International - Clinical Quality Information Work Group
 contact.system,url
 contact.value,http://www.hl7.org/Special/committees/cqi/index.cfm
 extensions,extension-referenceAny|extension-measureSubscription|extension-doNotPerform|extension-dataCollectionType|extension-reportingVendor|extension-certificationIdentifier
@@ -28,10 +29,10 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm/STU3
-dependencyList.name,qicore|uscore|ushedis
-dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://ncqa.org/fhir/us/hedis
-dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|ncqa.fhir.us.hedis
-dependencyList.version,current|2.0.0|dev
+dependencyList.name,qicore|uscore|ushedis|cqfm
+dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://ncqa.org/fhir/us/hedis|http://hl7.org/fhir/us/cqfmeasures/2019May
+dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|ncqa.fhir.us.hedis|hl7.fhir.us.cqfmeasures
+dependencyList.version,3.2.0|2.0.0|dev|0.1.0
 special-urls,
 tool,jekyll
 logging,progress

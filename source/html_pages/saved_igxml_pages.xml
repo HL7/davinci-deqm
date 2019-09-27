@@ -1,3 +1,4 @@
+***** replace
 
 <!-- ============ Framework Page =============== -->
 <page>
@@ -49,8 +50,19 @@
 </page>
 <!-- ============ End Use Cases Page =============== -->
 
-delete<!-- ============ End CapabilityStatements page   =============== -->
-delete<!-- ============ Security Page ===============  <page> -->
+*****delete
+
+    <!-- ============ SearchParameter Page =============== -->
+    <page><source value="searchparameters.html"/><title value="Search Parameters"/><kind value="page"/>
+
+      <!-- ============ SearchParameters =============== -->
+      <!-- insert searchparameters -->
+      <!-- ============ End SearchParameters =============== -->
+    </page>
+
+*****delete<!-- ============ SearchParameters Page ===============  <page> -->
+
+******* add
 <!-- ============ Change Notes Page =============== -->
 <page>
   <source value="change-notes.html"/>

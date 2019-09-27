@@ -31,21 +31,21 @@ Note that the exchange of the reconciled medication list, indication of conversa
 ### Resources supported for this Use Case
 {:.no_toc}
 
-|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
-|---|---|---|---|
-|Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|[QI Core Coverage (R4)]|
-|Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
-|Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
-|Library|CQFM Library Profile|[CQFM Library (STU3)]|[CQFM Library (R4)]|
-|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
-|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
-|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
-|Observation|HEDIS MRP Observation Profile[^8]|[HEDIS MRP Observation (STU3)]|[HEDIS MRP Observation (R4)]|
-|Organization|DEQM Organization Profile[^9]|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
-|Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
-|Task|HEDIS MRP Task Profile[^8]|[HEDIS MRP Task (STU3)]|[HEDIS MRP Task (R4)]|
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
+|Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|
+|Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|
+|Location|QI Core Location Profile|[QI Core Location (STU3)]|
+|Library|CQFM Library Profile|[CQFM Library (STU3)]|
+|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|
+|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|
+|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|
+|Observation|HEDIS MRP Observation Profile[^8]|[HEDIS MRP Observation (STU3)]|
+|Organization|DEQM Organization Profile[^9]|[DEQM Organization (STU3)]|
+|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|
+|Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner (STU3)]|
+|Task|HEDIS MRP Task Profile[^8]|[HEDIS MRP Task (STU3)]|
 
 ## Graph of MRP Resources
 

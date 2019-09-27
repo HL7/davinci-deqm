@@ -16,10 +16,10 @@
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/hl7.fhir.us.davinci-deqm.stu3-0.2.0"/>
   <version value="0.2.0"/>
-  <name value="Data Exchange For Quality Measures"/>
+  <name value="Data Exchange For Quality Measures STU3"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <publisher value="HL7 International - Financial Management Work Group"/>
+  <publisher value="HL7 International - Clinical Quality Information Work Group"/>
   <contact>
     <telecom>
       <system value="url"/>
@@ -38,7 +38,7 @@
   <dependsOn id="qicore">
     <uri value="http://hl7.org/fhir/us/qicore"/>
     <packageId value="hl7.fhir.us.qicore"/>
-    <version value="current"/>
+    <version value="3.2.0"/>
   </dependsOn>
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core"/>
@@ -49,6 +49,11 @@
     <uri value="http://ncqa.org/fhir/us/hedis"/>
     <packageId value="ncqa.fhir.us.hedis"/>
     <version value="dev"/>
+  </dependsOn>
+  <dependsOn id="cqfm">
+    <uri value="http://hl7.org/fhir/us/cqfmeasures/2019May"/>
+    <packageId value="hl7.fhir.us.cqfmeasures"/>
+    <version value="0.1.0"/>
   </dependsOn>
   <definition>
     <grouping id="p1">
@@ -559,6 +564,11 @@
         </page>
       </page>
       <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="html"/>
+      </page>
+      <page>
         <nameUrl value="capstatements.html"/>
         <title value="Capability Statements"/>
         <generation value="html"/>
@@ -604,14 +614,14 @@
         <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="change-notes.html"/>
-        <title value="Change Notes"/>
-        <generation value="html"/>
-      </page>
-      <page>
         <nameUrl value="toc.html"/>
         <title value="Table of Contents"/>
         <generation value="generated"/>
+      </page>
+      <page>
+        <nameUrl value="change-notes.html"/>
+        <title value="Change Notes"/>
+        <generation value="html"/>
       </page>
     </page>
     <parameter>

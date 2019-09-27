@@ -19,10 +19,10 @@
   }],
   "url" : "http://hl7.org/fhir/us/davinci-deqm/STU3/ImplementationGuide/hl7.fhir.us.davinci-deqm.stu3-0.2.0",
   "version" : "0.2.0",
-  "name" : "Data Exchange For Quality Measures",
+  "name" : "Data Exchange For Quality Measures STU3",
   "status" : "draft",
   "experimental" : true,
-  "publisher" : "HL7 International - Financial Management Work Group",
+  "publisher" : "HL7 International - Clinical Quality Information Work Group",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
@@ -42,7 +42,7 @@
     "id" : "qicore",
     "uri" : "http://hl7.org/fhir/us/qicore",
     "packageId" : "hl7.fhir.us.qicore",
-    "version" : "current"
+    "version" : "3.2.0"
   },
   {
     "id" : "uscore",
@@ -55,6 +55,12 @@
     "uri" : "http://ncqa.org/fhir/us/hedis",
     "packageId" : "ncqa.fhir.us.hedis",
     "version" : "dev"
+  },
+  {
+    "id" : "cqfm",
+    "uri" : "http://hl7.org/fhir/us/cqfmeasures/2019May",
+    "packageId" : "hl7.fhir.us.cqfmeasures",
+    "version" : "0.1.0"
   }],
   "definition" : {
     "grouping" : [{
@@ -566,6 +572,11 @@
         }]
       },
       {
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
+        "generation" : "html"
+      },
+      {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
         "generation" : "html",
@@ -611,14 +622,14 @@
         "generation" : "html"
       },
       {
-        "nameUrl" : "change-notes.html",
-        "title" : "Change Notes",
-        "generation" : "html"
-      },
-      {
         "nameUrl" : "toc.html",
         "title" : "Table of Contents",
         "generation" : "generated"
+      },
+      {
+        "nameUrl" : "change-notes.html",
+        "title" : "Change Notes",
+        "generation" : "html"
       }]
     },
     "parameter" : [{

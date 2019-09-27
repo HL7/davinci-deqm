@@ -1,13 +1,25 @@
+title: Data Exchange For Quality Measures FHIR STU3
+copyrightyear: "2019" # copyright date for footer
 historypath : "http://www.hl7.org/fhir/us/davinci-deqm/history.cfml" # complete path to IG history file
 changelink: http://hl7.org/fhir-issues
 summaries: false #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials
 build: ci  # choice of ci|ballot|version
-ballot: STU2    #STU version of IG ( if needed for publishing HL7 guides)
+ballot: STU1    #STU version of IG ( if needed for publishing HL7 guides)
 hl7_ig: true #true if HL7 IG
-qi_r3: http://hl7.org/fhir/us/qicore/
+showXML: true  #'true' if want xml tab'
+showTTL: true  #'true' if want ttl tab'
+showMappings: false  # 'true' if want to display mappings tab'
+showDefs: true  # 'true' if want to display Definitions tab'
+showExamples: false  # 'true' if want to display Examples tab -currently no template for it'
+showPsuedoJson: true # 'true' if want to display Psuedo JSON profile view'
+showPsuedoXML: # 'true' if want to display Psuedo xml profile view'
+default_profile_view: 1  # choice of 0|1|2|3 for summary|differential|full|all views in profile
+summary_view_pages:  # to show summaries as default view for comment ballot
+ballot_pages: # list of pages to highlight for balloters/comments  names = html pages for ig pub generated artifacts and file names for pages
+qi_r3: http://hl7.org/fhir/us/qicore/STU32/
 hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
-cqfm_r3:  http://build.fhir.org/ig/HL7/cqf-measures/
+cqfm_r3:  http://hl7.org/fhir/us/cqfmeasures/2019May/
 r4: http://hl7.org/fhir/R4/
 r3: http://hl7.org/fhir/STU3/
 example_types:

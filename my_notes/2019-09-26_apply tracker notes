@@ -1,0 +1,16 @@
+DEQM comment application notes:
+
+updated dependencyList
+
+dependencyList.name,qicore|uscore|cqfm
+dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures/2019May
+dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|hl7.fhir.us.cqfmeasures
+dependencyList.version,3.2.0|2.0.0|0.1.0
+
+note that title is not being added to ig.xml by the tool
+
+Keep the R4 stuff until the end then port over into an R4 IG
+and make the change their.
+
+"modularize the narrative pieces then"
+or vice versa create a generic guide and modulularize the R4 and R3 bits
