@@ -130,3 +130,7 @@
 [Summary Measure Reporting Interactions]: summary-reporting.html
 [Individual Measure Reporting Interactions]: indv-reporting.html
 [Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html
+[Infobutton]: http://www.openinfobutton.org/
+[eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
+[CDS Hooks]: https://cds-hooks.org/
+[CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml

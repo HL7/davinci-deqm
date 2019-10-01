@@ -17,7 +17,16 @@ topofpage: true
 
 Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of "data-of-interest" is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data-of-interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.  
 
-Transactions between Consumers (organizations that want to evaluate quality measures) and Producers (organizations that deliver care to patients) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation or a request from a Payer for the attestation information. Note that triggering is implementation specific and out of scope for this IG. This Implementation Guide (IG) describes three methods of exchanging data quality information using a set of [FHIR operations] that provide the framework to exchange CQM data:
+Transactions between Consumers (organizations that want to evaluate quality measures) and Producers (organizations that deliver care to patients) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation or a request from a Payer for the attestation information. Note that although triggering is implementation specific and out of scope for this IG,  there are a variety of potential triggering points for reporting events within clinical systems.  These include:
+
+* [Infobutton] event listing
+* [eCR] Event Types
+* [CDS Hooks] Hook definitions
+* [CPG-on-FHIR] common processes
+
+and there will be a need to convey triggering information in a computable way to EHRs and other clinical systems.
+
+This Implementation Guide (IG) describes three methods of exchanging data quality information using a set of [FHIR operations] that provide the framework to exchange CQM data:
 
 1. CQM data may be submitted to the Consumer by the Producer using the [Submit Data operation](#submit-data)
 1. CQM data may be requested from the Producer by the Consumer using the [Collect Data operation](#collect-data)
