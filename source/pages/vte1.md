@@ -121,8 +121,7 @@ When a patient has an inpatient encounter, during which they should be given ven
 
 Reporter pushes the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
 
-Note to Balloters: We are actively seeking input on whether a technical workflow diagram  would be of value for this use case
-{:.note-to-balloters}
+{% include img-portrait.html img="vte_indv_report.jpg" caption = "Figure 3-21 Individual Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="vte-indv-report-example" b_title = "Click Here To See Post Bundle with VTE-1 Individual MeasureReport" %}
 
