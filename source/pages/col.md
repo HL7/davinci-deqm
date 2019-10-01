@@ -16,7 +16,13 @@ topofpage: true
 
 The colonoscopy measure such as [HEDIS Colorectal Cancer Screening/CMS130][^10] is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening for all patients in the population receiving care during the measurement period.
 
+### COL Use Case Background
+
+In the case of colorectal cancer screening, both tests to detect colorectal cancer and polyps and information that would exclude the patient from being required meet the measure are reported.  For background on methods used to screen people for colorectal cancer see [Colorectal Cancer Screening (PDQ®)-Patient Version], and for background on benefits of screening see [Colorectal Cancer Screening (PDQ®)–Health Professional Version] both published by the National Cancer Institute.
+
 ## FHIR Resource Overview
+
+
 
 ### Resources Supported for this Use Case
 {:.no_toc}
@@ -40,8 +46,6 @@ The colonoscopy measure such as [HEDIS Colorectal Cancer Screening/CMS130][^10] 
 |Procedure|QI Core Procedure Profile|[QI Core Procedure (STU3)]|[QI Core Procedure (R4)]|
 
 ## Graph of COL Resources
-
-In a screening measure, it is reported both what is done that meets the screening requirement as well as information that would exclude the patient from being required to meet the measure.
 
 For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure* is the primary resource used to evaluate the measure. Below are listed the resource diagrams that meet each situation in the COL screening measure.  Note that overlapping boxes in the diagrams represents a choice of one or the resources.
 

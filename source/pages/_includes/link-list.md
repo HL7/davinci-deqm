@@ -132,3 +132,5 @@
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Use cases]: usecases.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
+[Colorectal Cancer Screening (PDQ®)–Health Professional Version]: https://www.cancer.gov/types/colorectal/hp/colorectal-screening-pdq
+[Colorectal Cancer Screening (PDQ®)–Patient Version]: https://www.cancer.gov/types/colorectal/patient/colorectal-screening-pdq
