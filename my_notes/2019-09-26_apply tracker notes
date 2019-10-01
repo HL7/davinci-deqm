@@ -14,3 +14,35 @@ and make the change their.
 
 "modularize the narrative pieces then"
 or vice versa create a generic guide and modulularize the R4 and R3 bits
+
+ig-pub is messing with my ig.xml file adding in packages ??
+
+for VTE-1 tech workflow for only ind summary?
+
+
+Bryn to review and mark as applied if OK:
+
+21987  http://build.fhir.org/ig/HL7/davinci-deqm/datax.html#introduction
+21985  where should this note go?  it does not fit in the Exchange Scenarios section of DEQM:
+
+"Public health, as well as other stakeholders have ongoing needs for quality improvement at the point of care. Every effort should be made to establish a capable distributed rule processing environment in FHIR."
+
+I think fits better in the Ecosystem section as a footnote.
+
+21983
+http://build.fhir.org/ig/HL7/davinci-deqm/guidance.html#preconditions-and-assumptions
+
+I added smart launch since we don't talk about bulk data in this IG the disposition may be a bit premature
+
+21982
+Where does this content go - the tracker indicates in it should go here:
+
+http://build.fhir.org/ig/HL7/davinci-deqm/index.html#data-model-standards-landscaper
+
+if that is the case then should be updated in the source and not here.  let me know
+
+email bryn on this one
+
+GF#21969 deals with the Quality measures landscape diagram which is used across the IGs. do you want to update.  Shall I?
+
+Check cap statement maker for empty headers  ( hand edit out for now )
