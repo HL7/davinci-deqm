@@ -23,6 +23,8 @@ The second scenario defined in this guide is when a Reporter needs to exchange a
 
 ## Preconditions and Assumptions
 
+-  Although the exact mechanisms for securing these exchanges are not specified as part of this implementation guide, systems should use standard authentication and authorization approaches.  The [SMART App Launch] and [SMART backend services] authentication/authorization approach are recommended models.
+
 -   The Measure resource is used to provide both human- and
     machine-readable definitions of a quality measure
 

@@ -134,3 +134,5 @@
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [CDS Hooks]: https://cds-hooks.org/
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
+[SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
+[SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
