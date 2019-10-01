@@ -32,6 +32,9 @@ This Implementation Guide (IG) describes three methods of exchanging data qualit
 1. CQM data may be requested from the Producer by the Consumer using the [Collect Data operation](#collect-data)
 1. The Consumer may subscribe to a Producer's [Subscription service](#pub-sub) to be notified when the CQM data is available.
 
+  This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based notification is planned which will align with the outcomes of the Argonaut project.
+  {:.stu-note}
+
 FHIR operations allow the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
 
 ## Profiles
@@ -169,15 +172,12 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 
 In order to complete the transaction the Producer may need to discover the required data for each Measure by invoking the *Data Requirements* operation on the Consumer 's `Measure/[measure-id]` endpoint. This operation is discussed in the section above.
 
-### Subscriptions
-{: #pub-sub}
-
-This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based notification is planned which will align with the outcomes of the Argonaut project.
-{:.stu-note}
-
 <!-- {% raw %}************************************************************
 KEEP and edit to align with the Updated Argonaut Subscription Model
  ******************************************************************
+### Subscriptions
+{: #pub-sub}
+
 FHIR Subscriptions allow for a Producer to notify the Consumer whenever new CQM data is available.  Effectively, the Consumer subscribes to the Producer's system using the Measure as the criteria. It is a short-hand for subscribing to all the data-of-interest (as defined by the data requirements) for the CQM, but using the Measure as the subscription point allows the implementation to determine the most efficient approach to notification. For example, notifications can be batched on a periodic basis, or they can be performed along transactional boundaries within the implementing system.
 
 The Consumer uses the *Collect Data* operation described above to request the relevant data after it is notified.

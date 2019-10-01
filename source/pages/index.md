@@ -158,7 +158,7 @@ Exchange scenarios are used to exchange subsets of the data-of-interest for a me
 
 1. <b>Submit Data</b> - Used by a producing system to submit a subset of the data-of-interest for a measure to a consuming system
 1. <b>Collect Data</b> - Used by a consuming system to collect a subset of the data-of-interest for a measure from a producing system
-1. <b>Subscription</b> - Used to allow the producing system to notify the consuming system when new or updated data-of-interest for a measure is available
+1. <b>Subscription</b> - Used to allow the producing system to notify the consuming system when new or updated data-of-interest for a measure is available  *NOTE: This exchange scenario is out of scope for this version of the Implementation Guide.*
 
 For these scenarios, the actors are Producers and Consumers, used in the same sense as the Producers and Consumers stakeholders in the Quality Measurement Standards Landscape diagram. Note that within any particular use case, different stakeholders will play the same roles. For example, a Provider may be playing the role of Producer in a particular exchange, while the Payer may be playing the role of Consumer.
 
