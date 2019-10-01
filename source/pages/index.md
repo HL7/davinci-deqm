@@ -146,7 +146,7 @@ The implementation guides in this landscape are currently focused on FHIR STU3, 
 
 ## Quality Reporting Scenarios
 
-This implementation guide describes two groups of quality reporting scenarios as shown in Figure 1-4 below. Exchange scenarios, focused on exchanging subsets of the data-of-interest for a particular measure or set of measures throughout the reporting period, and Reporting scenarios, focused on communicating the results of a quality measure at the end of a reporting period as part of a quality improvement initiative.
+This implementation guide describes two groups of quality reporting scenarios as shown in Figure 1-4 below. The first group are *Exchange Scenarios* which focus on exchanging subsets of the data-of-interest for a particular measure or set of measures throughout the reporting period.  Note that there are use cases for sharing data from a consumer to a producer as well (for example, payers may share screening information with providers). The Second group are *Reporting Scenarios* which focus on communicating the results of a quality measure at the end of a reporting period as part of a quality improvement initiative.
 
 {% include img-portrait.html  caption = "Figure 1-4 Quality Reporting Scenarios" img="quality-reporting-scenarios.png" %}
 
