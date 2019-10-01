@@ -259,21 +259,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-measureSubscription"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/extension-referenceAny"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/subscription-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -458,11 +444,6 @@
         <title value="Profiles and Extensions"/>
         <generation value="html"/>
         <page>
-          <nameUrl value="StructureDefinition-subscription-deqm.html"/>
-          <title value="StructureDefinition Subscription Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-medicationrequest-deqm.html"/>
           <title value="StructureDefinition MedicationRequest Deqm"/>
           <generation value="generated"/>
@@ -530,11 +511,6 @@
         <page>
           <nameUrl value="StructureDefinition-extension-doNotPerform.html"/>
           <title value="StructureDefinition Extension doNotPerform"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-extension-measureSubscription.html"/>
-          <title value="StructureDefinition Extension measureSubscription"/>
           <generation value="generated"/>
         </page>
         <page>

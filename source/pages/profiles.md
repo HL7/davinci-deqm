@@ -26,7 +26,6 @@ these profiles when available.
 |MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest (STU3)]|[DEQM MedicationRequest (R4)]|
 |Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
-|Subscription|DEQM Subscription Profile|[DEQM Subscription (STU3)]|[DEQM Subscription (R4)]|
 
 <br />
 
@@ -39,7 +38,6 @@ these profiles when available.
 |DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
 |DEQM Reference Any Extension|[Reference Any (STU3)]|N/A[^6]|
 |DEQM Reporting Vendor Extension|[Reporting Vendor (STU3)]|[Reporting Vendor (R4)]|
-|DEQM Subscription Extension|[Measure Subscription (STU3)]|[Measure Subscription (R4)]|
 
 <br />
 

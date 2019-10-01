@@ -266,21 +266,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/extension-measureSubscription"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/extension-referenceAny"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/subscription-deqm"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -465,11 +451,6 @@
         "title" : "Profiles and Extensions",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "StructureDefinition-subscription-deqm.html",
-          "title" : "StructureDefinition Subscription Deqm",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-medicationrequest-deqm.html",
           "title" : "StructureDefinition MedicationRequest Deqm",
           "generation" : "generated"
@@ -537,11 +518,6 @@
         {
           "nameUrl" : "StructureDefinition-extension-doNotPerform.html",
           "title" : "StructureDefinition Extension doNotPerform",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-measureSubscription.html",
-          "title" : "StructureDefinition Extension measureSubscription",
           "generation" : "generated"
         },
         {

@@ -48,8 +48,6 @@
 [DEQM Organization (STU3)]: StructureDefinition-organization-deqm.html
 [DEQM Practitioner (R4)]: r4todo.html
 [DEQM Practitioner (STU3)]: StructureDefinition-practitioner-deqm.html
-[DEQM Subscription (R4)]: r4todo.html
-[DEQM Subscription (STU3)]: StructureDefinition-subscription-deqm.html
 [DEQM Summary MeasureReport Profile (R4)]: r4todo.html
 [DEQM Summary MeasureReport Profile (STU3)]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform (R4)]: {{site.r4}}extension-request-doNotPerform.html
@@ -71,8 +69,6 @@
 [Home]: index.html "Home Page"
 [Individual Reporting]: indv-reporting.html
 [Measure Observation]: StructureDefinition-observation-measure.html
-[Measure Subscription (R4)]: r4todo.html
-[Measure Subscription (STU3)]: StructureDefinition-subscription-deqm.html
 [Measure Task]: StructureDefinition-task-measure.html
 [Measure]: {{site.data.fhir.path}}measure.html
 [MeasureReport]: {{site.data.fhir.path}}measurereport.html
@@ -111,7 +107,6 @@
 [Reference Any (STU3)]: StructureDefinition-extension-referenceAny.html
 [Reporting Vendor (R4)]: r4todo.html
 [Reporting Vendor (STU3)]: StructureDefinition-extension-reportingVendor.html
-[Subscription Trigger event Extension]: http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-extension-subscription-triggerevent.html "A brief, natural language description of a particular event identified by the implementation environment. When this event is evaluated as true, it triggers a notification to the subscriber."
 [Subscription]: {{site.data.fhir.path}}subscription.html
 [Summary Reporting]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
@@ -126,7 +121,6 @@
 [DEQM Summary MeasureReport Profile]: profiles.html#profiles
 [DEQM Individual MeasureReport Profile]: profiles.html#profiles
 [COL Collect Data Operation]: col.html#data-exchange-using-the-collect-data-operation
-[DEQM Measure Subscription Extension]: StructureDefinition-extension-measureSubscription.html
 [Summary Measure Reporting Interactions]: summary-reporting.html
 [Individual Measure Reporting Interactions]: indv-reporting.html
 [Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html
@@ -136,5 +130,4 @@
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
 [SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
 [SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
-http://argonautwiki.hl7.org/
-[Argonaut Clinical Data Subscriptions]: index.php?title=Argonaut_2019_Projects#Clinical_Data_Subscriptions
+[Argonaut Clinical Data Subscriptions]: https://argonautwiki.hl7.org/Argonaut_2019_Projects#Clinical_Data_Subscriptions

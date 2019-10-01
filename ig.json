@@ -215,8 +215,7 @@
     "profile-organization-deqm-spreadsheet.xml",
     "profile-coverage-deqm-spreadsheet.xml",
     "profile-indv-measurereport-deqm-spreadsheet.xml",
-    "profile-medicationrequest-deqm-spreadsheet.xml",
-    "profile-subcription-deqm-spreadsheet.xml"
+    "profile-medicationrequest-deqm-spreadsheet.xml"
   ],
   "working-dir": "/Users/ehaas/Documents/FHIR/DaVinci/",
   "gen-examples": "false",

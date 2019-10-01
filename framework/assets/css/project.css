@@ -612,7 +612,7 @@ p.note-to-balloters {
   #background-color: yellow;
   color: red;
   font-weight: bold;}
-.note-to-balloters .stu-note{
+.note-to-balloters, .stu-note{
     margin: 5px;
     padding: 10px;
     border-left-style: solid;

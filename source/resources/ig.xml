@@ -115,13 +115,7 @@
       <sourceReference><reference value="StructureDefinition/extension-doNotPerform"/></sourceReference>
     </resource>
     <resource><example value="false"/>
-      <sourceReference><reference value="StructureDefinition/extension-measureSubscription"/></sourceReference>
-    </resource>
-    <resource><example value="false"/>
       <sourceReference><reference value="StructureDefinition/extension-referenceAny"/></sourceReference>
-    </resource>
-    <resource><example value="false"/>
-      <sourceReference><reference value="StructureDefinition/subscription-deqm"/></sourceReference>
     </resource>
     <resource><example value="false"/>
       <sourceReference><reference value="CapabilityStatement/producer-server"/></sourceReference>
@@ -237,7 +231,6 @@
 
       <!-- ============ Profiles and examples=============== -->
       <!-- insert profiles -->
-      <page><source value="StructureDefinition-subscription-deqm.html"/><title value="StructureDefinition Subscription Deqm"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-medicationrequest-deqm.html"/><title value="StructureDefinition MedicationRequest Deqm"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-indv-measurereport-deqm.html"/><title value="StructureDefinition Indv MeasureReport Deqm"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-coverage-deqm.html"/><title value="StructureDefinition Coverage Deqm"/><kind value="resource"/></page>
@@ -256,7 +249,6 @@
       <page><source value="StructureDefinition-extension-reportingVendor.html"/><title value="StructureDefinition Extension reportingVendor"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-extension-dataCollectionType.html"/><title value="StructureDefinition Extension dataCollectionType"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-extension-doNotPerform.html"/><title value="StructureDefinition Extension doNotPerform"/><kind value="resource"/></page>
-      <page><source value="StructureDefinition-extension-measureSubscription.html"/><title value="StructureDefinition Extension measureSubscription"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-extension-referenceAny.html"/><title value="StructureDefinition Extension referenceAny"/><kind value="resource"/></page>
       <!-- ============ End Extensions and examples =============== -->
 
