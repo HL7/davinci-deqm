@@ -126,9 +126,11 @@ For a complete un-edited example see the [MRP Submit Data Operation] example.
 ### Collect Data operation
 {: #collect-data}
 
-In this scenario, the Consumer initiates a *Collect Data* operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
+In this scenario, the Consumer initiates a *Collect Data* operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. It is assumed that the Producer knows the data requirements for the measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
 
+<!-- *****removed based on GF#21737*********
 As with the Submit Data case above, discovery of what CQM data (i.e. resources) are required is done through the *Data Requirements* operation on a Consumer's measure endpoint and the returned resources and profiles are referenced in the `MeasureReport.evaluatedResources` element.
+-->
 
 {% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 

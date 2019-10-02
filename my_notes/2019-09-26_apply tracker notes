@@ -48,3 +48,5 @@ GF#21969 deals with the Quality measures landscape diagram which is used across 
 Check cap statement maker for empty headers  ( hand edit out for now )
 
 GF#21841 remove subscription and hold off to align   - check with group.
+
+GF#21757  = still using HEDIS for Task and Observation  - no context surrounding the resources too heavy and not appropriate to use QI Core here.
