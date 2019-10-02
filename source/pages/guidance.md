@@ -22,7 +22,7 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 The second scenario defined in this guide is when a Reporter needs to exchange a measure report with a Receiver.  This guide addresses the Individual Measure Reporting and the Summary Reporting.  As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver.  Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
   Patient List Reporting is a third reporting type which is similar to a [QRDA Category 2 report]. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
- {:.stu-comment}
+  {:.stu-note}
 
 ## Preconditions and Assumptions
 
