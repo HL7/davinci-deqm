@@ -116,6 +116,7 @@
 [QI Core]: {{site.qi_r3}}index.html
 [QRDA Category 1 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
 [QRDA Category 3 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
+[QRDA Category 3 report]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
 [Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html
 [Quality Reporting]: {{site.r4}}clinicalreasoning-quality-reporting.html
 [Reference Any (STU3)]: StructureDefinition-extension-referenceAny.html
