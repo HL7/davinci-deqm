@@ -49,7 +49,13 @@ Note that the exchange of the reconciled medication list, indication of conversa
 
 ## Graph of MRP Resources
 
-For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure.
+For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure. The *Task* resource is more appropriate to represent an administrative activity that can be performed and the state of completion of that activity tracked.  In the case where systems do not support *Task*, *Observation* can be used to track the status of the process.  The table below compares how the activity is represented
+
+|Data element| Task | Observation|
+|---|---|---|
+|The activity|`Task.code`|`Observation.code`|
+|The state of completion|`Task.status`|`Observation.valueBoolean`(= "true" for complete) + `Observation.status`|
+{:.grid}
 
 {% include img.html img="mrp-task.jpg" caption="Figure 3-1 MRP Using Task" %}
 
