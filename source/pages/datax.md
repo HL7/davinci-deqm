@@ -31,7 +31,7 @@ This Implementation Guide (IG) describes three methods of exchanging data qualit
 1. CQM data may be submitted to the Consumer by the Producer using the [Submit Data operation](#submit-data)
 1. CQM data may be requested from the Producer by the Consumer using the [Collect Data operation](#collect-data)
 
-This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available is planned and will align with the outcomes of the Argonaut project.
+This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned and will align with the outcomes of the Argonaut project.
   {:.stu-note}
 
 FHIR operations allow the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
