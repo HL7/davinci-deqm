@@ -1,42 +1,46 @@
 {
-  "resourceType": "MeasureReport",
-  "id": "datax-measurereport01",
-  "meta": {
-    "versionId": "1",
-    "lastUpdated": "2018-09-05T16:59:53.000+00:00",
-    "profile": [
+  "resourceType" : "MeasureReport",
+  "id" : "datax-measurereport01",
+  "meta" : {
+    "versionId" : "1",
+    "lastUpdated" : "2018-09-05T16:59:53.000+00:00",
+    "profile" : [
       "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/datax-measurereport-deqm"
     ]
   },
-  "status": "complete",
-  "_type": {
-    "extension": [
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: datax-measurereport01</p><p><b>meta</b>: </p><p><b>status</b>: complete</p><p><b>type</b>: </p><p><b>measure</b>: <a href=\"Measure-measure-mrp.html\">Generated Summary: id: measure-mrp; url: http://hl7.org/fhir/us/davinci-deqm/STU3/Measure/measure-mrp; status: active; date: Oct 3, 2019, 2:53:57 AM; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span></a></p><p><b>patient</b>: <a href=\"Patient-patient01.html\">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: Dec 16, 1946; <span title=\"Codes: {http://hl7.org/fhir/v3/MaritalStatus M}\">Married</span></a></p><p><b>date</b>: Sep 5, 2018, 4:59:52 PM</p><p><b>reportingOrganization</b>: <a href=\"Organization-organization01.html\">Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; <span title=\"Codes: {http://hl7.org/fhir/organization-type prov}\">Healthcare Provider</span>; name: DaVinciHospital01; ph: (+1) 401-555-1212</a></p><p><b>period</b>: Aug 1, 2018, 12:00:00 AM --&gt; Sep 1, 2018, 12:00:00 AM</p><p><b>evaluatedResources</b>: <a href=\"Task-Task01.html\">Generated Summary: id: Task01; identifier: 19009 status: completed code: Medication Reconciliation (Details : {http://www.ama-assn.org/go/cpt code '1111F' = '1111F', given as 'Medication Reconciliation'})</a></p></div>"
+  },
+  "status" : "complete",
+  "_type" : {
+    "extension" : [
       {
-        "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-dataCollectionType",
-        "valueBoolean": true
+        "url" : "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-dataCollectionType",
+        "valueBoolean" : true
       }
     ]
   },
-  "measure": {
-    "reference": "Measure/measure-mrp"
+  "measure" : {
+    "reference" : "Measure/measure-mrp"
   },
-  "patient": {
-    "reference": "Patient/patient01"
+  "patient" : {
+    "reference" : "Patient/patient01"
   },
-  "reportingOrganization": {
-    "reference": "Organization/organization01"
+  "date" : "2018-09-05T16:59:52.404Z",
+  "reportingOrganization" : {
+    "reference" : "Organization/organization01"
   },
-  "date": "2018-09-05T16:59:52.404Z",
-  "period": {
-    "start": "2018-08-01",
-    "end": "2018-09-01"
+  "period" : {
+    "start" : "2018-08-01",
+    "end" : "2018-09-01"
   },
-  "evaluatedResources": {
-    "extension": [
+  "evaluatedResources" : {
+    "extension" : [
       {
-        "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
-        "valueReference": {
-          "reference": "Task/Task01"
+        "url" : "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
+        "valueReference" : {
+          "reference" : "Task/Task01"
         }
       }
     ]
