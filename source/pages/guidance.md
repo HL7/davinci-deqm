@@ -21,7 +21,7 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
 The second scenario defined in this guide is when a Reporter needs to exchange a measure report with a Receiver.  This guide addresses the Individual Measure Reporting and the Summary Reporting.  As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver.  Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
-  Patient List Reporting is a third reporting type which is similar to a [QRDA Category 2 report]. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
+  Patient List Reporting is a third reporting type which is similar to a [QRDA] Category 2 report. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
   {:.stu-note}
 
 ## Preconditions and Assumptions
@@ -59,9 +59,9 @@ Along with Data-Exchange MeasureReport Profile, the data producer sends the Orga
 
 Measure Reporting is done by a Reporter who has all of the data that is required to generate a report(s). Two profiles for measure reporting have been defined in this guide.
 
-The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA Category 1 report].  The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
+The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA] Category 1 report.  The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
 
-The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure reporting period. It  includes the measure outcome data and is similar to a [QRDA Category 3 report].  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
+The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure reporting period. It  includes the measure outcome data and is similar to a [QRDA] Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
 
 ## Other Profiles Used in the Evaluation of a Measure
 

@@ -50,3 +50,7 @@ Check cap statement maker for empty headers  ( hand edit out for now )
 GF#21841 remove subscription and hold off to align   - check with group.
 
 GF#21757  = still using HEDIS for Task and Observation  - no context surrounding the resources too heavy and not appropriate to use QI Core here.
+
+GF#21697 - reviewing...
+
+GF#21202 - need to manually add the referenced resource :-( 
