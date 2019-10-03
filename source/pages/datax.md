@@ -64,9 +64,9 @@ The DEQM resources form a network through their relationships with each other - 
 ### Submit Data operation
 {: #submit-data}
 
-The *Submit Data* operation allows a Producer to submit data-of-interest for a particular quality measure. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.
+The *Submit Data* operation allows a Producer to submit data-of-interest for a particular quality measure within the specified time window when the data is ready. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.
 
-To discover what data (i.e. resources) are relevant in the *Submit Data* payload for a particular measure, a *Data Requirements* operation **MAY** be invoked on a Consumer's measure instance endpoint.  The response to this operation provides a list of Data Requirements which detail what data needs to be submitted in order for the Consumer to evaluate the measure.
+To discover what data (i.e. resources) are relevant in the *Submit Data* payload for a particular measure, a *Data Requirements* operation **MAY** be invoked on a Consumer's measure instance endpoint.  The response to this operation provides a list of Data Requirements which detail what data needs to be submitted in order for the Consumer to evaluate the measure.  Cases were reporting requirements are not known, the data would not be submitted until the correct measure and version is known.
 
 {% include img.html img="mrp-wf-overview.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
@@ -171,7 +171,7 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 ### Submit Data and Collect Data for Multiple Patients
 {:.no_toc}
 
-The [transaction] bundle processing as defined by FHIR specification is used for transacting multiple Submit data and collect data operations for multiple patients in a single interaction.  The transaction bundle contains an entry for each patient as illustrated in the following examples:
+The [transaction] bundle processing as defined by FHIR specification is used for transacting multiple Submit Data and Collect Data operations for multiple patients in a single interaction.  The transaction bundle contains an entry for each patient and as illustrated in the following examples:
 
 <!-- {% raw %}************************************************************
 KEEP and edit to align with the Updated Argonaut Subscription Model

@@ -59,6 +59,10 @@ GF#21200 - expand the example to include data for all populations.  2 issues:
 1. the measure isn't discoverable the link doesn't include MRP. so unable to create a summary measurereport by hand
 1. looking for a machine generated example from Connectathon e.g. COL  I cannot access HSPC Sandbox
 
-GF#21067  need to work in source and apply to all IGs
+GF#21067,GF#20960  need to work in source and apply to all IGs  source is not editable, so will be editing an image file.
 
-GF#20964  apply to R4 version
+GF#20964 GF#20963  apply to R4 version
+
+GF#20764  issues with examples and approach suggest my edits
+
+GF#19238  publishing infrastructure
