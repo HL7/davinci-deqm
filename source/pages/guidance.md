@@ -65,7 +65,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 ## Other Profiles Used in the Evaluation of a Measure
 
-Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQFM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.
+Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQFM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
 ## Must Support
 
