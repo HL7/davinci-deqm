@@ -93,8 +93,8 @@ In the following interactions, the Provider is acting in the role of the *Produc
 ### Exchange of Quality Measure Data Options
 {:.no_toc}
 
-Note to Balloters: We are actively seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
-{:.note-to-balloters}
+We are seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
+{:.stu-note}
 
 #### Data Exchange Using the Submit Data Operation
 {:.no_toc}

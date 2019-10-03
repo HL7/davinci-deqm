@@ -109,10 +109,12 @@ When a patient has an inpatient encounter, during which they should be given ven
 
 {% include img.html img="DEQM Resource Diagram - VTE7.jpg" caption = "Figure 3-20 MeasureReport Using MedicationRequest, DeviceRequest, MedicationStatement or DeviceUseStatement" %}
 
+<!--
 ## VTE-1 Data Exchange Interactions
 
    Note to Balloters: We are actively seeking feedback on whether VTE-1 Data Exchange interactions are appropriate or useful for hospital systems.
    {:.note-to-balloters}
+-->
 
 ## VTE-1 Measure Reporting Interactions
 
@@ -124,6 +126,8 @@ Reporter pushes the Bundle of supporting resource with VTE-1 Individual MeasureR
 {% include img-portrait.html img="vte_indv_report.jpg" caption = "Figure 3-21 Individual Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="vte-indv-report-example" b_title = "Click Here To See Post Bundle with VTE-1 Individual MeasureReport" %}
+
+<!-- {%raw%}
 
 ### Summary MeasureReport
 {:.no_toc}
@@ -139,6 +143,7 @@ Note to Balloters: We are actively seeking input on whether a technical workflow
 
 {% include examplebutton.html example="vte-summary-report-example" b_title = "Click Here To See Post VTE-1 Summary MeasureReport" %}
 
+{%endraw%} -->
 ___
 
 {% include link-list.md %}
