@@ -49,8 +49,6 @@ Check cap statement maker for empty headers  ( hand edit out for now )
 
 GF#21841 remove subscription and hold off to align   - check with group.
 
-GF#21757  = still using HEDIS for Task and Observation  - no context surrounding the resources too heavy and not appropriate to use QI Core here.
-
 GF#21697 - reviewing...
 
 GF#21202 - need to manually add the referenced resource :-(
@@ -59,10 +57,40 @@ GF#21200 - expand the example to include data for all populations.  2 issues:
 1. the measure isn't discoverable the link doesn't include MRP. so unable to create a summary measurereport by hand
 1. looking for a machine generated example from Connectathon e.g. COL  I cannot access HSPC Sandbox
 
-GF#21067,GF#20960  need to work in source and apply to all IGs  source is not editable, so will be editing an image file.
+Linda to follow up
+
+GF#21067,GF#20960  need to work in source see slide#2..
 
 GF#20964 GF#20963  apply to R4 version
 
-GF#20764  issues with examples and approach suggest my edits
+GF#20764 issues with examples and approach suggest my edits
 
-GF#19238  publishing infrastructure
+GF#19238  publishing infrastructure see Zulip Chat
+
+GF#18720  error codes? bigger discussion on error handling - should defer error handling to future version of the guide. - yes
+
+
+GF#18686 applied as part of other trackers: GF#21985, GF#21983, GF#21982
+
+open trackers: (7)
+
+withdrew all mine  (already applied for ballot and reviewed)
+
+proposed dispositions for
+GF#21218
+GF#23015 need help on applying that one?
+GF#23050
+GF#24650
+GF#24830 pre-applied
+GF#24859
+
+Block Vote?
+
+discussion needed for
+GF#23927 - STU3?
+
+update the menu and add examples tab?
+
+update all the slides based on Josh's comments. :-/
+
+credits...
