@@ -168,10 +168,10 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Con
 
 For a complete un-edited example see the [COL Collect Data Operation] example.
 
-#### Data Requirements Operation
+### Submit Data and Collect Data for Multiple Patients
 {:.no_toc}
 
-In order to complete the transaction the Producer may need to discover the required data for each Measure by invoking the *Data Requirements* operation on the Consumer 's `Measure/[measure-id]` endpoint. This operation is discussed in the section above.
+The [transaction] bundle processing as defined by FHIR specification is used for transacting multiple Submit data and collect data operations for multiple patients in a single interaction.  The transaction bundle contains an entry for each patient as illustrated in the following examples:
 
 <!-- {% raw %}************************************************************
 KEEP and edit to align with the Updated Argonaut Subscription Model

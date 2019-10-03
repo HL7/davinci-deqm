@@ -127,7 +127,7 @@
 [Summary Measure Reporting Interactions]: summary-reporting.html
 [Summary Reporting]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
-[transaction interaction]: {{site.data.fhir.path}}http.html#transaction
+[transaction]: {{site.data.fhir.path}}http.html#transaction
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Use cases]: usecases.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html

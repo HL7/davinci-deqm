@@ -39,7 +39,7 @@ The following resources are used in the summary reporting scenario:
 
 ## Summary Measure Reporting
 
-When the results of a quality measure are completed for a population at the end of a reporting period, they are POSTed to the quality measure Receiver's FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resources are bundled together as a set of `POST` interactions and sent as a single [transaction interaction] using the Standard FHIR API.
+When the results of a quality measure are completed for a population at the end of a reporting period, they are POSTed to the quality measure Receiver's FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API.
 
 {% include img-narrow.html img="summ_report_post.jpg" caption="Figure 2-11 POST Summary Report" %}
 

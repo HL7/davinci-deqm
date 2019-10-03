@@ -103,7 +103,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
                 }
               ]
             },
-            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "system": "urn:oid:2.16.840.1.113883.4.2",
             "value": "123456789",
             "assigner": {
               "display": "www.irs.gov"

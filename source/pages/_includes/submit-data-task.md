@@ -319,7 +319,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
                 }
               ]
             },
-            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "system": "urn:oid:2.16.840.1.113883.4.2",
             "value": "123456789",
             "assigner": {
               "display": "www.irs.gov"
@@ -469,7 +469,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
                 }
               ]
             },
-            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "system": "urn:oid:2.16.840.1.113883.4.2",
             "value": "456789123",
             "assigner": {
               "display": "www.irs.gov"

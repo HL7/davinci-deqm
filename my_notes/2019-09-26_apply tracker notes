@@ -53,4 +53,12 @@ GF#21757  = still using HEDIS for Task and Observation  - no context surrounding
 
 GF#21697 - reviewing...
 
-GF#21202 - need to manually add the referenced resource :-( 
+GF#21202 - need to manually add the referenced resource :-(
+
+GF#21200 - expand the example to include data for all populations.  2 issues:
+1. the measure isn't discoverable the link doesn't include MRP. so unable to create a summary measurereport by hand
+1. looking for a machine generated example from Connectathon e.g. COL  I cannot access HSPC Sandbox
+
+GF#21067  need to work in source and apply to all IGs
+
+GF#20964  apply to R4 version
