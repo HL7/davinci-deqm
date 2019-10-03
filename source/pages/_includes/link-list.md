@@ -112,6 +112,7 @@
 [QI Core Patient (STU3)]: {{site.qi_r3}}StructureDefinition-qicore-patient.html
 [QI Core Procedure (R4)]: r4todo.html
 [QI Core Procedure (STU3)]: {{site.qi_r3}}StructureDefinition-qicore-procedure.html
+[QI Core Task (STU3)]: {{site.qi_r3}}StructureDefinition-qicore-task.html
 [QI Core Profiles]: {{site.qi_r3}}index.html
 [QI Core]: {{site.qi_r3}}index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture

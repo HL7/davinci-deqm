@@ -41,11 +41,11 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|
-|Observation|HEDIS MRP Observation Profile[^8]|[HEDIS MRP Observation (STU3)]|
+|Observation|QI Core Observation Profile|[QI Core Observation (STU3)]|
 |Organization|DEQM Organization Profile[^9]|[DEQM Organization (STU3)]|
 |Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|
 |Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner (STU3)]|
-|Task|HEDIS MRP Task Profile[^8]|[HEDIS MRP Task (STU3)]|
+|Task|QI Core Task Profile|[QI Core Task (STU3)]|
 
 ## Graph of MRP Resources
 
