@@ -135,3 +135,4 @@
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [Colorectal Cancer Screening (PDQ®)–Health Professional Version]: https://www.cancer.gov/types/colorectal/hp/colorectal-screening-pdq
 [Colorectal Cancer Screening (PDQ®)-Patient Version]: https://www.cancer.gov/types/colorectal/patient/colorectal-screening-pdq
+[Bundles]: {{site.data.fhir.path}}/bundle.html
