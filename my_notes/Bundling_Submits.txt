@@ -1,8 +1,16 @@
-Transaction Bundle for operations in fhir
+### Submitting Data for Multiple Patients
 
-Individual Submit Data Transaction is: POST|[base]/Measure/[measure-id]/$submit-data
+#### The server processes individual Submit Data transactions as follows:
 
-So in a transaction bundle  Process any POST interactions to operation endpoint
+- The fullUrl refers to the `#submit-data` or `#collect-data` operation endpoint.
+- The request method id `POST`
+- based on the [following rules] for referencing referencing across the bundle entries if the resources are nested inside parameters and/or contained within a parameter.
+   - "When resolving references, references are resolved by looking through the 'container' resource - the one that contains the other resources. Since there are no nested contained resources, there is only one container resource."
+   - "References to contained resources are never resolved outside the container resource. Specifically, resolution stops at the elements Bundle.entry.resource and Parameters.parameter.resource, but not at DomainResource.contained."
+
+For Example:
+
+Submit Data Transaction Bundle
 
 ~~~
 POST|[base]
@@ -30,12 +38,31 @@ POST|[base]
             ....
 ~~~
 
-Rules referencing across the bundle entries if the resources are nested inside parameters and/or contained within a parameter.
 
-(DSTU3 notes about use and interpretation of contained resources)
+Submit Data Transaction Bundle
 
->When resolving references, references are resolved by looking through the 'container' resource - the one that contains the other resources. Since there are no nested contained resources, there is only one container resource.
+~~~
+POST|[base]
 
->References to contained resources are never resolved outside the container resource. Specifically, resolution stops at the elements Bundle.entry.resource and Parameters.parameter.resource, but not at DomainResource.contained.
-
-your examples lack a fullUrl and use PUT instead of POST and I don't know if they reference outside the scope of Parameters.parameter.resource
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": [base]/Measure/[measure-id]/$collect-data
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "measurereport",
+            "resource": {
+              "resourceType": "MeasureReport",
+              "contained": [  ( or simply listing the other named parameters)
+              ...
+          ]
+        },
+        "request": {
+          "method": "POST"
+            }
+            ....
+~~~

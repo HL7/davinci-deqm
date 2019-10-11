@@ -41,10 +41,10 @@ http://build.fhir.org/ig/HL7/davinci-deqm/index.html#data-model-standards-landsc
 
 if that is the case then should be updated in the source and not here.  let me know
 
-email bryn on this one
-
-GF#21969 deals with the Quality measures landscape diagram which is used across the IGs. do you want to update.  Shall I?
-
+======================
+GF#21997 suggest revote to find not persuasive with mode since is only applied to ind report - summary report use case which is not in scope for VTE-1
+GF#21969, GF#20690, GF#21985, GF#21982 pending approval in cqf-measures repro before can port over to DEQM.
+=====================
 Check cap statement maker for empty headers  ( hand edit out for now )
 
 GF#21841 remove subscription and hold off to align   - check with group.
