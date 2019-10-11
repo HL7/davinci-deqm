@@ -169,7 +169,6 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Con
 For a complete un-edited example see the [COL Collect Data Operation] example.
 
 ### Submit Data and Collect Data for Multiple Patients
-{:.no_toc}
 
 The [transaction] bundle processing as defined by FHIR specification is used for transacting multiple Submit Data and Collect Data operations for multiple patients in a single interaction.  
 

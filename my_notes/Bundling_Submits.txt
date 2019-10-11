@@ -1,6 +1,6 @@
 ### Submitting Data for Multiple Patients
 
-#### The server processes individual Submit Data transactions as follows:
+#### The server processes individual transactions as follows:
 
 - The fullUrl refers to the `#submit-data` or `#collect-data` operation endpoint.
 - The request method id `POST`
