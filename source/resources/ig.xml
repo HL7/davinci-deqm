@@ -102,9 +102,15 @@
     <resource><example value="true"/>
       <sourceReference><reference value="Patient/patient01"/></sourceReference>
     </resource>
+
     <resource><example value="false"/>
       <sourceReference><reference value="StructureDefinition/extension-certificationIdentifier"/></sourceReference>
     </resource>
+
+    <resource><example value="false"/>
+      <sourceReference><reference value="StructureDefinition/extension-cqfm-reportingOrganizationGroup"/></sourceReference>
+    </resource>
+
     <resource><example value="false"/>
       <sourceReference><reference value="StructureDefinition/extension-reportingVendor"/></sourceReference>
     </resource>

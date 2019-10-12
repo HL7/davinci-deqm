@@ -25,9 +25,14 @@
       "base": "MeasureReport-summ-measurereport01.html",
       "source": "MeasureReport-summ-measurereport01.json"
     },
+
     "StructureDefinition/extension-dataCollectionType": {
       "defns": "StructureDefinition-extension-dataCollectionType-definitions.html",
       "base": "StructureDefinition-extension-dataCollectionType.html"
+    },
+    "StructureDefinition/extension-cqfm-reportingOrganizationGroup": {
+      "defns": "StructureDefinition-extension-cqfm-reportingOrganizationGroup-definitions.html",
+      "base": "StructureDefinition-extension-cqfm-reportingOrganizationGroup.html"
     },
     "CapabilityStatement/producer-server": {
       "base": "CapabilityStatement-producer-server.html",

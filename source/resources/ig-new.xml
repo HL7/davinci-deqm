@@ -238,6 +238,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-cqfm-reportingOrganizationGroup"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-reportingVendor"/>
       </reference>
       <exampleBoolean value="false"/>

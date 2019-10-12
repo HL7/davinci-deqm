@@ -41,27 +41,27 @@ http://build.fhir.org/ig/HL7/davinci-deqm/index.html#data-model-standards-landsc
 
 if that is the case then should be updated in the source and not here.  let me know
 
-13 ballot trackers to need be applied...
+8 ballot trackers to need be applied...
 ======================
-1. GF#21997 suggest revote to find not persuasive with mode since is only applied to ind report - summary report use case which is not in scope for VTE-1
+1. applied GF#21997 suggest revote to find not persuasive with mode since is only applied to ind report - summary report use case which is not in scope for VTE-1
 2. applied GF#21067 pending approval in cqf-measures repro before can port over to DEQM.
 3. applied GF#21969 pending approval in cqf-measures repro before can port over to DEQM.
 4. applied GF#20960 pending approval in cqf-measures repro before can port over to DEQM.
 5. applied GF#21985 pending approval in cqf-measures repro before can port over to DEQM.
 6. applied GF#21982 pending approval in cqf-measures repro before can port over to DEQM.
-7. GF#21200 still looking for a machine generated example to use - for one of the exemplars  - Linda volunteered to do.  apply to R4 version??
-8. GF#20964  apply to R4 version
-9. GF#20963  apply to R4 version
-10. GF#20764 issues with examples and approach suggest my edits in email from
+
+9 ballot trackers to need be applied...
+======================
+1. GF#21200 still looking for a machine generated example to use - for one of the exemplars  - Linda volunteered to do.  apply to R4 version??
+1. GF#20964  apply to R4 version
+1. GF#20963  apply to R4 version
+1. GF#20764 issues with examples and approach suggest my edits in email from
 Thu, Oct 3, 6:31 AM - preapplied my suggested edits..
-11. GF#21782  straw man proposal here: https://build.fhir.org/ig/HL7/davinci-deqm/col.html#col-use-case-background needs review...
-12. GF#19238 - will be fixed if we decide to use single repo for STU3 and R4
-13. GF#18720 - will defer to future version of IG where can deal with error handling in general
-
+1. GF#21782  straw man proposal here: https://build.fhir.org/ig/HL7/davinci-deqm/col.html#col-use-case-background needs review...
+1. GF#19238 - will be fixed if we decide to use single repo for STU3 and R4
+1. GF#18720 - will defer to future version of IG where can deal with error handling in general
+1. GF#23927 - applied for STU3 needs review clarify if group of providers (e.g. orgs) or practitioners (e.g. doctors) R4 pending
 =====================
-
-
-new trackers:
 
 proposed dispositions for
 GF#21218
@@ -73,10 +73,6 @@ GF#24859
 GF#24910
 
 Can we Block Vote for these 6 for next week ?
-
-discussion needed for
-GF#23927 - STU3?  R4?
-
 
 Check cap statement maker for empty headers  ( hand edit out for now )
 

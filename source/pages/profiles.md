@@ -38,6 +38,7 @@ these profiles when available.
 |DEQM Do Not Perform Extension|[Do Not Perform (STU3)]|[Do Not Perform (R4)]|
 |DEQM Reference Any Extension|[Reference Any (STU3)]|N/A[^6]|
 |DEQM Reporting Vendor Extension|[Reporting Vendor (STU3)]|[Reporting Vendor (R4)]|
+|DEQM Reporting Group Extension|[Reporting Group]|[Reporting Vendor (R4)]|
 
 <br />
 
