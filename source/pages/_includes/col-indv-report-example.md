@@ -88,7 +88,7 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
         "resourceType": "Organization",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
           ]
         },
         "identifier": [
@@ -271,7 +271,7 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
         "resourceType": "Practitioner",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
           ]
         },
         "identifier": [

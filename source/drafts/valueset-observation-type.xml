@@ -3,7 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="organization-type"/>
 
-  <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/organization-type"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/organization-type"/>
   <version value="0.0.0"/>
   <name value="Da Vinci Organization Type Values"/>
   <title value="Da Vinci Organization Type Values"/>

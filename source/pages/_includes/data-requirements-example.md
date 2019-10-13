@@ -63,7 +63,7 @@ HTTP/1.1 200 OK
       {
          "type":"MeasureReport",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/measurereport-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/measurereport-deqm"
          ]
       },
       {
@@ -93,13 +93,13 @@ HTTP/1.1 200 OK
       {
          "type":"Organization",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
          ]
       },
       {
          "type":"Practitioner",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
          ]
       }
    ]

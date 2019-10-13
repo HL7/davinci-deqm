@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file://Mac/Home/Documents/FHIR/FHIR%20tools/STU3Schema/fhir-all.xsd">
 	<id value="task-measure-draft"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/task-measure-draft"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/task-measure-draft"/>
 	<version value="0.0.0"/>
 	<name value="Da Vinci  Task Profile"/>
 	<status value="active"/>
@@ -48,7 +48,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-location"/>
+				<profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-location"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
@@ -78,7 +78,7 @@
 			<slicing>
 				<discriminator>
 					<type value="exists"/>
-					<path value="extension('http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-practitionerrole')"/>
+					<path value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practitionerrole')"/>
 				</discriminator>
 				<rules value="open"/>
 			</slicing>
@@ -115,7 +115,7 @@
 			<max value="0"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-practitionerrole"/>
+				<profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practitionerrole"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
@@ -145,7 +145,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-practitionerrole"/>
+				<profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-practitionerrole"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>

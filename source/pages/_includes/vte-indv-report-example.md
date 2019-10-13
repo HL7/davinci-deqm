@@ -88,7 +88,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
         "resourceType": "Organization",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
           ]
         },
         "identifier": [

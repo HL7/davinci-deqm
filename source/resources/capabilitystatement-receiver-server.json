@@ -1,7 +1,7 @@
 {
    "id": "receiver-server",
    "text": {
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">DaVinci DEQM Receiver Server CapabilityStatement</h2><p>This profile defines the expected capabilities of a Da Vinci DEQM Receiver Server when conforming to the Da Vinci DEQM Implementation Guide. Receivers include systems that are primary receivers of Measure data such as payers as well as public health and other healthcare-related agencies.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that a Da Vinci DEQM Receiver Server could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-03-14</li><li>Published by: The DaVinci Project</li></ul><h3 class=\"no_toc\" id=\"igs\">Implementation guides that SHOULD be supported:</h3><li>http://hl7.org/fhir/us/qicore/ImplementationGuide/qicore</li><li>http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/cqfmeasures</li><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Da Vinci DEQM Receiver Server <strong>SHALL</strong></p><ol><li>Support at least one transaction defined in the <em>Framework</em> Section of  this  Implementation Guide.</li><li>Declare a CapabilityStatement identifying the list of supported profiles and operations.</li><li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"http://hl7.org/fhir/STU3/http.html\">FHIR RESTful API</a>.</li><li>Support both xml and json resource formats for all interactions.</li></ol><p id=\"security\"><strong>Security:</strong></p><p>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</p><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href=\"#measurereport\">MeasureReport</a></td><td><p><a href=\"./StructureDefinition-summary-measurereport-deqm.html\">DEQM Summary MeasureReport Profile</a>, <a href=\"./StructureDefinition-indv-measurereport-deqm.html\">DEQM Individual MeasureReport Profile</a></p></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"measurereport\">MeasureReport</h4><p>Supported Profiles:\n\t\t\t<p><a href=\"./StructureDefinition-summary-measurereport-deqm.html\">DEQM Summary MeasureReport Profile</a>, <a href=\"./StructureDefinition-indv-measurereport-deqm.html\">DEQM Individual MeasureReport Profile</a></p>\n\n\t\t\t\t</p><p>The DaVinci DEQM Receiver Server <strong>SHALL</strong> be capable of supporting the DEQM Summary MeasureReport Profile and  DEQM Individual MeasureReport Profile and all the DEQM and QI Core Profiles they reference.</p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>.</li></ul><br></br></div>",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">DaVinci DEQM Receiver Server CapabilityStatement</h2><p>This profile defines the expected capabilities of a Da Vinci DEQM Receiver Server when conforming to the Da Vinci DEQM Implementation Guide. Receivers include systems that are primary receivers of Measure data such as payers as well as public health and other healthcare-related agencies.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that a Da Vinci DEQM Receiver Server could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-03-14</li><li>Published by: The DaVinci Project</li></ul><h3 class=\"no_toc\" id=\"igs\">Implementation guides that SHOULD be supported:</h3><li>http://hl7.org/fhir/us/qicore/ImplementationGuide/us-qicore-3.2.0</li><li>http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/us-cqfmeasures</li><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Da Vinci DEQM Receiver Server <strong>SHALL</strong></p><ol><li>Support at least one transaction defined in the <em>Framework</em> Section of  this  Implementation Guide.</li><li>Declare a CapabilityStatement identifying the list of supported profiles and operations.</li><li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"http://hl7.org/fhir/STU3/http.html\">FHIR RESTful API</a>.</li><li>Support both xml and json resource formats for all interactions.</li></ol><p id=\"security\"><strong>Security:</strong></p><p>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</p><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href=\"#measurereport\">MeasureReport</a></td><td><p><a href=\"./StructureDefinition-summary-measurereport-deqm.html\">DEQM Summary MeasureReport Profile</a>, <a href=\"./StructureDefinition-indv-measurereport-deqm.html\">DEQM Individual MeasureReport Profile</a></p></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"measurereport\">MeasureReport</h4><p>Supported Profiles:\n\t\t\t<p><a href=\"./StructureDefinition-summary-measurereport-deqm.html\">DEQM Summary MeasureReport Profile</a>, <a href=\"./StructureDefinition-indv-measurereport-deqm.html\">DEQM Individual MeasureReport Profile</a></p>\n\n\t\t\t\t</p><p>The DaVinci DEQM Receiver Server <strong>SHALL</strong> be capable of supporting the DEQM Summary MeasureReport Profile and  DEQM Individual MeasureReport Profile and all the DEQM and QI Core Profiles they reference.</p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>.</li></ul><br></br></div>",
       "status": "generated"
    },
    "acceptUnknown": "both",
@@ -24,9 +24,9 @@
       "json"
    ],
    "implementationGuide": [
-      "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/ImplementationGuide/hl7.fhir.us.davinci-deqm.stu3-0.2.0",
-      "http://hl7.org/fhir/us/qicore/ImplementationGuide/qicore",
-      "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/cqfmeasures"
+      "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-0.2.0",
+      "http://hl7.org/fhir/us/qicore/ImplementationGuide/us-qicore-3.2.0",
+      "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/us-cqfmeasures"
    ],
    "jurisdiction": [
       {
@@ -52,7 +52,7 @@
             }
          ],
          "display": "DEQM DeviceRequest Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/devicerequest-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/devicerequest-deqm"
       },
       {
          "extension": [
@@ -62,7 +62,7 @@
             }
          ],
          "display": "DEQM MedicationAdministration Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/medicationadministration-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationadministration-deqm"
       },
       {
          "extension": [
@@ -72,7 +72,7 @@
             }
          ],
          "display": "DEQM Summary MeasureReport Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/summary-measurereport-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
       },
       {
          "extension": [
@@ -82,7 +82,7 @@
             }
          ],
          "display": "DEQM Practitioner Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/practitioner-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
       },
       {
          "extension": [
@@ -92,7 +92,7 @@
             }
          ],
          "display": "DEQM DeviceUseStatement Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/deviceusestatement-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/deviceusestatement-deqm"
       },
       {
          "extension": [
@@ -102,7 +102,7 @@
             }
          ],
          "display": "DEQM Organization Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/organization-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
       },
       {
          "extension": [
@@ -112,7 +112,7 @@
             }
          ],
          "display": "DEQM Coverage Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/coverage-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
       },
       {
          "extension": [
@@ -122,7 +122,7 @@
             }
          ],
          "display": "DEQM Individual MeasureReport Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/indv-measurereport-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
       },
       {
          "extension": [
@@ -132,7 +132,7 @@
             }
          ],
          "display": "DEQM MedicationRequest Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/medicationrequest-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationrequest-deqm"
       },
       {
          "extension": [
@@ -142,13 +142,13 @@
             }
          ],
          "display": "DEQM Subscription Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/StructureDefinition/subscription-deqm"
+         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subscription-deqm"
       }
    ],
    "publisher": "The DaVinci Project",
    "rest": [
       {
-         "documentation": "Da Vinci DEQM Receiver Server **SHALL**\n\n1. Support at least one transaction defined in the *Framework* Section of  this  Implementation Guide.\n1. Declare a CapabilityStatement identifying the list of supported profiles and operations.\n1. Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for [FHIR RESTful API](http://hl7.org/fhir/STU3/http.html).\n1. Support both xml and json resource formats for all interactions.\n",
+         "documentation": "Da Vinci DEQM Receiver Server **SHALL**\n\n1. Support at least one transaction defined in the *Framework* Section of  this  Implementation Guide.\n1. Declare a CapabilityStatement identifying the list of supported profiles and operations.\n1. Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for [FHIR RESTful API](http://hl7.org/fhir/STU3/http.html).\n1. Support both xml and json resource formats for all interactions.",
          "mode": "server",
          "resource": [
             {
@@ -182,7 +182,7 @@
    ],
    "status": "active",
    "title": "DaVinci DEQM Receiver Server CapabilityStatement",
-   "url": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/CapabilityStatement/receiver-server",
+   "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/receiver-server",
    "version": "0.0.0",
    "resourceType": "CapabilityStatement"
 }

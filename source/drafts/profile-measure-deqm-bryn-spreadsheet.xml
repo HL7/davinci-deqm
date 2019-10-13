@@ -1030,8 +1030,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-"><Data
+      ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>

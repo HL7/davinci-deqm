@@ -3,7 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="measure-status"/>
 
-  <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/measure-status"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/measure-status"/>
   <version value="0.0.0"/>
   <name value="Da Vinci Measure Status Result Values"/>
   <title value="Da Vinci Measure Status Result Values"/>
