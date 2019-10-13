@@ -310,9 +310,9 @@
   "license": "CC0-1.0",
   "topofpage": "true",
   "tool": "jekyll",
-  "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm/STU3",
+  "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm",
   "pub_url": "ehaas@healthedatainc.com",
-  "npm-name": "hl7.fhir.us.davinci-deqm.stu3",
+  "npm-name": "hl7.fhir.us.davinci-deqm",
   "fixed-business-version": "0.2.0",
   "mappings": "false",
   "extensions": [
@@ -327,7 +327,7 @@
   "publisher": "HL7 International - Clinical Quality Information Work Group",
   "paths": {
     "output": "output",
-    "history": "history",
+    "history": "http://hl7.org/fhir/us/davinci-deqm/history.cfml",
     "temp": "generated_output/temp",
     "specification": "http://hl7.org/fhir/STU3/",
     "txCache": "generated_output/txCache",

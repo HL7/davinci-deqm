@@ -48,14 +48,14 @@ Content-Type: application/fhir+json;charset=UTF-8
         "resourceType": "MeasureReport",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/datax-measurereport-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
           ]
         },
         "status": "complete",
         "_type": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-dataCollectionType",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataCollectionType",
               "valueBoolean": true
             }
           ]
@@ -72,19 +72,19 @@ Content-Type: application/fhir+json;charset=UTF-8
         "evaluatedResources": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
               "valueReference": {
                 "reference": "Patient/patient-col"
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
               "valueReference": {
                 "reference": "Practitioner/practitioner-col"
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
               "valueReference": {
                 "reference": "Observation/fit-dna-observation"
               }
@@ -216,7 +216,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "practitioner-col",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
           ]
         },
         "identifier": [

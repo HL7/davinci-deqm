@@ -1,6 +1,6 @@
 title: Data Exchange For Quality Measures FHIR STU3
 copyrightyear: "2019" # copyright date for footer
-historypath : "http://www.hl7.org/fhir/us/davinci-deqm/history.cfml" # complete path to IG history file
+historypath : "http://hl7.org/fhir/us/davinci-deqm/history.cfml" # complete path to IG history file
 changelink: http://hl7.org/fhir-issues
 summaries: false #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials

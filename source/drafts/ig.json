@@ -104,7 +104,7 @@
   "special-urls": [
     "https://ncqa.org/fhir/ig/Measure/measure-mrp"
   ],
-  "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm/STU3",
+  "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm",
   "source": "ig.xml",
   "broken-links": "warning",
   "topofpage": "true",

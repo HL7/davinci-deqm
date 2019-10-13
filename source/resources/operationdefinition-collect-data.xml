@@ -2,7 +2,7 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
 	<!--********************meta*************************-->
 	<id value="collect-data"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/OperationDefinition/collect-data"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/collect-data"/>
 	<version value="0.1.0"/>
 	<name value="collect_data"/>
 	<status value="active"/>

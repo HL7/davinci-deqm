@@ -25,7 +25,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "meta": {
                "lastUpdated": "2019-02-11T14:19:25.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/coverage-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
                ],
                "versionId": "2"
             },
@@ -142,19 +142,19 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
 
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
                ]
             },
             "extension": [
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
                   "valueIdentifier": {
                      "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                      "value": "0015HQN9BD3304E"
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
                      "reference": "Organization/organization01"
                   }
@@ -164,7 +164,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "evaluatedResources": {
                "extension": [
                   {
-                     "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
+                     "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
                      "valueReference": {
                         "reference": "Task/Task01"
                      }
@@ -226,7 +226,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "meta": {
                "lastUpdated": "2019-02-21T01:47:54.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
                ],
                "versionId": "4"
             },
@@ -293,7 +293,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "meta": {
                "lastUpdated": "2019-03-06T19:03:03.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
                ],
                "versionId": "3"
             },
@@ -485,7 +485,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "meta": {
                "lastUpdated": "2019-03-06T19:03:03.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
                ],
                "versionId": "4"
             },

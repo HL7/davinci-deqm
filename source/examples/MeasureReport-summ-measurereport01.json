@@ -3,7 +3,7 @@
   "id": "summ-measurereport01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/summary-measurereport-deqm"
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
     ]
   },
   "status": "complete",

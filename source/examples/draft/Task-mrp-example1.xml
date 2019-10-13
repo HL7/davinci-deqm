@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Task xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/fhir-all.xsd">
 	<id value="mrp-example1"/>
-	<extension url="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-task-location">
+	<extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-task-location">
 		<valueReference>
 			<reference value="Location/hl7east"/>
 		</valueReference>
@@ -28,7 +28,7 @@
 	<authoredOn value="2018-06-11"/>
 	<lastModified value="2018-06-11"/>
 	<owner>
-		<extension url="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-prr">
+		<extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-prr">
 			<valueReference>
 				<reference value="PractitionerRole/example"/>
 			</valueReference>

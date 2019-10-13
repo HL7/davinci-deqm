@@ -25,14 +25,14 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           "versionId": "1",
           "lastUpdated": "2018-09-05T16:59:53.000+00:00",
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/datax-measurereport-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
           ]
         },
         "status": "complete",
         "_type": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-dataCollectionType",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataCollectionType",
               "valueBoolean": true
             }
           ]
@@ -51,7 +51,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
         "evaluatedResources": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-referenceAny",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
               "valueReference": {
                 "reference": "Task/Task01"
               }
@@ -261,7 +261,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           "versionId": "4",
           "lastUpdated": "2018-12-12T17:05:43.000+00:00",
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
           ]
         },
         "identifier": [
@@ -304,7 +304,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           "versionId": "4",
           "lastUpdated": "2018-12-12T17:05:43.000+00:00",
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
           ]
         },
         "identifier": [
@@ -418,7 +418,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           "versionId": "2",
           "lastUpdated": "2018-12-12T17:05:44.000+00:00",
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/coverage-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
           ]
         },
         "policyHolder": {
@@ -454,7 +454,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           "versionId": "4",
           "lastUpdated": "2018-12-12T17:05:44.000+00:00",
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
           ]
         },
         "identifier": [

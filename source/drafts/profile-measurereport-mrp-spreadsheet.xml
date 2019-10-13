@@ -1026,7 +1026,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
     <Cell ss:StyleID="s80" ss:HRef="http://www.fhir.org/guides/test3/StructureDefinition/template-extension-"><Data
-      ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-</Data></Cell>
+      ss:Type="String">http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s81"><Data ss:Type="String">introduction</Data></Cell>
@@ -1193,7 +1193,7 @@
     <Cell ss:StyleID="s97"/>
     <Cell ss:StyleID="s98"/>
     <Cell ss:StyleID="s98"/>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">MeasureReport{http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/measurereport-davinci}</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">MeasureReport{http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/measurereport-davinci}</Data></Cell>
     <Cell ss:StyleID="s98"/>
     <Cell ss:StyleID="s98"/>
     <Cell ss:StyleID="s98"/>
@@ -1361,7 +1361,7 @@
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">Reference(Organization){http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/organization-davinci}</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">Reference(Organization){http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-davinci}</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
@@ -1444,7 +1444,7 @@
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">1..*</Data></Cell>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">Extension{http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/ext-referenceAny}</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">Extension{http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-referenceAny}</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s116"/>
     <Cell ss:StyleID="s107"/>
@@ -1473,7 +1473,7 @@
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">Reference(Task){http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/task-mrp}|Reference(Observation){http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/observation-mrp}This references the resources used for doing this measure report.  For MRP, this will always be a single practitioner (person who performed the MRP and is attesting to it), a single location (where the MRP was performed), a single Coverage Resource for the payer you are sending the attestation to, a single Task Resource or a single Observation Resource, if an Observation is sent, a single Encounter Resource should be sent which will link the Observation Resource to the Location Resource </Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">Reference(Task){http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/task-mrp}|Reference(Observation){http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/observation-mrp}This references the resources used for doing this measure report.  For MRP, this will always be a single practitioner (person who performed the MRP and is attesting to it), a single location (where the MRP was performed), a single Coverage Resource for the payer you are sending the attestation to, a single Task Resource or a single Observation Resource, if an Observation is sent, a single Encounter Resource should be sent which will link the Observation Resource to the Location Resource </Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s116"/>
     <Cell ss:StyleID="s107"/>

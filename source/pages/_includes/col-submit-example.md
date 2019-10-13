@@ -22,14 +22,14 @@ Provider X acting in the role of Producer submits COL data for Patient Y to Paye
         "id": "col-measurereport",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/datax-measurereport-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
           ]
         },
         "status": "complete",
         "_type": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/extension-dataCollectionType",
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataCollectionType",
               "valueBoolean": true
             }
           ]
@@ -208,7 +208,7 @@ Provider X acting in the role of Producer submits COL data for Patient Y to Paye
         "id": "practitioner-col",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
           ]
         },
         "identifier": [

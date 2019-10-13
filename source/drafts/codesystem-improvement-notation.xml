@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="improvement-notation"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm/STU3/CodeSystem/improvement-notation"/>
+	<url value="http://hl7.org/fhir/us/davinci-deqm/CodeSystem/improvement-notation"/>
 	<version value="0.1.0"/>
 	<name value="MeasureImprovementNotation"/>
 	<status value="draft"/>
@@ -25,7 +25,7 @@
 		</coding>
 	</jurisdiction>
 	<caseSensitive value="true"/>
-	<valueSet value="http://hl7.org/fhir/us/davinci-deqm/STU3/ValueSet/improvement-notation"/>
+	<valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/improvement-notation"/>
 	<content value="complete"/>
 	<concept>
 		<code value="increase"/>
