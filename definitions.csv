@@ -13,8 +13,8 @@ codesystems,
 valuesets,
 structuremaps,
 source,ig.xml
-version,3.0.1
-fixed-business-version,0.2.0
+version,4.0.0
+fixed-business-version,1.0.0
 paths.pages,framework|source/pages
 paths.resources,source/resources|source/examples
 paths.temp,generated_output/temp
@@ -32,11 +32,11 @@ canonicalBase,http://hl7.org/fhir/us/davinci-deqm/STU3
 dependencyList.name,qicore|uscore|cqfm
 dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures/2019May
 dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|hl7.fhir.us.cqfmeasures
-dependencyList.version,3.2.0|2.0.0|dev|0.1.0
+dependencyList.version,current|current|current|
 special-urls,
 tool,jekyll
 logging,progress
 topofpage,TRUE
 allviews,TRUE
 mappings,FALSE
-npm-name,hl7.fhir.us.davinci-deqm.stu3
+npm-name,hl7.fhir.us.davinci-deqm
