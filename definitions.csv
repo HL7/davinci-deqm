@@ -1,8 +1,8 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
 onlyJson,FALSE
-igtemplate-dir,/Users/ehaas/Documents/FHIR/IG-Template2/
-working-dir,/Users/ehaas/Documents/FHIR/DaVinci/
-title,Data Exchange For Quality Measures STU3
+igtemplate-dir,/Users/ehaas/Documents/FHIR/DaVinci-DEQM/
+working-dir,/Users/ehaas/Documents/FHIR/DaVinci-DEQM/
+title,Data Exchange For Quality Measures R4
 status,draft
 publisher,HL7 International - Clinical Quality Information Work Group
 contact.system,url
@@ -21,7 +21,7 @@ paths.temp,generated_output/temp
 paths.output,output
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
-paths.specification,http://hl7.org/fhir/STU3/
+paths.specification,http://hl7.org/fhir/R4/
 jurisdiction,US
 sct-edition,http://snomed.info/sct/731000124108
 no-inactive-codes,FALSE
@@ -29,10 +29,10 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm
-dependencyList.name,qicore|uscore|cqfm
-dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures/2019May
-dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|hl7.fhir.us.cqfmeasures
-dependencyList.version,current|current|current|
+dependencyList.name,qicore|uscore
+dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core
+dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core
+dependencyList.version,current|current
 special-urls,
 tool,jekyll
 logging,progress
