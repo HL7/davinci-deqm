@@ -31,17 +31,14 @@
 [DEQM Coverage]: StructureDefinition-coverage-deqm.html
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
-[DEQM Data-Exchange MeasureReport Profile]: profiles.html#profiles
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
 [DEQM DeviceUseStatement]: StructureDefinition-deviceusestatement-deqm.html
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
-[DEQM Individual MeasureReport Profile]: profiles.html#profiles
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
 [DEQM Organization]: StructureDefinition-organization-deqm.html
 [DEQM Practitioner]: StructureDefinition-practitioner-deqm.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
-[DEQM Summary MeasureReport Profile]: profiles.html#profiles
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
