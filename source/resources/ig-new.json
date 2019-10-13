@@ -91,6 +91,13 @@
     },
     {
       "reference" : {
+        "reference" : "MeasureReport/summ-measurereport02"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "MeasureReport/datax-measurereport02"
       },
       "exampleBoolean" : true,

@@ -39,6 +39,11 @@
     <resource><example value="true"/>
       <sourceReference><reference value="MeasureReport/summ-measurereport01"/></sourceReference>
     </resource>
+
+    <resource><example value="true"/>
+      <sourceReference><reference value="MeasureReport/summ-measurereport02"/></sourceReference>
+    </resource>
+
     <resource><example value="true"/>
       <sourceReference><reference value="MeasureReport/datax-measurereport02"/></sourceReference>
     </resource>

@@ -49,10 +49,10 @@ if that is the case then should be updated in the source and not here.  let me k
 4. applied GF#20960 pending approval in cqf-measures repro before can port over to DEQM.
 5. applied GF#21985 pending approval in cqf-measures repro before can port over to DEQM.
 6. applied GF#21982 pending approval in cqf-measures repro before can port over to DEQM.
+1. applied GF#21200 still looking for a machine generated example to use - for one of the exemplars  - Linda volunteered to do.  apply to R4 version?? bad link may need to import cqfm example into examples
 
 9 ballot trackers to need be applied...
 ======================
-1. GF#21200 still looking for a machine generated example to use - for one of the exemplars  - Linda volunteered to do.  apply to R4 version??
 1. GF#20964  apply to R4 version
 1. GF#20963  apply to R4 version
 1. GF#20764 issues with examples and approach suggest my edits in email from
@@ -70,7 +70,7 @@ GF#23050
 GF#24650
 GF#24830 pre-applied
 GF#24859
-GF#24910
+GF#24910 pre-applied
 
 Can we Block Vote for these 6 for next week ?
 
@@ -112,7 +112,7 @@ GF#23050
 GF#24650
 GF#24830 pre-applied
 GF#24859
-GF#24910
+GF#24910 pre-applied
 Block Vote?
 
 discussion needed for

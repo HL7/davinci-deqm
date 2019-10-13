@@ -12,13 +12,13 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 1. A status
 1. A measure report type hardcoded to "summary"
-1. The reference to the [Measure]({{site.data.fhir.path}}measure.html)
+1. The reference to the [Measure]
 1. The date the report was generated
 1. The organization that reported the data
 1. The reporting period
 1. The results of the calculation (the Measure Scores)
 
-Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
+Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
 1. Separate subgroup calculations (stratifiers)
 1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension

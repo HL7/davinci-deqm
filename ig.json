@@ -26,6 +26,12 @@
       "source": "MeasureReport-summ-measurereport01.json"
     },
 
+    "MeasureReport/summ-measurereport02": {
+      "base": "MeasureReport-summ-measurereport02.html",
+      "source": "MeasureReport-summ-measurereport02.xml"
+    },
+
+
     "StructureDefinition/extension-dataCollectionType": {
       "defns": "StructureDefinition-extension-dataCollectionType-definitions.html",
       "base": "StructureDefinition-extension-dataCollectionType.html"
