@@ -27,23 +27,23 @@ In the case of colorectal cancer screening, two types of data are reported: 1) t
 ### Resources Supported for this Use Case
 {:.no_toc}
 
-|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
-|---|---|---|---|
-|Condition|QI Core Condition Profile|[QI Core Condition (STU3)]|[QI Core Condition (R4)]|
-|Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|[QI Core Coverage (R4)]|
-|DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport (STU3)]|[QI Core DiagnosticReport (R4)]|
-|Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
-|Library|CQFM Library Profile|[CQFM Library (STU3)]|[CQFM Library (R4)]|
-|Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
-|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
-|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
-|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
-|Observation|QI Core Observation Profile|[QI Core Observation (STU3)]|[QI Core Observation (R4)]|
-|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
-|Procedure|QI Core Procedure Profile|[QI Core Procedure (STU3)]|[QI Core Procedure (R4)]|
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
+|Condition|QI Core Condition Profile|[QI Core Condition]|
+|Coverage|QI Core Coverage Profile|[QI Core Coverage]|
+|DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport]|
+|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
+|Library|CQFM Library Profile|[CQFM Library]|
+|Location|QI Core Location Profile|[QI Core Location]|
+|Measure|CQFM Measure Profile|[CQFM Measure]|
+|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
+|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
+|Observation|QI Core Observation Profile|[QI Core Observation]|
+|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Patient|QI Core Patient Profile|[QI Core Patient]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+|Procedure|QI Core Procedure Profile|[QI Core Procedure]|
 
 ## Graph of COL Resources
 

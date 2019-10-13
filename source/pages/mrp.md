@@ -33,19 +33,19 @@ Note that the exchange of the reconciled medication list, indication of conversa
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|
-|Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|
-|Location|QI Core Location Profile|[QI Core Location (STU3)]|
-|Library|CQFM Library Profile|[CQFM Library (STU3)]|
-|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|
-|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|
-|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|
-|Observation|QI Core Observation Profile|[QI Core Observation (STU3)]|
-|Organization|DEQM Organization Profile[^9]|[DEQM Organization (STU3)]|
-|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|
-|Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner (STU3)]|
-|Task|QI Core Task Profile|[QI Core Task (STU3)]|
+|Coverage|QI Core Coverage Profile|[QI Core Coverage]|
+|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
+|Location|QI Core Location Profile|[QI Core Location]|
+|Library|CQFM Library Profile|[CQFM Library]|
+|Measure|CQFM Measure Profile|[CQFM Measure]|
+|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
+|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
+|Observation|QI Core Observation Profile|[QI Core Observation]|
+|Organization|DEQM Organization Profile[^9]|[DEQM Organization]|
+|Patient|QI Core Patient Profile|[QI Core Patient]|
+|Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner]|
+|Task|QI Core Task Profile|[QI Core Task]|
 
 ## Graph of MRP Resources
 

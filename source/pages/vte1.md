@@ -16,26 +16,26 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 ### Resources supported for this Use Case
 {:.no_toc}
 
-|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
-|---|---|---|---|
-|Condition|QI Core Condition Profile|[QI Core Condition (STU3)]|[QI Core Condition (R4)]|
-|Coverage|QI Core Coverage Profile|[QI Core Coverage (STU3)]|[QI Core Coverage (R4)]|
-|DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest (STU3)]|[DEQM DeviceRequest (R4)]|
-|DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement (STU3)]|[DEQM DeviceUseStatement (R4)]|
-|Encounter|QI Core Encounter Profile|[QI Core Encounter (STU3)]|[QI Core Encounter (R4)]|
-|Library|CQFM Library Profile|[CQFM Library (STU3)]|[CQFM Library (R4)]|
-|Location|QI Core Location Profile|[QI Core Location (STU3)]|[QI Core Location (R4)]|
-|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
-|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile (STU3)]|[DEQM Summary MeasureReport Profile (R4)]|
-|MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration (STU3)]|[DEQM MedicationAdministration (R4)]|
-|MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest (STU3)]|[DEQM MedicationRequest (R4)]|
-|Observation|QI Core Observation Profile|[QI Core Observation (STU3)]|[QI Core Observation (R4)]|
-|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner (STU3)]|[DEQM Practitioner (R4)]|
-|Procedure|QI Core Procedure Profile|[QI Core Procedure (STU3)]|[QI Core Procedure (R4)]|
-|ProcedureRequest|QI Core ProcedureRequest Profile|[QI Core ProcedureRequest (STU3)]|[QI Core ProcedureRequest (R4)]|
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
+|Condition|QI Core Condition Profile|[QI Core Condition]|
+|Coverage|QI Core Coverage Profile|[QI Core Coverage]|
+|DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest]|
+|DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement]|
+|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
+|Library|CQFM Library Profile|[CQFM Library]|
+|Location|QI Core Location Profile|[QI Core Location]|
+|Measure|CQFM Measure Profile|[CQFM Measure]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
+|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
+|MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
+|MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest]|
+|Observation|QI Core Observation Profile|[QI Core Observation]|
+|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Patient|QI Core Patient Profile|[QI Core Patient]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+|Procedure|QI Core Procedure Profile|[QI Core Procedure]|
+|ProcedureRequest|QI Core ProcedureRequest Profile|[QI Core ProcedureRequest]|
 
 
 ## Graph of VTE-1 Resources

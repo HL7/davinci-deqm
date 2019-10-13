@@ -21,8 +21,8 @@ The following data-elements are mandatory (i.e data MUST be present).
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
 
 1. Separate subgroup calculations (stratifiers)
-1. Reference to a reporting vendor using the DEQM [Reporting Vendor (STU3)] Extension
-1. A certification identifier using the DEQM [Certification Identifier (STU3)] Extension
+1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension
+1. A certification identifier using the DEQM [Certification Identifier] Extension
 
 **Additional Profile specific implementation guidance:**
 

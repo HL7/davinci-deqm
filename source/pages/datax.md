@@ -40,13 +40,13 @@ FHIR operations allow the implementation to be viewed as a 'black box' free to d
 
 The following resources are used in all data exchange transactions:
 
-|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
-|---|---|---|---|
-|Library|CQFM Library Profile|[CQFM Library (STU3)]|[CQFM Library (R4)]|
-|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
-|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile (STU3)]|[DEQM Data Exchange MeasureReport Profile (R4)]|
-|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
+|Library|CQFM Library Profile|[CQFM Library]|
+|Measure|CQFM Measure Profile|[CQFM Measure]|
+|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
+|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Patient|QI Core Patient Profile|[QI Core Patient]|
 
 Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
 
@@ -82,7 +82,7 @@ In this step, the Producer queries a common knowledge store for profiles needed 
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Data Requirements: [$data-requirements (R4)] operation  (Note - the same operation is used for both version STU3 and R4 transaction)
+1. Data Requirements: [$data-requirements] operation
 
 ##### Usage
 {:.no_toc}
@@ -109,7 +109,7 @@ Once the Producer understands the data requirements, they will use the *Submit D
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Submit Data operation: [$submit-data (R4)]  ( Note - the same operation is used for both version STU3 and R4 transaction)
+1. Submit Data operation: [$submit-data]
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 ##### Usage
@@ -148,14 +148,14 @@ Note that implementing this scenario requires that the Producer system understan
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Collect Data operation:[$collect-data (STU3)] or [$collect-data (R4)]
+1. Collect Data operation:[$collect-data]
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 
 #### Usage
 {:.no_toc}
 
-**Collect Data (STU3 and R4):**
+**Collect Data:**
 
 Using either the `GET` or `POST` Syntax, the operation can be invoked by the Consumer:
 
@@ -262,7 +262,7 @@ The Consumer must first subscribe to the Producer for a notification for a parti
 
 The following artifacts are used in the subscription transaction:
 
-1. DEQM Subscription Profile [DEQM Subscription (STU3)] or [DEQM Subscription (R4)]
+1. DEQM Subscription Profile [DEQM Subscription] or [DEQM Subscription (R4)]
 1. [DEQM Measure Subscription Extension]
 
 ##### Usage

@@ -106,12 +106,12 @@ was missing from the EHR.
 
 The following resources are used in all individual reporting transactions.
 
-|Resource Type|Profile Name|Link to STU3 Profile|Link to R4 Profile|
-|---|---|---|---|
-|Measure|CQFM Measure Profile|[CQFM Measure (STU3)]|[CQFM Measure (R4)]|
-|Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile (STU3)]|[DEQM Individual MeasureReport Profile (R4)]|
-|Organization|DEQM Organization Profile|[DEQM Organization (STU3)]|[DEQM Organization (R4)]|
-|Patient|QI Core Patient Profile|[QI Core Patient (STU3)]|[QI Core Patient (R4)]|
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
+|Measure|CQFM Measure Profile|[CQFM Measure]|
+|Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
+|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Patient|QI Core Patient Profile|[QI Core Patient]|
 
 Depending on the specific Measure and Interaction, various DEQM and QI Core Profiles are used in addition to the profiles listed above.
 
