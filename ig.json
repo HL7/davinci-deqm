@@ -36,9 +36,9 @@
       "defns": "StructureDefinition-extension-dataCollectionType-definitions.html",
       "base": "StructureDefinition-extension-dataCollectionType.html"
     },
-    "StructureDefinition/extension-cqfm-reportingOrganizationGroup": {
-      "defns": "StructureDefinition-extension-cqfm-reportingOrganizationGroup-definitions.html",
-      "base": "StructureDefinition-extension-cqfm-reportingOrganizationGroup.html"
+    "StructureDefinition/extension-reportingOrganizationGroup": {
+      "defns": "StructureDefinition-extension-reportingOrganizationGroup-definitions.html",
+      "base": "StructureDefinition-extension-reportingOrganizationGroup.html"
     },
     "CapabilityStatement/producer-server": {
       "base": "CapabilityStatement-producer-server.html",

@@ -89,7 +89,7 @@
 [Reference Any]: StructureDefinition-extension-referenceAny.html
 [Reporting Individual Data]: {{site.r4}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
 [Reporting Vendor]: StructureDefinition-extension-reportingVendor.html
-[Reporting Group]: StructureDefinition-extension-cqfm-reportingOrganizationGroup.html
+[Reporting Group]: StructureDefinition-extension-reportingOrganizationGroup.html
 [SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
 [Subscription]: {{site.data.fhir.path}}subscription.html

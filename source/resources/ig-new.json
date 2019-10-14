@@ -252,7 +252,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/extension-cqfm-reportingOrganizationGroup"
+        "reference" : "StructureDefinition/extension-reportingOrganizationGroup"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"

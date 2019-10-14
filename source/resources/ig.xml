@@ -113,7 +113,7 @@
     </resource>
 
     <resource><example value="false"/>
-      <sourceReference><reference value="StructureDefinition/extension-cqfm-reportingOrganizationGroup"/></sourceReference>
+      <sourceReference><reference value="StructureDefinition/extension-reportingOrganizationGroup"/></sourceReference>
     </resource>
 
     <resource><example value="false"/>
