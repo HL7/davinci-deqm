@@ -30,9 +30,9 @@ gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://hl7.org/fhir/us/davinci-deqm
 dependencyList.name,qicore|uscore|cqfm
-dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures/2019May
+dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures
 dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|hl7.fhir.us.cqfmeasures
-dependencyList.version,3.2.0|2.0.0|dev
+dependencyList.version,3.2.0|2.0.0|current
 tool,jekyll
 logging,progress
 topofpage,TRUE

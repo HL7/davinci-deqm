@@ -369,9 +369,9 @@
     },
     {
       "name": "cqfm",
-      "version": "0.1.0",
+      "version": "current",
       "package": "hl7.fhir.us.cqfmeasures",
-      "location": "http://hl7.org/fhir/us/cqfmeasures/2019May"
+      "location": "http://build.fhir.org/ig/HL7/cqf-measures"
     }
   ]
 }
