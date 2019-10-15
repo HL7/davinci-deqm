@@ -80,6 +80,7 @@
 [QI Core Observation]: {{site.qi_r3}}StructureDefinition-qicore-observation.html
 [QI Core Patient]: {{site.qi_r3}}StructureDefinition-qicore-patient.html
 [QI Core Procedure]: {{site.qi_r3}}StructureDefinition-qicore-procedure.html
+[QI Core ProcedureRequest]: {{site.qi_r3}}StructureDefinition-qicore-procedurerequest.html
 [QI Core Task]: {{site.qi_r3}}StructureDefinition-qicore-task.html
 [QI Core Profiles]: {{site.qi_r3}}index.html
 [QI Core]: {{site.qi_r3}}index.html
