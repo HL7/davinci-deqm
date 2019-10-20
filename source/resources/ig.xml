@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.davinci-deqm-0.2.0"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-0.2.0"/>
-  <version value="0.2.0"/>
-  <name value="Data Exchange For Quality Measures STU3"/>
+  <id value="hl7.fhir.us.davinci-deqm-1.0.0"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.0.0"/>
+  <version value="1.0.0"/>
+  <name value="Data Exchange For Quality Measures STU2 for FHIR STU3"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="HL7 International - Clinical Quality Information Work Group"/>

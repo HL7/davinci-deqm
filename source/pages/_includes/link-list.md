@@ -105,3 +105,5 @@
 [Colorectal Cancer Screening (PDQ®)-Patient Version]: https://www.cancer.gov/types/colorectal/patient/colorectal-screening-pdq
 [Bundles]: {{site.data.fhir.path}}bundle.html
 [following rules]: {{site.data.fhir.path}}references.html#contained
+[negation patterns in quality measurements]: {{cqfm_r3}}using-cql.html
+[Valueset Reference]: {{site.data.fhir.path}}extension-valueset-reference.html

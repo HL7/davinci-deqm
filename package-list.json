@@ -13,6 +13,16 @@
          "current": true
       },
       {
+         "version": "1.0.0",
+         "fhirversion": "3.0.1",
+         "date": "2019-10-31",
+         "desc": "The current official published version of the DEQM IG for FHIR STU3.",
+         "changes": "change-notes.html",
+         "path": "http://hl7.org/fhir/us/davinci-deqm/STU2",
+         "status": "trial-use",
+         "sequence": "STU2"
+      },
+      {
          "version": "0.2.0",
          "fhirversion": "3.0.1",
          "date": "2019-05-01",

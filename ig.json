@@ -319,7 +319,7 @@
   "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm",
   "pub_url": "ehaas@healthedatainc.com",
   "npm-name": "hl7.fhir.us.davinci-deqm",
-  "fixed-business-version": "0.2.0",
+  "fixed-business-version": "1.0.0",
   "mappings": "false",
   "extensions": [
     "extension-referenceAny",

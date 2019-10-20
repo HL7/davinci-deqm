@@ -2,7 +2,7 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
   <id value="submit-data"/>
   <url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/submit-data"/>
-	<version value="0.2.0"/>
+	<version value="1.0.0"/>
 	<name value="submit_data"/>
 	<status value="active"/>
 	<kind value="operation"/>
