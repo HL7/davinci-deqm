@@ -69,30 +69,11 @@ Content-Type: application/fhir+json;charset=UTF-8
           "start": "2018-01-01,
           "end": "2018-12-31"
         },
-        "evaluatedResources": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
-              "valueReference": {
-                "reference": "Patient/patient-col"
-              }
-            },
-            {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
-              "valueReference": {
-                "reference": "Practitioner/practitioner-col"
-              }
-            },
-            {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
-              "valueReference": {
-                "reference": "Observation/fit-dna-observation"
-              }
-            }
-          ]
-        }
-      }
-    },
+        "evaluatedResources": [
+          {"reference": "Patient/patient-col"},
+          {"reference": "Practitioner/practitioner-col"},
+          {"reference": "Observation/fit-dna-observation"}
+    ],
     {
       "name": "resource",
       "resource": {

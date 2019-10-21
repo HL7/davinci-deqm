@@ -203,7 +203,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-reportingOrganizationGroup-intro.md"/>
+        <reference value="StructureDefinition/extension-reportingOrganizationGroup"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -228,12 +228,6 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-doNotPerform"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/extension-referenceAny"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -409,7 +403,7 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-extension-reportingOrganizationGroup-intro.md.html"/>
+          <nameUrl value="StructureDefinition-extension-reportingOrganizationGroup.html"/>
           <title value="StructureDefinition Extension Cqfm reportingOrganizationGroup Intro.md"/>
           <generation value="generated"/>
         </page>

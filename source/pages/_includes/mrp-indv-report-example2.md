@@ -160,16 +160,9 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                }
             ],
             "date": "2018-09-05T16:59:52.404Z",
-            "evaluatedResources": {
-               "extension": [
-                  {
-                     "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
-                     "valueReference": {
-                        "reference": "Observation/observation01"
-                     }
-                  }
-               ]
-            },
+            "evaluatedResources": [{
+               "reference": "Observation/observation01"
+            }],
             "group": [
                {
                   "identifier": {

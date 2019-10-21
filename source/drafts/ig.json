@@ -145,10 +145,6 @@
       "source": "Practitioner-practitioner03.json",
       "base": "Practitioner-practitioner03.html"
     },
-    "StructureDefinition/extension-referenceAny": {
-      "base": "StructureDefinition-extension-referenceAny.html",
-      "defns": "StructureDefinition-extension-referenceAny-definitions.html"
-    },
     "OperationDefinition/collect-data": {
       "source": "operationdefinition-collect-data.xml",
       "base": "OperationDefinition-collect-data.html"

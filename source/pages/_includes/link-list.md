@@ -86,7 +86,6 @@
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
 [Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html
 [Quality Reporting]: {{site.r4}}clinicalreasoning-quality-reporting.html
-[Reference Any]: StructureDefinition-extension-referenceAny.html
 [Reporting Individual Data]: {{site.r4}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
 [Reporting Vendor]: StructureDefinition-extension-reportingVendor.html
 [Reporting Group]: StructureDefinition-extension-reportingOrganizationGroup.html

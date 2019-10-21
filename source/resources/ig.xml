@@ -87,7 +87,7 @@
     <resource>
       <reference><reference value="Patient/patient01"/></reference><exampleBoolean value="true"/></resource>
     <resource>
-      <reference><reference value="StructureDefinition/extension-reportingOrganizationGroup-intro.md"/></reference><exampleBoolean value="false"/></resource>
+      <reference><reference value="StructureDefinition/extension-reportingOrganizationGroup"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="StructureDefinition/extension-certificationIdentifier"/></reference><exampleBoolean value="false"/></resource>
     <resource>
@@ -97,8 +97,8 @@
     <resource>
       <reference><reference value="StructureDefinition/extension-doNotPerform"/></reference><exampleBoolean value="false"/></resource>
     <resource>
-      <reference><reference value="StructureDefinition/extension-referenceAny"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
+      <!--reference><reference value="StructureDefinition/extension-referenceAny"/></reference><exampleBoolean value="false"/></resource>
+    <resource-->
       <reference><reference value="CapabilityStatement/producer-server"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="StructureDefinition/medicationrequest-deqm"/></reference><exampleBoolean value="false"/></resource>
@@ -160,7 +160,7 @@
 
         <!-- ============ Extensions and examples =============== -->
         <!-- insert extensions -->
-        <page><nameUrl value="StructureDefinition-extension-reportingOrganizationGroup-intro.md.html"/><title value="StructureDefinition Extension Cqfm reportingOrganizationGroup Intro.md"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-extension-reportingOrganizationGroup.html"/><title value="StructureDefinition Extension Cqfm reportingOrganizationGroup Intro.md"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-extension-certificationIdentifier.html"/><title value="StructureDefinition Extension certificationIdentifier"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-extension-reportingVendor.html"/><title value="StructureDefinition Extension reportingVendor"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-extension-dataCollectionType.html"/><title value="StructureDefinition Extension dataCollectionType"/><generation value="generated"/></page>

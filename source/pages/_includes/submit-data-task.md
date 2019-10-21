@@ -48,17 +48,9 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           "start": "2018-08-01",
           "end": "2018-09-01"
         },
-        "evaluatedResources": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
-              "valueReference": {
-                "reference": "Task/Task01"
-              }
-            }
-          ]
-        }
-      },
+        "evaluatedResource": [{
+          "reference": "Task/Task01"
+      }],
     {
       "name": "resource",
       "resource": {
