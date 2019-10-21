@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.davinci-deqm-1.0.0"/>
+  <id value="hl7.fhir.us.davinci-deqm-1.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"/>
   </extension>
@@ -14,8 +14,8 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
   </extension>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.0.0"/>
-  <version value="1.0.0"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0"/>
+  <version value="1.1.0"/>
   <name value="DataExchangeForQualityMeasuresR4"/>
   <title value="Data Exchange For Quality Measures R4"/>
   <status value="draft"/>

@@ -313,7 +313,7 @@
     "specification": "http://hl7.org/fhir/R4/"
   },
   "spreadsheets": ["profile-devicerequest-deqm-spreadsheet.xml", "profile-medicationadministration-deqm-spreadsheet.xml", "profile-summary-measurereport-deqm-spreadsheet.xml", "profile-datax-measurereport-deqm-spreadsheet.xml", "profile-practitioner-deqm-spreadsheet.xml", "profile-deviceusestatement-deqm-spreadsheet.xml", "profile-organization-deqm-spreadsheet.xml", "profile-coverage-deqm-spreadsheet.xml", "profile-indv-measurereport-deqm-spreadsheet.xml", "profile-medicationrequest-deqm-spreadsheet.xml"],
-  "fixed-business-version": "1.0.0",
+  "fixed-business-version": "1.1.0",
   "igtemplate-dir": "/Users/ehaas/Documents/FHIR/DaVinci-DEQM/",
   "do-transforms": "false",
   "topofpage": "true",

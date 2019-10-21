@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/organization-type",
+  "code" : "prov"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/organization-type\" is not known for the code \"prov\"; The code provided (http://hl7.org/fhir/organization-type#prov) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/organization-type",
+  "code" : "ins"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/organization-type\" is not known for the code \"ins\"; The code provided (http://hl7.org/fhir/organization-type#ins) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

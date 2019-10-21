@@ -23,7 +23,7 @@
 			<display value="United States of America"/>
 		</coding>
 	</jurisdiction>
-	<!--<fhirVersion value="3.0.1"/>-->
+	<!--<fhirVersion value="4.0.0"/>-->
 	<!--********************end meta*************************-->
 	<idempotent value="true"/>
 	<code value="collect-data"/>

@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/v2/0203",
+  "code" : "PRN"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/v2/0203\" is not known for the code \"PRN\"; The code provided (http://hl7.org/fhir/v2/0203#PRN) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/v2/0203",
+  "code" : "TAX"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/v2/0203\" is not known for the code \"TAX\"; The code provided (http://hl7.org/fhir/v2/0203#TAX) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
