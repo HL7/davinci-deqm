@@ -203,7 +203,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-cqfm-reportingOrganizationGroup-intro.md"/>
+        <reference value="StructureDefinition/extension-reportingOrganizationGroup-intro.md"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -409,7 +409,7 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-extension-cqfm-reportingOrganizationGroup-intro.md.html"/>
+          <nameUrl value="StructureDefinition-extension-reportingOrganizationGroup-intro.md.html"/>
           <title value="StructureDefinition Extension Cqfm reportingOrganizationGroup Intro.md"/>
           <generation value="generated"/>
         </page>

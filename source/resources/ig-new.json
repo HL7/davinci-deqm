@@ -208,7 +208,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/extension-cqfm-reportingOrganizationGroup-intro.md"
+        "reference" : "StructureDefinition/extension-reportingOrganizationGroup-intro.md"
       },
       "exampleBoolean" : false
     },
@@ -414,7 +414,7 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-extension-cqfm-reportingOrganizationGroup-intro.md.html",
+          "nameUrl" : "StructureDefinition-extension-reportingOrganizationGroup-intro.md.html",
           "title" : "StructureDefinition Extension Cqfm reportingOrganizationGroup Intro.md",
           "generation" : "generated"
         },
