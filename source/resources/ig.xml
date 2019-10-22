@@ -4,8 +4,8 @@
   <id value="hl7.fhir.us.davinci-deqm-1.1.0"/>
   <url value="http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0"/>
   <version value="1.1.0"/>
-  <name value="DataExchangeForQualityMeasuresR4"/>
-  <title value="Data Exchange For Quality Measures STU2 for FHIR R4"/>
+  <name value="DataExchangeForQualityMeasuresSTU2forFHIRR4ImplementationGuide"/>
+  <title value="Data Exchange For Quality Measures STU2 for FHIR R4 Implementation Guide"/>
   <status value="draft"/>
   <publisher value="HL7 International - Clinical Quality Information Work Group"/>
 
@@ -105,8 +105,6 @@
     <resource>
       <reference><reference value="StructureDefinition/organization-deqm"/></reference><exampleBoolean value="false"/></resource>
     <resource>
-      <reference><reference value="StructureDefinition/deviceusestatement-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
       <reference><reference value="StructureDefinition/practitioner-deqm"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="CapabilityStatement/receiver-server"/></reference><exampleBoolean value="false"/></resource>
@@ -116,10 +114,6 @@
       <reference><reference value="StructureDefinition/summary-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="StructureDefinition/medicationadministration-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="OperationDefinition/collect-data"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="OperationDefinition/submit-data"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="CapabilityStatement/reporter-client"/></reference><exampleBoolean value="false"/></resource>
     <resource>
@@ -132,8 +126,56 @@
     <!-- ============ Home Page =============== -->
     <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
-      <!-- ============ Guidance Page =============== -->
-      <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
+    <!-- ============ Framework Page =============== -->
+    <page>
+      <nameUrl value="framework.html"/>
+      <title value="Framework"/>
+      <generation value="markdown"/>
+      <page>
+        <nameUrl value="guidance.html"/>
+        <title value="General Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="datax.html"/>
+        <title value="Data Exchange"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="indv-reporting.html"/>
+        <title value="Individual Reporting"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="summary-reporting.html"/>
+        <title value="Summary Reporting"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <!-- ============ End Framework Page =============== -->
+    <!-- ============ Use Cases Page =============== -->
+    <page>
+      <nameUrl value="usecases.html"/>
+      <title value="Example Use Cases"/>
+      <generation value="markdown"/>
+      <page>
+        <nameUrl value="mrp.html"/>
+        <title value="Medication Reconciliation Post-Discharge (MRP)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="col.html"/>
+        <title value="Colorectal Cancer Screening (COL)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="vte1.html"/>
+        <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <!-- ============ End Use Cases Page =============== -->
+
 
       <!-- ============ Profiles Page =============== -->
       <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
@@ -144,7 +186,6 @@
         <page><nameUrl value="StructureDefinition-indv-measurereport-deqm.html"/><title value="StructureDefinition Indv MeasureReport Deqm"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-coverage-deqm.html"/><title value="StructureDefinition Coverage Deqm"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-organization-deqm.html"/><title value="StructureDefinition Organization Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-deviceusestatement-deqm.html"/><title value="StructureDefinition DeviceUseStatement Deqm"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-practitioner-deqm.html"/><title value="StructureDefinition Practitioner Deqm"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-datax-measurereport-deqm.html"/><title value="StructureDefinition Datax MeasureReport Deqm"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/><title value="StructureDefinition Summary MeasureReport Deqm"/><generation value="generated"/></page>
@@ -159,40 +200,6 @@
         <page><nameUrl value="StructureDefinition-extension-doNotPerform.html"/><title value="StructureDefinition Extension doNotPerform"/><generation value="generated"/></page>
         <!-- ============ End Extensions and examples =============== -->
 
-      </page>
-      <!-- ============ Operations Page =============== -->
-      <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
-
-        <!-- ============ Operations and examples =============== -->
-        <!-- insert operationdefinitions -->
-        <page><nameUrl value="OperationDefinition-collect-data.html"/><title value="OperationDefinition Collect Data"/><generation value="generated"/></page>
-        <page><nameUrl value="OperationDefinition-submit-data.html"/><title value="OperationDefinition Submit Data"/><generation value="generated"/></page>
-        <!-- ============ End Operations and examples =============== -->
-
-      </page>
-      <!-- ============ Terminology Page =============== -->
-
-      <page><nameUrl value="terminology.html"/><title value="Terminology"/><generation value="markdown"/>
-        <!-- ============ ValueSet =============== -->
-        <!-- insert valuesets -->
-        <!-- ============ End ValueSet =============== -->
-
-        <!-- ============ CodeSystems =============== -->
-        <!-- insert codesystems -->
-        <!-- ============ End CodeSystems =============== -->
-
-        <!-- ============ ConceptMaps =============== -->
-        <!-- insert conceptmaps -->
-        <!-- ============ End ConceptMaps =============== -->
-
-      </page>
-
-      <!-- ============ SearchParameter Page =============== -->
-      <page><nameUrl value="searchparameters.html"/><title value="Search Parameters"/><generation value="markdown"/>
-
-        <!-- ============ SearchParameters =============== -->
-        <!-- insert searchparameters -->
-        <!-- ============ End SearchParameters =============== -->
       </page>
 
       <!-- ============ CapabilityStatement Page =============== -->
@@ -209,14 +216,18 @@
         <!-- ============ End CapabilityStatements =============== -->
       </page>
 
-      <!-- ============ Security Page =============== -->
-      <page><nameUrl value="security.html"/><title value="Security"/><generation value="markdown"/></page>
-
       <!-- ============ Downloads Page =============== -->
       <page><nameUrl value="downloads.html"/><title value="Downloads"/><generation value="markdown"/></page>
 
       <!-- ============ Examples Page=============== -->
       <page><nameUrl value="all-examples.html"/><title value="All Examples"/><generation value="markdown"/></page>
+
+      <!-- ============ Change Notes Page =============== -->
+      <page>
+        <nameUrl value="change-notes.html"/>
+        <title value="Change Notes"/>
+        <generation value="markdown"/>
+      </page>
 
       <!-- ============ Table of Contents =============== -->
       <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/></page>

@@ -1,33 +1,88 @@
 {
-  "mappings": "false",
-  "npm-name": "hl7.fhir.us.davinci-deqm",
-  "pub_url": "ehaas@healthedatainc.com",
-  "sct-edition": "http://snomed.info/sct/731000124108",
-  "source": "ig.xml",
-  "extraTemplates": ["mappings"],
-  "extensions": ["extension-doNotPerform", "extension-reportingVendor", "extension-certificationIdentifier"],
-  "swagger": [{
-    "capabilities": "server",
-    "mode": "single"
-  }],
   "no-inactive-codes": "false",
-  "version": "4.0.0",
+  "do-transforms": "false",
+  "topofpage": "true",
+  "extensions": ["extension-doNotPerform", "extension-reportingVendor", "extension-certificationIdentifier"],
+  "title": "Data Exchange For Quality Measures STU2 for FHIR R4 Implementation Guide",
+  "license": "CC0-1.0",
+  "paths": {
+    "specification": "http://hl7.org/fhir/R4/",
+    "pages": ["framework", "source/pages"],
+    "output": "output",
+    "qa": "generated_output/qa",
+    "history": "history",
+    "resources": ["source/resources", "source/examples"],
+    "txCache": "generated_output/txCache",
+    "temp": "generated_output/temp"
+  },
   "resources": {
-    "CapabilityStatement/receiver-server": {
-      "base": "CapabilityStatement-receiver-server.html",
-      "source": "capabilitystatement-receiver-server.json"
+    "Practitioner/practitioner02": {
+      "base": "Practitioner-practitioner02.html",
+      "source": "Practitioner-practitioner02.json"
     },
-    "StructureDefinition/medicationadministration-deqm": {
-      "base": "StructureDefinition-medicationadministration-deqm.html",
-      "defns": "StructureDefinition-medicationadministration-deqm-definitions.html"
+    "Organization/organization04": {
+      "base": "Organization-organization04.html",
+      "source": "Organization-organization04.json"
+    },
+    "Organization/organization02": {
+      "base": "Organization-organization02.html",
+      "source": "Organization-organization02.json"
+    },
+    "Practitioner/practitioner01": {
+      "base": "Practitioner-practitioner01.html",
+      "source": "Practitioner-practitioner01.json"
+    },
+    "CapabilityStatement/consumer-client": {
+      "base": "CapabilityStatement-consumer-client.html",
+      "source": "capabilitystatement-consumer-client.json"
+    },
+    "Coverage/coverage01": {
+      "base": "Coverage-coverage01.html",
+      "source": "Coverage-coverage01.json"
     },
     "Location/location01": {
       "base": "Location-location01.html",
       "source": "Location-location01.json"
     },
-    "StructureDefinition/datax-measurereport-deqm": {
-      "base": "StructureDefinition-datax-measurereport-deqm.html",
-      "defns": "StructureDefinition-datax-measurereport-deqm-definitions.html"
+    "Task/Task01": {
+      "base": "Task-Task01.html",
+      "source": "Task-task01.json"
+    },
+    "StructureDefinition/extension-certificationIdentifier": {
+      "base": "StructureDefinition-extension-certificationIdentifier.html",
+      "defns": "StructureDefinition-extension-certificationIdentifier-definitions.html"
+    },
+    "StructureDefinition/summary-measurereport-deqm": {
+      "base": "StructureDefinition-summary-measurereport-deqm.html",
+      "defns": "StructureDefinition-summary-measurereport-deqm-definitions.html"
+    },
+    "Coverage/coverage03": {
+      "base": "Coverage-coverage03.html",
+      "source": "Coverage-coverage03.json"
+    },
+    "MeasureReport/indv-measurereport02": {
+      "base": "MeasureReport-indv-measurereport02.html",
+      "source": "MeasureReport-indv-measurereport02.json"
+    },
+    "StructureDefinition/extension-reportingVendor": {
+      "base": "StructureDefinition-extension-reportingVendor.html",
+      "defns": "StructureDefinition-extension-reportingVendor-definitions.html"
+    },
+    "MeasureReport/datax-measurereport02": {
+      "base": "MeasureReport-datax-measurereport02.html",
+      "source": "MeasureReport-datax-measurereport02.json"
+    },
+    "StructureDefinition/extension-doNotPerform": {
+      "base": "StructureDefinition-extension-doNotPerform.html",
+      "defns": "StructureDefinition-extension-doNotPerform-definitions.html"
+    },
+    "CapabilityStatement/producer-server": {
+      "base": "CapabilityStatement-producer-server.html",
+      "source": "capabilitystatement-producer-server.json"
+    },
+    "StructureDefinition/practitioner-deqm": {
+      "base": "StructureDefinition-practitioner-deqm.html",
+      "defns": "StructureDefinition-practitioner-deqm-definitions.html"
     },
     "Practitioner/practitioner03": {
       "base": "Practitioner-practitioner03.html",
@@ -37,205 +92,167 @@
       "base": "CapabilityStatement-producer-client.html",
       "source": "capabilitystatement-producer-client.json"
     },
-    "Task/Task01": {
-      "base": "Task-Task01.html",
-      "source": "Task-task01.json"
+    "StructureDefinition/indv-measurereport-deqm": {
+      "base": "StructureDefinition-indv-measurereport-deqm.html",
+      "defns": "StructureDefinition-indv-measurereport-deqm-definitions.html"
     },
-    "Organization/organization03": {
-      "base": "Organization-organization03.html",
-      "source": "Organization-organization03.json"
+    "StructureDefinition/datax-measurereport-deqm": {
+      "base": "StructureDefinition-datax-measurereport-deqm.html",
+      "defns": "StructureDefinition-datax-measurereport-deqm-definitions.html"
     },
-    "StructureDefinition/practitioner-deqm": {
-      "base": "StructureDefinition-practitioner-deqm.html",
-      "defns": "StructureDefinition-practitioner-deqm-definitions.html"
-    },
-    "StructureDefinition/organization-deqm": {
-      "base": "StructureDefinition-organization-deqm.html",
-      "defns": "StructureDefinition-organization-deqm-definitions.html"
-    },
-    "CapabilityStatement/producer-server": {
-      "base": "CapabilityStatement-producer-server.html",
-      "source": "capabilitystatement-producer-server.json"
-    },
-    "OperationDefinition/submit-data": {
-      "base": "OperationDefinition-submit-data.html",
-      "source": "operationdefinition-submit-data.xml"
-    },
-    "CapabilityStatement/consumer-client": {
-      "base": "CapabilityStatement-consumer-client.html",
-      "source": "capabilitystatement-consumer-client.json"
-    },
-    "Organization/organization02": {
-      "base": "Organization-organization02.html",
-      "source": "Organization-organization02.json"
-    },
-    "Location/location03": {
-      "base": "Location-location03.html",
-      "source": "Location-location03.json"
-    },
-    "Coverage/coverage02": {
-      "base": "Coverage-coverage02.html",
-      "source": "Coverage-coverage02.json"
-    },
-    "StructureDefinition/summary-measurereport-deqm": {
-      "base": "StructureDefinition-summary-measurereport-deqm.html",
-      "defns": "StructureDefinition-summary-measurereport-deqm-definitions.html"
-    },
-    "StructureDefinition/extension-certificationIdentifier": {
-      "base": "StructureDefinition-extension-certificationIdentifier.html",
-      "defns": "StructureDefinition-extension-certificationIdentifier-definitions.html"
-    },
-    "MeasureReport/datax-measurereport02": {
-      "base": "MeasureReport-datax-measurereport02.html",
-      "source": "MeasureReport-datax-measurereport02.json"
-    },
-    "MeasureReport/datax-measurereport01": {
-      "base": "MeasureReport-datax-measurereport01.html",
-      "source": "MeasureReport-datax-measurereport01.json"
-    },
-    "CapabilityStatement/consumer-server": {
-      "base": "CapabilityStatement-consumer-server.html",
-      "source": "capabilitystatement-consumer-server.json"
-    },
-    "Encounter/Encounter01": {
-      "base": "Encounter-Encounter01.html",
-      "source": "Encounter-encounter01.json"
-    },
-    "StructureDefinition/devicerequest-deqm": {
-      "base": "StructureDefinition-devicerequest-deqm.html",
-      "defns": "StructureDefinition-devicerequest-deqm-definitions.html"
-    },
-    "Observation/observation01": {
-      "base": "Observation-observation01.html",
-      "source": "Observation-observation01.json"
-    },
-    "StructureDefinition/extension-reportingVendor": {
-      "base": "StructureDefinition-extension-reportingVendor.html",
-      "defns": "StructureDefinition-extension-reportingVendor-definitions.html"
-    },
-    "StructureDefinition/deviceusestatement-deqm": {
-      "base": "StructureDefinition-deviceusestatement-deqm.html",
-      "defns": "StructureDefinition-deviceusestatement-deqm-definitions.html"
-    },
-    "Patient/patient01": {
-      "base": "Patient-patient01.html",
-      "source": "Patient-patient01.json"
-    },
-    "OperationDefinition/collect-data": {
-      "base": "OperationDefinition-collect-data.html",
-      "source": "operationdefinition-collect-data.xml"
-    },
-    "StructureDefinition/coverage-deqm": {
-      "base": "StructureDefinition-coverage-deqm.html",
-      "defns": "StructureDefinition-coverage-deqm-definitions.html"
-    },
-    "StructureDefinition/medicationrequest-deqm": {
-      "base": "StructureDefinition-medicationrequest-deqm.html",
-      "defns": "StructureDefinition-medicationrequest-deqm-definitions.html"
-    },
-    "Organization/organization04": {
-      "base": "Organization-organization04.html",
-      "source": "Organization-organization04.json"
-    },
-    "Patient/patient02": {
-      "base": "Patient-patient02.html",
-      "source": "Patient-patient02.json"
+    "StructureDefinition/medicationadministration-deqm": {
+      "base": "StructureDefinition-medicationadministration-deqm.html",
+      "defns": "StructureDefinition-medicationadministration-deqm-definitions.html"
     },
     "MeasureReport/indv-measurereport01": {
       "base": "MeasureReport-indv-measurereport01.html",
       "source": "MeasureReport-indv-measurereport01.json"
     },
-    "Location/location02": {
-      "base": "Location-location02.html",
-      "source": "Location-location02.json"
+    "StructureDefinition/organization-deqm": {
+      "base": "StructureDefinition-organization-deqm.html",
+      "defns": "StructureDefinition-organization-deqm-definitions.html"
     },
-    "Practitioner/practitioner01": {
-      "base": "Practitioner-practitioner01.html",
-      "source": "Practitioner-practitioner01.json"
+    "MeasureReport/datax-measurereport01": {
+      "base": "MeasureReport-datax-measurereport01.html",
+      "source": "MeasureReport-datax-measurereport01.json"
     },
-    "Organization/organization01": {
-      "base": "Organization-organization01.html",
-      "source": "Organization-organization01.json"
+    "CapabilityStatement/receiver-server": {
+      "base": "CapabilityStatement-receiver-server.html",
+      "source": "capabilitystatement-receiver-server.json"
     },
     "Patient/patient03": {
       "base": "Patient-patient03.html",
       "source": "Patient-patient03.json"
     },
-    "Practitioner/practitioner02": {
-      "base": "Practitioner-practitioner02.html",
-      "source": "Practitioner-practitioner02.json"
+    "Measure/measure-mrp": {
+      "base": "Measure-measure-mrp.html",
+      "source": "Measure-measure-mrp.json"
     },
-    "Coverage/coverage01": {
-      "base": "Coverage-coverage01.html",
-      "source": "Coverage-coverage01.json"
+    "Organization/organization01": {
+      "base": "Organization-organization01.html",
+      "source": "Organization-organization01.json"
     },
     "MeasureReport/summ-measurereport01": {
       "base": "MeasureReport-summ-measurereport01.html",
       "source": "MeasureReport-summ-measurereport01.json"
     },
-    "StructureDefinition/indv-measurereport-deqm": {
-      "base": "StructureDefinition-indv-measurereport-deqm.html",
-      "defns": "StructureDefinition-indv-measurereport-deqm-definitions.html"
-    },
-    "StructureDefinition/extension-doNotPerform": {
-      "base": "StructureDefinition-extension-doNotPerform.html",
-      "defns": "StructureDefinition-extension-doNotPerform-definitions.html"
-    },
     "CapabilityStatement/reporter-client": {
       "base": "CapabilityStatement-reporter-client.html",
       "source": "capabilitystatement-reporter-client.json"
     },
-    "MeasureReport/indv-measurereport02": {
-      "base": "MeasureReport-indv-measurereport02.html",
-      "source": "MeasureReport-indv-measurereport02.json"
+    "Location/location03": {
+      "base": "Location-location03.html",
+      "source": "Location-location03.json"
     },
-    "Measure/measure-mrp": {
-      "base": "Measure-measure-mrp.html",
-      "source": "Measure-measure-mrp.json"
+    "Organization/organization03": {
+      "base": "Organization-organization03.html",
+      "source": "Organization-organization03.json"
     },
-    "Coverage/coverage03": {
-      "base": "Coverage-coverage03.html",
-      "source": "Coverage-coverage03.json"
+    "Observation/observation01": {
+      "base": "Observation-observation01.html",
+      "source": "Observation-observation01.json"
+    },
+    "StructureDefinition/coverage-deqm": {
+      "base": "StructureDefinition-coverage-deqm.html",
+      "defns": "StructureDefinition-coverage-deqm-definitions.html"
+    },
+    "Encounter/Encounter01": {
+      "base": "Encounter-Encounter01.html",
+      "source": "Encounter-encounter01.json"
+    },
+    "StructureDefinition/medicationrequest-deqm": {
+      "base": "StructureDefinition-medicationrequest-deqm.html",
+      "defns": "StructureDefinition-medicationrequest-deqm-definitions.html"
+    },
+    "Location/location02": {
+      "base": "Location-location02.html",
+      "source": "Location-location02.json"
+    },
+    "Patient/patient02": {
+      "base": "Patient-patient02.html",
+      "source": "Patient-patient02.json"
+    },
+    "StructureDefinition/devicerequest-deqm": {
+      "base": "StructureDefinition-devicerequest-deqm.html",
+      "defns": "StructureDefinition-devicerequest-deqm-definitions.html"
+    },
+    "Patient/patient01": {
+      "base": "Patient-patient01.html",
+      "source": "Patient-patient01.json"
+    },
+    "Coverage/coverage02": {
+      "base": "Coverage-coverage02.html",
+      "source": "Coverage-coverage02.json"
+    },
+    "CapabilityStatement/consumer-server": {
+      "base": "CapabilityStatement-consumer-server.html",
+      "source": "capabilitystatement-consumer-server.json"
     }
   },
+  "mappings": "false",
+  "status": "draft",
+  "pub_url": "ehaas@healthedatainc.com",
+  "swagger": [{
+    "capabilities": "server",
+    "mode": "single"
+  }],
   "logging": ["progress"],
-  "allviews": "true",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "extraTemplates": ["mappings"],
+  "gen-examples": "false",
+  "version": "4.0.0",
+  "jurisdiction": "US",
+  "fixed-business-version": "1.1.0",
+  "name": "DataExchangeForQualityMeasuresSTU2forFHIRR4ImplementationGuide",
+  "npm-name": "hl7.fhir.us.davinci-deqm",
   "dependencyList": [{
+    "package": "hl7.fhir.us.qicore",
     "name": "qicore",
     "location": "http://hl7.org/fhir/us/qicore",
-    "version": "current",
-    "package": "hl7.fhir.us.qicore"
+    "version": "current"
   }, {
+    "package": "hl7.fhir.us.core",
     "name": "uscore",
     "location": "http://hl7.org/fhir/us/core",
-    "version": "current",
-    "package": "hl7.fhir.us.core"
+    "version": "current"
   }],
-  "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm",
-  "license": "CC0-1.0",
-  "title": "Data Exchange For Quality Measures R4",
   "tool": "jekyll",
-  "publisher": "HL7 International - Clinical Quality Information Work Group",
-  "jurisdiction": "US",
-  "broken-links": "warning",
-  "working-dir": "/Users/ehaas/Documents/FHIR/DaVinci-DEQM/",
-  "status": "draft",
-  "contact": [{
-    "system": "url",
-    "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
-  }],
+  "allviews": "true",
+  "spreadsheets": ["profile-devicerequest-deqm-spreadsheet.xml", "profile-medicationadministration-deqm-spreadsheet.xml", "profile-summary-measurereport-deqm-spreadsheet.xml", "profile-datax-measurereport-deqm-spreadsheet.xml", "profile-practitioner-deqm-spreadsheet.xml", "profile-organization-deqm-spreadsheet.xml", "profile-coverage-deqm-spreadsheet.xml", "profile-indv-measurereport-deqm-spreadsheet.xml", "profile-medicationrequest-deqm-spreadsheet.xml"],
+  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/DaVinci-DEQM/",
+  "source": "ig.xml",
   "defaults": {
-    "Encounter": {
-      "template-base": "ex.html"
-    },
-    "CodeSystem": {
+    "ValueSet": {
       "template-base": "base.html"
+    },
+    "StructureDefinition": {
+      "template-defns": "sd-definitions.html",
+      "template-mappings": "sd-mappings.html",
+      "template-base": "sd.html"
     },
     "Location": {
       "template-base": "ex.html"
     },
-    "Practitioner": {
+    "Measure": {
       "template-base": "ex.html"
+    },
+    "Organization": {
+      "template-base": "ex.html"
+    },
+    "OperationDefinition": {
+      "template-base": "base.html"
+    },
+    "Coverage": {
+      "template-base": "ex.html"
+    },
+    "StructureMap": {
+      "content": false,
+      "script": false,
+      "profiles": false,
+      "template-base": "ex.html"
+    },
+    "CodeSystem": {
+      "template-base": "base.html"
     },
     "CapabilityStatement": {
       "template-base": "base.html"
@@ -246,65 +263,46 @@
     "Task": {
       "template-base": "ex.html"
     },
-    "Coverage": {
-      "template-base": "ex.html"
-    },
-    "OperationDefinition": {
-      "template-base": "base.html"
-    },
     "ConceptMap": {
       "template-base": "base.html"
     },
-    "Organization": {
+    "Practitioner": {
       "template-base": "ex.html"
-    },
-    "StructureMap": {
-      "content": false,
-      "template-base": "ex.html",
-      "script": false,
-      "profiles": false
-    },
-    "ValueSet": {
-      "template-base": "base.html"
-    },
-    "StructureDefinition": {
-      "template-defns": "sd-definitions.html",
-      "template-base": "sd.html",
-      "template-mappings": "sd-mappings.html"
     },
     "Any": {
       "template-format": "format.html",
-      "template-base": "base.html",
-      "swagger": "true"
-    },
-    "Patient": {
-      "template-base": "ex.html"
+      "swagger": "true",
+      "template-base": "base.html"
     },
     "SearchParameter": {
       "template-base": "base.html"
     },
-    "Measure": {
+    "Patient": {
+      "template-base": "ex.html"
+    },
+    "Encounter": {
       "template-base": "ex.html"
     },
     "Observation": {
       "template-base": "ex.html"
     }
   },
-  "paths": {
-    "resources": ["source/resources", "source/examples"],
-    "qa": "generated_output/qa",
-    "output": "output",
-    "history": "history",
-    "pages": ["framework", "source/pages"],
-    "temp": "generated_output/temp",
-    "txCache": "generated_output/txCache",
-    "specification": "http://hl7.org/fhir/R4/"
-  },
-  "spreadsheets": ["profile-devicerequest-deqm-spreadsheet.xml", "profile-medicationadministration-deqm-spreadsheet.xml", "profile-summary-measurereport-deqm-spreadsheet.xml", "profile-datax-measurereport-deqm-spreadsheet.xml", "profile-practitioner-deqm-spreadsheet.xml", "profile-deviceusestatement-deqm-spreadsheet.xml", "profile-organization-deqm-spreadsheet.xml", "profile-coverage-deqm-spreadsheet.xml", "profile-indv-measurereport-deqm-spreadsheet.xml", "profile-medicationrequest-deqm-spreadsheet.xml"],
-  "fixed-business-version": "1.1.0",
-  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/DaVinci-DEQM/",
-  "do-transforms": "false",
-  "topofpage": "true",
-  "name": "DataExchangeForQualityMeasuresR4",
-  "gen-examples": "false"
+  "working-dir": "/Users/ehaas/Documents/FHIR/DaVinci-DEQM/",
+  "broken-links": "warning",
+  "publisher": "HL7 International - Clinical Quality Information Work Group",
+  "contact": [{
+    "value": "http://www.hl7.org/Special/committees/cqi/index.cfm",
+    "system": "url"
+  }],
+  "canonicalBase": "http://hl7.org/fhir/us/davinci-deqm",
+  "special-urls": [
+          "urn:oid:2.16.840.1.113883.6.238",
+          "urn:oid:2.16.840.1.113762.1.4.1021.24",
+          "urn:oid:2.16.840.1.113883.6.285",
+          "http://hl7.org/fhir/sid/icd-9-cm",
+          "http://hl7.org/fhir/sid/icd-10-cm",
+          "http://www.icd10data.com/icd10pcs",
+          "http://hl7.org/fhir/us/sid/cdt",
+          "https://www.usps.com"
+      ]
 }

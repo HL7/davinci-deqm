@@ -65,7 +65,7 @@
 ******* add
 <!-- ============ Change Notes Page =============== -->
 <page>
-  <source value="change-notes.html"/>
+  <nameUrl value="change-notes.html"/>
   <title value="Change Notes"/>
-  <kind value="page"/>
+  <generation value="markdown"/>
 </page>

@@ -18,7 +18,7 @@ The colonoscopy measure such as *HEDIS Colorectal Cancer Screening/CMS130*[^10] 
 
 ### COL Use Case Background
 
-In the case of colorectal cancer screening, two types of data are reported: 1) testing to detect colorectal cancer and polyps and 2)  information that would exclude the patient from needing testing.  For background on methods used to screen people for colorectal cancer see [Colorectal Cancer Screening (PDQ®)-Patient Version], and for background on benefits of screening see [Colorectal Cancer Screening (PDQ®)–Health Professional Version] both published by the National Cancer Institute.
+In the case of colorectal cancer screening, two types of data are reported: 1) testing to detect colorectal cancer and polyps and 2)  information that would exclude the patient from needing testing.  For background on the clinical guideline that the measure was built off of see the [Colorectal Cancer Screening Recommendation Statement] published by the Electronic Clinical Quality Improvement (eCQI) Resource Center.
 
 ## FHIR Resource Overview
 

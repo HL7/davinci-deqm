@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
-	<!--********************meta*************************-->
-	<id value="submit-data"/>
-	<url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/submit-data"/>
-	<version value="0.0.0"/>
-	<name value="Da Vinci Submit Measure Data OperationDefinition"/>
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="submit-data"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/submit-data"/>
+	<version value="0.2.0"/>
+	<name value="submit_data"/>
 	<status value="active"/>
 	<kind value="operation"/>
 	<date value="2018-06-30"/>
@@ -12,66 +11,30 @@
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+			<value value="https://github.com/Healthedata1/DaVinci"/>
 		</telecom>
 	</contact>
-	<description value="The effect of invoking this operation on a `Measure` instance endpoint is to POST a collection of resources needed for reporting a measure.
-&#x000A;
-
-* The Submit Measure Data operation POSTs the `MeasureReport` and required associated resources to the payer's `Measure` endpoint. The operation is for a single measure definition and a single patient or grouup.
-&#x000A;
-
-* The operation is posted to the measure instance endpoint represented by the resource target 'id' as shown in the example below.
-&#x000A;
-
-* When a payload is posted to one of these endpoits, the payer will process the data based on the the specific measure and return an OperationOutcome representing the acceptance or rejection of the report."/>
-	<jurisdiction>
-		<coding>
-			<system value="urn:iso:std:iso:3166"/>
-			<code value="US"/>
-			<display value="United States of America"/>
-		</coding>
-	</jurisdiction>
-	<!--<fhirVersion value="3.0.1"/>-->
-	<!--********************end meta*************************-->
-	<idempotent value="false"/>
-	<code value="submit-data"/>
-	<comment value="Note: The required data for each Measure is discoverd by invoking the [Data Requirements] operation on the payer's `Measure/[measure-id]` endpoint."/>
-	<resource value="resource"/>
-	<system value="false"/>
-	<type value="false"/>
-	<instance value="true"/>
-	<!--	tried using uris but no way to bind them unless make them codes.
-<parameter>
-		<name value="profiles"/>
-		<use value="out"/>
-		<min value="0"/>
-		<max value="*"/>
-		<documentation value="The result is a set of canonical uris that represent the profiles needed to report the results of a measure evaluation to a payer.  Use this parameter when the requirements are a simple list of profile."/>
-		<type value="uri"/>
--->
-	<!--	 alternative is to use a set of codes to define the resources
-<type value="code"/>
-<binding>
-			<strength value="required"></strength>
-			<valueSetUri value="http://hl7.org/fhir/resource-types"></valueSetUri>
-		</binding>
-	</parameter>
--->
-<parameter>
-  <name value="measure-report"/>
-  <use value="in"/>
-  <min value="1"/>
-  <max value="1"/>
-  <documentation value="The MeasureReport for the measure"/>
-  <type value="Resource"/>
-</parameter>
+  <description value="The submit-data operation is used to submit data-of-interest for a measure. There is no expectation that the submitted data represents all the data-of-interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population"/>
+  <code value="submit-data"/>
+  <comment value="The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used for subsequent calculation of the relevant quality measure. The data-of-interest for a measure can be determined by examining the measure definition, or by invoking the $data-requirements operation  This operation is the FHIR STU3 version of the [$collect-data (R4)](http://hl7.org/fhir/R4/operation-measure-submit-data.xml.html) operation."/>
+  <resource value="Measure"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="true"/>
   <parameter>
-		<name value="resource"/>
-		<use value="in"/>
-		<min value="0"/>
-		<max value="*"/>
-		<documentation value="Collection of required profiles for the measure"/>
-		<type value="Resource"/>
-	</parameter>
+    <name value="measureReport"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The measure report being submitted"/>
+    <type value="MeasureReport"/>
+  </parameter>
+  <parameter>
+    <name value="resource"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="The individual resources that make up the data-of-interest being submitted"/>
+    <type value="Resource"/>
+  </parameter>
 </OperationDefinition>

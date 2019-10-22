@@ -20,12 +20,11 @@
    <Path>\\ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\Davinci-DEQM\source\resources\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
    <SheetName>davinci</SheetName>
   </SupBook>
-  <WindowHeight>11715</WindowHeight>
+  <WindowHeight>8115</WindowHeight>
   <WindowWidth>25200</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
-  <ActiveSheet>2</ActiveSheet>
-  <FirstVisibleSheet>2</FirstVisibleSheet>
+  <ActiveSheet>1</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -994,8 +993,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s73" ss:Formula="=SUBSTITUTE(R[-1]C,&quot;-&quot;,&quot;_&quot;)"><Data
-      ss:Type="String">profile_summary_measurereport_deqm</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">DEQMSummaryMeasureReportProfile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
@@ -1061,6 +1059,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -1080,7 +1079,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>27</ActiveRow>
+     <ActiveRow>2</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1203,7 +1202,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Index="2" ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">DEQM Summary MeasureReport Profile</Data></Cell>
-    <Cell ss:Formula="=Metadata!R[1]C[-1]"><Data ss:Type="String">profile_summary_measurereport_deqm</Data></Cell>
+    <Cell ss:Formula="=Metadata!R[1]C[-1]"><Data ss:Type="String">DEQMSummaryMeasureReportProfile</Data></Cell>
     <Cell ss:StyleID="s93"/>
     <Cell ss:StyleID="s94"/>
     <Cell ss:StyleID="s94"/>
@@ -6021,7 +6020,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <LeftColumnVisible>3</LeftColumnVisible>
    <Panes>
     <Pane>

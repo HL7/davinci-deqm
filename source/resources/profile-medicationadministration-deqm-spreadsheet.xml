@@ -964,7 +964,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="String">profile-medicationadministration-deqm</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">DEQMMedicationAdministrationProfile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>

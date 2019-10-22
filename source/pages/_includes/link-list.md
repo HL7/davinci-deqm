@@ -7,9 +7,9 @@
 [^8]: Changes to the QI-Core Observation and Task profiles are being proposed based on the HEDIS Task and Observation profiles that may lead to these profiles being replaced by the QI Core profiles.
 [^9]: Changes to QI Core and US Core Organization and Practitioner  profiles are being proposed based on the DEQM Organization and Practitioner profiles that may lead to this profiles being replaced by the QI Core profile.
 [^10]: HEDIS measures referenced are *example content only* for the purposes of working through standards. Organizations should not be using the HEDIS specified measures for the actual measurement.
-[$collect-data]: OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
-[$data-requirements]: {{site.data.fhir.path}}measure-operations.html#data-requirements "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
-[$submit-data]:OperationDefinition-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
+[$collect-data]: {{site.data.fhir.path}}measure-operation-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
+[$data-requirements]: {{site.data.fhir.path}}measure-operation-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
+[$submit-data]:{{site.data.fhir.path}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Argonaut Clinical Data Subscriptions]: https://argonautwiki.hl7.org/Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Capability statements]: capstatements.html
 [CDS Hooks]: https://cds-hooks.org/
@@ -32,7 +32,6 @@
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
-[DEQM DeviceUseStatement]: StructureDefinition-deviceusestatement-deqm.html
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
@@ -74,6 +73,7 @@
 [QI Core *Must Support*]: {{site.qi_r4}}index.html#mustsupport "QI Core definition of *Must Support*"
 [QI Core Condition]: {{site.qi_r4}}StructureDefinition-qicore-condition.html
 [QI Core Coverage]: {{site.qi_r4}}StructureDefinition-qicore-coverage.html
+[QI Core DeviceUseStatement]:{{site.qi_r4}}StructureDefinition-qicore-deviceusestatement.html
 [QI Core DiagnosticReport]:{{site.qi_r4}}StructureDefinition-qicore-diagnosticreport.html
 [QI Core Encounter]: {{site.qi_r4}}StructureDefinition-qicore-encounter.html
 [QI Core Location]: {{site.qi_r4}}StructureDefinition-qicore-location.html
@@ -99,7 +99,6 @@
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Use cases]: usecases.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
-[Colorectal Cancer Screening (PDQ®)–Health Professional Version]: https://www.cancer.gov/types/colorectal/hp/colorectal-screening-pdq
-[Colorectal Cancer Screening (PDQ®)-Patient Version]: https://www.cancer.gov/types/colorectal/patient/colorectal-screening-pdq
+[Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
 [following rules]: {{site.data.fhir.path}}references.html#contained

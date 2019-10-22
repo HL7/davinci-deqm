@@ -946,7 +946,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String">DEQM Practitioner Profile</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">DEQMPractitionerProfile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
@@ -6559,7 +6559,7 @@
     <Cell ss:StyleID="s134"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s144"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s144"><Data ss:Type="String">required</Data></Cell>
-    <Cell ss:StyleID="s155"><Data ss:Type="String">http://hl7.org/fhir/ValueSet/v2-2.7-0360</Data></Cell>
+    <Cell ss:StyleID="s155"><Data ss:Type="String">http://terminology.hl7.org/ValueSet/v2-2.7-0360</Data></Cell>
     <Cell ss:StyleID="s134"/>
     <Cell ss:StyleID="s134"/>
     <Cell ss:StyleID="s134"/>

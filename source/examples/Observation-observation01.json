@@ -3,7 +3,7 @@
   "id": "observation01",
   "meta": {
     "profile": [
-      "http://ncqa.org/fhir/us/hedis/StructureDefinition/hedis-observation"
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
     ]
   },
   "status": "final",

@@ -3,7 +3,7 @@
   "id": "Task01",
   "meta": {
     "profile": [
-      "http://ncqa.org/fhir/us/hedis/StructureDefinition/hedis-task"
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
     ]
   },
   "identifier": [

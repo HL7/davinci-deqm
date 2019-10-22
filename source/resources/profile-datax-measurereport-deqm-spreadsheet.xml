@@ -20,7 +20,7 @@
    <Path>\\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\Davinci-DEQM\source\resources\ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
    <SheetName>davinci</SheetName>
   </SupBook>
-  <WindowHeight>11715</WindowHeight>
+  <WindowHeight>8115</WindowHeight>
   <WindowWidth>25200</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
@@ -977,8 +977,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s73" ss:Formula="=SUBSTITUTE(R[-1]C,&quot;-&quot;,&quot;_&quot;)"><Data
-      ss:Type="String">profile_datax_measurereport_deqm</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">DEQMDataExchangeMeasureReportProfile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
@@ -1064,7 +1063,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>7</ActiveRow>
+     <ActiveRow>2</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1187,7 +1186,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Formula="=Metadata!R[2]C[1]"><Data ss:Type="String">DEQM Data Exchange MeasureReport Profile</Data></Cell>
-    <Cell ss:Formula="=Metadata!R[1]C"><Data ss:Type="String">profile_datax_measurereport_deqm</Data></Cell>
+    <Cell ss:Formula="=Metadata!R[1]C"><Data ss:Type="String">DEQMDataExchangeMeasureReportProfile</Data></Cell>
     <Cell ss:StyleID="s93"/>
     <Cell ss:StyleID="s94"/>
     <Cell ss:StyleID="s94"/>
@@ -5823,8 +5822,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>14</ActiveRow>
-     <ActiveCol>5</ActiveCol>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
