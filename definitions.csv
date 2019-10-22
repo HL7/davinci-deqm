@@ -22,6 +22,7 @@ paths.output,output
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
 paths.specification,http://hl7.org/fhir/R4/
+paths.history,http://hl7.org/fhir/us/davinci-deqm/history.html
 jurisdiction,US
 sct-edition,http://snomed.info/sct/731000124108
 no-inactive-codes,FALSE

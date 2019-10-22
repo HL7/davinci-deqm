@@ -10,7 +10,7 @@
     "pages": ["framework", "source/pages"],
     "output": "output",
     "qa": "generated_output/qa",
-    "history": "history",
+    "history": "http://hl7.org/fhir/us/davinci-deqm/history.html",
     "resources": ["source/resources", "source/examples"],
     "txCache": "generated_output/txCache",
     "temp": "generated_output/temp"
