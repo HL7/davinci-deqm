@@ -97,7 +97,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "TAX",
                   "display": "Tax ID number"
                 }
@@ -201,7 +201,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "MR",
                   "display": "Medical record number"
                 }
@@ -239,7 +239,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
         "maritalStatus": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/v3/MaritalStatus",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
               "code": "M",
               "display": "Married"
             }

@@ -203,12 +203,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-reportingOrganizationGroup"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/extension-certificationIdentifier"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -216,12 +210,6 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-reportingVendor"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/extension-dataCollectionType"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -403,11 +391,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-extension-reportingOrganizationGroup.html"/>
-          <title value="StructureDefinition Extension Cqfm reportingOrganizationGroup Intro.md"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-extension-certificationIdentifier.html"/>
           <title value="StructureDefinition Extension certificationIdentifier"/>
           <generation value="generated"/>
@@ -418,18 +401,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-extension-dataCollectionType.html"/>
-          <title value="StructureDefinition Extension dataCollectionType"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-extension-doNotPerform.html"/>
           <title value="StructureDefinition Extension doNotPerform"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-extension-referenceAny.html"/>
-          <title value="StructureDefinition Extension referenceAny"/>
           <generation value="generated"/>
         </page>
       </page>

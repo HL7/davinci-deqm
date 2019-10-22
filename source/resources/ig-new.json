@@ -208,12 +208,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/extension-reportingOrganizationGroup"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/extension-certificationIdentifier"
       },
       "exampleBoolean" : false
@@ -221,12 +215,6 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/extension-reportingVendor"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/extension-dataCollectionType"
       },
       "exampleBoolean" : false
     },
@@ -408,11 +396,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-extension-reportingOrganizationGroup.html",
-          "title" : "StructureDefinition Extension Cqfm reportingOrganizationGroup Intro.md",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-extension-certificationIdentifier.html",
           "title" : "StructureDefinition Extension certificationIdentifier",
           "generation" : "generated"
@@ -423,18 +406,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-extension-dataCollectionType.html",
-          "title" : "StructureDefinition Extension dataCollectionType",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-extension-doNotPerform.html",
           "title" : "StructureDefinition Extension doNotPerform",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-referenceAny.html",
-          "title" : "StructureDefinition Extension referenceAny",
           "generation" : "generated"
         }]
       },

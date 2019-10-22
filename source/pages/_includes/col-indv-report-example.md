@@ -25,11 +25,11 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
         "measure": {
           "reference": "Measure/measure-col"
         },
-        "patient": {
+        "subjectResults": {
           "reference": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57906"
         },
         "date": "2019-03-14",
-        "reportingOrganization": {
+        "reporter": {
           "reference": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57905"
         },
         "period": {
@@ -71,10 +71,10 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
                     }
                   ]
                 }
-              } 
+              }
             ],
             "measureScore": 100
-          } 
+          }
         ]
       },
       "request": {
@@ -97,7 +97,7 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "TAX",
                   "display": "Tax ID number"
                 }
@@ -201,7 +201,7 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "MR",
                   "display": "Medical record number"
                 }
@@ -239,7 +239,7 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
         "maritalStatus": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/v3/MaritalStatus",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
               "code": "M",
               "display": "Married"
             }
@@ -280,7 +280,7 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "PRN",
                   "display": "Provider number"
                 }

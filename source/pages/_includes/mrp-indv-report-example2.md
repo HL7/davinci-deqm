@@ -299,7 +299,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                         {
                            "code": "TAX",
                            "display": "Tax ID number",
-                           "system": "http://hl7.org/fhir/v2/0203"
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
                         }
                      ]
                   },
@@ -366,7 +366,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                         {
                            "code": "TAX",
                            "display": "Tax ID number",
-                           "system": "http://hl7.org/fhir/v2/0203"
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
                         }
                      ]
                   },
@@ -488,7 +488,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                         {
                            "code": "MR",
                            "display": "Medical record number",
-                           "system": "http://hl7.org/fhir/v2/0203"
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
                         }
                      ]
                   },
@@ -504,7 +504,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                   {
                      "code": "M",
                      "display": "Married",
-                     "system": "http://hl7.org/fhir/v3/MaritalStatus"
+                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
                   }
                ]
             },
@@ -545,7 +545,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                         {
                            "code": "PRN",
                            "display": "Provider number",
-                           "system": "http://hl7.org/fhir/v2/0203"
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
                         }
                      ]
                   },

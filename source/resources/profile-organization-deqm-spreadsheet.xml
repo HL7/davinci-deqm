@@ -1275,7 +1275,7 @@
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/v2/0203&quot;,&quot;code&quot;:&quot;PRN&quot;}]}</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,&quot;code&quot;:&quot;PRN&quot;}]}</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
@@ -1362,7 +1362,7 @@
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/v2/0203&quot;,&quot;code&quot;:&quot;TAX&quot;}]}</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;,&quot;code&quot;:&quot;TAX&quot;}]}</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>

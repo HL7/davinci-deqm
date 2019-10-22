@@ -167,7 +167,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "MR",
                   "display": "Medical record number"
                 }
@@ -205,7 +205,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
         "maritalStatus": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/v3/MaritalStatus",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
               "code": "M",
               "display": "Married"
             }
@@ -272,7 +272,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "PRN",
                   "display": "Provider number"
                 }
@@ -315,7 +315,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "TAX",
                   "display": "Tax ID number"
                 }
@@ -465,7 +465,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "TAX",
                   "display": "Tax ID number"
                 }

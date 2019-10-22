@@ -256,7 +256,7 @@
                         "type": {
                             "coding": [
                                 {
-                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                                     "code": "MR",
                                     "display": "Medical Record Number"
                                 }

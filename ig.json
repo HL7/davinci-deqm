@@ -5,7 +5,7 @@
   "sct-edition": "http://snomed.info/sct/731000124108",
   "source": "ig.xml",
   "extraTemplates": ["mappings"],
-  "extensions": ["extension-referenceAny", "extension-doNotPerform", "extension-dataCollectionType", "extension-reportingVendor", "extension-certificationIdentifier", "extension-reportingOrganizationGroup-intro.md"],
+  "extensions": ["extension-doNotPerform", "extension-reportingVendor", "extension-certificationIdentifier"],
   "swagger": [{
     "capabilities": "server",
     "mode": "single"
@@ -129,10 +129,6 @@
       "base": "StructureDefinition-coverage-deqm.html",
       "defns": "StructureDefinition-coverage-deqm-definitions.html"
     },
-    "StructureDefinition/extension-referenceAny": {
-      "base": "StructureDefinition-extension-referenceAny.html",
-      "defns": "StructureDefinition-extension-referenceAny-definitions.html"
-    },
     "StructureDefinition/medicationrequest-deqm": {
       "base": "StructureDefinition-medicationrequest-deqm.html",
       "defns": "StructureDefinition-medicationrequest-deqm-definitions.html"
@@ -140,10 +136,6 @@
     "Organization/organization04": {
       "base": "Organization-organization04.html",
       "source": "Organization-organization04.json"
-    },
-    "StructureDefinition/extension-dataCollectionType": {
-      "base": "StructureDefinition-extension-dataCollectionType.html",
-      "defns": "StructureDefinition-extension-dataCollectionType-definitions.html"
     },
     "Patient/patient02": {
       "base": "Patient-patient02.html",
@@ -192,10 +184,6 @@
     "CapabilityStatement/reporter-client": {
       "base": "CapabilityStatement-reporter-client.html",
       "source": "capabilitystatement-reporter-client.json"
-    },
-    "StructureDefinition/extension-reportingOrganizationGroup-intro.md": {
-      "base": "StructureDefinition-extension-reportingOrganizationGroup-intro.md.html",
-      "defns": "StructureDefinition-extension-reportingOrganizationGroup-intro.md-definitions.html"
     },
     "MeasureReport/indv-measurereport02": {
       "base": "MeasureReport-indv-measurereport02.html",

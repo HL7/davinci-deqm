@@ -61,7 +61,7 @@ Content-Type: application/fhir+json;charset=UTF-8
           ]
         },
         "measure": "Measure/measure-col",
-        "patient": {
+        "subjectResults": {
           "reference": Patient/patient-col
         },
         "date": "2019-03-14",
@@ -130,7 +130,7 @@ Content-Type: application/fhir+json;charset=UTF-8
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "MR",
                   "display": "Medical record number"
                 }
@@ -168,7 +168,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         "maritalStatus": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/v3/MaritalStatus",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
               "code": "M",
               "display": "Married"
             }
@@ -206,7 +206,7 @@ Content-Type: application/fhir+json;charset=UTF-8
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/v2/0203",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "PRN",
                   "display": "Provider number"
                 }

@@ -29,7 +29,7 @@ Payer X who is acting in the role of a Reporter submits a COL Summary Report for
     "start": "2018-01-01",
     "end": "2018-12-31"
   },
-  "reportingOrganization": {
+  "reporter": {
     "reference": "Organization/organization01"
   },
   "group": [
