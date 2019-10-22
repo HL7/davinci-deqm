@@ -42,7 +42,7 @@
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
-[FHIR operations]: {{site.r4}}operations.html "Extended Operations on the RESTful API"
+[FHIR operations]: {{site.data.fhir.path}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Framework]: framework.html
 [General Guidance]: guidance.html  "General Guidance Page"
@@ -67,7 +67,6 @@
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
 [Not Done]: {{site.data.fhir.path}}extension-event-notdone.html
 [NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1
-[Operations]: operations.html "Operations Page"
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
 [QI Core *Must Support*]: {{site.qi_r4}}index.html#mustsupport "QI Core definition of *Must Support*"
@@ -85,10 +84,9 @@
 [QI Core]: {{site.qi_r4}}index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
 [Quality Measure Implementation Guide]: {{site.cqfm_r4}}index.html
-[Quality Reporting]: {{site.r4}}clinicalreasoning-quality-reporting.html
-[Reporting Individual Data]: {{site.r4}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
+[Quality Reporting]: {{site.data.fhir.path}}clinicalreasoning-quality-reporting.html
+[Reporting Individual Data]: {{site.data.fhir.path}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
 [Reporting Vendor]: StructureDefinition-extension-reportingVendor.html
-[Reporting Group]: StructureDefinition-extension-reportingOrganizationGroup.html
 [SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
 [Subscription]: {{site.data.fhir.path}}subscription.html

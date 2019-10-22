@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org",
+  "code" : "112"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org\" is not known for the code \"112\"; The code provided (http://example.org#112) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org\" is not known for the code \"initial-population\"; The code provided (http://example.org#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org",
+  "code" : "4456"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org\" is not known for the code \"4456\"; The code provided (http://example.org#4456) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

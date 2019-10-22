@@ -47,28 +47,18 @@
       },
       "stratifier": [
         {
-          "code": [
-            {
-              "coding": [
-                {
-                  "system": "http://example.org",
-                  "code": "4456",
-                  "display": "4456"
-                }
-              ]
-            }
-          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://example.org",
+                "code": "4456",
+                "display": "4456"
+              }
+            ]
+          },
           "stratum": [
             {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/administrative-gender",
-                    "code": "male",
-                    "display": "Male"
-                  }
-                ]
-              },
+              "value": "male",
               "population": [
                 {
                   "code": {

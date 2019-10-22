@@ -1,9 +1,11 @@
 {
-   "id": "measure-mrp",
-   "meta": {
-      "lastUpdated": "2018-09-21T20:20:51.000+00:00",
-      "versionId": "1"
-   },
-   "status": "active",
-   "resourceType": "Measure"
+  "id": "measure-mrp",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp",
+  "meta": {
+    "lastUpdated": "2018-09-21T20:20:51.000+00:00",
+    "versionId": "1"
+  },
+  "status": "active",
+  "resourceType": "Measure",
+  "name": "DEQMMeasureMRPExample"
 }
