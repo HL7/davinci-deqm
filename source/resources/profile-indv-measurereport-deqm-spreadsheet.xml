@@ -1004,7 +1004,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="86.25">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s76"><Data ss:Type="String">[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The **DEQM Individual MeasureReport Profile** defined here is used when a measure is reported to an aggregator for one specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA Category 1 report].  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure.</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The **DEQM Individual MeasureReport Profile** defined here is used when a measure is reported to an aggregator for one specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>

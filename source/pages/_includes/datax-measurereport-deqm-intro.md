@@ -6,7 +6,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
 1. A status
-1. A [DEQM Data Collection Type Extension] flag set to `true`
+1. measure report type hardcoded to "data-collection"
 1. The reference to the [Measure]({{site.data.fhir.path}}measure.html)
 1. A link to patient the report is about
 1. The date the report was generated
