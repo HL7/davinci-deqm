@@ -1,5 +1,9 @@
 # DaVinci Data Exchange For Quality Measures
 
+## Current build [STU3](http://build.fhir.org/ig/HL7/davinci-deqm)
+
+## Current build [R4](https://healthedata1.github.io/tempIGViewer/)  (temporary home)
+
 Authors:  Eric Haas
 
 -----
