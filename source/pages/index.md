@@ -133,6 +133,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 - *Bryn Rhodes, Bryn Rhodes, Dynamic Content Group*
 - *Eric Haas, Health eData Inc*
+- *Floyd Eisenberg, iParsimony LLC*
 - *Jocelyn Keegan, Point of Care Partners*
 - *Linda Michaelsen, Optum*
 - *Lloyd Mckenzie, Gevity*
