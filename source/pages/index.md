@@ -133,14 +133,16 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 - *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*
 
-- *Linda Michaelsen, Optum*
+- *Bryn Rhodes, Bryn Rhodes, Dynamic Content Group*
 - *Eric Haas, Health eData Inc*
-- *Bryn Rhodes*
-- *Viet Nguyen, Stratametrics*
+- *Floyd Eisenberg, iParsimony LLC*
 - *Jocelyn Keegan, Point of Care Partners*
-- *Robert Dieterle, EnableCare*
+- *Linda Michaelsen, Optum*
 - *Lloyd Mckenzie, Gevity*
-- *Grahame Grieve*
+- *Robert Dieterle, EnableCare*
+- *Robert Samples, ESAC*
+- *Viet Nguyen, Stratametrics*
+- *Yan Heras, Optimum eHealth LLC*
 
 ---
 
