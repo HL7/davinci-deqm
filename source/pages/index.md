@@ -139,7 +139,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 - *Robert Dieterle, EnableCare*
 - *Robert Samples, ESAC*
 - *Viet Nguyen, Stratametrics*
-- *Yan Heras, ESAC*
+- *Yan Heras, Optimum eHealth LLC*
 
 ---
 
