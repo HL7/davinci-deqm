@@ -16,21 +16,21 @@
          "version": "1.0.0",
          "fhirversion": "3.0.1",
          "date": "2019-10-31",
-         "desc": "The current official published version of the DEQM IG for FHIR STU3.",
+         "desc": "The current official published STU1 version of the DEQM IG for FHIR STU3.",
          "changes": "change-notes.html",
-         "path": "http://hl7.org/fhir/us/davinci-deqm/STU2",
+         "path": "http://hl7.org/fhir/us/davinci-deqm/STU1",
          "status": "trial-use",
-         "sequence": "STU2"
+         "sequence": "STU1"
       },
       {
          "version": "0.2.0",
          "fhirversion": "3.0.1",
          "date": "2019-05-01",
-         "desc": "STU2 Ballot for FHIR STU3 Version of DEQM",
+         "desc": "Second STU1 Ballot for FHIR STU3 Version of DEQM",
          "changes": "change-notes.html",
          "path": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/index.html",
          "status": "ballot",
-         "sequence": "STU2"
+         "sequence": "STU1"
       },
       {
          "version": "0.1.0",
