@@ -113,6 +113,10 @@
     </resource>
 
     <resource><example value="false"/>
+      <sourceReference><reference value="StructureDefinition/extension-alternateScoreType"/></sourceReference>
+    </resource>
+
+    <resource><example value="false"/>
       <sourceReference><reference value="StructureDefinition/extension-reportingOrganizationGroup"/></sourceReference>
     </resource>
 
@@ -261,7 +265,10 @@
       <page><source value="StructureDefinition-extension-dataCollectionType.html"/><title value="StructureDefinition Extension dataCollectionType"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-extension-doNotPerform.html"/><title value="StructureDefinition Extension doNotPerform"/><kind value="resource"/></page>
       <page><source value="StructureDefinition-extension-referenceAny.html"/><title value="StructureDefinition Extension referenceAny"/><kind value="resource"/></page>
+      <page><source value="StructureDefinition-extension-alternateScoreType.html"/><title value="StructureDefinition Extension alternateScoreType"/><kind value="resource"/></page>
+
       <!-- ============ End Extensions and examples =============== -->
+
 
     </page>
     <!-- ============ Operations Page =============== -->

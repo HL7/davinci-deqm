@@ -27,6 +27,7 @@
 [CQFM Measure]: {{site.cqfm_r3}}StructureDefinition-measure-cqfm.html
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
+[Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
 [Data Exchange]: datax.html
 [DEQM Coverage]: StructureDefinition-coverage-deqm.html
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html

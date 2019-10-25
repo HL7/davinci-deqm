@@ -27,6 +27,7 @@ Payers and providers need common data specification, measure specification, repo
 
 |Extension Name|Link to Profile|
 |---|---|
+|DEQM Alternate Score Type Extension|[Alternate Score Type]|
 |DEQM Certification Identifier Extension|[Certification Identifier]|
 |DEQM Data Collection Type Extension|[Data Collection Type]|
 |DEQM Do Not Perform Extension|[Do Not Perform]|

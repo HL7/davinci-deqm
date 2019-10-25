@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.davinci-deqm-0.2.0",
+  "id" : "hl7.fhir.us.davinci-deqm-1.0.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"
@@ -17,9 +17,9 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-0.2.0",
+  "url" : "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.0.0",
   "version" : "1.0.0",
-  "name" : "Data Exchange For Quality Measures STU3",
+  "name" : "Data Exchange For Quality Measures STU1 for FHIR STU3",
   "status" : "draft",
   "experimental" : true,
   "publisher" : "HL7 International - Clinical Quality Information Work Group",
@@ -246,6 +246,13 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/extension-certificationIdentifier"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-alternateScoreType"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -537,6 +544,11 @@
         {
           "nameUrl" : "StructureDefinition-extension-referenceAny.html",
           "title" : "StructureDefinition Extension referenceAny",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-alternateScoreType.html",
+          "title" : "StructureDefinition Extension alternateScoreType",
           "generation" : "generated"
         }]
       },
