@@ -30,8 +30,10 @@
       "base": "MeasureReport-summ-measurereport02.html",
       "source": "MeasureReport-summ-measurereport02.xml"
     },
-
-
+    "StructureDefinition/extension-alternateScoreType": {
+      "defns": "StructureDefinition-extension-alternateScoreType-definitions.html",
+      "base": "StructureDefinition-extension-alternateScoreType.html"
+    },
     "StructureDefinition/extension-dataCollectionType": {
       "defns": "StructureDefinition-extension-dataCollectionType-definitions.html",
       "base": "StructureDefinition-extension-dataCollectionType.html"
