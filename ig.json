@@ -68,6 +68,10 @@
       "base": "StructureDefinition-extension-reportingVendor.html",
       "defns": "StructureDefinition-extension-reportingVendor-definitions.html"
     },
+    "StructureDefinition/extension-alternateScoreType": {
+      "defns": "StructureDefinition-extension-alternateScoreType-definitions.html",
+      "base": "StructureDefinition-extension-alternateScoreType.html"
+    },
     "MeasureReport/datax-measurereport02": {
       "base": "MeasureReport-datax-measurereport02.html",
       "source": "MeasureReport-datax-measurereport02.json"
