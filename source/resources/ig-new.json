@@ -37,7 +37,7 @@
   }],
   "packageId" : "hl7.fhir.us.davinci-deqm",
   "license" : "CC0-1.0",
-  "fhirVersion" : ["3.0.1"],
+  "fhirVersion" : ["3.0.2"],
   "dependsOn" : [{
     "id" : "qicore",
     "uri" : "http://hl7.org/fhir/us/qicore",

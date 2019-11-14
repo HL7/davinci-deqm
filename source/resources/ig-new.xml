@@ -34,7 +34,7 @@
   </jurisdiction>
   <packageId value="hl7.fhir.us.davinci-deqm"/>
   <license value="CC0-1.0"/>
-  <fhirVersion value="3.0.1"/>
+  <fhirVersion value="3.0.2"/>
   <dependsOn id="qicore">
     <uri value="http://hl7.org/fhir/us/qicore"/>
     <packageId value="hl7.fhir.us.qicore"/>

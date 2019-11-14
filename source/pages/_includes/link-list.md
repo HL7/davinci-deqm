@@ -45,7 +45,7 @@
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
 [FHIR operations]: {{site.r4}}operations.html "Extended Operations on the RESTful API"
-[FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
+[FHIR Version 3.0.2]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Framework]: framework.html
 [General Guidance]: guidance.html  "General Guidance Page"
 [HEDIS Colorectal Cancer Screening/CMS130]: {{site.hedis_r3}}cql/stu3/col-logic.cql.html

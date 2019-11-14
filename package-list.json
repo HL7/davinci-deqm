@@ -6,7 +6,7 @@
    "list": [
       {
          "version": "current",
-         "fhirversion": "3.0.1",
+         "fhirversion": "3.0.2",
          "desc": "Continuous Integration Build for FHIR STU3 (latest in version control)",
          "path": "http://build.fhir.org/ig/HL7/davinci-deqm",
          "status": "ci-build",
@@ -14,7 +14,7 @@
       },
       {
          "version": "1.0.0",
-         "fhirversion": "3.0.1",
+         "fhirversion": "3.0.2",
          "date": "2019-10-31",
          "desc": "The current official published STU1 version of the DEQM IG for FHIR STU3.",
          "changes": "change-notes.html",

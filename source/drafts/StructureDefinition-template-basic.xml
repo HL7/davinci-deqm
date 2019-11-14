@@ -13,7 +13,7 @@
       <display value="United States of America" />
     </coding>
   </jurisdiction>
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Basic" />
