@@ -76,7 +76,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Patient to evaluate against. This is a reference to a [QI Core Patient]({{site.data.fhir.qicore}}StructureDefinition-qicore-patient.html) Profile e.g. 'Patient/123'.  If not specified, the measure will be evaluated for all patients that meet the requirements of the measure. If specified, only the referenced patient will be evaluated."/>
+    <documentation value="Patient to evaluate against. This is a reference to a [QI Core Patient](http://hl7.org/fhir/us/qicore/STU32/StructureDefinition-qicore-patient.html) Profile e.g. 'Patient/123'.  If not specified, the measure will be evaluated for all patients that meet the requirements of the measure. If specified, only the referenced patient will be evaluated."/>
     <type value="uri"/>
 
   </parameter>
