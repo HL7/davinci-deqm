@@ -30,6 +30,7 @@ Payers and providers need common data specification, measure specification, repo
 |DEQM Certification Identifier Extension|[Certification Identifier]|
 |DEQM Do Not Perform Extension|[Do Not Perform]|
 |DEQM Reporting Vendor Extension|[Reporting Vendor]|
+|DEQM Reporting Group Extension|[Reporting Group]|
 
 <br />
 

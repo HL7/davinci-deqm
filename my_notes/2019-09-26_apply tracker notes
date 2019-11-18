@@ -126,3 +126,20 @@ change cds hooks ballot comment to stu-note
 GF#17899 update all the slides based on Josh's comments. done
 
 credits...
+
+
+
+R4 IG Punch list
+
+
+1. fix TOC
+1. add summaries
+1. title:
+1. version: 1.1.0
+1. package-list json
+1. change publisher to redirect to jira instead of gforge
+
+1. apply trackers
+
+- 24859 -  need Bundle example of multiple reports - defer check on tooling to get reports
+- 23927 -  add group from stu3. for both summary and individual or just summary as is now?

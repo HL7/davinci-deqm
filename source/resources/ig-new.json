@@ -38,8 +38,8 @@
   "copyright" : "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
   "packageId" : "hl7.fhir.us.davinci-deqm",
   "license" : "CC0-1.0",
-  "fhirVersion" : ["4.0.0",
-  "4.0.0"],
+  "fhirVersion" : ["4.0.1",
+  "4.0.1"],
   "dependsOn" : [{
     "id" : "qicore",
     "uri" : "http://hl7.org/fhir/us/qicore",
@@ -208,6 +208,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/extension-reporterGroup"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-certificationIdentifier"
       },
       "exampleBoolean" : false
@@ -319,49 +325,9 @@
       "title" : "Home",
       "generation" : "markdown",
       "page" : [{
-        "nameUrl" : "framework.html",
-        "title" : "Framework",
-        "generation" : "markdown",
-        "page" : [{
-          "nameUrl" : "guidance.html",
-          "title" : "General Guidance",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "datax.html",
-          "title" : "Data Exchange",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "indv-reporting.html",
-          "title" : "Individual Reporting",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "summary-reporting.html",
-          "title" : "Summary Reporting",
-          "generation" : "markdown"
-        }]
-      },
-      {
-        "nameUrl" : "usecases.html",
-        "title" : "Example Use Cases",
-        "generation" : "markdown",
-        "page" : [{
-          "nameUrl" : "mrp.html",
-          "title" : "Medication Reconciliation Post-Discharge (MRP)",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "col.html",
-          "title" : "Colorectal Cancer Screening (COL)",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "vte1.html",
-          "title" : "Venous Thromboembolism Prophylaxis (VTE-1)",
-          "generation" : "markdown"
-        }]
+        "nameUrl" : "guidance.html",
+        "title" : "General Guidance",
+        "generation" : "markdown"
       },
       {
         "nameUrl" : "profiles.html",
@@ -413,6 +379,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-extension-reporterGroup.html",
+          "title" : "StructureDefinition Extension reporterGroup",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-extension-certificationIdentifier.html",
           "title" : "StructureDefinition Extension certificationIdentifier",
           "generation" : "generated"
@@ -427,6 +398,26 @@
           "title" : "StructureDefinition Extension doNotPerform",
           "generation" : "generated"
         }]
+      },
+      {
+        "nameUrl" : "bundles.html",
+        "title" : "Bundle Definitions",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "operations.html",
+        "title" : "Operations",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "searchparameters.html",
+        "title" : "Search Parameters",
+        "generation" : "markdown"
       },
       {
         "nameUrl" : "capstatements.html",
@@ -464,8 +455,8 @@
         }]
       },
       {
-        "nameUrl" : "downloads.html",
-        "title" : "Downloads",
+        "nameUrl" : "security.html",
+        "title" : "Security",
         "generation" : "markdown"
       },
       {
@@ -474,8 +465,8 @@
         "generation" : "markdown"
       },
       {
-        "nameUrl" : "change-notes.html",
-        "title" : "Change Notes",
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
         "generation" : "markdown"
       },
       {

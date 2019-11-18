@@ -9,8 +9,8 @@
   <status value="draft"/>
   <publisher value="HL7 International - Clinical Quality Information Work Group"/>
 
-  <contact>
-    <!-- 0..* ContactDetail Contact details for the publisher -->
+
+<contact><!-- 0..* ContactDetail Contact details for the publisher -->
     <telecom>
       <system value="url"/>
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
@@ -18,220 +18,133 @@
   </contact>
   <copyright value="Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License"/>
   <!-- 0..1 Use and/or publishing restrictions -->
-  <packageId value="hl7.fhir.us.davinci-deqm"/>
-  <!-- 0..1 NPM Package name for IG -->
-  <license value="CC0-1.0"/>
-  <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
-  <fhirVersion value="4.0.0"/>
-  <!-- 0..1 FHIR Version this Implementation Guide targets -->
-  <definition>
-    <!-- <grouping> 0..* Grouping used to present related resources in the IG -->
-    <!-- <name value="[string]"/> 1..1 Descriptive name for the package -->
-    <!-- <description value="[string]"/> 0..1 Human readable text describing the package -->
-    <!-- </grouping> -->
+ <packageId value="hl7.fhir.us.davinci-deqm"/> <!-- 0..1 NPM Package name for IG -->
+<license value="CC0-1.0"/> <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
+<fhirVersion value="4.0.1"/> <!-- 0..1 FHIR Version this Implementation Guide targets -->
+ <!-- <dependsOn>   0..* Another Implementation guide this depends on
+  <uri> 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on </uri>
+  <packageId value="[id]"/> 0..1 NPM Package name for IG this depends on
+  <version value="[string]"/> 0..1 Version of the IG
+ </dependsOn> -->
+ <!-- insert dependency -->
+<dependsOn id="uscore">  <!-- 0..* Another Implementation guide this depends on -->
+  <uri value="http://hl7.org/fhir/us/core"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>
+  <packageId value="hl7.fhir.us.core"/><!-- 0..1 NPM Package name for IG this depends on -->
+  <version value="current"/><!-- 0..1 Version of the IG -->
+ </dependsOn>
+<dependsOn id="qicore">  <!-- 0..* Another Implementation guide this depends on -->
+  <uri value="http://hl7.org/fhir/us/qicore"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>
+  <packageId value="hl7.fhir.us.qicore"/><!-- 0..1 NPM Package name for IG this depends on -->
+  <version value="current"/><!-- 0..1 Version of the IG -->
+ </dependsOn>
+ <!-- <global>  0..* Profiles that apply globally
+  <type value="[code]"/> 1..1 Type this profile applies to
+  <profile> 1..1 canonical(StructureDefinition) Profile that all resources must conform to</profile>
+ </global> -->
+ <definition>
+  <!--  <grouping>  0..* Grouping used to present related resources in the IG -->
+  <!-- <name value="[string]"/> 1..1 Descriptive name for the package -->
+  <!--   <description value="[string]"/> 0..1 Human readable text describing the package -->
+  <!--  </grouping>  -->
     <grouping>
       <name value="base"/>
     </grouping>
-    <!-- <resource> <reference> <reference value="[type]/[id]"/> </reference> <name value="Test Example"/> <description value="A test example to show how a implementation guide works"/> <exampleCanonical
-    value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/> </resource> -->
-    <!-- <groupingId value="[id]"/> 0..1 Grouping this is part of -->
-    <!-- insert resources -->
-    <resource>
-      <reference><reference value="Organization/organization02"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Patient/patient02"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Location/location03"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="MeasureReport/summ-measurereport01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="MeasureReport/datax-measurereport02"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Location/location02"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Patient/patient03"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Coverage/coverage01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Organization/organization03"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Practitioner/practitioner02"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Organization/organization04"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Observation/observation01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="MeasureReport/indv-measurereport01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Measure/measure-mrp"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Practitioner/practitioner03"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="MeasureReport/indv-measurereport02"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Encounter/Encounter01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Practitioner/practitioner01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Coverage/coverage02"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Location/location01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="MeasureReport/datax-measurereport01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Task/Task01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Organization/organization01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Coverage/coverage03"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="Patient/patient01"/></reference><exampleBoolean value="true"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/extension-certificationIdentifier"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/extension-reportingVendor"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/extension-doNotPerform"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="CapabilityStatement/producer-server"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/medicationrequest-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/indv-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/coverage-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="CapabilityStatement/consumer-server"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/organization-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/practitioner-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="CapabilityStatement/receiver-server"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/datax-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/summary-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/medicationadministration-deqm"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="CapabilityStatement/reporter-client"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="CapabilityStatement/producer-client"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="CapabilityStatement/consumer-client"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/devicerequest-deqm"/></reference><exampleBoolean value="false"/></resource>
+    <!-- <resource>
+    <reference>
+      <reference value="[type]/[id]"/>
+    </reference>
+    <name value="Test Example"/>
+    <description value="A test example to show how a implementation guide works"/>
+    <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
+  </resource>   -->
+  <!--  <groupingId value="[id]"/>  0..1 Grouping this is part of -->
+  <!-- insert resources --><resource><reference><reference value="Organization/organization02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/summ-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/practitioner02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization04"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/observation01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/indv-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Measure/measure-mrp"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/practitioner03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/indv-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/Encounter01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/practitioner01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Task/Task01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="StructureDefinition/extension-reporterGroup"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-certificationIdentifier"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-reportingVendor"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-doNotPerform"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/producer-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/medicationrequest-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/indv-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/coverage-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/consumer-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/organization-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/practitioner-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/receiver-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/datax-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/summary-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/medicationadministration-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/reporter-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/producer-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/consumer-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/devicerequest-deqm"/></reference><exampleBoolean value="false"/></resource>
 
     <!-- ============ Home Page =============== -->
-    <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
+  <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
-    <!-- ============ Framework Page =============== -->
-    <page>
-      <nameUrl value="framework.html"/>
-      <title value="Framework"/>
-      <generation value="markdown"/>
-      <page>
-        <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="datax.html"/>
-        <title value="Data Exchange"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="indv-reporting.html"/>
-        <title value="Individual Reporting"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="summary-reporting.html"/>
-        <title value="Summary Reporting"/>
-        <generation value="markdown"/>
-      </page>
-    </page>
-    <!-- ============ End Framework Page =============== -->
-    <!-- ============ Use Cases Page =============== -->
-    <page>
-      <nameUrl value="usecases.html"/>
-      <title value="Example Use Cases"/>
-      <generation value="markdown"/>
-      <page>
-        <nameUrl value="mrp.html"/>
-        <title value="Medication Reconciliation Post-Discharge (MRP)"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="col.html"/>
-        <title value="Colorectal Cancer Screening (COL)"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="vte1.html"/>
-        <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
-        <generation value="markdown"/>
-      </page>
-    </page>
-    <!-- ============ End Use Cases Page =============== -->
+    <!-- ============ Guidance Page =============== -->
+    <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
 
+    <!-- ============ Profiles Page =============== -->
+    <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
 
-      <!-- ============ Profiles Page =============== -->
-      <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
+     <!-- ============ Profiles and examples=============== -->
+     <!-- insert profiles --><page><nameUrl value="StructureDefinition-medicationrequest-deqm.html"/><title value="StructureDefinition MedicationRequest Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-indv-measurereport-deqm.html"/><title value="StructureDefinition Indv MeasureReport Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-coverage-deqm.html"/><title value="StructureDefinition Coverage Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-organization-deqm.html"/><title value="StructureDefinition Organization Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-practitioner-deqm.html"/><title value="StructureDefinition Practitioner Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-datax-measurereport-deqm.html"/><title value="StructureDefinition Datax MeasureReport Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/><title value="StructureDefinition Summary MeasureReport Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-medicationadministration-deqm.html"/><title value="StructureDefinition MedicationAdministration Deqm"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-devicerequest-deqm.html"/><title value="StructureDefinition DeviceRequest Deqm"/><generation value="generated"/></page>
+    <!-- ============ End Profiles and examples=============== -->
 
-        <!-- ============ Profiles and examples=============== -->
-        <!-- insert profiles -->
-        <page><nameUrl value="StructureDefinition-medicationrequest-deqm.html"/><title value="StructureDefinition MedicationRequest Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-indv-measurereport-deqm.html"/><title value="StructureDefinition Indv MeasureReport Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-coverage-deqm.html"/><title value="StructureDefinition Coverage Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-organization-deqm.html"/><title value="StructureDefinition Organization Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-practitioner-deqm.html"/><title value="StructureDefinition Practitioner Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-datax-measurereport-deqm.html"/><title value="StructureDefinition Datax MeasureReport Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/><title value="StructureDefinition Summary MeasureReport Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-medicationadministration-deqm.html"/><title value="StructureDefinition MedicationAdministration Deqm"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-devicerequest-deqm.html"/><title value="StructureDefinition DeviceRequest Deqm"/><generation value="generated"/></page>
-        <!-- ============ End Profiles and examples=============== -->
-
-        <!-- ============ Extensions and examples =============== -->
-        <!-- insert extensions -->
-        <page><nameUrl value="StructureDefinition-extension-certificationIdentifier.html"/><title value="StructureDefinition Extension certificationIdentifier"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-extension-reportingVendor.html"/><title value="StructureDefinition Extension reportingVendor"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-extension-doNotPerform.html"/><title value="StructureDefinition Extension doNotPerform"/><generation value="generated"/></page>
-        <!-- ============ End Extensions and examples =============== -->
+    <!-- ============ Extensions and examples =============== -->
+    <!-- insert extensions --><page><nameUrl value="StructureDefinition-extension-reporterGroup.html"/><title value="StructureDefinition Extension reporterGroup"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-extension-certificationIdentifier.html"/><title value="StructureDefinition Extension certificationIdentifier"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-extension-reportingVendor.html"/><title value="StructureDefinition Extension reportingVendor"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-extension-doNotPerform.html"/><title value="StructureDefinition Extension doNotPerform"/><generation value="generated"/></page>
+    <!-- ============ End Extensions and examples =============== -->
 
       </page>
 
-      <!-- ============ CapabilityStatement Page =============== -->
-      <page><nameUrl value="capstatements.html"/><title value="Capability Statements"/><generation value="markdown"/>
+     <!-- ============ Bundle Definitions Page =============== -->
+     <page><nameUrl value="bundles.html"/><title value="Bundle Definitions"/><generation value="markdown"/>
 
-        <!-- ============ CapabilityStatements =============== -->
-        <!-- insert capabilitystatements -->
-        <page><nameUrl value="CapabilityStatement-producer-server.html"/><title value="CapabilityStatement Producer Server"/><generation value="generated"/></page>
-        <page><nameUrl value="CapabilityStatement-consumer-server.html"/><title value="CapabilityStatement Consumer Server"/><generation value="generated"/></page>
-        <page><nameUrl value="CapabilityStatement-receiver-server.html"/><title value="CapabilityStatement Receiver Server"/><generation value="generated"/></page>
-        <page><nameUrl value="CapabilityStatement-reporter-client.html"/><title value="CapabilityStatement Reporter Client"/><generation value="generated"/></page>
-        <page><nameUrl value="CapabilityStatement-producer-client.html"/><title value="CapabilityStatement Producer Client"/><generation value="generated"/></page>
-        <page><nameUrl value="CapabilityStatement-consumer-client.html"/><title value="CapabilityStatement Consumer Client"/><generation value="generated"/></page>
-        <!-- ============ End CapabilityStatements =============== -->
-      </page>
+     <!-- ============ MessagedDefinitions  =============== -->
+     <!-- insert messagedefinitions -->
+     <!-- ============ End MessagedDefinitions  =============== -->
 
-      <!-- ============ Downloads Page =============== -->
-      <page><nameUrl value="downloads.html"/><title value="Downloads"/><generation value="markdown"/></page>
+      <!-- ============ GraphDefinitions  =============== -->
+      <!-- insert graphdefinitions -->
+      <!-- ============ EndGraphDefinitions  =============== -->
 
-      <!-- ============ Examples Page=============== -->
-      <page><nameUrl value="all-examples.html"/><title value="All Examples"/><generation value="markdown"/></page>
+     </page>
 
-      <!-- ============ Change Notes Page =============== -->
-      <page>
-        <nameUrl value="change-notes.html"/>
-        <title value="Change Notes"/>
-        <generation value="markdown"/>
-      </page>
+    <!-- ============ Operations Page =============== -->
+    <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
 
-      <!-- ============ Table of Contents =============== -->
-      <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/></page>
+    <!-- ============ Operations and examples  =============== -->
+    <!-- insert operationdefinitions -->
+    <!-- ============ End Operations and examples  =============== -->
 
     </page>
+    <!-- ============ Terminology Page =============== -->
+
+    <page><nameUrl value="terminology.html"/><title value="Terminology"/><generation value="markdown"/>
+     <!-- ============ ValueSet   =============== -->
+    <!-- insert valuesets -->
+    <!-- ============ End ValueSet   =============== -->
+
+    <!-- ============ CodeSystems  =============== -->
+    <!-- insert codesystems -->
+    <!-- ============ End CodeSystems  =============== -->
+
+    <!-- ============ ConceptMaps   =============== -->
+    <!-- insert conceptmaps -->
+    <!-- ============ End ConceptMaps   =============== -->
+
+    </page>
+
+    <!-- ============ SearchParameter Page =============== -->
+    <page><nameUrl value="searchparameters.html"/><title value="Search Parameters"/><generation value="markdown"/>
+
+  <!-- ============ SearchParameters =============== -->
+  <!-- insert searchparameters -->
+  <!-- ============ End SearchParameters  =============== -->
+    </page>
+
+    <!-- ============ CapabilityStatement Page =============== -->
+    <page><nameUrl value="capstatements.html"/><title value="Capability Statements"/><generation value="markdown"/>
+
+  <!-- ============ CapabilityStatements    =============== -->
+    <!-- insert capabilitystatements --><page><nameUrl value="CapabilityStatement-producer-server.html"/><title value="CapabilityStatement Producer Server"/><generation value="generated"/></page><page><nameUrl value="CapabilityStatement-consumer-server.html"/><title value="CapabilityStatement Consumer Server"/><generation value="generated"/></page><page><nameUrl value="CapabilityStatement-receiver-server.html"/><title value="CapabilityStatement Receiver Server"/><generation value="generated"/></page><page><nameUrl value="CapabilityStatement-reporter-client.html"/><title value="CapabilityStatement Reporter Client"/><generation value="generated"/></page><page><nameUrl value="CapabilityStatement-producer-client.html"/><title value="CapabilityStatement Producer Client"/><generation value="generated"/></page><page><nameUrl value="CapabilityStatement-consumer-client.html"/><title value="CapabilityStatement Consumer Client"/><generation value="generated"/></page>
+  <!-- ============ End CapabilityStatements    =============== -->
+    </page>
+
+    <!-- ============ Security Page =============== -->
+    <page><nameUrl value="security.html"/><title value="Security"/><generation value="markdown"/></page>
+
+    <!-- ============ Examples Page=============== -->
+    <page><nameUrl value="all-examples.html"/><title value="All Examples"/><generation value="markdown"/></page>
+
+    <!-- ============ Downloads Page =============== -->
+    <page><nameUrl value="downloads.html"/><title value="Downloads"/><generation value="markdown"/></page>
+
+    <!-- ============ Table of Contents =============== -->
+    <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/></page>
+
+  </page>
   </definition>
 </ImplementationGuide>

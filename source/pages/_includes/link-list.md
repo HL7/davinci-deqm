@@ -101,3 +101,4 @@
 [Bundles]: {{site.data.fhir.path}}bundle.html
 [following rules]: {{site.data.fhir.path}}references.html#contained
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
+[Reporting Group]: StructureDefinition-extension-reporterGroup.html

@@ -20,8 +20,8 @@
    <Path>\\ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\Davinci-DEQM\source\resources\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
    <SheetName>davinci</SheetName>
   </SupBook>
-  <WindowHeight>12165</WindowHeight>
-  <WindowWidth>28800</WindowWidth>
+  <WindowHeight>10515</WindowHeight>
+  <WindowWidth>25200</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ActiveSheet>2</ActiveSheet>
@@ -1091,7 +1091,7 @@
     ss:RefersTo="=measurereport-'\\ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\Davinci-DEQM\source\resources\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\[davinci]davinci'!R1C1:R103C26"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="29" ss:ExpandedRowCount="510" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="29" ss:ExpandedRowCount="511" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="65.25"
    ss:DefaultRowHeight="15">
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="150"/>
@@ -1466,6 +1466,34 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">The organization or where the measure was completed</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">The organization where the measure was completed</Data></Cell>
+    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s112"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s114"><Data ss:Type="String">group</Data></Cell>
+    <Cell ss:StyleID="s115"/>
+    <Cell ss:StyleID="s115"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">reporter.extension</Data></Cell>
+    <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.reporter.extension</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Extension{#reporterGroup}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s108"/>
     <Cell ss:StyleID="s110"/>
@@ -6080,13 +6108,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>15</TopRowVisible>
-   <LeftColumnVisible>3</LeftColumnVisible>
+   <LeftColumnVisible>15</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>20</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>14</ActiveRow>
+     <ActiveCol>21</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
