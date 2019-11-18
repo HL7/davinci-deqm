@@ -67,6 +67,10 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQFM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
+## Negation Patterns for Quality Measures
+
+​Refer to the Quality Measure Implementation Guide for guidance on [negation patterns in quality measurements]. Note that implementations processing negated data may not be returned with a single code, but rather a value set identifier represented by the [Valueset Reference extension] which are part of the QI Core profiles, and should consider data with the appropriate value set identifier as satisfying the criteria for value set membership.
+
 ## Must Support
 
 - This guide adopts the [QI Core *Must Support*] definition with the following additional expectation:

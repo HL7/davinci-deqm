@@ -27,10 +27,15 @@
   <version value="[string]"/> 0..1 Version of the IG
  </dependsOn> -->
  <!-- insert dependency -->
+<dependsOn id="cqfm">  <!-- 0..* Another Implementation guide this depends on -->
+  <uri value="http://hl7.org/fhir/us/cqfmeasures"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>
+  <packageId value="hl7.fhir.us.cqfmeasures"/><!-- 0..1 NPM Package name for IG this depends on -->
+  <version value="current"/><!-- 0..1 Version of the IG -->
+ </dependsOn>
 <dependsOn id="uscore">  <!-- 0..* Another Implementation guide this depends on -->
   <uri value="http://hl7.org/fhir/us/core"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>
   <packageId value="hl7.fhir.us.core"/><!-- 0..1 NPM Package name for IG this depends on -->
-  <version value="current"/><!-- 0..1 Version of the IG -->
+  <version value="3.1.0"/><!-- 0..1 Version of the IG -->
  </dependsOn>
 <dependsOn id="qicore">  <!-- 0..* Another Implementation guide this depends on -->
   <uri value="http://hl7.org/fhir/us/qicore"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>

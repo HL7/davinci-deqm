@@ -45,6 +45,11 @@
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core"/>
     <packageId value="hl7.fhir.us.core"/>
+    <version value="3.1.0"/>
+  </dependsOn>
+  <dependsOn id="cqfm">
+    <uri value="http://hl7.org/fhir/us/cqfmeasures"/>
+    <packageId value="hl7.fhir.us.cqfmeasures"/>
     <version value="current"/>
   </dependsOn>
   <definition>

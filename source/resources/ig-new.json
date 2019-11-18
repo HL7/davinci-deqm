@@ -50,6 +50,12 @@
     "id" : "uscore",
     "uri" : "http://hl7.org/fhir/us/core",
     "packageId" : "hl7.fhir.us.core",
+    "version" : "3.1.0"
+  },
+  {
+    "id" : "cqfm",
+    "uri" : "http://hl7.org/fhir/us/cqfmeasures",
+    "packageId" : "hl7.fhir.us.cqfmeasures",
     "version" : "current"
   }],
   "definition" : {
