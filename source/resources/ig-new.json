@@ -208,6 +208,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/extension-alternateScoreType"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-reporterGroup"
       },
       "exampleBoolean" : false
@@ -376,6 +382,11 @@
         {
           "nameUrl" : "StructureDefinition-devicerequest-deqm.html",
           "title" : "StructureDefinition DeviceRequest Deqm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-alternateScoreType.html",
+          "title" : "StructureDefinition Extension alternateScoreType",
           "generation" : "generated"
         },
         {

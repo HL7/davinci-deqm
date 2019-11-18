@@ -203,6 +203,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-alternateScoreType"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-reporterGroup"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -371,6 +377,11 @@
         <page>
           <nameUrl value="StructureDefinition-devicerequest-deqm.html"/>
           <title value="StructureDefinition DeviceRequest Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-alternateScoreType.html"/>
+          <title value="StructureDefinition Extension alternateScoreType"/>
           <generation value="generated"/>
         </page>
         <page>
