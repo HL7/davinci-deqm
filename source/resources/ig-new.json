@@ -238,12 +238,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/extension-doNotPerform"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "CapabilityStatement/producer-server"
       },
       "exampleBoolean" : false
@@ -325,12 +319,6 @@
         "reference" : "CapabilityStatement/consumer-client"
       },
       "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/devicerequest-deqm"
-      },
-      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",
@@ -386,11 +374,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-devicerequest-deqm.html",
-          "title" : "StructureDefinition DeviceRequest Deqm",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-extension-alternateScoreType.html",
           "title" : "StructureDefinition Extension alternateScoreType",
           "generation" : "generated"
@@ -408,11 +391,6 @@
         {
           "nameUrl" : "StructureDefinition-extension-reportingVendor.html",
           "title" : "StructureDefinition Extension reportingVendor",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-doNotPerform.html",
-          "title" : "StructureDefinition Extension doNotPerform",
           "generation" : "generated"
         }]
       },

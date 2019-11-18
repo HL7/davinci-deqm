@@ -6594,10 +6594,10 @@
  </Worksheet>
  <Worksheet ss:Name="Extensions">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=Extensions!R1C3:R33C26"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=Extensions!R1C3:R32C26"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="26" ss:ExpandedRowCount="34" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="26" ss:ExpandedRowCount="33" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="64.5"
    ss:DefaultRowHeight="15">
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="277.5"/>
@@ -6725,47 +6725,6 @@
       ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40">        <Font
         html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">Not published</Font>       </ss:Data></Comment><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Formula="=&quot;DEQM &quot; &amp; RC[5] &amp; &quot; Extension&quot;"><Data
-      ss:Type="String">DEQM Do Not Perform Extension</Data></Cell>
-    <Cell ss:Formula="=&quot;DEQM&quot; &amp; RC[1]&amp; &quot;Extension&quot;"><Data
-      ss:Type="String">DEQMdoNotPerformExtension</Data></Cell>
-    <Cell ss:StyleID="s136"><Data ss:Type="String">doNotPerform</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Resource</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Appointment;CarePlan;Claim;CommunicationRequest;DeviceRequest;EnrollmentRequest;ImmunizationRecommendation;MedicationRequest;NutritionOrder;ServiceRequest;Task;SupplyRequest;VisionPrescription</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Do Not Perform</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">boolean</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">If true this element negates the specified action. For Example, instead of a request for&#10;       a procedure, it is a request for the procedure to not occur.</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">true if request is prohibiting action</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">If true indicates that the request is asking for the specified action to not occur.</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s109"><Data ss:Type="String">The attributes provided with the request qualify what is not to be done. For example,&#10;       if an effectiveTime is provided, the &amp;quot;do not&amp;quot; request only applies within the&#10;       specified time. If a performerType is specified then the &amp;quot;do not&amp;quot; request only&#10;       applies to performers of that type. Qualifiers include: code, subject, occurrence, perormerType&#10;       and performer.&#10;&#10;In some cases, the Request.code may pre-coordinate prohibition into the requested action.&#10;       E.g. &amp;quot;NPO&amp;quot; (nothing by mouth), &amp;quot;DNR&amp;quot; (do not recussitate). If this&#10;       happens, doNotPerform SHALL NOT be set to true. I.e. The resource shall not have double&#10;       negation. (E.g. &amp;quot;Do not DNR&amp;quot;).</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s111"><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Formula="=&quot;DEQM &quot; &amp; RC[5] &amp; &quot; Extension&quot;"><Data
@@ -7643,8 +7602,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>5</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>4</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

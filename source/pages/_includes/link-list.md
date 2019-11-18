@@ -73,12 +73,14 @@
 [QI Core Condition]: {{site.qi_r4}}StructureDefinition-qicore-condition.html
 [QI Core Coverage]: {{site.qi_r4}}StructureDefinition-qicore-coverage.html
 [QI Core DeviceUseStatement]:{{site.qi_r4}}StructureDefinition-qicore-deviceusestatement.html
+[QI Core DeviceRequest]: {{site.qi_r4}}StructureDefinition-qicore-devicerequest.html
 [QI Core DiagnosticReport]:{{site.qi_r4}}StructureDefinition-qicore-diagnosticreport.html
 [QI Core Encounter]: {{site.qi_r4}}StructureDefinition-qicore-encounter.html
 [QI Core Location]: {{site.qi_r4}}StructureDefinition-qicore-location.html
 [QI Core Observation]: {{site.qi_r4}}StructureDefinition-qicore-observation.html
 [QI Core Patient]: {{site.qi_r4}}StructureDefinition-qicore-patient.html
 [QI Core Procedure]: {{site.qi_r4}}StructureDefinition-qicore-procedure.html
+[QI Core ServiceRequest]: {{site.qi_r4}}StructureDefinition-qicore-servicerequest.html
 [QI Core Task]: {{site.qi_r4}}StructureDefinition-qicore-task.html
 [QI Core Profiles]: {{site.qi_r4}}index.html
 [QI Core]: {{site.qi_r4}}index.html

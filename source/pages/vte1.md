@@ -20,7 +20,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |---|---|---|
 |Condition|QI Core Condition Profile|[QI Core Condition]|
 |Coverage|QI Core Coverage Profile|[QI Core Coverage]|
-|DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest]|
+|DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest]|
 |DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter]|
 |Library|CQFM Library Profile|[CQFM Library]|

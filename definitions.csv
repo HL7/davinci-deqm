@@ -7,7 +7,7 @@ status,draft
 publisher,HL7 International - Clinical Quality Information Work Group
 contact.system,url
 contact.value,http://www.hl7.org/Special/committees/cqi/index.cfm
-extensions,extension-doNotPerform|extension-reportingVendor|extension-certificationIdentifier|extension-reporterGroup|extension-alternateScoreType
+extensions,extension-reportingVendor|extension-certificationIdentifier|extension-reporterGroup|extension-alternateScoreType
 searches,
 codesystems,
 valuesets,
