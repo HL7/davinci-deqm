@@ -85,7 +85,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Practitioner to evaluate. This is a reference to a [DEQM Practitioner](StructureDefinition-practitioner-deqm.html) e.g. 'Practitioner/123'. If specified, the measure will be evaluated only for patients whose primary practitioner is the identified practitioner"/>
+    <documentation value="Practitioner to evaluate. This is a reference to a [QI Core Practitioner](StructureDefinition-practitioner-deqm.html) e.g. 'Practitioner/123'. If specified, the measure will be evaluated only for patients whose primary practitioner is the identified practitioner"/>
     <type value="uri"/>
   </parameter>
   <parameter>

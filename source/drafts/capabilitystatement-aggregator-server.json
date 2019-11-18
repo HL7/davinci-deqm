@@ -110,8 +110,8 @@
                "valueCode": "SHALL"
             }
          ],
-         "display": "DEQM Practitioner Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+         "display": "QI Core Practitioner Profile",
+         "reference": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
       },
       {
          "extension": [

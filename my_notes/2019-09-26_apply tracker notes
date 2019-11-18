@@ -5,7 +5,7 @@ updated dependencyList
 dependencyList.name,qicore|uscore|cqfm
 dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures/2019May
 dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|hl7.fhir.us.cqfmeasures
-dependencyList.version,3.2.0|2.0.0|0.1.0
+dependencyList.version,3.3.0|3.1.0|0.1.0
 
 note that title is not being added to ig.xml by the tool
 
@@ -131,15 +131,24 @@ credits...
 
 R4 IG Punch list
 
+1. update dependencies - done for now
+1. fix TOC (such a pain...) update "TOC" to "Table of Contents"
+1. add summaries ?  defer
+1. title: done
+1. version: 1.1.0  !
+1. package-list json  - done
+1. no need to change the link to jira :-)
 
-1. fix TOC
-1. add summaries
-1. title:
-1. version: 1.1.0
-1. package-list json
-1. change publisher to redirect to jira instead of gforge
+1. apply trackers  - 1 example left
 
-1. apply trackers
+- 24859 - ****** need Bundle example of multiple reports - defer check on tooling to get reports
+- 23927 -  add group from stu3. done!!  Confirm is just summary as is now?
+- 23050  - done!
+- 23015 - updating links .. done!
+- 20963 & 20964 - remove DNP extension,and update MedicationRequest and remove DeviceRequest profiles use QI core for this one.  - done
 
-- 24859 -  need Bundle example of multiple reports - defer check on tooling to get reports
-- 23927 -  add group from stu3. for both summary and individual or just summary as is now?
+1. QA done
+remove deqm practitioner profile since is profiled in US Core R4.
+http://hl7.org/fhir/us/qicore/ImplementationGuide/us-qicore-3.3.0 - does not resolve since is not published -check with Bryn
+
+1. Readthrough

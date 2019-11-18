@@ -263,7 +263,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           "versionId": "4",
           "lastUpdated": "2018-12-12T17:05:43.000+00:00",
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
           ]
         },
         "identifier": [

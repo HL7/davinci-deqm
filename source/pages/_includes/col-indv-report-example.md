@@ -271,7 +271,7 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
         "resourceType": "Practitioner",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
           ]
         },
         "identifier": [

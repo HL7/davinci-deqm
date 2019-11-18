@@ -27,7 +27,7 @@
   "for": {
     "reference": "Patient/patient01"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/Encounter01"
   },
   "executionPeriod": {

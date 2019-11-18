@@ -208,7 +208,7 @@ Provider X acting in the role of Producer submits COL data for Patient Y to Paye
         "id": "practitioner-col",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
           ]
         },
         "identifier": [

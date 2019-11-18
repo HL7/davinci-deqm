@@ -58,13 +58,13 @@ This Guide is divided into several pages which are listed at the top of each pag
 ## Background
 
 <!-- Quality Improvement Ecosystem -->
-{% include quality-improvement-ecosystem.html %}
+{% include quality-improvement-ecosystem.md %}
 
 <!-- Quality Measurement Standards Landscape -->
-{% include quality-measurement-standards-landscape.html %}
+{% include quality-measurement-standards-landscape.md %}
 
 <!-- Data Model Standards Landscape -->
-{% include data-model-standards-landscape.html %}
+{% include data-model-standards-landscape.md %}
 
 
 ## Quality Reporting Scenarios

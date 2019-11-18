@@ -36,7 +36,6 @@
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
 [DEQM Organization]: StructureDefinition-organization-deqm.html
-[DEQM Practitioner]: StructureDefinition-practitioner-deqm.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"
@@ -79,6 +78,7 @@
 [QI Core Location]: {{site.qi_r4}}StructureDefinition-qicore-location.html
 [QI Core Observation]: {{site.qi_r4}}StructureDefinition-qicore-observation.html
 [QI Core Patient]: {{site.qi_r4}}StructureDefinition-qicore-patient.html
+[QI Core Practitioner]: {{site.qi_r4}}StructureDefinition-qicore-practitioner.html
 [QI Core Procedure]: {{site.qi_r4}}StructureDefinition-qicore-procedure.html
 [QI Core ServiceRequest]: {{site.qi_r4}}StructureDefinition-qicore-servicerequest.html
 [QI Core Task]: {{site.qi_r4}}StructureDefinition-qicore-task.html

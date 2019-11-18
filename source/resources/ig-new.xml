@@ -40,7 +40,7 @@
   <dependsOn id="qicore">
     <uri value="http://hl7.org/fhir/us/qicore"/>
     <packageId value="hl7.fhir.us.qicore"/>
-    <version value="current"/>
+    <version value="3.3.0"/>
   </dependsOn>
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core"/>
@@ -112,12 +112,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Practitioner/practitioner02"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Organization/organization04"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -137,12 +131,6 @@
     <resource>
       <reference>
         <reference value="Measure/measure-mrp"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/practitioner03"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -268,12 +256,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/practitioner-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CapabilityStatement/receiver-server"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -319,9 +301,49 @@
       <title value="Home"/>
       <generation value="markdown"/>
       <page>
-        <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <nameUrl value="framework.html"/>
+        <title value="Framework"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="guidance.html"/>
+          <title value="General Guidance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="datax.html"/>
+          <title value="Data Exchange"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="indv-reporting.html"/>
+          <title value="Individual Reporting"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="summary-reporting.html"/>
+          <title value="Summary Reporting"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Example Use Cases"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="mrp.html"/>
+          <title value="Medication Reconciliation Post-Discharge (MRP)"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="col.html"/>
+          <title value="Colorectal Cancer Screening (COL)"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="vte1.html"/>
+          <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -345,11 +367,6 @@
         <page>
           <nameUrl value="StructureDefinition-organization-deqm.html"/>
           <title value="StructureDefinition Organization Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-practitioner-deqm.html"/>
-          <title value="StructureDefinition Practitioner Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -389,26 +406,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="bundles.html"/>
-        <title value="Bundle Definitions"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="operations.html"/>
-        <title value="Operations"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="terminology.html"/>
-        <title value="Terminology"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="searchparameters.html"/>
-        <title value="Search Parameters"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <nameUrl value="capstatements.html"/>
         <title value="Capability Statements"/>
         <generation value="markdown"/>
@@ -444,11 +441,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="security.html"/>
-        <title value="Security"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <nameUrl value="all-examples.html"/>
         <title value="All Examples"/>
         <generation value="markdown"/>
@@ -456,6 +448,11 @@
       <page>
         <nameUrl value="downloads.html"/>
         <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="change-notes.html"/>
+        <title value="Change Notes"/>
         <generation value="markdown"/>
       </page>
       <page>

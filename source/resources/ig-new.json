@@ -44,7 +44,7 @@
     "id" : "qicore",
     "uri" : "http://hl7.org/fhir/us/qicore",
     "packageId" : "hl7.fhir.us.qicore",
-    "version" : "current"
+    "version" : "3.3.0"
   },
   {
     "id" : "uscore",
@@ -118,12 +118,6 @@
     },
     {
       "reference" : {
-        "reference" : "Practitioner/practitioner02"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Organization/organization04"
       },
       "exampleBoolean" : true
@@ -143,12 +137,6 @@
     {
       "reference" : {
         "reference" : "Measure/measure-mrp"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Practitioner/practitioner03"
       },
       "exampleBoolean" : true
     },
@@ -274,12 +262,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/practitioner-deqm"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "CapabilityStatement/receiver-server"
       },
       "exampleBoolean" : false
@@ -325,9 +307,49 @@
       "title" : "Home",
       "generation" : "markdown",
       "page" : [{
-        "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
-        "generation" : "markdown"
+        "nameUrl" : "framework.html",
+        "title" : "Framework",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "guidance.html",
+          "title" : "General Guidance",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "datax.html",
+          "title" : "Data Exchange",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "indv-reporting.html",
+          "title" : "Individual Reporting",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "summary-reporting.html",
+          "title" : "Summary Reporting",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "nameUrl" : "usecases.html",
+        "title" : "Example Use Cases",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "mrp.html",
+          "title" : "Medication Reconciliation Post-Discharge (MRP)",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "col.html",
+          "title" : "Colorectal Cancer Screening (COL)",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "vte1.html",
+          "title" : "Venous Thromboembolism Prophylaxis (VTE-1)",
+          "generation" : "markdown"
+        }]
       },
       {
         "nameUrl" : "profiles.html",
@@ -351,11 +373,6 @@
         {
           "nameUrl" : "StructureDefinition-organization-deqm.html",
           "title" : "StructureDefinition Organization Deqm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-practitioner-deqm.html",
-          "title" : "StructureDefinition Practitioner Deqm",
           "generation" : "generated"
         },
         {
@@ -395,26 +412,6 @@
         }]
       },
       {
-        "nameUrl" : "bundles.html",
-        "title" : "Bundle Definitions",
-        "generation" : "markdown"
-      },
-      {
-        "nameUrl" : "operations.html",
-        "title" : "Operations",
-        "generation" : "markdown"
-      },
-      {
-        "nameUrl" : "terminology.html",
-        "title" : "Terminology",
-        "generation" : "markdown"
-      },
-      {
-        "nameUrl" : "searchparameters.html",
-        "title" : "Search Parameters",
-        "generation" : "markdown"
-      },
-      {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
         "generation" : "markdown",
@@ -450,11 +447,6 @@
         }]
       },
       {
-        "nameUrl" : "security.html",
-        "title" : "Security",
-        "generation" : "markdown"
-      },
-      {
         "nameUrl" : "all-examples.html",
         "title" : "All Examples",
         "generation" : "markdown"
@@ -462,6 +454,11 @@
       {
         "nameUrl" : "downloads.html",
         "title" : "Downloads",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "change-notes.html",
+        "title" : "Change Notes",
         "generation" : "markdown"
       },
       {

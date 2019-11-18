@@ -30,7 +30,7 @@
   "subject": {
     "reference": "Patient/patient01"
   },
-  "context": {
+  "encounter": {
     "reference": "Encounter/Encounter01"
   },
   "effectiveDateTime": "2018-09-29T14:15:04.424Z",

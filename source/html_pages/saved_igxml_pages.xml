@@ -2,65 +2,58 @@
 
 <!-- ============ Framework Page =============== -->
 <page>
-  <source value="framework.html"/>
+  <nameUrl value="framework.html"/>
   <title value="Framework"/>
-  <kind value="page"/>
+  <generation value="markdown"/>
   <page>
-    <source value="guidance.html"/>
+    <nameUrl value="guidance.html"/>
     <title value="General Guidance"/>
-    <kind value="page"/>
+    <generation value="markdown"/>
   </page>
   <page>
-    <source value="datax.html"/>
+    <nameUrl value="datax.html"/>
     <title value="Data Exchange"/>
-    <kind value="page"/>
+    <generation value="markdown"/>
   </page>
   <page>
-    <source value="indv-reporting.html"/>
+    <nameUrl value="indv-reporting.html"/>
     <title value="Individual Reporting"/>
-    <kind value="page"/>
+    <generation value="markdown"/>
   </page>
   <page>
-    <source value="summary-reporting.html"/>
+    <nameUrl value="summary-reporting.html"/>
     <title value="Summary Reporting"/>
-    <kind value="page"/>
+    <generation value="markdown"/>
   </page>
 </page>
 <!-- ============ End Framework Page =============== -->
 <!-- ============ Use Cases Page =============== -->
 <page>
-  <source value="usecases.html"/>
+  <nameUrl value="usecases.html"/>
   <title value="Example Use Cases"/>
-  <kind value="page"/>
+  <generation value="markdown"/>
   <page>
-    <source value="mrp.html"/>
+    <nameUrl value="mrp.html"/>
     <title value="Medication Reconciliation Post-Discharge (MRP)"/>
-    <kind value="page"/>
+    <generation value="markdown"/>
   </page>
   <page>
-    <source value="col.html"/>
+    <nameUrl value="col.html"/>
     <title value="Colorectal Cancer Screening (COL)"/>
-    <kind value="page"/>
+    <generation value="markdown"/>
   </page>
   <page>
-    <source value="vte1.html"/>
+    <nameUrl value="vte1.html"/>
     <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
-    <kind value="page"/>
+    <generation value="markdown"/>
   </page>
 </page>
 <!-- ============ End Use Cases Page =============== -->
 
 *****delete
 
-    <!-- ============ SearchParameter Page =============== -->
-    <page><source value="searchparameters.html"/><title value="Search Parameters"/><kind value="page"/>
+bundles, operation, terminology, searchparameters and security
 
-      <!-- ============ SearchParameters =============== -->
-      <!-- insert searchparameters -->
-      <!-- ============ End SearchParameters =============== -->
-    </page>
-
-*****delete<!-- ============ SearchParameters Page ===============  <page> -->
 
 ******* add
 <!-- ============ Change Notes Page =============== -->
