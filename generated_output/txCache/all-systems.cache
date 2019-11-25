@@ -53,7 +53,7 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"\" is not known for the code \"self\"; The code provided (#self) is not  valid in the value set All codes known to the system"
+  "error" : "The code system \"\" is not known (encountered paired with code = \"self\"); The code provided (#self) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -822,67 +822,5 @@ v: {
   "display" : "Rhode Island",
   "severity" : null,
   "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "M"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/v3/AdministrativeGender",
-      "concept" : [{
-        "code" : "F",
-        "display" : "Female"
-      },
-      {
-        "code" : "M",
-        "display" : "Male"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/v3/NullFlavor",
-      "concept" : [{
-        "code" : "UNK",
-        "display" : "Unknown"
-      }]
-    }]
-  }
-}, "lang":"null"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Unknown code system http://hl7.org/fhir/v3/AdministrativeGender"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "F"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/v3/AdministrativeGender",
-      "concept" : [{
-        "code" : "F",
-        "display" : "Female"
-      },
-      {
-        "code" : "M",
-        "display" : "Male"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/v3/NullFlavor",
-      "concept" : [{
-        "code" : "UNK",
-        "display" : "Unknown"
-      }]
-    }]
-  }
-}, "lang":"null"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Unknown code system http://hl7.org/fhir/v3/AdministrativeGender"
 }
 -------------------------------------------------------------------------------------

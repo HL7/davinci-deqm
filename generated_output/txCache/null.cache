@@ -14,6 +14,6 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"\" is not known for the code \"self\"; The code provided (#self) is not  valid in the value set SubscriberRelationshipCodes"
+  "error" : "The code system \"\" is not known (encountered paired with code = \"self\"); The code provided (#self) is not  valid in the value set SubscriberRelationshipCodes"
 }
 -------------------------------------------------------------------------------------

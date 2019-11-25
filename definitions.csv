@@ -33,7 +33,7 @@ canonicalBase,http://hl7.org/fhir/us/davinci-deqm
 dependencyList.name,qicore|uscore|cqfm
 dependencyList.location,http://hl7.org/fhir/us/qicore|http://hl7.org/fhir/us/core|http://hl7.org/fhir/us/cqfmeasures
 dependencyList.package,hl7.fhir.us.qicore|hl7.fhir.us.core|hl7.fhir.us.cqfmeasures
-dependencyList.version,3.3.0|3.1.0|current
+dependencyList.version,3.3.0|3.1.0|1.0.0
 special-urls,
 tool,jekyll
 logging,progress

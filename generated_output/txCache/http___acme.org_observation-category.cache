@@ -6,6 +6,6 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"http://acme.org/observation-category\" is not known for the code \"measure\"; The code provided (http://acme.org/observation-category#measure) is not  valid in the value set All codes known to the system"
+  "error" : "The code system \"http://acme.org/observation-category\" is not known (encountered paired with code = \"measure\"); The code provided (http://acme.org/observation-category#measure) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------

@@ -34,7 +34,7 @@
     </uri>
     <packageId value="hl7.fhir.us.cqfmeasures"/>
     <!-- 0..1 NPM Package name for IG this depends on -->
-    <version value="current"/><!-- 0..1 Version of the IG --></dependsOn>
+    <version value="1.0.0"/><!-- 0..1 Version of the IG --></dependsOn>
   <dependsOn id="uscore">
     <!-- 0..* Another Implementation guide this depends on -->
     <uri value="http://hl7.org/fhir/us/core">

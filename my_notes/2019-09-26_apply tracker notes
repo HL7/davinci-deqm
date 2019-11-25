@@ -147,8 +147,10 @@ R4 IG Punch list
 - 23015 - updating links .. done!
 - 20963 & 20964 - remove DNP extension,and update MedicationRequest and remove DeviceRequest profiles use QI core for this one.  - done
 
+update introduction includes to markdown. - done
+
 1. QA done
 remove deqm practitioner profile since is profiled in US Core R4.
 http://hl7.org/fhir/us/qicore/ImplementationGuide/us-qicore-3.3.0 - does not resolve since is not published -check with Bryn
 
-1. Readthrough
+1. Readthrough - todo

@@ -6,7 +6,7 @@
    "list": [
       {
          "version": "current",
-         "fhirversion": "4.0.0",
+         "fhirversion": "4.0.1",
          "desc": "Continuous Integration Build for FHIR R4 (latest in version control)",
          "path": "http://build.fhir.org/ig/HL7/davinci-deqm",
          "status": "ci-build",
@@ -14,7 +14,7 @@
       },
       {
          "version": "1.1.0",
-         "fhirversion": "4.0.0",
+         "fhirversion": "4.0.1",
          "date": "2019-12-31",
          "desc": "STU3 Ballot for FHIR R4 Version of DEQM",
          "changes": "change-notes.html",
