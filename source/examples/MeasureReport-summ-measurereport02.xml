@@ -6,7 +6,7 @@
 	<status value="complete"/>
 	<type value="summary"/>
 	<measure>
-		<reference value="http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR"/>
+		<reference value="http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR|1.0.0"/>
 	</measure>
 	<date value="2019-09-05T16:59:52.404Z"/>
 	<reportingOrganization>

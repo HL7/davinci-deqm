@@ -3,10 +3,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>{{site.data.fhir.igName}}</title>
+  <title>{{site.data.fhir.ig.name}}</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="{{site.data.fhir.igName}} Implemenation Guide" />
+<meta name="description" content="{{site.data.fhir.ig.name}} Implemenation Guide" />
 <meta name="author" content="{{site.data.fhir.ig.publisher}}"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -55,7 +55,7 @@
   <!-- end org logo -->
 
   <div id="project-status" class="project-status"> <!-- ig title text -->
-    {% if site.data.fhir.version == "3.0.1" %}
+    {% if site.data.fhir.version == "3.0.2" %}
     <b>{{ site.data.fhir.ig.name }} Implementation Guide</b>
     {% else %}
     <b>{{ site.data.fhir.ig.title }} Implementation Guide</b>

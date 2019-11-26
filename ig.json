@@ -371,9 +371,9 @@
     },
     {
       "name": "cqfm",
-      "version": "current",
+      "version": "1.0.0",
       "package": "hl7.fhir.us.cqfmeasures",
-      "location": "http://build.fhir.org/ig/HL7/cqf-measures"
+      "location": "http://hl7.org/fhir/us/cqfmeasures"
     }
   ]
 }

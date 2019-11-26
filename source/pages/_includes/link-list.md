@@ -23,8 +23,8 @@
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
-[CQFM Library]: {{site.cqfm_r3}}StructureDefinition-library-cqfm.html
-[CQFM Measure]: {{site.cqfm_r3}}StructureDefinition-measure-cqfm.html
+[CQFM Library]: {{site.data.fhir.cqfm}}StructureDefinition-library-cqfm.html
+[CQFM Measure]: {{site.data.fhir.cqfm}}StructureDefinition-measure-cqfm.html
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
@@ -50,9 +50,6 @@
 [General Guidance]: guidance.html  "General Guidance Page"
 [HEDIS Colorectal Cancer Screening/CMS130]: {{site.hedis_r3}}cql/stu3/col-logic.cql.html
 [HEDIS Measure Description for Colorectal Cancer Screening]: {{site.hedis_r3}}cql/stu3/col-logic.cql.html
-[HEDIS MRP Measure]: {{site.hedis_r3}}Measure-measure-mrp.html
-[HEDIS MRP Observation]: {{site.hedis_r3}}hedis-observation.html
-[HEDIS MRP Task]: {{site.hedis_r3}}hedis-task.html
 [HEDIS]: {{site.hedis_r3}}index.html
 [Home]: index.html "Home Page"
 [Individual Measure Reporting Interactions]: indv-reporting.html
@@ -72,21 +69,21 @@
 [Operations]: operations.html "Operations Page"
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
-[QI Core *Must Support*]: {{site.qi_r3}}index.html#mustsupport "QI Core definition of *Must Support*"
-[QI Core Condition]: {{site.qi_r3}}StructureDefinition-qicore-condition.html
-[QI Core Coverage]: {{site.qi_r3}}StructureDefinition-qicore-coverage.html
-[QI Core DiagnosticReport]:{{site.qi_r3}}StructureDefinition-qicore-diagnosticreport.html
-[QI Core Encounter]: {{site.qi_r3}}StructureDefinition-qicore-encounter.html
-[QI Core Location]: {{site.qi_r3}}StructureDefinition-qicore-location.html
-[QI Core Observation]: {{site.qi_r3}}StructureDefinition-qicore-observation.html
-[QI Core Patient]: {{site.qi_r3}}StructureDefinition-qicore-patient.html
-[QI Core Procedure]: {{site.qi_r3}}StructureDefinition-qicore-procedure.html
-[QI Core ProcedureRequest]: {{site.qi_r3}}StructureDefinition-qicore-procedurerequest.html
-[QI Core Task]: {{site.qi_r3}}StructureDefinition-qicore-task.html
-[QI Core Profiles]: {{site.qi_r3}}index.html
-[QI Core]: {{site.qi_r3}}index.html
+[QI Core *Must Support*]: {{site.data.fhir.qicore}}index.html#mustsupport "QI Core definition of *Must Support*"
+[QI Core Condition]: {{site.data.fhir.qicore}}StructureDefinition-qicore-condition.html
+[QI Core Coverage]: {{site.data.fhir.qicore}}StructureDefinition-qicore-coverage.html
+[QI Core DiagnosticReport]:{{site.data.fhir.qicore}}StructureDefinition-qicore-diagnosticreport.html
+[QI Core Encounter]: {{site.data.fhir.qicore}}StructureDefinition-qicore-encounter.html
+[QI Core Location]: {{site.data.fhir.qicore}}StructureDefinition-qicore-location.html
+[QI Core Observation]: {{site.data.fhir.qicore}}StructureDefinition-qicore-observation.html
+[QI Core Patient]: {{site.data.fhir.qicore}}StructureDefinition-qicore-patient.html
+[QI Core Procedure]: {{site.data.fhir.qicore}}StructureDefinition-qicore-procedure.html
+[QI Core ProcedureRequest]: {{site.data.fhir.qicore}}StructureDefinition-qicore-procedurerequest.html
+[QI Core Task]: {{site.data.fhir.qicore}}StructureDefinition-qicore-task.html
+[QI Core Profiles]: {{site.data.fhir.qicore}}index.html
+[QI Core]: {{site.data.fhir.qicore}}index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
-[Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html
+[Quality Measure Implementation Guide]: {{site.data.fhir.cqfm}}index.html
 [Quality Reporting]: {{site.r4}}clinicalreasoning-quality-reporting.html
 [Reference Any]: StructureDefinition-extension-referenceAny.html
 [Reporting Individual Data]: {{site.r4}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
@@ -105,5 +102,5 @@
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
 [following rules]: {{site.data.fhir.path}}references.html#contained
-[negation patterns in quality measurements]: {{cqfm_r3}}using-cql.html
+[negation patterns in quality measurements]: {{site.data.fhir.cqfm}}using-cql.html
 [Valueset Reference]: {{site.data.fhir.path}}extension-valueset-reference.html

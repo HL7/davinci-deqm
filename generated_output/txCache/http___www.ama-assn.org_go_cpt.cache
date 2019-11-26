@@ -6,6 +6,6 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known for the code \"1111F\"; The code provided (http://www.ama-assn.org/go/cpt#1111F) is not  valid in the value set All codes known to the system"
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known (encountered paired with code = \"1111F\"); The code provided (http://www.ama-assn.org/go/cpt#1111F) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------

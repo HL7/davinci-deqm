@@ -52,9 +52,9 @@
   },
   {
     "id" : "cqfm",
-    "uri" : "http://build.fhir.org/ig/HL7/cqf-measures",
+    "uri" : "http://hl7.org/fhir/us/cqfmeasures",
     "packageId" : "hl7.fhir.us.cqfmeasures",
-    "version" : "current"
+    "version" : "1.0.0"
   }],
   "definition" : {
     "grouping" : [{
