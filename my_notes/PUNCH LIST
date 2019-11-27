@@ -1,0 +1,16 @@
+Here is the punch list for DEQM STU3:
+
+1. Technical QA items
+  - trying to get exceptions on some,
+  - Bryn and co are working on the QI core inherited ones.
+  - ig-pub issues  versions, implementation guide
+Ballot trackers: these need review before can mark as applied:
+  1. GF#20764 pre-applied my suggested edits..
+  1. GF#21782  straw man proposal here: https://build.fhir.org/ig/HL7/davinci-deqm/col.html#col-use-case-background needs review...
+1. New Trackers:  Need to decide which ones will apply to both STU3 and R4 and which to only R4 for 23050 and 23015  if only for R4 then need to pull from block and vote on separately.  if for both then leave in block.
+1. QA readthrough for typos etc.ONLY  - volunteers?
+1. Also need to choreograph DEQM publishing with CQFM ig. Since DEQM is dependent on it, I was planning to reference the published version of it.  Right now is referencing the current build but that won't work for publication.
+1. Title and Version - done
+1.  update all QM references ( absolute and variable based to published url )  from the ballot url
+1. fix the extension name and title only uses fist name and title in the list for extensions.
+1. check for obvious bugs
