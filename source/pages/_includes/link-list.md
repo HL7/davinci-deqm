@@ -23,8 +23,8 @@
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
-[CQFM Library]: {{site.data.fhir.cqfm}}StructureDefinition-library-cqfm.html
-[CQFM Measure]: {{site.data.fhir.cqfm}}StructureDefinition-measure-cqfm.html
+[CQFM Library]: {{site.cqfm_r3}}StructureDefinition-library-cqfm.html
+[CQFM Measure]: {{site.cqfm_r3}}StructureDefinition-measure-cqfm.html
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
@@ -83,7 +83,7 @@
 [QI Core Profiles]: {{site.data.fhir.qicore}}index.html
 [QI Core]: {{site.data.fhir.qicore}}index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
-[Quality Measure Implementation Guide]: {{site.data.fhir.cqfm}}index.html
+[Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html
 [Quality Reporting]: {{site.r4}}clinicalreasoning-quality-reporting.html
 [Reference Any]: StructureDefinition-extension-referenceAny.html
 [Reporting Individual Data]: {{site.r4}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
@@ -102,5 +102,5 @@
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
 [following rules]: {{site.data.fhir.path}}references.html#contained
-[negation patterns in quality measurements]: {{site.data.fhir.cqfm}}using-cql.html
+[negation patterns in quality measurements]: {{site.cqfm_r3}}using-cql.html
 [Valueset Reference]: {{site.data.fhir.path}}extension-valueset-reference.html
