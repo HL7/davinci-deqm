@@ -173,8 +173,8 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 The [transaction] bundle processing as defined by FHIR specification is used for transacting multiple Submit Data and Collect Data operations for multiple patients in a single interaction.  
 
 - The fullUrl refers to the `#submit-data` or `#collect-data` operation endpoint.
-- The request method id `POST`
-- Follows the [following rules] for referencing referencing across the bundle entries if the resources are nested inside parameters and/or contained within a parameter:
+- The request method is `POST`
+- Follows the [following rules] for referencing across the bundle entries if the resources are nested inside parameters and/or contained within a parameter:
    - "When resolving references, references are resolved by looking through the 'container' resource - the one that contains the other resources. Since there are no nested contained resources, there is only one container resource."
    - "References to contained resources are never resolved outside the container resource. Specifically, resolution stops at the elements Bundle.entry.resource and Parameters.parameter.resource, but not at DomainResource.contained."
 
