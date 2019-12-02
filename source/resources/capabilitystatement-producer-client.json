@@ -143,16 +143,6 @@
          ],
          "display": "DEQM MedicationRequest Profile",
          "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationrequest-deqm"
-      },
-      {
-         "extension": [
-            {
-               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-               "valueCode": "SHALL"
-            }
-         ],
-         "display": "DEQM Subscription Profile",
-         "reference": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subscription-deqm"
       }
    ],
    "publisher": "The DaVinci Project",
