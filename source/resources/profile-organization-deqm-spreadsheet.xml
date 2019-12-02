@@ -10,7 +10,7 @@
   <LastAuthor>Eric Haas</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
   <LastSaved>2018-11-09T01:09:29Z</LastSaved>
-  <Version>12.00</Version>
+  <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
@@ -20,11 +20,11 @@
    <Path>\\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
    <SheetName>davinci</SheetName>
   </SupBook>
-  <WindowHeight>12165</WindowHeight>
-  <WindowWidth>28800</WindowWidth>
-  <WindowTopX>32760</WindowTopX>
-  <WindowTopY>32760</WindowTopY>
-  <ActiveSheet>3</ActiveSheet>
+  <WindowHeight>6915</WindowHeight>
+  <WindowWidth>25200</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ActiveSheet>2</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -1086,7 +1086,7 @@
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="123.75"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="29.25" ss:Span="1"/>
    <Column ss:Index="12" ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="107.25"/>
-   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="253.5"/>
+   <Column ss:StyleID="s85" ss:Width="567"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="60"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="81"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="36.75"/>
@@ -1205,7 +1205,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s105"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">system</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String" x:Ticked="1">$this</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">identifier</Data></Cell>
     <Cell ss:StyleID="s108" ss:Formula="=R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
@@ -1242,12 +1242,11 @@
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">0..1</Data></Cell>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">Identifier</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
+    <Cell ss:Index="14" ss:StyleID="s107"><Data ss:Type="String">{&quot;system&quot;:&quot;http://hl7.org/fhir/sid/us-npi&quot;,&quot;type&quot;:{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/v2/0203&quot;,&quot;code&quot;:&quot;PRN&quot;}]}}</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s109"/>
@@ -1266,8 +1265,8 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">identifier.type</Data></Cell>
-    <Cell ss:StyleID="s108" ss:Formula="=R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">Organization.identifier.type</Data></Cell>
+    <Cell ss:StyleID="s108" ss:Formula="=&quot;!&quot;&amp;R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">!Organization.identifier.type</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
@@ -1295,8 +1294,8 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">identifier.system</Data></Cell>
-    <Cell ss:StyleID="s108" ss:Formula="=R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">Organization.identifier.system</Data></Cell>
+    <Cell ss:StyleID="s108" ss:Formula="=&quot;!&quot;&amp;R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">!Organization.identifier.system</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s107"/>
@@ -1329,12 +1328,11 @@
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">0..1</Data></Cell>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">Identifier</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
+    <Cell ss:Index="14" ss:StyleID="s107"><Data ss:Type="String">{&quot;system&quot;:&quot;urn:oid:2.16.840.1.113883.4.2&quot;,&quot;type&quot;:{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/v2/0203&quot;,&quot;code&quot;:&quot;TAX&quot;}]}}</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s109"/>
@@ -1353,8 +1351,8 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">identifier.type</Data></Cell>
-    <Cell ss:StyleID="s108" ss:Formula="=R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">Organization.identifier.type</Data></Cell>
+    <Cell ss:StyleID="s108" ss:Formula="=&quot;!&quot;&amp;R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">!Organization.identifier.type</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
@@ -1382,8 +1380,8 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s115"><Data ss:Type="String">identifier.system</Data></Cell>
-    <Cell ss:StyleID="s108" ss:Formula="=R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">Organization.identifier.system</Data></Cell>
+    <Cell ss:StyleID="s108" ss:Formula="=&quot;!&quot;&amp;R2C5&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">!Organization.identifier.system</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s107"/>
@@ -3968,6 +3966,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -3988,7 +3987,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>15</ActiveRow>
+     <ActiveRow>7</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -4493,7 +4493,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
