@@ -14,3 +14,16 @@ Ballot trackers: these need review before can mark as applied:
 1.  update all QM references ( absolute and variable based to published url )  from the ballot url
 1. fix the extension name and title only uses fist name and title in the list for extensions.
 1. check for obvious bugs
+1. get the cqm measures ig bug fixed - working with Lynn
+1. fix the organization profile - new validation error - update DEQM R4 as well.
+1. review and fix the capstatements - new qa errors... - remove subscriptions from supportted profiles in xml.
+update DEQM R4 as well.
+
+
+DaVinci DEQM Producer Server CapabilityStatement - collect data operation Black Box
+DaVinci DEQM Consumer Server CapabilityStatement - submit data operation  Black Box
+DaVinci DEQM Receiver Server CapabilityStatement - ind/summary measure report endpoint - support all profiles
+DaVinci DEQM Reporter Client CapabilityStatement - post ind/summary measure report - support all profiles
+DaVinci DEQM Producer Client CapabilityStatement - submit data operation and Collect Data Initiator
+DaVinci DEQM Consumer Client CapabilityStatement - collect data operation Initiator
+git status
