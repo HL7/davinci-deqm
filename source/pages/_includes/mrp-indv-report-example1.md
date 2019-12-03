@@ -30,7 +30,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                "versionId": "2"
             },
             "beneficiary": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:a54890a3-45e7-11e9-8814-5cf3707b2e61"
             },
             "payor": [
                {
@@ -38,7 +38,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                }
             ],
             "policyHolder": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:a54890a3-45e7-11e9-8814-5cf3707b2e61"
             },
             "relationship": {
                "coding": [
@@ -48,7 +48,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                ]
             },
             "subscriber": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:a54890a3-45e7-11e9-8814-5cf3707b2e61"
             },
             "subscriberId": "A123456789",
             "resourceType": "Coverage"
@@ -90,7 +90,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "status": "finished",
             "subject": {
                "display": "Natalie Huff Walter",
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:a54890a3-45e7-11e9-8814-5cf3707b2e61"
             },
             "type": [
                {
@@ -156,7 +156,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                {
                   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
-                     "reference": "Organization/organization01"
+                     "reference": "urn:uuid:a54890a2-45e7-11e9-bdf7-5cf3707b2e61"
                   }
                }
             ],
@@ -166,7 +166,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                   {
                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
                      "valueReference": {
-                        "reference": "Task/Task01"
+                        "reference": "urn:uuid:a548de80-45e7-11e9-83b6-5cf3707b2e61"
                      }
                   }
                ]
@@ -180,6 +180,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                   "measureScore": 100,
                   "population": [
                      {
+
                         "code": {
                            "coding": [
                               {
@@ -201,14 +202,14 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                "reference": "Measure/measure-mrp"
             },
             "patient": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:a54890a3-45e7-11e9-8814-5cf3707b2e61"
             },
             "period": {
                "end": "2018-09-01",
                "start": "2018-08-01"
             },
             "reportingOrganization": {
-               "reference": "Organization/organization01"
+               "reference": "urn:uuid:a548689f-45e7-11e9-8e8f-5cf3707b2e61"
             },
             "status": "complete",
             "type": "individual",
@@ -451,7 +452,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                }
             ],
             "managingOrganization": {
-               "reference": "Organization/organization01"
+               "reference": "urn:uuid:a548689f-45e7-11e9-8e8f-5cf3707b2e61"
             },
             "maritalStatus": {
                "coding": [
@@ -545,14 +546,14 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                ]
             },
             "context": {
-               "reference": "Encounter/Encounter01"
+               "reference": "urn:uuid:a548418c-45e7-11e9-b2e8-5cf3707b2e61"
             },
             "executionPeriod": {
                "end": "2017-06-11",
                "start": "2017-06-11"
             },
             "for": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:a54890a3-45e7-11e9-8814-5cf3707b2e61"
             },
             "identifier": [
                {
@@ -562,7 +563,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             ],
             "intent": "plan",
             "owner": {
-               "reference": "Practitioner/practitioner01"
+               "reference": "urn:uuid:a548b76e-45e7-11e9-aed5-5cf3707b2e61"
             },
             "priority": "routine",
             "status": "completed",

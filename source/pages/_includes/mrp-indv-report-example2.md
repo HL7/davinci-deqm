@@ -29,7 +29,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                "versionId": "2"
             },
             "beneficiary": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:015c69cb-45e9-11e9-b16f-5cf3707b2e61"
             },
             "payor": [
                {
@@ -37,7 +37,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                }
             ],
             "policyHolder": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:015c69cb-45e9-11e9-b16f-5cf3707b2e61"
             },
             "relationship": {
                "coding": [
@@ -47,7 +47,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                ]
             },
             "subscriber": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:015c69cb-45e9-11e9-b16f-5cf3707b2e61"
             },
             "subscriberId": "A123456789",
             "resourceType": "Coverage"
@@ -89,7 +89,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "status": "finished",
             "subject": {
                "display": "Natalie Huff Walter",
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:015c69cb-45e9-11e9-b16f-5cf3707b2e61"
             },
             "type": [
                {
@@ -155,7 +155,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                {
                   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
-                     "reference": "Organization/organization02"
+                     "reference": "urn:uuid:015c69ca-45e9-11e9-ac61-5cf3707b2e61"
                   }
                }
             ],
@@ -165,7 +165,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                   {
                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
                      "valueReference": {
-                        "reference": "Observation/observation01"
+                        "reference": "urn:uuid:01536f40-45e9-11e9-983b-5cf3707b2e61"
                      }
                   }
                ]
@@ -200,14 +200,14 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                "reference": "Measure/measure-mrp"
             },
             "patient": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:015c69cb-45e9-11e9-b16f-5cf3707b2e61"
             },
             "period": {
                "end": "2018-09-01",
                "start": "2018-08-01"
             },
             "reportingOrganization": {
-               "reference": "Organization/organization01"
+               "reference": "urn:uuid:015c42d4-45e9-11e9-8641-5cf3707b2e61"
             },
             "status": "complete",
             "type": "individual",
@@ -248,7 +248,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                ]
             },
             "context": {
-               "reference": "Encounter/Encounter01"
+               "reference": "urn:uuid:0152fa74-45e9-11e9-a9b8-5cf3707b2e61"
             },
             "effectivePeriod": {
                "end": "2018-09-29T14:15:04.424Z",
@@ -257,12 +257,12 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "issued": "2018-09-29T14:15:04.424Z",
             "performer": [
                {
-                  "reference": "Practitioner/practitioner01"
+                  "reference": "urn:uuid:015c90be-45e9-11e9-9435-5cf3707b2e61"
                }
             ],
             "status": "final",
             "subject": {
-               "reference": "Patient/patient01"
+               "reference": "urn:uuid:015c69cb-45e9-11e9-b16f-5cf3707b2e61"
             },
             "valueBoolean": true,
             "resourceType": "Observation"
@@ -504,7 +504,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                }
             ],
             "managingOrganization": {
-               "reference": "Organization/organization01"
+               "reference": "urn:uuid:015c42d4-45e9-11e9-8641-5cf3707b2e61"
             },
             "maritalStatus": {
                "coding": [
