@@ -130,6 +130,18 @@
     },
     {
       "reference" : {
+        "reference" : "Library/library-mrp-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Measure/measure-mrp-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Library/exm130-fhir-r4"
       },
       "exampleBoolean" : true
@@ -149,12 +161,6 @@
     {
       "reference" : {
         "reference" : "MeasureReport/indv-measurereport01"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Measure/measure-mrp"
       },
       "exampleBoolean" : true
     },
@@ -208,7 +214,7 @@
     },
     {
       "reference" : {
-        "reference" : "Bundle/single-indv-report"
+        "reference" : "Bundle/single-indv-mrp-report"
       },
       "exampleBoolean" : true
     },

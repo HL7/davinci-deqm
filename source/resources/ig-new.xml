@@ -124,6 +124,18 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Library/library-mrp-example"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Measure/measure-mrp-example"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Library/exm130-fhir-r4"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -143,12 +155,6 @@
     <resource>
       <reference>
         <reference value="MeasureReport/indv-measurereport01"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Measure/measure-mrp"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -202,7 +208,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/single-indv-report"/>
+        <reference value="Bundle/single-indv-mrp-report"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

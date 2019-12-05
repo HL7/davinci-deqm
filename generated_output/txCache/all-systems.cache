@@ -1112,3 +1112,12 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "module-definition"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"module-definition\"); The code provided (#module-definition) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
