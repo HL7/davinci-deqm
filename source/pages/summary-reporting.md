@@ -56,6 +56,8 @@ for a Bundle Transaction:
 
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See POST summary Report Example" %}
 
+For additional examples, see the [MRP Summary MeasureReport] and [COL Summary MeasureReport] examples.
+
 <br />
 
 {% include link-list.md %}

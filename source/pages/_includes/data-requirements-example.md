@@ -43,7 +43,12 @@ HTTP/1.1 200 OK
 ~~~
 {
    "resourceType":"Library",
+   "id":"library-mrp-example",
+   "url": "http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example",
+   "name": "DEQMLibraryMRPExample",
+   "title": "DEQM Library MRP Example",
    "status":"active",
+   "description": "Example Library resource to demonstrate the framework for MRP",
    "type":{
       "coding":[
          {
@@ -51,20 +56,11 @@ HTTP/1.1 200 OK
          }
       ]
    },
-   "relatedArtifact":[
-      {
-         "type":"depends-on",
-         "resource":{
-            "reference":"http://hl7.org/fhir/us/hedis/Library/library-mrp-logic"
-         }
-      }
-   ],
    "dataRequirement":[
       {
          "type":"MeasureReport",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/measurereport-deqm"
-         ]
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"]
       },
       {
          "type":"Patient",
@@ -87,7 +83,7 @@ HTTP/1.1 200 OK
       {
          "type":"Task",
          "profile":[
-            "http://ncqa.org/fhir/us/hedis/StructureDefinition/hedis-task"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
          ]
       },
       {
@@ -99,10 +95,9 @@ HTTP/1.1 200 OK
       {
          "type":"Practitioner",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
          ]
       }
    ]
 }
 ~~~
-ithub.io/tempIGViewer/all-examples.html

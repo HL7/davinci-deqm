@@ -59,7 +59,13 @@
 [Medication Reconciliation (MRP)]: mrp.html
 [Medication Reconciliation Post-Discharge (MRP)]: mrp.html
 [MRP Individual MeasureReport]: mrp.html#individual-measurereport
+[COL Individual MeasureReport]: col.html#individual-measurereport
+[VTE Individual MeasureReport]: vte1.html#individual-measurereport
+[MRP Summary MeasureReport]: mrp.html#summary-measurereport
+[COL Summary MeasureReport]: col.html#summary-measurereport
 [MRP Submit Data Operation]: mrp.html#data-exchange-using-the-submit-data-operation
+[COL Submit Data Operation]: col.html#submit-data
+[COL Collect Data Operation]: col.html#collect-data
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
 [Not Done]: {{site.data.fhir.path}}extension-event-notdone.html
 [NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1

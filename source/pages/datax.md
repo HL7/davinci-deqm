@@ -121,7 +121,7 @@ Using the `POST` Syntax, the operation can be invoked by the Producer:
 
 {% include examplebutton.html example="submit-data-example" b_title = "Click Here To See Example Submit Data Operation (edited for brevity)" %}
 
-For a complete un-edited example see the [MRP Submit Data Operation] example.
+For a complete un-edited example see the [MRP Submit Data Operation] and [COL Submit Data Operation] examples.
 
 ### Collect Data operation
 {: #collect-data}

@@ -96,7 +96,7 @@ In the following interactions, the Provider is acting in the role of the *Produc
 We are seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
 {:.stu-note}
 
-#### Data Exchange Using the Submit Data Operation
+#### Data Exchange Using the Submit Data Operation {#submit-data}
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
@@ -104,7 +104,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include examplebutton.html example="col-submit-example" b_title = "Click Here To See Example COL Submit Data" %}
 
-#### Data Exchange Using the Collect Data Operation
+#### Data Exchange Using the Collect Data Operation  {#collect-data}
 {:.no_toc}
  Payer/Aggregator retrieves Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.
 

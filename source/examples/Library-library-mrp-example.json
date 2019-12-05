@@ -17,7 +17,7 @@
       {
          "type":"MeasureReport",
          "profile":[
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm","http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm","http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
          ]
       },
       {
