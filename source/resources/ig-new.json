@@ -106,6 +106,12 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/single-indv-vte-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Patient/patient03"
       },
       "exampleBoolean" : true
@@ -119,6 +125,12 @@
     {
       "reference" : {
         "reference" : "Organization/organization03"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Library/exm130-fhir-r4"
       },
       "exampleBoolean" : true
     },
@@ -167,12 +179,6 @@
     {
       "reference" : {
         "reference" : "Coverage/coverage02"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Bundle/single-indv-vte-report"
       },
       "exampleBoolean" : true
     },
@@ -331,49 +337,9 @@
       "title" : "Home",
       "generation" : "markdown",
       "page" : [{
-        "nameUrl" : "framework.html",
-        "title" : "Framework",
-        "generation" : "markdown",
-        "page" : [{
-          "nameUrl" : "guidance.html",
-          "title" : "General Guidance",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "datax.html",
-          "title" : "Data Exchange",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "indv-reporting.html",
-          "title" : "Individual Reporting",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "summary-reporting.html",
-          "title" : "Summary Reporting",
-          "generation" : "markdown"
-        }]
-      },
-      {
-        "nameUrl" : "usecases.html",
-        "title" : "Example Use Cases",
-        "generation" : "markdown",
-        "page" : [{
-          "nameUrl" : "mrp.html",
-          "title" : "Medication Reconciliation Post-Discharge (MRP)",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "col.html",
-          "title" : "Colorectal Cancer Screening (COL)",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "vte1.html",
-          "title" : "Venous Thromboembolism Prophylaxis (VTE-1)",
-          "generation" : "markdown"
-        }]
+        "nameUrl" : "guidance.html",
+        "title" : "General Guidance",
+        "generation" : "markdown"
       },
       {
         "nameUrl" : "profiles.html",
@@ -436,6 +402,26 @@
         }]
       },
       {
+        "nameUrl" : "bundles.html",
+        "title" : "Bundle Definitions",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "operations.html",
+        "title" : "Operations",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "searchparameters.html",
+        "title" : "Search Parameters",
+        "generation" : "markdown"
+      },
+      {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
         "generation" : "markdown",
@@ -471,6 +457,11 @@
         }]
       },
       {
+        "nameUrl" : "security.html",
+        "title" : "Security",
+        "generation" : "markdown"
+      },
+      {
         "nameUrl" : "all-examples.html",
         "title" : "All Examples",
         "generation" : "markdown"
@@ -484,11 +475,6 @@
         "nameUrl" : "toc.html",
         "title" : "Table of Contents",
         "generation" : "html"
-      },
-      {
-        "nameUrl" : "change-notes.html",
-        "title" : "Change Notes",
-        "generation" : "markdown"
       }]
     },
     "parameter" : [{
