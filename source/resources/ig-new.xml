@@ -70,6 +70,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/multiple-indv-mrp-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Location/location03"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -160,7 +166,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/single-indv-vte-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Location/location01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MeasureReport/summ-measurereport02"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -173,6 +191,12 @@
     <resource>
       <reference>
         <reference value="Task/Task01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/single-indv-report"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -451,14 +475,14 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="change-notes.html"/>
-        <title value="Change Notes"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <nameUrl value="toc.html"/>
         <title value="Table of Contents"/>
         <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="change-notes.html"/>
+        <title value="Change Notes"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <parameter>

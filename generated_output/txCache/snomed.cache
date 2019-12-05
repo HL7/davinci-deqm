@@ -10,6 +10,16 @@ v: {
 }
 -------------------------------------------------------------------------------------
 {"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "22298006"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Myocardial infarction",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
   "coding" : [{
     "system" : "http://snomed.info/sct",
     "code" : "56876005",
@@ -35,5 +45,104 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "Unknown code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "22298006",
+    "display" : "Myocardial Infarction"
+  }],
+  "text" : "Myocardial Infarction"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "308335008"
+      }]
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unknown code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "22298006",
+  "display" : "Myocardial Infarction"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Myocardial infarction",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "32485007"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Hospital admission",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "32485007",
+    "display" : "Hospital admission"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "308335008"
+      }]
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unknown code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "34206005",
+  "display" : "Subcutaneous route"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Subcutaneous route",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "34206005"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Subcutaneous route",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/location-physical-type",
+  "code" : "bu"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/location-physical-type\" is not known (encountered paired with code = \"bu\"); The code provided (http://hl7.org/fhir/location-physical-type#bu) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

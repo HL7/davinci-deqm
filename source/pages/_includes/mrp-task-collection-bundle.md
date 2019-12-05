@@ -33,7 +33,7 @@
                     {
                         "coding": [
                             {
-                                "system": "http://hl7.org/fhir/organization-type",
+                                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
                                 "code": "prov",
                                 "display": "Healthcare Provider"
                             }

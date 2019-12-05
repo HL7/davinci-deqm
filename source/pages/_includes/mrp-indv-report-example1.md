@@ -274,7 +274,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                      {
                         "code": "prov",
                         "display": "Healthcare Provider",
-                        "system": "http://hl7.org/fhir/organization-type"
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
                      }
                   ]
                }
@@ -341,7 +341,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                      {
                         "code": "prov",
                         "display": "Healthcare Provider",
-                        "system": "http://hl7.org/fhir/organization-type"
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
                      }
                   ]
                }

@@ -76,6 +76,12 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/multiple-indv-mrp-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Location/location03"
       },
       "exampleBoolean" : true
@@ -166,7 +172,19 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/single-indv-vte-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Location/location01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "MeasureReport/summ-measurereport02"
       },
       "exampleBoolean" : true
     },
@@ -179,6 +197,12 @@
     {
       "reference" : {
         "reference" : "Task/Task01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/single-indv-report"
       },
       "exampleBoolean" : true
     },
@@ -457,14 +481,14 @@
         "generation" : "markdown"
       },
       {
-        "nameUrl" : "change-notes.html",
-        "title" : "Change Notes",
-        "generation" : "markdown"
-      },
-      {
         "nameUrl" : "toc.html",
         "title" : "Table of Contents",
         "generation" : "html"
+      },
+      {
+        "nameUrl" : "change-notes.html",
+        "title" : "Change Notes",
+        "generation" : "markdown"
       }]
     },
     "parameter" : [{

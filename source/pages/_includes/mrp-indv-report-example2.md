@@ -320,7 +320,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                      {
                         "code": "prov",
                         "display": "Healthcare Provider",
-                        "system": "http://hl7.org/fhir/organization-type"
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
                      }
                   ]
                }
@@ -387,7 +387,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                      {
                         "code": "prov",
                         "display": "Healthcare Provider",
-                        "system": "http://hl7.org/fhir/organization-type"
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
                      }
                   ]
                }

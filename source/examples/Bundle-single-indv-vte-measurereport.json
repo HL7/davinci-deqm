@@ -1,39 +1,29 @@
-#### Examples
-{:.no_toc}
-
-**Scenario:**
-
-Payer X who is acting in the role of a Reporter submits a VTE Individual Report for Patient P to Receiver Z.  The body of the request is a transaction bundle including the Individual MeasureReport and all the related resources containing the relevant data used to compute the CQM criteria.  An HTTP Status success code is returned on successful submission.
-
-**POST Summary Report**
-
-`POST [base]`
-
-**Request body**
-
-~~~
 {
   "resourceType": "Bundle",
+  "id": "single-indv-vte-report",
   "type": "transaction",
   "entry": [
     {
       "fullUrl": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4",
       "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+          ]
+        },
         "resourceType": "MeasureReport",
         "status": "complete",
         "type": "individual",
-        "measure": {
-          "reference": "Measure/measure-vte"
-        },
-        "patient": {
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-vte-1-FHIR",
+        "subject": {
           "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"
         },
         "date": "2019-03-14",
-        "reportingOrganization": {
+        "reporter": {
           "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc5"
         },
         "period": {
-          "end": "2018-01-01",
+          "end": "2019-01-01",
           "start": "2018-12-31"
         },
         "group": [
@@ -43,7 +33,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
                 "code": {
                   "coding": [
                     {
-                      "system": "http://hl7.org/fhir/measure-population",
+                      "system": "http://fhir/example.org",
                       "code": "initial-population",
                       "display": "Initial Population"
                     }
@@ -54,7 +44,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
                 "code": {
                   "coding": [
                     {
-                      "system": "http://hl7.org/fhir/measure-population",
+                      "system": "http://fhir/example.org",
                       "code": "numerator",
                       "display": "Numerator"
                     }
@@ -65,16 +55,18 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
                 "code": {
                   "coding": [
                     {
-                      "system": "http://hl7.org/fhir/measure-population",
+                      "system": "http://fhir/example.org",
                       "code": "denominator",
                       "display": "Denominator"
                     }
                   ]
                 }
-              } 
+              }
             ],
-            "measureScore": 100
-          } 
+            "measureScore": {
+              "value": 100
+            }
+          }
         ]
       },
       "request": {
@@ -252,7 +244,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
                 {
                   "system": "urn:ietf:bcp:47",
                   "code": "en-US",
-                  "display": "US English"
+                  "display": "English (Region=United States)"
                 }
               ]
             },
@@ -277,8 +269,8 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
         "status": "finished",
         "class": {
           "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code": "inpatient",
-          "display": "inpatient"
+          "code": "IMP",
+          "display": "inpatient encounter"
         },
         "type": [
           {
@@ -295,8 +287,8 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
           "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"
         },
         "period": {
-          "start": "2018-07-19T11:00",
-          "end": "2018-07-19T:14:30"
+          "start": "2018-07-19T06:10:27Z",
+          "end": "2018-07-19T06:10:27Z"
         },
         "location": [
           {
@@ -305,7 +297,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
               "display": "Mother Charity Hospital"
             }
           }
-        ],
+        ]
       },
       "request": {
         "method": "POST",
@@ -377,10 +369,16 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
           "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"
         },
         "effectivePeriod": {
-          "start": "2018-07-19T12:00",
-          "end": "2018-07-19T12:00"
+          "start": "2019-12-05T06:10:27Z",
+          "end": "2019-12-05T06:10:27Z"
         },
         "dosage": {
+          "dose": {
+            "value": 1,
+            "unit": "cc",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          },
           "route": {
             "coding": [
               {
@@ -391,15 +389,11 @@ Payer X who is acting in the role of a Reporter submits a VTE Individual Report 
             ]
           }
         }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
       }
     }
   ]
 }
-~~~
-
-**Response**
-
-~~~
-HTTP/1.1 200 OK
-[other headers]
-~~~

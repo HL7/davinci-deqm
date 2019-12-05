@@ -323,7 +323,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/organization-type",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
                 "code": "prov",
                 "display": "Healthcare Provider"
               }
@@ -473,7 +473,7 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
           {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/organization-type",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
                 "code": "ins",
                 "display": "Insurance Company"
               }

@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/us/cqfmeasures",
+  "code" : "group-1"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/us/cqfmeasures\" is not known (encountered paired with code = \"group-1\"); The code provided (http://hl7.org/fhir/us/cqfmeasures#group-1) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/us/cqfmeasures",
+  "code" : "sde-ethnicity"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/us/cqfmeasures\" is not known (encountered paired with code = \"sde-ethnicity\"); The code provided (http://hl7.org/fhir/us/cqfmeasures#sde-ethnicity) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/us/cqfmeasures",
+  "code" : "sde-race"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/us/cqfmeasures\" is not known (encountered paired with code = \"sde-race\"); The code provided (http://hl7.org/fhir/us/cqfmeasures#sde-race) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/us/cqfmeasures",
+  "code" : "sde-sex"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/us/cqfmeasures\" is not known (encountered paired with code = \"sde-sex\"); The code provided (http://hl7.org/fhir/us/cqfmeasures#sde-sex) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
