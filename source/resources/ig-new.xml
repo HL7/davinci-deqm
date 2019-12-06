@@ -88,6 +88,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/multiple-indv-mrp-obs-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Location/location02"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -148,12 +154,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/single-indv-mrp-task-report"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="MeasureReport/indv-measurereport01"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -166,13 +166,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/multiple-indv-mrp-task-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Encounter/Encounter01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/multiple-indv-mrp-obs-report"/>
+        <reference value="Bundle/single-indv-mrp-task-report"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -184,25 +190,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/single-indv-mrp-obs-report"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Coverage/coverage02"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/multiple-indv-mrp-task-report"/>
+        <reference value="Location/location01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Location/location01"/>
+        <reference value="Bundle/single-indv-mrp-obs-report"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

@@ -1,8 +1,8 @@
 {
-   "id": "multiple-indv-mrp-task-report",
+   "id": "multiple-indv-mrp-obs-report",
    "entry": [
       {
-         "fullUrl": "urn:uuid:6dded380-17e8-11ea-8f96-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b959c1ca-17f1-11ea-95df-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "MeasureReport"
@@ -24,14 +24,14 @@
                {
                   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
-                     "reference": "urn:uuid:6ddf6f54-17e8-11ea-992f-4ccc6a181ed3"
+                     "reference": "urn:uuid:b95a36b1-17f1-11ea-96a1-4ccc6a181ed3"
                   }
                }
             ],
             "date": "2018-09-05T16:59:52.404Z",
             "evaluatedResource": [
                {
-                  "reference": "urn:uuid:6ddf2166-17e8-11ea-a4b6-4ccc6a181ed3"
+                  "reference": "urn:uuid:b95a36b3-17f1-11ea-9d01-4ccc6a181ed3"
                }
             ],
             "group": [
@@ -80,54 +80,7 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:6ddf2166-17e8-11ea-a4b6-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Task"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
-               ]
-            },
-            "authoredOn": "2018-09-25T14:24:23.584Z",
-            "code": {
-               "coding": [
-                  {
-                     "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
-                  }
-               ]
-            },
-            "encounter": {
-               "reference": "urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71"
-            },
-            "executionPeriod": {
-               "end": "2017-06-11",
-               "start": "2017-06-11"
-            },
-            "for": {
-               "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
-            },
-            "identifier": [
-               {
-                  "system": "http://hl7/example.org",
-                  "value": "19009"
-               }
-            ],
-            "intent": "plan",
-            "owner": {
-               "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000fa"
-            },
-            "priority": "routine",
-            "status": "completed",
-            "resourceType": "Task"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:6ddf4864-17e8-11ea-8b4e-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b95a36b0-17f1-11ea-9328-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "Coverage"
@@ -143,7 +96,7 @@
             },
             "payor": [
                {
-                  "reference": "urn:uuid:6ddf6f55-17e8-11ea-b00d-4ccc6a181ed3"
+                  "reference": "urn:uuid:b95a36b2-17f1-11ea-afb7-4ccc6a181ed3"
                }
             ],
             "policyHolder": {
@@ -165,7 +118,7 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:6ddf6f54-17e8-11ea-992f-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b95a36b1-17f1-11ea-96a1-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "Organization"
@@ -229,7 +182,7 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:6ddf6f55-17e8-11ea-b00d-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b95a36b2-17f1-11ea-afb7-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "Organization"
@@ -293,7 +246,57 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:6ddf6f57-17e8-11ea-81a7-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b95a36b3-17f1-11ea-9d01-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "Observation"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+               ]
+            },
+            "category": [
+               {
+                  "coding": [
+                     {
+                        "code": "measure",
+                        "display": "Measure",
+                        "system": "http://hl7/example.org"
+                     }
+                  ]
+               }
+            ],
+            "code": {
+               "coding": [
+                  {
+                     "code": "1111F",
+                     "display": "Medication Reconciliation",
+                     "system": "http://www.ama-assn.org/go/cpt"
+                  }
+               ]
+            },
+            "effectiveDateTime": "2018-09-29T14:15:04.424Z",
+            "encounter": {
+               "reference": "urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71"
+            },
+            "issued": "2018-09-29T14:15:04.424Z",
+            "performer": [
+               {
+                  "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000fa"
+               }
+            ],
+            "status": "final",
+            "subject": {
+               "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
+            },
+            "valueBoolean": true,
+            "resourceType": "Observation"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:b95a5da4-17f1-11ea-97b6-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "MeasureReport"
@@ -315,14 +318,14 @@
                {
                   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
-                     "reference": "urn:uuid:6ddf6f54-17e8-11ea-992f-4ccc6a181ed3"
+                     "reference": "urn:uuid:b95a36b1-17f1-11ea-96a1-4ccc6a181ed3"
                   }
                }
             ],
             "date": "2018-09-05T16:59:52.404Z",
             "evaluatedResource": [
                {
-                  "reference": "urn:uuid:6ddf9646-17e8-11ea-9783-4ccc6a181ed3"
+                  "reference": "urn:uuid:b95a849a-17f1-11ea-88a5-4ccc6a181ed3"
                }
             ],
             "group": [
@@ -371,54 +374,7 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:6ddf9646-17e8-11ea-9783-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Task"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
-               ]
-            },
-            "authoredOn": "2018-09-25T14:24:23.584Z",
-            "code": {
-               "coding": [
-                  {
-                     "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
-                  }
-               ]
-            },
-            "encounter": {
-               "reference": "urn:uuid:d3aa6b0b-f3fd-4b19-93c8-ccdd8b9da518"
-            },
-            "executionPeriod": {
-               "end": "2017-06-11",
-               "start": "2017-06-11"
-            },
-            "for": {
-               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
-            },
-            "identifier": [
-               {
-                  "system": "http://hl7/example.org",
-                  "value": "19009"
-               }
-            ],
-            "intent": "plan",
-            "owner": {
-               "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000fa"
-            },
-            "priority": "routine",
-            "status": "completed",
-            "resourceType": "Task"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:6ddf9647-17e8-11ea-b892-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b95a5da6-17f1-11ea-93f4-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "Coverage"
@@ -434,7 +390,7 @@
             },
             "payor": [
                {
-                  "reference": "urn:uuid:6ddf6f55-17e8-11ea-b00d-4ccc6a181ed3"
+                  "reference": "urn:uuid:b95a36b2-17f1-11ea-afb7-4ccc6a181ed3"
                }
             ],
             "policyHolder": {
@@ -456,7 +412,57 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:6ddfbd3a-17e8-11ea-b7d5-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b95a849a-17f1-11ea-88a5-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "Observation"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+               ]
+            },
+            "category": [
+               {
+                  "coding": [
+                     {
+                        "code": "measure",
+                        "display": "Measure",
+                        "system": "http://hl7/example.org"
+                     }
+                  ]
+               }
+            ],
+            "code": {
+               "coding": [
+                  {
+                     "code": "1111F",
+                     "display": "Medication Reconciliation",
+                     "system": "http://www.ama-assn.org/go/cpt"
+                  }
+               ]
+            },
+            "effectiveDateTime": "2018-09-29T14:15:04.424Z",
+            "encounter": {
+               "reference": "urn:uuid:d3aa6b0b-f3fd-4b19-93c8-ccdd8b9da518"
+            },
+            "issued": "2018-09-29T14:15:04.424Z",
+            "performer": [
+               {
+                  "reference": "urn:uuid:0000016d-235f-39b3-0000-000000011fc6"
+               }
+            ],
+            "status": "final",
+            "subject": {
+               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+            },
+            "valueBoolean": true,
+            "resourceType": "Observation"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:b95a849b-17f1-11ea-97a4-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "MeasureReport"
@@ -478,14 +484,14 @@
                {
                   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
-                     "reference": "urn:uuid:6ddf6f54-17e8-11ea-992f-4ccc6a181ed3"
+                     "reference": "urn:uuid:b95a36b1-17f1-11ea-96a1-4ccc6a181ed3"
                   }
                }
             ],
             "date": "2018-09-05T16:59:52.404Z",
             "evaluatedResource": [
                {
-                  "reference": "urn:uuid:6ddf2166-17e8-11ea-a4b6-4ccc6a181ed3"
+                  "reference": "urn:uuid:b95a36b3-17f1-11ea-9d01-4ccc6a181ed3"
                }
             ],
             "group": [
@@ -534,54 +540,7 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:6ddfbd3b-17e8-11ea-bbed-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Task"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
-               ]
-            },
-            "authoredOn": "2018-09-25T14:24:23.584Z",
-            "code": {
-               "coding": [
-                  {
-                     "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
-                  }
-               ]
-            },
-            "encounter": {
-               "reference": "urn:uuid:39fd3052-6b0f-4ed1-bcc5-4ae041f1e016"
-            },
-            "executionPeriod": {
-               "end": "2017-06-11",
-               "start": "2017-06-11"
-            },
-            "for": {
-               "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073"
-            },
-            "identifier": [
-               {
-                  "system": "http://hl7/example.org",
-                  "value": "19009"
-               }
-            ],
-            "intent": "plan",
-            "owner": {
-               "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000fa"
-            },
-            "priority": "routine",
-            "status": "completed",
-            "resourceType": "Task"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:6ddfbd3c-17e8-11ea-8ee4-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:b95aab8c-17f1-11ea-950f-4ccc6a181ed3",
          "request": {
             "method": "POST",
             "url": "Coverage"
@@ -597,7 +556,7 @@
             },
             "payor": [
                {
-                  "reference": "urn:uuid:6ddf6f55-17e8-11ea-b00d-4ccc6a181ed3"
+                  "reference": "urn:uuid:b95a36b2-17f1-11ea-afb7-4ccc6a181ed3"
                }
             ],
             "policyHolder": {
@@ -616,6 +575,56 @@
             },
             "subscriberId": "A123456795",
             "resourceType": "Coverage"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:b95aab8d-17f1-11ea-ba9e-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "Observation"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+               ]
+            },
+            "category": [
+               {
+                  "coding": [
+                     {
+                        "code": "measure",
+                        "display": "Measure",
+                        "system": "http://hl7/example.org"
+                     }
+                  ]
+               }
+            ],
+            "code": {
+               "coding": [
+                  {
+                     "code": "1111F",
+                     "display": "Medication Reconciliation",
+                     "system": "http://www.ama-assn.org/go/cpt"
+                  }
+               ]
+            },
+            "effectiveDateTime": "2018-09-29T14:15:04.424Z",
+            "encounter": {
+               "reference": "urn:uuid:39fd3052-6b0f-4ed1-bcc5-4ae041f1e016"
+            },
+            "issued": "2018-09-29T14:15:04.424Z",
+            "performer": [
+               {
+                  "reference": "urn:uuid:0000016d-235f-39b3-0000-000000001298"
+               }
+            ],
+            "status": "final",
+            "subject": {
+               "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073"
+            },
+            "valueBoolean": true,
+            "resourceType": "Observation"
          }
       },
       {
@@ -1683,7 +1692,7 @@
          }
       }
    ],
-   "timestamp": "2019-12-06T05:22:34.917086Z",
+   "timestamp": "2019-12-06T06:29:06.039507Z",
    "type": "transaction",
    "resourceType": "Bundle"
 }
