@@ -94,7 +94,19 @@
     },
     {
       "reference" : {
+        "reference" : "Parameters/mrp-submit-task"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Bundle/multiple-indv-mrp-obs-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "MeasureReport/datax-measurereport03"
       },
       "exampleBoolean" : true
     },
@@ -107,6 +119,12 @@
     {
       "reference" : {
         "reference" : "Bundle/single-indv-vte-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Parameters/col-submit-obs"
       },
       "exampleBoolean" : true
     },
@@ -154,6 +172,12 @@
     },
     {
       "reference" : {
+        "reference" : "Parameters/mrp-submit-obs"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Observation/observation01"
       },
       "exampleBoolean" : true
@@ -179,6 +203,12 @@
     {
       "reference" : {
         "reference" : "Encounter/Encounter01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Observation/observation03"
       },
       "exampleBoolean" : true
     },

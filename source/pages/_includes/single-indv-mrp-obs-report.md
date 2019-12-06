@@ -3,7 +3,7 @@
 
 **Scenario:**
 
-Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The body of the request is a transaction bundle including the Individual MeasureReport and Observation resources all the related resources containing the relevant data used to compute the CQM criteria.  An HTTP Status success code is returned on successful submission.
+Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The body of the request is a transaction bundle including the Individual MeasureReport and Observation resources all the related resources containing the relevant data used to compute the CQM criteria.  An HTTP Status success code and a `transaction-response` Bundle is returned on successful submission.
 
 **POST Summary Report**
 
@@ -19,6 +19,5 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
 **Response**
 
 ~~~
-HTTP/1.1 200 OK
-[other headers]
+{% include single-indv-mrp-obs-report-transaction-response.txt %}
 ~~~

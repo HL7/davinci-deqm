@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/observation-category",
+  "code" : "laboratory"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/observation-category\" is not known (encountered paired with code = \"laboratory\"); The code provided (http://hl7.org/fhir/observation-category#laboratory) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

@@ -88,7 +88,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Parameters/mrp-submit-task"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/multiple-indv-mrp-obs-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MeasureReport/datax-measurereport03"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -101,6 +113,12 @@
     <resource>
       <reference>
         <reference value="Bundle/single-indv-vte-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/col-submit-obs"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -148,6 +166,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Parameters/mrp-submit-obs"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Observation/observation01"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -173,6 +197,12 @@
     <resource>
       <reference>
         <reference value="Encounter/Encounter01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/observation03"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
