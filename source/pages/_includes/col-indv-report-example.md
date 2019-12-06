@@ -3,9 +3,9 @@
 
 **Scenario:**
 
-Payer X who is acting in the role of a Reporter submits a COL Individual Report for Patient P to Receiver Z.  The body of the request is a transaction bundle including the Individual MeasureReport and all the related resources containing the relevant data used to compute the CQM criteria.  An HTTP Status success code is returned on successful submission.
+Payer X who is acting in the role of a Reporter submits a COL Individual Report for Patient P to Receiver Z.  The body of the request is a transaction bundle including the Individual MeasureReport and all the related resources containing the relevant data used to compute the CQM criteria.  An HTTP Status success code and `transaction-response` Bundle is returned on successful submission.
 
-**POST Summary Report**
+**POST Individual Report**
 
 `POST [base]`
 
@@ -71,10 +71,10 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
                     }
                   ]
                 }
-              } 
+              }
             ],
             "measureScore": 100
-          } 
+          }
         ]
       },
       "request": {
@@ -357,6 +357,48 @@ Payer X who is acting in the role of a Reporter submits a COL Individual Report 
 **Response**
 
 ~~~
-HTTP/1.1 200 OK
-[other headers]
+HTTP/1.1 200
+Date: Wed, 13 Mar 2019 01:02:06 GMT
+Content-Type: application/fhir+json;charset=UTF-8
+...Other Headers...
+
+{
+  "resourceType": "Bundle",
+  "type": "transaction-response",
+  "entry": [
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "MeasureReport/col-measurereport/_history/1",
+        "etag": "1",
+        "lastModified": "2019-03-13T01:02:05.901+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/fit-dna-observation/_history/1",
+        "etag": "1",
+        "lastModified": "2019-03-13T01:02:05.932+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "200 OK",
+        "location": "Patient/patient-col/_history/1",
+        "etag": "1",
+        "lastModified": "2019-03-13T01:02:05.932+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "200 OK",
+        "location": "Practitioner/practitioner-col/_history/1",
+        "etag": "1",
+        "lastModified": "2019-03-13T01:02:05.932+00:00"
+      }
+    }
+  ]
+}
+
 ~~~

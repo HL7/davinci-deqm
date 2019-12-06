@@ -249,48 +249,6 @@ Provider X acting in the role of Producer submits COL data for Patient Y to Paye
 **Response**
 
 ~~~
-HTTP/1.1 200
-Date: Wed, 13 Mar 2019 01:02:06 GMT
-Content-Type: application/fhir+json;charset=UTF-8
-...Other Headers...
-
-{
-  "resourceType": "Bundle",
-  "type": "transaction-response",
-  "entry": [
-    {
-      "response": {
-        "status": "201 Created",
-        "location": "MeasureReport/col-measurereport/_history/1",
-        "etag": "1",
-        "lastModified": "2019-03-13T01:02:05.901+00:00"
-      }
-    },
-    {
-      "response": {
-        "status": "201 Created",
-        "location": "Observation/fit-dna-observation/_history/1",
-        "etag": "1",
-        "lastModified": "2019-03-13T01:02:05.932+00:00"
-      }
-    },
-    {
-      "response": {
-        "status": "200 OK",
-        "location": "Patient/patient-col/_history/1",
-        "etag": "1",
-        "lastModified": "2019-03-13T01:02:05.932+00:00"
-      }
-    },
-    {
-      "response": {
-        "status": "200 OK",
-        "location": "Practitioner/practitioner-col/_history/1",
-        "etag": "1",
-        "lastModified": "2019-03-13T01:02:05.932+00:00"
-      }
-    }
-  ]
-}
-
+HTTP/1.1 200 OK
+[other headers]
 ~~~
