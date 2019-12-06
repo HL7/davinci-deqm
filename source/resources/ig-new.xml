@@ -70,12 +70,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/multiple-indv-mrp-report"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Location/location03"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -154,6 +148,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/single-indv-mrp-task-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="MeasureReport/indv-measurereport01"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -172,13 +172,31 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/multiple-indv-mrp-obs-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Practitioner/practitioner01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/single-indv-mrp-obs-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Coverage/coverage02"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/multiple-indv-mrp-task-report"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -203,12 +221,6 @@
     <resource>
       <reference>
         <reference value="Task/Task01"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/single-indv-mrp-report"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

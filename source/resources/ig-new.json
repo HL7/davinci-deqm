@@ -76,12 +76,6 @@
     },
     {
       "reference" : {
-        "reference" : "Bundle/multiple-indv-mrp-report"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Location/location03"
       },
       "exampleBoolean" : true
@@ -160,6 +154,12 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/single-indv-mrp-task-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "MeasureReport/indv-measurereport01"
       },
       "exampleBoolean" : true
@@ -178,13 +178,31 @@
     },
     {
       "reference" : {
+        "reference" : "Bundle/multiple-indv-mrp-obs-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Practitioner/practitioner01"
       },
       "exampleBoolean" : true
     },
     {
       "reference" : {
+        "reference" : "Bundle/single-indv-mrp-obs-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Coverage/coverage02"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/multiple-indv-mrp-task-report"
       },
       "exampleBoolean" : true
     },
@@ -209,12 +227,6 @@
     {
       "reference" : {
         "reference" : "Task/Task01"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "Bundle/single-indv-mrp-report"
       },
       "exampleBoolean" : true
     },

@@ -12,7 +12,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Reports
 **Request body**
 
 ~~~
-{% include_relative Bundle-multiple-indv-mrp-report.json %}
+{% include_relative Bundle-multiple-indv-mrp-task-report.json %}
 ~~~
 
 

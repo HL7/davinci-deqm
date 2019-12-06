@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7/example.org",
+  "code" : "112"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7/example.org\" is not known (encountered paired with code = \"112\"); The code provided (http://hl7/example.org#112) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7/example.org",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7/example.org\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://hl7/example.org#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7/example.org",
+  "code" : "measure"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7/example.org\" is not known (encountered paired with code = \"measure\"); The code provided (http://hl7/example.org#measure) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
