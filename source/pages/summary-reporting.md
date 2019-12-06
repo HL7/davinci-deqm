@@ -56,7 +56,7 @@ for a Bundle Transaction:
 
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See POST summary Report Example" %}
 
-For additional examples, see the [MRP Summary MeasureReport] and [COL Summary MeasureReport] examples.
+For for an example of a Summary MeasureReport with counts for all populations specified in an eCQM see the [COL Summary MeasureReport].
 
 <br />
 

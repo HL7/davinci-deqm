@@ -32,3 +32,20 @@ git status
 update the examples in R4
 
 fix all examples add-in bundles
+
+use examples file directly in code blocks where able to ....
+
+~~~
+{% include_relative MeasureReport-summ-measurereport01.json %}
+~~~
+
+
+still to update:
+
+1. MRP
+   1. submit data examples for both Observation and Task (reassemble the parameters)
+   1. Observation based individual MeasureReport  - cut and paste I think
+1. Col
+    1. submit data examples  (reassemble the parameters)
+    1. collect data examples  (reassemble the parameters)
+    1. COL individual MeasureReport  ( wait for Robert )

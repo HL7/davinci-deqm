@@ -83,7 +83,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 
 In the following interactions, the Provider is acting in the role of the *Producer* and the Payer ("Aggregator") is acting in the role of the *Consumer*.
 
-### Gather Data Requirements from Payer
+### Gather Data Requirements from Payer {#data-requirements}
 {:.no_toc}
 
    In this optional step, the Provider queries the Payer ("Aggregator") for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.

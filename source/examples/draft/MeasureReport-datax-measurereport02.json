@@ -14,7 +14,7 @@
   },
   "status": "complete",
   "type": "data-collection",
-  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
   "subject": {
     "reference": "Patient/patient02"
   },

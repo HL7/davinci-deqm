@@ -4,8 +4,7 @@
 [^4]: Adapting Clinical Guidelines for the Digital Age. Retrieved from <https://www.cdc.gov/ddphss/clinical-guidelines/index.html>
 [^5]: May includes DEQM defined code systems and externally defined code systems
 [^6]: This extension not needed because the data element is an element in the R4 Measure Resource.
-[^8]: Changes to the QI-Core Observation and Task profiles are being proposed based on the HEDIS Task and Observation profiles that may lead to these profiles being replaced by the QI Core profiles.
-[^9]: Changes to QI Core and US Core Organization and Practitioner  profiles are being proposed based on the DEQM Organization and Practitioner profiles that may lead to this profiles being replaced by the QI Core profile.
+[^9]: Changes to QI Core and US Core Organization profiles are being proposed based on the DEQM Organization profile that may lead to this profiles being replaced by the QI Core profile.
 [^10]: HEDIS measures referenced are *example content only* for the purposes of working through standards. Organizations should not be using the HEDIS specified measures for the actual measurement.
 [$collect-data]: {{site.data.fhir.path}}measure-operation-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$data-requirements]: {{site.data.fhir.path}}measure-operation-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
@@ -64,6 +63,7 @@
 [MRP Summary MeasureReport]: mrp.html#summary-measurereport
 [COL Summary MeasureReport]: col.html#summary-measurereport
 [MRP Submit Data Operation]: mrp.html#data-exchange-using-the-submit-data-operation
+[COL Data Requirements Operation]: col.html#data-requirements
 [COL Submit Data Operation]: col.html#submit-data
 [COL Collect Data Operation]: col.html#collect-data
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"

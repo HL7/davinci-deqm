@@ -97,6 +97,8 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 
 {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
+For another example see the [COL Data Requirements Operation] example.
+
 #### Submit Data Operation
 {:.no_toc}
 

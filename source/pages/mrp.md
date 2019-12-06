@@ -101,6 +101,8 @@ The Payer (“Aggregator”) pushes the Bundle of supporting resources with the 
 
 {% include examplebutton.html example="mrp-indv-report-example1" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Task" %}
 
+{% include examplebutton.html example="multiple-mrp-indv-report-example1" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport for Multiple Patients using Task" %}
+
 {% include examplebutton.html example="mrp-indv-report-example2" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Observation" %}
 
 ### Summary MeasureReport

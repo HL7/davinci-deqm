@@ -63,7 +63,7 @@
                   ]
                }
             ],
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp",
+            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
             "period": {
                "end": "2018-09-01",
                "start": "2018-08-01"
