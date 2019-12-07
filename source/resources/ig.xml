@@ -63,13 +63,60 @@
     <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
   </resource>   -->
   <!--  <groupingId value="[id]"/>  0..1 Grouping this is part of -->
-  <!-- insert resources --><resource><reference><reference value="Organization/organization02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/summ-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Parameters/mrp-submit-task"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/multiple-indv-mrp-obs-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/single-indv-vte-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Parameters/col-submit-collect-obs"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Library/library-mrp-example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Measure/measure-mrp-example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Library/exm130-fhir-r4"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization04"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Parameters/mrp-submit-obs"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/observation01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/indv-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/indv-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/multiple-indv-mrp-task-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/Encounter01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/observation03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/single-indv-mrp-task-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/practitioner01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/single-indv-mrp-obs-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/summ-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Task/Task01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="StructureDefinition/extension-alternateScoreType"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-reporterGroup"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-certificationIdentifier"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-reportingVendor"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/producer-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/medicationrequest-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/indv-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/coverage-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/consumer-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/organization-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/receiver-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/datax-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/summary-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/medicationadministration-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/reporter-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/producer-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/consumer-client"/></reference><exampleBoolean value="false"/></resource>
+  <!-- insert resources --><resource><reference><reference value="Organization/organization02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/summ-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Parameters/mrp-submit-task"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/multiple-indv-mrp-obs-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/single-indv-vte-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Parameters/col-submit-collect-obs"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Library/library-mrp-example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Measure/measure-mrp-example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Library/exm130-fhir-r4"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization04"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Parameters/mrp-submit-obs"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/observation01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/indv-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/indv-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/multiple-indv-mrp-task-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/Encounter01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/observation03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/single-indv-mrp-task-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/single-indv-col-obs-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/practitioner01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/indv-measurereport03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/location01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/single-indv-mrp-obs-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/summ-measurereport02"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MeasureReport/datax-measurereport01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Task/Task01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/organization01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Coverage/coverage03"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/patient01"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="StructureDefinition/extension-alternateScoreType"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-reporterGroup"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-certificationIdentifier"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/extension-reportingVendor"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/producer-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/medicationrequest-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/indv-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/coverage-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/consumer-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/organization-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/receiver-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/datax-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/summary-measurereport-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/medicationadministration-deqm"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/reporter-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/producer-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/consumer-client"/></reference><exampleBoolean value="false"/></resource>
 
     <!-- ============ Home Page =============== -->
   <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
-    <!-- ============ Guidance Page =============== -->
-    <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
+  <!-- ============ Framework Page =============== -->
+  <page>
+    <nameUrl value="framework.html"/>
+    <title value="Framework"/>
+    <generation value="markdown"/>
+    <page>
+      <nameUrl value="guidance.html"/>
+      <title value="General Guidance"/>
+      <generation value="markdown"/>
+    </page>
+    <page>
+      <nameUrl value="datax.html"/>
+      <title value="Data Exchange"/>
+      <generation value="markdown"/>
+    </page>
+    <page>
+      <nameUrl value="indv-reporting.html"/>
+      <title value="Individual Reporting"/>
+      <generation value="markdown"/>
+    </page>
+    <page>
+      <nameUrl value="summary-reporting.html"/>
+      <title value="Summary Reporting"/>
+      <generation value="markdown"/>
+    </page>
+  </page>
+  <!-- ============ End Framework Page =============== -->
+  <!-- ============ Use Cases Page =============== -->
+  <page>
+    <nameUrl value="usecases.html"/>
+    <title value="Example Use Cases"/>
+    <generation value="markdown"/>
+    <page>
+      <nameUrl value="mrp.html"/>
+      <title value="Medication Reconciliation Post-Discharge (MRP)"/>
+      <generation value="markdown"/>
+    </page>
+    <page>
+      <nameUrl value="col.html"/>
+      <title value="Colorectal Cancer Screening (COL)"/>
+      <generation value="markdown"/>
+    </page>
+    <page>
+      <nameUrl value="vte1.html"/>
+      <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
+      <generation value="markdown"/>
+    </page>
+  </page>
+  <!-- ============ End Use Cases Page =============== -->
 
     <!-- ============ Profiles Page =============== -->
     <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
@@ -84,51 +131,6 @@
 
       </page>
 
-     <!-- ============ Bundle Definitions Page =============== -->
-     <page><nameUrl value="bundles.html"/><title value="Bundle Definitions"/><generation value="markdown"/>
-
-     <!-- ============ MessagedDefinitions  =============== -->
-     <!-- insert messagedefinitions -->
-     <!-- ============ End MessagedDefinitions  =============== -->
-
-      <!-- ============ GraphDefinitions  =============== -->
-      <!-- insert graphdefinitions -->
-      <!-- ============ EndGraphDefinitions  =============== -->
-
-     </page>
-
-    <!-- ============ Operations Page =============== -->
-    <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
-
-    <!-- ============ Operations and examples  =============== -->
-    <!-- insert operationdefinitions -->
-    <!-- ============ End Operations and examples  =============== -->
-
-    </page>
-    <!-- ============ Terminology Page =============== -->
-
-    <page><nameUrl value="terminology.html"/><title value="Terminology"/><generation value="markdown"/>
-     <!-- ============ ValueSet   =============== -->
-    <!-- insert valuesets -->
-    <!-- ============ End ValueSet   =============== -->
-
-    <!-- ============ CodeSystems  =============== -->
-    <!-- insert codesystems -->
-    <!-- ============ End CodeSystems  =============== -->
-
-    <!-- ============ ConceptMaps   =============== -->
-    <!-- insert conceptmaps -->
-    <!-- ============ End ConceptMaps   =============== -->
-
-    </page>
-
-    <!-- ============ SearchParameter Page =============== -->
-    <page><nameUrl value="searchparameters.html"/><title value="Search Parameters"/><generation value="markdown"/>
-
-  <!-- ============ SearchParameters =============== -->
-  <!-- insert searchparameters -->
-  <!-- ============ End SearchParameters  =============== -->
-    </page>
 
     <!-- ============ CapabilityStatement Page =============== -->
     <page><nameUrl value="capstatements.html"/><title value="Capability Statements"/><generation value="markdown"/>
@@ -138,9 +140,6 @@
   <!-- ============ End CapabilityStatements    =============== -->
     </page>
 
-    <!-- ============ Security Page =============== -->
-    <page><nameUrl value="security.html"/><title value="Security"/><generation value="markdown"/></page>
-
     <!-- ============ Examples Page=============== -->
     <page><nameUrl value="all-examples.html"/><title value="All Examples"/><generation value="markdown"/></page>
 
@@ -149,6 +148,13 @@
 
     <!-- ============ Table of Contents =============== -->
     <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/></page>
+
+    <!-- ============ Change Notes Page =============== -->
+    <page>
+      <nameUrl value="change-notes.html"/>
+      <title value="Change Notes"/>
+      <generation value="markdown"/>
+    </page>
 
   </page>
   </definition>

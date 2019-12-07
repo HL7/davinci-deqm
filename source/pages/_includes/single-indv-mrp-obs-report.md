@@ -19,5 +19,5 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
 **Response**
 
 ~~~
-{% include single-indv-mrp-obs-report-transaction-response.txt %}
+{% include single-indv-col-obs-report-transaction-response.txt %}
 ~~~

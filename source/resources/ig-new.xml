@@ -214,7 +214,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/single-indv-col-obs-report"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Practitioner/practitioner01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MeasureReport/indv-measurereport03"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -379,9 +391,49 @@
       <title value="Home"/>
       <generation value="markdown"/>
       <page>
-        <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <nameUrl value="framework.html"/>
+        <title value="Framework"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="guidance.html"/>
+          <title value="General Guidance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="datax.html"/>
+          <title value="Data Exchange"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="indv-reporting.html"/>
+          <title value="Individual Reporting"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="summary-reporting.html"/>
+          <title value="Summary Reporting"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Example Use Cases"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="mrp.html"/>
+          <title value="Medication Reconciliation Post-Discharge (MRP)"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="col.html"/>
+          <title value="Colorectal Cancer Screening (COL)"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="vte1.html"/>
+          <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -444,26 +496,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="bundles.html"/>
-        <title value="Bundle Definitions"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="operations.html"/>
-        <title value="Operations"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="terminology.html"/>
-        <title value="Terminology"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="searchparameters.html"/>
-        <title value="Search Parameters"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <nameUrl value="capstatements.html"/>
         <title value="Capability Statements"/>
         <generation value="markdown"/>
@@ -499,11 +531,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="security.html"/>
-        <title value="Security"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <nameUrl value="all-examples.html"/>
         <title value="All Examples"/>
         <generation value="markdown"/>
@@ -517,6 +544,11 @@
         <nameUrl value="toc.html"/>
         <title value="Table of Contents"/>
         <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="change-notes.html"/>
+        <title value="Change Notes"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <parameter>
