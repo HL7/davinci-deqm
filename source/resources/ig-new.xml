@@ -118,7 +118,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Parameters/col-submit-obs"/>
+        <reference value="Parameters/col-submit-collect-obs"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

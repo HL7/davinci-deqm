@@ -12,7 +12,7 @@ Provider X acting in the role of Producer submits COL data for Patient Y to Paye
 **Request body**
 
 ~~~
-{% include_relative Parameters-col-submit-obs.json %}
+{% include_relative Parameters-col-submit-collect-obs.json %}
 ~~~
 
 **Response**
