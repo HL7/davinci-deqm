@@ -173,6 +173,7 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 ### Submit Data and Collect Data for Multiple Patients
 
 #### Submit Data Operation Request for Multiple Patients
+{:.no_toc}
 
 The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.  
 
@@ -216,6 +217,7 @@ POST|[base]
 ~~~
 
 #### Collect Data Operation Response for Multiple Patients
+{:.no_toc}
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
