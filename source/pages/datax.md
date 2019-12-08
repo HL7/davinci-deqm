@@ -171,14 +171,15 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 ### Submit Data and Collect Data for Multiple Patients
 
 #### Submit Data Operation Request for Multiple Patients
+{:.no_toc}
 
 The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.  
 
 - The transaction bundle contains an entry for each patient as illustrated in the examples below:
   - The fullUrl is a UUID ("urn:uuid:...").
   - The resource is a Parameters resource as defined in the operation.
-  - The request method is `POST`
-  - The request url is the operation endpoint 'Measure/[measure-id]/$submit-data$submit-data'  or 'Measure/[measure-id]/$collect-data' endpoint.
+  - The request method is `POST`.
+  - The request url is the operation endpoint `Measure/$submit-data` or `Measure/[measure-id]/$submit-data`.
 - When resolving references, references are never resolved outside the Parameters resource.  Specifically, resolution stops at the elements Parameters.parameter.resource."
 - The matching [transaction response] is returned by the operation endpoint server.
 
@@ -214,6 +215,7 @@ POST|[base]
 ~~~
 
 #### Collect Data Operation Response for Multiple Patients
+{:.no_toc}
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
