@@ -172,17 +172,17 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 
 ### Submit Data and Collect Data for Multiple Patients
 
-The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request and  a Collect Data operation response for *multiple* patients in a single interaction.  
+#### Submit Data Operation Request for Multiple Patients
+
+The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.  
 
 - The transaction bundle contains an entry for each patient as illustrated in the examples below:
-  - The fullUrl is a UUID ("urn:uuid:...").
+  - The fullUrl is a UUID (`urn:uuid:...`).
   - The resource is a Parameters resource as defined in the operation.
   - The request method is `POST`
-  - The request url is the operation endpoint 'Measure/[measure-id]/$submit-data$submit-data'  or 'Measure/[measure-id]/$collect-data' endpoint.
+  - The request url is the operation endpoint `Measure/$submit-data` or `Measure/[measure-id]/$submit-data`.
 - When resolving references, references are never resolved outside the Parameters resource.  Specifically, resolution stops at the elements Parameters.parameter.resource."
-
-
-Submit Data Operatino Request for Multiple Patients
+- The matching [transaction response] is returned by the operation endpoint server.
 
 ~~~
 POST|[base]
@@ -215,39 +215,9 @@ POST|[base]
             ....
 ~~~
 
+#### Collect Data Operation Response for Multiple Patients
 
-Collect Data Operation Response for Multiple Patients
-
-~~~
-POST|[base]
-
-{
-  "resourceType": "Bundle",
-  "type": "transaction",
-  "entry": [
-    {
-      "fullUrl": "urn:Muuid:79378cb8-8f58-48e8-a5e8-60ac2755b674",
-      "resource": {
-        "resourceType": "Parameters",
-        "parameter": [
-          {
-            "name": "measurereport",
-            "resource": {
-              "resourceType": "MeasureReport",
-              ...,
-            "name": "resource",
-            "resource": {
-              "resourceType": "Patient",
-              ...,
-            [other "resource" parameters]
-          ]
-        },
-        "request": {
-          "method": "POST",
-          "url": "Measure/[measure-id]/$collect-data"
-            }
-            ....
-~~~
+Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
 <br />
 
