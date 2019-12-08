@@ -104,3 +104,4 @@
 [following rules]: {{site.data.fhir.path}}references.html#contained
 [negation patterns in quality measurements]: {{site.cqfm_r3}}using-cql.html
 [Valueset Reference]: {{site.data.fhir.path}}extension-valueset-reference.html
+[transaction response]: {{site.data.fhir.path}}/http.html#transaction-response
