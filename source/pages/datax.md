@@ -172,46 +172,17 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 
 ### Submit Data and Collect Data for Multiple Patients
 
-The [transaction] bundle processing as defined by FHIR specification is used for transacting multiple Submit Data and Collect Data operations for multiple patients in a single interaction.  
+The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request and  a Collect Data operation response for *multiple* patients in a single interaction.  
 
-- The fullUrl refers to the `#submit-data` or `#collect-data` operation endpoint.
-- The request method is `POST`
-- Follows the [following rules] for referencing across the bundle entries if the resources are nested inside parameters and/or contained within a parameter:
-   - "When resolving references, references are resolved by looking through the 'container' resource - the one that contains the other resources. Since there are no nested contained resources, there is only one container resource."
-   - "References to contained resources are never resolved outside the container resource. Specifically, resolution stops at the elements Bundle.entry.resource and Parameters.parameter.resource, but not at DomainResource.contained."
-
-**The transaction bundle contains an entry for each patient and as illustrated in the following examples:**
-
-Submit Data Transaction Bundle
-
-~~~
-POST|[base]
-
-{
-  "resourceType": "Bundle",
-  "type": "transaction",
-  "entry": [
-    {
-      "fullUrl": [base]/Measure/[measure-id]/$submit-data
-      "resource": {
-        "resourceType": "Parameters",
-        "parameter": [
-          {
-            "name": "measurereport",
-            "resource": {
-              "resourceType": "MeasureReport",
-              "contained": [  ( or simply listing the other named parameters)
-              ...
-          ]
-        },
-        "request": {
-          "method": "POST"
-            }
-            ....
-~~~
+- The transaction bundle contains an entry for each patient as illustrated in the examples below:
+  - The fullUrl is a UUID ("urn:uuid:...").
+  - The resource is a Parameters resource as defined in the operation.
+  - The request method is `POST`
+  - The request url is the operation endpoint 'Measure/[measure-id]/$submit-data$submit-data'  or 'Measure/[measure-id]/$collect-data' endpoint.
+- When resolving references, references are never resolved outside the Parameters resource.  Specifically, resolution stops at the elements Parameters.parameter.resource."
 
 
-Submit Data Transaction Bundle
+Submit Data Operatino Request for Multiple Patients
 
 ~~~
 POST|[base]
@@ -221,7 +192,7 @@ POST|[base]
   "type": "transaction",
   "entry": [
     {
-      "fullUrl": [base]/Measure/[measure-id]/$collect-data
+      "fullUrl": "urn:uuid:79378cb8-8f58-48e8-a5e8-60ac2755b674",
       "resource": {
         "resourceType": "Parameters",
         "parameter": [
@@ -229,83 +200,54 @@ POST|[base]
             "name": "measurereport",
             "resource": {
               "resourceType": "MeasureReport",
-              "contained": [  ( or simply listing the other named parameters)
-              ...
+              ...,
+            "name": "resource",
+            "resource": {
+              "resourceType": "Patient",
+              ...,
+            [other "resource" parameters]
           ]
         },
         "request": {
-          "method": "POST"
+          "method": "POST",
+          "url": "Measure/[measure-id]/$submit-data"
             }
             ....
 ~~~
 
 
-<!-- {% raw %}************************************************************
-KEEP and edit to align with the Updated Argonaut Subscription Model
- ******************************************************************
-### Subscriptions
-{: #pub-sub}
+Collect Data Operation Response for Multiple Patients
 
-FHIR Subscriptions allow for a Producer to notify the Consumer whenever new CQM data is available.  Effectively, the Consumer subscribes to the Producer's system using the Measure as the criteria. It is a short-hand for subscribing to all the data-of-interest (as defined by the data requirements) for the CQM, but using the Measure as the subscription point allows the implementation to determine the most efficient approach to notification. For example, notifications can be batched on a periodic basis, or they can be performed along transactional boundaries within the implementing system.
+~~~
+POST|[base]
 
-The Consumer uses the *Collect Data* operation described above to request the relevant data after it is notified.
-
-{% include img.html  img="subscribe-data-steps.jpg"  caption ="Figure 2-7 Subscription Steps"%}
-
-#### Subscribe for Measure Data
-{:.no_toc}
-
-The Consumer must first subscribe to the Producer for a notification for a particular measure.  The Consumer may subsequently unsubscribe to a measure subscription.
-
-{% include img-narrow.html img="subscribe-data.jpg" caption="Figure 2-8 Subscription Service" %}
-
-##### APIs
-{:.no_toc}
-
-The following artifacts are used in the subscription transaction:
-
-1. DEQM Subscription Profile [DEQM Subscription] or [DEQM Subscription (R4)]
-1. [DEQM Measure Subscription Extension]
-
-##### Usage
-{:.no_toc}
-
-To subscribe for measure notifications, The Consumer SHALL use the standard FHIR [Subscription] API as follows:
-
-`POST [base]/Subscription`
-
-To unsubscribe:
-
-`Delete [base]/Subscription/[id]`
-
-{% include examplebutton.html example="subscribe-measure-example" b_title = "Click Here To See Example Subscription Transaction" %}
-
-#### Get Data Requirements
-{:.no_toc}
-
-The DEQM Subscription Profile allows the subscriber to send a *CQFM Measure instance id*.  By invoking the $data-requirements operation (see above) on a subscriber’s Measure instance endpoint, the server can discover what data is needed to calculate by a subscriber for particular measure.  This information is necessary to correctly trigger a notification when the requisite data is available.
-
-#### Measure Notifications
-{:.no_toc}
-
-The Producer notifies the Consumer when measure data is available. Exactly, how this notification is triggered is out of scope for this guide.  Note that  several architectures to implement the subscription notifications such as "point to point" notification or using a “feed handler” as an intermediary system are available.
-
-{% include img-narrow.html img="measure-notifications.jpg" caption="Figure 2-9 Measure Notifications" %}
-
-##### Usage
-{:.no_toc}
-
- The standard FHIR Subscription API describes the REST Hook channel as follows:
-
-`POST [app notification endpoint]`
-
-{% include examplebutton.html example="measure-notification-example" b_title = "Click Here To See Example Subscription Notification" %}
-
-##### Collect Data Operation
-{:.no_toc}
-
-Upon notification, the Consumer uses the *Collect Data* operation to request the CQM data from the notifying Producer.  This operation is discussed in the section above.
-{% endraw %}-->
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:Muuid:79378cb8-8f58-48e8-a5e8-60ac2755b674",
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "measurereport",
+            "resource": {
+              "resourceType": "MeasureReport",
+              ...,
+            "name": "resource",
+            "resource": {
+              "resourceType": "Patient",
+              ...,
+            [other "resource" parameters]
+          ]
+        },
+        "request": {
+          "method": "POST",
+          "url": "Measure/[measure-id]/$collect-data"
+            }
+            ....
+~~~
 
 <br />
 
