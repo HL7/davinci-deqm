@@ -48,3 +48,51 @@ v: {
   "error" : "Unknown code system http://www.ama-assn.org/go/cpt"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "1111F"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known (encountered paired with code = \"1111F\"); The code provided (http://www.ama-assn.org/go/cpt#1111F) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "99221"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known (encountered paired with code = \"99221\"); The code provided (http://www.ama-assn.org/go/cpt#99221) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "99221",
+  "display" : "Initial hospital care"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known (encountered paired with code = \"99221\"); The code provided (http://www.ama-assn.org/go/cpt#99221) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "99221"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unknown code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------

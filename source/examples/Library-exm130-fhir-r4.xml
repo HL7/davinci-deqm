@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Library xmlns="http://hl7.org/fhir">
   <id value="exm130-fhir-r4"/>
-  <meta>
-    <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm"/>
-  </meta>
   <url value="http://hl7.org/fhir/us/cqfmeasures/Library/exm130-fhir"/>
   <identifier>
     <use value="official"/>

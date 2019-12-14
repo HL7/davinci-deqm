@@ -31,3 +31,24 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "1658634"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "eparin sodium, porcine 5000 UNT in 0.5 ML Injection",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "1658634",
+  "display" : "heparin sodium, porcine 5000 UNT per 0.5 ML Injection"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "eparin sodium, porcine 5000 UNT in 0.5 ML Injection",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
