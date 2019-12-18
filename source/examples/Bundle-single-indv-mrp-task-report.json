@@ -41,7 +41,7 @@
                         {
                            "code": "112",
                            "display": "112",
-                           "system": "http://hl7/example.org"
+                           "system": "http://example.org"
                         }
                      ]
                   },
@@ -55,7 +55,7 @@
                               {
                                  "code": "initial-population",
                                  "display": "Initial Population",
-                                 "system": "http://hl7/example.org"
+                                 "system": "http://example.org"
                               }
                            ]
                         }
@@ -113,7 +113,7 @@
             },
             "identifier": [
                {
-                  "system": "http://hl7/example.org",
+                  "system": "http://example.org",
                   "value": "19009"
                }
             ],
