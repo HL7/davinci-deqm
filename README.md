@@ -2,7 +2,7 @@
 
 ## Current build [STU3](http://build.fhir.org/ig/HL7/davinci-deqm)
 
-## Current build [R4]http://build.fhir.org/ig/HL7/davinci-deqm/branches/R4-Branch/)
+## Current build [R4](http://build.fhir.org/ig/HL7/davinci-deqm/branches/R4-Branch/)
 
 Authors:  Eric Haas
 
