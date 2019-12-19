@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/stratifier-classifications",
+  "code" : "CoverageType"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/stratifier-classifications\" is not known (encountered paired with code = \"CoverageType\"); The code provided (http://example.org/CodeSystem/stratifier-classifications#CoverageType) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/stratifier-classifications",
+  "code" : "CoverageTypeAndClass"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/stratifier-classifications\" is not known (encountered paired with code = \"CoverageTypeAndClass\"); The code provided (http://example.org/CodeSystem/stratifier-classifications#CoverageTypeAndClass) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/stratifier-classifications",
+  "code" : "CoverageClass"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/stratifier-classifications\" is not known (encountered paired with code = \"CoverageClass\"); The code provided (http://example.org/CodeSystem/stratifier-classifications#CoverageClass) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

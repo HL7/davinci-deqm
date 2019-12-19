@@ -66,6 +66,8 @@ http://build.fhir.org/ig/HL7/davinci-deqm/branches/R4-Branch/ 
 
 Details: build logs | published | qa: broken links = 5, errors = 12, warn = 0, info = 22
 
+----
+
 ## Pre-Ballot Checklist DEQM R4
 
 1. Ballot Reconciliation for previous ballot complete (if applicable) and reconciliation package posted to Ballot Desktop	Project Manager or WG Co-Chair	Ballot reconciliation complete
@@ -83,5 +85,11 @@ Details: build logs | published | qa: broken links = 5, errors = 12, warn = 0, i
 1. Content review during QA period	FMG/FHIR IG Facilitator 	qa.html is clean and content is of sufficient quality to ballot
 
    ? ask Bryn
+
+
 bryn@databaseconsultinggroup.com
 vietnguyen@stratametrics.com
+
+
+fix path 2020feb
+change example.org to http://example.org

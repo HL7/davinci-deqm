@@ -151,6 +151,12 @@
       "source": "Encounter-encounter01.json",
       "base": "Encounter-Encounter01.html"
     },
+
+    "MeasureReport/summ-medicare-stratification-example": {
+      "source": "MeasureReport-summ-medicare-stratification-example.xml",
+      "base": "MeasureReport-summ-medicare-stratification-example.html"
+    },
+
     "MeasureReport/datax-measurereport03": {
       "source": "MeasureReport-datax-measurereport03.json",
       "base": "MeasureReport-datax-measurereport03.html"

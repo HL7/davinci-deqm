@@ -110,3 +110,4 @@
 [Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html
 [negation patterns in quality measurements]: {{site.data.fhir.cqfm}}using-cql.html
 [transaction response]: {{site.data.fhir.path}}/http.html#transaction-response
+[Medicare Stratification Example]: MeasureReport-summ-medicare-stratification-example.html

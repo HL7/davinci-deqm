@@ -262,6 +262,12 @@
     },
     {
       "reference" : {
+        "reference" : "MeasureReport/summ-medicare-stratification-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "MeasureReport/datax-measurereport01"
       },
       "exampleBoolean" : true
