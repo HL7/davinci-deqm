@@ -21,4 +21,5 @@ Changes and Updates for version 1.0.0
 
 Changes and Updates for version 1.1.0
 
-1. Creation FHIR R4 version.
+1. Creation of FHIR R4 version.
+1. Additional examples

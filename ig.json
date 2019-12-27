@@ -336,7 +336,7 @@
   "source": "ig.xml",
   "pub_url": "ehaas@healthedatainc.com",
   "version": "4.0.1",
-  "title": "Data Exchange For Quality Measures STU2 for FHIR R4 Implementation Guide",
+  "title": "Data Exchange For Quality Measures STU2 for FHIR R4",
   "extensions": [
     "extension-reportingVendor",
     "extension-certificationIdentifier",
