@@ -46,7 +46,7 @@
 [General Guidance]: guidance.html  "General Guidance Page"
 [HEDIS Colorectal Cancer Screening/CMS130]: {{site.hedis_r4}}cql/stu3/col-logic.cql.html
 [HEDIS Measure Description for Colorectal Cancer Screening]: {{site.hedis_r4}}cql/stu3/col-logic.cql.html
-[HEDIS]: {{site.hedis_r4}}index.html
+[HEDIS]: https://github.com/cqframework/hedis-ig
 [Home]: index.html "Home Page"
 [Individual Measure Reporting Interactions]: indv-reporting.html
 [Individual Reporting]: indv-reporting.html
