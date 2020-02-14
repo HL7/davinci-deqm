@@ -7,6 +7,6 @@
 ================THIS IS FOR THE PROJECT LOGO AND URL ===============
 -->
 
-<a no-external="true" href="http://www.hl7.org">
+<a no-external="true" href="http://www.hl7.org/about/davinci/index.cfm?ref=common">
 <img alt="visit our website" class="img-responsive project-logo" src="assets/images/org_logo.png"/>
 </a>
