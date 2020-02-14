@@ -52,6 +52,8 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
 
+- [Examples]\: List of all the examples used in this guide.
+
 - [Downloads]\: This page provides links to downloadable artifacts.
 
 

@@ -111,3 +111,4 @@
 [negation patterns in quality measurements]: {{site.data.fhir.cqfm}}using-cql.html
 [transaction response]: {{site.data.fhir.path}}/http.html#transaction-response
 [Medicare Stratification Example]: MeasureReport-summ-medicare-stratification-example.html
+[Examples]: all-examples.html
