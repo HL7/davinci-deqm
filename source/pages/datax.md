@@ -66,7 +66,7 @@ The DEQM resources form a network through their relationships with each other - 
 
 The *Submit Data* operation allows a Producer to submit data-of-interest for a particular quality measure within the specified time window when the data is ready. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure. Note that resources included in a *Submit-Data* bundle **SHOULD** be self-contained (in other words, should include all referenced resources in the data), unless the exchange is understood by both parties to be incremental. For example, if an Encounter references a Location, that Location is expected to be included in the bundle, unless the exchange is understood to be incremental and the sending system knows that it has already sent that particular Location as part of a previous submit.
 
-To discover what data (i.e. resources) are relevant in the *Submit Data* payload for a particular measure, a *Data Requirements* operation **MAY** be invoked on a Consumer's measure instance endpoint.  The response to this operation provides a list of Data Requirements which detail what data needs to be submitted in order for the Consumer to evaluate the measure.  Cases were reporting requirements are not known, the data would not be submitted until the correct measure and version is known.
+To discover what data (i.e. resources) are relevant in the *Submit Data* payload for a particular measure, a *Data Requirements* operation **MAY** be invoked on a Consumer's measure instance endpoint.  The response to this operation provides a list of Data Requirements which detail what data needs to be submitted in order for the Consumer to evaluate the measure.  In cases where reporting requirements are not known, the data would not be submitted until the correct measure and version is known.
 
 {% include img.html img="mrp-wf-overview.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
@@ -97,6 +97,8 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 
 {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
+For another example see the [COL Data Requirements Operation] example.
+
 #### Submit Data Operation
 {:.no_toc}
 
@@ -121,7 +123,7 @@ Using the `POST` Syntax, the operation can be invoked by the Producer:
 
 {% include examplebutton.html example="submit-data-example" b_title = "Click Here To See Example Submit Data Operation (edited for brevity)" %}
 
-For a complete un-edited example see the [MRP Submit Data Operation] example.
+For a complete un-edited example see the [MRP Submit Data Operation] and [COL Submit Data Operation] examples.
 
 ### Collect Data operation
 {: #collect-data}
@@ -176,9 +178,9 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.  
 
 - The transaction bundle contains an entry for each patient as illustrated in the examples below:
-  - The fullUrl is a UUID ("urn:uuid:...").
+  - The fullUrl is a UUID (`urn:uuid:...`).
   - The resource is a Parameters resource as defined in the operation.
-  - The request method is `POST`.
+  - The request method is `POST`
   - The request url is the operation endpoint `Measure/$submit-data` or `Measure/[measure-id]/$submit-data`.
 - When resolving references, references are never resolved outside the Parameters resource.  Specifically, resolution stops at the elements Parameters.parameter.resource."
 - The matching [transaction response] is returned by the operation endpoint server.

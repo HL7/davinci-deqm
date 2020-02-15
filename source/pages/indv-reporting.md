@@ -130,7 +130,7 @@ Note that Multiple individual reports either for the same or multiple patient fo
 
 {% include examplebutton.html example="post-indv-report-example" b_title = "Click Here To See Example POST Individual Report (edited for brevity)" %}
 
-For a complete un-edited examples see the [MRP Individual MeasureReport] examples.
+For a complete un-edited examples for both *single* and *multiple* patients see the [MRP Individual MeasureReport], [COL Individual MeasureReport], and [VTE Individual MeasureReport] examples.
 
 <br />
 

@@ -1,0 +1,40 @@
+{
+   "id": "practitioner03",
+   "meta": {
+      "lastUpdated": "2019-01-12T17:33:31.000+00:00",
+      "profile": [
+         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
+      ],
+      "versionId": "1"
+   },
+   "active": true,
+   "gender": "female",
+   "identifier": [
+      {
+         "system": "http://hl7.org/fhir/sid/us-npi",
+         "type": {
+            "coding": [
+               {
+                  "code": "PRN",
+                  "display": "Provider number",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+               }
+            ]
+         },
+         "use": "official",
+         "value": "678912345"
+      }
+   ],
+   "name": [
+      {
+         "family": "Baldwin",
+         "given": [
+            "Kristina"
+         ],
+         "suffix": [
+            "MD"
+         ]
+      }
+   ],
+   "resourceType": "Practitioner"
+}

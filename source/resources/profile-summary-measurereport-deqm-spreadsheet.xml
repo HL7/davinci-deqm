@@ -20,8 +20,8 @@
    <Path>\\ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\Davinci-DEQM\source\resources\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\davinci</Path>
    <SheetName>davinci</SheetName>
   </SupBook>
-  <WindowHeight>3990</WindowHeight>
-  <WindowWidth>18870</WindowWidth>
+  <WindowHeight>10515</WindowHeight>
+  <WindowWidth>25200</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ActiveSheet>2</ActiveSheet>
@@ -993,8 +993,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s73" ss:Formula="=SUBSTITUTE(R[-1]C,&quot;-&quot;,&quot;_&quot;)"><Data
-      ss:Type="String">profile_summary_measurereport_deqm</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">DEQMSummaryMeasureReportProfile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
@@ -1015,7 +1014,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="86.25">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s76"><Data ss:Type="String">[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.  The **DEQM Summary MeasureReport Profile** defined here is used when a measure is reported to an aggregator for  for a group of patients. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a [QRDA] Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.  The **DEQM Summary MeasureReport Profile** defined here is used when a measure is reported to an aggregator for a group of patients. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>
@@ -1079,8 +1078,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>11</ActiveRow>
-     <ActiveCol>0</ActiveCol>
+     <ActiveRow>2</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1093,7 +1091,7 @@
     ss:RefersTo="=measurereport-'\\ERICS-AIR-2\ehaas\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\Davinci-DEQM\source\resources\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\DaVinci\source\resources\[davinci]davinci'!R1C1:R103C26"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="29" ss:ExpandedRowCount="514" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="29" ss:ExpandedRowCount="511" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="65.25"
    ss:DefaultRowHeight="15">
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="150"/>
@@ -1203,7 +1201,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Index="2" ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">DEQM Summary MeasureReport Profile</Data></Cell>
-    <Cell ss:Formula="=Metadata!R[1]C[-1]"><Data ss:Type="String">profile_summary_measurereport_deqm</Data></Cell>
+    <Cell ss:Formula="=Metadata!R[1]C[-1]"><Data ss:Type="String">DEQMSummaryMeasureReportProfile</Data></Cell>
     <Cell ss:StyleID="s93"/>
     <Cell ss:StyleID="s94"/>
     <Cell ss:StyleID="s94"/>
@@ -1395,9 +1393,9 @@
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">patient</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">subject</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.patient</Data></Cell>
+      ss:Type="String">MeasureReport.subject</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..0</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -1452,13 +1450,13 @@
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">reportingOrganization</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">reporter</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.reportingOrganization</Data></Cell>
+      ss:Type="String">MeasureReport.reporter</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Organization){http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Organization){http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm}|Reference(Group)</Data></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1477,29 +1475,31 @@
     <Cell ss:StyleID="s112"/>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="4" ss:StyleID="s104"><Data ss:Type="String">group</Data></Cell>
-    <Cell ss:StyleID="s84"/>
-    <Cell ss:StyleID="s84"/>
-    <Cell ss:StyleID="s84"><Data ss:Type="String">reportingOrganization.extension</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s114"><Data ss:Type="String">group</Data></Cell>
+    <Cell ss:StyleID="s115"/>
+    <Cell ss:StyleID="s115"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">reporter.extension</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.reportingOrganization.extension</Data></Cell>
-    <Cell ss:Index="10"><Data ss:Type="String">0..1</Data></Cell>
-    <Cell ss:Index="12"><Data ss:Type="String">Extension{#reportingOrganizationGroup}</Data></Cell>
-    <Cell><Data ss:Type="String">Y</Data></Cell>
+      ss:Type="String">MeasureReport.reporter.extension</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Extension{#reporterGroup}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s113"/>
-    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s109"/>
     <Cell ss:StyleID="s110"/>
     <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
     <Cell ss:StyleID="s112"/>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -1615,9 +1615,9 @@
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">group.identifier</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">group.code</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.group.identifier</Data></Cell>
+      ss:Type="String">MeasureReport.group.code</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -1647,34 +1647,6 @@
       ss:Type="String">MeasureReport.group.population</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..*</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:Index="13" ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s112"/>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">see Yan's notes</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s114"/>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">group.population.identifier</Data></Cell>
-    <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.group.population.identifier</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:Index="13" ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -1754,9 +1726,9 @@
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">group.population.patients</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">group.population.subjectResults</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.group.population.patients</Data></Cell>
+      ss:Type="String">MeasureReport.group.population.subjectResults</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..0</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -1811,8 +1783,8 @@
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s84"><Data ss:Type="String">group.measureScore.extension</Data></Cell>
-    <Cell ss:StyleID="s105" ss:Formula="=&quot;!&quot;&amp;R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">!MeasureReport.group.measureScore.extension</Data></Cell>
+    <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.group.measureScore.extension</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -1868,9 +1840,9 @@
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.identifier</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.code</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.group.stratifier.identifier</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.code</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -1900,35 +1872,6 @@
     <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.stratum</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
       ss:Type="String">MeasureReport.group.stratifier.stratum</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
-    <Cell ss:StyleID="s119"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s112"/>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="4" ss:StyleID="s114"/>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.stratum.identifier</Data></Cell>
-    <Cell ss:StyleID="s105" ss:Formula="=&quot;!&quot;&amp;R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">!MeasureReport.group.stratifier.stratum.identifier</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -2013,35 +1956,6 @@
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.stratum.population.identifier</Data></Cell>
-    <Cell ss:StyleID="s105" ss:Formula="=&quot;!&quot;&amp;R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">!MeasureReport.group.stratifier.stratum.population.identifier</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
-    <Cell ss:StyleID="s119"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s112"/>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="4" ss:StyleID="s114"/>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.stratum.population.code</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
       ss:Type="String">MeasureReport.group.stratifier.stratum.population.code</Data></Cell>
@@ -2100,9 +2014,9 @@
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.stratum.population.patients</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">group.stratifier.stratum.population.subjectResults</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.group.stratifier.stratum.population.patients</Data></Cell>
+      ss:Type="String">MeasureReport.group.stratifier.stratum.population.subjectResults</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..0</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -2158,6 +2072,37 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Index="2" ss:StyleID="Default"/>
+    <Cell ss:StyleID="Default"/>
+    <Cell ss:StyleID="s114"><Data ss:Type="String">strataltscoretype</Data></Cell>
+    <Cell ss:StyleID="s115"/>
+    <Cell ss:StyleID="s115"/>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">group.stratifier.stratum.measureScore.extension</Data></Cell>
+    <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
+      ss:Type="String">MeasureReport.group.stratifier.stratum.measureScore.extension</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Extension{#alternateScoreType}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:StyleID="s119"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s106"/>
+    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s107"/>
+    <Cell ss:StyleID="s108"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s110"/>
+    <Cell ss:StyleID="s112"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="Default"/>
     <Cell ss:Index="4" ss:StyleID="s114"><Data ss:Type="String">strataltscoretype</Data></Cell>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
@@ -2192,9 +2137,9 @@
     <Cell ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"><Data ss:Type="String">evaluatedResources</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">evaluatedResource</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.evaluatedResources</Data></Cell>
+      ss:Type="String">MeasureReport.evaluatedResource</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..0</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -6193,13 +6138,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>12</TopRowVisible>
-   <LeftColumnVisible>2</LeftColumnVisible>
+   <LeftColumnVisible>15</LeftColumnVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>39</ActiveRow>
-     <ActiveCol>7</ActiveCol>
+     <ActiveRow>14</ActiveRow>
+     <ActiveCol>21</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -6746,10 +6690,10 @@
  </Worksheet>
  <Worksheet ss:Name="Extensions">
   <Names>
-   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=Extensions!R1C1:R34C23"
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=Extensions!R1C1:R33C23"
     ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="23" ss:ExpandedRowCount="35" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="23" ss:ExpandedRowCount="34" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="65.25"
    ss:DefaultRowHeight="15">
    <Column ss:StyleID="s85" ss:Width="227.25"/>
@@ -6868,40 +6812,6 @@
       ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40">        <Font
         html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">Not published</Font>       </ss:Data></Comment><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="129.75">
-    <Cell ss:StyleID="s138"><Data ss:Type="String">reportingOrganizationGroup</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Resource</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">MeasureReport.reportingOrganization</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reporting Group</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Group)</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Group of practitioners responsible for a report</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">Group of practitioners responsible for a report. This extension is used to provide the capability to allow the participating practitioners to be documented.</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">To provide the capability  to determine what practitioners were responsible for the report data when there is more than a single practitioner.</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s107"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s112"><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s138"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -7737,13 +7647,14 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveCol>13</ActiveCol>
+     <ActiveCol>0</ActiveCol>
+     <RangeSelection>R2</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
-  <AutoFilter x:Range="R1C1:R34C23"
+  <AutoFilter x:Range="R1C1:R33C23"
    xmlns="urn:schemas-microsoft-com:office:excel">
   </AutoFilter>
  </Worksheet>

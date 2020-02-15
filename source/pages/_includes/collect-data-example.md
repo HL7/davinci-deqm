@@ -6,7 +6,7 @@ Payer Z acting in the role of the Consumer collect Patient Z's MRP data from Pro
 
 **Request using GET Syntax**
 
-`GET [base]/MeasureReport/measure-mrp/$collect-data?patient=Patient/patient-z&provider=Practitioner/provider-x&periodStart=2018-06-19`
+`GET [base]/MeasureReport/measure-mrp/$collect-data?subject=Patient/patient-z&provider=Practitioner/provider-x&periodStart=2018-06-19`
 
 **Request using POST Syntax**
 
@@ -19,7 +19,7 @@ Payer Z acting in the role of the Consumer collect Patient Z's MRP data from Pro
    "resourceType":"Parameters",
    "parameter":[
       {
-         "name":"patient",
+         "name":"subject",
          "valueUri":"Patient/patient-z"
       },
       {

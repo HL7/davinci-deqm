@@ -11,15 +11,12 @@ Payers and providers need common data specification, measure specification, repo
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
 |Coverage|DEQM Coverage Profile|[DEQM Coverage]|
-|DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest]|
-|DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement]|
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
 |MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
 |MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 
 <br />
 
@@ -29,9 +26,6 @@ Payers and providers need common data specification, measure specification, repo
 |---|---|
 |DEQM Alternate Score Type Extension|[Alternate Score Type]|
 |DEQM Certification Identifier Extension|[Certification Identifier]|
-|DEQM Data Collection Type Extension|[Data Collection Type]|
-|DEQM Do Not Perform Extension|[Do Not Perform]|
-|DEQM Reference Any Extension|[Reference Any]|
 |DEQM Reporting Vendor Extension|[Reporting Vendor]|
 |DEQM Reporting Group Extension|[Reporting Group]|
 

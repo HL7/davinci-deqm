@@ -1,0 +1,91 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "denominator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"denominator\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#denominator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "numerator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#numerator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "denominator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"denominator\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#denominator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "numerator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#numerator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "denominator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"denominator\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#denominator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+  "code" : "numerator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator\"); The code provided (http://terminology.hl7.org/CodeSystem/measure-population-type#numerator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

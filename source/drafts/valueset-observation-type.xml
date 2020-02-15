@@ -20,7 +20,7 @@
   <copyright value="This Content is created by the Da Vinci project and HL7.  No copyright acknowledgement is needed, nor are there any license terms to adhere to"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/v2/0203"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
       <concept>
  <code value="PRN"/>
  <display value="Provider number"/>

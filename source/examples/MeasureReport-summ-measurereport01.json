@@ -8,33 +8,32 @@
   },
   "status": "complete",
   "type": "summary",
-  "measure": {
-    "reference": "Measure/measure-mrp"
-  },
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
   "date": "2018-09-05T16:59:52.404Z",
   "period": {
     "start": "2018-08-01",
     "end": "2018-09-01"
   },
-  "reportingOrganization": {
+  "reporter": {
     "reference": "Organization/organization01"
   },
   "group": [
     {
-      "identifier": {
-        "system": "http://www.acme.org/groups",
-        "value": "112"
+      "code": {
+        "coding": [
+          {
+            "system": "http://example.org",
+            "code": "112",
+            "display": "112"
+          }
+        ]
       },
       "population": [
         {
-          "identifier": {
-            "system": "http://www.acme.org/populations",
-            "value": "11234"
-          },
           "code": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/measure-population",
+                "system": "http://example.org",
                 "code": "initial-population",
                 "display": "Initial Population"
               }
@@ -43,26 +42,39 @@
           "count": 100
         }
       ],
-      "measureScore": 100,
+      "measureScore": {
+        "value": 100
+      },
       "stratifier": [
         {
-          "identifier": {
-            "system": "http://www.acme.org/stratifiers",
-            "value": "4456"
-          },
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://example.org",
+                  "code": "4456",
+                  "display": "4456"
+                }
+              ]
+            }
+          ],
           "stratum": [
             {
-              "value": "male",
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/administrative-gender",
+                    "code": "male",
+                    "display": "Male"
+                  }
+                ]
+              },
               "population": [
                 {
-                  "identifier": {
-                    "system": "http://www.acme.org/stratifier-populations",
-                    "value": "8901"
-                  },
                   "code": {
                     "coding": [
                       {
-                        "system": "http://hl7.org/fhir/measure-population",
+                        "system": "http://example.org",
                         "code": "initial-population",
                         "display": "Initial Population"
                       }
@@ -71,7 +83,9 @@
                   "count": 50
                 }
               ],
-              "measureScore": 100
+              "measureScore": {
+                "value": 100
+              }
             }
           ]
         }

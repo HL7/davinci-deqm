@@ -30,7 +30,7 @@
                {
                   "code": "TAX",
                   "display": "Tax ID number",
-                  "system": "http://hl7.org/fhir/v2/0203"
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
                }
             ]
          },
@@ -51,7 +51,7 @@
             {
                "code": "ins",
                "display": "Insurance Company",
-               "system": "http://hl7.org/fhir/organization-type"
+               "system": "http://terminology.hl7.org/CodeSystem/organization-type"
             }
          ]
       }

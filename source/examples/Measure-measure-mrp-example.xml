@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Measure xmlns="http://hl7.org/fhir">
+  <id value="measure-mrp-example"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2018-09-21T13:20:51.000-07:00"/>
+  </meta>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example"/>
+  <version value="1.1.0"/>
+  <name value="DEQMMeasureMRPExample"/>
+  <status value="active"/>
+  <date value="2019-12-05T13:22:46-08:00"/>
+    <description value="Example Measure resource to demonstrate the framework for MRP"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+
+  <library value="http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example"/>
+  <group>
+    <description value="Example group to demonstrate the framework for MRP"/>
+    <population>
+      <code>
+        <coding>
+          <system                  value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+      </code>
+      <!-- 0..* Population criteria -->
+      <criteria>
+        <language value="text/cql"/>
+        <expression value="InitialPopulation1"/>
+      </criteria>
+    </population>
+    <stratifier>
+      <!-- 0..* Stratifier criteria for the measure -->
+      <code>
+        <coding>
+          <system value="http://fhir/example.org"/>
+          <code value="sde-sex"/>
+          <display value="SDE Sex"/>
+        </coding>
+      </code>
+      <!-- 0..* criteria -->
+    </stratifier>
+  </group>
+</Measure>

@@ -26,3 +26,70 @@ DaVinci DEQM Receiver Server CapabilityStatement - ind/summary measure report en
 DaVinci DEQM Reporter Client CapabilityStatement - post ind/summary measure report - support all profiles
 DaVinci DEQM Producer Client CapabilityStatement - submit data operation and Collect Data Initiator
 DaVinci DEQM Consumer Client CapabilityStatement - collect data operation Initiator
+git status
+
+
+update the examples in R4Ballot QA issues:
+
+[Zulip chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/known.20bad.20examples.20in.20Alerts.20guide/near/182684284)
+
+fix all examples add-in bundles
+
+use examples file directly in code blocks where able to ....
+
+~~~
+{% include_relative MeasureReport-summ-measurereport01.json %}
+~~~
+
+
+still to update:
+
+1. MRP
+   1. submit data examples for both Observation and Task (reassemble the parameters)  - Done!
+   1. Observation based individual MeasureReport  - cut and paste I think - Done !
+1. Col
+    1. submit data examples  (reassemble the parameters)  - done!
+    1. collect data examples  (reassemble the parameters) - done!
+    1. COL individual MeasureReport  ( wait for Robert ) - done!
+    1. Col summary report - done
+
+white space for recommit
+
+
+# Zulip re QA issues for ballot:
+
+https://chat.fhir.org/#narrow/pm-with/191316,193599-pm/near/183463740
+
+updated Melva R4 site is:
+
+http://build.fhir.org/ig/HL7/davinci-deqm/branches/R4-Branch/ 
+
+Details: build logs | published | qa: broken links = 5, errors = 12, warn = 0, info = 22
+
+----
+
+## Pre-Ballot Checklist DEQM R4
+
+1. Ballot Reconciliation for previous ballot complete (if applicable) and reconciliation package posted to Ballot Desktop	Project Manager or WG Co-Chair	Ballot reconciliation complete
+
+   Yes in ballot Manager
+
+1. WG approves content for balloting or publication	Sponsoring Work Group
+
+  Yes - see CQI minutes
+
+1. FHIR IG Ballot - Publication Readiness completed and submitted	FHIR IG Technical Resource
+
+  Fill out the Checklist
+
+1. Content review during QA period	FMG/FHIR IG Facilitator 	qa.html is clean and content is of sufficient quality to ballot
+
+   ? ask Bryn
+
+
+bryn@databaseconsultinggroup.com
+vietnguyen@stratametrics.com
+
+
+fix path 2020feb
+change example.org to http://example.org

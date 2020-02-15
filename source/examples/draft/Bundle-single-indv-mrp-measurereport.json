@@ -1,0 +1,719 @@
+{
+   "id": "single-indv-mrp-report",
+   "entry": [
+      {
+         "fullUrl": "urn:uuid:59ee3278-16fd-11ea-a174-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "MeasureReport"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+               ]
+            },
+            "extension": [
+               {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "valueIdentifier": {
+                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                     "value": "0015HQN9BD3304E"
+                  }
+               },
+               {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "valueReference": {
+                     "reference": "urn:uuid:59eea64b-16fd-11ea-a3ff-4ccc6a181ed3"
+                  }
+               }
+            ],
+            "date": "2018-09-05T16:59:52.404Z",
+            "evaluatedResource": [
+               {
+                  "reference": "urn:uuid:59ee8062-16fd-11ea-ab32-4ccc6a181ed3"
+               }
+            ],
+            "group": [
+               {
+                  "code": {
+                     "coding": [
+                        {
+                           "code": "112",
+                           "display": "112",
+                           "system": "http://example.org"
+                        }
+                     ]
+                  },
+                  "measureScore": {
+                     "value": 100
+                  },
+                  "population": [
+                     {
+                        "code": {
+                           "coding": [
+                              {
+                                 "code": "initial-population",
+                                 "display": "Initial Population",
+                                 "system": "http://example.org"
+                              }
+                           ]
+                        }
+                     }
+                  ]
+               }
+            ],
+            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+            "period": {
+               "end": "2018-09-01",
+               "start": "2018-08-01"
+            },
+            "reporter": {
+               "reference": "urn:uuid:4861d01f-019c-3dac-a153-8334e50919f9"
+            },
+            "status": "complete",
+            "subject": {
+               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+            },
+            "type": "individual",
+            "resourceType": "MeasureReport"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:59ee8062-16fd-11ea-ab32-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "Task"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
+               ]
+            },
+            "authoredOn": "2018-09-25T14:24:23.584Z",
+            "code": {
+               "coding": [
+                  {
+                     "code": "1111F",
+                     "display": "Medication Reconciliation",
+                     "system": "http://www.ama-assn.org/go/cpt"
+                  }
+               ]
+            },
+            "encounter": {
+               "reference": "urn:uuid:ce646282-59b4-4889-b2fc-a517229bcbb0"
+            },
+            "executionPeriod": {
+               "end": "2017-06-11",
+               "start": "2017-06-11"
+            },
+            "for": {
+               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+            },
+            "identifier": [
+               {
+                  "system": "http://example.org/tasks",
+                  "value": "19009"
+               }
+            ],
+            "intent": "plan",
+            "owner": {
+               "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000a0"
+            },
+            "priority": "routine",
+            "status": "completed",
+            "resourceType": "Task"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:59eea64a-16fd-11ea-8650-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "Coverage"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+               ]
+            },
+            "beneficiary": {
+               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+            },
+            "payor": [
+               {
+                  "reference": "urn:uuid:59eea64c-16fd-11ea-bab5-4ccc6a181ed3"
+               }
+            ],
+            "policyHolder": {
+               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+            },
+            "relationship": {
+               "coding": [
+                  {
+                     "code": "self"
+                  }
+               ]
+            },
+            "status": "active",
+            "subscriber": {
+               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+            },
+            "subscriberId": "A123456789",
+            "resourceType": "Coverage"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:59eea64b-16fd-11ea-a3ff-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "Organization"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+               ]
+            },
+            "active": true,
+            "address": [
+               {
+                  "city": "Grand Rapids",
+                  "country": "USA",
+                  "line": [
+                     "160 Glen Eagles Road"
+                  ],
+                  "postalCode": "49503",
+                  "state": "MI"
+               }
+            ],
+            "identifier": [
+               {
+                  "assigner": {
+                     "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.2",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "TAX",
+                           "display": "Tax ID number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "official",
+                  "value": "456789124"
+               }
+            ],
+            "name": "DV Quality Measure Data Reporter",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "(+1) 616-555-1212"
+               }
+            ],
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "other",
+                        "display": "Other",
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Organization"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:59eea64c-16fd-11ea-bab5-4ccc6a181ed3",
+         "request": {
+            "method": "POST",
+            "url": "Organization"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+               ]
+            },
+            "active": true,
+            "address": [
+               {
+                  "city": "Grand Rapids",
+                  "country": "USA",
+                  "line": [
+                     "160 Glen Eagles Road"
+                  ],
+                  "postalCode": "49503",
+                  "state": "MI"
+               }
+            ],
+            "identifier": [
+               {
+                  "assigner": {
+                     "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.2",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "TAX",
+                           "display": "Tax ID number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "official",
+                  "value": "456789125"
+               }
+            ],
+            "name": "DVPayer04",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "(+1) 616-555-1212"
+               }
+            ],
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "ins",
+                        "display": "Insurance Company",
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Organization"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9",
+         "request": {
+            "method": "POST",
+            "url": "Patient"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+               ]
+            },
+            "extension": [
+               {
+                  "extension": [
+                     {
+                        "url": "ombCategory",
+                        "valueCoding": {
+                           "code": "2106-3",
+                           "display": "White",
+                           "system": "urn:oid:2.16.840.1.113883.6.238"
+                        }
+                     },
+                     {
+                        "url": "text",
+                        "valueString": "White"
+                     }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+               },
+               {
+                  "extension": [
+                     {
+                        "url": "ombCategory",
+                        "valueCoding": {
+                           "code": "2186-5",
+                           "display": "Not Hispanic or Latino",
+                           "system": "urn:oid:2.16.840.1.113883.6.238"
+                        }
+                     },
+                     {
+                        "url": "text",
+                        "valueString": "Not Hispanic or Latino"
+                     }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+               },
+               {
+                  "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+                  "valueString": "Hettie215 Johnston597"
+               },
+               {
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                  "valueCode": "M"
+               },
+               {
+                  "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+                  "valueAddress": {
+                     "city": "Reading",
+                     "country": "US",
+                     "state": "Massachusetts"
+                  }
+               }
+            ],
+            "address": [
+               {
+                  "extension": [
+                     {
+                        "extension": [
+                           {
+                              "url": "latitude",
+                              "valueDecimal": 42.41560920330857
+                           },
+                           {
+                              "url": "longitude",
+                              "valueDecimal": -70.93765725466737
+                           }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+                     }
+                  ],
+                  "city": "Boston",
+                  "country": "US",
+                  "line": [
+                     "624 Williamson Ville"
+                  ],
+                  "postalCode": "02108",
+                  "state": "MA"
+               }
+            ],
+            "birthDate": "1942-08-10",
+            "communication": [
+               {
+                  "language": {
+                     "coding": [
+                        {
+                           "code": "en-US",
+                           "display": "English (Region=United States)",
+                           "system": "urn:ietf:bcp:47"
+                        }
+                     ],
+                     "text": "English (Region=United States)"
+                  }
+               }
+            ],
+            "gender": "male",
+            "identifier": [
+               {
+                  "system": "https://github.com/synthetichealth/synthea",
+                  "value": "f605b676-acb4-4cb0-bd77-f8c87f7b83a2"
+               },
+               {
+                  "system": "http://hospital.smarthealthit.org",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "MR",
+                           "display": "Medical Record Number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ],
+                     "text": "Medical Record Number"
+                  },
+                  "value": "f605b676-acb4-4cb0-bd77-f8c87f7b83a2"
+               },
+               {
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "SS",
+                           "display": "Social Security Number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ],
+                     "text": "Social Security Number"
+                  },
+                  "value": "999-75-8071"
+               },
+               {
+                  "system": "urn:oid:2.16.840.1.113883.4.3.25",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "DL",
+                           "display": "Driver's license Number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ],
+                     "text": "Driver's license Number"
+                  },
+                  "value": "S99968294"
+               },
+               {
+                  "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "PPN",
+                           "display": "Passport Number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ],
+                     "text": "Passport Number"
+                  },
+                  "value": "X86200374X"
+               }
+            ],
+            "maritalStatus": {
+               "coding": [
+                  {
+                     "code": "S",
+                     "display": "Never Married",
+                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                  }
+               ],
+               "text": "Never Married"
+            },
+            "multipleBirthBoolean": false,
+            "name": [
+               {
+                  "family": "Hegmann834",
+                  "given": [
+                     "Royce974"
+                  ],
+                  "prefix": [
+                     "Mr."
+                  ],
+                  "use": "official"
+               }
+            ],
+            "telecom": [
+               {
+                  "system": "phone",
+                  "use": "home",
+                  "value": "555-539-7855"
+               }
+            ],
+            "resourceType": "Patient"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:ce646282-59b4-4889-b2fc-a517229bcbb0",
+         "request": {
+            "method": "POST",
+            "url": "Encounter"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+               ]
+            },
+            "class": {
+               "code": "EMER",
+               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+            },
+            "location": [
+               {
+                  "location": {
+                     "display": "NORTH SHORE MEDICAL CENTER -",
+                     "reference": "urn:uuid:2e669d59-a118-4272-aa5f-640d53001d21"
+                  }
+               }
+            ],
+            "participant": [
+               {
+                  "individual": {
+                     "display": "Dr. Carolann504 Heller342",
+                     "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000a0"
+                  }
+               }
+            ],
+            "period": {
+               "end": "1966-12-05T15:04:34-08:00",
+               "start": "1966-12-05T13:19:34-08:00"
+            },
+            "serviceProvider": {
+               "display": "NORTH SHORE MEDICAL CENTER -",
+               "reference": "urn:uuid:4861d01f-019c-3dac-a153-8334e50919f9"
+            },
+            "status": "finished",
+            "subject": {
+               "display": "Mr. Royce974 Hegmann834",
+               "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+            },
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "22298006",
+                        "display": "Myocardial Infarction",
+                        "system": "http://snomed.info/sct"
+                     }
+                  ],
+                  "text": "Myocardial Infarction"
+               }
+            ],
+            "resourceType": "Encounter"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:0000016d-235f-39b3-0000-0000000000a0",
+         "request": {
+            "method": "POST",
+            "url": "Practitioner"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+               ]
+            },
+            "active": true,
+            "address": [
+               {
+                  "city": "SALEM",
+                  "country": "US",
+                  "line": [
+                     "81 HIGHLAND AVENUE"
+                  ],
+                  "postalCode": "01970",
+                  "state": "MA"
+               }
+            ],
+            "gender": "female",
+            "identifier": [
+               {
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "160"
+               }
+            ],
+            "name": [
+               {
+                  "family": "Heller342",
+                  "given": [
+                     "Carolann504"
+                  ],
+                  "prefix": [
+                     "Dr."
+                  ]
+               }
+            ],
+            "telecom": [
+               {
+                  "extension": [
+                     {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                        "valueBoolean": true
+                     }
+                  ],
+                  "system": "email",
+                  "use": "work",
+                  "value": "Carolann504.Heller342@example.com"
+               }
+            ],
+            "resourceType": "Practitioner"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:4861d01f-019c-3dac-a153-8334e50919f9",
+         "request": {
+            "method": "POST",
+            "url": "Organization"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+               ]
+            },
+            "active": true,
+            "address": [
+               {
+                  "city": "SALEM",
+                  "country": "US",
+                  "line": [
+                     "81 HIGHLAND AVENUE"
+                  ],
+                  "postalCode": "01970",
+                  "state": "MA"
+               }
+            ],
+            "identifier": [
+               {
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "PRN",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "official",
+                  "value": "9999999999"
+               }
+            ],
+            "name": "NORTH SHORE MEDICAL CENTER -",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "9787411215"
+               }
+            ],
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "prov",
+                        "display": "Healthcare Provider",
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                     }
+                  ],
+                  "text": "Healthcare Provider"
+               }
+            ],
+            "resourceType": "Organization"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:2e669d59-a118-4272-aa5f-640d53001d21",
+         "request": {
+            "method": "POST",
+            "url": "Location"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+               ]
+            },
+            "address": {
+               "city": "SALEM",
+               "country": "US",
+               "line": [
+                  "81 HIGHLAND AVENUE"
+               ],
+               "postalCode": "01970",
+               "state": "MA"
+            },
+            "managingOrganization": {
+               "display": "NORTH SHORE MEDICAL CENTER -",
+               "reference": "urn:uuid:4861d01f-019c-3dac-a153-8334e50919f9"
+            },
+            "name": "NORTH SHORE MEDICAL CENTER -",
+            "position": {
+               "latitude": 42.50128,
+               "longitude": -70.897502
+            },
+            "status": "active",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "9787411215"
+               }
+            ],
+            "resourceType": "Location"
+         }
+      }
+   ],
+   "timestamp": "2019-12-05T01:19:56.592832Z",
+   "type": "transaction",
+   "resourceType": "Bundle"
+}

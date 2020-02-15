@@ -1,0 +1,85 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "summ-measurereport01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+    ]
+  },
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+  "date": "2018-09-05T16:59:52.404Z",
+  "period": {
+    "start": "2018-08-01",
+    "end": "2018-09-01"
+  },
+  "reporter": {
+    "reference": "Organization/organization01"
+  },
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://example.org",
+            "code": "112",
+            "display": "112"
+          }
+        ]
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://example.org",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 100
+        }
+      ],
+      "measureScore": {
+        "value": 100
+      },
+      "stratifier": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://example.org",
+                "code": "4456",
+                "display": "4456"
+              }
+            ]
+          },
+          "stratum": [
+            {
+              "value": "male",
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://example.org",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 50
+                }
+              ],
+              "measureScore": {
+                "value": 100
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

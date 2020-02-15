@@ -69,7 +69,7 @@ Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQ
 
 ## Negation Patterns for Quality Measures
 
-Refer to the Quality Measure Implementation Guide for guidance on [negation patterns in quality measurements].  Note that implementations processing negated data may not be returned with a single code, but rather a value set identifier represented by the [Valueset Reference] extension, and should consider data with the appropriate value set identifier as satisfying the criteria for value set membership.  
+​Refer to the Quality Measure Implementation Guide for guidance on [negation patterns in quality measurements]. Note that implementations processing negated data may not be returned with a single code, but rather a value set identifier represented by the [Valueset Reference extension] which are part of the QI Core profiles, and should consider data with the appropriate value set identifier as satisfying the criteria for value set membership.
 
 ## Must Support
 

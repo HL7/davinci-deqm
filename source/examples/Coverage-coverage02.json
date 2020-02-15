@@ -7,6 +7,7 @@
       ],
       "versionId": "2"
    },
+   "status":"active",
    "beneficiary": {
       "reference": "Patient/patient02"
    },

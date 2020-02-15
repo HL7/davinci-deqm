@@ -1,0 +1,64 @@
+HTTP/1.1 200 OK
+[other headers]
+
+{
+"resourceType": "Bundle",
+"id": "e9c72d75-2410-45f3-b1cf-eb73d04d3300",
+"type": "transaction-response",
+"link": [
+{
+"relation": "self",
+"url": "http://hapi.fhir.org/baseR4"
+}
+],
+"entry": [
+{
+"response": {
+"status": "201 Created",
+"location": "MeasureReport/223260/_history/1",
+"etag": "1",
+"lastModified": "2019-12-06T09:11:27.308+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Organization/223261/_history/1",
+"etag": "1",
+"lastModified": "2019-12-06T09:11:27.308+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Patient/223262/_history/1",
+"etag": "1",
+"lastModified": "2019-12-06T09:11:27.308+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Encounter/223263/_history/1",
+"etag": "1",
+"lastModified": "2019-12-06T09:11:27.308+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Location/223264/_history/1",
+"etag": "1",
+"lastModified": "2019-12-06T09:11:27.308+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "MedicationAdministration/223265/_history/1",
+"etag": "1",
+"lastModified": "2019-12-06T09:11:27.308+00:00"
+}
+}
+]
+}

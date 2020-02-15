@@ -1,11 +1,11 @@
-title: Data Exchange For Quality Measures STU1 for FHIR STU3
+title: Data Exchange For Quality Measures STU2 for FHIR R4
 copyrightyear: "2019" # copyright date for footer
 historypath : "http://hl7.org/fhir/us/davinci-deqm/history.cfml" # complete path to IG history file
 changelink: http://hl7.org/fhir-issues
 summaries: false #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials
-build: version # choice of ci|ballot|version
-ballot: STU1    #STU version of IG ( if needed for publishing HL7 guides)
+build: ci  # choice of ci|ballot|version
+ballot: STU2    #STU version of IG ( if needed for publishing HL7 guides)
 hl7_ig: true #true if HL7 IG
 showXML: true  #'true' if want xml tab'
 showTTL: true  #'true' if want ttl tab'
@@ -17,9 +17,6 @@ showPsuedoXML: # 'true' if want to display Psuedo xml profile view'
 default_profile_view: 1  # choice of 0|1|2|3 for summary|differential|full|all views in profile
 summary_view_pages:  # to show summaries as default view for comment ballot
 ballot_pages: # list of pages to highlight for balloters/comments  names = html pages for ig pub generated artifacts and file names for pages
-hedis_r3: http://build.fhir.org/ig/cqframework/hedis-ig/
-cqfm_r3:  http://hl7.org/fhir/us/cqfmeasures/STU1/
-r4: http://hl7.org/fhir/R4/
 example_types:
 - Account
 - ActivityDefinition

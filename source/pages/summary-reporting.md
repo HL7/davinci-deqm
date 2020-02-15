@@ -56,7 +56,7 @@ for a Bundle Transaction:
 
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See POST summary Report Example" %}
 
-See the [DEQM Summary MeasureReport Profile page](StructureDefinition-summary-measurereport-deqm.html#examples) for an example of a Summary MeasureReport with counts for all populations specified in an eCQM.
+for an example of a Summary MeasureReport with counts for multiple populations and stratifiers  specified in an eCQM see the [Medicare Stratification Example] and the  [COL Summary MeasureReport].
 
 <br />
 

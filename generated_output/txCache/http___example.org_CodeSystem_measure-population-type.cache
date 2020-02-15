@@ -1,0 +1,91 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-administrative"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-administrative\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-administrative) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-medical"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-medical\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-medical) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-supplemental"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-supplemental\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-supplemental) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-administrative"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-administrative\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-administrative) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-medical"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-medical\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-medical) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-supplemental"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-supplemental\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-supplemental) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-administrative"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-administrative\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-administrative) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-medical"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-medical\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-medical) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/measure-population-type",
+  "code" : "numerator-supplemental"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/measure-population-type\" is not known (encountered paired with code = \"numerator-supplemental\"); The code provided (http://example.org/CodeSystem/measure-population-type#numerator-supplemental) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

@@ -1,0 +1,364 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "group-1"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"group-1\"); The code provided (http://fhir/example.org#group-1) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-ethnicity"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-ethnicity\"); The code provided (http://fhir/example.org#sde-ethnicity) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-race"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-race\"); The code provided (http://fhir/example.org#sde-race) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-sex"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-sex\"); The code provided (http://fhir/example.org#sde-sex) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer123"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer123\"); The code provided (http://fhir/example.org#Payer123) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer456"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer456\"); The code provided (http://fhir/example.org#Payer456) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer789"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer789\"); The code provided (http://fhir/example.org#Payer789) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-payer"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-payer\"); The code provided (http://fhir/example.org#sde-payer) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://fhir/example.org#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "numerator"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"numerator\"); The code provided (http://fhir/example.org#numerator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "denominator"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"denominator\"); The code provided (http://fhir/example.org#denominator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://fhir/example.org#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "numerator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"numerator\"); The code provided (http://fhir/example.org#numerator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "denominator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"denominator\"); The code provided (http://fhir/example.org#denominator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-sex"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-sex\"); The code provided (http://fhir/example.org#sde-sex) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "group-1"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"group-1\"); The code provided (http://fhir/example.org#group-1) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-ethnicity"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-ethnicity\"); The code provided (http://fhir/example.org#sde-ethnicity) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-payer"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-payer\"); The code provided (http://fhir/example.org#sde-payer) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer123"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer123\"); The code provided (http://fhir/example.org#Payer123) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer456"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer456\"); The code provided (http://fhir/example.org#Payer456) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer789"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer789\"); The code provided (http://fhir/example.org#Payer789) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-race"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-race\"); The code provided (http://fhir/example.org#sde-race) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "initial-population",
+  "display" : "Initial Population"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://fhir/example.org#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "numerator",
+  "display" : "Numerator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"numerator\"); The code provided (http://fhir/example.org#numerator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "denominator",
+  "display" : "Denominator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"denominator\"); The code provided (http://fhir/example.org#denominator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "initial-population"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"initial-population\"); The code provided (http://fhir/example.org#initial-population) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "numerator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"numerator\"); The code provided (http://fhir/example.org#numerator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "denominator"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"denominator\"); The code provided (http://fhir/example.org#denominator) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-sex"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-sex\"); The code provided (http://fhir/example.org#sde-sex) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "group-1"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"group-1\"); The code provided (http://fhir/example.org#group-1) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-ethnicity"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-ethnicity\"); The code provided (http://fhir/example.org#sde-ethnicity) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-payer"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-payer\"); The code provided (http://fhir/example.org#sde-payer) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer123"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer123\"); The code provided (http://fhir/example.org#Payer123) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer456"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer456\"); The code provided (http://fhir/example.org#Payer456) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "Payer789"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"Payer789\"); The code provided (http://fhir/example.org#Payer789) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir/example.org",
+  "code" : "sde-race"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://fhir/example.org\" is not known (encountered paired with code = \"sde-race\"); The code provided (http://fhir/example.org#sde-race) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

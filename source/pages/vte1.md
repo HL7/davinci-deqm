@@ -20,8 +20,8 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |---|---|---|
 |Condition|QI Core Condition Profile|[QI Core Condition]|
 |Coverage|QI Core Coverage Profile|[QI Core Coverage]|
-|DeviceRequest|DEQM DeviceRequest Profile|[DEQM DeviceRequest]|
-|DeviceUseStatement|DEQM DeviceUseStatement Profile|[DEQM DeviceUseStatement]|
+|DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest]|
+|DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter]|
 |Library|CQFM Library Profile|[CQFM Library]|
 |Location|QI Core Location Profile|[QI Core Location]|
@@ -33,9 +33,9 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+|Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
-|ProcedureRequest|QI Core ProcedureRequest Profile|[QI Core ProcedureRequest]|
+|ServiceRequest|QI Core ServiceRequest Profile|[QI Core ServiceRequest]|
 
 
 ## Graph of VTE-1 Resources
@@ -88,19 +88,19 @@ When a patient has an inpatient encounter where the encounter is <2 days long, o
 
 {% include img.html img="DEQM Resource Diagram - VTE4.jpg" caption = "Figure 3-17 MeasureReport Using Encounter" %}
 
-### Option 5: Measure Report Using Encounter and Principle Diagnosis
+### Option 5: Measure Report Using Encounter and Principal Diagnosis
 {:.no_toc}
 
-When a patient has an inpatient encounter and is principally diagnosed with either a mental health condition, or a stroke (either hemorrhagic or ischemic), they are *excluded* from the denominator of the measure. Codes for the diagnoses will come from the respective valuesets from the measure. The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has had this Encounter with these principle diagnosis.
+When a patient has an inpatient encounter and is principally diagnosed with either a mental health condition, or a stroke (either hemorrhagic or ischemic), they are *excluded* from the denominator of the measure. Codes for the diagnoses will come from the respective valuesets from the measure. The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has had this Encounter with these principal diagnosis.
 
 {% include img.html img="DEQM Resource Diagram - VTE5.jpg"  caption = "Figure 3-18 MeasureReport Using Encounter with Principal Diagnosis" %}
 
-### Option 6: Measure Report Using Procedure/ProcedureRequest and Encounter
+### Option 6: Measure Report Using Procedure/ServiceRequest and Encounter
 {:.no_toc}
 
-When a patient has an inpatient encounter, during which they are provided Comfort Measures within 1 day of being admitted or 1 day of a surgical procedure for which they were admitted, these Comfort Measures are *excluded* from the denominator of the measure. for the measure. The surgical procedure is defined by the presence of a code from the “general or neuraxial anesthesia” value set present in the measure. The Comfort measures are represented by either a Procedure or a ProcedureRequest with a code from the “Comfort Measures” value set present in the measure.  The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has had intervention comfort measures.
+When a patient has an inpatient encounter, during which they are provided Comfort Measures within 1 day of being admitted or 1 day of a surgical procedure for which they were admitted, these Comfort Measures are *excluded* from the denominator of the measure. for the measure. The surgical procedure is defined by the presence of a code from the “general or neuraxial anesthesia” value set present in the measure. The Comfort measures are represented by either a Procedure or a ServiceRequest with a code from the “Comfort Measures” value set present in the measure.  The following resource graph diagram shows what would be included with a DEQM Individual MeasureReport when the patient has had intervention comfort measures.
 
-{% include img.html img="DEQM Resource Diagram - VTE6.jpg" caption = "Figure 3-19 MeasureReport Using Procedure/ProcedureRequest and Encounter" %}
+{% include img.html img="DEQM Resource Diagram - VTE6.jpg" caption = "Figure 3-19 MeasureReport Using Procedure/ServiceRequest and Encounter" %}
 
 ### Option 7: Measure Report Using MedicationRequest, DeviceRequest, MedicationStatement or DeviceUseStatement
 {:.no_toc}

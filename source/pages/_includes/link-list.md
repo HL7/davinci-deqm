@@ -4,12 +4,11 @@
 [^4]: Adapting Clinical Guidelines for the Digital Age. Retrieved from <https://www.cdc.gov/ddphss/clinical-guidelines/index.html>
 [^5]: May includes DEQM defined code systems and externally defined code systems
 [^6]: This extension not needed because the data element is an element in the R4 Measure Resource.
-[^8]: Changes to the QI-Core Observation and Task profiles are being proposed based on the HEDIS Task and Observation profiles that may lead to these profiles being replaced by the QI Core profiles.
-[^9]: Changes to QI Core and US Core Organization and Practitioner  profiles are being proposed based on the DEQM Organization and Practitioner profiles that may lead to this profiles being replaced by the QI Core profile.
+[^9]: Changes to QI Core and US Core Organization profiles are being proposed based on the DEQM Organization profile that may lead to this profiles being replaced by the QI Core profile.
 [^10]: HEDIS measures referenced are *example content only* for the purposes of working through standards. Organizations should not be using the HEDIS specified measures for the actual measurement.
-[$collect-data]: OperationDefinition-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
-[$data-requirements]: {{site.data.fhir.path}}measure-operations.html#data-requirements "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
-[$submit-data]:OperationDefinition-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
+[$collect-data]: {{site.data.fhir.path}}measure-operation-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
+[$data-requirements]: {{site.data.fhir.path}}measure-operation-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
+[$submit-data]:{{site.data.fhir.path}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Argonaut Clinical Data Subscriptions]: https://argonautwiki.hl7.org/Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Capability statements]: capstatements.html
 [CDS Hooks]: https://cds-hooks.org/
@@ -23,8 +22,8 @@
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
-[CQFM Library]: {{site.cqfm_r3}}StructureDefinition-library-cqfm.html
-[CQFM Measure]: {{site.cqfm_r3}}StructureDefinition-measure-cqfm.html
+[CQFM Library]: {{site.data.fhir.cqfm}}StructureDefinition-library-cqfm.html
+[CQFM Measure]: {{site.data.fhir.cqfm}}StructureDefinition-measure-cqfm.html
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
@@ -33,24 +32,22 @@
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
-[DEQM DeviceUseStatement]: StructureDefinition-deviceusestatement-deqm.html
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
 [DEQM Organization]: StructureDefinition-organization-deqm.html
-[DEQM Practitioner]: StructureDefinition-practitioner-deqm.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
-[FHIR operations]: {{site.r4}}operations.html "Extended Operations on the RESTful API"
-[FHIR Version 3.0.2]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
+[FHIR operations]: {{site.data.fhir.path}}operations.html "Extended Operations on the RESTful API"
+[FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Framework]: framework.html
 [General Guidance]: guidance.html  "General Guidance Page"
-[HEDIS Colorectal Cancer Screening/CMS130]: {{site.hedis_r3}}cql/stu3/col-logic.cql.html
-[HEDIS Measure Description for Colorectal Cancer Screening]: {{site.hedis_r3}}cql/stu3/col-logic.cql.html
-[HEDIS]: {{site.hedis_r3}}index.html
+[HEDIS Colorectal Cancer Screening/CMS130]: {{site.hedis_r4}}cql/stu3/col-logic.cql.html
+[HEDIS Measure Description for Colorectal Cancer Screening]: {{site.hedis_r4}}cql/stu3/col-logic.cql.html
+[HEDIS]: https://github.com/cqframework/hedis-ig
 [Home]: index.html "Home Page"
 [Individual Measure Reporting Interactions]: indv-reporting.html
 [Individual Reporting]: indv-reporting.html
@@ -62,33 +59,40 @@
 [Medication Reconciliation (MRP)]: mrp.html
 [Medication Reconciliation Post-Discharge (MRP)]: mrp.html
 [MRP Individual MeasureReport]: mrp.html#individual-measurereport
+[COL Individual MeasureReport]: col.html#individual-measurereport
+[VTE Individual MeasureReport]: vte1.html#individual-measurereport
+[MRP Summary MeasureReport]: mrp.html#summary-measurereport
+[COL Summary MeasureReport]: col.html#summary-measurereport
 [MRP Submit Data Operation]: mrp.html#data-exchange-using-the-submit-data-operation
+[COL Data Requirements Operation]: col.html#data-requirements
+[COL Submit Data Operation]: col.html#submit-data
+[COL Collect Data Operation]: col.html#collect-data
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
 [Not Done]: {{site.data.fhir.path}}extension-event-notdone.html
 [NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1
-[Operations]: operations.html "Operations Page"
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
 [QI Core *Must Support*]: {{site.data.fhir.qicore}}index.html#mustsupport "QI Core definition of *Must Support*"
 [QI Core Condition]: {{site.data.fhir.qicore}}StructureDefinition-qicore-condition.html
 [QI Core Coverage]: {{site.data.fhir.qicore}}StructureDefinition-qicore-coverage.html
-[QI Core DiagnosticReport]:{{site.data.fhir.qicore}}StructureDefinition-qicore-diagnosticreport.html
+[QI Core DeviceUseStatement]:{{site.data.fhir.qicore}}StructureDefinition-qicore-deviceusestatement.html
+[QI Core DeviceRequest]: {{site.data.fhir.qicore}}StructureDefinition-qicore-devicerequest.html
+[QI Core DiagnosticReport]:{{site.data.fhir.qicore}}StructureDefinition-qicore-diagnosticreport-lab.html
 [QI Core Encounter]: {{site.data.fhir.qicore}}StructureDefinition-qicore-encounter.html
 [QI Core Location]: {{site.data.fhir.qicore}}StructureDefinition-qicore-location.html
 [QI Core Observation]: {{site.data.fhir.qicore}}StructureDefinition-qicore-observation.html
 [QI Core Patient]: {{site.data.fhir.qicore}}StructureDefinition-qicore-patient.html
+[QI Core Practitioner]: {{site.data.fhir.qicore}}StructureDefinition-qicore-practitioner.html
 [QI Core Procedure]: {{site.data.fhir.qicore}}StructureDefinition-qicore-procedure.html
-[QI Core ProcedureRequest]: {{site.data.fhir.qicore}}StructureDefinition-qicore-procedurerequest.html
+[QI Core ServiceRequest]: {{site.data.fhir.qicore}}StructureDefinition-qicore-servicerequest.html
 [QI Core Task]: {{site.data.fhir.qicore}}StructureDefinition-qicore-task.html
 [QI Core Profiles]: {{site.data.fhir.qicore}}index.html
 [QI Core]: {{site.data.fhir.qicore}}index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
-[Quality Measure Implementation Guide]: {{site.cqfm_r3}}index.html
-[Quality Reporting]: {{site.r4}}clinicalreasoning-quality-reporting.html
-[Reference Any]: StructureDefinition-extension-referenceAny.html
-[Reporting Individual Data]: {{site.r4}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
+[Quality Measure Implementation Guide]: {{site.data.fhir.cqfm}}index.html
+[Quality Reporting]: {{site.data.fhir.path}}clinicalreasoning-quality-reporting.html
+[Reporting Individual Data]: {{site.data.fhir.path}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
 [Reporting Vendor]: StructureDefinition-extension-reportingVendor.html
-[Reporting Group]: StructureDefinition-extension-reportingOrganizationGroup.html
 [SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
 [Subscription]: {{site.data.fhir.path}}subscription.html
@@ -102,6 +106,10 @@
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
 [following rules]: {{site.data.fhir.path}}references.html#contained
-[negation patterns in quality measurements]: {{site.cqfm_r3}}using-cql.html
-[Valueset Reference]: {{site.data.fhir.path}}extension-valueset-reference.html
+[Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
+[Reporting Group]: StructureDefinition-extension-reporterGroup.html
+[Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html
+[negation patterns in quality measurements]: {{site.data.fhir.cqfm}}using-cql.html
 [transaction response]: {{site.data.fhir.path}}/http.html#transaction-response
+[Medicare Stratification Example]: MeasureReport-summ-medicare-stratification-example.html
+[Examples]: all-examples.html

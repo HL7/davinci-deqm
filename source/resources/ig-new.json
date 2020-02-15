@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.davinci-deqm-1.0.0",
+  "id" : "hl7.fhir.us.davinci-deqm-1.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/resources"
@@ -17,11 +17,11 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.0.0",
-  "version" : "1.0.0",
-  "name" : "Data Exchange For Quality Measures STU1 for FHIR STU3",
+  "url" : "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0",
+  "version" : "1.1.1",
+  "name" : "DataExchangeForQualityMeasuresSTU2forFHIRR4ImplementationGuide",
+  "title" : "Data Exchange For Quality Measures STU2 for FHIR R4",
   "status" : "draft",
-  "experimental" : true,
   "publisher" : "HL7 International - Clinical Quality Information Work Group",
   "contact" : [{
     "telecom" : [{
@@ -35,20 +35,22 @@
       "code" : "US"
     }]
   }],
+  "copyright" : "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
   "packageId" : "hl7.fhir.us.davinci-deqm",
   "license" : "CC0-1.0",
-  "fhirVersion" : ["3.0.2"],
+  "fhirVersion" : ["4.0.1",
+  "4.0.1"],
   "dependsOn" : [{
     "id" : "qicore",
     "uri" : "http://hl7.org/fhir/us/qicore",
     "packageId" : "hl7.fhir.us.qicore",
-    "version" : "3.2.0"
+    "version" : "3.3.0"
   },
   {
     "id" : "uscore",
     "uri" : "http://hl7.org/fhir/us/core",
     "packageId" : "hl7.fhir.us.core",
-    "version" : "2.0.0"
+    "version" : "3.1.0"
   },
   {
     "id" : "cqfm",
@@ -58,36 +60,31 @@
   }],
   "definition" : {
     "grouping" : [{
-      "id" : "p1",
       "name" : "base"
     }],
     "resource" : [{
       "reference" : {
         "reference" : "Organization/organization02"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Patient/patient02"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Location/location03"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "MeasureReport/summ-measurereport01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
@@ -100,377 +97,367 @@
       "reference" : {
         "reference" : "MeasureReport/datax-measurereport02"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Parameters/mrp-submit-task"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/multiple-indv-mrp-obs-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "MeasureReport/datax-measurereport03"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Location/location02"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/single-indv-vte-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Parameters/col-submit-collect-obs"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Patient/patient03"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Coverage/coverage01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Organization/organization03"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
-        "reference" : "Practitioner/practitioner02"
+        "reference" : "Library/library-mrp-example"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Measure/measure-mrp-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Library/exm130-fhir-r4"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Organization/organization04"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Parameters/mrp-submit-obs"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Observation/observation01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "MeasureReport/indv-measurereport01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Measure/measure-mrp"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Practitioner/practitioner03"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "MeasureReport/indv-measurereport02"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/multiple-indv-mrp-task-report"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Encounter/Encounter01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Observation/observation03"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/single-indv-mrp-task-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/single-indv-col-obs-report"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Practitioner/practitioner01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "MeasureReport/indv-measurereport03"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Coverage/coverage02"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Location/location01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/single-indv-mrp-obs-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "MeasureReport/summ-measurereport02"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "MeasureReport/summ-medicare-stratification-example"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "MeasureReport/datax-measurereport01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Task/Task01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Organization/organization01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Coverage/coverage03"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Patient/patient01"
       },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/extension-certificationIdentifier"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/extension-alternateScoreType"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/extension-reportingOrganizationGroup"
+        "reference" : "StructureDefinition/extension-reporterGroup"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-certificationIdentifier"
+      },
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/extension-reportingVendor"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/extension-dataCollectionType"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/extension-doNotPerform"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/extension-referenceAny"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/producer-server"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/medicationrequest-deqm"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/indv-measurereport-deqm"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/coverage-deqm"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/consumer-server"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/organization-deqm"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/deviceusestatement-deqm"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/practitioner-deqm"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/receiver-server"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/datax-measurereport-deqm"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/summary-measurereport-deqm"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/medicationadministration-deqm"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "OperationDefinition/collect-data"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "OperationDefinition/submit-data"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/reporter-client"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/producer-client"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CapabilityStatement/consumer-client"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/devicerequest-deqm"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",
       "title" : "Home",
-      "generation" : "html",
+      "generation" : "markdown",
       "page" : [{
         "nameUrl" : "framework.html",
         "title" : "Framework",
-        "generation" : "html",
+        "generation" : "markdown",
         "page" : [{
           "nameUrl" : "guidance.html",
           "title" : "General Guidance",
-          "generation" : "html"
+          "generation" : "markdown"
         },
         {
           "nameUrl" : "datax.html",
           "title" : "Data Exchange",
-          "generation" : "html"
+          "generation" : "markdown"
         },
         {
           "nameUrl" : "indv-reporting.html",
           "title" : "Individual Reporting",
-          "generation" : "html"
+          "generation" : "markdown"
         },
         {
           "nameUrl" : "summary-reporting.html",
           "title" : "Summary Reporting",
-          "generation" : "html"
+          "generation" : "markdown"
         }]
       },
       {
         "nameUrl" : "usecases.html",
         "title" : "Example Use Cases",
-        "generation" : "html",
+        "generation" : "markdown",
         "page" : [{
           "nameUrl" : "mrp.html",
           "title" : "Medication Reconciliation Post-Discharge (MRP)",
-          "generation" : "html"
+          "generation" : "markdown"
         },
         {
           "nameUrl" : "col.html",
           "title" : "Colorectal Cancer Screening (COL)",
-          "generation" : "html"
+          "generation" : "markdown"
         },
         {
           "nameUrl" : "vte1.html",
           "title" : "Venous Thromboembolism Prophylaxis (VTE-1)",
-          "generation" : "html"
+          "generation" : "markdown"
         }]
       },
       {
         "nameUrl" : "profiles.html",
         "title" : "Profiles and Extensions",
-        "generation" : "html",
+        "generation" : "markdown",
         "page" : [{
           "nameUrl" : "StructureDefinition-medicationrequest-deqm.html",
           "title" : "StructureDefinition MedicationRequest Deqm",
@@ -492,16 +479,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-deviceusestatement-deqm.html",
-          "title" : "StructureDefinition DeviceUseStatement Deqm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-practitioner-deqm.html",
-          "title" : "StructureDefinition Practitioner Deqm",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-datax-measurereport-deqm.html",
           "title" : "StructureDefinition Datax MeasureReport Deqm",
           "generation" : "generated"
@@ -517,8 +494,13 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-devicerequest-deqm.html",
-          "title" : "StructureDefinition DeviceRequest Deqm",
+          "nameUrl" : "StructureDefinition-extension-alternateScoreType.html",
+          "title" : "StructureDefinition Extension alternateScoreType",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-reporterGroup.html",
+          "title" : "StructureDefinition Extension reporterGroup",
           "generation" : "generated"
         },
         {
@@ -530,52 +512,12 @@
           "nameUrl" : "StructureDefinition-extension-reportingVendor.html",
           "title" : "StructureDefinition Extension reportingVendor",
           "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-dataCollectionType.html",
-          "title" : "StructureDefinition Extension dataCollectionType",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-doNotPerform.html",
-          "title" : "StructureDefinition Extension doNotPerform",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-referenceAny.html",
-          "title" : "StructureDefinition Extension referenceAny",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-alternateScoreType.html",
-          "title" : "StructureDefinition Extension alternateScoreType",
-          "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "operations.html",
-        "title" : "Operations",
-        "generation" : "html",
-        "page" : [{
-          "nameUrl" : "OperationDefinition-collect-data.html",
-          "title" : "OperationDefinition Collect Data",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "OperationDefinition-submit-data.html",
-          "title" : "OperationDefinition Submit Data",
-          "generation" : "generated"
-        }]
-      },
-      {
-        "nameUrl" : "terminology.html",
-        "title" : "Terminology",
-        "generation" : "html"
       },
       {
         "nameUrl" : "capstatements.html",
         "title" : "Capability Statements",
-        "generation" : "html",
+        "generation" : "markdown",
         "page" : [{
           "nameUrl" : "CapabilityStatement-producer-server.html",
           "title" : "CapabilityStatement Producer Server",
@@ -608,24 +550,24 @@
         }]
       },
       {
-        "nameUrl" : "downloads.html",
-        "title" : "Downloads",
-        "generation" : "html"
-      },
-      {
         "nameUrl" : "all-examples.html",
         "title" : "All Examples",
-        "generation" : "html"
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
+        "generation" : "markdown"
       },
       {
         "nameUrl" : "toc.html",
         "title" : "Table of Contents",
-        "generation" : "generated"
+        "generation" : "html"
       },
       {
         "nameUrl" : "change-notes.html",
         "title" : "Change Notes",
-        "generation" : "html"
+        "generation" : "markdown"
       }]
     },
     "parameter" : [{

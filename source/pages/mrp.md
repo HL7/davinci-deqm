@@ -44,7 +44,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile[^9]|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner]|
+|Practitioner|QI Core Practitioner Profile[^9]|[QI Core Practitioner]|
 |Task|QI Core Task Profile|[QI Core Task]|
 
 ## Graph of MRP Resources
@@ -99,9 +99,13 @@ The Payer (“Aggregator”) pushes the Bundle of supporting resources with the 
 
 {% include img-portrait.html img="mrp_indv_report.jpg" caption = "Figure 3-4 Individual Reporting Technical Workflow" %}
 
-{% include examplebutton.html example="mrp-indv-report-example1" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Task" %}
+{% include examplebutton.html example="single-indv-mrp-task-report" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Task" %}
 
-{% include examplebutton.html example="mrp-indv-report-example2" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Observation" %}
+{% include examplebutton.html example="multiple-indv-mrp-task-report" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport for Multiple Patients using Task" %}
+
+{% include examplebutton.html example="single-indv-mrp-obs-report" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Observation" %}
+
+{% include examplebutton.html example="multiple-indv-mrp-obs-report" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport for Multiple Patients using Observation" %}
 
 ### Summary MeasureReport
 

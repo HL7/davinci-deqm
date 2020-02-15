@@ -122,7 +122,6 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
 **Response**
 
 ~~~
-
 HTTP/1.1 200
 Date: Wed, 13 Mar 2019 01:02:06 GMT
 Content-Type: application/fhir+json;charset=UTF-8
@@ -197,4 +196,5 @@ Content-Type: application/fhir+json;charset=UTF-8
     }
   ]
 }
+
 ~~~

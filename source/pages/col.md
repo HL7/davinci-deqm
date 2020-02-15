@@ -42,7 +42,7 @@ In the case of colorectal cancer screening, two types of data are reported: 1) t
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+|Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
 
 ## Graph of COL Resources
@@ -83,7 +83,7 @@ There are often times exclusions in a screening measure.  An exclusion is someth
 
 In the following interactions, the Provider is acting in the role of the *Producer* and the Payer ("Aggregator") is acting in the role of the *Consumer*.
 
-### Gather Data Requirements from Payer
+### Gather Data Requirements from Payer {#data-requirements}
 {:.no_toc}
 
    In this optional step, the Provider queries the Payer ("Aggregator") for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
@@ -96,7 +96,7 @@ In the following interactions, the Provider is acting in the role of the *Produc
 We are seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
 {:.stu-note}
 
-#### Data Exchange Using the Submit Data Operation
+#### Data Exchange Using the Submit Data Operation {#submit-data}
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
@@ -104,7 +104,7 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 
 {% include examplebutton.html example="col-submit-example" b_title = "Click Here To See Example COL Submit Data" %}
 
-#### Data Exchange Using the Collect Data Operation
+#### Data Exchange Using the Collect Data Operation  {#collect-data}
 {:.no_toc}
  Payer/Aggregator retrieves Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.
 

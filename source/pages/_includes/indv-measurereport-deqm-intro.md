@@ -22,7 +22,6 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support])
 1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension
 1. A certification identifier using the DEQM [Certification Identifier] Extension
 1. Ability to use other types for measure score using the DEQM [Alternate Score Type] Extension
-1. Reference to *all* the resources involved in producing the report using the DEQM [Reference Any] Extension
 
 **Additional Profile specific implementation guidance:**
 

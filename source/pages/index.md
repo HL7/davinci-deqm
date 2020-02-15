@@ -50,9 +50,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data.
 
-- [Operations]\: This page lists the standard FHIR and DEQM defined Operations that are used in the DEQM transactions to exchange quality data.
-
 - [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
+
+- [Examples]\: List of all the examples used in this guide.
 
 - [Downloads]\: This page provides links to downloadable artifacts.
 
@@ -60,13 +60,13 @@ This Guide is divided into several pages which are listed at the top of each pag
 ## Background
 
 <!-- Quality Improvement Ecosystem -->
-{% include quality-improvement-ecosystem.html %}
+{% include quality-improvement-ecosystem.md %}
 
 <!-- Quality Measurement Standards Landscape -->
-{% include quality-measurement-standards-landscape.html %}
+{% include quality-measurement-standards-landscape.md %}
 
 <!-- Data Model Standards Landscape -->
-{% include data-model-standards-landscape.html %}
+{% include data-model-standards-landscape.md %}
 
 
 ## Quality Reporting Scenarios
