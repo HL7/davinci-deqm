@@ -9,3 +9,13 @@ v: {
   "error" : "The code system \"http://example.org/CodeSystem/SOP\" is not known (encountered paired with code = \"MEDICARE\"); The code provided (http://example.org/CodeSystem/SOP#MEDICARE) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/CodeSystem/SOP",
+  "code" : "MEDICARE"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://example.org/CodeSystem/SOP\" is not known (encountered paired with code = \"MEDICARE\"); The code provided (http://example.org/CodeSystem/SOP#MEDICARE) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

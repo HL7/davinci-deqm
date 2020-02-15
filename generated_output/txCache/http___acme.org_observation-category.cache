@@ -30,3 +30,13 @@ v: {
   "error" : "The code system \"http://acme.org/observation-category\" is not known (encountered paired with code = \"measure\"); The code provided (http://acme.org/observation-category#measure) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://acme.org/observation-category",
+  "code" : "measure"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://acme.org/observation-category\" is not known (encountered paired with code = \"measure\"); The code provided (http://acme.org/observation-category#measure) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
