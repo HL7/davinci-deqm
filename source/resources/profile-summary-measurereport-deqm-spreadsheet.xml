@@ -1031,7 +1031,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">version</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="String">1.0.0</Data></Cell>
+    <Cell ss:StyleID="s73"/>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
@@ -1101,7 +1101,7 @@
    <Column ss:StyleID="s85" ss:Width="68.25"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="59.25"/>
    <Column ss:StyleID="s85" ss:Width="246"/>
-   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="372"/>
+   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="140.25"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="77.25"/>
    <Column ss:StyleID="s84" ss:Width="29.25"/>
    <Column ss:StyleID="s84" ss:Width="41.25"/>
@@ -1464,7 +1464,7 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"><Data ss:Type="String">The organization where the measure was completed</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">The organization or where the measure was completed</Data></Cell>
     <Cell ss:StyleID="s107"><Data ss:Type="String">The organization where the measure was completed</Data></Cell>
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s108"/>
@@ -2079,36 +2079,6 @@
     <Cell ss:StyleID="s84"><Data ss:Type="String">group.stratifier.stratum.measureScore.extension</Data></Cell>
     <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
       ss:Type="String">MeasureReport.group.stratifier.stratum.measureScore.extension</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Extension{#alternateScoreType}</Data></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
-    <Cell ss:StyleID="s119"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s112"/>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:StyleID="Default"/>
-    <Cell ss:Index="4" ss:StyleID="s114"><Data ss:Type="String">strataltscoretype</Data></Cell>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s84"><Data ss:Type="String">group.stratifier.stratum.measureScore.extension</Data></Cell>
-    <Cell ss:StyleID="s105" ss:Formula="=&quot;!&quot;&amp;R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">!MeasureReport.group.stratifier.stratum.measureScore.extension</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data></Cell>
     <Cell ss:StyleID="s106"/>
@@ -7632,7 +7602,7 @@
    <SplitHorizontal>1</SplitHorizontal>
    <TopRowBottomPane>1</TopRowBottomPane>
    <SplitVertical>1</SplitVertical>
-   <LeftColumnRightPane>8</LeftColumnRightPane>
+   <LeftColumnRightPane>9</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
    <Panes>
     <Pane>

@@ -82,13 +82,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="MeasureReport/summ-measurereport02"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="MeasureReport/datax-measurereport02"/>
       </reference>
       <exampleBoolean value="true"/>

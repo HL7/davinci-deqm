@@ -1654,8 +1654,7 @@
     <Cell ss:StyleID="s107" ss:Formula="=R2C7&amp;&quot;.&quot;&amp;RC[-1]"><Data
       ss:Type="String">MeasureReport.group.measureScore</Data></Cell>
     <Cell ss:Index="9"><Data ss:Type="String">1..1</Data></Cell>
-    <Cell ss:Index="11"><Data ss:Type="String">decimal</Data></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
+    <Cell ss:Index="12" ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"/>
@@ -6627,8 +6626,8 @@
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="66"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="118.5"/>
    <Row ss:AutoFitHeight="0" ss:Height="45" ss:StyleID="s86">
-    <Cell><Data ss:Type="String">Title</Data></Cell>
-    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">Profile.title</Data></Cell>
+    <Cell><Data ss:Type="String">Profile.name</Data></Cell>
     <Cell ss:StyleID="s89"><Data ss:Type="String">Code</Data><Comment ss:Author=""><ss:Data
        xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Tahoma"
         x:Family="Swiss" html:Size="8" html:Color="#000000">Format is ResourceName.componentName.componentName</Font><Font
@@ -6666,11 +6665,9 @@
       ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40">        <Font
         html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">If Y, indicates this element modifies the meaning of sibling or descendant elements.  Defaults to N</Font>       </ss:Data></Comment><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s88"><Data ss:Type="String">#Is Modifier Reason</Data><Comment
-      ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><Font
-        html:Color="#000000">        </Font><Font html:Face="Tahoma"
-        x:Family="Swiss" html:Size="8" html:Color="#000000">If Y, indicates this element modifies the meaning of sibling or descendant elements.  Defaults to N</Font><Font
-        html:Color="#000000">       </Font></ss:Data></Comment><NamedCell
+    <Cell ss:StyleID="s88"><Data ss:Type="String">Is Modifier Reason</Data><Comment
+      ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40">        <Font
+        html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">If Y, indicates this element modifies the meaning of sibling or descendant elements.  Defaults to N</Font>       </ss:Data></Comment><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s88"><Data ss:Type="String">Binding</Data><Comment
       ss:Author=""><ss:Data xmlns="http://www.w3.org/TR/REC-html40">        <Font
@@ -6885,36 +6882,24 @@
     <Cell ss:StyleID="s111"><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Formula="=&quot;DEQM &quot; &amp; RC[5] &amp; &quot; Extension&quot;"><Data
-      ss:Type="String">DEQM Alternate Score Type Extension</Data></Cell>
-    <Cell ss:StyleID="s136"><Data ss:Type="String">AlternateScoreType</Data></Cell>
-    <Cell ss:StyleID="s136"><Data ss:Type="String">alternateScoreType</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Resource</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">MeasureReport.group.measureScore;MeasureReport.group.stratifier.stratum.measureScore</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Alternate Score Type</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Quantity|dateTime|CodeableConcept|Period| Range|Duration</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="3" ss:StyleID="s136"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Possible additional measureScore value types</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method element.</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">This extension corresponds to the additional MeasureScore type added to the R5 version of MeasureReport. </Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s108"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
