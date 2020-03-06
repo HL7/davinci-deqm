@@ -1,7 +1,7 @@
 title: Data Exchange For Quality Measures STU2 for FHIR R4
 copyrightyear: "2019" # copyright date for footer
 historypath : "http://hl7.org/fhir/us/davinci-deqm/history.cfml" # complete path to IG history file
-changelink: http://hl7.org/fhir-issues
+changelink: https://jira.hl7.org/secure/CreateIssue!default.jspa
 summaries: false #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials
 build: ci  # choice of ci|ballot|version
