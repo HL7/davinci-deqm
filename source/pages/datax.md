@@ -71,9 +71,10 @@ The *Submit Data* operation allows a Producer to submit data-of-interest for a p
 #### Gather Data Requirements from Consumer
 {:.no_toc}
 
-To discover what data (i.e. resources) are relevant in the *Submit Data* payload for a particular measure, the measure definition **MAY** be reviewed manually or computationally as described below.  In cases where reporting requirements are not known, the data would not be submitted until the correct measure and version is known.
+To support the Submit Data operation, an implementation needs to know specifically what data are required to provide as the payload for the operation.  As described in the [Background] section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. *These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element* when submitting the measure data to the Consumer.
 
-In this step, the Producer queries a common knowledge store for profiles needed for reporting a given measure and how the sending of those data should be initiated. Common data profiles have been developed through a multi-stakeholder consensus-based development process and will be made available from the common site. To support the *Submit Data* operation, an implementation needs to know specifically what data are required to provide as the payload for the operation. This can be done manually by reviewing the measure definition to determine what data needs to be submitted and it is automated by using the *Data Requirements* operation on a Consumer's measure instance endpoint. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
+In cases where reporting requirements are not known, the data would not be submitted until the correct measure and version is known.
+{:.highlight-note}
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Figure 2-3 Data Requirements Operation" %}
 
