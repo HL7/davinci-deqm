@@ -384,7 +384,7 @@
                         "assigner": {
                             "display": "www.irs.gov"
                         },
-                        "system": "urn:oid:2.16.840.1.113883.4.2",
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
                         "type": {
                             "coding": [
                                 {
@@ -447,7 +447,7 @@
                         "assigner": {
                             "display": "www.irs.gov"
                         },
-                        "system": "urn:oid:2.16.840.1.113883.4.2",
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
                         "type": {
                             "coding": [
                                 {
@@ -510,7 +510,7 @@
                         "assigner": {
                             "display": "www.irs.gov"
                         },
-                        "system": "urn:oid:2.16.840.1.113883.4.2",
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
                         "type": {
                             "coding": [
                                 {

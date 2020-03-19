@@ -300,7 +300,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                   "assigner": {
                      "display": "www.irs.gov"
                   },
-                  "system": "urn:oid:2.16.840.1.113883.4.2",
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
                   "type": {
                      "coding": [
                         {
@@ -367,7 +367,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                   "assigner": {
                      "display": "www.irs.gov"
                   },
-                  "system": "urn:oid:2.16.840.1.113883.4.2",
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
                   "type": {
                      "coding": [
                         {
