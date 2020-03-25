@@ -82,7 +82,6 @@
     "profile-medicationadministration-deqm-spreadsheet.xml",
     "profile-summary-measurereport-deqm-spreadsheet.xml",
     "profile-datax-measurereport-deqm-spreadsheet.xml",
-    "profile-organization-deqm-spreadsheet.xml",
     "profile-coverage-deqm-spreadsheet.xml",
     "profile-indv-measurereport-deqm-spreadsheet.xml",
     "profile-medicationrequest-deqm-spreadsheet.xml"
@@ -136,6 +135,7 @@
       "base": "Patient-patient02.html"
     },
     "StructureDefinition/organization-deqm": {
+      "source": "structuredefinition-profile-organization-deqm.xml",
       "defns": "StructureDefinition-organization-deqm-definitions.html",
       "base": "StructureDefinition-organization-deqm.html"
     },
@@ -362,7 +362,7 @@
     {
       "location": "http://hl7.org/fhir/us/qicore",
       "package": "hl7.fhir.us.qicore",
-      "version": "3.3.0",
+      "version": "4.0.0",
       "name": "qicore"
     },
     {

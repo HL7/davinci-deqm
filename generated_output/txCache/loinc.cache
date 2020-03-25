@@ -2,48 +2,6 @@
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "77353-1"
-}, "valueSet" :null, "lang":"null"}####
-v: {
-  "display" : "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "77353-1",
-  "display" : "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative"
-}, "valueSet" :null, "lang":"null"}####
-v: {
-  "display" : "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "77353-1"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
-v: {
-  "display" : "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "77353-1",
-  "display" : "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
-v: {
-  "display" : "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "77353-1"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative",

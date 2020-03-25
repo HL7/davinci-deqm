@@ -22,8 +22,10 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](
 
 **Additional Profile specific implementation guidance:**
 
-None
+The "Full View" tab below displays all the identifier slices including the *TIN* slice defined in this guide and *NPI* slice which is inherited indirectly from the [US Core Organization Profile].
 
 ### Examples
 
 {% include list-simple-organizations.xhtml %}
+
+{% include link-list.md %}

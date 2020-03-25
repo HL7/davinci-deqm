@@ -248,7 +248,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                   "assigner": {
                      "display": "www.irs.gov"
                   },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "system": "urn:oid:2.16.840.1.113883.4.2",
                   "type": {
                      "coding": [
                         {
@@ -315,7 +315,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                   "assigner": {
                      "display": "www.irs.gov"
                   },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "system": "urn:oid:2.16.840.1.113883.4.2",
                   "type": {
                      "coding": [
                         {
