@@ -28,7 +28,7 @@ The second scenario defined in this guide is when a Reporter needs to exchange a
 
 -  Although the exact mechanisms for securing these exchanges are not specified as part of this implementation guide:
 
-    -  Exchanges are limited to mutually agreed upon (i.e., between the Producer and Consumer) patients list.
+    -  Exchanges are limited to mutually agreed upon (i.e., between the Producer and Consumer) patients list or population.
 
     -  Systems should use standard authentication and authorization approaches.  The [SMART App Launch] and [SMART backend services] authentication/authorization approach are recommended models.
 
