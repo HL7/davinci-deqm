@@ -115,7 +115,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
   : Also known as the **Reporting Period**, it refers to the time frame for which a measure will be calculated and is defined by the measure.  (In FHIR is represented by the element Measure.effectivePeriod)
 
 {: #submission-period}Submission period
-  : `...need a definition here`....
+  : `...need a definition here`....The specified time window in which the Producer reports the data of interest for measure to the Consumer
 
 For additional definitions see the [eCQI Resource Center Glossary]
 
