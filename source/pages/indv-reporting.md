@@ -16,9 +16,9 @@ topofpage: true
 
 An individual patient level report contains quality data for one patient for one
 or more Clinical Quality Measures (CQMs).  The data elements in the report are
-defined by the particular CQM being reported on. The "data-of-interest" is the
+defined by the particular CQM being reported on. The [data of interest] is the
 source data (raw applicable patient data) needed to calculate a CQM. For
-example, for a venous thromboembolism prophylaxis CQM, the data-of-interest is
+example, for a venous thromboembolism prophylaxis CQM, the data of interest is
 the set of conditions, procedures, and observations related to determining
 whether a patient is in the initial population, denominator, denominator
 exclusions, and numerator of the CQM.  When pooled and analyzed, each report
