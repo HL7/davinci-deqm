@@ -61,10 +61,15 @@ The DEQM resources form a network through their relationships with each other - 
 
 ## Data Exchange
 
-### Submit Data operation
+### Submit Data
 {: #submit-data}
 
-The *Submit Data* operation allows a Producer to submit data of interest for a particular quality measure within the specified time window when the data is ready. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure. Note that resources included in a *Submit-Data* bundle **SHOULD** be self-contained (in other words, should include all referenced resources in the data), unless the exchange is understood by both parties to be incremental. For example, if an Encounter references a Location, that Location is expected to be included in the bundle, unless the exchange is understood to be incremental and the sending system knows that it has already sent that particular Location as part of a previous submit.
+{:.highlight-note}
+The *Submit Data* operation allows a Producer to submit data of interest for a particular quality measure within the submission period. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.  The Producer should **SHOULD** submit the data as [snapshot updates](link to definition) for submitting data in unless Producer and Consumer agree to use [incremental updates](link to definition).
+
+{% include img.html img="submit-data-step.svg" caption = "Figure 2-2 Submit Data Steps (Updated figure to show repeated submissions) source: https://docs.google.com/presentation/d/12XOtyF33K_NM5on4mVewRvha9AnFArU8PkOH_x4m9JE/edit?usp=sharing" %}
+
+The *Submit Data* operation allows a Producer to submit data-of-interest for a particular quality measure within the specified time window when the data is ready. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.Note that resources included in a *Submit-Data* bundle **SHOULD** be self-contained (in other words, should include all referenced resources in the data), unless the exchange is understood by both parties to be incremental. For example, if an Encounter references a Location, that Location is expected to be included in the bundle, unless the exchange is understood to be incremental and the sending system knows that it has already sent that particular Location as part of a previous submit.
 
 {% include img.html img="mrp-wf-overview.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
@@ -73,8 +78,7 @@ The *Submit Data* operation allows a Producer to submit data of interest for a p
 
 To support the Submit Data operation, an implementation needs to know specifically what data are required to provide as the payload for the operation.  As described in the [Background] section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
 
-In cases where reporting requirements are not known, the data would not be submitted until the correct measure and version is known.
-{:.highlight-note}
+Note that because the data exchange scenarios described are intended to support exchange throughout a measurement period, the versions of measure specifications may change during the measurement period. Care should be taken to ensure the appropriate versioning of measure specifications and the impact of those changes on data exchanged using these methods
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Figure 2-3 Data Requirements Operation" %}
 
@@ -103,7 +107,24 @@ For another example see the [COL Data Requirements Operation] example.
 #### Submit Data Operation
 {:.no_toc}
 
+
 Once the Producer understands the data requirements, they will use the *Submit Data* operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
+
+
+<div class="highlight-note" markdown="1">
+##### Incremental and Snapshot Updates
+When the Producer submits updates to the measure data within the submission period, the Producer **SHOULD** use [snapshot updates](link to definition) for submitting data in unless Producer and Consumer agree to use [incremental updates](link to definition).  In order to support updates:
+
+- The Producer **SHALL** support stable unique identifiers in the `MeasureReport.id` and `MeasureReport.meta.source` across updates so that the Consumer system can track whether the payload is an update and process it appropriately.
+- The Consumer **SHOULD** document in its CapabilityStatement whether it supports `snapshot`, `incremental` or ``??both??`` types of update with $submit-data operation.
+  - `...add snippet here ...`
+- If the Consumer supports snapshot updates, the contents of the updated submit-data payload entirely replaces the previous submit-data payload.
+- If the Consumer supports incremental updates, the contents of the updated submit-data payload updates the previous submit-data payload data.
+
+  (update the CapabitilityStatement and add snippet here)
+
+
+</div>
 
 {% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submit data Operation" %}
 
@@ -126,7 +147,7 @@ Using the `POST` Syntax, the operation can be invoked by the Producer:
 
 For a complete un-edited example see the [MRP Submit Data Operation] and [COL Submit Data Operation] examples.
 
-### Collect Data operation
+### Collect Data
 {: #collect-data}
 
 In this scenario, the Consumer initiates a *Collect Data* operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. It is assumed that the Producer knows the data requirements for the measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
