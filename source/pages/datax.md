@@ -65,7 +65,7 @@ The DEQM resources form a network through their relationships with each other - 
 {: #submit-data}
 
 {:.highlight-note}
-The *Submit Data* operation allows a Producer to submit data of interest for a particular quality measure within the submission period. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.  The Producer should **SHOULD** submit the data as [snapshot updates](link to definition) for submitting data in unless Producer and Consumer agree to use [incremental updates](link to definition).
+ The *Submit Data* operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer should **SHOULD** submit the data as [snapshot updates](link to definition) for submitting data in unless Producer and Consumer agree to use [incremental updates](link to definition).
 
 {% include img.html img="submit-data-step.svg" caption = "Figure 2-2 Submit Data Steps (Updated figure to show repeated submissions) source: https://docs.google.com/presentation/d/12XOtyF33K_NM5on4mVewRvha9AnFArU8PkOH_x4m9JE/edit?usp=sharing" %}
 
