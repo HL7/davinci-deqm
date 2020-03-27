@@ -105,17 +105,13 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 ## Glossary
 {: #data-of-interest}Data of Interest
-  : The data elements that are required to determine whether a patient is in the initial population, denominator, and numerator of the quality measure.  In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests. For
-  example, for a venous thromboembolism prophylaxis clinical quality measure, the data of interest is
-  the set of Conditions, Procedures, and Observations related to determining
-  whether a patient is in the initial population, denominator, denominator
-  exclusions, and/or numerator.
+  : The data elements that are required to determine whether a case (for example, patient) is in the population as defined by the clinical quality measure. In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests. For example, for a particular measure the data of interest could be the set of Conditions, Procedures, and Observations related to determining whether a patient is in the initial population, denominator, denominator exclusions, and/or numerator.
 
 {: #measurement-period}Measurement Period
   : Also known as the **Reporting Period**, it refers to the time frame for which a measure will be calculated and is defined by the measure.  (In FHIR is represented by the element Measure.effectivePeriod)
 
 {: #submission-period}Submission period
-  : `...need a definition here`....The specified time window in which the Producer reports the data of interest for measure to the Consumer
+  : The specified time window in which the Producer reports the data of interest for measure to the Consumer
 
 For additional definitions see the [eCQI Resource Center Glossary]
 
