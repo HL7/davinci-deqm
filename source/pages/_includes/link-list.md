@@ -115,3 +115,5 @@
 [Examples]: all-examples.html
 [Background]: index.html#background
 [US Core Organization Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-organization.html
+[eCQI Resource Center Glossary]: https://ecqi.healthit.gov/glossary
+[data of interest]: index.html#data-of-interest

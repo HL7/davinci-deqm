@@ -34,7 +34,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
   -  [General Guidance] gives overall guidance including preconditions, assumptions and an overview of the FHIR artifacts used in the different  reporting scenarios.
 
-  -  [Data Exchange] gives guidance on the interactions between Consumers and Producers to exchange the data-of-interest for a measure.
+  -  [Data Exchange] gives guidance on the interactions between Consumers and Producers to exchange the data of interest for a measure.
 
   -  [Individual Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the individual reports for a measure.
 
@@ -71,19 +71,19 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ## Quality Reporting Scenarios
 
-This implementation guide describes two groups of quality reporting scenarios as shown in Figure 1-4 below. The first group are *Exchange Scenarios* which focus on exchanging subsets of the data-of-interest for a particular measure or set of measures throughout the reporting period.  Note that there are use cases for sharing data from a consumer to a producer as well (for example, payers may share screening information with providers). The Second group are *Reporting Scenarios* which focus on communicating the results of a quality measure at the end of a reporting period as part of a quality improvement initiative.
+This implementation guide describes two groups of quality reporting scenarios as shown in Figure 1-4 below. The first group are *Exchange Scenarios* which focus on exchanging subsets of the [data of interest](#data-of-interest) for a particular measure or set of measures throughout the [reporting period](#reporting period).  Note that there are use cases for sharing data from a consumer to a producer as well (for example, payers may share screening information with providers). The Second group are *Reporting Scenarios* which focus on communicating the results of a quality measure at the end of a reporting period as part of a quality improvement initiative.
 
 {% include img-portrait.html  caption = "Figure 1-4 Quality Reporting Scenarios" img="quality-reporting-scenarios.png" %}
 
 ### Exchange Scenarios
 
-Exchange scenarios are used to exchange subsets of the data-of-interest for a measure or set of measures throughout the measurement period. These scenarios enable providers and quality stakeholders such as payers, accountable care organizations, and other secondary use partners to keep better track of how patients are performing with respect to a particular quality measure during the measurement cycle.
+Exchange scenarios are used to exchange subsets of the data of interest for a measure or set of measures throughout the [measurement period](#measurement-period). These scenarios enable providers and quality stakeholders such as payers, accountable care organizations, and other secondary use partners to keep better track of how patients are performing with respect to a particular quality measure during the measurement period.
 
 <p>The three exchange scenarios are:</p>
 
-1. <b>Submit Data</b> - Used by a producing system to submit a subset of the data-of-interest for a measure to a consuming system
-1. <b>Collect Data</b> - Used by a consuming system to collect a subset of the data-of-interest for a measure from a producing system
-1. <b>Subscription</b> - Used to allow the producing system to notify the consuming system when new or updated data-of-interest for a measure is available  *NOTE: This exchange scenario is out of scope for this version of the Implementation Guide.*
+1. <b>Submit Data</b> - Used by a producing system to submit a subset of the data of interest for a measure to a consuming system
+1. <b>Collect Data</b> - Used by a consuming system to collect a subset of the data of interest for a measure from a producing system
+1. <b>Subscription</b> - Used to allow the producing system to notify the consuming system when new or updated data of interest for a measure is available  *NOTE: This exchange scenario is out of scope for this version of the Implementation Guide.*
 
 For these scenarios, the actors are Producers and Consumers, used in the same sense as the Producers and Consumers stakeholders in the Quality Measurement Standards Landscape diagram. Note that within any particular use case, different stakeholders will play the same roles. For example, a Provider may be playing the role of Producer in a particular exchange, while the Payer may be playing the role of Consumer.
 
@@ -93,7 +93,7 @@ Reporting scenarios are used to report the results of quality measures on patien
 
 The reporting scenarios are:
 
-1. **Individual** - Used to report the results of a quality measure for a particular patient along with the complete set of data-of-interest to a quality reporting receiver
+1. **Individual** - Used to report the results of a quality measure for a particular patient along with the complete set of data of interest to a quality reporting receiver
 1. **Summary** - Used to report the results of a quality measure for the applicable population to a quality reporting receiver
 1. **Patient-List** - A patient list report that includes a listing of patients that satisfied each population criteria in the measure *NOTE: This reporting scenario is out of scope for this version of the Implementation Guide.*
 
@@ -102,6 +102,19 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 **Reporters** are the actors submitting the results of a quality measure. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
+
+## Glossary
+{: #data-of-interest}Data of Interest
+  : The data elements that are required to determine whether a patient is in the initial population, denominator, and numerator of the quality measure.  In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests.
+
+{: #measurement-period}Measurement Period
+  : Also known as the **Reporting Period**, it refers to the time frame for which a measure will be calculated and is defined by the measure.  (In FHIR is represented by the element Measure.effectivePeriod)
+
+{: #submission-period}Submission period
+  : `...need a definition here`....
+
+For additional definitions see the [eCQI Resource Center Glossary]
+
 
 ## Table of Acronyms
 
