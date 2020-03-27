@@ -14,32 +14,14 @@ topofpage: true
 
 ## Introduction
 
-An individual patient level report contains quality data for one patient for one
-or more Clinical Quality Measures (CQMs).  The data elements in the report are
-defined by the particular CQM being reported on. The [data of interest] is the
-source data (raw applicable patient data) needed to calculate a CQM. For
-example, for a venous thromboembolism prophylaxis CQM, the data of interest is
-the set of conditions, procedures, and observations related to determining
-whether a patient is in the initial population, denominator, denominator
-exclusions, and numerator of the CQM.  When pooled and analyzed, each report
-contributes the quality data necessary to calculate population measure metrics.
+An individual patient level report contains quality data for one patient for one or more Clinical Quality Measures (CQMs).  The [data of interest] is the source data (raw applicable patient data) needed to calculate a CQM.  The data elements in the report are defined by the particular CQM being reported on.   When pooled and analyzed, each report contributes the quality data necessary to calculate population measure metrics.
 
-The Individual reporting scenario is supported by the [DEQM Individual
-MeasureReport Profile]. Transactions between Reporters (for example, an
-organizations that deliver care to patients, such as a practice or hospital) and
-Receivers (organizations that want to evaluate CQMs, such as quality reporting
-programs) are triggered by specific administrative events such as the submission
-of individual patient level quality reports for CQMs to various quality
-reporting programs.
+The Individual reporting scenario is supported by the [DEQM Individual MeasureReport Profile]. Transactions between Reporters (for example, an organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of individual patient level quality reports for CQMs to various quality reporting programs.
 
 ### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
-The [Quality Reporting] Page in the R4 Release of the FHIR Specification
-provides an overview of CQM structures, how CQMs are represented using the
-Measure resource, and how CQMs are reported using the MeasureReport resource.
-The [Reporting Individual Data] section describes how to use a MeasureReport
-resource to represent the results of an individual calculation.
+The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation.
 
 ### Relationship between QI Core, DEQM, and CQMs
 {:.no_toc}

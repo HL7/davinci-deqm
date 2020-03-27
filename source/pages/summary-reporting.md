@@ -15,17 +15,9 @@ topofpage: true
 
 ## Introduction
 
-A summary report contains calculated summary data for one or more Clinical
-Quality Measures (CQMs) for a specified population of patients within a
-particular health system over a specific period of time. For example, for a
-colorectal cancer screening CQM, "the data-of-interest" is the patient counts of
-initial population, denominator, denominator exclusions, and numerator
-respectively for a specified population of patients. Summary reports may also
-contain summary data for stratifier criteria (such as gender or age) as defined
-in a CQM.
+A summary report contains calculated summary data for one or more Clinical Quality Measures (CQMs) for a specified population of patients within a particular health system over a specific period of time. For example, a colorectal cancer screening CQM has patient counts for the initial population, denominator, denominator exclusions, and numerator respectively for a specified population of patients. Summary reports may also contain summary data for stratifier criteria (such as gender or age) as defined in a CQM.
 
-The Summary reporting scenario is supported by the [DEQM Summary MeasureReport
-Profile]. Transactions between Reporters (for example, organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of summary level quality reports for CQMs to various quality reporting programs.
+The Summary reporting scenario is supported by the [DEQM Summary MeasureReport Profile]. Transactions between Reporters (for example, organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of summary level quality reports for CQMs to various quality reporting programs.
 
 ## Profiles
 
