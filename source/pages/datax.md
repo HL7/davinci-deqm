@@ -28,8 +28,8 @@ and there will be a need to convey triggering information in a computable way to
 
 This Implementation Guide (IG) describes three methods of exchanging data quality information using a set of [FHIR operations] that provide the framework to exchange CQM data:
 
-1. CQM data may be submitted to the Consumer by the Producer using the [Submit Data operation](#submit-data)
-1. CQM data may be requested from the Producer by the Consumer using the [Collect Data operation](#collect-data)
+1. CQM data may be submitted to the Consumer by the Producer using the [Submit Data scenario](#submit-data)
+1. CQM data may be requested from the Producer by the Consumer using the [Collect Data scenario](#collect-data)
 
   This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned and will align with the outcomes of the Argonaut project.
   {:.stu-note}
@@ -65,11 +65,13 @@ The DEQM resources form a network through their relationships with each other - 
 {: #submit-data}
 
 {:.highlight-note}
- The *Submit Data* operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer should **SHOULD** submit the data as [snapshot updates](link to definition) for submitting data in unless Producer and Consumer agree to use [incremental updates](link to definition).
+ The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer should **SHOULD** submit the data as [snapshot updates] for submitting data in unless Producer and Consumer agree to use [incremental updates].
 
 {% include img.html img="submit-data-step.svg" caption = "Figure 2-2 Submit Data Steps (Updated figure to show repeated submissions) source: https://docs.google.com/presentation/d/12XOtyF33K_NM5on4mVewRvha9AnFArU8PkOH_x4m9JE/edit?usp=sharing" %}
 
-The *Submit Data* operation allows a Producer to submit data-of-interest for a particular quality measure within the specified time window when the data is ready. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.Note that resources included in a *Submit-Data* bundle **SHOULD** be self-contained (in other words, should include all referenced resources in the data), unless the exchange is understood by both parties to be incremental. For example, if an Encounter references a Location, that Location is expected to be included in the bundle, unless the exchange is understood to be incremental and the sending system knows that it has already sent that particular Location as part of a previous submit.
+<del>
+The *Submit Data* operation allows a Producer to submit data-of-interest for a particular quality measure within the specified time window when the data is ready. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.  Note that resources included in a *Submit-Data* bundle **SHOULD** be self-contained (in other words, should include all referenced resources in the data), unless the exchange is understood by both parties to be incremental. For example, if an Encounter references a Location, that Location is expected to be included in the bundle, unless the exchange is understood to be incremental and the sending system knows that it has already sent that particular Location as part of a previous submit.
+</del>
 
 {% include img.html img="mrp-wf-overview.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
@@ -113,7 +115,7 @@ Once the Producer understands the data requirements, they will use the *Submit D
 
 <div class="highlight-note" markdown="1">
 ##### Incremental and Snapshot Updates
-When the Producer submits updates to the measure data within the submission period, the Producer **SHOULD** use [snapshot updates](link to definition) for submitting data in unless Producer and Consumer agree to use [incremental updates](link to definition).  In order to support updates:
+When the Producer submits updates to the measure data within the submission period, the Producer **SHOULD** use [snapshot updates] for submitting data in unless Producer and Consumer agree to use [incremental updates].  In order to support updates:
 
 - The Producer **SHALL** support stable unique identifiers in the `MeasureReport.id` and `MeasureReport.meta.source` across updates so that the Consumer system can track whether the payload is an update and process it appropriately.
 - The Consumer **SHOULD** document in its CapabilityStatement whether it supports `snapshot`, `incremental` or ``??both??`` types of update with $submit-data operation.
@@ -150,20 +152,26 @@ For a complete un-edited example see the [MRP Submit Data Operation] and [COL Su
 ### Collect Data
 {: #collect-data}
 
-In this scenario, the Consumer initiates a *Collect Data* operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. It is assumed that the Producer knows the data requirements for the measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
+{:.highlight-note}
+In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. Like the [Submit Data scenario](#submit-data) described above, this scenario requires that the Producer can gather the data requirements from the consumer for the measure, and that there is no expectation that the data returned represents all the data required to evaluate the quality measure.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed below.
 
-<!-- *****removed based on GF#21737*********
-As with the Submit Data case above, discovery of what CQM data (i.e. resources) are required is done through the *Data Requirements* operation on a Consumer's measure endpoint and the returned resources and profiles are referenced in the `MeasureReport.evaluatedResources` element.
--->
+{% include img.html  img="collect-data-steps-new.jpg" caption = "Figure 2-5 Collect Data Steps - updated image to reflect incremental updates"%}
+
+<del>
+In this scenario, the Consumer initiates a *Collect Data* operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. It is assumed that the Producer knows the data requirements for the measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
+</del>
 
 {% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 
 #### Collect Data Operation
 {:.no_toc}
 
+
 The Consumer uses a Collect Data operation to request any available relevant data for the evaluation of a particular measure from a Producer. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Producer to limit the response to only data that has been entered or changed since the last received on date.
 
-Note that implementing this scenario requires that the Producer system understand the data requirements for the measure in order to provide the data. As with the Submit Data operation, the implementation can either manually determine the relevant data using the measure definition, or the implementation can use the *Data Requirements* operation to determine relevant data.
+<del>
+Note that implementing this scenario requires that the Producer system understand the data requirements for the measure in order to provide the data. As with the Submit Data operation, the implementation can either manually determine the relevant data using the measure definition, or the implementation can use the Data Requirements operation to determine relevant data.
+</del>
 
 {% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
 

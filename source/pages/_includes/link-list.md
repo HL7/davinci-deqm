@@ -119,3 +119,5 @@
 [data of interest]: index.html#data-of-interest
 [measurement period]: index.html#measurement-period
 [submission period]: index.html#submission-period
+[incremental updates]: index.html#incremental-update
+[snapshot updates]: index.html#snapshot-update

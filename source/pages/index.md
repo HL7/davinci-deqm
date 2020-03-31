@@ -107,8 +107,14 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 {: #data-of-interest}Data of Interest
   : The data elements that are required to determine whether a case (for example, patient) is in the population as defined by the clinical quality measure. In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests. For example, for a particular measure the data of interest could be the set of Conditions, Procedures, and Observations related to determining whether a patient is in the initial population, denominator, denominator exclusions, and/or numerator.
 
+{: #incremental-update}Incremental Update
+  : The Submit Data or Collect data Bundle contains only the new referenced resources since the last update.
+
 {: #measurement-period}Measurement Period
   : Also known as the **Reporting Period**, it refers to the time frame for which a measure will be calculated and is defined by the measure.  (In FHIR is represented by the element Measure.effectivePeriod)
+
+{: #snapshot-update}Snapshot Update
+  : The Submit Data or Collect data Bundle is self-contained.  In other words, it include all referenced resources in the data.
 
 {: #submission-period}Submission period
   : The specified time window in which the Producer reports the data of interest for measure to the Consumer
