@@ -52,6 +52,7 @@ general guidance provided here.
 ### How Much Data Should be Sent
 {:.no_toc}
 
+In general, reporting assumes that Reporters know what measures they select in order to meet their reporting requirements.
 A quality program supporting the individual reporting scenario will
 often provide prescriptive guidelines that define additional data,
 outside the smoking gun, that may or must be sent (such as the complete
