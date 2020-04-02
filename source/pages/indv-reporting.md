@@ -52,7 +52,13 @@ general guidance provided here.
 ### How Much Data Should be Sent
 {:.no_toc}
 
-The recipient of the report may not have access to additional EHR data about an individual subject.  Therefore, it is important that the report includes all the data relevant to computing CQM criteria, as well as the other data defined in a CQM (for example, data for stratification, risk adjustment, etc). Data for every data element present in the EHR that is required by the referenced CQM shall be included in the resulting MeasureReport bundle - not just the data needed to compute criteria.
+A quality program supporting the individual reporting scenario will
+often provide prescriptive guidelines that define additional data,
+outside the smoking gun, that may or must be sent (such as the complete
+problem or medication list). Where such prescriptive guidelines exist,
+those take precedence over the more general guidance provided here.
+
+The recipient of the report may not have access to additional EHR data about an individual subject.  Therefore, it is important that the report includes all the data relevant to computing CQM criteria, as well as the other data defined in a CQM (for example, data for stratification, risk adjustment, etc). Data for every data element present in the EHR that is required by the referenced CQM shall be included in the resulting MeasureReport bundle.  Additional non-clinical data needed for reporting such as organization, location and submitter is also be reported.
 
 At the very least, an individual measure report should include:
 
@@ -61,12 +67,6 @@ At the very least, an individual measure report should include:
 -  Stratification variables, supplemental data elements, risk adjustment variables, and any other data element specified in the referenced CQM(s)
 
 - The conclusive evidence needed to confirm that a criterion was met for that CQM.  For instance, a record for a patient who has been in the Intensive Care Unit undergoing continuous blood pressure monitoring may have much more blood pressure observations than are needed to compute the criteria.
-
-A quality program supporting the individual reporting scenario will
-often provide prescriptive guidelines that define additional data,
-outside the smoking gun, that may or must be sent (such as the complete
-problem or medication list). Where such prescriptive guidelines exist,
-those take precedence over the more general guidance provided here.
 
 ### Missing Data
 {:.no_toc}
