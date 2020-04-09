@@ -105,7 +105,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 ## Glossary
 {: #data-of-interest}Data of Interest
-  : The data elements that are required to determine whether a case (for example, patient) is in the population as defined by the clinical quality measure. In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests. For example, for a particular measure the data of interest could be the set of Conditions, Procedures, and Observations related to determining whether a patient is in the initial population, denominator, denominator exclusions, and/or numerator.
+  : The data elements that are required to determine whether a case (for example, patient) is in the population as defined by the clinical quality measure. In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests. For example, for a particular measure the data of interest could be the set of Conditions, Procedures, and Observations related to determining whether a patient is in the initial population and included or excluded from the denominator and/or numerator.
 
 {: #incremental-update}Incremental Update
   : In contrast to the Snapshot Update, the FHIR [Parameters] resource used in a Submit Data or the Collect Data scenario contains only the *new and updated* DEQM and QI Core Profiles since the last transaction.
