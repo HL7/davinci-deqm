@@ -55,9 +55,9 @@
       </constraint>
       <mustSupport value="true"/>
     </element>
-    <element id="Organization.identifier:tin">
+    <element id="Organization.identifier:ein">
       <path value="Organization.identifier"/>
-      <sliceName value="tin"/>
+      <sliceName value="ein"/>
       <min value="0"/>
       <max value="1"/>
       <type>
