@@ -39,6 +39,8 @@ The second scenario defined in this guide is when a Reporter needs to exchange a
     measure and links the submitted data together to simplify processing
     for the receiver.
 
+-   It is the responsibility of the Producer to ensure that measure data is present in a structured, retrievable form.
+
 -   The required data is represented in the referenced resources defined
     by the MeasureReport.
 
