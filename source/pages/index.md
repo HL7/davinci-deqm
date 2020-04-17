@@ -114,7 +114,8 @@ For the reporting scenarios, the actors are Reporters and Receivers:
   : The period of time which a measure will be calculated.  It is defined by the measure (In FHIR represented by the element `Measure.effectivePeriod`).
 
 {: #reporting-period}Reporting Period
-  : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions.
+  : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions. This can be equal to or a subset of the Measurement Period.
+
 
 {: #snapshot-update}Snapshot Update
   : In contrast to the Incremental Update, the FHIR [Parameters] resource used in a Submit Data or the Collect Data scenario is contains *all* the DEQM and QI Core Profiles for each transaction.
