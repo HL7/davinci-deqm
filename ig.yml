@@ -1,0 +1,293 @@
+mappings: 'false'
+working-dir: /Users/ehaas/Documents/FHIR/DaVinci-DEQM/
+do-transforms: 'false'
+defaults:
+  Encounter:
+    template-base: ex.html
+  Bundle:
+    template-base: ex.html
+  ValueSet:
+    template-base: base.html
+  Organization:
+    template-base: ex.html
+  Parameters:
+    template-base: ex.html
+  SearchParameter:
+    template-base: base.html
+  ConceptMap:
+    template-base: base.html
+  Coverage:
+    template-base: ex.html
+  CodeSystem:
+    template-base: base.html
+  Task:
+    template-base: ex.html
+  StructureDefinition:
+    template-mappings: sd-mappings.html
+    template-defns: sd-definitions.html
+    template-base: sd.html
+  Patient:
+    template-base: ex.html
+  StructureMap:
+    script: false
+    profiles: false
+    content: false
+    template-base: ex.html
+  Practitioner:
+    template-base: ex.html
+  CapabilityStatement:
+    template-base: base.html
+  Measure:
+    template-base: ex.html
+  OperationDefinition:
+    template-base: base.html
+  MeasureReport:
+    template-base: ex.html
+  Any:
+    template-format: format.html
+    swagger: 'true'
+    template-base: base.html
+  Library:
+    template-base: ex.html
+  Location:
+    template-base: ex.html
+  Observation:
+    template-base: ex.html
+publisher: HL7 International - Clinical Quality Information Work Group
+spreadsheets:
+  - profile-medicationadministration-deqm-spreadsheet.xml
+  - profile-summary-measurereport-deqm-spreadsheet.xml
+  - profile-datax-measurereport-deqm-spreadsheet.xml
+  - profile-coverage-deqm-spreadsheet.xml
+  - profile-indv-measurereport-deqm-spreadsheet.xml
+  - profile-medicationrequest-deqm-spreadsheet.xml
+topofpage: 'true'
+status: draft
+tool: jekyll
+resources:
+  StructureDefinition/extension-certificationIdentifier:
+    defns: StructureDefinition-extension-certificationIdentifier-definitions.html
+    base: StructureDefinition-extension-certificationIdentifier.html
+  CapabilityStatement/consumer-server:
+    source: capabilitystatement-consumer-server.json
+    base: CapabilityStatement-consumer-server.html
+  CapabilityStatement/producer-server:
+    source: capabilitystatement-producer-server.json
+    base: CapabilityStatement-producer-server.html
+  Location/location03:
+    source: Location-location03.json
+    base: Location-location03.html
+  CapabilityStatement/producer-client:
+    source: capabilitystatement-producer-client.json
+    base: CapabilityStatement-producer-client.html
+  StructureDefinition/coverage-deqm:
+    defns: StructureDefinition-coverage-deqm-definitions.html
+    base: StructureDefinition-coverage-deqm.html
+#  Bundle/multiple-indv-mrp-obs-report:
+#    source: Bundle-multiple-indv-mrp-obs-report.json
+#    base: Bundle-multiple-indv-mrp-obs-report.html
+  StructureDefinition/extension-reporterGroup:
+    defns: StructureDefinition-extension-reporterGroup-definitions.html
+    base: StructureDefinition-extension-reporterGroup.html
+  Organization/organization02:
+    source: Organization-organization02.json
+    base: Organization-organization02.html
+  Patient/patient03:
+    source: Patient-patient03.json
+    base: Patient-patient03.html
+  Patient/patient02:
+    source: Patient-patient02.json
+    base: Patient-patient02.html
+  StructureDefinition/organization-deqm:
+    source: structuredefinition-profile-organization-deqm.xml
+    defns: StructureDefinition-organization-deqm-definitions.html
+    base: StructureDefinition-organization-deqm.html
+  StructureDefinition/medicationadministration-deqm:
+    defns: StructureDefinition-medicationadministration-deqm-definitions.html
+    base: StructureDefinition-medicationadministration-deqm.html
+#  Bundle/single-indv-col-obs-report:
+#    source: Bundle-single-indv-col-measurereport.json
+#    base: Bundle-single-indv-col-obs-report.html
+  Encounter/Encounter01:
+    source: Encounter-encounter01.json
+    base: Encounter-Encounter01.html
+#  MeasureReport/summ-medicare-stratification-example:
+#    source: MeasureReport-summ-medicare-stratification-example.xml
+#    base: MeasureReport-summ-medicare-stratification-example.html
+  MeasureReport/datax-measurereport03:
+    source: MeasureReport-datax-measurereport03.json
+    base: MeasureReport-datax-measurereport03.html
+#  MeasureReport/indv-measurereport02:
+#    source: MeasureReport-indv-measurereport02.json
+#    base: MeasureReport-indv-measurereport02.html
+#  MeasureReport/summ-measurereport02:
+#    source: MeasureReport-summ-measurereport02.json
+#    base: MeasureReport-summ-measurereport02.html
+  CapabilityStatement/reporter-client:
+    source: capabilitystatement-reporter-client.json
+    base: CapabilityStatement-reporter-client.html
+  StructureDefinition/extension-alternateScoreType:
+    defns: StructureDefinition-extension-alternateScoreType-definitions.html
+    base: StructureDefinition-extension-alternateScoreType.html
+  Library/library-mrp-example:
+    source: Library-library-mrp-example.json
+    base: Library-library-mrp-example.html
+  CapabilityStatement/consumer-client:
+    source: capabilitystatement-consumer-client.json
+    base: CapabilityStatement-consumer-client.html
+  Observation/observation01:
+    source: Observation-observation01.json
+    base: Observation-observation01.html
+  Measure/measure-mrp-example:
+    source: Measure-measure-mrp-example.xml
+    base: Measure-measure-mrp-example.html
+  Organization/organization03:
+    source: Organization-organization03.json
+    base: Organization-organization03.html
+  Coverage/coverage01:
+    source: Coverage-coverage01.json
+    base: Coverage-coverage01.html
+  Observation/observation03:
+    source: Observation-observation03.json
+    base: Observation-observation03.html
+  Task/Task01:
+    source: Task-task01.json
+    base: Task-Task01.html
+  Parameters/mrp-submit-obs:
+    source: Parameter-mrp-submit-obs.json
+    base: Parameters-mrp-submit-obs.html
+  Coverage/coverage03:
+    source: Coverage-coverage03.json
+    base: Coverage-coverage03.html
+  StructureDefinition/indv-measurereport-deqm:
+    defns: StructureDefinition-indv-measurereport-deqm-definitions.html
+    base: StructureDefinition-indv-measurereport-deqm.html
+  StructureDefinition/datax-measurereport-deqm:
+    defns: StructureDefinition-datax-measurereport-deqm-definitions.html
+    base: StructureDefinition-datax-measurereport-deqm.html
+#  Bundle/single-indv-vte-report:
+#    source: Bundle-single-indv-vte-measurereport.json
+#    base: Bundle-single-indv-vte-report.html
+  CapabilityStatement/receiver-server:
+    source: capabilitystatement-receiver-server.json
+    base: CapabilityStatement-receiver-server.html
+  Location/location01:
+    source: Location-location01.json
+    base: Location-location01.html
+  Location/location02:
+    source: Location-location02.json
+    base: Location-location02.html
+  StructureDefinition/medicationrequest-deqm:
+    defns: StructureDefinition-medicationrequest-deqm-definitions.html
+    base: StructureDefinition-medicationrequest-deqm.html
+  MeasureReport/datax-measurereport02:
+    source: MeasureReport-datax-measurereport02.json
+    base: MeasureReport-datax-measurereport02.html
+  StructureDefinition/summary-measurereport-deqm:
+    defns: StructureDefinition-summary-measurereport-deqm-definitions.html
+    base: StructureDefinition-summary-measurereport-deqm.html
+  StructureDefinition/extension-reportingVendor:
+    defns: StructureDefinition-extension-reportingVendor-definitions.html
+    base: StructureDefinition-extension-reportingVendor.html
+#  MeasureReport/indv-measurereport03:
+#    source: MeasureReport-indv-measurereport03.json
+#    base: MeasureReport-indv-measurereport03.html
+  Parameters/col-submit-collect-obs:
+    source: Parameter-col-submit-obs.json
+    base: Parameters-col-submit-collect-obs.html
+  Parameters/mrp-submit-task:
+    source: Parameter-mrp-submit-task.json
+    base: Parameters-mrp-submit-task.html
+  Patient/patient01:
+    source: Patient-patient01.json
+    base: Patient-patient01.html
+  Organization/organization04:
+    source: Organization-organization04.json
+    base: Organization-organization04.html
+#  Bundle/single-indv-mrp-obs-report:
+#    source: Bundle-single-indv-mrp-obs-report.json
+#    base: Bundle-single-indv-mrp-obs-report.html
+  Coverage/coverage02:
+    source: Coverage-coverage02.json
+    base: Coverage-coverage02.html
+  Library/exm130-fhir-r4:
+    source: Library-exm130-fhir-r4.xml
+    base: Library-exm130-fhir-r4.html
+  Organization/organization01:
+    source: Organization-organization01.json
+    base: Organization-organization01.html
+  MeasureReport/datax-measurereport01:
+    source: MeasureReport-datax-measurereport01.json
+    base: MeasureReport-datax-measurereport01.html
+  Practitioner/practitioner01:
+    source: Practitioner-practitioner01.json
+    base: Practitioner-practitioner01.html
+#  Bundle/single-indv-mrp-task-report:
+#    source: Bundle-single-indv-mrp-task-report.json
+#    base: Bundle-single-indv-mrp-task-report.html
+##  MeasureReport/indv-measurereport01:
+#    source: MeasureReport-indv-measurereport01.json
+#    base: MeasureReport-indv-measurereport01.html
+#  Bundle/multiple-indv-mrp-task-report:
+#    source: Bundle-multiple-indv-mrp-task-report.json
+#    base: Bundle-multiple-indv-mrp-task-report.html
+#  MeasureReport/summ-measurereport01:
+#    source: MeasureReport-summ-measurereport01.json
+#    base: MeasureReport-summ-measurereport01.html
+npm-name: hl7.fhir.us.davinci-deqm
+fixed-business-version: 1.1.1
+canonicalBase: 'http://hl7.org/fhir/us/davinci-deqm'
+jurisdiction: US
+license: CC0-1.0
+no-inactive-codes: 'false'
+name: DataExchangeForQualityMeasuresSTU2forFHIRR4ImplementationGuide
+gen-examples: 'false'
+swagger:
+  - mode: single
+    capabilities: server
+broken-links: warning
+source: ig.xml
+pub_url: ehaas@healthedatainc.com
+version: 4.0.1
+title: Data Exchange For Quality Measures STU2 for FHIR R4
+extensions:
+  - extension-reportingVendor
+  - extension-certificationIdentifier
+  - extension-reporterGroup
+  - extension-alternateScoreType
+igtemplate-dir: /Users/ehaas/Documents/FHIR/DaVinci-DEQM/
+extraTemplates:
+  - mappings
+sct-edition: 'http://snomed.info/sct/731000124108'
+allviews: 'true'
+contact:
+  - system: url
+    value: 'http://www.hl7.org/Special/committees/cqi/index.cfm'
+logging:
+  - progress
+dependencyList:
+  - location: 'http://hl7.org/fhir/us/qicore'
+    package: hl7.fhir.us.qicore
+    version: 4.0.0
+    name: qicore
+  - location: 'http://hl7.org/fhir/us/core'
+    package: hl7.fhir.us.core
+    version: 3.1.0
+    name: uscore
+  - location: 'http://hl7.org/fhir/us/cqfmeasures'
+    package: hl7.fhir.us.cqfmeasures
+    version: 1.0.0
+    name: cqfm
+paths:
+  qa: generated_output/qa
+  output: output
+  pages:
+    - framework
+    - source/pages
+  history: 'http://hl7.org/fhir/us/davinci-deqm/history.html'
+  specification: 'http://hl7.org/fhir/R4/'
+  txCache: generated_output/txCache
+  temp: generated_output/temp
+  resources:
+    - source/resources
+    - source/examples
