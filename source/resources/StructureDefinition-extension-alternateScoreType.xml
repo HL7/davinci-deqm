@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-alternateScoreType"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+  <version value="1.1.1"/>
+  <name value="DEQMreportingVendorExtension"/>
+  <title value="DEQM Reporting Vendor Extension"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2018-06-19T00:00:00-07:00"/>
+  <publisher value="Da Vinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="MeasureReport.group.measureScore"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="MeasureReport.group.stratifier.stratum.measureScore"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Possible additional measureScore value types"/>
+      <definition value="Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation."/>
+      <comment value="This extension corresponds to the additional MeasureScore type added to the R5 version of MeasureReport."/>
+      <min value="0"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <type>
+        <code value="Duration"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

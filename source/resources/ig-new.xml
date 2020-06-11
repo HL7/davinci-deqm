@@ -15,8 +15,8 @@
     <valueString value="/Users/ehaas/Documents/FHIR/Davinci-DEQM/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0"/>
-  <version value="1.1.1"/>
-  <name value="DataExchangeForQualityMeasuresSTU2forFHIRR4ImplementationGuide"/>
+  <version value="1.1.0"/>
+  <name value="DataExchangeForQualityMeasuresSTU2forFHIRR4"/>
   <title value="Data Exchange For Quality Measures STU2 for FHIR R4"/>
   <status value="draft"/>
   <publisher value="HL7 International - Clinical Quality Information Work Group"/>
@@ -50,7 +50,7 @@
   <dependsOn id="cqfm">
     <uri value="http://hl7.org/fhir/us/cqfmeasures"/>
     <packageId value="hl7.fhir.us.cqfmeasures"/>
-    <version value="1.0.0"/>
+    <version value="1.1.0"/>
   </dependsOn>
   <definition>
     <grouping>
@@ -89,6 +89,12 @@
     <resource>
       <reference>
         <reference value="Parameters/mrp-submit-task"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MeasureReport/summ-medicare-stratification-example"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -226,6 +232,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MeasureReport/summ-measurereport02"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="MeasureReport/indv-measurereport03"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -251,12 +263,6 @@
     <resource>
       <reference>
         <reference value="MeasureReport/summ-measurereport02"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="MeasureReport/summ-medicare-stratification-example"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -292,6 +298,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CapabilityStatement/producer-server"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-alternateScoreType"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -304,37 +316,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-certificationIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/extension-reportingVendor"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/producer-server"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/medicationrequest-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/indv-measurereport-deqm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/coverage-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -346,7 +328,13 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/organization-deqm"/>
+        <reference value="StructureDefinition/summary-measurereport-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/indv-measurereport-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -364,19 +352,31 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/summary-measurereport-deqm"/>
+        <reference value="StructureDefinition/extension-reportingVendor"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/medicationadministration-deqm"/>
+        <reference value="StructureDefinition/extension-certificationIdentifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/coverage-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="CapabilityStatement/reporter-client"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/organization-deqm"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -392,54 +392,20 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/medicationadministration-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
     <page>
       <nameUrl value="index.html"/>
       <title value="Home"/>
       <generation value="markdown"/>
       <page>
-        <nameUrl value="framework.html"/>
-        <title value="Framework"/>
+        <nameUrl value="guidance.html"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="guidance.html"/>
-          <title value="General Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="datax.html"/>
-          <title value="Data Exchange"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="indv-reporting.html"/>
-          <title value="Individual Reporting"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="summary-reporting.html"/>
-          <title value="Summary Reporting"/>
-          <generation value="markdown"/>
-        </page>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Example Use Cases"/>
-        <generation value="markdown"/>
-        <page>
-          <nameUrl value="mrp.html"/>
-          <title value="Medication Reconciliation Post-Discharge (MRP)"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="col.html"/>
-          <title value="Colorectal Cancer Screening (COL)"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="vte1.html"/>
-          <title value="Venous Thromboembolism Prophylaxis (VTE-1)"/>
-          <generation value="markdown"/>
-        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -451,8 +417,18 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/>
+          <title value="StructureDefinition Summary MeasureReport Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-indv-measurereport-deqm.html"/>
           <title value="StructureDefinition Indv MeasureReport Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-datax-measurereport-deqm.html"/>
+          <title value="StructureDefinition Datax MeasureReport Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -463,16 +439,6 @@
         <page>
           <nameUrl value="StructureDefinition-organization-deqm.html"/>
           <title value="StructureDefinition Organization Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-datax-measurereport-deqm.html"/>
-          <title value="StructureDefinition Datax MeasureReport Deqm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/>
-          <title value="StructureDefinition Summary MeasureReport Deqm"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -491,15 +457,35 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-extension-certificationIdentifier.html"/>
-          <title value="StructureDefinition Extension certificationIdentifier"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-extension-reportingVendor.html"/>
           <title value="StructureDefinition Extension reportingVendor"/>
           <generation value="generated"/>
         </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-certificationIdentifier.html"/>
+          <title value="StructureDefinition Extension certificationIdentifier"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="bundles.html"/>
+        <title value="Bundle Definitions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="operations.html"/>
+        <title value="Operations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="searchparameters.html"/>
+        <title value="Search Parameters"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="capstatements.html"/>
@@ -537,6 +523,11 @@
         </page>
       </page>
       <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="all-examples.html"/>
         <title value="All Examples"/>
         <generation value="markdown"/>
@@ -550,11 +541,6 @@
         <nameUrl value="toc.html"/>
         <title value="Table of Contents"/>
         <generation value="html"/>
-      </page>
-      <page>
-        <nameUrl value="change-notes.html"/>
-        <title value="Change Notes"/>
-        <generation value="markdown"/>
       </page>
     </page>
     <parameter>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="indv-measurereport-deqm"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
+  <version value="1.1.1"/>
+  <name value="DEQMIndividualMeasureReportProfile"/>
+  <title value="DEQM Individual MeasureReport Profile"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2018-06-19T00:00:00-07:00"/>
+  <publisher value="Da Vinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The **DEQM Individual MeasureReport Profile** defined here is used when a measure is reported to an aggregator for one specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="MeasureReport"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="MeasureReport">
+      <path value="MeasureReport"/>
+      <mustSupport value="false"/>
+    </element>
+    <element id="MeasureReport.extension:vendor">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="vendor"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:cehrt">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="cehrt"/>
+      <short value="CMS EHR Certifciation ID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:cehrt.valueIdentifier">
+      <path value="MeasureReport.extension.valueIdentifier"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <patternIdentifier>
+        <system value="urn:oid:2.16.840.1.113883.3.2074.1"/>
+      </patternIdentifier>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.status">
+      <path value="MeasureReport.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.type">
+      <path value="MeasureReport.type"/>
+      <requirements value="For individual quality meaure reporting, this report is constrained to reporting on an individual."/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="individual"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.measure">
+      <path value="MeasureReport.measure"/>
+      <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.subject">
+      <path value="MeasureReport.subject"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.date">
+      <path value="MeasureReport.date"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.reporter">
+      <path value="MeasureReport.reporter"/>
+      <short value="The organization where the measure was completed"/>
+      <definition value="The organization where the measure was completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period">
+      <path value="MeasureReport.period"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <condition value="deqm-1"/>
+      <constraint>
+        <key value="deqm-1"/>
+        <severity value="error"/>
+        <human value="Date precision SHALL  be at least to day ( YYYY-MM-DD )"/>
+        <expression value="start.matches(&#39;^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*&#39;) and end.matches(&#39;^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*&#39;)"/>
+        <xpath value="f:start[matches(^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*)] and end.matches[(^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*)]"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period.start">
+      <path value="MeasureReport.period.start"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period.end">
+      <path value="MeasureReport.period.end"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group">
+      <path value="MeasureReport.group"/>
+      <min value="0"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population">
+      <path value="MeasureReport.group.population"/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.code">
+      <path value="MeasureReport.group.population.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.subjectResults">
+      <path value="MeasureReport.group.population.subjectResults"/>
+      <min value="0"/>
+      <max value="0"/>
+      <mustSupport value="false"/>
+    </element>
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.measureScore.extension:altscoretype">
+      <path value="MeasureReport.group.measureScore.extension"/>
+      <sliceName value="altscoretype"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.evaluatedResource">
+      <path value="MeasureReport.evaluatedResource"/>
+      <requirements value="To support the reporting of supplemental data elements."/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

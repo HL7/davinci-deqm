@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-reporterGroup"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
+  <version value="1.1.1"/>
+  <name value="DEQMreportingVendorExtension"/>
+  <title value="DEQM Reporting Vendor Extension"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2018-06-19T00:00:00-07:00"/>
+  <publisher value="Da Vinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="Group of practitioners responsible for a report. This extension is used to provide the capability to allow the participating practitioners to be documented."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="To provide the capability  to determine what practitioners were responsible for the report data when there is more than a single practitioner."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="MeasureReport.reporter"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Group of practitioners responsible for a report"/>
+      <definition value="Group of practitioners responsible for a report. This extension is used to provide the capability to allow the participating practitioners to be documented."/>
+      <min value="0"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

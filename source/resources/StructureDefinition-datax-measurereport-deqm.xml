@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="datax-measurereport-deqm"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"/>
+  <version value="1.1.1"/>
+  <name value="DEQMDataExchangeMeasureReportProfile"/>
+  <title value="DEQM Data Exchange MeasureReport Profile"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2018-06-19T00:00:00-07:00"/>
+  <publisher value="Da Vinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.&#xA;When a data producer needs to send data to a data consumer, they use the **DEQM Data-Exchange MeasureReport Profile** defined here.  The `type` element in this profile is set to &#x201C;data-collection&#x201D;.  Along with the MeasureReport profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on.  When a data producer sends a MeasureReport and the associated data, they may not have all the data that is required to calculate the measure report.  Additional data may need to be collected later or there may be additional data used in the measure that the aggregator owns such as a continuous coverage period requirement."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="MeasureReport"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="MeasureReport">
+      <path value="MeasureReport"/>
+      <mustSupport value="false"/>
+    </element>
+    <element id="MeasureReport.status">
+      <path value="MeasureReport.status"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/measure-report-status"/>
+      </binding>
+    </element>
+    <element id="MeasureReport.type">
+      <path value="MeasureReport.type"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="data-collection"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.measure">
+      <path value="MeasureReport.measure"/>
+      <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.subject">
+      <path value="MeasureReport.subject"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.date">
+      <path value="MeasureReport.date"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.reporter">
+      <path value="MeasureReport.reporter"/>
+      <short value="The organization where the measure was completed"/>
+      <definition value="The organization where the measure was completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period">
+      <path value="MeasureReport.period"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <condition value="deqm-1"/>
+      <constraint>
+        <key value="deqm-1"/>
+        <severity value="error"/>
+        <human value="Date precision SHALL  be at least to day ( YYYY-MM-DD )"/>
+        <expression value="start.matches(&#39;^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*&#39;) and end.matches(&#39;^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*&#39;)"/>
+        <xpath value="f:start/@value[matches(^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*)] and f:end/@value[matches(^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*)]"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period.start">
+      <path value="MeasureReport.period.start"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period.end">
+      <path value="MeasureReport.period.end"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.evaluatedResource">
+      <path value="MeasureReport.evaluatedResource"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
