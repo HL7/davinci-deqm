@@ -33,6 +33,8 @@ The following resources are used in the summary reporting scenario:
 
 When the results of a quality measure are completed for a population at the end of a reporting period, they are POSTed to the quality measure Receiver's FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API.
 
+Posting a Summary Measure Report is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios SHALL contains only the new and updated DEQM and QI Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
+
 {% include img-narrow.html img="summ_report_post.jpg" caption="Figure 2-11 POST Summary Report" %}
 
 ### Usage

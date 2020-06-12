@@ -108,7 +108,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
   : The data elements that are required to determine whether a case (for example, patient) is in the population as defined by the clinical quality measure. In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests. For example, for a particular measure the data of interest could be the set of Conditions, Procedures, and Observations related to determining whether a patient is in the initial population and included or excluded from the denominator.
 
 {: #incremental-update}Incremental Update
-  : In contrast to the Snapshot Update, the FHIR [Parameters] resource used in a Submit Data or the Collect Data scenario contains only the *new and updated* DEQM and QI Core Profiles since the last transaction.
+  : In contrast to the Snapshot Update, the FHIR Parameters resource used in a Submit Data orthe Collect Data scenario contains only the new and updated DEQM and QI Core Profiles sincethe last transaction. If the Consumer supports incremental updates, the contents of the updatedpayload updates the previous payload data.
 
 {: #measurement-period}Measurement Period
   : The period of time which a measure will be calculated.  It is defined by the measure (In FHIR represented by the element `Measure.effectivePeriod`).
@@ -116,9 +116,8 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 {: #reporting-period}Reporting Period
   : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions. This can be equal to or a subset of the Measurement Period.
 
-
 {: #snapshot-update}Snapshot Update
-  : In contrast to the Incremental Update, the FHIR [Parameters] resource used in a Submit Data or the Collect Data scenario is contains *all* the DEQM and QI Core Profiles for each transaction.
+  : In contrast to the Incremental Update, the FHIR Parameters resource used in a Submit Data orthe Collect Data scenario contains all the DEQM and QI Core Profiles for each transaction.  Ifthe Consumer supports snapshot updates, the contents of the updated payload entirelyreplaces the previous payload.
 
 {: #submission-period}Submission period
   : For this Implementation guide, submission period is the period of time in which data can exchanged when describing the FHIR transactions for data exchange, and measure reporting. The submission period typically overlaps with the measurement period and reporting period.

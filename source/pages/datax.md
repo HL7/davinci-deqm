@@ -65,7 +65,7 @@ The DEQM resources form a network through their relationships with each other - 
 {: #submit-data}
 
 {:.highlight-note}
- The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer should **SHOULD** submit the data as [snapshot updates] for submitting data in unless Producer and Consumer agree to use [incremental updates].
+ The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as  [incremental] or [snapshot] updates. These update methods are described in detail [below](#incremental-and-snapshot-updates).
 
 {% include img.html img="submit-data-step.svg" caption = "Figure 2-2 Submit Data Steps (Updated figure to show repeated submissions) source: https://docs.google.com/presentation/d/12XOtyF33K_NM5on4mVewRvha9AnFArU8PkOH_x4m9JE/edit?usp=sharing" %}
 
@@ -114,17 +114,50 @@ Once the Producer understands the data requirements, they will use the *Submit D
 
 
 <div class="highlight-note" markdown="1">
+
 ##### Incremental and Snapshot Updates
-When the Producer submits updates to the measure data within the submission period, the Producer **SHOULD** use [snapshot updates] for submitting data in unless Producer and Consumer agree to use [incremental updates].  In order to support updates:
 
-- The Producer **SHALL** support stable unique identifiers in the `MeasureReport.id` and `MeasureReport.meta.source` across updates so that the Consumer system can track whether the payload is an update and process it appropriately.
-- The Consumer **SHOULD** document in its CapabilityStatement whether it supports `snapshot`, `incremental` or ``??both??`` types of update with $submit-data operation.
-  - `...add snippet here ...`
-- If the Consumer supports snapshot updates, the contents of the updated submit-data payload entirely replaces the previous submit-data payload.
-- If the Consumer supports incremental updates, the contents of the updated submit-data payload updates the previous submit-data payload data.
+When the Producer submits updates to the measure data within the data submission period, the Producer can use [snapshot] or [incremental] updates for submitting data based on Producer and Consumer agreement.  Note that neither method is preferred or a default and has to be agreed upon out of band.
 
-  (update the CapabitilityStatement and add snippet here)
+Examples of patient ‘events’ that could trigger the submission of an update:
 
+- A visit, including telemedicine, to a physician’s office.
+- Being discharged from a hospital.
+
+**API Details:**
+
+ - **Discovery:**
+
+    - It is the responsibility of the Consumer to advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement.  Specifically by clearly stating “support for snapshot/incremental data exchange” in the `CapabiltityStatement.rest.resource.operation.documentation` element.  
+    TODO make this a extension on CapStatement - code for snapshot vs incremental  (not Both) so is computable.   (update the CapabitilityStatement and add snippet here)
+
+   - It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer’s CapabilityStatement.
+
+   - The required modifier extension on the Datax MeasureReport is used to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
+   TODO  (update examples to show this)
+
+  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported.
+  ~~~
+(add an inline snippet to show and error response)
+~~~
+
+- **Incremental Update Requirements and Expectations:**
+
+  - For incremental data exchange, stable logical (resource) ids and meta.source elements are required for *ALL* transacted resources across *ALL* transactions.
+
+    - For example  `MeasureReport.id` + `MeasureReport.meta.source`, `Patient.id` + `Patient.meta.souce`, etc ... must be the same for all data exchange interactions for a patient and measure during the submission period.
+
+  - Note that versions are of the resource can be accessed using the FHIR RESTful history transaction
+
+- **Snapshot Update Requirements and Expectations:**
+
+  - Snapshot data exchange overwrites previous data ( in other words, the Producer resubmit all data for multiple patients even for a single error).
+
+  - Snapshot data exchange is appropriate when the Consumer system is stateless (doesn’t persist data)
+
+    - Otherwise the Consumer may have to save previous snapshots
+
+  - Snapshot data exchange is appropriate when the Producer can’t support stable logical (resource) ids
 
 </div>
 
@@ -153,7 +186,7 @@ For a complete un-edited example see the [MRP Submit Data Operation] and [COL Su
 {: #collect-data}
 
 {:.highlight-note}
-In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. Like the [Submit Data scenario](#submit-data) described above, this scenario requires that the Producer can gather the data requirements from the consumer for the measure, and that there is no expectation that the data returned represents all the data required to evaluate the quality measure.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed below.
+In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. Like the [Submit Data scenario](#submit-data) described above, this scenario requires that the Producer can gather the data requirements from the consumer for the measure, and that there is no expectation that the data returned represents all the data required to evaluate the quality measure.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
 
 {% include img.html  img="collect-data-steps-new.jpg" caption = "Figure 2-5 Collect Data Steps - updated image to reflect incremental updates"%}
 
@@ -167,7 +200,16 @@ In this scenario, the Consumer initiates a *Collect Data* operation to gather an
 {:.no_toc}
 
 
-The Consumer uses a Collect Data operation to request any available relevant data for the evaluation of a particular measure from a Producer. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Producer to limit the response to only data that has been entered or changed since the last received on date.
+The Consumer uses a Collect Data operation to request any available relevant data for the evaluation of a particular measure from a Producer. Unlike the Submit Data interaction, the collect data exchange is typically incremental. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Producer to limit the response to only data that has been entered or changed since the last received on date.
+
+**API Details:**
+
+- Unlike the Submit Data interaction, there is no need for out of band discovery.
+- The Consumer uses the Collect Data operation’s `lastReceivedOn` parameter for incremental data exchange - if the  parameter present, it is an incremental update and snapshot if not.
+- The same Snapshot and Incremental Requirements and Expectations described above for the Submit Data transaction apply for Collect Data.
+- If the Producer cannot support the lastReceivedOn parameter then it SHALL return a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the `lastReceivedOn` parameter  update is not supported.
+
+   (add an inline snippet to show and error response)
 
 <del>
 Note that implementing this scenario requires that the Producer system understand the data requirements for the measure in order to provide the data. As with the Submit Data operation, the implementation can either manually determine the relevant data using the measure definition, or the implementation can use the Data Requirements operation to determine relevant data.
