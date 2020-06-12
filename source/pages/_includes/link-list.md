@@ -105,8 +105,10 @@
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
+[Coverage]: {{site.data.fhir.path}}coverage.html
 [Parameters]: {{site.data.fhir.path}}parameters.html
-[following rules]: {{site.data.fhir.path}}references.html#contained
+[following rules]: {{site.data.fhir.path}}references.html#
+[Contained resources]: {{site.data.fhir.path}}references.html#contained
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
 [Reporting Group]: StructureDefinition-extension-reporterGroup.html
 [Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html

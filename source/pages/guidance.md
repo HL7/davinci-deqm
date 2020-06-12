@@ -79,6 +79,32 @@ Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQ
 
 The negation patterns described here are about approaches for identifying when events are not present or when events are documented as not occurring for a reason. These patterns may appear throughout a measure in any of the various population criteria, depending on measure intent. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed.
 
+## Using Contained Resources in the Response Transaction
+
+[Contained] resources **SHOULD NOT** be used when responding to the submit-data or collect-data operation or to the Individual reporting transactions.  The submit-data and collect-data operation response payload are Parameters resources containing resource parameters. The response to the individual reporting transactions are Bundles. The only time contained resource can be used is when the source data exists only within the context of the transaction. For example, if the only information about the patient's coverage is the payor name, the Coverage resource could be contained by the Patient resource:
+
+~~~
+{
+  "resourceType": "Patient",
+  "id": "patient01",
+  "contained": [
+    {
+      "resourceType": "Coverage",
+      "status": "active",
+      "beneficiary": {
+        "reference": "#"
+      },
+      "payor": [
+        {
+          "reference": "Organization/organization04"
+        }
+      ]
+    }
+  ]
+  ...<rest of patient resource>
+}
+~~~
+
 ## Must Support
 
 - This guide adopts the [QI Core *Must Support*] definition with the following additional expectation:
