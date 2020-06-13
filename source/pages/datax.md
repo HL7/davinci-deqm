@@ -116,6 +116,7 @@ Once the Producer understands the data requirements, they will use the *Submit D
 <div class="highlight-note" markdown="1">
 
 ##### Incremental and Snapshot Updates
+{:.no_toc #submit_updates}
 
 When the Producer submits updates to the measure data within the data submission period, the Producer can use [snapshot] or [incremental] updates for submitting data based on Producer and Consumer agreement.  Note that neither method is preferred or a default and has to be agreed upon out of band.
 
@@ -124,9 +125,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 - A visit, including telemedicine, to a physician’s office.
 - Being discharged from a hospital.
 
-**API Details:**
-
- - **Discovery:**
+**Discovery:**
 
     - It is the responsibility of the Consumer to advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement.  Specifically by clearly stating “support for snapshot/incremental data exchange” in the `CapabiltityStatement.rest.resource.operation.documentation` element.  
     TODO make this a extension on CapStatement - code for snapshot vs incremental  (not Both) so is computable.   (update the CapabitilityStatement and add snippet here)
@@ -141,7 +140,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 (add an inline snippet to show and error response)
 ~~~
 
-- **Incremental Update Requirements and Expectations:**
+**Incremental Update Requirements and Expectations:**
 
   - For incremental data exchange, stable logical (resource) ids and meta.source elements are required for *ALL* transacted resources across *ALL* transactions.
 
@@ -149,7 +148,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
   - Note that versions are of the resource can be accessed using the FHIR RESTful history transaction
 
-- **Snapshot Update Requirements and Expectations:**
+**Snapshot Update Requirements and Expectations:**
 
   - Snapshot data exchange overwrites previous data ( in other words, the Producer resubmit all data for multiple patients even for a single error).
 
@@ -186,7 +185,7 @@ For a complete un-edited example see the [MRP Submit Data Operation] and [COL Su
 {: #collect-data}
 
 {:.highlight-note}
-In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. Like the [Submit Data scenario](#submit-data) described above, this scenario requires that the Producer can gather the data requirements from the consumer for the measure, and that there is no expectation that the data returned represents all the data required to evaluate the quality measure.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
+In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
 
 {% include img.html  img="collect-data-steps-new.jpg" caption = "Figure 2-5 Collect Data Steps - updated image to reflect incremental updates"%}
 
@@ -202,7 +201,9 @@ In this scenario, the Consumer initiates a *Collect Data* operation to gather an
 
 The Consumer uses a Collect Data operation to request any available relevant data for the evaluation of a particular measure from a Producer. Unlike the Submit Data interaction, the collect data exchange is typically incremental. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Producer to limit the response to only data that has been entered or changed since the last received on date.
 
-**API Details:**
+##### Incremental and Snapshot Updates
+{:.no_toc #collect_updates}
+
 
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
 - The Consumer uses the Collect Data operation’s `lastReceivedOn` parameter for incremental data exchange - if the  parameter present, it is an incremental update and snapshot if not.
