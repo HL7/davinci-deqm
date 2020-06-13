@@ -32,6 +32,13 @@
   <differential>
     <element id="Organization">
       <path value="Organization"/>
+      <constraint>
+        <key value="deqm-3"/>
+        <severity value="error"/>
+        <human value="Either an NPI or EIN (TIN) identifier SHALL be present"/>
+        <expression value="(identifier.system = &#39;urn:oid:2.16.840.1.113883.4.2&#39;) or (identifier.system = &#39;http://hl7.org/fhir/sid/us-npi&#39;)"/>
+        <xpath value="f:system[@value=&#39;urn:oid:2.16.840.1.113883.4.2&#39; or @value=&#39;http://hl7.org/fhir/sid/us-npi&#39;]"/>
+      </constraint>
       <mustSupport value="false"/>
     </element>
     <element id="Organization.identifier">
@@ -45,14 +52,7 @@
       </slicing>
       <min value="1"/>
       <max value="*"/>
-      <condition value="dv-1"/>
-      <constraint>
-        <key value="dv-1"/>
-        <severity value="error"/>
-        <human value="Either an NPI or EIN (TIN) identifier SHALL be present"/>
-        <expression value="(identifier.system = &#39;urn:oid:2.16.840.1.113883.4.2&#39;) or (identifier.system = &#39;http://hl7.org/fhir/sid/us-npi&#39;)"/>
-        <xpath value="f:system[@value=&#39;urn:oid:2.16.840.1.113883.4.2&#39; or @value=&#39;http://hl7.org/fhir/sid/us-npi&#39;]"/>
-      </constraint>
+      <condition value="deqm-3"/>
       <mustSupport value="true"/>
     </element>
     <element id="Organization.identifier:tin">

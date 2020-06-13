@@ -21,6 +21,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
 1. Separate subgroup calculations (stratifiers)
+1. Indicate whether improvement in the measure is noted by an increase or decrease in the measure score.
 1. The scoring type defined by the referenced Measure using the DEQM [Measure Scoring] Extension
 1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension
 1. A certification identifier using the DEQM [Certification Identifier] Extension
@@ -29,7 +30,7 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support])
 
 **Additional Profile specific implementation guidance:**
 
-None
+If the measure scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required.
 
 ### Examples
 
