@@ -44,3 +44,4 @@ Changes and Updates for version 1.1.1
   - Clarify [usage of correct measure version](datax.html#data-exchange) . (FHIR-26081)
   - Clarify discovery of data requirements(datax.html#(#gather-data-requirements-from-consumer)). (FHIR-26085)
   - Clarify [stakeholders](datax.html#data-exchange) (FHIR-26082)
+  - Add [reference](#introduction) to Da Vinci Guiding Principles (FHIR-26078)
