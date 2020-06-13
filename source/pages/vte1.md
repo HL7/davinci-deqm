@@ -33,7 +33,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
 |ServiceRequest|QI Core ServiceRequest Profile|[QI Core ServiceRequest]|
 

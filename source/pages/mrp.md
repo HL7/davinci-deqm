@@ -44,7 +44,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile[^9]|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|QI Core Practitioner Profile[^9]|[QI Core Practitioner]|
+|Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner]|
 |Task|QI Core Task Profile|[QI Core Task]|
 
 ## Graph of MRP Resources

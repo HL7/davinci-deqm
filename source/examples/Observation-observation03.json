@@ -1,39 +1,77 @@
 {
-  "resourceType": "Observation",
-  "id": "observation03",
+  "id": "organization03",
   "meta": {
+    "lastUpdated": "2019-02-21T01:47:53.000+00:00",
     "profile": [
-      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-    ]
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+    ],
+    "versionId": "3"
   },
-  "status": "final",
-  "category": [
+  "active": true,
+  "address": [
+    {
+      "city": "Union City",
+      "country": "USA",
+      "line": [
+        "94 Olive Ave."
+      ],
+      "postalCode": "07087",
+      "state": "NJ"
+    }
+  ],
+  "identifier": [
+    {
+      "assigner": {
+        "display": "www.cms.gov"
+      },
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "type": {
+        "coding": [
+          {
+            "code": "PRN",
+            "display": "Provider number",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "use": "official",
+      "value": "345678912"
+    },
+    {
+      "assigner": {
+        "display": "www.cms.gov"
+      },
+      "system": "urn:oid:2.16.840.1.113883.4.336",
+      "type": {
+        "coding": [
+          {
+            "code": "PRN",
+            "display": "Provider number",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "use": "secondary",
+      "value": "082584"
+    }
+  ],
+  "name": "DaVinciHospital03",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(+1) 201-555-1212"
+    }
+  ],
+  "type": [
     {
       "coding": [
         {
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "code": "laboratory",
-          "display": "Laboratory"
+          "code": "prov",
+          "display": "Healthcare Provider",
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type"
         }
       ]
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "77353-1",
-        "display": "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/patient03"
-  },
-  "effectiveDateTime": "2018-06-22",
-  "performer": [
-    {
-      "reference": "Practitioner/practitioner01"
-    }
-  ]
+  "resourceType": "Organization"
 }

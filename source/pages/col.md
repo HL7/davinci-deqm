@@ -42,7 +42,7 @@ In the case of colorectal cancer screening, two types of data are reported: 1) t
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
 
 ## Graph of COL Resources
