@@ -46,11 +46,11 @@ The second scenario defined in this guide is when a Reporter needs to exchange a
 
     -  Multiple MeasureReport may reference the same instance of a resource.
 
--   Consumers and Producers *should* both use a common clinical
+-   Both Consumers and Producers *should* use a common clinical
     quality language (CQL) that would allow the same measures to be
     applied in healthcare and at the aggregator. This would also enable
     the application of the same measures across populations that span
-    multiple Consumers (such as payers).
+    multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
 
 ## DEQM MeasureReport Profiles
 
