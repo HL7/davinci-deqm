@@ -4,8 +4,8 @@
   <id value="extension-alternateScoreType"/>
   <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
   <version value="1.1.1"/>
-  <name value="DEQMreportingVendorExtension"/>
-  <title value="DEQM Reporting Vendor Extension"/>
+  <name value="DEQMAlternateScoreTypeExtension"/>
+  <title value="DEQM Alternate Score Type Extension"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2018-06-19T00:00:00-07:00"/>

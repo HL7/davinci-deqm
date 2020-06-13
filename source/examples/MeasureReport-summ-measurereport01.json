@@ -6,6 +6,18 @@
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "proportion"
+          }
+        ]
+      }
+    }
+  ],
   "status": "complete",
   "type": "summary",
   "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
@@ -23,19 +35,44 @@
         "coding": [
           {
             "system": "http://example.org",
-            "code": "112",
-            "display": "112"
+            "code": "mrp-group",
+            "display": "MRP Group"
           }
-        ]
+        ],
+        "text": "MRP Group"
       },
       "population": [
         {
           "code": {
             "coding": [
               {
-                "system": "http://example.org",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
                 "code": "initial-population",
                 "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 100
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 80
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
               }
             ]
           },
@@ -43,53 +80,8 @@
         }
       ],
       "measureScore": {
-        "value": 100
-      },
-      "stratifier": [
-        {
-          "code": [
-            {
-              "coding": [
-                {
-                  "system": "http://example.org",
-                  "code": "4456",
-                  "display": "4456"
-                }
-              ]
-            }
-          ],
-          "stratum": [
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/administrative-gender",
-                    "code": "male",
-                    "display": "Male"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://example.org",
-                        "code": "initial-population",
-                        "display": "Initial Population"
-                      }
-                    ]
-                  },
-                  "count": 50
-                }
-              ],
-              "measureScore": {
-                "value": 100
-              }
-            }
-          ]
-        }
-      ]
+        "value": 0.8
+      }
     }
   ]
 }

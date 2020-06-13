@@ -1,11 +1,23 @@
 {
   "resourceType": "MeasureReport",
-  "id" : "indv-measurereport03",
+  "id": "indv-measurereport03",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "proportion"
+          }
+        ]
+      }
+    }
+  ],
   "status": "complete",
   "type": "individual",
   "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
@@ -22,7 +34,9 @@
   },
   "group": [
     {
-      "measureScore" : { "value":1 },
+      "measureScore": {
+        "value": 1
+      },
       "code": {
         "coding": [
           {

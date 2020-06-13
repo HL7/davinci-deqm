@@ -1,0 +1,394 @@
+resourceType: Measure
+id: cdc-covid
+url: 'http://cdcmeasures.example.org/cdc-covid'
+version: '20200404'
+name: Covid_19PatientImpactHospitalCapacity
+title: COVID-19 Patient Impact & Hospital Capacity
+status: draft
+subjectCodeableConcept:
+  coding:
+    - system: 'http://hl7.org/fhir/resource-types'
+      code: Location
+      display: Location
+  text: Location
+date: '2020-03-31T00:00:00Z'
+publisher: SANER-IG
+description: >-
+  CDC, NHSN COVID-19 Patient Impact & Hospital Capacity Hospital
+  Bed/ICU/Ventilator Capacity. The Centers for Disease Control and Prevention’s
+  (CDC’s) National Healthcare Safety Network (NHSN) is supporting the nation’s
+  COVID-19 response by introducing a new COVID-19 Patient Impact and Hospital
+  Capacity Module within NHSN’s Patient Safety Component.
+  https://www.cdc.gov/nhsn/acute-care-hospital/covid19/index.html
+useContext:
+  - code:
+      system: 'http://terminology.hl7.org/CodeSystem/usage-context-type'
+      code: focus
+    valueCodeableConcept:
+      coding:
+        - system: 'http://snomed.info/sct'
+          code: '840539006'
+          display: COVID-19
+jurisdiction:
+  - coding:
+      - system: 'urn:iso:std:iso:3166'
+        code: US
+        display: United States of America
+relatedArtifact:
+  - type: derived-from
+    display: >-
+      Instructions for Completion of the COVID-19 Patient Impact and Hospital
+      Capacity Module Form (CDC 57.130)
+    document:
+      url: 'https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf'
+      creation: 2020-03
+  - type: derived-from
+    display: >-
+      Importing COVID-19 Patient Module Denominator data for Patient Safety
+      Component
+    document:
+      url: 'https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf'
+      creation: 2020-03
+  - type: justification
+    display: COVID-19 Patient Impact & Hospital Capacity Module
+    document:
+      url: 'https://www.cdc.gov/nhsn/acute-care-hospital/covid19/index.html'
+      creation: '2020-03-31'
+scoring:
+  coding:
+    - system: 'http://terminology.hl7.org/CodeSystem/measure-scoring'
+      code: cohort
+      display: Cohort
+type:
+  - coding:
+      - system: 'http://terminology.hl7.org/CodeSystem/measure-type'
+        code: structure
+        display: Structure
+group:
+  - code:
+      text: numTotBeds
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          ALL HOSPITAL BEDS: Total number of all Inpatient and outpatient beds
+          in your hospital, including all staffed, licensed, and overflow surge
+          or expansion beds used for inpatients or for outpatients (includes ICU
+          beds)
+        criteria:
+          description: 'CDC defined field: numTotBeds'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number, Instruction for Data Collection: Enter the total number of
+            all hospital beds, including inpatient and outpatient beds. All
+            staffed, licensed, and overflow and surge/expansion beds used for
+            inpatients or outpatients. This includes ICU beds.
+  - code:
+      text: Numbeds
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          HOSPITAL INPATIENT BEDS: Total number of staffed inpatient beds in
+          your hospital, including all staffed, licensed, and overflow and surge
+          or expansion beds used for inpatients (includes ICU beds)
+        criteria:
+          description: 'CDC defined field: Numbeds'
+          language: text/plain
+          expression: >-
+            Requirement: Required, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numTotBeds, Instruction for Data Collection:
+            Required. Enter the total number of all inpatient beds, including
+            all staffed, licensed, and overflow and surge/expansion beds created
+            for inpatient care. This includes intensive care unit (ICU) beds.
+  - code:
+      text: numBedsOcc
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient
+          beds that are currently occupied
+        criteria:
+          description: 'CDC defined field: numBedsOcc'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numBeds, Instruction for Data Collection: Enter
+            the total number of staffed inpatient beds occupied by patients at
+            the time the data is collected, including all staffed, licensed, and
+            overflow and surge/expansion beds created for inpatient care. This
+            includes ICU beds.
+  - code:
+      text: numICUBeds
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          ICU BEDS: Total number of staffed inpatient intensive care unit (ICU)
+          beds
+        criteria:
+          description: 'CDC defined field: numICUBeds'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numBeds, Instruction for Data Collection: Enter
+            the total number of staffed Intensive Care Unit (ICU) beds.
+  - code:
+      text: numICUBedsOcc
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are
+          occupied
+        criteria:
+          description: 'CDC defined field: numICUBedsOcc'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numBeds, Instruction for Data Collection: Enter
+            the total number of staffed ICU beds occupied by patients at the
+            time the data is collected.
+  - code:
+      text: numVent
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: 'MECHANICAL VENTILATORS: Total number of ventilators available'
+        criteria:
+          description: 'CDC defined field: numVent'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            numbe Must be <= numTotBeds or <= 10,000 , Instruction for Data
+            Collection: Enter the total number of mechanical ventilators,
+            including anesthesia machines and portable/transport ventilators
+            available in the facility. Include BiPAP machines if the hospital
+            uses BiPAP to deliver positive pressure ventilation via artificial
+            airways.
+  - code:
+      text: numVentUse
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: 'MECHANICAL VENTILATORS IN USE: Total number of ventilators in use'
+        criteria:
+          description: 'CDC defined field: numVentUse'
+          language: text/plain
+          expression: >-
+            Requirement: Required, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numVent or <= 10,000 , Instruction for Data
+            Collection: Required. Enter the total number of mechanical
+            ventilators in use at the time the data is collected, including
+            anesthesia machines and portable/transport ventilators. Include
+            BiPAP machines if the hospital uses BiPAP to deliver positive
+            pressure ventilation via artificial airways.
+  - code:
+      text: numC19HospPats
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          HOSPITALIZED: Patients currently hospitalized in an inpatient bed who
+          have suspected or confirmed COVID-19
+        criteria:
+          description: 'CDC defined field: nnumC19HospPats'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numBedsOcc, Instruction for Data Collection:Enter
+            the number of patients hospitalized in an inpatient bed at the time
+            the data is collected who have suspected or confirmed COVID-19. This
+            includes the patients with laboratory-confirmed or clinically
+            diagnosed COVID-19. Confirmed: A patient with a laboratoryconfirmed
+            COVID-19 diagnosis. Suspected: A patient without a laboratory
+            confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim
+            Public Health Guidance for Evaluating Persons Under Investigation
+            (PUIs), has signs and symptoms compatible with COVID-19 (most
+            patients with confirmed COVID-19 have developed fever and/or
+            symptoms of acute respiratory illness, such as cough, shortness of
+            breath or myalgia/fatigue).
+  - code:
+      text: numC19MechVentPats
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          HOSPITALIZED and VENTILATED: Patients currently hospitalized in an
+          inpatient bed who have suspected or confirmed COVID-19 and are on a
+          mechanical ventilator
+        criteria:
+          description: 'CDC defined field: numC19MechVentPats'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numVentUse, Instruction for Data Collection: Enter
+            the number of patients hospitalized in an inpatient bed who have
+            suspected or confirmed COVID-19 and are currently on a mechanical
+            ventilator* at the time the data is collected . This includes the
+            patients with laboratory-confirmed or clinically diagnosed COVID-19.
+            *Ventilator: Any device used to support, assist or control
+            respiration (inclusive of the weaning period) through the
+            application of positive pressure to the airway when delivered via an
+            artificial airway, specifically an oral/nasal endotracheal or
+            tracheostomy tube. Note: Ventilation and lung expansion devices that
+            deliver positive pressure to the airway (for example: CPAP, BiPAP,
+            bi-level, IPPB and PEEP) via non-invasive means (for example: nasal
+            prongs, nasal mask, full face mask, total mask, etc.) are not
+            considered ventilators unless positive pressure is delivered via an
+            artificial airway (oral/nasal endotracheal or tracheostomy tube).
+  - code:
+      text: numC19HOPats
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          HOSPITAL ONSET: Patients currently hospitalized in an inpatient bed
+          with onset of suspected or confirmed COVID-19 fourteen or more days
+          after hospital admission due to a condition other than COVID-19
+        criteria:
+          description: 'CDC defined field: numC19HOPats'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numBedsOcc, Instruction for Data Collection: Enter
+            the number of patients hospitalized in an inpatient bed at the time
+            the data is collected with onset of suspected or confirmed COVID-19
+            fourteen or more days after hospitalization (admission date =
+            hospital day 1). This includes laboratory-confirmed or clinically
+            diagnosed COVID-19 cases.
+  - code:
+      text: numC19OverflowPats
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are
+          currently in the Emergency Department (ED) or any overflow location
+          awaiting an inpatient bed
+        criteria:
+          description: 'CDC defined field: numC19OverflowPats'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 2000, Format: Must be a whole
+            number Must be <= 2000, Instruction for Data Collection: Enter the
+            number of patients with suspected or confirmed COVID-19 who are in
+            the Emergency Department(ED) or any overflow/expansion location
+            awaiting placement in an inpatient bed at the time the data is
+            collected . This includes patients with laboratory-confirmed or
+            clinically diagnosed COVID-19. Overflow locations include any
+            physical locations created to accommodate patients include but not
+            limited to 24-hour observation units, hallways, parking lots, or
+            tents
+  - code:
+      text: umC19OFMechVentPats
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed
+          COVID-19 who currently are in the ED or any overflow location awaiting
+          an inpatient bed and on a mechanical ventilator
+        criteria:
+          description: 'CDC defined field: nnumC19OFMechVentPats'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 10000, Format: Must be a whole
+            number Must be <= numVentUse, Instruction for Data Collection: Enter
+            the number of patients with suspected or confirmed COVID-19 who are
+            in the ED or any overflow/expansion location on a mechanical
+            ventilator* at the time the data is collected . This includes
+            patients with laboratory-confirmed or clinically diagnosed COVID-19.
+            *Ventilator: Any device used to support, assist or control
+            respiration (inclusive of the weaning period) through the
+            application of positive pressure to the airway when delivered via an
+            artificial airway, specifically an oral/nasal endotracheal or
+            tracheostomy tube. Note: Ventilation and lung expansion devices that
+            deliver positive pressure to the airway (for example: CPAP, BiPAP,
+            bi-level, IPPB and PEEP) via non-invasive means (for example: nasal
+            prongs, nasal mask, full face mask, total mask, etc.) are not
+            considered ventilators unless positive pressure is delivered via an
+            artificial airway (oral/nasal endotracheal or tracheostomy tube).
+  - code:
+      text: numC19Died
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: >-
+          DEATHS: Patients with suspected or confirmed COVID-19 who died in the
+          hospital, ED or any overflow location on the date for which you are
+          reporting
+        criteria:
+          description: 'CDC defined field: numC19Died'
+          language: text/plain
+          expression: >-
+            Requirement: Optional, Values: 0 to 1500, Format: Must be a whole
+            number Must be <= 1500, Instruction for Data Collection: Enter the
+            number of patients with suspected or confirmed COVID-19 who died in
+            the hospital, ED, or any overflow location. This includes patients
+            with laboratory-confirmed or clinically diagnosed COVID-19. Please
+            enter the count of deaths newly occurred, at the time the data is
+            collected instead of the cumulated number of deaths.
+  - code:
+      text: surgicalMasks
+    population:
+      - code:
+          coding:
+            - system: 'http://terminology.hl7.org/CodeSystem/measure-population'
+              code: initial-population
+              display: Initial Population
+        description: On-hand supply of surgical masks
+        criteria:
+          description: 'CDC defined field: surgicalMasks'
+          language: text/plain
+          expression: >-
+            Select the number days of the surgical masks supply you have in
+            stock. The choices are: 1) 'Zero days' 2) '1-3 days' 3) '4-14 days'
+            4) '15 or more days'. Please answer based on your organization’s
+            best estimation* Information can be obtained from materials
+            management, infection prevention leader, operational leadership, or
+            the COVID-19 incidence command leadership in your facility. * For
+            calculation of the days of supply in stock, if needed, consider
+            using the Personal Protective Equipment (PPE) Burn Rate Calculator
+            (https://www.cdc.gov/coronavirus/2019-ncov/hcp/ppestrategy/burn-calculator.html).

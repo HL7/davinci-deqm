@@ -124,3 +124,4 @@
 [submission period]: index.html#submission-period
 [incremental]: index.html#incremental-update
 [snapshot]: index.html#snapshot-update
+[Measure Scoring]: StructureDefinition-extension-measureScoring.html

@@ -6,6 +6,18 @@
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "proportion"
+          }
+        ]
+      }
+    }
+  ],
   "status": "complete",
   "type": "summary",
   "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
@@ -78,19 +90,22 @@
           "count": 10
         }
       ],
-      "measureScore":{"value": 66},
+      "measureScore": {
+        "value": 66
+      },
       "stratifier": [
         {
-        "code": [{
-          "coding": [
+          "code": [
             {
-              "system": "http://fhir/example.org",
-              "code": "sde-ethnicity",
-              "display": "SDE Ethnicity"
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-ethnicity",
+                  "display": "SDE Ethnicity"
+                }
+              ]
             }
-          ]
-        }]
-        ,
+          ],
           "stratum": [
             {
               "value": {
@@ -152,9 +167,10 @@
                   "count": 10
                 }
               ],
-              "measureScore":{"value": 50}
+              "measureScore": {
+                "value": 50
+              }
             },
-
             {
               "value": {
                 "coding": [
@@ -215,21 +231,24 @@
                   "count": 0
                 }
               ],
-              "measureScore":{"value": 71}
+              "measureScore": {
+                "value": 71
+              }
             }
           ]
-        }
-        ,
+        },
         {
-          "code": [{
-            "coding": [
-              {
-                "system": "http://fhir/example.org",
-                "code": "sde-payer",
-                "display": "SDE Payer"
-              }
-            ]
-          }],
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-payer",
+                  "display": "SDE Payer"
+                }
+              ]
+            }
+          ],
           "stratum": [
             {
               "value": {
@@ -291,7 +310,9 @@
                   "count": 10
                 }
               ],
-              "measureScore":{"value": 50}
+              "measureScore": {
+                "value": 50
+              }
             },
             {
               "value": {
@@ -353,7 +374,9 @@
                   "count": 0
                 }
               ],
-              "measureScore":{"value": 33}
+              "measureScore": {
+                "value": 33
+              }
             },
             {
               "value": {
@@ -415,21 +438,24 @@
                   "count": 0
                 }
               ],
-              "measureScore":{"value": 100}
+              "measureScore": {
+                "value": 100
+              }
             }
           ]
         },
-
         {
-        "code": [{
-          "coding": [
+          "code": [
             {
-              "system": "http://fhir/example.org",
-              "code": "sde-race",
-              "display": "SDE Race"
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-race",
+                  "display": "SDE Race"
+                }
+              ]
             }
-          ]
-        }],
+          ],
           "stratum": [
             {
               "value": {
@@ -491,7 +517,9 @@
                   "count": 10
                 }
               ],
-              "measureScore":{"value": 50}
+              "measureScore": {
+                "value": 50
+              }
             },
             {
               "value": {
@@ -553,7 +581,9 @@
                   "count": 0
                 }
               ],
-              "measureScore":{"value": 33}
+              "measureScore": {
+                "value": 33
+              }
             },
             {
               "value": {
@@ -615,28 +645,32 @@
                   "count": 0
                 }
               ],
-              "measureScore":{"value": 100}
+              "measureScore": {
+                "value": 100
+              }
             }
           ]
         },
         {
-          "code": [{
-            "coding": [
-              {
-                "system": "http://fhir/example.org",
-                "code": "sde-sex",
-                "display": "SDE Sex"
-              }
-            ]
-          }],
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-sex",
+                  "display": "SDE Sex"
+                }
+              ]
+            }
+          ],
           "stratum": [
             {
               "value": {
                 "coding": [
                   {
-                  "system": "http://hl7.org/fhir/administrative-gender",
-                  "code": "male",
-                  "display": "Male"
+                    "system": "http://hl7.org/fhir/administrative-gender",
+                    "code": "male",
+                    "display": "Male"
                   }
                 ]
               },
@@ -690,15 +724,17 @@
                   "count": 5
                 }
               ],
-              "measureScore":{"value": 57}
+              "measureScore": {
+                "value": 57
+              }
             },
             {
               "value": {
                 "coding": [
                   {
-                  "system": "http://hl7.org/fhir/administrative-gender",
-                  "code": "female",
-                  "display": "Female"
+                    "system": "http://hl7.org/fhir/administrative-gender",
+                    "code": "female",
+                    "display": "Female"
                   }
                 ]
               },
@@ -752,15 +788,17 @@
                   "count": 4
                 }
               ],
-              "measureScore":{"value": 72}
+              "measureScore": {
+                "value": 72
+              }
             },
             {
               "value": {
                 "coding": [
                   {
-                  "system": "http://hl7.org/fhir/administrative-gender",
-                  "code": "other",
-                  "display": "Other"
+                    "system": "http://hl7.org/fhir/administrative-gender",
+                    "code": "other",
+                    "display": "Other"
                   }
                 ]
               },
@@ -814,7 +852,9 @@
                   "count": 0
                 }
               ],
-              "measureScore":{"value": 0}
+              "measureScore": {
+                "value": 0
+              }
             }
           ]
         }

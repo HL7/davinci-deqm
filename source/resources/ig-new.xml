@@ -232,12 +232,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="MeasureReport/summ-measurereport02"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="MeasureReport/indv-measurereport03"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -295,6 +289,12 @@
         <reference value="Patient/patient01"/>
       </reference>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-measureScoring"/>
+      </reference>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
@@ -487,6 +487,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-extension-measureScoring.html"/>
+          <title value="StructureDefinition Extension measureScoring"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-extension-alternateScoreType.html"/>
           <title value="StructureDefinition Extension alternateScoreType"/>
           <generation value="generated"/>
@@ -543,6 +548,11 @@
         </page>
       </page>
       <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="all-examples.html"/>
         <title value="All Examples"/>
         <generation value="markdown"/>
@@ -550,6 +560,11 @@
       <page>
         <nameUrl value="downloads.html"/>
         <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="change-notes.html"/>
+        <title value="Change Notes"/>
         <generation value="markdown"/>
       </page>
       <page>

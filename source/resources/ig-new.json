@@ -238,12 +238,6 @@
     },
     {
       "reference" : {
-        "reference" : "MeasureReport/summ-measurereport02"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "MeasureReport/indv-measurereport03"
       },
       "exampleBoolean" : true
@@ -301,6 +295,12 @@
         "reference" : "Patient/patient01"
       },
       "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-measureScoring"
+      },
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -493,6 +493,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-extension-measureScoring.html",
+          "title" : "StructureDefinition Extension measureScoring",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-extension-alternateScoreType.html",
           "title" : "StructureDefinition Extension alternateScoreType",
           "generation" : "generated"
@@ -549,6 +554,11 @@
         }]
       },
       {
+        "nameUrl" : "security.html",
+        "title" : "Security",
+        "generation" : "markdown"
+      },
+      {
         "nameUrl" : "all-examples.html",
         "title" : "All Examples",
         "generation" : "markdown"
@@ -556,6 +566,11 @@
       {
         "nameUrl" : "downloads.html",
         "title" : "Downloads",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "change-notes.html",
+        "title" : "Change Notes",
         "generation" : "markdown"
       },
       {
