@@ -27,6 +27,7 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support])
 1. A certification identifier using the DEQM [Certification Identifier] Extension
 1. Ability to use other types for measure score using the DEQM [Alternate Score Type] Extension
 1. Reference to a reporting group using the DEQM [Reporting Group] Extension
+1. Specify the software systems used by the reporting system using the CQFM [Software System]({{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html) Extension
 
 **Additional Profile specific implementation guidance:**
 

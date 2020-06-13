@@ -43,6 +43,7 @@
 
       <mustSupport value="false"/>
     </element>
+
     <element id="MeasureReport.extension:scoring">
       <path value="MeasureReport.extension"/>
       <sliceName value="scoring"/>
@@ -55,6 +56,7 @@
       <condition value="deqm-2"/>
       <mustSupport value="true"/>
     </element>
+
     <element id="MeasureReport.extension:vendor">
       <path value="MeasureReport.extension"/>
       <sliceName value="vendor"/>
@@ -90,6 +92,19 @@
       </patternIdentifier>
       <mustSupport value="true"/>
     </element>
+
+    <element id="MeasureReport.extension:software">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="software"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <mustSupport value="true"/>
