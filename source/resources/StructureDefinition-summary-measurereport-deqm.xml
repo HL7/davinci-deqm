@@ -204,6 +204,12 @@
       <min value="1"/>
       <max value="*"/>
       <mustSupport value="true"/>
+
+      <element id="MeasureReport.group.id">
+        <path value="MeasureReport.group.id"/>
+        <mustSupport value="true"/>
+      </element>
+
     </element>
     <element id="MeasureReport.group.code">
       <path value="MeasureReport.group.code"/>

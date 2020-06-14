@@ -118,6 +118,17 @@
             "expression": "Count of inpatient encounters during the measurement period."
           }
         }
+      ],
+      "_population": [
+        {
+          "id": "initial-population"
+        },
+        {
+          "id": "numerator"
+        },
+        {
+          "id": "denominator"
+        }
       ]
     }
   ]

@@ -48,3 +48,4 @@ Changes and Updates for version 1.1.1
   - Add [implementer notes](StructureDefinition-datax-measurereport-deqm.html#structuredefinition-datax-measurereport-deqm) to  DEQM Data-Exchange MeasureReport Profile  (FHIR-26073)
   - Add [Practitioner Profile](StructureDefinition-practitioner-deqm.html) to accommodate CMS Certification Number identifier(CCN) and add CCN to [Organization Profile](StructureDefinition-organization-deqm.html) (FHIR-25739)
   - Add [software name/version extension](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.extension:vendor) to MeasureReport Profiles (FHIR-25721)
+  - Add required [`id`](StructureDefinition-summary-measurereport-deqm-definitions.html#MeasureReport.group.population.code) element to the MeasureReport profiles (FHIR-25716)
