@@ -125,18 +125,21 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Discovery:**
 
-    - It is the responsibility of the Consumer to advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement.  Specifically by clearly stating “support for snapshot/incremental data exchange” in the `CapabiltityStatement.rest.resource.operation.documentation` element.
-    TODO make this a extension on CapStatement - code for snapshot vs incremental  (not Both) so is computable.   (update the CapabitilityStatement and add snippet here)
+  - The Consumer **SHALL** advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  Specifically by applying the extension to the `CapabiltityStatement.rest.resource.operation` element for the Submit Data operation and populating the value the code `incremental` or `snapshot` as shown below:
+
+     {% include CapabilityStatement-updatetype-snippet.md %}
+
+   (For a complete example, see the [Consumer Server CapabilityStatement] )
+   **TODO manually update Capstatement**
 
    - It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer’s CapabilityStatement.
 
-   - The required modifier extension on the Datax MeasureReport is used to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
-   TODO  (update examples to show this)
+   - The required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] is used to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
+   **TODO add extension to MR and (update examples to show this)**
 
-  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported.
-  ~~~
-(add an inline snippet to show and error response)
-~~~
+  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported as shown below:
+
+    {% include updates-operationoutcome.md %}
 
 **Incremental Update Requirements and Expectations:**
 

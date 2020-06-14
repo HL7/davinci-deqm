@@ -1,0 +1,76 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-submitDataUpdateType",
+  "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-submitDataUpdateType",
+  "version": "0.1.0",
+  "name": "DEQMSubmitDataUpdateType",
+  "title": "DEQM Submit Data Update Type Extension",
+  "status": "active",
+  "description": "This Extension supports the concepts 'incremental' and 'snapshot'. The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data). The DEQM Producer **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for Submit Data transactiosn.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "CapabiltityStatement.rest.resource.operation"
+    },
+    {
+      "type": "element",
+      "expression": "MeasureReport"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-submitDataUpdateType"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCode",
+        "path": "Extension.valueCode",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type"
+        }
+      }
+    ]
+  }
+}

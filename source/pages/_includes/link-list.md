@@ -30,6 +30,7 @@
 [Data Exchange]: datax.html
 [DEQM Coverage]: StructureDefinition-coverage-deqm.html
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
+[DEQM Update Type Extension]: StructureDefinition-extension-update-type.html
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
