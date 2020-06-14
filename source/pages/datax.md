@@ -15,7 +15,7 @@ topofpage: true
 
 ## Introduction
 
-Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of [data of interest] is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data of interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.  
+Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of [data of interest] is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data of interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.
 
 Transactions between Consumers (organizations that want to evaluate quality measures) and Producers (organizations that deliver care to patients) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation or a request from a Payer for the attestation information. Note that although triggering is implementation specific and out of scope for this IG,  there are a variety of potential triggering points for reporting events within clinical systems.  These include:
 
@@ -31,10 +31,10 @@ This Implementation Guide (IG) describes three methods of exchanging data qualit
 1. CQM data may be submitted to the Consumer by the Producer using the [Submit Data scenario](#submit-data)
 1. CQM data may be requested from the Producer by the Consumer using the [Collect Data scenario](#collect-data)
 
+Note that FHIR operations allow the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
+
   This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned and will align with the outcomes of the Argonaut project.
   {:.stu-note}
-
-FHIR operations allow the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
 
 ## Profiles
 
@@ -56,8 +56,6 @@ Depending on the specific Measure, various DEQM and QI Core Profiles are also us
 The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1:
 
 {% include img.html img="measure-resource-graph.svg" caption="Figure 2-1 DEQM Resource Graph" %}
-
-<br />
 
 ## Data Exchange
 
@@ -127,7 +125,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Discovery:**
 
-    - It is the responsibility of the Consumer to advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement.  Specifically by clearly stating “support for snapshot/incremental data exchange” in the `CapabiltityStatement.rest.resource.operation.documentation` element.  
+    - It is the responsibility of the Consumer to advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement.  Specifically by clearly stating “support for snapshot/incremental data exchange” in the `CapabiltityStatement.rest.resource.operation.documentation` element.
     TODO make this a extension on CapStatement - code for snapshot vs incremental  (not Both) so is computable.   (update the CapabitilityStatement and add snippet here)
 
    - It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer’s CapabilityStatement.
@@ -248,7 +246,7 @@ For a complete un-edited example see the [COL Collect Data Operation] example.
 #### Submit Data Operation Request for Multiple Patients
 {:.no_toc}
 
-The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.  
+The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.
 
 - The transaction bundle contains an entry for each patient as illustrated in the examples below:
   - The fullUrl is a UUID (`urn:uuid:...`).
@@ -293,6 +291,12 @@ POST|[base]
 {:.no_toc}
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
+
+
+#### Provenance
+{:.no_toc}
+
+Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with provenance data that establishes provenance of the data being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $submit-data and $collect-data transactions described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 
 <br />
 

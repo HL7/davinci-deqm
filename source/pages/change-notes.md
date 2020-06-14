@@ -49,3 +49,4 @@ Changes and Updates for version 1.1.1
   - Add [Practitioner Profile](StructureDefinition-practitioner-deqm.html) to accommodate CMS Certification Number identifier(CCN) and add CCN to [Organization Profile](StructureDefinition-organization-deqm.html) (FHIR-25739)
   - Add [software name/version extension](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.extension:vendor) to MeasureReport Profiles (FHIR-25721)
   - Add required [`id`](StructureDefinition-summary-measurereport-deqm-definitions.html#MeasureReport.group.population.code) element to the MeasureReport profiles (FHIR-25716)
+  - [Document](datax-measure.html#provenance) that $submit-data and $collect-data should support the use of the X-Provenance header (FHIR-25624)
