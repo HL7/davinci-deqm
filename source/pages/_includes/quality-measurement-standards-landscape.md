@@ -121,7 +121,7 @@ measures.
 #### FHIR Quality Measure Implementation Guide
 {: #fhir-quality-measure-implementation-guide}
 
-The FHIR Quality Measure Implementation Guide (this IG) defines conformance
+The FHIR Quality Measure Implementation Guide defines conformance
 profiles and guidance focused on the specification of quality measures using the
 FHIR Measure and Library resources. The IG does not standardize the content of
 any particular measure, rather it defines the standard approach to the
@@ -152,7 +152,7 @@ discussion in the QI-Core implementation guide for more information.
 #### Data Exchange for Quality Measures (DEQM)
 {: #data-exchange-for-quality-measures-(deqm)}
 
-The Data Exchange for Quality Measures Implementation Guide, or DEQM,
+The Data Exchange for Quality Measures Implementation Guide, or DEQM, (this ig)
 provides a framework that defines conformance profiles and guidance to enable
 the exchange of quality information and quality measure reporting (e.g. for
 transferring quality information from a health care provider to a payer). The
