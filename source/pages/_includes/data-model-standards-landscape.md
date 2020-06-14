@@ -76,14 +76,9 @@ specification:
 vendors as it is the basis for the Argonaut profiles. Most major vendors today
 support some subset of this version of FHIR
 -    **FHIR STU3** - This is
-the version that US Core, QI Core, and many other implementation guides are
-based on. There is broad vendor support for this version.
--  **FHIR R4** - This is the first normative release of FHIR, including several of the
+the version that US Core, QI Core, and many other implementation guides were originally based on. There is broad vendor support for this version.
+-  **FHIR R4** - This is the version that this IG, and most recent versions US Core, QI Core and CQMF are based on. This is the first normative release of FHIR, including several of the
 foundational, conformance, and administrative resources going normative.
-
-The implementation guides in this landscape are currently focused on FHIR
-STU3, with the plan to produce R4 versions once the US Core and QI Core profiles
-have been updated to R4.
 
 In addition to _what_ data is reported, use cases frequently require the
 communication of _when_, _where_ and _how_ to report. See the
