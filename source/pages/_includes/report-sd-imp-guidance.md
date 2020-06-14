@@ -3,3 +3,5 @@
 - If the measure scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required.
 
 - The `reporter` should be consistent with the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) if present.
+
+- the DEQM Reporting Vendor Extension is intended to represent the submitting entity when it is not the same as the reporting entity.
