@@ -21,6 +21,7 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support])
 
 1. Measure results for each group
 1. Indicate whether improvement in the measure is noted by an increase or decrease in the measure score.
+1. References to other resources involved in producing the report
 1. The scoring type defined by the referenced Measure using the DEQM [Measure Scoring] Extension
 1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension
 1. A certification identifier using the DEQM [Certification Identifier] Extension
