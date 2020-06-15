@@ -137,9 +137,9 @@ Examples of patient ‘events’ that could trigger the submission of an update:
    - The required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] is used to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
    **TODO add extension to MR and (update examples to show this)**
 
-  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported as shown below:
+  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
 
-    {% include updates-operationoutcome.md %}
+    {% include snapshotincremental-notsupported-oo.md %}
 
 **Incremental Update Requirements and Expectations:**
 
@@ -209,9 +209,9 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
 - The Consumer uses the Collect Data operation’s `lastReceivedOn` parameter for incremental data exchange - if the  parameter present, it is an incremental update and snapshot if not.
 - The same Snapshot and Incremental Requirements and Expectations described above for the Submit Data transaction apply for Collect Data.
-- If the Producer cannot support the lastReceivedOn parameter then it SHALL return a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the `lastReceivedOn` parameter  update is not supported.
+- If the Producer cannot support the lastReceivedOn parameter then it SHALL return a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the `lastReceivedOn` parameter is not supported  as shown in the following example:
 
-   (add an inline snippet to show and error response)
+   {% include lastupdated-notsupported-oo.md %}
 
 <del>
 Note that implementing this scenario requires that the Producer system understand the data requirements for the measure in order to provide the data. As with the Submit Data operation, the implementation can either manually determine the relevant data using the measure definition, or the implementation can use the Data Requirements operation to determine relevant data.

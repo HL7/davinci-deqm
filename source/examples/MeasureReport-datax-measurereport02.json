@@ -8,6 +8,12 @@
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+      "valueCode": "incremental"
+    }
+  ],
   "status": "complete",
   "type": "data-collection",
   "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",

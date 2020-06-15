@@ -21,6 +21,7 @@
 [Colorectal Cancer Screening (COL)]: col.html
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
+[Consumer Server CapabilityStatement](CapabilityStatement-consumer-server.json.html)
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
 [CQFM Library]: {{site.data.fhir.cqfm}}StructureDefinition-library-cqfm.html
 [CQFM Measure]: {{site.data.fhir.cqfm}}StructureDefinition-measure-cqfm.html
@@ -30,7 +31,7 @@
 [Data Exchange]: datax.html
 [DEQM Coverage]: StructureDefinition-coverage-deqm.html
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
-[DEQM Update Type Extension]: StructureDefinition-extension-update-type.html
+[DEQM Submit Data Update Type Extension]: StructureDefinition-extension-submitDataUpdateType.html
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
@@ -102,6 +103,7 @@
 [Summary Reporting]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
 [transaction]: {{site.data.fhir.path}}http.html#transaction
+[collection]: {{site.data.fhir.path}}bundle.html#collection
 [US Core]: http://hl7.org/fhir/us/core/index.html
 [Use cases]: usecases.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html

@@ -6,13 +6,19 @@
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+      "valueCode": "incremental"
+    }
+  ],
   "status": "complete",
   "type": "data-collection",
   "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
   "subject": {
     "reference": "Patient/patient03"
   },
- "date": "2019-01-01T16:59:52.404Z",
+  "date": "2019-01-01T16:59:52.404Z",
   "reporter": {
     "reference": "Organization/organization03"
   },

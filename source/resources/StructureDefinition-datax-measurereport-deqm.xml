@@ -36,6 +36,18 @@
       <mustSupport value="false"/>
     </element>
 
+    <element id="MeasureReport.extension:updatetype">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="updatetype"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+
     <element id="MeasureReport.extension:software">
       <path value="MeasureReport.extension"/>
       <sliceName value="software"/>

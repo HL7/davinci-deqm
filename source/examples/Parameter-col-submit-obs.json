@@ -5,32 +5,38 @@
         {
             "name": "measure-report",
             "resource": {
-                "resourceType": "MeasureReport",
-                "id": "datax-measurereport03",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
-                    ]
-                },
-                "status": "complete",
-                "type": "data-collection",
-                "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
-                "subject": {
-                    "reference": "Patient/patient03"
-                },
-                "date": "2019-01-01T16:59:52.404Z",
-                "reporter": {
-                    "reference": "Organization/organization03"
-                },
-                "period": {
-                    "start": "2018-01-01",
-                    "end": "2018-12-31"
-                },
-                "evaluatedResource": [
-                    {
-                        "reference": "Observation/observation03"
-                    }
+              "resourceType": "MeasureReport",
+              "id": "datax-measurereport03",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
                 ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+                  "valueCode": "incremental"
+                }
+              ],
+              "status": "complete",
+              "type": "data-collection",
+              "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+              "subject": {
+                "reference": "Patient/patient03"
+              },
+              "date": "2019-01-01T16:59:52.404Z",
+              "reporter": {
+                "reference": "Organization/organization03"
+              },
+              "period": {
+                "start": "2018-01-01",
+                "end": "2018-12-31"
+              },
+              "evaluatedResource": [
+                {
+                  "reference": "Observation/observation03"
+                }
+              ]
             }
         },
         {
