@@ -65,13 +65,7 @@ The DEQM resources form a network through their relationships with each other - 
 {:.highlight-note}
  The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as  [incremental] or [snapshot] updates. These update methods are described in detail [below](#incremental-and-snapshot-updates).
 
-{% include img.html img="submit-data-step.svg" caption = "Figure 2-2 Submit Data Steps (Updated figure to show repeated submissions) source: https://docs.google.com/presentation/d/12XOtyF33K_NM5on4mVewRvha9AnFArU8PkOH_x4m9JE/edit?usp=sharing" %}
-
-<del>
-The *Submit Data* operation allows a Producer to submit data-of-interest for a particular quality measure within the specified time window when the data is ready. There is no expectation that the data submitted represents all the data required to evaluate the quality measure, only that the data is known to be relevant to the quality measure, based on the data requirements for the measure.  Note that resources included in a *Submit-Data* bundle **SHOULD** be self-contained (in other words, should include all referenced resources in the data), unless the exchange is understood by both parties to be incremental. For example, if an Encounter references a Location, that Location is expected to be included in the bundle, unless the exchange is understood to be incremental and the sending system knows that it has already sent that particular Location as part of a previous submit.
-</del>
-
-{% include img.html img="mrp-wf-overview.jpg" caption = "Figure 2-2 Submit Data Steps" %}
+{% include img.html img="submit-data-step.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
 #### Gather Data Requirements from Consumer
 {:.no_toc}
@@ -110,6 +104,7 @@ For another example see the [COL Data Requirements Operation] example.
 
 Once the Producer understands the data requirements, they will use the *Submit Data* operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
 
+{% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submit data Operation" %}
 
 <div class="highlight-note" markdown="1">
 
@@ -161,8 +156,6 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 </div>
 
-{% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submit data Operation" %}
-
 ##### APIs
 {:.no_toc}
 
@@ -185,14 +178,7 @@ For a complete un-edited example see the [MRP Submit Data Operation] and [COL Su
 ### Collect Data
 {: #collect-data}
 
-{:.highlight-note}
 In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
-
-{% include img.html  img="collect-data-steps-new.jpg" caption = "Figure 2-5 Collect Data Steps - updated image to reflect incremental updates"%}
-
-<del>
-In this scenario, the Consumer initiates a *Collect Data* operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. It is assumed that the Producer knows the data requirements for the measure. As with the Submit Data operation, there is no expectation that this MeasureReport contains all the data required to evaluate the quality measure, nor is the measure score expected to be provided.
-</del>
 
 {% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 
@@ -202,9 +188,10 @@ In this scenario, the Consumer initiates a *Collect Data* operation to gather an
 
 The Consumer uses a Collect Data operation to request any available relevant data for the evaluation of a particular measure from a Producer. Unlike the Submit Data interaction, the collect data exchange is typically incremental. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Producer to limit the response to only data that has been entered or changed since the last received on date.
 
+{% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
+
 ##### Incremental and Snapshot Updates
 {:.no_toc #collect_updates}
-
 
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
 - The Consumer uses the Collect Data operation’s `lastReceivedOn` parameter for incremental data exchange - if the  parameter present, it is an incremental update and snapshot if not.
@@ -213,13 +200,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
    {% include lastupdated-notsupported-oo.md %}
 
-<del>
-Note that implementing this scenario requires that the Producer system understand the data requirements for the measure in order to provide the data. As with the Submit Data operation, the implementation can either manually determine the relevant data using the measure definition, or the implementation can use the Data Requirements operation to determine relevant data.
-</del>
-
-{% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
-
-#### APIs
+##### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
@@ -228,7 +209,7 @@ In addition to the resources listed above, the following artifacts are used in t
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 
-#### Usage
+##### Usage
 {:.no_toc}
 
 **Collect Data:**
@@ -296,8 +277,7 @@ POST|[base]
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
 
-#### Provenance
-{:.no_toc}
+### Provenance
 
 Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with provenance data that establishes provenance of the data being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $submit-data and $collect-data transactions described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 

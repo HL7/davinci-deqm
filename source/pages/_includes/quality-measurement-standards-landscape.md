@@ -83,7 +83,7 @@ involved (see [Clinical Quality Framework](https://confluence.hl7.org/display/CQ
 for more information).
 
 #### Fast Healthcare Interoperability Resources (FHIR)
-{: #fast-healthcare-interoperability-resources-(fhir)}
+{:.no_toc #fast-healthcare-interoperability-resources-(fhir)}
 
 [Fast Healthcare Interoperability Resources](http://hl7.org/fhir),
 or FHIR, is a Health Level 7 (HL7) platform specification for healthcare that
@@ -104,7 +104,7 @@ interest for quality measurement; and the clinical reasoning layer to specify
 and support evaluation and reporting of quality measures.
 
 #### Clinical Quality Language (CQL)
-{: #clinical-quality-language-(cql)}
+{:.no_toc #clinical-quality-language-(cql)}
 
 [Clinical Quality Language](https://cql.hl7.org), or CQL, is an HL7 cross-paradigm specification
 that defines a high-level, domain-specific language focused on clinical quality
@@ -119,7 +119,7 @@ makes CQL an ideal mechanism for specifying the criteria involved in quality
 measures.
 
 #### FHIR Quality Measure Implementation Guide
-{: #fhir-quality-measure-implementation-guide}
+{:.no_toc #fhir-quality-measure-implementation-guide}
 
 The FHIR Quality Measure Implementation Guide defines conformance
 profiles and guidance focused on the specification of quality measures using the
@@ -129,7 +129,7 @@ representation of that content so that quality measure specifiers can define and
 share standardized FHIR-based electronic Clinical Quality Measures (eCQMs).
 
 #### Quality Improvement Core Implementation Guide (QI-Core)
-{: #quality-improvement-core-implementation-guide-(qi-core)}
+{:.no_toc #quality-improvement-core-implementation-guide-(qi-core)}
 
 The Quality Improvement Core Implementation Guide, or QI-Core, defines a set
 of FHIR profiles with extensions and bindings needed to create interoperable,
@@ -150,7 +150,7 @@ view_. See the [Relationship Between QUICK, the QI-Core Profiles, and FHIR](http
 discussion in the QI-Core implementation guide for more information.
 
 #### Data Exchange for Quality Measures (DEQM)
-{: #data-exchange-for-quality-measures-(deqm)}
+{:.no_toc #data-exchange-for-quality-measures-(deqm)}
 
 The Data Exchange for Quality Measures Implementation Guide, or DEQM, (this ig)
 provides a framework that defines conformance profiles and guidance to enable

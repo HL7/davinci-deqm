@@ -112,6 +112,12 @@
     },
     {
       "reference" : {
+        "reference" : "Measure/measure-mrp-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "MeasureReport/datax-measurereport03"
       },
       "exampleBoolean" : true
@@ -160,12 +166,6 @@
     },
     {
       "reference" : {
-        "reference" : "Measure/measure-mrp-example"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Library/exm130-fhir-r4"
       },
       "exampleBoolean" : true
@@ -185,6 +185,12 @@
     {
       "reference" : {
         "reference" : "Observation/observation01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Device/deqm-software-system-example"
       },
       "exampleBoolean" : true
     },
@@ -232,7 +238,7 @@
     },
     {
       "reference" : {
-        "reference" : "Practitioner/practitioner01"
+        "reference" : "Organization/practitioner01"
       },
       "exampleBoolean" : true
     },
@@ -328,6 +334,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/practitioner-deqm"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/consumer-server"
       },
       "exampleBoolean" : false
@@ -358,13 +370,31 @@
     },
     {
       "reference" : {
+        "reference" : "CodeSystem/update-type"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-reportingVendor"
       },
       "exampleBoolean" : false
     },
     {
       "reference" : {
+        "reference" : "ValueSet/update-type"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/extension-certificationIdentifier"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-submitDataUpdateType"
       },
       "exampleBoolean" : false
     },
@@ -463,6 +493,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-practitioner-deqm.html",
+          "title" : "StructureDefinition Practitioner Deqm",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-summary-measurereport-deqm.html",
           "title" : "StructureDefinition Summary MeasureReport Deqm",
           "generation" : "generated"
@@ -516,6 +551,26 @@
           "nameUrl" : "StructureDefinition-extension-certificationIdentifier.html",
           "title" : "StructureDefinition Extension certificationIdentifier",
           "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-submitDataUpdateType.html",
+          "title" : "StructureDefinition Extension submitDataUpdateType",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "ValueSet-update-type.html",
+          "title" : "ValueSet Update Type",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CodeSystem-update-type.html",
+          "title" : "CodeSystem Update Type",
+          "generation" : "generated"
         }]
       },
       {
@@ -552,11 +607,6 @@
           "title" : "CapabilityStatement Consumer Client",
           "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "security.html",
-        "title" : "Security",
-        "generation" : "markdown"
       },
       {
         "nameUrl" : "all-examples.html",

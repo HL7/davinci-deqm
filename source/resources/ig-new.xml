@@ -106,6 +106,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Measure/measure-mrp-example"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="MeasureReport/datax-measurereport03"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -154,12 +160,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Measure/measure-mrp-example"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Library/exm130-fhir-r4"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -179,6 +179,12 @@
     <resource>
       <reference>
         <reference value="Observation/observation01"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/deqm-software-system-example"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -226,7 +232,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Practitioner/practitioner01"/>
+        <reference value="Organization/practitioner01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -322,6 +328,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/practitioner-deqm"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/consumer-server"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -352,13 +364,31 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/update-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-reportingVendor"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/update-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-certificationIdentifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-submitDataUpdateType"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -457,6 +487,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-practitioner-deqm.html"/>
+          <title value="StructureDefinition Practitioner Deqm"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-summary-measurereport-deqm.html"/>
           <title value="StructureDefinition Summary MeasureReport Deqm"/>
           <generation value="generated"/>
@@ -511,6 +546,26 @@
           <title value="StructureDefinition Extension certificationIdentifier"/>
           <generation value="generated"/>
         </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-submitDataUpdateType.html"/>
+          <title value="StructureDefinition Extension submitDataUpdateType"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="ValueSet-update-type.html"/>
+          <title value="ValueSet Update Type"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CodeSystem-update-type.html"/>
+          <title value="CodeSystem Update Type"/>
+          <generation value="generated"/>
+        </page>
       </page>
       <page>
         <nameUrl value="capstatements.html"/>
@@ -546,11 +601,6 @@
           <title value="CapabilityStatement Consumer Client"/>
           <generation value="generated"/>
         </page>
-      </page>
-      <page>
-        <nameUrl value="security.html"/>
-        <title value="Security"/>
-        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="all-examples.html"/>

@@ -57,11 +57,10 @@
       <li>
         <a href="operations.html">Operations</a>
       </li>
-
+-->
       <li>
         <a href="terminology.html">Terminology</a>
       </li>
--->
       <li>
         <a href="capstatements.html">CapabilityStatements</a>
 

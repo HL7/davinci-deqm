@@ -21,7 +21,7 @@
 [Colorectal Cancer Screening (COL)]: col.html
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
-[Consumer Server CapabilityStatement](CapabilityStatement-consumer-server.json.html)
+[Consumer Server CapabilityStatement]: CapabilityStatement-consumer-server.json.html
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
 [CQFM Library]: {{site.data.fhir.cqfm}}StructureDefinition-library-cqfm.html
 [CQFM Measure]: {{site.data.fhir.cqfm}}StructureDefinition-measure-cqfm.html

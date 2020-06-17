@@ -1,7 +1,12 @@
 R4 publish punch list:
 
-- [ ] update ig.json pages
+- [X] fix publishing issues - fixed!
+  - [X] create snapshot for current build
+  - [X] update master with latest changes
+- [ ] QA Changes
+- [X] update ig.json pages - add terminology
+- [ ] update and fix dependency links
 - [ ] update bundle examples to include new Extensions
-- [ ] update capstatements to include new Requirements and
+- [ ] update capstatements to include new extension Requirements and
 extensions for capabilitystatement.
 - [ ] convert to templates

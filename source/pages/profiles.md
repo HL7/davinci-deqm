@@ -18,16 +18,19 @@ Payers and providers need common data specification, measure specification, repo
 |MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+
 <br />
 
 ### Extensions
 
-|Extension Name|Link to Profile|
-|---|---|
-|DEQM Alternate Score Type Extension|[Alternate Score Type]|
-|DEQM Certification Identifier Extension|[Certification Identifier]|
-|DEQM Reporting Vendor Extension|[Reporting Vendor]|
-|DEQM Reporting Group Extension|[Reporting Group]|
+|Link to Profile|
+|---|
+|[DEQM Measure Scoring Extension](StructureDefinition-extension-measureScoring.html)|
+|[DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html)|
+|[DEQM Reporting Vendor Extension](StructureDefinition-extension-reporterGroup.html)|
+|[DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)|
+|[DEQM Reporting Vendor Extension](StructureDefinition-extension-certificationIdentifier.html)|
+|[DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)|
 
 <br />
 

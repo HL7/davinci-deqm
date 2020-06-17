@@ -6,11 +6,7 @@
   "name": "DEQMSubmitDataUpdateType",
   "title": "DEQM Submit Data Update Type Extension",
   "status": "active",
-  "description": "This Extension supports the concepts 'incremental' and 'snapshot'.
-
-  -  The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).
-  - The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction. When responding to the [DEQM Collect Data transaction](datax.html#collect-data).
-  - The DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent.",
+  "description": "This Extension supports the concepts 'incremental' and 'snapshot'.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

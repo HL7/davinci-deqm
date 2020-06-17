@@ -67,7 +67,7 @@ measurement-specific level (in DEQM or HEDIS for example), steps should be taken
 to promote that profile to the broadest consensus group possible.
 
 #### FHIR Version Support
-{: #fhir-version-support}
+{:.no_toc #fhir-version-support}
 
 There are three broadly used and fully published versions of the FHIR
 specification:
