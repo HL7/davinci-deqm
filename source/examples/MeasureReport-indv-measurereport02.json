@@ -76,7 +76,8 @@
                 "display": "Initial Population"
               }
             ]
-          }
+          },
+          "id": "initial-population"
         },
         {
           "code": {
@@ -87,7 +88,8 @@
                 "display": "Numerator"
               }
             ]
-          }
+          },
+          "id": "numerator"
         },
         {
           "code": {
@@ -98,17 +100,7 @@
                 "display": "Denominator"
               }
             ]
-          }
-        }
-      ],
-      "_population": [
-        {
-          "id": "initial-population"
-        },
-        {
-          "id": "numerator"
-        },
-        {
+          },
           "id": "denominator"
         }
       ],

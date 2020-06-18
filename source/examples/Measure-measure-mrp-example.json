@@ -80,6 +80,7 @@
               }
             ]
           },
+          "id": "initial-population",
           "description": "All inpatient encounters during the measurement period.",
           "criteria": {
             "language": "text/plain",
@@ -96,6 +97,7 @@
               }
             ]
           },
+          "id": "numerator",
           "description": "All inpatient encounters during the measurement period for which an MRP was performed during the measurement period.",
           "criteria": {
             "language": "text/plain",
@@ -112,22 +114,12 @@
               }
             ]
           },
+          "id": "denominator",
           "description": "All inpatient encounters during the measurement period.",
           "criteria": {
             "language": "text/plain",
             "expression": "Count of inpatient encounters during the measurement period."
           }
-        }
-      ],
-      "_population": [
-        {
-          "id": "initial-population"
-        },
-        {
-          "id": "numerator"
-        },
-        {
-          "id": "denominator"
         }
       ]
     }
