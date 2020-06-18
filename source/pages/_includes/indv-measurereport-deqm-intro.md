@@ -13,7 +13,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. A patient the report is for
 1. The date the report was generated
 1. The organization that reported the data
-1. The reporting period
+1. The measurement period
 1. The results of the calculation (the Measure Score)
 
 

@@ -12,7 +12,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. A link to patient the report is about
 1. The date the report was generated
 1. The organization that reported the data
-1. The reporting period
+1. The measurement period
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 

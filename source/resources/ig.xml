@@ -40,7 +40,7 @@
 <dependsOn id="qicore">  <!-- 0..* Another Implementation guide this depends on -->
   <uri value="http://hl7.org/fhir/us/qicore"><!-- 1..1 canonical(ImplementationGuide) Identity of the IG that this depends on --></uri>
   <packageId value="hl7.fhir.us.qicore"/><!-- 0..1 NPM Package name for IG this depends on -->
-  <version value="4.0.0"/><!-- 0..1 Version of the IG -->
+  <version value="current"/><!-- 0..1 Version of the IG -->
  </dependsOn>
  <!-- <global>  0..* Profiles that apply globally
   <type value="[code]"/> 1..1 Type this profile applies to

@@ -92,7 +92,7 @@ In addition to the resources listed above, the following artifacts are used in t
 
 `POST|[base]/Measure/[measure-id]/$data-requirements`
 
-Note the use of the `periodStart` and `periodEnd` parameters supports description of data requirements that filter based on the reporting period. For example, a measure may require data for a certain procedure within the last three years, and the data requirements returned will reflect that period.
+Note the use of the `periodStart` and `periodEnd` parameters supports description of data requirements that filter based on the measurement period. For example, a measure may require data for a certain procedure within the last three years, and the data requirements returned will reflect that period.
 
 {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
