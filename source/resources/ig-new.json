@@ -76,6 +76,12 @@
     },
     {
       "reference" : {
+        "reference" : "MeasureReport/summ-medicare-stratification-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Location/location03"
       },
       "exampleBoolean" : true
@@ -95,12 +101,6 @@
     {
       "reference" : {
         "reference" : "Parameters/mrp-submit-task"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "MeasureReport/summ-medicare-stratification-example"
       },
       "exampleBoolean" : true
     },
@@ -185,6 +185,12 @@
     {
       "reference" : {
         "reference" : "Observation/observation01"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/multiple-summ-report"
       },
       "exampleBoolean" : true
     },
