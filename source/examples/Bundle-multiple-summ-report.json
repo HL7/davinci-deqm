@@ -1279,7 +1279,7 @@
                "coding": [
                   {
                      "code": "increase",
-                     "display": "Increase",
+                     "display": "Increased score indicates improvement",
                      "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
                   }
                ]
@@ -1381,7 +1381,7 @@
                "coding": [
                   {
                      "code": "increase",
-                     "display": "Increase",
+                     "display": "Increased score indicates improvement",
                      "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
                   }
                ]

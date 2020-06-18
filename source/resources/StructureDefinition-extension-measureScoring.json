@@ -46,7 +46,7 @@
         },
         "type": [
           {
-            "code": "code"
+            "code": "CodeableConcept"
           }
         ]
       },
@@ -57,7 +57,7 @@
         "max": "1",
         "binding": {
           "strength": "extensible",
-          "valueSet": "http:hl7.org/fhir/ValueSet/measure-scoring"
+          "valueSet": "http://hl7.org/fhir/ValueSet/measure-scoring"
         }
       }
     ]

@@ -29,6 +29,7 @@ Changes and Updates for version 1.1.1
 1. Applied all resolutions from STU2 Ballot
 
     - Various Technical Corrections and Corrections to Typographical Errors
+    - updated examples
     - Add DEQM [Measure Scoring] Extension to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile (FHIR-27044)
     - Add [`MeasureReport.improvementNotation`](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.improvementNotation) to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile (FHIR-27044)
     - Add Invariant [deqm-2](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport) to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile (FHIR-27044)
@@ -50,3 +51,7 @@ Changes and Updates for version 1.1.1
     - Add [software name/version extension](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.extension:vendor) to MeasureReport Profiles (FHIR-25721)
     - Add required [`id`](StructureDefinition-summary-measurereport-deqm-definitions.html#MeasureReport.group.population.code) element to the MeasureReport profiles (FHIR-25716)
     - [Document](datax-measure.html#provenance) that $submit-data and $collect-data should support the use of the X-Provenance header (FHIR-25624)
+    - A extensions for [software and version](StructureDefinition-datax-measurereport-deqm-definitions.html#MeasureReport.extension:software) (FHIR-25721)  
+
+
+    {% include link-list.md %}
