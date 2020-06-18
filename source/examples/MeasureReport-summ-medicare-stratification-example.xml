@@ -1,5 +1,13 @@
 <MeasureReport xmlns="http://hl7.org/fhir">
   <id value="summ-medicare-stratification-example"/>
+  <extension
+           url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring">
+  <valueCodeableConcept>
+    <coding>
+      <code value="proportion"/>
+    </coding>
+  </valueCodeableConcept>
+</extension>
   <status value="complete"/>
   <type value="summary"/>
   <measure value="http://example.org/fhir/Measure/measure-medicare-stratification-example"/>

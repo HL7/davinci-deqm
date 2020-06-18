@@ -79,4 +79,8 @@
   <li>
     <a href="downloads.html">Downloads</a>
   </li>
+
+  <li>
+    <a href="change-notes.html">Change Notes</a>
+  </li>
 </ul>

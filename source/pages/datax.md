@@ -125,12 +125,11 @@ Examples of patient ‘events’ that could trigger the submission of an update:
      {% include CapabilityStatement-updatetype-snippet.md %}
 
    (For a complete example, see the [Consumer Server CapabilityStatement] )
-   **TODO manually update Capstatement**
 
    - It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer’s CapabilityStatement.
 
    - The required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] is used to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
-   **TODO add extension to MR and (update examples to show this)**
+(update examples to show this)**
 
   - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
 

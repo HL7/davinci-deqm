@@ -29,6 +29,15 @@
     "start": "2019-08-01",
     "end": "2019-09-01"
   },
+  "improvementNotation": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "code": "increase",
+        "display": "Increase"
+      }
+    ]
+  },
   "group": [
     {
       "code": {
