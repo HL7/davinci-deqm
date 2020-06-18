@@ -12,7 +12,8 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "proportion"
+            "code": "proportion",
+            "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
           }
         ]
       }
