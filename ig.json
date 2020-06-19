@@ -332,9 +332,9 @@
             "source": "MeasureReport-summ-measurereport02.json",
             "base": "MeasureReport-summ-measurereport02.html"
         },
-        "Organization/practitioner01": {
+        "Practitioner/practitioner01": {
             "source": "Practitioner-practitioner01.json",
-            "base": "Organization-practitioner01.html"
+            "base": "Practitioner-practitioner01.html"
         },
         "StructureDefinition/extension-reporterGroup": {
             "source": "StructureDefinition-extension-reporterGroup.xml",

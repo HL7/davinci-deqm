@@ -63,7 +63,7 @@ The DEQM resources form a network through their relationships with each other - 
 {: #submit-data}
 
 {:.highlight-note}
- The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as  [incremental] or [snapshot] updates. These update methods are described in detail [below](#incremental-and-snapshot-updates).
+ The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as  [incremental] or [snapshot] updates. These update methods are described in detail [below](#submit-updates).
 
 {% include img.html img="submit-data-step.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
@@ -109,7 +109,7 @@ Once the Producer understands the data requirements, they will use the *Submit D
 <div class="highlight-note" markdown="1">
 
 ##### Incremental and Snapshot Updates
-{:.no_toc #submit_updates}
+{:.no_toc #submit-updates}
 
 When the Producer submits updates to the measure data within the data submission period, the Producer can use [snapshot] or [incremental] updates for submitting data based on Producer and Consumer agreement.  Note that neither method is preferred or a default and has to be agreed upon out of band.
 
@@ -190,7 +190,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 {% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
 
 ##### Incremental and Snapshot Updates
-{:.no_toc #collect_updates}
+{:.no_toc #collect-updates}
 
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
 - The Consumer uses the Collect Data operation’s `lastReceivedOn` parameter for incremental data exchange - if the  parameter present, it is an incremental update and snapshot if not.

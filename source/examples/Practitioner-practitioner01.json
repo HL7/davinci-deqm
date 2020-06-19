@@ -1,24 +1,11 @@
 {
+  "resourceType": "Practitioner",
   "id": "practitioner01",
   "meta": {
-    "lastUpdated": "2019-02-21T01:47:53.000+00:00",
     "profile": [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-    ],
-    "versionId": "3"
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+    ]
   },
-  "active": true,
-  "address": [
-    {
-      "city": "Union City",
-      "country": "USA",
-      "line": [
-        "94 Olive Ave."
-      ],
-      "postalCode": "07087",
-      "state": "NJ"
-    }
-  ],
   "identifier": [
     {
       "assigner": {
@@ -55,23 +42,26 @@
       "value": "082583"
     }
   ],
-  "name": "DaVinciHospital03",
-  "telecom": [
+  "name": [
     {
-      "system": "phone",
-      "value": "(+1) 201-555-1212"
-    }
-  ],
-  "type": [
-    {
-      "coding": [
-        {
-          "code": "prov",
-          "display": "Healthcare Provider",
-          "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-        }
+      "family": "Bone",
+      "given": [
+        "Ronald"
+      ],
+      "prefix": [
+        "Dr"
       ]
     }
   ],
-  "resourceType": "Organization"
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "1003 Healthcare Drive"
+      ],
+      "city": "Amherst",
+      "state": "MA",
+      "postalCode": "01002"
+    }
+  ]
 }

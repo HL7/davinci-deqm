@@ -238,7 +238,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Organization/practitioner01"/>
+        <reference value="Practitioner/practitioner01"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
