@@ -1,0 +1,503 @@
+status: draft
+publisher: HL7 International - Clinical Quality Information Work Group
+license: CC0-1.0
+name: DataExchangeForQualityMeasuresSTU2forFHIRR4
+copyright: >-
+  Used by permission of HL7 International - Clinical Quality Information Work
+  Group, all rights reserved Creative Commons License
+title: Data Exchange For Quality Measures STU2 for FHIR R4
+resourceType: ImplementationGuide
+jurisdiction:
+  - coding:
+      - code: US
+        system: 'urn:iso:std:iso:3166'
+contact:
+  - telecom:
+      - system: url
+        value: 'http://www.hl7.org/Special/committees/cqi/index.cfm'
+url: >-
+  http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0
+version: 1.1.0
+packageId: hl7.fhir.us.davinci-deqm
+dependsOn:
+  - version: 4.0.0
+    id: qicore
+    packageId: hl7.fhir.us.qicore
+    uri: 'http://hl7.org/fhir/us/qicore'
+  - version: 3.1.0
+    id: uscore
+    packageId: hl7.fhir.us.core
+    uri: 'http://hl7.org/fhir/us/core'
+  - version: current
+    id: cqfm
+    packageId: hl7.fhir.us.cqfmeasures
+    uri: 'http://hl7.org/fhir/us/cqfmeasures'
+fhirVersion:
+  - 4.0.1
+  - 4.0.1
+definition:
+  parameter:
+    - code: foo
+      value: bar
+    - code: logging
+      value: init
+    - code: logging
+      value: progress
+    - code: generate
+      value: example-narratives
+    - code: path-resource
+      value: input/capabilities
+    - code: path-resource
+      value: input/examples
+    - code: path-resource
+      value: input/extensions
+    - code: path-resource
+      value: input/models
+    - code: path-resource
+      value: input/operations
+    - code: path-resource
+      value: input/profiles
+    - code: path-resource
+      value: input/resources
+    - code: path-resource
+      value: input/vocabulary
+    - code: path-resource
+      value: input/maps
+    - code: path-resource
+      value: input/testing
+    - code: path-pages
+      value: input/pagecontent
+    - code: path-qa
+      value: qa
+    - code: path-tx-cache
+      value: input-cache/txcache
+    - code: path-liquid
+      value: input/liquid
+    - code: path-temp
+      value: temp
+    - code: path-output
+      value: output
+    - code: active-tables
+      value: 'false'
+    - code: apply-contact
+      value: 'true'
+    - code: apply-jurisdiction
+      value: 'true'
+    - code: apply-publisher
+      value: 'true'
+    - code: apply-version
+      value: 'true'
+    - code: show-inherited-invariants
+      value: 'false'
+    - code: usage-stats-opt-out
+      value: 'true'
+    - code: copyrightyear
+      value: 2020+
+    - code: releaselabel
+      value: CI Build
+    - code: excludexml
+      value: 'false'
+    - code: escludejsn
+      value: 'false'
+    - code: excludettl
+      value: 'false'
+    - code: excludemap
+      value: 'true'
+    - code: excludeexample
+      value: 'true'
+  resource:
+    - exampleBoolean: true
+      name: Organization02
+      reference:
+        reference: Organization/organization02
+      description: DEQM Organization02 example
+    - exampleBoolean: true
+      name: Patient02
+      reference:
+        reference: Patient/patient02
+      description: DEQM Patient02 example
+    - exampleBoolean: true
+      name: Summ Medicare Stratification Example
+      reference:
+        reference: MeasureReport/summ-medicare-stratification-example
+      description: DEQM Summ Medicare Stratification Example example
+    - exampleBoolean: true
+      name: Location03
+      reference:
+        reference: Location/location03
+      description: DEQM Location03 example
+    - exampleBoolean: true
+      name: Summ Measurereport01
+      reference:
+        reference: MeasureReport/summ-measurereport01
+      description: DEQM Summ Measurereport01 example
+    - exampleBoolean: true
+      name: Datax Measurereport02
+      reference:
+        reference: MeasureReport/datax-measurereport02
+      description: DEQM Datax Measurereport02 example
+    - exampleBoolean: true
+      name: Mrp Submit Task
+      reference:
+        reference: Parameters/mrp-submit-task
+      description: DEQM Mrp Submit Task example
+    - exampleBoolean: true
+      name: Multiple Indv Mrp Obs Report
+      reference:
+        reference: Bundle/multiple-indv-mrp-obs-report
+      description: DEQM Multiple Indv Mrp Obs Report example
+    - exampleBoolean: true
+      name: Measure Mrp Example
+      reference:
+        reference: Measure/measure-mrp-example
+      description: DEQM Measure Mrp Example example
+    - exampleBoolean: true
+      name: Datax Measurereport03
+      reference:
+        reference: MeasureReport/datax-measurereport03
+      description: DEQM Datax Measurereport03 example
+    - exampleBoolean: true
+      name: Location02
+      reference:
+        reference: Location/location02
+      description: DEQM Location02 example
+    - exampleBoolean: true
+      name: Single Indv Vte Report
+      reference:
+        reference: Bundle/single-indv-vte-report
+      description: DEQM Single Indv Vte Report example
+    - exampleBoolean: true
+      name: Col Submit Collect Obs
+      reference:
+        reference: Parameters/col-submit-collect-obs
+      description: DEQM Col Submit Collect Obs example
+    - exampleBoolean: true
+      name: Patient03
+      reference:
+        reference: Patient/patient03
+      description: DEQM Patient03 example
+    - exampleBoolean: true
+      name: Coverage01
+      reference:
+        reference: Coverage/coverage01
+      description: DEQM Coverage01 example
+    - exampleBoolean: true
+      name: Organization03
+      reference:
+        reference: Organization/organization03
+      description: DEQM Organization03 example
+    - exampleBoolean: true
+      name: Library Mrp Example
+      reference:
+        reference: Library/library-mrp-example
+      description: DEQM Library Mrp Example example
+    - exampleBoolean: true
+      name: Exm130 Fhir R4
+      reference:
+        reference: Library/exm130-fhir-r4
+      description: DEQM Exm130 Fhir R4 example
+    - exampleBoolean: true
+      name: Organization04
+      reference:
+        reference: Organization/organization04
+      description: DEQM Organization04 example
+    - exampleBoolean: true
+      name: Mrp Submit Obs
+      reference:
+        reference: Parameters/mrp-submit-obs
+      description: DEQM Mrp Submit Obs example
+    - exampleBoolean: true
+      name: Observation01
+      reference:
+        reference: Observation/observation01
+      description: DEQM Observation01 example
+    - exampleBoolean: true
+      name: Multiple Summ Report
+      reference:
+        reference: Bundle/multiple-summ-report
+      description: DEQM Multiple Summ Report example
+    - exampleBoolean: true
+      name: Deqm Software System Example
+      reference:
+        reference: Device/deqm-software-system-example
+      description: DEQM Deqm Software System Example example
+    - exampleBoolean: true
+      name: Indv Measurereport01
+      reference:
+        reference: MeasureReport/indv-measurereport01
+      description: DEQM Indv Measurereport01 example
+    - exampleBoolean: true
+      name: Indv Measurereport02
+      reference:
+        reference: MeasureReport/indv-measurereport02
+      description: DEQM Indv Measurereport02 example
+    - exampleBoolean: true
+      name: Multiple Indv Mrp Task Report
+      reference:
+        reference: Bundle/multiple-indv-mrp-task-report
+      description: DEQM Multiple Indv Mrp Task Report example
+    - exampleBoolean: true
+      name: Encounter01
+      reference:
+        reference: Encounter/Encounter01
+      description: DEQM Encounter01 example
+    - exampleBoolean: true
+      name: Observation03
+      reference:
+        reference: Observation/observation03
+      description: DEQM Observation03 example
+    - exampleBoolean: true
+      name: Single Indv Mrp Task Report
+      reference:
+        reference: Bundle/single-indv-mrp-task-report
+      description: DEQM Single Indv Mrp Task Report example
+    - exampleBoolean: true
+      name: Single Indv Col Obs Report
+      reference:
+        reference: Bundle/single-indv-col-obs-report
+      description: DEQM Single Indv Col Obs Report example
+    - exampleBoolean: true
+      name: Practitioner01
+      reference:
+        reference: Practitioner/practitioner01
+      description: DEQM Practitioner01 example
+    - exampleBoolean: true
+      name: Indv Measurereport03
+      reference:
+        reference: MeasureReport/indv-measurereport03
+      description: DEQM Indv Measurereport03 example
+    - exampleBoolean: true
+      name: Coverage02
+      reference:
+        reference: Coverage/coverage02
+      description: DEQM Coverage02 example
+    - exampleBoolean: true
+      name: Location01
+      reference:
+        reference: Location/location01
+      description: DEQM Location01 example
+    - exampleBoolean: true
+      name: Single Indv Mrp Obs Report
+      reference:
+        reference: Bundle/single-indv-mrp-obs-report
+      description: DEQM Single Indv Mrp Obs Report example
+    - exampleBoolean: true
+      name: Summ Measurereport02
+      reference:
+        reference: MeasureReport/summ-measurereport02
+      description: DEQM Summ Measurereport02 example
+    - exampleBoolean: true
+      name: Datax Measurereport01
+      reference:
+        reference: MeasureReport/datax-measurereport01
+      description: DEQM Datax Measurereport01 example
+    - exampleBoolean: true
+      name: Task01
+      reference:
+        reference: Task/Task01
+      description: DEQM Task01 example
+    - exampleBoolean: true
+      name: Organization01
+      reference:
+        reference: Organization/organization01
+      description: DEQM Organization01 example
+    - exampleBoolean: true
+      name: Coverage03
+      reference:
+        reference: Coverage/coverage03
+      description: DEQM Coverage03 example
+    - exampleBoolean: true
+      name: Patient01
+      reference:
+        reference: Patient/patient01
+      description: DEQM Patient01 example
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/extension-measureScoring
+    - exampleBoolean: false
+      reference:
+        reference: CapabilityStatement/producer-server
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/extension-alternateScoreType
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/extension-reporterGroup
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/medicationrequest-deqm
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/practitioner-deqm
+    - exampleBoolean: false
+      reference:
+        reference: CapabilityStatement/consumer-server
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/summary-measurereport-deqm
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/indv-measurereport-deqm
+    - exampleBoolean: false
+      reference:
+        reference: CapabilityStatement/receiver-server
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/datax-measurereport-deqm
+    - exampleBoolean: false
+      reference:
+        reference: CodeSystem/update-type
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/extension-reportingVendor
+    - exampleBoolean: false
+      reference:
+        reference: ValueSet/update-type
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/extension-certificationIdentifier
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/extension-submitDataUpdateType
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/coverage-deqm
+    - exampleBoolean: false
+      reference:
+        reference: CapabilityStatement/reporter-client
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/organization-deqm
+    - exampleBoolean: false
+      reference:
+        reference: CapabilityStatement/producer-client
+    - exampleBoolean: false
+      reference:
+        reference: CapabilityStatement/consumer-client
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/medicationadministration-deqm
+  page:
+    generation: markdown
+    nameUrl: index.html
+    page:
+      - generation: markdown
+        nameUrl: framework.html
+        page:
+          - generation: markdown
+            nameUrl: guidance.html
+            title: General Guidance
+          - generation: markdown
+            nameUrl: datax.html
+            title: Data Exchange
+          - generation: markdown
+            nameUrl: indv-reporting.html
+            title: Individual Reporting
+          - generation: markdown
+            nameUrl: summary-reporting.html
+            title: Summary Reporting
+        title: Framework
+      - generation: markdown
+        nameUrl: usecases.html
+        page:
+          - generation: markdown
+            nameUrl: mrp.html
+            title: Medication Reconciliation Post-Discharge (MRP)
+          - generation: markdown
+            nameUrl: col.html
+            title: Colorectal Cancer Screening (COL)
+          - generation: markdown
+            nameUrl: vte1.html
+            title: Venous Thromboembolism Prophylaxis (VTE-1)
+        title: Example Use Cases
+      - generation: markdown
+        nameUrl: profiles.html
+        page:
+          - generation: generated
+            nameUrl: StructureDefinition-medicationrequest-deqm.html
+            title: StructureDefinition MedicationRequest Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-practitioner-deqm.html
+            title: StructureDefinition Practitioner Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-summary-measurereport-deqm.html
+            title: StructureDefinition Summary MeasureReport Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-indv-measurereport-deqm.html
+            title: StructureDefinition Indv MeasureReport Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-datax-measurereport-deqm.html
+            title: StructureDefinition Datax MeasureReport Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-coverage-deqm.html
+            title: StructureDefinition Coverage Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-organization-deqm.html
+            title: StructureDefinition Organization Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-medicationadministration-deqm.html
+            title: StructureDefinition MedicationAdministration Deqm
+          - generation: generated
+            nameUrl: StructureDefinition-extension-measureScoring.html
+            title: StructureDefinition Extension measureScoring
+          - generation: generated
+            nameUrl: StructureDefinition-extension-alternateScoreType.html
+            title: StructureDefinition Extension alternateScoreType
+          - generation: generated
+            nameUrl: StructureDefinition-extension-reporterGroup.html
+            title: StructureDefinition Extension reporterGroup
+          - generation: generated
+            nameUrl: StructureDefinition-extension-reportingVendor.html
+            title: StructureDefinition Extension reportingVendor
+          - generation: generated
+            nameUrl: StructureDefinition-extension-certificationIdentifier.html
+            title: StructureDefinition Extension certificationIdentifier
+          - generation: generated
+            nameUrl: StructureDefinition-extension-submitDataUpdateType.html
+            title: StructureDefinition Extension submitDataUpdateType
+        title: Profiles and Extensions
+      - generation: markdown
+        nameUrl: terminology.html
+        page:
+          - generation: generated
+            nameUrl: ValueSet-update-type.html
+            title: ValueSet Update Type
+          - generation: generated
+            nameUrl: CodeSystem-update-type.html
+            title: CodeSystem Update Type
+        title: Terminology
+      - generation: markdown
+        nameUrl: capstatements.html
+        page:
+          - generation: generated
+            nameUrl: CapabilityStatement-producer-server.html
+            title: CapabilityStatement Producer Server
+          - generation: generated
+            nameUrl: CapabilityStatement-consumer-server.html
+            title: CapabilityStatement Consumer Server
+          - generation: generated
+            nameUrl: CapabilityStatement-receiver-server.html
+            title: CapabilityStatement Receiver Server
+          - generation: generated
+            nameUrl: CapabilityStatement-reporter-client.html
+            title: CapabilityStatement Reporter Client
+          - generation: generated
+            nameUrl: CapabilityStatement-producer-client.html
+            title: CapabilityStatement Producer Client
+          - generation: generated
+            nameUrl: CapabilityStatement-consumer-client.html
+            title: CapabilityStatement Consumer Client
+        title: Capability Statements
+      - generation: markdown
+        nameUrl: all-examples.html
+        title: All Examples
+      - generation: markdown
+        nameUrl: downloads.html
+        title: Downloads
+      - generation: markdown
+        nameUrl: change-notes.html
+        title: Change Notes
+    title: Home
+  grouping:
+    - name: base
+id: hl7.fhir.us.davinci-deqm-1.1.0

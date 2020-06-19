@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="datax-measurereport01"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: datax-measurereport01</p><p><b>meta</b>: </p><p><b>status</b>: complete</p><p><b>type</b>: data-collection</p><p><b>measure</b>: <a href="http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example">http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example</a></p><p><b>subject</b>: <a href="Patient-patient01.html">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">Married</span></a></p><p><b>date</b>: Sep 5, 2018, 9:59:52 AM</p><p><b>reporter</b>: <a href="Organization-organization01.html">Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span>; name: DaVinciHospital01; ph: (+1) 401-555-1212</a></p><p><b>period</b>: Aug 1, 2018, 12:00:00 AM --&gt; Sep 1, 2018, 12:00:00 AM</p><p><b>evaluatedResource</b>: <a href="Task-Task01.html">Generated Summary: id: Task01; 19009; status: completed; intent: plan; priority: routine; <span title="Codes: {http://www.ama-assn.org/go/cpt 1111F}">Medication Reconciliation</span>; executionPeriod: Jun 11, 2017, 12:00:00 AM --&gt; Jun 11, 2017, 12:00:00 AM; authoredOn: Sep 25, 2018, 7:24:23 AM</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem">
+    <valueReference>
+      <reference value="Device/deqm-software-system-example"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType">
+    <valueCode value="incremental"/>
+  </extension>
+  <status value="complete"/>
+  <type value="data-collection"/>
+  <measure value="http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example"/>
+  <subject>
+    <reference value="Patient/patient01"/>
+  </subject>
+  <date value="2018-09-05T16:59:52.404Z"/>
+  <reporter>
+    <reference value="Organization/organization01"/>
+  </reporter>
+  <period>
+    <start value="2018-08-01"/>
+    <end value="2018-09-01"/>
+  </period>
+  <evaluatedResource>
+    <reference value="Task/Task01"/>
+  </evaluatedResource>
+</MeasureReport>

@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Organization/organization03> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "organization03"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-02-21T01:47:53.000+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: organization03</p><p><b>meta</b>: </p><p><b>identifier</b>: Provider number = 345678912 (OFFICIAL), Provider number = 082584 (SECONDARY)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: DaVinciHospital03</p><p><b>telecom</b>: ph: (+1) 201-555-1212</p><p><b>address</b>: 94 Olive Ave. Union City NJ 07087 USA </p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "PRN" ];
+         fhir:Coding.display [ fhir:value "Provider number" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "345678912" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "www.cms.gov" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.use [ fhir:value "secondary" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "PRN" ];
+         fhir:Coding.display [ fhir:value "Provider number" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.4.336" ];
+     fhir:Identifier.value [ fhir:value "082584" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "www.cms.gov" ]
+     ]
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+       fhir:Coding.code [ fhir:value "prov" ];
+       fhir:Coding.display [ fhir:value "Healthcare Provider" ]
+     ]
+  ];
+  fhir:Organization.name [ fhir:value "DaVinciHospital03"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 201-555-1212" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "94 Olive Ave.";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Union City" ];
+     fhir:Address.state [ fhir:value "NJ" ];
+     fhir:Address.postalCode [ fhir:value "07087" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Organization/organization03.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/Organization/organization03.ttl> .
+
+# -------------------------------------------------------------------------------------
+

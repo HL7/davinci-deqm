@@ -1,0 +1,812 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/MeasureReport/summ-measurereport02> a fhir:MeasureReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "summ-measurereport02"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: summ-measurereport02</p><p><b>meta</b>: </p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href=\"http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR\">http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR</a></p><p><b>date</b>: Sep 5, 2019, 9:59:52 AM</p><p><b>reporter</b>: <a href=\"Organization-organization01.html\">Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span>; name: DaVinciHospital01; ph: (+1) 401-555-1212</a></p><p><b>period</b>: Aug 1, 2019, 12:00:00 AM --&gt; Sep 1, 2019, 12:00:00 AM</p><p><b>improvementNotation</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://fhir/example.org group-1}\">group-1</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 100</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 60</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 100</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 10</p></blockquote><p><b>measureScore</b>: 66</p><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Codes: {http://fhir/example.org sde-ethnicity}\">SDE Ethnicity</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2135-2}\">Hispanic or Latino</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 10</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 10</p></blockquote><p><b>measureScore</b>: 50</p></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2186-5}\">Not Hispanic or Latino</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 70</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 50</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 70</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 0</p></blockquote><p><b>measureScore</b>: 71</p></blockquote></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Codes: {http://fhir/example.org sde-payer}\">SDE Payer</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {http://fhir/example.org Payer123}\">King HMO</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 10</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 10</p></blockquote><p><b>measureScore</b>: 50</p></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {http://fhir/example.org Payer456}\">Green Circle</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 10</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 0</p></blockquote><p><b>measureScore</b>: 33</p></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {http://fhir/example.org Payer789}\">GoodHealth of California</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 0</p></blockquote><p><b>measureScore</b>: 100</p></blockquote></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Codes: {http://fhir/example.org sde-race}\">SDE Race</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2054-5}\">Black or African American</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 10</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 10</p></blockquote><p><b>measureScore</b>: 50</p></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2106-3}\">White</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 10</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 30</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 0</p></blockquote><p><b>measureScore</b>: 33</p></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2028-9}\">Asian</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 0</p></blockquote><p><b>measureScore</b>: 100</p></blockquote></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Codes: {http://fhir/example.org sde-sex}\">SDE Sex</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {http://hl7.org/fhir/administrative-gender male}\">Male</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 20</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 5</p></blockquote><p><b>measureScore</b>: 57</p></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {http://hl7.org/fhir/administrative-gender female}\">Female</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 60</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 40</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 60</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 4</p></blockquote><p><b>measureScore</b>: 72</p></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {http://hl7.org/fhir/administrative-gender other}\">Other</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 0</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 0</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 0</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 0</p></blockquote><p><b>measureScore</b>: 0</p></blockquote></blockquote></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-scoring" ];
+         fhir:Coding.code [ fhir:value "proportion" ]
+       ]
+     ]
+  ];
+  fhir:MeasureReport.status [ fhir:value "complete"];
+  fhir:MeasureReport.type [ fhir:value "summary"];
+  fhir:MeasureReport.measure [
+     fhir:value "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR";
+     fhir:link <http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR>
+  ];
+  fhir:MeasureReport.date [ fhir:value "2019-09-05T16:59:52.404Z"^^xsd:dateTime];
+  fhir:MeasureReport.reporter [
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/Organization/organization01>;
+     fhir:Reference.reference [ fhir:value "Organization/organization01" ]
+  ];
+  fhir:MeasureReport.period [
+     fhir:Period.start [ fhir:value "2019-08-01"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2019-09-01"^^xsd:date ]
+  ];
+  fhir:MeasureReport.improvementNotation [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-improvement-notation" ];
+       fhir:Coding.code [ fhir:value "increase" ];
+       fhir:Coding.display [ fhir:value "Increased score indicates improvement" ]
+     ]
+  ];
+  fhir:MeasureReport.group [
+     fhir:index 0;
+     fhir:MeasureReport.group.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+         fhir:Coding.code [ fhir:value "group-1" ];
+         fhir:Coding.display [ fhir:value "group-1" ]
+       ]
+     ];
+     fhir:MeasureReport.group.population [
+       fhir:index 0;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "initial-population" ];
+           fhir:Coding.display [ fhir:value "Initial Population" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "100"^^xsd:integer ]
+     ], [
+       fhir:index 1;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ];
+           fhir:Coding.display [ fhir:value "Numerator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "60"^^xsd:integer ]
+     ], [
+       fhir:index 2;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ];
+           fhir:Coding.display [ fhir:value "Denominator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "100"^^xsd:integer ]
+     ], [
+       fhir:index 3;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+           fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "10"^^xsd:integer ]
+     ];
+     fhir:MeasureReport.group.measureScore [
+       fhir:Quantity.value [ fhir:value "66"^^xsd:decimal ]
+     ];
+     fhir:MeasureReport.group.stratifier [
+       fhir:index 0;
+       fhir:MeasureReport.group.stratifier.code [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+           fhir:Coding.code [ fhir:value "sde-ethnicity" ];
+           fhir:Coding.display [ fhir:value "SDE Ethnicity" ]
+         ]
+       ];
+       fhir:MeasureReport.group.stratifier.stratum [
+         fhir:index 0;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+             fhir:Coding.code [ fhir:value "2135-2" ];
+             fhir:Coding.display [ fhir:value "Hispanic or Latino" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "50"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+             fhir:Coding.code [ fhir:value "2186-5" ];
+             fhir:Coding.display [ fhir:value "Not Hispanic or Latino" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "70"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "50"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "70"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "71"^^xsd:decimal ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:MeasureReport.group.stratifier.code [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+           fhir:Coding.code [ fhir:value "sde-payer" ];
+           fhir:Coding.display [ fhir:value "SDE Payer" ]
+         ]
+       ];
+       fhir:MeasureReport.group.stratifier.stratum [
+         fhir:index 0;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+             fhir:Coding.code [ fhir:value "Payer123" ];
+             fhir:Coding.display [ fhir:value "King HMO" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "50"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+             fhir:Coding.code [ fhir:value "Payer456" ];
+             fhir:Coding.display [ fhir:value "Green Circle" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "33"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+             fhir:Coding.code [ fhir:value "Payer789" ];
+             fhir:Coding.display [ fhir:value "GoodHealth of California" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:MeasureReport.group.stratifier.code [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+           fhir:Coding.code [ fhir:value "sde-race" ];
+           fhir:Coding.display [ fhir:value "SDE Race" ]
+         ]
+       ];
+       fhir:MeasureReport.group.stratifier.stratum [
+         fhir:index 0;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+             fhir:Coding.code [ fhir:value "2054-5" ];
+             fhir:Coding.display [ fhir:value "Black or African American" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "50"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+             fhir:Coding.code [ fhir:value "2106-3" ];
+             fhir:Coding.display [ fhir:value "White" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "10"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "33"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+             fhir:Coding.code [ fhir:value "2028-9" ];
+             fhir:Coding.display [ fhir:value "Asian" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:MeasureReport.group.stratifier.code [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://fhir/example.org" ];
+           fhir:Coding.code [ fhir:value "sde-sex" ];
+           fhir:Coding.display [ fhir:value "SDE Sex" ]
+         ]
+       ];
+       fhir:MeasureReport.group.stratifier.stratum [
+         fhir:index 0;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/administrative-gender" ];
+             fhir:Coding.code [ fhir:value "male" ];
+             fhir:Coding.display [ fhir:value "Male" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "20"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "5"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "57"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/administrative-gender" ];
+             fhir:Coding.code [ fhir:value "female" ];
+             fhir:Coding.display [ fhir:value "Female" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "60"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "60"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "4"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "72"^^xsd:decimal ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/administrative-gender" ];
+             fhir:Coding.code [ fhir:value "other" ];
+             fhir:Coding.display [ fhir:value "Other" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "initial-population" ];
+               fhir:Coding.display [ fhir:value "Initial Population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "numerator" ];
+               fhir:Coding.display [ fhir:value "Numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator" ];
+               fhir:Coding.display [ fhir:value "Denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+               fhir:Coding.code [ fhir:value "denominator-exclusion" ];
+               fhir:Coding.display [ fhir:value "Denominator Exclusion" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "0"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ]
+         ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/davinci-deqm/Organization/organization01> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/MeasureReport/summ-measurereport02.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/MeasureReport/summ-measurereport02.ttl> .
+
+# -------------------------------------------------------------------------------------
+

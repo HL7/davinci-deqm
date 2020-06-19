@@ -1,0 +1,3554 @@
+I"	�
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>    <ul>
+      <li><a href="#col-use-case-background" id="markdown-toc-col-use-case-background">COL Use Case Background</a></li>
+    </ul>
+  </li>
+  <li><a href="#fhir-resource-overview" id="markdown-toc-fhir-resource-overview">FHIR Resource Overview</a></li>
+  <li><a href="#graph-of-col-resources" id="markdown-toc-graph-of-col-resources">Graph of COL Resources</a></li>
+  <li><a href="#col-data-exchange-interactions" id="markdown-toc-col-data-exchange-interactions">COL Data Exchange Interactions</a></li>
+  <li><a href="#col-measure-reporting-interactions" id="markdown-toc-col-measure-reporting-interactions">COL Measure Reporting Interactions</a></li>
+</ul>
+
+</div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The colonoscopy measure such as <em>HEDIS Colorectal Cancer Screening/CMS130</em><sup id="fnref:10"><a href="#fn:10" class="footnote">1</a></sup> is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening for all patients in the population receiving care during the measurement period.</p>
+
+<h3 id="col-use-case-background">COL Use Case Background</h3>
+
+<p>In the case of colorectal cancer screening, two types of data are reported: 1) testing to detect colorectal cancer and polyps and 2)  information that would exclude the patient from needing testing.  For background on the clinical guideline that the measure was built off of see the <a href="https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html">Colorectal Cancer Screening Recommendation Statement</a> published by the Electronic Clinical Quality Improvement (eCQI) Resource Center.</p>
+
+<h2 id="fhir-resource-overview">FHIR Resource Overview</h2>
+
+<h3 class="no_toc" id="resources-supported-for-this-use-case">Resources Supported for this Use Case</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource Type</th>
+      <th>Profile Name</th>
+      <th>Link to Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Condition</td>
+      <td>QI Core Condition Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-condition.html">QI Core Condition</a></td>
+    </tr>
+    <tr>
+      <td>Coverage</td>
+      <td>QI Core Coverage Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-coverage.html">QI Core Coverage</a></td>
+    </tr>
+    <tr>
+      <td>DiagnosticReport</td>
+      <td>QI Core DiagnosticReport Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-diagnosticreport-lab.html">QI Core DiagnosticReport</a></td>
+    </tr>
+    <tr>
+      <td>Encounter</td>
+      <td>QI Core Encounter Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-encounter.html">QI Core Encounter</a></td>
+    </tr>
+    <tr>
+      <td>Library</td>
+      <td>CQFM Library Profile</td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-library-cqfm.html">CQFM Library</a></td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>QI Core Location Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-location.html">QI Core Location</a></td>
+    </tr>
+    <tr>
+      <td>Measure</td>
+      <td>CQFM Measure Profile</td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
+    </tr>
+    <tr>
+      <td>MeasureReport</td>
+      <td>DEQM Data Exchange MeasureReport Profile</td>
+      <td><a href="StructureDefinition-datax-measurereport-deqm.html">DEQM Data Exchange MeasureReport Profile</a></td>
+    </tr>
+    <tr>
+      <td>MeasureReport</td>
+      <td>DEQM Individual MeasureReport Profile</td>
+      <td><a href="StructureDefinition-indv-measurereport-deqm.html">DEQM Individual MeasureReport Profile</a></td>
+    </tr>
+    <tr>
+      <td>MeasureReport</td>
+      <td>DEQM Summary MeasureReport Profile</td>
+      <td><a href="StructureDefinition-summary-measurereport-deqm.html">DEQM Summary MeasureReport Profile</a></td>
+    </tr>
+    <tr>
+      <td>Observation</td>
+      <td>QI Core Observation Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-observation.html">QI Core Observation</a></td>
+    </tr>
+    <tr>
+      <td>Organization</td>
+      <td>DEQM Organization Profile</td>
+      <td><a href="StructureDefinition-organization-deqm.html">DEQM Organization</a></td>
+    </tr>
+    <tr>
+      <td>Patient</td>
+      <td>QI Core Patient Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-patient.html">QI Core Patient</a></td>
+    </tr>
+    <tr>
+      <td>Practitioner</td>
+      <td>DEQM Practitioner Profile</td>
+      <td><a href="StructureDefinition-practitioner-deqm.html">DEQM Practitioner</a></td>
+    </tr>
+    <tr>
+      <td>Procedure</td>
+      <td>QI Core Procedure Profile</td>
+      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-procedure.html">QI Core Procedure</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="graph-of-col-resources">Graph of COL Resources</h2>
+
+<p>For COL either an <em>Observation</em>, <em>DiagnosticReport</em>, <em>Condition</em>, or <em>Procedure</em> is the primary resource used to evaluate the measure. Below are listed the resource diagrams that meet each situation in the COL screening measure.  Note that overlapping boxes in the diagrams represents a choice of one or the resources.</p>
+
+<h3 class="no_toc" id="option-1-measurereport-using-observation">Option 1: MeasureReport Using Observation</h3>
+
+<p>When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  The following resource graph diagram shows how a laboratory test to meet the screen measure would be represented using a DEQM Individual MeasureReport and its associated resources.</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+  <figure class="figure">
+    <figcaption class="figure-caption">
+      <p><strong>Figure 3-5 Measure Report Using Observation</strong>&lt;/figcaption&gt;
+  <img src="DEQM Resource Diagram - COL1.jpg" class="figure-img img-responsive img-rounded center-block" alt="DEQM Resource Diagram - COL1.jpg" />
+&lt;/figure&gt;</p>
+
+      <p></p>
+      <p>&lt;/div&gt;</p>
+
+      <h3 class="no_toc" id="option-2-measurereport-using-diagnosticreport">Option 2: MeasureReport Using DiagnosticReport</h3>
+
+      <p>Another way a COL screening measure is met is when certain procedures such as flexible sigmoidoscopy and colonoscopy are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how a procedure report to meet a screening measure would be represented in a DEQM Individual MeasureReport and its associated resources.</p>
+
+      <!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+      <div>
+        <figure class="figure">
+          <figcaption class="figure-caption">
+            <p><strong>Figure 3-6 Measure Report Using DiagnosticReport</strong>&lt;/figcaption&gt;
+  <img src="DEQM Resource Diagram - COL2.jpg" class="figure-img img-responsive img-rounded center-block" alt="DEQM Resource Diagram - COL2.jpg" />
+&lt;/figure&gt;</p>
+
+            <p></p>
+            <p>&lt;/div&gt;</p>
+
+            <h3 class="no_toc" id="option-3-measurereport-using-procedure">Option 3: MeasureReport Using Procedure</h3>
+
+            <p>There are often times exclusions in a screening measure.  An exclusion is something that removes the requirement for a screening measure.  For example, a total colectomy removes the requirement for Colorectal Cancer Screening.  As with the other options, the measure defines the valueset/codes that constitute a qualifying procedure.  The following diagram shows how you would use a DEQM Individual MeasureReport and its associated resources to report a procedure that represents an exclusion to the measure.</p>
+
+            <p><!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide --></p>
+
+            <div>
+              <figure class="figure">
+                <figcaption class="figure-caption">
+                  <p><strong>Figure 3-7 Measure Report Using Procedure</strong>&lt;/figcaption&gt;
+  <img src="DEQM Resource Diagram - COL3.jpg" class="figure-img img-responsive img-rounded center-block" alt="DEQM Resource Diagram - COL3.jpg" />
+&lt;/figure&gt;</p>
+
+                  <p></p>
+                  <p>&lt;/div&gt;</p>
+
+                  <h3 class="no_toc" id="option-4-measurereport-using-condition">Option 4: MeasureReport Using Condition</h3>
+
+                  <p>An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions such as colorectal cancer.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows how you would use a DEQM Individual MeasureReport and its associated resources to represent a condition that represents an exclusion to the measure.</p>
+
+                  <p><!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide --></p>
+
+                  <div>
+                    <figure class="figure">
+                      <figcaption class="figure-caption">
+                        <p><strong>Figure 3-8 Measure Report Using Condition</strong>&lt;/figcaption&gt;
+  <img src="DEQM Resource Diagram - COL4.jpg" class="figure-img img-responsive img-rounded center-block" alt="DEQM Resource Diagram - COL4.jpg" />
+&lt;/figure&gt;</p>
+
+                        <p></p>
+                        <p>&lt;/div&gt;</p>
+
+                        <h2 id="col-data-exchange-interactions">COL Data Exchange Interactions</h2>
+
+                        <p>In the following interactions, the Provider is acting in the role of the <em>Producer</em> and the Payer (“Aggregator”) is acting in the role of the <em>Consumer</em>.</p>
+
+                        <h3 id="data-requirements" class="no_toc">Gather Data Requirements from Payer</h3>
+
+                        <p>In this optional step, the Provider queries the Payer (“Aggregator”) for which resources are needed for COL measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.</p>
+
+                        <p>
+  <button class="btn btn-info btn-lg" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#col-requirements-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See Example COL Data Requirements
+  </button>
+</p>
+
+                        <div class="collapse" id="col-requirements-example">
+                          <div class="card card-body">
+                            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h3 class="no_toc" id="example"&gt;Example&lt;/h3&gt;
+</code></pre></div>                            </div>
+
+                            <p><strong>Scenario</strong></p>
+
+                            <p>Provider X acting in the role of the Producer requests data requirements for the Colorectal Cancer Screening measure from Payer Z which is acting in the role of Consumer.  A Library resource containing the required resources for Colorectal Cancer Screening reporting are returned on successful evaluation.</p>
+
+                            <p><strong>Request using <code class="highlighter-rouge">GET</code></strong></p>
+
+                            <p><code class="highlighter-rouge">GET [base]/Measure/measure-exm130-FHIR/$data-requirements?periodStart=2018&amp;periodEnd=2018</code></p>
+
+                            <p><strong>Request using <code class="highlighter-rouge">POST</code></strong></p>
+
+                            <p><code class="highlighter-rouge">POST [base]/Measure/measure-exm130-FHIR/$data-requirements</code></p>
+
+                            <p><strong>Request body</strong></p>
+
+                            <div class="highlighter-rouge">
+                              <div class="highlight">
+                                <pre class="highlight"><code>{
+   "resourceType":"Parameters",
+   "parameter":[
+      {
+         "name":"periodStart",
+         "valueDate":"2018"
+      },
+      {
+         "name":"periodEnd",
+         "valueDate":"2018"
+      }
+    ]
+ }
+</code></pre>
+                              </div>
+                            </div>
+
+                            <p><strong>Response</strong></p>
+
+                            <div class="highlighter-rouge">
+                              <div class="highlight">
+                                <pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre>
+                              </div>
+                            </div>
+
+                            <p><strong>Response body</strong></p>
+
+                            <div class="highlighter-rouge">
+                              <div class="highlight">
+                                <pre class="highlight"><code>{
+  "resourceType": "Library",
+  "id": "exm130-fhir-r4",
+  "text": {
+    "status": "generated",
+    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: exm130-fhir-r4&lt;/p&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;a href=\"http://hl7.org/fhir/us/cqfmeasures/Library/exm130-fhir\"&gt;http://hl7.org/fhir/us/cqfmeasures/Library/exm130-fhir&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: EXM130 (OFFICIAL)&lt;/p&gt;&lt;p&gt;&lt;b&gt;version&lt;/b&gt;: 1.1.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: EXM130_FHIR&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Colorectal Cancer Screening&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;experimental&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/library-type logic-library}\"&gt;Logic Library&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Sep 2, 2019, 9:00:00 PM&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: HL7 International - Clinical Quality Information Work Group&lt;/p&gt;&lt;p&gt;&lt;b&gt;contact&lt;/b&gt;: http://www.hl7.org/Special/committees/cqi/index.cfm&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: This library is used as an example in the FHIR Quality Measure Implementation Guide&lt;/p&gt;&lt;p&gt;&lt;b&gt;jurisdiction&lt;/b&gt;: &lt;span title=\"Codes: {urn:iso:std:iso:3166 US}\"&gt;United States of America&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;approvalDate&lt;/b&gt;: 2019-08-03&lt;/p&gt;&lt;p&gt;&lt;b&gt;lastReviewDate&lt;/b&gt;: 2019-08-03&lt;/p&gt;&lt;p&gt;&lt;b&gt;relatedArtifact&lt;/b&gt;: , , , , &lt;/p&gt;&lt;p&gt;&lt;b&gt;dataRequirement&lt;/b&gt;: , , , , , , , , , , , , , , , , , , , , , , , , , &lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: , &lt;/p&gt;&lt;/div&gt;"
+  },
+  "url": "http://hl7.org/fhir/us/cqfmeasures/Library/exm130-fhir",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://example.org/fhir/cqi/ecqm/Library/Identifier",
+      "value": "EXM130"
+    }
+  ],
+  "version": "1.1.0",
+  "name": "EXM130_FHIR",
+  "title": "Colorectal Cancer Screening",
+  "status": "active",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "logic-library"
+      }
+    ]
+  },
+  "date": "2019-09-02T21:00:00-07:00",
+  "publisher": "HL7 International - Clinical Quality Information Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+        }
+      ]
+    }
+  ],
+  "description": "This library is used as an example in the FHIR Quality Measure Implementation Guide",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "approvalDate": "2019-08-03",
+  "lastReviewDate": "2019-08-03",
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/adultoutpatientencounters-fhir"
+    },
+    {
+      "type": "depends-on",
+      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/matglobalcommonfunctions-fhir"
+    },
+    {
+      "type": "depends-on",
+      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/hospice-fhir"
+    },
+    {
+      "type": "depends-on",
+      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/fhirhelpers"
+    },
+    {
+      "type": "depends-on",
+      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/supplementaldataelements-fhir"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.101.12.100"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.124"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.101.12.102"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.101.12.102"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.101.12.101"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.666.5.30"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.29"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "id"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "id"
+        }
+      ]
+    },
+    {
+      "type": "Location",
+      "codeFilter": [
+        {
+          "path": "id"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.666.5.30"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.29"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "id"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "id"
+        }
+      ]
+    },
+    {
+      "type": "Location",
+      "codeFilter": [
+        {
+          "path": "id"
+        }
+      ]
+    },
+    {
+      "type": "Encounter",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.666.5.30"
+        }
+      ]
+    },
+    {
+      "type": "ServiceRequest",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1108.1"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1108.1"
+        }
+      ]
+    },
+    {
+      "type": "Coverage",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.359"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.101"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.108.12.103"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.101"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.108.12.100"
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.101"
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.108.12.103"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.108.12.102"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "contentType": "application/elm+xml",
+      "data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGxpYnJhcnkgeG1sbnM9InVybjpobDctb3JnOmVsbTpyMSIgeG1sbnM6dD0idXJuOmhsNy1vcmc6ZWxtLXR5cGVzOnIxIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxuczp4c2Q9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczpmaGlyPSJodHRwOi8vaGw3Lm9yZy9maGlyIiB4bWxuczpxZG00Mz0idXJuOmhlYWx0aGl0LWdvdjpxZG06djRfMyIgeG1sbnM6cWRtNTM9InVybjpoZWFsdGhpdC1nb3Y6cWRtOnY1XzMiIHhtbG5zOmE9InVybjpobDctb3JnOmNxbC1hbm5vdGF0aW9uczpyMSI+CiAgIDxpZGVudGlmaWVyIGlkPSJFWE0xMzBfRkhJUiIgdmVyc2lvbj0iNy4yLjAwMCIvPgogICA8c2NoZW1hSWRlbnRpZmllciBpZD0idXJuOmhsNy1vcmc6ZWxtIiB2ZXJzaW9uPSJyMSIvPgogICA8dXNpbmdzPgogICAgICA8ZGVmIGxvY2FsSWRlbnRpZmllcj0iU3lzdGVtIiB1cmk9InVybjpobDctb3JnOmVsbS10eXBlczpyMSIvPgogICAgICA8ZGVmIGxvY2FsSWRlbnRpZmllcj0iRkhJUiIgdXJpPSJodHRwOi8vaGw3Lm9yZy9maGlyIiB2ZXJzaW9uPSIzLjAuMCIvPgogICA8L3VzaW5ncz4KICAgPGluY2x1ZGVzPgogICAgICA8ZGVmIGxvY2FsSWRlbnRpZmllcj0iQWR1bHRPdXRwYXRpZW50RW5jb3VudGVycyIgcGF0aD0iQWR1bHRPdXRwYXRpZW50RW5jb3VudGVyc19GSElSIiB2ZXJzaW9uPSIxLjEuMDAwIi8+CiAgICAgIDxkZWYgbG9jYWxJZGVudGlmaWVyPSJHbG9iYWwiIHBhdGg9Ik1BVEdsb2JhbENvbW1vbkZ1bmN0aW9uc19GSElSIiB2ZXJzaW9uPSIyLjAuMDAwIi8+CiAgICAgIDxkZWYgbG9jYWxJZGVudGlmaWVyPSJIb3NwaWNlIiBwYXRoPSJIb3NwaWNlX0ZISVIiIHZlcnNpb249IjEuMC4wMDAiLz4KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9IkZISVJIZWxwZXJzIiBwYXRoPSJGSElSSGVscGVycyIgdmVyc2lvbj0iMy4wLjAiLz4KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9IlNERSIgcGF0aD0iU3VwcGxlbWVudGFsRGF0YUVsZW1lbnRzX0ZISVIiIHZlcnNpb249IjEuMC4wIi8+CiAgIDwvaW5jbHVkZXM+CiAgIDxwYXJhbWV0ZXJzPgogICAgICA8ZGVmIG5hbWU9Ik1lYXN1cmVtZW50IFBlcmlvZCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxwYXJhbWV0ZXJUeXBlU3BlY2lmaWVyIHhzaTp0eXBlPSJJbnRlcnZhbFR5cGVTcGVjaWZpZXIiPgogICAgICAgICAgICA8cG9pbnRUeXBlIG5hbWU9InQ6RGF0ZVRpbWUiIHhzaTp0eXBlPSJOYW1lZFR5cGVTcGVjaWZpZXIiLz4KICAgICAgICAgPC9wYXJhbWV0ZXJUeXBlU3BlY2lmaWVyPgogICAgICA8L2RlZj4KICAgPC9wYXJhbWV0ZXJzPgogICA8dmFsdWVTZXRzPgogICAgICA8ZGVmIG5hbWU9Ik9OQyBBZG1pbmlzdHJhdGl2ZSBTZXgiIGlkPSJodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTM3NjIuMS40LjEiIGFjY2Vzc0xldmVsPSJQdWJsaWMiLz4KICAgICAgPGRlZiBuYW1lPSJSYWNlIiBpZD0iaHR0cDovL2N0cy5ubG0ubmloLmdvdi9maGlyL1ZhbHVlU2V0LzIuMTYuODQwLjEuMTE0MjIyLjQuMTEuODM2IiBhY2Nlc3NMZXZlbD0iUHVibGljIi8+CiAgICAgIDxkZWYgbmFtZT0iRXRobmljaXR5IiBpZD0iaHR0cDovL2N0cy5ubG0ubmloLmdvdi9maGlyL1ZhbHVlU2V0LzIuMTYuODQwLjEuMTE0MjIyLjQuMTEuODM3IiBhY2Nlc3NMZXZlbD0iUHVibGljIi8+CiAgICAgIDxkZWYgbmFtZT0iUGF5ZXIiIGlkPSJodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTQyMjIuNC4xMS4zNTkxIiBhY2Nlc3NMZXZlbD0iUHVibGljIi8+CiAgICAgIDxkZWYgbmFtZT0iQ29sb25vc2NvcHkiIGlkPSJodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTM4ODMuMy40NjQuMTAwMy4xMDguMTIuMTAyMCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyIvPgogICAgICA8ZGVmIG5hbWU9IkZlY2FsIE9jY3VsdCBCbG9vZCBUZXN0IChGT0JUKSIgaWQ9Imh0dHA6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4zLjQ2NC4xMDAzLjE5OC4xMi4xMDExIiBhY2Nlc3NMZXZlbD0iUHVibGljIi8+CiAgICAgIDxkZWYgbmFtZT0iRmxleGlibGUgU2lnbW9pZG9zY29weSIgaWQ9Imh0dHA6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4zLjQ2NC4xMDAzLjE5OC4xMi4xMDEwIiBhY2Nlc3NMZXZlbD0iUHVibGljIi8+CiAgICAgIDxkZWYgbmFtZT0iTWFsaWduYW50IE5lb3BsYXNtIG9mIENvbG9uIiBpZD0iaHR0cDovL2N0cy5ubG0ubmloLmdvdi9maGlyL1ZhbHVlU2V0LzIuMTYuODQwLjEuMTEzODgzLjMuNDY0LjEwMDMuMTA4LjEyLjEwMDEiIGFjY2Vzc0xldmVsPSJQdWJsaWMiLz4KICAgICAgPGRlZiBuYW1lPSJUb3RhbCBDb2xlY3RvbXkiIGlkPSJodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTM4ODMuMy40NjQuMTAwMy4xOTguMTIuMTAxOSIgYWNjZXNzTGV2ZWw9IlB1YmxpYyIvPgogICAgICA8ZGVmIG5hbWU9IkZJVCBETkEiIGlkPSJodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTM4ODMuMy40NjQuMTAwMy4xMDguMTIuMTAzOSIgYWNjZXNzTGV2ZWw9IlB1YmxpYyIvPgogICAgICA8ZGVmIG5hbWU9IkNUIENvbG9ub2dyYXBoeSIgaWQ9Imh0dHA6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4zLjQ2NC4xMDAzLjEwOC4xMi4xMDM4IiBhY2Nlc3NMZXZlbD0iUHVibGljIi8+CiAgIDwvdmFsdWVTZXRzPgogICA8c3RhdGVtZW50cz4KICAgICAgPGRlZiBuYW1lPSJQYXRpZW50IiBjb250ZXh0PSJQYXRpZW50Ij4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlNpbmdsZXRvbkZyb20iPgogICAgICAgICAgICA8b3BlcmFuZCBkYXRhVHlwZT0iZmhpcjpQYXRpZW50IiB4c2k6dHlwZT0iUmV0cmlldmUiLz4KICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICA8L2RlZj4KICAgICAgPGRlZiBuYW1lPSJTREUgRXRobmljaXR5IiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24gbmFtZT0iU0RFIEV0aG5pY2l0eSIgbGlicmFyeU5hbWU9IlNERSIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iU0RFIFBheWVyIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24gbmFtZT0iU0RFIFBheWVyIiBsaWJyYXJ5TmFtZT0iU0RFIiB4c2k6dHlwZT0iRXhwcmVzc2lvblJlZiIvPgogICAgICA8L2RlZj4KICAgICAgPGRlZiBuYW1lPSJTREUgUmFjZSIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIG5hbWU9IlNERSBSYWNlIiBsaWJyYXJ5TmFtZT0iU0RFIiB4c2k6dHlwZT0iRXhwcmVzc2lvblJlZiIvPgogICAgICA8L2RlZj4KICAgICAgPGRlZiBuYW1lPSJTREUgU2V4IiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24gbmFtZT0iU0RFIFNleCIgbGlicmFyeU5hbWU9IlNERSIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iRGVub21pbmF0b3IiIGNvbnRleHQ9IlBhdGllbnQiIGFjY2Vzc0xldmVsPSJQdWJsaWMiPgogICAgICAgICA8ZXhwcmVzc2lvbiB2YWx1ZVR5cGU9InQ6Qm9vbGVhbiIgdmFsdWU9InRydWUiIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIG5hbWU9IkZsZXhpYmxlIFNpZ21vaWRvc2NvcHkgUGVyZm9ybWVkIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlF1ZXJ5Ij4KICAgICAgICAgICAgPHNvdXJjZSBhbGlhcz0iRmxleGlibGVTaWdtb2lkb3Njb3B5Ij4KICAgICAgICAgICAgICAgPGV4cHJlc3Npb24gZGF0YVR5cGU9ImZoaXI6UHJvY2VkdXJlIiBjb2RlUHJvcGVydHk9ImNvZGUiIHhzaTp0eXBlPSJSZXRyaWV2ZSI+CiAgICAgICAgICAgICAgICAgIDxjb2RlcyBuYW1lPSJGbGV4aWJsZSBTaWdtb2lkb3Njb3B5IiB4c2k6dHlwZT0iVmFsdWVTZXRSZWYiLz4KICAgICAgICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICAgICAgICA8L3NvdXJjZT4KICAgICAgICAgICAgPHdoZXJlIHhzaTp0eXBlPSJBbmQiPgogICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iRXF1YWwiPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJUb1N0cmluZyIgbGlicmFyeU5hbWU9IkZISVJIZWxwZXJzIiB4c2k6dHlwZT0iRnVuY3Rpb25SZWYiPgogICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBwYXRoPSJzdGF0dXMiIHNjb3BlPSJGbGV4aWJsZVNpZ21vaWRvc2NvcHkiIHhzaTp0eXBlPSJQcm9wZXJ0eSIvPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHZhbHVlVHlwZT0idDpTdHJpbmciIHZhbHVlPSJjb21wbGV0ZWQiIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkluIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkVuZCI+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlRvSW50ZXJ2YWwiIGxpYnJhcnlOYW1lPSJGSElSSGVscGVycyIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgYXNUeXBlPSJmaGlyOlBlcmlvZCIgeHNpOnR5cGU9IkFzIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0icGVyZm9ybWVkIiBzY29wZT0iRmxleGlibGVTaWdtb2lkb3Njb3B5IiB4c2k6dHlwZT0iUHJvcGVydHkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbG93Q2xvc2VkPSJ0cnVlIiBoaWdoQ2xvc2VkPSJ0cnVlIiB4c2k6dHlwZT0iSW50ZXJ2YWwiPgogICAgICAgICAgICAgICAgICAgICA8bG93IHhzaTp0eXBlPSJTdWJ0cmFjdCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFbmQiPgogICAgICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJNZWFzdXJlbWVudCBQZXJpb2QiIHhzaTp0eXBlPSJQYXJhbWV0ZXJSZWYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCB2YWx1ZT0iNSIgdW5pdD0ieWVhcnMiIHhzaTp0eXBlPSJRdWFudGl0eSIvPgogICAgICAgICAgICAgICAgICAgICA8L2xvdz4KICAgICAgICAgICAgICAgICAgICAgPGhpZ2ggeHNpOnR5cGU9IkVuZCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9Ik1lYXN1cmVtZW50IFBlcmlvZCIgeHNpOnR5cGU9IlBhcmFtZXRlclJlZiIvPgogICAgICAgICAgICAgICAgICAgICA8L2hpZ2g+CiAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICA8L3doZXJlPgogICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIG5hbWU9IkNUIENvbG9ub2dyYXBoeSBQZXJmb3JtZWQiIGNvbnRleHQ9IlBhdGllbnQiIGFjY2Vzc0xldmVsPSJQdWJsaWMiPgogICAgICAgICA8ZXhwcmVzc2lvbiB4c2k6dHlwZT0iUXVlcnkiPgogICAgICAgICAgICA8c291cmNlIGFsaWFzPSJDb2xvbm9ncmFwaHkiPgogICAgICAgICAgICAgICA8ZXhwcmVzc2lvbiBkYXRhVHlwZT0iZmhpcjpQcm9jZWR1cmUiIGNvZGVQcm9wZXJ0eT0iY29kZSIgeHNpOnR5cGU9IlJldHJpZXZlIj4KICAgICAgICAgICAgICAgICAgPGNvZGVzIG5hbWU9IkNUIENvbG9ub2dyYXBoeSIgeHNpOnR5cGU9IlZhbHVlU2V0UmVmIi8+CiAgICAgICAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgICAgICAgPC9zb3VyY2U+CiAgICAgICAgICAgIDx3aGVyZSB4c2k6dHlwZT0iQW5kIj4KICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkVxdWFsIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iVG9TdHJpbmciIGxpYnJhcnlOYW1lPSJGSElSSGVscGVycyIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0ic3RhdHVzIiBzY29wZT0iQ29sb25vZ3JhcGh5IiB4c2k6dHlwZT0iUHJvcGVydHkiLz4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCB2YWx1ZVR5cGU9InQ6U3RyaW5nIiB2YWx1ZT0iY29tcGxldGVkIiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJJbiI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFbmQiPgogICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJUb0ludGVydmFsIiBsaWJyYXJ5TmFtZT0iRkhJUkhlbHBlcnMiIHhzaTp0eXBlPSJGdW5jdGlvblJlZiI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIGFzVHlwZT0iZmhpcjpQZXJpb2QiIHhzaTp0eXBlPSJBcyI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHBhdGg9InBlcmZvcm1lZCIgc2NvcGU9IkNvbG9ub2dyYXBoeSIgeHNpOnR5cGU9IlByb3BlcnR5Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIGxvd0Nsb3NlZD0idHJ1ZSIgaGlnaENsb3NlZD0idHJ1ZSIgeHNpOnR5cGU9IkludGVydmFsIj4KICAgICAgICAgICAgICAgICAgICAgPGxvdyB4c2k6dHlwZT0iU3VidHJhY3QiPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iRW5kIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iTWVhc3VyZW1lbnQgUGVyaW9kIiB4c2k6dHlwZT0iUGFyYW1ldGVyUmVmIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgdmFsdWU9IjUiIHVuaXQ9InllYXJzIiB4c2k6dHlwZT0iUXVhbnRpdHkiLz4KICAgICAgICAgICAgICAgICAgICAgPC9sb3c+CiAgICAgICAgICAgICAgICAgICAgIDxoaWdoIHhzaTp0eXBlPSJFbmQiPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJNZWFzdXJlbWVudCBQZXJpb2QiIHhzaTp0eXBlPSJQYXJhbWV0ZXJSZWYiLz4KICAgICAgICAgICAgICAgICAgICAgPC9oaWdoPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgPC93aGVyZT4KICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICA8L2RlZj4KICAgICAgPGRlZiBuYW1lPSJUb3RhbCBDb2xlY3RvbXkgUGVyZm9ybWVkIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlF1ZXJ5Ij4KICAgICAgICAgICAgPHNvdXJjZSBhbGlhcz0iQ29sZWN0b215Ij4KICAgICAgICAgICAgICAgPGV4cHJlc3Npb24gZGF0YVR5cGU9ImZoaXI6UHJvY2VkdXJlIiBjb2RlUHJvcGVydHk9ImNvZGUiIHhzaTp0eXBlPSJSZXRyaWV2ZSI+CiAgICAgICAgICAgICAgICAgIDxjb2RlcyBuYW1lPSJUb3RhbCBDb2xlY3RvbXkiIHhzaTp0eXBlPSJWYWx1ZVNldFJlZiIvPgogICAgICAgICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgICAgICAgIDwvc291cmNlPgogICAgICAgICAgICA8d2hlcmUgeHNpOnR5cGU9IkFuZCI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFcXVhbCI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlRvU3RyaW5nIiBsaWJyYXJ5TmFtZT0iRkhJUkhlbHBlcnMiIHhzaTp0eXBlPSJGdW5jdGlvblJlZiI+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHBhdGg9InN0YXR1cyIgc2NvcGU9IkNvbGVjdG9teSIgeHNpOnR5cGU9IlByb3BlcnR5Ii8+CiAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9ImNvbXBsZXRlZCIgeHNpOnR5cGU9IkxpdGVyYWwiLz4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iU2FtZU9yQmVmb3JlIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IlN0YXJ0Ij4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iR2V0IENob2ljZSBJbnRlcnZhbCAtIGRhdGVUaW1lIG9yIFBlcmlvZCIgbGlicmFyeU5hbWU9Ikdsb2JhbCIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0icGVyZm9ybWVkIiBzY29wZT0iQ29sZWN0b215IiB4c2k6dHlwZT0iUHJvcGVydHkiLz4KICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFbmQiPgogICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJNZWFzdXJlbWVudCBQZXJpb2QiIHhzaTp0eXBlPSJQYXJhbWV0ZXJSZWYiLz4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDwvd2hlcmU+CiAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iTWFsaWduYW50IE5lb3BsYXNtIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlF1ZXJ5Ij4KICAgICAgICAgICAgPHNvdXJjZSBhbGlhcz0iQ29sb3JlY3RhbENhbmNlciI+CiAgICAgICAgICAgICAgIDxleHByZXNzaW9uIGRhdGFUeXBlPSJmaGlyOkNvbmRpdGlvbiIgY29kZVByb3BlcnR5PSJjb2RlIiB4c2k6dHlwZT0iUmV0cmlldmUiPgogICAgICAgICAgICAgICAgICA8Y29kZXMgbmFtZT0iTWFsaWduYW50IE5lb3BsYXNtIG9mIENvbG9uIiB4c2k6dHlwZT0iVmFsdWVTZXRSZWYiLz4KICAgICAgICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICAgICAgICA8L3NvdXJjZT4KICAgICAgICAgICAgPHdoZXJlIHhzaTp0eXBlPSJTYW1lT3JCZWZvcmUiPgogICAgICAgICAgICAgICA8b3BlcmFuZCBhc1R5cGU9InQ6RGF0ZVRpbWUiIHhzaTp0eXBlPSJBcyI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJTdGFydCI+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9Ik5vcm1hbGl6ZSBPbnNldCIgbGlicmFyeU5hbWU9Ikdsb2JhbCIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0ib25zZXQiIHNjb3BlPSJDb2xvcmVjdGFsQ2FuY2VyIiB4c2k6dHlwZT0iUHJvcGVydHkiLz4KICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkVuZCI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9Ik1lYXN1cmVtZW50IFBlcmlvZCIgeHNpOnR5cGU9IlBhcmFtZXRlclJlZiIvPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDwvd2hlcmU+CiAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iRmVjYWwgT2NjdWx0IEJsb29kIFRlc3QgUGVyZm9ybWVkIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlF1ZXJ5Ij4KICAgICAgICAgICAgPHNvdXJjZSBhbGlhcz0iRmVjYWxPY2N1bHRSZXN1bHQiPgogICAgICAgICAgICAgICA8ZXhwcmVzc2lvbiBkYXRhVHlwZT0iZmhpcjpPYnNlcnZhdGlvbiIgY29kZVByb3BlcnR5PSJjb2RlIiB4c2k6dHlwZT0iUmV0cmlldmUiPgogICAgICAgICAgICAgICAgICA8Y29kZXMgbmFtZT0iRmVjYWwgT2NjdWx0IEJsb29kIFRlc3QgKEZPQlQpIiB4c2k6dHlwZT0iVmFsdWVTZXRSZWYiLz4KICAgICAgICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICAgICAgICA8L3NvdXJjZT4KICAgICAgICAgICAgPHdoZXJlIHhzaTp0eXBlPSJBbmQiPgogICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iQW5kIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkluIj4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iVG9TdHJpbmciIGxpYnJhcnlOYW1lPSJGSElSSGVscGVycyIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0ic3RhdHVzIiBzY29wZT0iRmVjYWxPY2N1bHRSZXN1bHQiIHhzaTp0eXBlPSJQcm9wZXJ0eSIvPgogICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJMaXN0Ij4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsZW1lbnQgdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9ImZpbmFsIiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxlbWVudCB2YWx1ZVR5cGU9InQ6U3RyaW5nIiB2YWx1ZT0iYW1lbmRlZCIgeHNpOnR5cGU9IkxpdGVyYWwiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsZW1lbnQgdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9ImNvcnJlY3RlZCIgeHNpOnR5cGU9IkxpdGVyYWwiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsZW1lbnQgdmFsdWVUeXBlPSJ0OlN0cmluZyIgdmFsdWU9InByZWxpbWluYXJ5IiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9Ik5vdCI+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJJc051bGwiPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBwYXRoPSJ2YWx1ZSIgc2NvcGU9IkZlY2FsT2NjdWx0UmVzdWx0IiB4c2k6dHlwZT0iUHJvcGVydHkiLz4KICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPG9wZXJhbmQgcHJlY2lzaW9uPSJEYXkiIHhzaTp0eXBlPSJJbmNsdWRlZEluIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iVG9JbnRlcnZhbCIgbGlicmFyeU5hbWU9IkZISVJIZWxwZXJzIiB4c2k6dHlwZT0iRnVuY3Rpb25SZWYiPgogICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBhc1R5cGU9ImZoaXI6UGVyaW9kIiB4c2k6dHlwZT0iQXMiPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBwYXRoPSJlZmZlY3RpdmUiIHNjb3BlPSJGZWNhbE9jY3VsdFJlc3VsdCIgeHNpOnR5cGU9IlByb3BlcnR5Ii8+CiAgICAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJNZWFzdXJlbWVudCBQZXJpb2QiIHhzaTp0eXBlPSJQYXJhbWV0ZXJSZWYiLz4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICA8L3doZXJlPgogICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIG5hbWU9IkZlY2FsIEltbXVub2NoZW1pY2FsIFRlc3QgRE5BIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlF1ZXJ5Ij4KICAgICAgICAgICAgPHNvdXJjZSBhbGlhcz0iRml0RE5BIj4KICAgICAgICAgICAgICAgPGV4cHJlc3Npb24gZGF0YVR5cGU9ImZoaXI6T2JzZXJ2YXRpb24iIGNvZGVQcm9wZXJ0eT0iY29kZSIgeHNpOnR5cGU9IlJldHJpZXZlIj4KICAgICAgICAgICAgICAgICAgPGNvZGVzIG5hbWU9IkZJVCBETkEiIHhzaTp0eXBlPSJWYWx1ZVNldFJlZiIvPgogICAgICAgICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgICAgICAgIDwvc291cmNlPgogICAgICAgICAgICA8d2hlcmUgeHNpOnR5cGU9IkFuZCI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJOb3QiPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iSXNOdWxsIj4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0idmFsdWUiIHNjb3BlPSJGaXRETkEiIHhzaTp0eXBlPSJQcm9wZXJ0eSIvPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPG9wZXJhbmQgcHJlY2lzaW9uPSJEYXkiIHhzaTp0eXBlPSJJbiI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlRvRGF0ZVRpbWUiIGxpYnJhcnlOYW1lPSJGSElSSGVscGVycyIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgYXNUeXBlPSJmaGlyOmRhdGVUaW1lIiB4c2k6dHlwZT0iQXMiPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBwYXRoPSJlZmZlY3RpdmUiIHNjb3BlPSJGaXRETkEiIHhzaTp0eXBlPSJQcm9wZXJ0eSIvPgogICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbG93Q2xvc2VkPSJ0cnVlIiBoaWdoQ2xvc2VkPSJ0cnVlIiB4c2k6dHlwZT0iSW50ZXJ2YWwiPgogICAgICAgICAgICAgICAgICAgICA8bG93IHhzaTp0eXBlPSJTdWJ0cmFjdCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFbmQiPgogICAgICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJNZWFzdXJlbWVudCBQZXJpb2QiIHhzaTp0eXBlPSJQYXJhbWV0ZXJSZWYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCB2YWx1ZT0iMyIgdW5pdD0ieWVhcnMiIHhzaTp0eXBlPSJRdWFudGl0eSIvPgogICAgICAgICAgICAgICAgICAgICA8L2xvdz4KICAgICAgICAgICAgICAgICAgICAgPGhpZ2ggeHNpOnR5cGU9IkVuZCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9Ik1lYXN1cmVtZW50IFBlcmlvZCIgeHNpOnR5cGU9IlBhcmFtZXRlclJlZiIvPgogICAgICAgICAgICAgICAgICAgICA8L2hpZ2g+CiAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICA8L3doZXJlPgogICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIG5hbWU9IkNvbG9ub3Njb3B5IFBlcmZvcm1lZCIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIHhzaTp0eXBlPSJRdWVyeSI+CiAgICAgICAgICAgIDxzb3VyY2UgYWxpYXM9IkNvbG9ub3Njb3B5Ij4KICAgICAgICAgICAgICAgPGV4cHJlc3Npb24gZGF0YVR5cGU9ImZoaXI6UHJvY2VkdXJlIiBjb2RlUHJvcGVydHk9ImNvZGUiIHhzaTp0eXBlPSJSZXRyaWV2ZSI+CiAgICAgICAgICAgICAgICAgIDxjb2RlcyBuYW1lPSJDb2xvbm9zY29weSIgeHNpOnR5cGU9IlZhbHVlU2V0UmVmIi8+CiAgICAgICAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgICAgICAgPC9zb3VyY2U+CiAgICAgICAgICAgIDx3aGVyZSB4c2k6dHlwZT0iQW5kIj4KICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkVxdWFsIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iVG9TdHJpbmciIGxpYnJhcnlOYW1lPSJGSElSSGVscGVycyIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0ic3RhdHVzIiBzY29wZT0iQ29sb25vc2NvcHkiIHhzaTp0eXBlPSJQcm9wZXJ0eSIvPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHZhbHVlVHlwZT0idDpTdHJpbmciIHZhbHVlPSJjb21wbGV0ZWQiIHhzaTp0eXBlPSJMaXRlcmFsIi8+CiAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkluIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkVuZCI+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlRvSW50ZXJ2YWwiIGxpYnJhcnlOYW1lPSJGSElSSGVscGVycyIgeHNpOnR5cGU9IkZ1bmN0aW9uUmVmIj4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgYXNUeXBlPSJmaGlyOlBlcmlvZCIgeHNpOnR5cGU9IkFzIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgcGF0aD0icGVyZm9ybWVkIiBzY29wZT0iQ29sb25vc2NvcHkiIHhzaTp0eXBlPSJQcm9wZXJ0eSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCBsb3dDbG9zZWQ9InRydWUiIGhpZ2hDbG9zZWQ9InRydWUiIHhzaTp0eXBlPSJJbnRlcnZhbCI+CiAgICAgICAgICAgICAgICAgICAgIDxsb3cgeHNpOnR5cGU9IlN1YnRyYWN0Ij4KICAgICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkVuZCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9Ik1lYXN1cmVtZW50IFBlcmlvZCIgeHNpOnR5cGU9IlBhcmFtZXRlclJlZiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHZhbHVlPSIxMCIgdW5pdD0ieWVhcnMiIHhzaTp0eXBlPSJRdWFudGl0eSIvPgogICAgICAgICAgICAgICAgICAgICA8L2xvdz4KICAgICAgICAgICAgICAgICAgICAgPGhpZ2ggeHNpOnR5cGU9IkVuZCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9Ik1lYXN1cmVtZW50IFBlcmlvZCIgeHNpOnR5cGU9IlBhcmFtZXRlclJlZiIvPgogICAgICAgICAgICAgICAgICAgICA8L2hpZ2g+CiAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICA8L3doZXJlPgogICAgICAgICA8L2V4cHJlc3Npb24+CiAgICAgIDwvZGVmPgogICAgICA8ZGVmIG5hbWU9Ik51bWVyYXRvciIgY29udGV4dD0iUGF0aWVudCIgYWNjZXNzTGV2ZWw9IlB1YmxpYyI+CiAgICAgICAgIDxleHByZXNzaW9uIHhzaTp0eXBlPSJPciI+CiAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJPciI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJPciI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJPciI+CiAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFeGlzdHMiPgogICAgICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJDb2xvbm9zY29weSBQZXJmb3JtZWQiIHhzaTp0eXBlPSJFeHByZXNzaW9uUmVmIi8+CiAgICAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkV4aXN0cyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IkZlY2FsIE9jY3VsdCBCbG9vZCBUZXN0IFBlcmZvcm1lZCIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFeGlzdHMiPgogICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJGbGV4aWJsZSBTaWdtb2lkb3Njb3B5IFBlcmZvcm1lZCIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFeGlzdHMiPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJGZWNhbCBJbW11bm9jaGVtaWNhbCBUZXN0IEROQSIgeHNpOnR5cGU9IkV4cHJlc3Npb25SZWYiLz4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJFeGlzdHMiPgogICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJDVCBDb2xvbm9ncmFwaHkgUGVyZm9ybWVkIiB4c2k6dHlwZT0iRXhwcmVzc2lvblJlZiIvPgogICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgIDwvZXhwcmVzc2lvbj4KICAgICAgPC9kZWY+CiAgICAgIDxkZWYgbmFtZT0iRGVub21pbmF0b3IgRXhjbHVzaW9uIiBjb250ZXh0PSJQYXRpZW50IiBhY2Nlc3NMZXZlbD0iUHVibGljIj4KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9Ik9yIj4KICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9Ik9yIj4KICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iSGFzIEhvc3BpY2UiIGxpYnJhcnlOYW1lPSJIb3NwaWNlIiB4c2k6dHlwZT0iRnVuY3Rpb25SZWYiPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJNZWFzdXJlbWVudCBQZXJpb2QiIHhzaTp0eXBlPSJQYXJhbWV0ZXJSZWYiLz4KICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iRXhpc3RzIj4KICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iTWFsaWduYW50IE5lb3BsYXNtIiB4c2k6dHlwZT0iRXhwcmVzc2lvblJlZiIvPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkV4aXN0cyI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlRvdGFsIENvbGVjdG9teSBQZXJmb3JtZWQiIHhzaTp0eXBlPSJFeHByZXNzaW9uUmVmIi8+CiAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICA8L2RlZj4KICAgICAgPGRlZiBuYW1lPSJJbml0aWFsIFBvcHVsYXRpb24iIGNvbnRleHQ9IlBhdGllbnQiIGFjY2Vzc0xldmVsPSJQdWJsaWMiPgogICAgICAgICA8ZXhwcmVzc2lvbiB4c2k6dHlwZT0iQW5kIj4KICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkluIj4KICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iQ2FsZW5kYXJBZ2VJblllYXJzQXQiIGxpYnJhcnlOYW1lPSJHbG9iYWwiIHhzaTp0eXBlPSJGdW5jdGlvblJlZiI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHhzaTp0eXBlPSJUb0RhdGVUaW1lIj4KICAgICAgICAgICAgICAgICAgICAgPG9wZXJhbmQgbmFtZT0iVG9EYXRlIiBsaWJyYXJ5TmFtZT0iRkhJUkhlbHBlcnMiIHhzaTp0eXBlPSJGdW5jdGlvblJlZiI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIHBhdGg9ImJpcnRoRGF0ZSIgeHNpOnR5cGU9IlByb3BlcnR5Ij4KICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNvdXJjZSBuYW1lPSJQYXRpZW50IiB4c2k6dHlwZT0iRXhwcmVzc2lvblJlZiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICAgICA8b3BlcmFuZCB4c2k6dHlwZT0iU3RhcnQiPgogICAgICAgICAgICAgICAgICAgICA8b3BlcmFuZCBuYW1lPSJNZWFzdXJlbWVudCBQZXJpb2QiIHhzaTp0eXBlPSJQYXJhbWV0ZXJSZWYiLz4KICAgICAgICAgICAgICAgICAgPC9vcGVyYW5kPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIGxvd0Nsb3NlZD0idHJ1ZSIgaGlnaENsb3NlZD0idHJ1ZSIgeHNpOnR5cGU9IkludGVydmFsIj4KICAgICAgICAgICAgICAgICAgPGxvdyB2YWx1ZVR5cGU9InQ6SW50ZWdlciIgdmFsdWU9IjUwIiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICAgICA8aGlnaCB2YWx1ZVR5cGU9InQ6SW50ZWdlciIgdmFsdWU9Ijc1IiB4c2k6dHlwZT0iTGl0ZXJhbCIvPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgICAgPG9wZXJhbmQgeHNpOnR5cGU9IkV4aXN0cyI+CiAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9IlF1YWxpZnlpbmcgRW5jb3VudGVycyIgbGlicmFyeU5hbWU9IkFkdWx0T3V0cGF0aWVudEVuY291bnRlcnMiIHhzaTp0eXBlPSJGdW5jdGlvblJlZiI+CiAgICAgICAgICAgICAgICAgIDxvcGVyYW5kIG5hbWU9Ik1lYXN1cmVtZW50IFBlcmlvZCIgeHNpOnR5cGU9IlBhcmFtZXRlclJlZiIvPgogICAgICAgICAgICAgICA8L29wZXJhbmQ+CiAgICAgICAgICAgIDwvb3BlcmFuZD4KICAgICAgICAgPC9leHByZXNzaW9uPgogICAgICA8L2RlZj4KICAgPC9zdGF0ZW1lbnRzPgo8L2xpYnJhcnk+Cg=="
+    },
+    {
+      "contentType": "text/cql",
+      "data": "bGlicmFyeSBFWE0xMzBfRkhJUiB2ZXJzaW9uICc3LjIuMDAwJwoKLyoKVGhpcyBleGFtcGxlIGlzIGEgd29yayBpbiBwcm9ncmVzcyBhbmQgc2hvdWxkIG5vdCBiZSBjb25zaWRlcmVkIGEgZmluYWwgc3BlY2lmaWNhdGlvbgpvciByZWNvbW1lbmRhdGlvbiBmb3IgZ3VpZGFuY2UuIFRoaXMgZXhhbXBsZSB3aWxsIGhlbHAgZ3VpZGUgYW5kIGRpcmVjdCB0aGUgcHJvY2VzcwpvZiBmaW5kaW5nIGNvbnZlbnRpb25zIGFuZCB1c2FnZSBwYXR0ZXJucyB0aGF0IG1lZXQgdGhlIG5lZWRzIG9mIHRoZSB2YXJpb3VzIHN0YWtlaG9sZGVycwppbiB0aGUgbWVhc3VyZSBkZXZlbG9wbWVudCBjb21tdW5pdHkuCiovCgp1c2luZyBGSElSIHZlcnNpb24gJzMuMC4wJwoKaW5jbHVkZSBBZHVsdE91dHBhdGllbnRFbmNvdW50ZXJzX0ZISVIgdmVyc2lvbiAnMS4xLjAwMCcgY2FsbGVkIEFkdWx0T3V0cGF0aWVudEVuY291bnRlcnMKaW5jbHVkZSBNQVRHbG9iYWxDb21tb25GdW5jdGlvbnNfRkhJUiB2ZXJzaW9uICcyLjAuMDAwJyBjYWxsZWQgR2xvYmFsCmluY2x1ZGUgSG9zcGljZV9GSElSIHZlcnNpb24gJzEuMC4wMDAnIGNhbGxlZCBIb3NwaWNlCmluY2x1ZGUgRkhJUkhlbHBlcnMgdmVyc2lvbiAnMy4wLjAnIGNhbGxlZCBGSElSSGVscGVycwppbmNsdWRlIFN1cHBsZW1lbnRhbERhdGFFbGVtZW50c19GSElSIHZlcnNpb24gJzEuMC4wJyBjYWxsZWQgU0RFCgp2YWx1ZXNldCAiT05DIEFkbWluaXN0cmF0aXZlIFNleCI6ICdodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTM3NjIuMS40LjEnCnZhbHVlc2V0ICJSYWNlIjogJ2h0dHA6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExNDIyMi40LjExLjgzNicKdmFsdWVzZXQgIkV0aG5pY2l0eSI6ICdodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTQyMjIuNC4xMS44MzcnCnZhbHVlc2V0ICJQYXllciI6ICdodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTQyMjIuNC4xMS4zNTkxJwp2YWx1ZXNldCAiQ29sb25vc2NvcHkiOiAnaHR0cDovL2N0cy5ubG0ubmloLmdvdi9maGlyL1ZhbHVlU2V0LzIuMTYuODQwLjEuMTEzODgzLjMuNDY0LjEwMDMuMTA4LjEyLjEwMjAnCnZhbHVlc2V0ICJGZWNhbCBPY2N1bHQgQmxvb2QgVGVzdCAoRk9CVCkiOiAnaHR0cDovL2N0cy5ubG0ubmloLmdvdi9maGlyL1ZhbHVlU2V0LzIuMTYuODQwLjEuMTEzODgzLjMuNDY0LjEwMDMuMTk4LjEyLjEwMTEnCnZhbHVlc2V0ICJGbGV4aWJsZSBTaWdtb2lkb3Njb3B5IjogJ2h0dHA6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4zLjQ2NC4xMDAzLjE5OC4xMi4xMDEwJwp2YWx1ZXNldCAiTWFsaWduYW50IE5lb3BsYXNtIG9mIENvbG9uIjogJ2h0dHA6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4zLjQ2NC4xMDAzLjEwOC4xMi4xMDAxJwp2YWx1ZXNldCAiVG90YWwgQ29sZWN0b215IjogJ2h0dHA6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4zLjQ2NC4xMDAzLjE5OC4xMi4xMDE5Jwp2YWx1ZXNldCAiRklUIEROQSI6ICdodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTM4ODMuMy40NjQuMTAwMy4xMDguMTIuMTAzOScKdmFsdWVzZXQgIkNUIENvbG9ub2dyYXBoeSI6ICdodHRwOi8vY3RzLm5sbS5uaWguZ292L2ZoaXIvVmFsdWVTZXQvMi4xNi44NDAuMS4xMTM4ODMuMy40NjQuMTAwMy4xMDguMTIuMTAzOCcKCnBhcmFtZXRlciAiTWVhc3VyZW1lbnQgUGVyaW9kIiBJbnRlcnZhbDxEYXRlVGltZT4KCmNvbnRleHQgUGF0aWVudAoKZGVmaW5lICJTREUgRXRobmljaXR5IjoKICBTREUuIlNERSBFdGhuaWNpdHkiCgpkZWZpbmUgIlNERSBQYXllciI6CiAgU0RFLiJTREUgUGF5ZXIiCgpkZWZpbmUgIlNERSBSYWNlIjoKICBTREUuIlNERSBSYWNlIgoKZGVmaW5lICJTREUgU2V4IjoKICBTREUuIlNERSBTZXgiCgpkZWZpbmUgIkRlbm9taW5hdG9yIjoKCXRydWUKCmRlZmluZSAiRmxleGlibGUgU2lnbW9pZG9zY29weSBQZXJmb3JtZWQiOgoJW1Byb2NlZHVyZTogIkZsZXhpYmxlIFNpZ21vaWRvc2NvcHkiXSBGbGV4aWJsZVNpZ21vaWRvc2NvcHkKCQl3aGVyZSBGbGV4aWJsZVNpZ21vaWRvc2NvcHkuc3RhdHVzID0gJ2NvbXBsZXRlZCcKCQkJYW5kIEZsZXhpYmxlU2lnbW9pZG9zY29weS5wZXJmb3JtZWQgZW5kcyA1IHllYXJzIG9yIGxlc3Mgb24gb3IgYmVmb3JlIGVuZCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIgoKZGVmaW5lICJDVCBDb2xvbm9ncmFwaHkgUGVyZm9ybWVkIjoKCVtQcm9jZWR1cmU6ICJDVCBDb2xvbm9ncmFwaHkiXSBDb2xvbm9ncmFwaHkKCQl3aGVyZSBDb2xvbm9ncmFwaHkuc3RhdHVzID0gJ2NvbXBsZXRlZCcKCQkJYW5kIENvbG9ub2dyYXBoeS5wZXJmb3JtZWQgZW5kcyA1IHllYXJzIG9yIGxlc3Mgb24gb3IgYmVmb3JlIGVuZCBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIgoKZGVmaW5lICJUb3RhbCBDb2xlY3RvbXkgUGVyZm9ybWVkIjoKCVtQcm9jZWR1cmU6ICJUb3RhbCBDb2xlY3RvbXkiXSBDb2xlY3RvbXkKCQl3aGVyZSBDb2xlY3RvbXkuc3RhdHVzID0gJ2NvbXBsZXRlZCcKCQkJYW5kIEdsb2JhbC4iR2V0IENob2ljZSBJbnRlcnZhbCAtIGRhdGVUaW1lIG9yIFBlcmlvZCIoQ29sZWN0b215LnBlcmZvcm1lZCkgc3RhcnRzIG9uIG9yIGJlZm9yZSBlbmQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIKCmRlZmluZSAiTWFsaWduYW50IE5lb3BsYXNtIjoKCVtDb25kaXRpb246ICJNYWxpZ25hbnQgTmVvcGxhc20gb2YgQ29sb24iXSBDb2xvcmVjdGFsQ2FuY2VyCgkJd2hlcmUgR2xvYmFsLiJOb3JtYWxpemUgT25zZXQiKENvbG9yZWN0YWxDYW5jZXIub25zZXQpIHN0YXJ0cyBvbiBvciBiZWZvcmUgZW5kIG9mICJNZWFzdXJlbWVudCBQZXJpb2QiCgpkZWZpbmUgIkZlY2FsIE9jY3VsdCBCbG9vZCBUZXN0IFBlcmZvcm1lZCI6CglbT2JzZXJ2YXRpb246ICJGZWNhbCBPY2N1bHQgQmxvb2QgVGVzdCAoRk9CVCkiXSBGZWNhbE9jY3VsdFJlc3VsdAoJCXdoZXJlIEZlY2FsT2NjdWx0UmVzdWx0LnN0YXR1cyBpbiB7J2ZpbmFsJywgJ2FtZW5kZWQnLCAnY29ycmVjdGVkJywgJ3ByZWxpbWluYXJ5J30KCQkJYW5kIEZlY2FsT2NjdWx0UmVzdWx0LnZhbHVlIGlzIG5vdCBudWxsCgkJCWFuZCBGZWNhbE9jY3VsdFJlc3VsdC5lZmZlY3RpdmUgZHVyaW5nIGRheSBvZiAiTWVhc3VyZW1lbnQgUGVyaW9kIgoJCQkvLyBhbmQgRmVjYWxPY2N1bHRSZXN1bHQuRkhJUi5wcm92ZW5hbmNlLnJlY29yZGVkIGR1cmluZyAiTWVhc3VyZW1lbnQgUGVyaW9kIgoKZGVmaW5lICJGZWNhbCBJbW11bm9jaGVtaWNhbCBUZXN0IEROQSI6CglbT2JzZXJ2YXRpb246ICJGSVQgRE5BIl0gRml0RE5BCgkJd2hlcmUgRml0RE5BLnZhbHVlIGlzIG5vdCBudWxsCgkJCWFuZCBGaXRETkEuZWZmZWN0aXZlIG9jY3VycyAzIHllYXJzIG9yIGxlc3Mgb24gb3IgYmVmb3JlIGRheSBvZiBlbmQgb2YgIk1lYXN1cmVtZW50IFBlcmlvZCIKCQkJLy8gYW5kIEZpdEROQS5GSElSLnByb3ZlbmFuY2UucmVjb3JkZWQgb2NjdXJzIDMgeWVhcnMgb3IgbGVzcyBvbiBvciBiZWZvcmUgZW5kIG9mICJNZWFzdXJlbWVudCBQZXJpb2QiCgpkZWZpbmUgIkNvbG9ub3Njb3B5IFBlcmZvcm1lZCI6CglbUHJvY2VkdXJlOiAiQ29sb25vc2NvcHkiXSBDb2xvbm9zY29weQoJCXdoZXJlIENvbG9ub3Njb3B5LnN0YXR1cyA9ICdjb21wbGV0ZWQnCgkJIAlhbmQgQ29sb25vc2NvcHkucGVyZm9ybWVkIGVuZHMgMTAgeWVhcnMgb3IgbGVzcyBvbiBvciBiZWZvcmUgZW5kIG9mICJNZWFzdXJlbWVudCBQZXJpb2QiCgpkZWZpbmUgIk51bWVyYXRvciI6CglleGlzdHMgIkNvbG9ub3Njb3B5IFBlcmZvcm1lZCIKCQlvciBleGlzdHMgIkZlY2FsIE9jY3VsdCBCbG9vZCBUZXN0IFBlcmZvcm1lZCIKCQlvciBleGlzdHMgIkZsZXhpYmxlIFNpZ21vaWRvc2NvcHkgUGVyZm9ybWVkIgoJCW9yIGV4aXN0cyAiRmVjYWwgSW1tdW5vY2hlbWljYWwgVGVzdCBETkEiCgkJb3IgZXhpc3RzICJDVCBDb2xvbm9ncmFwaHkgUGVyZm9ybWVkIgoKZGVmaW5lICJEZW5vbWluYXRvciBFeGNsdXNpb24iOgoJSG9zcGljZS4iSGFzIEhvc3BpY2UiKCJNZWFzdXJlbWVudCBQZXJpb2QiKQoJCW9yIGV4aXN0cyAiTWFsaWduYW50IE5lb3BsYXNtIgoJCW9yIGV4aXN0cyAiVG90YWwgQ29sZWN0b215IFBlcmZvcm1lZCIKCmRlZmluZSAiSW5pdGlhbCBQb3B1bGF0aW9uIjoKCUdsb2JhbC4iQ2FsZW5kYXJBZ2VJblllYXJzQXQiKEZISVJIZWxwZXJzLlRvRGF0ZShQYXRpZW50LmJpcnRoRGF0ZSksIHN0YXJ0IG9mICJNZWFzdXJlbWVudCBQZXJpb2QiKSBpbiBJbnRlcnZhbFs1MCwgNzVdCgkJCWFuZCBleGlzdHMgQWR1bHRPdXRwYXRpZW50RW5jb3VudGVycy4iUXVhbGlmeWluZyBFbmNvdW50ZXJzIigiTWVhc3VyZW1lbnQgUGVyaW9kIikK"
+    }
+  ]
+}
+</code></pre>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <h3 class="no_toc" id="exchange-of-quality-measure-data-options">Exchange of Quality Measure Data Options</h3>
+
+                        <p class="stu-note">We are seeking input on the feasibility and interest in using <em>CDS Hooks</em> to report on Screening data.</p>
+
+                        <h4 id="submit-data" class="no_toc">Data Exchange Using the Submit Data Operation</h4>
+                        <p>The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.</p>
+
+                        <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+                        <div>
+                          <figure class="figure">
+                            <figcaption class="figure-caption">
+                              <p><strong>Figure 3-9 Submit Data Technical Workflow</strong>&lt;/figcaption&gt;
+  <img src="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" class="figure-img-portrait img-responsive img-rounded center-block" alt="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" />
+&lt;/figure&gt;</p>
+
+                              <p></p>
+                              <p>&lt;/div&gt;</p>
+
+                              <p>
+  <button class="btn btn-info btn-lg" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#col-submit-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See Example COL Submit Data
+  </button>
+</p>
+
+                              <div class="collapse" id="col-submit-example">
+                                <div class="card card-body">
+                                  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h4 class="no_toc" id="examples"&gt;Examples&lt;/h4&gt;
+</code></pre></div>                                  </div>
+
+                                  <p><strong>Scenario:</strong></p>
+
+                                  <p>Provider X acting in the role of Producer submits COL data for Patient Y to Payer Z who is acting in the role of Consumer.  The body of the request is a Parameters resource containing the required profiles for COL attestation.  An HTTP Status success code is returned on successful submission.</p>
+
+                                  <p><strong>Request using <code class="highlighter-rouge">POST</code></strong></p>
+
+                                  <p><code class="highlighter-rouge">POST [base]/Measure/measure-col/$submit-data</code></p>
+
+                                  <p><strong>Request body</strong></p>
+
+                                  <div class="highlighter-rouge">
+                                    <div class="highlight">
+                                      <pre class="highlight"><code>{
+  "resourceType": "Parameters",
+  "id": "col-submit-collect-obs",
+  "parameter": [
+    {
+      "name": "measure-report",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "datax-measurereport03",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+            "valueCode": "incremental"
+          }
+        ],
+        "status": "complete",
+        "type": "data-collection",
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+        "subject": {
+          "reference": "Patient/patient03"
+        },
+        "date": "2019-01-01T16:59:52.404Z",
+        "reporter": {
+          "reference": "Organization/organization03"
+        },
+        "period": {
+          "start": "2018-01-01",
+          "end": "2018-12-31"
+        },
+        "evaluatedResource": [
+          {
+            "reference": "Observation/observation03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient03",
+        "meta": {
+          "versionId": "4",
+          "lastUpdated": "2019-02-07T18:47:34.000+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;div class=\"hapiHeaderText\"&gt;Virginia &lt;b&gt;HARTMAN &lt;/b&gt;&lt;/div&gt;&lt;table class=\"hapiPropertyTable\"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Identifier&lt;/td&gt;&lt;td&gt;34567&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Address&lt;/td&gt;&lt;td&gt;&lt;span&gt;213 Lilac Ave. &lt;/span&gt;&lt;br/&gt;&lt;span&gt;Freehold &lt;/span&gt;&lt;span&gt;MI &lt;/span&gt;&lt;span&gt;USA &lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Date of birth&lt;/td&gt;&lt;td&gt;&lt;span&gt;12 September 1983&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2054-5",
+                  "display": "Black or African American"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Black or African American"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "system": "http://hospital.davinci.org",
+            "value": "34567"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Hartman",
+            "given": [
+              "Virginia"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1983-09-12",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "213 Lilac Ave."
+            ],
+            "city": "Freehold",
+            "state": "MI",
+            "postalCode": "48099",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "U",
+              "display": "unmarried"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (Region=United States)"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/organization03"
+        }
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation03",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "77353-1",
+              "display": "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient03"
+        },
+        "effectiveDateTime": "2018-06-22",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner01"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner01",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "456789123"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Hale",
+            "given": [
+              "Cody"
+            ],
+            "suffix": [
+              "MD"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "organization03",
+        "meta": {
+          "versionId": "3",
+          "lastUpdated": "2019-02-21T01:47:53.000+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "345678912",
+            "assigner": {
+              "display": "www.cms.gov"
+            }
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ]
+          }
+        ],
+        "name": "DaVinciHospital03",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+1) 201-555-1212"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "94 Olive Ave."
+            ],
+            "city": "Union City",
+            "state": "NJ",
+            "postalCode": "07087",
+            "country": "USA"
+          }
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+                                    </div>
+                                  </div>
+
+                                  <p><strong>Response</strong></p>
+
+                                  <div class="highlighter-rouge">
+                                    <div class="highlight">
+                                      <pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+
+                              <h4 id="collect-data" class="no_toc">Data Exchange Using the Collect Data Operation</h4>
+                              <p>Payer/Aggregator retrieves Colorectal Cancer Screening Data from Provider using the Collect Data operation.  The Provider returns the MeasureReport and referenced resources as supporting evidence for Colorectal Cancer Screening.</p>
+
+                              <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+                              <div>
+                                <figure class="figure">
+                                  <figcaption class="figure-caption">
+                                    <p><strong>Figure 3-10 collect Data Technical Workflow</strong>&lt;/figcaption&gt;
+  <img src="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" class="figure-img-portrait img-responsive img-rounded center-block" alt="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" />
+&lt;/figure&gt;</p>
+
+                                    <p></p>
+                                    <p>&lt;/div&gt;</p>
+
+                                    <p>
+  <button class="btn btn-info btn-lg" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#col-collect-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See Example COL Collect Data
+  </button>
+</p>
+
+                                    <div class="collapse" id="col-collect-example">
+                                      <div class="card card-body">
+                                        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h4 class="no_toc" id="examples"&gt;Examples&lt;/h4&gt;
+</code></pre></div>                                        </div>
+
+                                        <p><strong>Scenario:</strong></p>
+
+                                        <p>Payer X acting in the role of Consumer collect Patient Y’s COL data from Provider Z, which is acting in the role of Producer.  The body of the request is a Parameters resource containing the desired input parameters.  An HTTP Status success code is returned on successful submission.</p>
+
+                                        <p><strong>Request using <code class="highlighter-rouge">POST</code></strong></p>
+
+                                        <p><code class="highlighter-rouge">POST [base]/Measure/measure-col/$collect-data</code></p>
+
+                                        <p><strong>Request body</strong></p>
+
+                                        <div class="highlighter-rouge">
+                                          <div class="highlight">
+                                            <pre class="highlight"><code>{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "periodStart",
+      "valueDate": "2018-01-01"
+    },
+    {
+      "name": "periodEnd",
+      "valueDate": "2018-12-31"
+    },
+    {
+      "name": "subject",
+      "valueUri": "Patient/patient03"
+    }
+  ]
+}
+</code></pre>
+                                          </div>
+                                        </div>
+
+                                        <p><strong>Response</strong></p>
+
+                                        <div class="highlighter-rouge">
+                                          <div class="highlight">
+                                            <pre class="highlight"><code>HTTP/1.1 200
+Date: Wed, 14 Mar 2019 01:02:06 GMT
+Content-Type: application/fhir+json;charset=UTF-8
+...Other Headers...
+
+{
+  "resourceType": "Parameters",
+  "id": "col-submit-collect-obs",
+  "parameter": [
+    {
+      "name": "measure-report",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "datax-measurereport03",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+            "valueCode": "incremental"
+          }
+        ],
+        "status": "complete",
+        "type": "data-collection",
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+        "subject": {
+          "reference": "Patient/patient03"
+        },
+        "date": "2019-01-01T16:59:52.404Z",
+        "reporter": {
+          "reference": "Organization/organization03"
+        },
+        "period": {
+          "start": "2018-01-01",
+          "end": "2018-12-31"
+        },
+        "evaluatedResource": [
+          {
+            "reference": "Observation/observation03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient03",
+        "meta": {
+          "versionId": "4",
+          "lastUpdated": "2019-02-07T18:47:34.000+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;div class=\"hapiHeaderText\"&gt;Virginia &lt;b&gt;HARTMAN &lt;/b&gt;&lt;/div&gt;&lt;table class=\"hapiPropertyTable\"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Identifier&lt;/td&gt;&lt;td&gt;34567&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Address&lt;/td&gt;&lt;td&gt;&lt;span&gt;213 Lilac Ave. &lt;/span&gt;&lt;br/&gt;&lt;span&gt;Freehold &lt;/span&gt;&lt;span&gt;MI &lt;/span&gt;&lt;span&gt;USA &lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Date of birth&lt;/td&gt;&lt;td&gt;&lt;span&gt;12 September 1983&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2054-5",
+                  "display": "Black or African American"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Black or African American"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "system": "http://hospital.davinci.org",
+            "value": "34567"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Hartman",
+            "given": [
+              "Virginia"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1983-09-12",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "213 Lilac Ave."
+            ],
+            "city": "Freehold",
+            "state": "MI",
+            "postalCode": "48099",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "U",
+              "display": "unmarried"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (Region=United States)"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/organization03"
+        }
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation03",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "77353-1",
+              "display": "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient03"
+        },
+        "effectiveDateTime": "2018-06-22",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner01"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner01",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "456789123"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Hale",
+            "given": [
+              "Cody"
+            ],
+            "suffix": [
+              "MD"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "name": "resource",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "organization03",
+        "meta": {
+          "versionId": "3",
+          "lastUpdated": "2019-02-21T01:47:53.000+00:00",
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "345678912",
+            "assigner": {
+              "display": "www.cms.gov"
+            }
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ]
+          }
+        ],
+        "name": "DaVinciHospital03",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+1) 201-555-1212"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "94 Olive Ave."
+            ],
+            "city": "Union City",
+            "state": "NJ",
+            "postalCode": "07087",
+            "country": "USA"
+          }
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+
+                                    <!-- 
+#### Payer/Aggregator Subscribes for Notification when Data is Available
+{:.no_toc}
+Payer/Aggregator subscribes to the Provider for notification when Colorectal Cancer Screening data is available.  The Provider notifies the Aggregator when the data is available and Payer/Aggregator uses the Collect Data operations as described above to retrieve the data.
+
+{% include img-portrait.html img="COL Worklow Diagram - Data Exchange subscription.jpg" caption = "Figure 3-11 Subscription Technical Workflow" %}
+
+{% include examplebutton.html example="subscribe-measure-example" b_title = "Click Here To See Example COL Subscription" %}
+
+ -->
+
+                                    <h2 id="col-measure-reporting-interactions">COL Measure Reporting Interactions</h2>
+
+                                    <p>In the following interactions, The Payer (“Aggregator”) is acting in the role of the <em>Reporter</em>.</p>
+
+                                    <h3 class="no_toc" id="individual-measurereport">Individual MeasureReport</h3>
+
+                                    <p>Payer in the role of the Reporter pushes the Bundle of supporting resource with COL Individual MeasureReport resource to the end user.</p>
+
+                                    <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+                                    <div>
+                                      <figure class="figure">
+                                        <figcaption class="figure-caption">
+                                          <p><strong>Figure 3-12 Individual Reporting Technical Workflow</strong>&lt;/figcaption&gt;
+  <img src="col_indv_report.jpg" class="figure-img-portrait img-responsive img-rounded center-block" alt="col_indv_report.jpg" />
+&lt;/figure&gt;</p>
+
+                                          <p></p>
+                                          <p>&lt;/div&gt;</p>
+
+                                          <p>
+  <button class="btn btn-info btn-lg" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#col-indv-report-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See Post Bundle with COL Individual MeasureReport
+  </button>
+</p>
+
+                                          <div class="collapse" id="col-indv-report-example">
+                                            <div class="card card-body">
+                                              <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h4 class="no_toc" id="examples"&gt;Examples&lt;/h4&gt;
+</code></pre></div>                                              </div>
+
+                                              <p><strong>Scenario:</strong></p>
+
+                                              <p>Payer X who is acting in the role of a Reporter submits a COL Individual Report for Patient P to Receiver Z.  The body of the request is a transaction bundle including the Individual MeasureReport and all the related resources containing the relevant data used to compute the CQM criteria.   An HTTP Status success code and a <code class="highlighter-rouge">transaction-response</code> Bundle is returned on successful submission.</p>
+
+                                              <p><strong>POST Individual Report</strong></p>
+
+                                              <p><code class="highlighter-rouge">POST [base]</code></p>
+
+                                              <p><strong>Request body</strong></p>
+
+                                              <div class="highlighter-rouge">
+                                                <div class="highlight">
+                                                  <pre class="highlight"><code>{
+  "resourceType": "Bundle",
+  "id": "single-indv-col-obs-report",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57904",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "status": "complete",
+        "type": "individual",
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+        "subject": {
+          "reference": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57906"
+        },
+        "date": "2019-03-14",
+        "reporter": {
+          "reference": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57905"
+        },
+        "period": {
+          "start": "2018-12-31",
+          "end": "2019-01-01"
+        },
+        "group": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "group-1",
+                  "display": "group-1"
+                }
+              ]
+            },
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population",
+                      "display": "Initial Population"
+                    }
+                  ]
+                },
+                "count": 1
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator",
+                      "display": "Numerator"
+                    }
+                  ]
+                },
+                "count": 1
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator",
+                      "display": "Denominator"
+                    }
+                  ]
+                },
+                "count": 1
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator-exclusion",
+                      "display": "Denominator Exclusion"
+                    }
+                  ]
+                },
+                "count": 0
+              }
+            ],
+            "measureScore": {
+              "value": 1
+            },
+            "stratifier": [
+              {
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://fhir/example.org",
+                        "code": "sde-ethnicity",
+                        "display": "SDE Ethnicity"
+                      }
+                    ]
+                  }
+                ],
+                "stratum": [
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "urn:oid:2.16.840.1.113883.6.238",
+                          "code": "2135-2",
+                          "display": "Hispanic or Latino"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  },
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "urn:oid:2.16.840.1.113883.6.238",
+                          "code": "2186-5",
+                          "display": "Not Hispanic or Latino"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://fhir/example.org",
+                        "code": "sde-payer",
+                        "display": "SDE Payer"
+                      }
+                    ]
+                  }
+                ],
+                "stratum": [
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://fhir/example.org",
+                          "code": "Payer123",
+                          "display": "King HMO"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  },
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://fhir/example.org",
+                          "code": "Payer456",
+                          "display": "Green Circle"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  },
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://fhir/example.org",
+                          "code": "Payer789",
+                          "display": "GoodHealth of California"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://fhir/example.org",
+                        "code": "sde-race",
+                        "display": "SDE Race"
+                      }
+                    ]
+                  }
+                ],
+                "stratum": [
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "urn:oid:2.16.840.1.113883.6.238",
+                          "code": "2054-5",
+                          "display": "Black or African American"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  },
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "urn:oid:2.16.840.1.113883.6.238",
+                          "code": "2106-3",
+                          "display": "White"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  },
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "urn:oid:2.16.840.1.113883.6.238",
+                          "code": "2028-9",
+                          "display": "Asian"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://fhir/example.org",
+                        "code": "sde-sex",
+                        "display": "SDE Sex"
+                      }
+                    ]
+                  }
+                ],
+                "stratum": [
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/administrative-gender",
+                          "code": "male",
+                          "display": "Male"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 1
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  },
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/administrative-gender",
+                          "code": "female",
+                          "display": "Female"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  },
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/administrative-gender",
+                          "code": "other",
+                          "display": "Other"
+                        }
+                      ]
+                    },
+                    "population": [
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "initial-population",
+                              "display": "Initial Population"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "numerator",
+                              "display": "Numerator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator",
+                              "display": "Denominator"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      },
+                      {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                              "code": "denominator-exclusion",
+                              "display": "Denominator Exclusion"
+                            }
+                          ]
+                        },
+                        "count": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MeasureReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57905",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "TAX",
+                  "display": "Tax ID number"
+                }
+              ]
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "value": "123456789",
+            "assigner": {
+              "display": "www.irs.gov"
+            }
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ]
+          }
+        ],
+        "name": "DaVinciHospital01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+1) 401-555-1212"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "73 Lakewood Street"
+            ],
+            "city": "Warwick",
+            "state": "RI",
+            "postalCode": "02886",
+            "country": "USA"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57906",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "system": "http://hospital.davinci.org",
+            "value": "67890"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Webster",
+            "given": [
+              "Thelma"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1948-04-28",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "7496 Beaver Ridge Ave"
+            ],
+            "city": "Thornton",
+            "state": "NJ",
+            "postalCode": "07003",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (Region=United States)"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57907",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "123456789"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Akers",
+            "given": [
+              "Nia"
+            ],
+            "suffix": [
+              "MD"
+            ]
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57908",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "77353-1",
+              "display": "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57906"
+        },
+        "effectiveDateTime": "2018-06-22",
+        "performer": [
+          {
+            "reference": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57907"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    }
+  ]
+}
+</code></pre>
+                                                </div>
+                                              </div>
+
+                                              <p><strong>Response</strong></p>
+
+                                              <div class="highlighter-rouge">
+                                                <div class="highlight">
+                                                  <pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+
+{
+"resourceType": "Bundle",
+"id": "acb38f7f-2fcc-4b74-b46b-2af1c20854dc",
+"type": "transaction-response",
+"link": [
+{
+"relation": "self",
+"url": "http://hapi.fhir.org/baseR4"
+}
+],
+"entry": [
+{
+"response": {
+"status": "201 Created",
+"location": "MeasureReport/224761/_history/1",
+"etag": "1",
+"lastModified": "2019-12-07T01:30:03.058+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Organization/224762/_history/1",
+"etag": "1",
+"lastModified": "2019-12-07T01:30:03.058+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Patient/224763/_history/1",
+"etag": "1",
+"lastModified": "2019-12-07T01:30:03.058+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Practitioner/224764/_history/1",
+"etag": "1",
+"lastModified": "2019-12-07T01:30:03.058+00:00"
+}
+},
+{
+"response": {
+"status": "201 Created",
+"location": "Observation/224765/_history/1",
+"etag": "1",
+"lastModified": "2019-12-07T01:30:03.058+00:00"
+}
+}
+]
+}
+
+</code></pre>
+                                                </div>
+                                              </div>
+
+                                            </div>
+                                          </div>
+
+                                          <h3 class="no_toc" id="summary-measurereport">Summary MeasureReport</h3>
+
+                                          <p>Payer in the role of the Reporter posts the COL Summary MeasureReport to the Receiver</p>
+
+                                          <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+                                          <div>
+                                            <figure class="figure">
+                                              <figcaption class="figure-caption">
+                                                <p><strong>Figure 3-13 Summary Reporting Technical Workflow</strong>&lt;/figcaption&gt;
+  <img src="col_summ_report.jpg" class="figure-img-portrait img-responsive img-rounded center-block" alt="col_summ_report.jpg" />
+&lt;/figure&gt;</p>
+
+                                                <p></p>
+                                                <p>&lt;/div&gt;</p>
+
+                                                <p>
+  <button class="btn btn-info btn-lg" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#col-summary-report-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See Post COL Summary MeasureReport
+  </button>
+</p>
+
+                                                <div class="collapse" id="col-summary-report-example">
+                                                  <div class="card card-body">
+                                                    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h4 class="no_toc" id="examples"&gt;Examples&lt;/h4&gt;
+</code></pre></div>                                                    </div>
+
+                                                    <p><strong>Scenario:</strong></p>
+
+                                                    <p>Payer X who is acting in the role of a Reporter submits a COL Summary Report for COL for period P to Receiver Z.  The body of the request is MeasureReport resource containing the required summary data for COL attestation for the period.  An HTTP Status success code is returned on successful submission.</p>
+
+                                                    <p><strong>POST Summary Report</strong></p>
+
+                                                    <p><code class="highlighter-rouge">POST [base]/MeasureReport</code></p>
+
+                                                    <p><strong>Request body</strong></p>
+
+                                                    <div class="highlighter-rouge">
+                                                      <div class="highlight">
+                                                        <pre class="highlight"><code>{
+  "resourceType": "MeasureReport",
+  "id": "summ-measurereport02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: summ-measurereport02&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: summary&lt;/p&gt;&lt;p&gt;&lt;b&gt;measure&lt;/b&gt;: &lt;a href=\"http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR\"&gt;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Sep 5, 2019, 9:59:52 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;reporter&lt;/b&gt;: &lt;a href=\"Organization-organization01.html\"&gt;Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\"&gt;Healthcare Provider&lt;/span&gt;; name: DaVinciHospital01; ph: (+1) 401-555-1212&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Aug 1, 2019, 12:00:00 AM --&amp;gt; Sep 1, 2019, 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;improvementNotation&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\"&gt;Increased score indicates improvement&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org group-1}\"&gt;group-1&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 100&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 60&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 100&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 66&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratifier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org sde-ethnicity}\"&gt;SDE Ethnicity&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2135-2}\"&gt;Hispanic or Latino&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 50&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2186-5}\"&gt;Not Hispanic or Latino&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 70&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 50&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 70&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 71&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratifier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org sde-payer}\"&gt;SDE Payer&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org Payer123}\"&gt;King HMO&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 50&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org Payer456}\"&gt;Green Circle&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 33&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org Payer789}\"&gt;GoodHealth of California&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 100&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratifier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org sde-race}\"&gt;SDE Race&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2054-5}\"&gt;Black or African American&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 50&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2106-3}\"&gt;White&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 30&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 33&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {urn:oid:2.16.840.1.113883.6.238 2028-9}\"&gt;Asian&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 100&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratifier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://fhir/example.org sde-sex}\"&gt;SDE Sex&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {http://hl7.org/fhir/administrative-gender male}\"&gt;Male&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 20&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 5&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 57&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {http://hl7.org/fhir/administrative-gender female}\"&gt;Female&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 60&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 40&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 60&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 4&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 72&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\"Codes: {http://hl7.org/fhir/administrative-gender other}\"&gt;Other&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\"&gt;Denominator Exclusion&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 0&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+            "code": "proportion"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+  "date": "2019-09-05T16:59:52.404Z",
+  "reporter": {
+    "reference": "Organization/organization01"
+  },
+  "period": {
+    "start": "2019-08-01",
+    "end": "2019-09-01"
+  },
+  "improvementNotation": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "code": "increase",
+        "display": "Increased score indicates improvement"
+      }
+    ]
+  },
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://fhir/example.org",
+            "code": "group-1",
+            "display": "group-1"
+          }
+        ]
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 100
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 60
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "count": 100
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exclusion",
+                "display": "Denominator Exclusion"
+              }
+            ]
+          },
+          "count": 10
+        }
+      ],
+      "measureScore": {
+        "value": 66
+      },
+      "stratifier": [
+        {
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-ethnicity",
+                  "display": "SDE Ethnicity"
+                }
+              ]
+            }
+          ],
+          "stratum": [
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.238",
+                    "code": "2135-2",
+                    "display": "Hispanic or Latino"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 10
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 10
+                }
+              ],
+              "measureScore": {
+                "value": 50
+              }
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.238",
+                    "code": "2186-5",
+                    "display": "Not Hispanic or Latino"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 70
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 50
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 70
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 0
+                }
+              ],
+              "measureScore": {
+                "value": 71
+              }
+            }
+          ]
+        },
+        {
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-payer",
+                  "display": "SDE Payer"
+                }
+              ]
+            }
+          ],
+          "stratum": [
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir/example.org",
+                    "code": "Payer123",
+                    "display": "King HMO"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 10
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 10
+                }
+              ],
+              "measureScore": {
+                "value": 50
+              }
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir/example.org",
+                    "code": "Payer456",
+                    "display": "Green Circle"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 10
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 0
+                }
+              ],
+              "measureScore": {
+                "value": 33
+              }
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir/example.org",
+                    "code": "Payer789",
+                    "display": "GoodHealth of California"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 0
+                }
+              ],
+              "measureScore": {
+                "value": 100
+              }
+            }
+          ]
+        },
+        {
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-race",
+                  "display": "SDE Race"
+                }
+              ]
+            }
+          ],
+          "stratum": [
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.238",
+                    "code": "2054-5",
+                    "display": "Black or African American"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 10
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 10
+                }
+              ],
+              "measureScore": {
+                "value": 50
+              }
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.238",
+                    "code": "2106-3",
+                    "display": "White"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 10
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 30
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 0
+                }
+              ],
+              "measureScore": {
+                "value": 33
+              }
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.6.238",
+                    "code": "2028-9",
+                    "display": "Asian"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 0
+                }
+              ],
+              "measureScore": {
+                "value": 100
+              }
+            }
+          ]
+        },
+        {
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://fhir/example.org",
+                  "code": "sde-sex",
+                  "display": "SDE Sex"
+                }
+              ]
+            }
+          ],
+          "stratum": [
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/administrative-gender",
+                    "code": "male",
+                    "display": "Male"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 20
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 5
+                }
+              ],
+              "measureScore": {
+                "value": 57
+              }
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/administrative-gender",
+                    "code": "female",
+                    "display": "Female"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 60
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 40
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 60
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 4
+                }
+              ],
+              "measureScore": {
+                "value": 72
+              }
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/administrative-gender",
+                    "code": "other",
+                    "display": "Other"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population",
+                        "display": "Initial Population"
+                      }
+                    ]
+                  },
+                  "count": 0
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "numerator",
+                        "display": "Numerator"
+                      }
+                    ]
+                  },
+                  "count": 0
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator",
+                        "display": "Denominator"
+                      }
+                    ]
+                  },
+                  "count": 0
+                },
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "denominator-exclusion",
+                        "display": "Denominator Exclusion"
+                      }
+                    ]
+                  },
+                  "count": 0
+                }
+              ],
+              "measureScore": {
+                "value": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+                                                      </div>
+                                                    </div>
+
+                                                    <p><strong>Response</strong></p>
+
+                                                    <div class="highlighter-rouge">
+                                                      <div class="highlight">
+                                                        <pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre>
+                                                      </div>
+                                                    </div>
+
+                                                  </div>
+                                                </div>
+
+                                                <hr />
+
+                                              </figcaption>
+                                            </figure>
+                                          </div>
+                                        </figcaption>
+                                      </figure>
+                                    </div>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </figcaption>
+  </figure>
+</div>
+<div class="footnotes">
+  <ol>
+    <li id="fn:10">
+      <p>HEDIS measures referenced are <em>example content only</em> for the purposes of working through standards. Organizations should not be using the HEDIS specified measures for the actual measurement. <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

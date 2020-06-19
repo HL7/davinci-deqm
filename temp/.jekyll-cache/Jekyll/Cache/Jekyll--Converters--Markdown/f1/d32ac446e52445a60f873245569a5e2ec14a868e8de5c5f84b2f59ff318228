@@ -1,0 +1,100 @@
+I"
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#profiles" id="markdown-toc-profiles">Profiles</a></li>
+  <li><a href="#extensions" id="markdown-toc-extensions">Extensions</a></li>
+</ul>
+
+</div>
+
+<p>Payers and providers need common data specification, measure specification, report initiation, and transport to share the data required to reflect accurate quality measures. Existing QI-Core and CQFM profiles are used as well as DEQM profiles derived from QI-Core and CQFM profiles and defined in this guide. All of these profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm.  For elements added in FHIR R4, extensions have been created for the STU3 version.</p>
+
+<h3 id="profiles">Profiles</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource Type</th>
+      <th>Profile Name</th>
+      <th>Link to Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coverage</td>
+      <td>DEQM Coverage Profile</td>
+      <td><a href="StructureDefinition-coverage-deqm.html">DEQM Coverage</a></td>
+    </tr>
+    <tr>
+      <td>Data Exchange MeasureReport</td>
+      <td>DEQM Data Exchange MeasureReport Profile</td>
+      <td><a href="StructureDefinition-datax-measurereport-deqm.html">DEQM Data Exchange MeasureReport Profile</a></td>
+    </tr>
+    <tr>
+      <td>Individual MeasureReport</td>
+      <td>DEQM Individual MeasureReport Profile</td>
+      <td><a href="StructureDefinition-indv-measurereport-deqm.html">DEQM Individual MeasureReport Profile</a></td>
+    </tr>
+    <tr>
+      <td>Summary MeasureReport</td>
+      <td>DEQM Summary MeasureReport Profile</td>
+      <td><a href="StructureDefinition-summary-measurereport-deqm.html">DEQM Summary MeasureReport Profile</a></td>
+    </tr>
+    <tr>
+      <td>MedicationAdministration</td>
+      <td>DEQM MedicationAdministration Profile</td>
+      <td><a href="StructureDefinition-medicationadministration-deqm.html">DEQM MedicationAdministration</a></td>
+    </tr>
+    <tr>
+      <td>MedicationRequest</td>
+      <td>DEQM MedicationRequest Profile</td>
+      <td><a href="StructureDefinition-medicationrequest-deqm.html">DEQM MedicationRequest</a></td>
+    </tr>
+    <tr>
+      <td>Organization</td>
+      <td>DEQM Organization Profile</td>
+      <td><a href="StructureDefinition-organization-deqm.html">DEQM Organization</a></td>
+    </tr>
+    <tr>
+      <td>Practitioner</td>
+      <td>DEQM Practitioner Profile</td>
+      <td><a href="StructureDefinition-practitioner-deqm.html">DEQM Practitioner</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h3 id="extensions">Extensions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Link to Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-extension-measureScoring.html">DEQM Measure Scoring Extension</a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-extension-alternateScoreType.html">DEQM Alternate Score Type Extension</a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-extension-reporterGroup.html">DEQM Reporter Group Extension Extension</a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-extension-reportingVendor.html">DEQM Reporting Vendor Extension</a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-extension-certificationIdentifier.html">DEQM Certification Identifier Extension</a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-extension-submitDataUpdateType.html">DEQM Submit Data Update Type Extension</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+:ET

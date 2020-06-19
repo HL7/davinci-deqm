@@ -1,0 +1,18 @@
+{% raw %}<p>
+The official URL for this profile is:
+</p>
+<pre>http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType</pre>
+<p>
+<p>This Extension supports the concepts 'incremental' and 'snapshot'.</p>
+<ul>
+<li>The DEQM Consumer Server <strong>SHALL</strong> use this Extension to advertise whether it supports <a href="http://hl7.org/fhir/R4/index.html#incremental-update">snapshot</a> or <a href="http://hl7.org/fhir/R4/index.html#snapshot-update">incremental</a> updates for the <a href="http://hl7.org/fhir/R4/datax.html#submit-data">DEQM Submit Data transaction</a>.</li>
+<li>The DEQM Producer Client <strong>SHALL</strong> use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.
+When responding to the <a href="http://hl7.org/fhir/R4/datax.html#collect-data">DEQM Collect Data transaction</a>, the DEQM Producer Server <strong>SHALL</strong>  value it 'incremental' if the <code>lastReceivedOn</code> parameter is present or 'snapshot if the <code>lastReceivedOn</code> parameter is absent.</li>
+</ul>
+</p>
+<p>
+This profile builds on <a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a>.</p>
+<p>
+This profile was published on Fri Jun 19 09:23:47 PDT 2020 as a active by HL7 International - Clinical Quality Information Work Group.
+</p>
+{% endraw %}

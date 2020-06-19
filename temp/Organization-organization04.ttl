@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Organization/organization04> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "organization04"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-03-06T19:03:03.000+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: organization04</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 456789123 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type ins}\">Insurance Company</span></p><p><b>name</b>: DVPayer04</p><p><b>telecom</b>: ph: (+1) 616-555-1212</p><p><b>address</b>: 160 Glen Eagles Road Grand Rapids MI 49503 USA </p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "TAX" ];
+         fhir:Coding.display [ fhir:value "Tax ID number" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.4.4" ];
+     fhir:Identifier.value [ fhir:value "456789123" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "www.irs.gov" ]
+     ]
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+       fhir:Coding.code [ fhir:value "ins" ];
+       fhir:Coding.display [ fhir:value "Insurance Company" ]
+     ]
+  ];
+  fhir:Organization.name [ fhir:value "DVPayer04"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 616-555-1212" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "160 Glen Eagles Road";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Grand Rapids" ];
+     fhir:Address.state [ fhir:value "MI" ];
+     fhir:Address.postalCode [ fhir:value "49503" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Organization/organization04.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/Organization/organization04.ttl> .
+
+# -------------------------------------------------------------------------------------
+

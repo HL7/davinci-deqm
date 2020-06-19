@@ -1,0 +1,191 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "producer-client",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Producer Client CapabilityStatement</h2><ul><li>Implementation Guide Version: 1.1.0</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-10-22</li><li>Published by: HL7 International - Clinical Decision Support Work Group</li></ul><p><p>This profile defines the expected capabilities of a Da Vinci DEQM Producer Client when conforming to the Da Vinci DEQM Implementation Guide. Producers include systems that are primary producers of patient healthcare information.  This CapabilityStatement resource includes the complete list of the <em>recommended</em>  Da Vinci DEQM profiles and RESTful operations that are  Da Vinci DEQM Producer Client could support. Clients have the option of choosing from this list based on their local use cases and other contextual requirements.</p></p><h3 id=\"igs\" class=\"no_toc\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore|3.3.0\">http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore|3.3.0</a></li></ul><ul><li><a href=\"http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures\">http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Da Vinci DEQM Producer Client <strong>SHALL</strong></p><ol><li>Support at least one transaction defined in the <em>Framework</em> Section of  this  Implementation Guide.</li></ol><p id=\"security\"><strong>Security:</strong></p><p>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</p><p><strong>Summary of System Wide Interactions</strong></p><li><strong>MAY</strong> support the\t<code>transaction</code> interaction.</li><li><strong>MAY</strong> support the\t<code>batch</code> interaction.</li><li><strong>MAY</strong> support the\t<code>search-system</code> interaction.</li><li><strong>MAY</strong> support the\t<code>history-system</code> interaction.</li><h3 id=\"resource--details\" class=\"no_toc\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported <code>_includes</code></th><th>Supported <code>_revincludes</code></th><th>Supported Operations</th></tr></thead><tbody><tr><td><a href=\"#library\">Library</a></td><td>\n\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#measure\">Measure</a></td><td><a href=\"http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm\">CQFM Measure</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t$submit-data, \n\t\t\t\t\t\t\t$data-requirements\n\t\t\t\t\t\t</td></tr><tr><td><a href=\"#measurereport\">MeasureReport</a></td><td><a href=\"StructureDefinition-summary-measurereport-deqm.html\">DEQM Summary MeasureReport Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-datax-measurereport-deqm.html\">DEQM Data Exchange MeasureReport Profile</a>, \n\n\t\t\t\t\t\t<a href=\"StructureDefinition-indv-measurereport-deqm.html\">DEQM Individual MeasureReport Profile</a></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td><td>\n              \n            </td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br/><h4 id=\"library\" class=\"no_toc\">Library</h4><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>SHOULD</strong> be capable of fetching a Library resource using:\n\t\t\t\t\t<br/>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Library/[id]</code>\n\t\t\t\t</li><br/>  <!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet -->  <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr/><h4 id=\"measure\" class=\"no_toc\">Measure</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm\">CQFM Measure</a>\n\t\t\t\t\n\t\t\t\t</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>read</code>.</li></ul><p>Operation  Summary:</p><ul><li><strong>SHALL</strong> support the \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/OperationDefinition/Measure-submit-data\">$submit-data</a> operation\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t, \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"http://hl7.org/fhir/OperationDefinition/Measure-data-requirements\">$data-requirements</a> operation\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA Client <strong>SHOULD</strong> be capable of fetching a Measure resource using:\n\t\t\t\t\t<br/>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Measure/[id]</code>\n\t\t\t\t</li><br/>  <!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet -->  <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr/><h4 id=\"measurereport\" class=\"no_toc\">MeasureReport</h4><p>Supported Profiles:\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-summary-measurereport-deqm.html\">DEQM Summary MeasureReport Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-datax-measurereport-deqm.html\">DEQM Data Exchange MeasureReport Profile</a>, \n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"StructureDefinition-indv-measurereport-deqm.html\">DEQM Individual MeasureReport Profile</a>\n\t\t\t\t\n\t\t\t\t</p><p>Resource Specific Documentation:</p><blockquote><p>The DaVinci DEQM Producer Client <strong>SHOULD</strong> be capable of supporting the DEQM MeasureReport Profiles and all the DEQM and QI Core Profiles they reference.</p></blockquote><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<code>create</code>.</li></ul><p>Fetch and Search Criteria:</p><ul>  <!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet -->  <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr/><br/></div>"
+  },
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/producer-client",
+  "version": "1.1.0",
+  "name": "ProducerClientCapabilityStatement",
+  "title": "Producer Client CapabilityStatement",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-10-22T00:00:00-07:00",
+  "publisher": "HL7 International - Clinical Quality Information Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+        }
+      ]
+    }
+  ],
+  "description": "This profile defines the expected capabilities of a Da Vinci DEQM Producer Client when conforming to the Da Vinci DEQM Implementation Guide. Producers include systems that are primary producers of patient healthcare information.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that are  Da Vinci DEQM Producer Client could support. Clients have the option of choosing from this list based on their local use cases and other contextual requirements.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "kind": "requirements",
+  "fhirVersion": "4.0.1",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "patchFormat": [
+    "application/json-patch+json"
+  ],
+  "implementationGuide": [
+    "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0",
+    "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore|3.3.0",
+    "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
+  ],
+  "rest": [
+    {
+      "mode": "client",
+      "documentation": "Da Vinci DEQM Producer Client **SHALL**\n\n1. Support at least one transaction defined in the *Framework* Section of  this  Implementation Guide.\n",
+      "security": {
+        "description": "For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html)."
+      },
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            }
+          ],
+          "type": "Library",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Measure",
+          "supportedProfile": [
+            "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm"
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "read"
+            }
+          ],
+          "operation": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "submit-data",
+              "definition": "http://hl7.org/fhir/OperationDefinition/Measure-submit-data"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "data-requirements",
+              "definition": "http://hl7.org/fhir/OperationDefinition/Measure-data-requirements"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            }
+          ],
+          "type": "MeasureReport",
+          "supportedProfile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm",
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm",
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+          ],
+          "documentation": "The DaVinci DEQM Producer Client **SHOULD** be capable of supporting the DEQM MeasureReport Profiles and all the DEQM and QI Core Profiles they reference.",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "create"
+            }
+          ]
+        }
+      ],
+      "interaction": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "MAY"
+            }
+          ],
+          "code": "transaction"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "MAY"
+            }
+          ],
+          "code": "batch"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "MAY"
+            }
+          ],
+          "code": "search-system"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "MAY"
+            }
+          ],
+          "code": "history-system"
+        }
+      ]
+    }
+  ]
+}

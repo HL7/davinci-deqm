@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="multiple-summ-report"/>
+  <type value="transaction"/>
+  <timestamp value="2020-06-18T20:16:02.653993Z"/>
+  <entry>
+    <fullUrl value="urn:uuid:884bd27a-b1a0-11ea-b615-a4d18ccf5172"/>
+    <resource>
+      <MeasureReport>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring">
+          <valueCodeableConcept>
+            <coding>
+              <code value="proportion"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="complete"/>
+        <type value="summary"/>
+        <measure value="http://example.org/fhir/Measure/measure-medicare-stratification-example"/>
+        <period>
+          <start value="2018-01-01"/>
+          <end value="2018-12-31"/>
+        </period>
+        <improvementNotation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="increase"/>
+            <display value="Increased score indicates improvement"/>
+          </coding>
+        </improvementNotation>
+        <group>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                <code value="initial-population"/>
+              </coding>
+            </code>
+            <count value="10000"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                <code value="denominator"/>
+              </coding>
+            </code>
+            <count value="8000"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                <code value="numerator"/>
+              </coding>
+            </code>
+            <count value="4000"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://example.org/CodeSystem/measure-population-type"/>
+                <code value="numerator-administrative"/>
+              </coding>
+            </code>
+            <count value="2000"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://example.org/CodeSystem/measure-population-type"/>
+                <code value="numerator-medical"/>
+              </coding>
+            </code>
+            <count value="1000"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://example.org/CodeSystem/measure-population-type"/>
+                <code value="numerator-supplemental"/>
+              </coding>
+            </code>
+            <count value="1000"/>
+          </population>
+          <measureScore>
+            <value value="50"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </measureScore>
+          <stratifier>
+            <code>
+              <coding>
+                <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+                <code value="CoverageType"/>
+                <display value="Coverage Type"/>
+              </coding>
+            </code>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="http://example.org/CodeSystem/SOP"/>
+                  <code value="MEDICARE"/>
+                  <display value="Medicare"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                    <code value="initial-population"/>
+                  </coding>
+                </code>
+                <count value="1747"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                    <code value="denominator"/>
+                  </coding>
+                </code>
+                <count value="392"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator"/>
+                  </coding>
+                </code>
+                <count value="243"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator-administrative"/>
+                  </coding>
+                </code>
+                <count value="154"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator-medical"/>
+                  </coding>
+                </code>
+                <count value="12"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator-supplemental"/>
+                  </coding>
+                </code>
+                <count value="77"/>
+              </population>
+              <measureScore>
+                <value value="61.99"/>
+                <unit value="%"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="%"/>
+              </measureScore>
+            </stratum>
+          </stratifier>
+          <stratifier>
+            <code>
+              <coding>
+                <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+                <code value="CoverageTypeAndClass"/>
+                <display value="Coverage Type and Class"/>
+              </coding>
+            </code>
+            <stratum>
+              <component>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+                    <code value="CoverageType"/>
+                    <display value="Coverage Type"/>
+                  </coding>
+                </code>
+                <value>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/SOP"/>
+                    <code value="MEDICARE"/>
+                    <display value="Medicare"/>
+                  </coding>
+                </value>
+              </component>
+              <component>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+                    <code value="CoverageClass"/>
+                    <display value="Coverage Class"/>
+                  </coding>
+                </code>
+                <value>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/medicare-subgroup"/>
+                    <code value="Non-LIS/DE,Nondisability"/>
+                    <display value="Non-LIS/DE,Nondisability"/>
+                  </coding>
+                </value>
+              </component>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                    <code value="initial-population"/>
+                  </coding>
+                </code>
+                <count value="745"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                    <code value="denominator"/>
+                  </coding>
+                </code>
+                <count value="150"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator"/>
+                  </coding>
+                </code>
+                <count value="103"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator-administrative"/>
+                  </coding>
+                </code>
+                <count value="77"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator-medical"/>
+                  </coding>
+                </code>
+                <count value="7"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://example.org/CodeSystem/measure-population-type"/>
+                    <code value="numerator-supplemental"/>
+                  </coding>
+                </code>
+                <count value="19"/>
+              </population>
+              <measureScore>
+                <value value="68.67"/>
+                <unit value="%"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="%"/>
+              </measureScore>
+            </stratum>
+          </stratifier>
+        </group>
+      </MeasureReport>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MeasureReport"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172"/>
+    <resource>
+      <Organization>
+        <meta>
+          <versionId value="4"/>
+          <lastUpdated value="2019-02-21T01:47:54.000+00:00"/>
+          <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="TAX"/>
+              <display value="Tax ID number"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.840.1.113883.4.4"/>
+          <value value="123456789"/>
+          <assigner>
+            <display value="www.irs.gov"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+          </coding>
+        </type>
+        <name value="DaVinciHospital01"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="(+1) 401-555-1212"/>
+        </telecom>
+        <address>
+          <line value="73 Lakewood Street"/>
+          <city value="Warwick"/>
+          <state value="RI"/>
+          <postalCode value="02886"/>
+          <country value="USA"/>
+        </address>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:884cd4e0-b1a0-11ea-b615-a4d18ccf5172"/>
+    <resource>
+      <MeasureReport>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring">
+          <valueCodeableConcept>
+            <coding>
+              <code value="proportion"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="complete"/>
+        <type value="summary"/>
+        <measure value="http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR"/>
+        <date value="2019-09-05T16:59:52.404Z"/>
+        <reporter>
+          <reference value="urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172"/>
+        </reporter>
+        <period>
+          <start value="2019-08-01"/>
+          <end value="2019-09-01"/>
+        </period>
+        <improvementNotation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="increase"/>
+            <display value="Increased score indicates improvement"/>
+          </coding>
+        </improvementNotation>
+        <group>
+          <code>
+            <coding>
+              <system value="http://fhir/example.org"/>
+              <code value="group-1"/>
+              <display value="group-1"/>
+            </coding>
+          </code>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                <code value="initial-population"/>
+                <display value="Initial Population"/>
+              </coding>
+            </code>
+            <count value="100"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                <code value="numerator"/>
+                <display value="Numerator"/>
+              </coding>
+            </code>
+            <count value="60"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                <code value="denominator"/>
+                <display value="Denominator"/>
+              </coding>
+            </code>
+            <count value="100"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                <code value="denominator-exclusion"/>
+                <display value="Denominator Exclusion"/>
+              </coding>
+            </code>
+            <count value="10"/>
+          </population>
+          <measureScore>
+            <value value="66"/>
+          </measureScore>
+          <stratifier>
+            <code>
+              <coding>
+                <system value="http://fhir/example.org"/>
+                <code value="sde-ethnicity"/>
+                <display value="SDE Ethnicity"/>
+              </coding>
+            </code>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                  <code value="2135-2"/>
+                  <display value="Hispanic or Latino"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <measureScore>
+                <value value="50"/>
+              </measureScore>
+            </stratum>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                  <code value="2186-5"/>
+                  <display value="Not Hispanic or Latino"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="70"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="50"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="70"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <measureScore>
+                <value value="71"/>
+              </measureScore>
+            </stratum>
+          </stratifier>
+          <stratifier>
+            <code>
+              <coding>
+                <system value="http://fhir/example.org"/>
+                <code value="sde-payer"/>
+                <display value="SDE Payer"/>
+              </coding>
+            </code>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="http://fhir/example.org"/>
+                  <code value="Payer123"/>
+                  <display value="King HMO"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <measureScore>
+                <value value="50"/>
+              </measureScore>
+            </stratum>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="http://fhir/example.org"/>
+                  <code value="Payer456"/>
+                  <display value="Green Circle"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <measureScore>
+                <value value="33"/>
+              </measureScore>
+            </stratum>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="http://fhir/example.org"/>
+                  <code value="Payer789"/>
+                  <display value="GoodHealth of California"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <measureScore>
+                <value value="100"/>
+              </measureScore>
+            </stratum>
+          </stratifier>
+          <stratifier>
+            <code>
+              <coding>
+                <system value="http://fhir/example.org"/>
+                <code value="sde-race"/>
+                <display value="SDE Race"/>
+              </coding>
+            </code>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                  <code value="2054-5"/>
+                  <display value="Black or African American"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <measureScore>
+                <value value="50"/>
+              </measureScore>
+            </stratum>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                  <code value="2106-3"/>
+                  <display value="White"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="10"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="30"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <measureScore>
+                <value value="33"/>
+              </measureScore>
+            </stratum>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                  <code value="2028-9"/>
+                  <display value="Asian"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <measureScore>
+                <value value="100"/>
+              </measureScore>
+            </stratum>
+          </stratifier>
+          <stratifier>
+            <code>
+              <coding>
+                <system value="http://fhir/example.org"/>
+                <code value="sde-sex"/>
+                <display value="SDE Sex"/>
+              </coding>
+            </code>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="http://hl7.org/fhir/administrative-gender"/>
+                  <code value="male"/>
+                  <display value="Male"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="20"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="5"/>
+              </population>
+              <measureScore>
+                <value value="57"/>
+              </measureScore>
+            </stratum>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="http://hl7.org/fhir/administrative-gender"/>
+                  <code value="female"/>
+                  <display value="Female"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="60"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="40"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="60"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="4"/>
+              </population>
+              <measureScore>
+                <value value="72"/>
+              </measureScore>
+            </stratum>
+            <stratum>
+              <value>
+                <coding>
+                  <system value="http://hl7.org/fhir/administrative-gender"/>
+                  <code value="other"/>
+                  <display value="Other"/>
+                </coding>
+              </value>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="initial-population"/>
+                    <display value="Initial Population"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="numerator"/>
+                    <display value="Numerator"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator"/>
+                    <display value="Denominator"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <population>
+                <code>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                    <code value="denominator-exclusion"/>
+                    <display value="Denominator Exclusion"/>
+                  </coding>
+                </code>
+                <count value="0"/>
+              </population>
+              <measureScore>
+                <value value="0"/>
+              </measureScore>
+            </stratum>
+          </stratifier>
+        </group>
+      </MeasureReport>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MeasureReport"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:884ec872-b1a0-11ea-b615-a4d18ccf5172"/>
+    <resource>
+      <MeasureReport>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring">
+          <valueCodeableConcept>
+            <coding>
+              <code value="proportion"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="complete"/>
+        <type value="summary"/>
+        <measure value="http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example"/>
+        <date value="2018-09-05T16:59:52.404Z"/>
+        <reporter>
+          <reference value="urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172"/>
+        </reporter>
+        <period>
+          <start value="2018-08-01"/>
+          <end value="2018-09-01"/>
+        </period>
+        <improvementNotation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="increase"/>
+            <display value="Increased score indicates improvement"/>
+          </coding>
+        </improvementNotation>
+        <group>
+          <code>
+            <coding>
+              <system value="http://example.org"/>
+              <code value="mrp-group"/>
+              <display value="MRP Group"/>
+            </coding>
+            <text value="MRP Group"/>
+          </code>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                <code value="initial-population"/>
+                <display value="Initial Population"/>
+              </coding>
+            </code>
+            <count value="100"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                <code value="numerator"/>
+                <display value="Numerator"/>
+              </coding>
+            </code>
+            <count value="80"/>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+                <code value="denominator"/>
+                <display value="Denominator"/>
+              </coding>
+            </code>
+            <count value="100"/>
+          </population>
+          <measureScore>
+            <value value="0.8"/>
+          </measureScore>
+        </group>
+      </MeasureReport>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MeasureReport"/>
+    </request>
+  </entry>
+</Bundle>

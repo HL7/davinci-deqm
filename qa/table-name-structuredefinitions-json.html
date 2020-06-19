@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+  <title>table-name-structuredefinitions-json</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ <tr><td><a href="StructureDefinition-extension-alternateScoreType.json.html">DEQM Alternate Score Type Extension</a> </td><td><p>Possible value types for the measureScore elements <em>in addition to</em> the standard <a href="http://hl7.org/fhir/STU3/datatypes.html#quantity">Quantity</a> type. The alternate type is determined by the Quality Measure <a href="http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html">Aggregate Method</a> extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-extension-certificationIdentifier.json.html">DEQM Certification Identifier Extension</a> </td><td><p>An identifier that represents the EHR certication number (CERHT).  See <a href="https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html">Certified EHR Technology</a> For more information.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-coverage-deqm.json.html">DEQM  Coverage Profile</a> </td><td><p>The DEQM Coverage Profile defines the constraints for representing  the subscriber information to the Payer.  This along with the patient first name, last name, date of birth and gender allows the payer to identify the member in their system.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-datax-measurereport-deqm.json.html">DEQM Data Exchange MeasureReport Profile</a> </td><td><p>[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.
+When a data producer needs to send data to a data consumer, they use the <strong>DEQM Data-Exchange MeasureReport Profile</strong> defined here.  The <code>type</code> element in this profile is set to “data-collection”.  Along with the MeasureReport profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on.  When a data producer sends a MeasureReport and the associated data, they may not have all the data that is required to calculate the measure report.  Additional data may need to be collected later or there may be additional data used in the measure that the aggregator owns such as a continuous coverage period requirement.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-indv-measurereport-deqm.json.html">DEQM Individual MeasureReport Profile</a> </td><td><p>[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The <strong>DEQM Individual MeasureReport Profile</strong> defined here is used when a measure is reported to an aggregator for one specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-extension-measureScoring.json.html">DEQM Measure Scoring Extension</a> </td><td><p>Indicates how the calculation is performed for the measure, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional measure scoring types to be represented. It is expected to be the same as the scoring element on the referenced Measure</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-medicationadministration-deqm.json.html">DEQM MedicationAdministration Profile</a> </td><td><p>The DEQM MedicationAdministration Profile describes the event of a patient consuming or otherwise being administered a medication</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-medicationrequest-deqm.json.html">DEQM MedicationRequest Profile</a> </td><td><p>The DEQM MedicationRequest Profile describes a medication prescription</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-organization-deqm.json.html">DEQMOrganizationProfile</a> </td><td><p>The DEQM Organization Profile defines the constraints for representing the organization for which the practitioner was working when he performed the measure to which he is attesting.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-practitioner-deqm.json.html">DEQM Practitioner Profile</a> </td><td><p>The DEQM Practitioner Profile defines the constraints for representing the practitioner who performed the measure or to which is attesting.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-extension-reporterGroup.json.html">DEQM Reporter Group Extension</a> </td><td><p>Group of practitioners responsible for a report. This extension is used to provide the capability to allow the participating practitioners to be documented.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-extension-submitDataUpdateType.json.html">DEQM Submit Data Update Type Extension</a> </td><td><p>This Extension supports the concepts 'incremental' and 'snapshot'.</p>
+<ul>
+<li>The DEQM Consumer Server <strong>SHALL</strong> use this Extension to advertise whether it supports <a href="index.html#incremental-update">snapshot</a> or <a href="index.html#snapshot-update">incremental</a> updates for the <a href="datax.html#submit-data">DEQM Submit Data transaction</a>.</li>
+<li>The DEQM Producer Client <strong>SHALL</strong> use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.
+When responding to the <a href="datax.html#collect-data">DEQM Collect Data transaction</a>, the DEQM Producer Server <strong>SHALL</strong>  value it 'incremental' if the <code>lastReceivedOn</code> parameter is present or 'snapshot if the <code>lastReceivedOn</code> parameter is absent.</li>
+</ul>
+</td></tr>
+ <tr><td><a href="StructureDefinition-summary-measurereport-deqm.json.html">DEQM Summary MeasureReport Profile</a> </td><td><p>[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.  The <strong>DEQM Summary MeasureReport Profile</strong> defined here is used when a measure is reported to an aggregator for a group of patients. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-extension-reportingVendor.json.html">DEQM Reporting Vendor Extension</a> </td><td><p>A reference to the vendor who queried the data, calculated results and/or generated the report. The 'reporting vendor' is intended to represent the submitting entity when it is not the same as the reporting entity.</p>
+</td></tr>
+</body>
+</html>

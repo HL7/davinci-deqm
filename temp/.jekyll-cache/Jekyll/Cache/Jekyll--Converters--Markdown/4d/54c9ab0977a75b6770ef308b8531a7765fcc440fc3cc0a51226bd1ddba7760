@@ -1,0 +1,66 @@
+I"-
+<div class="markdown-toc">
+
+</div>
+
+<p>The Data Exchange For Quality Measures Implementation Guide was developed under the  <a href="#">Davinci Project</a></p>
+
+<p>Changes and Updates for version 0.2.0</p>
+
+<ol>
+  <li>Applied all resolutions from STU1 Ballot</li>
+  <li>Updated and Expanded the Background Section on the Clinical Quality Measures Ecosystem and how this guide fits into that Ecosystem.</li>
+  <li>Added Guidance on Measure Reporting</li>
+  <li>Added Use Cases for Colorectal Screening and Venous Thromboembolism Prophylaxis Measure Reporting</li>
+</ol>
+
+<p>Changes and Updates for version 1.0.0</p>
+
+<ol>
+  <li>Applied all resolutions from May STU1 Ballot</li>
+</ol>
+
+<p>Changes and Updates for version 1.1.0</p>
+
+<ol>
+  <li>Creation of FHIR R4 version.</li>
+  <li>Additional examples</li>
+</ol>
+
+<p>Changes and Updates for version 1.1.1</p>
+
+<ol>
+  <li>
+    <p>Applied all resolutions from STU2 Ballot</p>
+
+    <ul>
+      <li>Various Technical Corrections and Corrections to Typographical Errors</li>
+      <li>updated examples</li>
+      <li>Add DEQM <a href="StructureDefinition-extension-measureScoring.html">Measure Scoring</a> Extension to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile (FHIR-27044)</li>
+      <li>Add <a href="StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.improvementNotation"><code class="highlighter-rouge">MeasureReport.improvementNotation</code></a> to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile (FHIR-27044)</li>
+      <li>Add Invariant <a href="StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport">deqm-2</a> to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile (FHIR-27044)</li>
+      <li>Add Sections describing snapshot and incremental updates for data exchange for both <a href="datax.html#submit-updates">Submit Data</a> and <a href="datax.html#collect-updates">Collect Data</a> transactions (FHIR-26076, FHIR-26092, FHIR-26079)</li>
+      <li>Add <a href="index.html#glossary">Glossary</a> defining terms used in this implementation guide. (FHIR-26087,FHIR-26076,FHIR-25523)</li>
+      <li><a href="guidance.html#using-contained-resources-in-the-response-transaction">Guidance</a> on using contained resources when transacting data (FHIR-26304)</li>
+      <li>Additional <a href="guidance.html#preconditions-and-assumptions">Preconditions and Assumptions</a> (FHIR-26088, FHIR-26086, FHIR-26075)</li>
+      <li>Change <a href="StructureDefinition-organization-deqm-definitions.html#Organization.identifier:ein">Practitioner Identifier OID</a> for Tax ID from ITIN to EIN (FHIR-26613, FHIR-26086)</li>
+      <li>Clarify how <a href="indv-reporting.html#how-much-data-should-be-sent">much data is needed</a> for individual reporting (FHIR-26090)</li>
+      <li>Clarify how <a href="datax.html#data-exchange">much data is needed</a> for data exchange (FHIR-26083)</li>
+      <li>Clarify how data consumers <a href="datax.html#collect-data">communicate data requirements</a>. (FHIR-26084)</li>
+      <li>Clarify <a href="guidance.html#negation-patterns-for-quality-measures">negation pattern</a> (FHIR-26077)</li>
+      <li>Clarify <a href="datax.html#data-exchange">usage of correct measure version</a> . (FHIR-26081)</li>
+      <li>Clarify <a href="datax.html#gather-data-requirements-from-consumer">discovery of data requirements</a>). (FHIR-26085)</li>
+      <li>Clarify <a href="datax.html#data-exchange">stakeholders</a> (FHIR-26082)</li>
+      <li>Add <a href="index.html#introduction">reference</a> to Da Vinci Guiding Principles (FHIR-26078)</li>
+      <li>Add <a href="StructureDefinition-indv-measurereport-deqm.html#mandatory-data-elements-and-terminology">implementer notes</a> to  DEQM Data-Exchange MeasureReport Profile  (FHIR-26073)</li>
+      <li>Add <a href="StructureDefinition-practitioner-deqm.html">Practitioner Profile</a> to accommodate CMS Certification Number identifier(CCN) and add CCN to <a href="StructureDefinition-organization-deqm.html">Organization Profile</a> (FHIR-25739)</li>
+      <li>Add <a href="StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.extension:vendor">software name/version extension</a> to MeasureReport Profiles (FHIR-25721)</li>
+      <li>Add required <a href="StructureDefinition-summary-measurereport-deqm-definitions.html#MeasureReport.group.population.code"><code class="highlighter-rouge">id</code></a> element to the MeasureReport profiles (FHIR-25716)</li>
+      <li><a href="datax.html#provenance">Document</a> that $submit-data and $collect-data should support the use of the X-Provenance header (FHIR-25624)</li>
+      <li>A extensions for <a href="StructureDefinition-datax-measurereport-deqm-definitions.html#MeasureReport.extension:software">software and version</a> (FHIR-25721)</li>
+    </ul>
+
+  </li>
+</ol>
+
+:ET

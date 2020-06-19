@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization01"/>
+  <meta>
+    <versionId value="4"/>
+    <lastUpdated value="2019-02-21T01:47:54.000+00:00"/>
+    <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: organization01</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123456789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span></p><p><b>name</b>: DaVinciHospital01</p><p><b>telecom</b>: ph: (+1) 401-555-1212</p><p><b>address</b>: 73 Lakewood Street Warwick RI 02886 USA </p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="TAX"/>
+        <display value="Tax ID number"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.840.1.113883.4.4"/>
+    <value value="123456789"/>
+    <assigner>
+      <display value="www.irs.gov"/>
+    </assigner>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="DaVinciHospital01"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="(+1) 401-555-1212"/>
+  </telecom>
+  <address>
+    <line value="73 Lakewood Street"/>
+    <city value="Warwick"/>
+    <state value="RI"/>
+    <postalCode value="02886"/>
+    <country value="USA"/>
+  </address>
+</Organization>

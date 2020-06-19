@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization03"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2019-02-21T01:47:53.000+00:00"/>
+    <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: organization03</p><p><b>meta</b>: </p><p><b>identifier</b>: Provider number = 345678912 (OFFICIAL), Provider number = 082584 (SECONDARY)</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span></p><p><b>name</b>: DaVinciHospital03</p><p><b>telecom</b>: ph: (+1) 201-555-1212</p><p><b>address</b>: 94 Olive Ave. Union City NJ 07087 USA </p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PRN"/>
+        <display value="Provider number"/>
+      </coding>
+    </type>
+    <system value="http://hl7.org/fhir/sid/us-npi"/>
+    <value value="345678912"/>
+    <assigner>
+      <display value="www.cms.gov"/>
+    </assigner>
+  </identifier>
+  <identifier>
+    <use value="secondary"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PRN"/>
+        <display value="Provider number"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.840.1.113883.4.336"/>
+    <value value="082584"/>
+    <assigner>
+      <display value="www.cms.gov"/>
+    </assigner>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="DaVinciHospital03"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="(+1) 201-555-1212"/>
+  </telecom>
+  <address>
+    <line value="94 Olive Ave."/>
+    <city value="Union City"/>
+    <state value="NJ"/>
+    <postalCode value="07087"/>
+    <country value="USA"/>
+  </address>
+</Organization>

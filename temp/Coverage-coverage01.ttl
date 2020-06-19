@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Coverage/coverage01> a fhir:Coverage;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "coverage01"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-02-11T14:19:25.000+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: coverage01</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>policyHolder</b>: <a href=\"Patient-patient01.html\">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p><p><b>subscriber</b>: <a href=\"Patient-patient01.html\">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p><p><b>subscriberId</b>: A123456789</p><p><b>beneficiary</b>: <a href=\"Patient-patient01.html\">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p><p><b>relationship</b>: <span title=\"Codes: \">self</span></p><p><b>payor</b>: <a href=\"Organization-organization04.html\">Generated Summary: id: organization04; Tax ID number = 456789123 (OFFICIAL); active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type ins}\">Insurance Company</span>; name: DVPayer04; ph: (+1) 616-555-1212</a></p></div>"
+  ];
+  fhir:Coverage.status [ fhir:value "active"];
+  fhir:Coverage.policyHolder [
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/Patient/patient01>;
+     fhir:Reference.reference [ fhir:value "Patient/patient01" ]
+  ];
+  fhir:Coverage.subscriber [
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/Patient/patient01>;
+     fhir:Reference.reference [ fhir:value "Patient/patient01" ]
+  ];
+  fhir:Coverage.subscriberId [ fhir:value "A123456789"];
+  fhir:Coverage.beneficiary [
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/Patient/patient01>;
+     fhir:Reference.reference [ fhir:value "Patient/patient01" ]
+  ];
+  fhir:Coverage.relationship [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "self" ]
+     ]
+  ];
+  fhir:Coverage.payor [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/Organization/organization04>;
+     fhir:Reference.reference [ fhir:value "Organization/organization04" ]
+  ] .
+
+<http://hl7.org/fhir/us/davinci-deqm/Patient/patient01> a fhir:us .
+
+<http://hl7.org/fhir/us/davinci-deqm/Organization/organization04> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Coverage/coverage01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/Coverage/coverage01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

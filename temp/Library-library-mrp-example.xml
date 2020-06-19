@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="library-mrp-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: library-mrp-example</p><p><b>url</b>: <a href="http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example">http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example</a></p><p><b>version</b>: 1.1.0</p><p><b>name</b>: DEQMLibraryMRPExample</p><p><b>title</b>: DEQM Library MRP Example</p><p><b>status</b>: active</p><p><b>type</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/library-type module-definition}">Module Definition</span></p><p><b>date</b>: Jun 19, 2020, 9:23:47 AM</p><p><b>publisher</b>: HL7 International - Clinical Quality Information Work Group</p><p><b>contact</b>: http://www.hl7.org/Special/committees/cqi/index.cfm</p><p><b>description</b>: Example Library resource to demonstrate the framework for MRP</p><p><b>jurisdiction</b>: <span title="Codes: {urn:iso:std:iso:3166 US}">United States of America</span></p><p><b>dataRequirement</b>: , , , , , , </p></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example"/>
+  <version value="1.1.0"/>
+  <name value="DEQMLibraryMRPExample"/>
+  <title value="DEQM Library MRP Example"/>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="module-definition"/>
+    </coding>
+  </type>
+  <date value="2020-06-19T09:23:47-07:00"/>
+  <publisher value="HL7 International - Clinical Quality Information Work Group"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="Example Library resource to demonstrate the framework for MRP"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <dataRequirement>
+    <type value="MeasureReport"/>
+    <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"/>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="Patient"/>
+    <profile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="Encounter"/>
+    <profile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"/>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="Location"/>
+    <profile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="Task"/>
+    <profile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"/>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="Organization"/>
+    <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="Practitioner"/>
+    <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"/>
+  </dataRequirement>
+</Library>

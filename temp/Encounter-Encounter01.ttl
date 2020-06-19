@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Encounter/Encounter01> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Encounter01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: Encounter01</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: <span title=\"{http://terminology.hl7.org/CodeSystem/v3-ActCode IMP}\">inpatient encounter</span></p><p><b>type</b>: <span title=\"Codes: {http://snomed.info/sct 56876005}\">Drug rehabilitation and detoxification</span></p><p><b>subject</b>: <a href=\"Patient-patient01.html\">Jairo Webster. Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p><p><b>period</b>: May 29, 2018, 8:00:00 AM --&gt; May 29, 2018, 8:00:00 AM</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td>-</td><td><b>DischargeDisposition</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/discharge-disposition home}\">Home</span></td></tr></table></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "IMP" ];
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ];
+  fhir:Encounter.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:56876005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "56876005" ];
+       fhir:Coding.display [ fhir:value "Drug rehabilitation and detoxification" ]
+     ]
+  ];
+  fhir:Encounter.subject [
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/Patient/patient01>;
+     fhir:Reference.reference [ fhir:value "Patient/patient01" ];
+     fhir:Reference.display [ fhir:value "Jairo Webster" ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2018-05-29T11:00:00-04:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2018-05-29T11:00:00-04:00"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.dischargeDisposition [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/discharge-disposition" ];
+         fhir:Coding.code [ fhir:value "home" ];
+         fhir:Coding.display [ fhir:value "Home" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/davinci-deqm/Patient/patient01> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Encounter/Encounter01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/Encounter/Encounter01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

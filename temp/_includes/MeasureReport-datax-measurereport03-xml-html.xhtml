@@ -1,0 +1,36 @@
+{% raw %}<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport">MeasureReport</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;datax-measurereport03&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: datax-measurereport03&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: data-collection&lt;/p&gt;&lt;p&gt;&lt;b&gt;measure&lt;/b&gt;: &lt;a href=&quot;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&quot;&gt;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-patient03.html&quot;&gt;Generated Summary: id: patient03; Medical record number = 34567 (USUAL); active; Virginia Hartman (OFFICIAL); gender: female; birthDate: 1983-09-12; &lt;span title=&quot;Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus U}&quot;&gt;unmarried&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Jan 1, 2019, 8:59:52 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;reporter&lt;/b&gt;: &lt;a href=&quot;Organization-organization03.html&quot;&gt;Generated Summary: id: organization03; Provider number = 345678912 (OFFICIAL), Provider number = 082584 (SECONDARY); active; &lt;span title=&quot;Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}&quot;&gt;Healthcare Provider&lt;/span&gt;; name: DaVinciHospital03; ph: (+1) 201-555-1212&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Jan 1, 2018, 12:00:00 AM --&amp;gt; Dec 31, 2018, 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;evaluatedResource&lt;/b&gt;: &lt;a href=&quot;Observation-observation03.html&quot;&gt;Generated Summary: id: observation03; &lt;span title=&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}&quot;&gt;Laboratory&lt;/span&gt;; &lt;span title=&quot;Codes: {http://loinc.org 77353-1}&quot;&gt;Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative&lt;/span&gt;; effective: Jun 22, 2018, 12:00:00 AM&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">extension</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;incremental&quot;/&gt;
+  &lt;/extension&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;data-collection&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">measure</a>
+           <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/patient03&quot;/&gt;
+  &lt;/subject&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-01-01T16:59:52.404Z&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.reporter">reporter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/organization03&quot;/&gt;
+  &lt;/reporter&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">period</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2018-01-01&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2018-12-31&quot;/&gt;
+  &lt;/period&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.evaluatedResource">evaluatedResource</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/observation03&quot;/&gt;
+  &lt;/evaluatedResource&gt;
+&lt;/MeasureReport&gt;</pre>
+{% endraw %}

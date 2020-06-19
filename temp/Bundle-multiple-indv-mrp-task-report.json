@@ -1,0 +1,1777 @@
+{
+  "resourceType": "Bundle",
+  "id": "multiple-indv-mrp-task-report",
+  "type": "transaction",
+  "timestamp": "2019-12-06T06:29:32.747871Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:c90e56d8-17f1-11ea-9ce8-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+            "valueIdentifier": {
+              "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+              "value": "0015HQN9BD3304E"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+            "valueReference": {
+              "reference": "urn:uuid:c90ecb37-17f1-11ea-9420-4ccc6a181ed3"
+            }
+          }
+        ],
+        "status": "complete",
+        "type": "individual",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+        "subject": {
+          "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
+        },
+        "date": "2018-09-05T16:59:52.404Z",
+        "reporter": {
+          "reference": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726"
+        },
+        "period": {
+          "start": "2018-08-01",
+          "end": "2018-09-01"
+        },
+        "group": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://example.org",
+                  "code": "112",
+                  "display": "112"
+                }
+              ]
+            },
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://example.org",
+                      "code": "initial-population",
+                      "display": "Initial Population"
+                    }
+                  ]
+                }
+              }
+            ],
+            "measureScore": {
+              "value": 100
+            }
+          }
+        ],
+        "evaluatedResource": [
+          {
+            "reference": "urn:uuid:c90ea546-17f1-11ea-a370-4ccc6a181ed3"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MeasureReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90ea546-17f1-11ea-a370-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Task",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org",
+            "value": "19009"
+          }
+        ],
+        "status": "completed",
+        "intent": "plan",
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "1111F",
+              "display": "Medication Reconciliation"
+            }
+          ]
+        },
+        "for": {
+          "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
+        },
+        "encounter": {
+          "reference": "urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71"
+        },
+        "executionPeriod": {
+          "start": "2017-06-11",
+          "end": "2017-06-11"
+        },
+        "authoredOn": "2018-09-25T14:24:23.584Z",
+        "owner": {
+          "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000fa"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90ecb36-17f1-11ea-bb3a-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "status": "active",
+        "policyHolder": {
+          "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
+        },
+        "subscriber": {
+          "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
+        },
+        "subscriberId": "A123456789",
+        "beneficiary": {
+          "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "code": "self"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:c90ef352-17f1-11ea-bc8b-4ccc6a181ed3"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Coverage"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90ecb37-17f1-11ea-9420-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "TAX",
+                  "display": "Tax ID number"
+                }
+              ]
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "value": "456789124",
+            "assigner": {
+              "display": "www.irs.gov"
+            }
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "other",
+                "display": "Other"
+              }
+            ]
+          }
+        ],
+        "name": "DV Quality Measure Data Reporter",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+1) 616-555-1212"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "160 Glen Eagles Road"
+            ],
+            "city": "Grand Rapids",
+            "state": "MI",
+            "postalCode": "49503",
+            "country": "USA"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90ef352-17f1-11ea-bc8b-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "TAX",
+                  "display": "Tax ID number"
+                }
+              ]
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "value": "456789125",
+            "assigner": {
+              "display": "www.irs.gov"
+            }
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "ins",
+                "display": "Insurance Company"
+              }
+            ]
+          }
+        ],
+        "name": "DVPayer04",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+1) 616-555-1212"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "160 Glen Eagles Road"
+            ],
+            "city": "Grand Rapids",
+            "state": "MI",
+            "postalCode": "49503",
+            "country": "USA"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90ef354-17f1-11ea-bae2-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+            "valueIdentifier": {
+              "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+              "value": "0015HQN9BD3304E"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+            "valueReference": {
+              "reference": "urn:uuid:c90ecb37-17f1-11ea-9420-4ccc6a181ed3"
+            }
+          }
+        ],
+        "status": "complete",
+        "type": "individual",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+        "subject": {
+          "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+        },
+        "date": "2018-09-05T16:59:52.404Z",
+        "reporter": {
+          "reference": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726"
+        },
+        "period": {
+          "start": "2018-08-01",
+          "end": "2018-09-01"
+        },
+        "group": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://example.org",
+                  "code": "112",
+                  "display": "112"
+                }
+              ]
+            },
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://example.org",
+                      "code": "initial-population",
+                      "display": "Initial Population"
+                    }
+                  ]
+                }
+              }
+            ],
+            "measureScore": {
+              "value": 100
+            }
+          }
+        ],
+        "evaluatedResource": [
+          {
+            "reference": "urn:uuid:c90f1922-17f1-11ea-bec5-4ccc6a181ed3"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MeasureReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90f1922-17f1-11ea-bec5-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Task",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org",
+            "value": "19009"
+          }
+        ],
+        "status": "completed",
+        "intent": "plan",
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "1111F",
+              "display": "Medication Reconciliation"
+            }
+          ]
+        },
+        "for": {
+          "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d3aa6b0b-f3fd-4b19-93c8-ccdd8b9da518"
+        },
+        "executionPeriod": {
+          "start": "2017-06-11",
+          "end": "2017-06-11"
+        },
+        "authoredOn": "2018-09-25T14:24:23.584Z",
+        "owner": {
+          "reference": "urn:uuid:0000016d-235f-39b3-0000-000000011fc6"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90f1923-17f1-11ea-943f-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "status": "active",
+        "policyHolder": {
+          "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+        },
+        "subscriber": {
+          "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+        },
+        "subscriberId": "A123456790",
+        "beneficiary": {
+          "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "code": "self"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:c90ef352-17f1-11ea-bc8b-4ccc6a181ed3"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Coverage"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90f1925-17f1-11ea-a7e8-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+            "valueIdentifier": {
+              "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+              "value": "0015HQN9BD3304E"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+            "valueReference": {
+              "reference": "urn:uuid:c90ecb37-17f1-11ea-9420-4ccc6a181ed3"
+            }
+          }
+        ],
+        "status": "complete",
+        "type": "individual",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+        "subject": {
+          "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073"
+        },
+        "date": "2018-09-05T16:59:52.404Z",
+        "reporter": {
+          "reference": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726"
+        },
+        "period": {
+          "start": "2018-08-01",
+          "end": "2018-09-01"
+        },
+        "group": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://example.org",
+                  "code": "112",
+                  "display": "112"
+                }
+              ]
+            },
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://example.org",
+                      "code": "initial-population",
+                      "display": "Initial Population"
+                    }
+                  ]
+                }
+              }
+            ],
+            "measureScore": {
+              "value": 100
+            }
+          }
+        ],
+        "evaluatedResource": [
+          {
+            "reference": "urn:uuid:c90ea546-17f1-11ea-a370-4ccc6a181ed3"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MeasureReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90f411a-17f1-11ea-b9ba-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Task",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org",
+            "value": "19009"
+          }
+        ],
+        "status": "completed",
+        "intent": "plan",
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "1111F",
+              "display": "Medication Reconciliation"
+            }
+          ]
+        },
+        "for": {
+          "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073"
+        },
+        "encounter": {
+          "reference": "urn:uuid:39fd3052-6b0f-4ed1-bcc5-4ae041f1e016"
+        },
+        "executionPeriod": {
+          "start": "2017-06-11",
+          "end": "2017-06-11"
+        },
+        "authoredOn": "2018-09-25T14:24:23.584Z",
+        "owner": {
+          "reference": "urn:uuid:0000016d-235f-39b3-0000-000000001298"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90f411b-17f1-11ea-829e-4ccc6a181ed3",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "status": "active",
+        "policyHolder": {
+          "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073"
+        },
+        "subscriber": {
+          "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073"
+        },
+        "subscriberId": "A123456795",
+        "beneficiary": {
+          "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "code": "self"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:c90ef352-17f1-11ea-bc8b-4ccc6a181ed3"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Coverage"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Freda902 Tillman293"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Faro",
+              "state": "Algarve",
+              "country": "PT"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "0156e3a9-c4e1-4c0a-a53e-03ce3984ac65"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "0156e3a9-c4e1-4c0a-a53e-03ce3984ac65"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-61-8566"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver's license Number"
+                }
+              ],
+              "text": "Driver's license Number"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99966861"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X52208740X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "McDermott739",
+            "given": [
+              "Debbie941"
+            ],
+            "prefix": [
+              "Mrs."
+            ]
+          },
+          {
+            "use": "maiden",
+            "family": "Funk324",
+            "given": [
+              "Debbie941"
+            ],
+            "prefix": [
+              "Mrs."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-755-4280",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1961-02-26",
+        "address": [
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.21379047108309
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -72.73951315911818
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+              }
+            ],
+            "line": [
+              "903 Wolff Ville"
+            ],
+            "city": "Westfield",
+            "state": "MA",
+            "postalCode": "01085",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ],
+          "text": "M"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "pt",
+                  "display": "Portuguese"
+                }
+              ],
+              "text": "Portuguese"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99221",
+                "display": "Initial hospital care"
+              }
+            ],
+            "text": "Initial hospital care"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8",
+          "display": "Mrs. Debbie941 McDermott739"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:0000016d-235f-39b3-0000-0000000000fa",
+              "display": "Dr. Manuel446 Granados71"
+            }
+          }
+        ],
+        "period": {
+          "start": "1976-06-20T10:41:49-07:00",
+          "end": "2018-04-29T10:41:49-07:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742",
+              "display": "NOBLE HOSPITAL"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726",
+          "display": "NOBLE HOSPITAL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0000016d-235f-39b3-0000-0000000000fa",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "250"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Granados71",
+            "given": [
+              "Manuel446"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                "valueBoolean": true
+              }
+            ],
+            "system": "email",
+            "value": "Manuel446.Granados71@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "115 WEST SILVER STREET"
+            ],
+            "city": "WESTFIELD",
+            "state": "MA",
+            "postalCode": "01085",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN"
+                }
+              ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9999999999"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Healthcare Provider"
+              }
+            ],
+            "text": "Healthcare Provider"
+          }
+        ],
+        "name": "NOBLE HOSPITAL",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "4135682811"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "115 WEST SILVER STREET"
+            ],
+            "city": "WESTFIELD",
+            "state": "MA",
+            "postalCode": "01085",
+            "country": "US"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742",
+      "resource": {
+        "resourceType": "Location",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "status": "active",
+        "name": "NOBLE HOSPITAL",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "4135682811"
+          }
+        ],
+        "address": {
+          "line": [
+            "115 WEST SILVER STREET"
+          ],
+          "city": "WESTFIELD",
+          "state": "MA",
+          "postalCode": "01085",
+          "country": "US"
+        },
+        "position": {
+          "longitude": -72.755911,
+          "latitude": 42.138838
+        },
+        "managingOrganization": {
+          "reference": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726",
+          "display": "NOBLE HOSPITAL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Location"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Hettie215 Johnston597"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Reading",
+              "state": "Massachusetts",
+              "country": "US"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "f605b676-acb4-4cb0-bd77-f8c87f7b83a2"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "f605b676-acb4-4cb0-bd77-f8c87f7b83a2"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-75-8071"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver's license Number"
+                }
+              ],
+              "text": "Driver's license Number"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99968294"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X86200374X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Hegmann834",
+            "given": [
+              "Royce974"
+            ],
+            "prefix": [
+              "Mr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-539-7855",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1942-08-10",
+        "address": [
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.41560920330857
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -70.93765725466737
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+              }
+            ],
+            "line": [
+              "624 Williamson Ville"
+            ],
+            "city": "Boston",
+            "state": "MA",
+            "postalCode": "02108",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ],
+          "text": "Never Married"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (Region=United States)"
+                }
+              ],
+              "text": "English (Region=United States)"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3aa6b0b-f3fd-4b19-93c8-ccdd8b9da518",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99221",
+                "display": "Initial hospital care"
+              }
+            ],
+            "text": "Initial hospital care"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:b40a7b60-acc6-4f89-88ad-349a291921c9",
+          "display": "Mr. Royce974 Hegmann834"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:0000016d-235f-39b3-0000-000000011fc6",
+              "display": "Dr. Delores12 Kautzer186"
+            }
+          }
+        ],
+        "period": {
+          "start": "1955-09-05T14:19:34-07:00",
+          "end": "1955-09-05T14:34:34-07:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0000016d-235f-39b3-0000-000000011fc6",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "73670"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Kautzer186",
+            "given": [
+              "Delores12"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                "valueBoolean": true
+              }
+            ],
+            "system": "email",
+            "value": "Delores12.Kautzer186@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "10 GOVE ST"
+            ],
+            "city": "EAST BOSTON",
+            "state": "MA",
+            "postalCode": "02128-1920",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2054-5",
+                  "display": "Black or African American"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Black or African American"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Emilia403 Moya426"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Portsmouth",
+              "state": "Saint John Parish",
+              "country": "DM"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "4b83a64c-8947-4048-822c-6ea95d8bb33f"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "4b83a64c-8947-4048-822c-6ea95d8bb33f"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-94-2029"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver's license Number"
+                }
+              ],
+              "text": "Driver's license Number"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99932279"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X84312651X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Mota271",
+            "given": [
+              "José3"
+            ],
+            "prefix": [
+              "Mr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-580-6204",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1935-01-28",
+        "address": [
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.34029992468983
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -70.95553286247721
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+              }
+            ],
+            "line": [
+              "823 Quigley Lodge Unit 81"
+            ],
+            "city": "Boston",
+            "state": "MA",
+            "postalCode": "02108",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ],
+          "text": "M"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "es",
+                  "display": "Spanish"
+                }
+              ],
+              "text": "Spanish"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:39fd3052-6b0f-4ed1-bcc5-4ae041f1e016",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99221",
+                "display": "Initial hospital care"
+              }
+            ],
+            "text": "Initial hospital care"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:e70497fc-35a3-40ef-a94a-71acb56ce073",
+          "display": "Mr. José3 Mota271"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:0000016d-235f-39b3-0000-000000001298",
+              "display": "Dr. Hayden835 Mraz590"
+            }
+          }
+        ],
+        "period": {
+          "start": "1972-04-17T23:19:25-08:00",
+          "end": "1972-04-17T23:34:25-08:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0000016d-235f-39b3-0000-000000001298",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "4760"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Mraz590",
+            "given": [
+              "Hayden835"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                "valueBoolean": true
+              }
+            ],
+            "system": "email",
+            "value": "Hayden835.Mraz590@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "50 JEFFERSON ST"
+            ],
+            "city": "WINTHROP",
+            "state": "MA",
+            "postalCode": "02152-2649",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    }
+  ]
+}

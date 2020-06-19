@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="location01"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: location01</p><p><b>meta</b>: </p><p><b>name</b>: DaVinciClinic01</p><p><b>address</b>: 102 Heritage Dr. Somerset NJ 08873 USA </p></div>
+  </text>
+  <name value="DaVinciClinic01"/>
+  <address>
+    <line value="102 Heritage Dr."/>
+    <city value="Somerset"/>
+    <state value="NJ"/>
+    <postalCode value="08873"/>
+    <country value="USA"/>
+  </address>
+</Location>

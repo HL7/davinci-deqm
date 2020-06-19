@@ -1,0 +1,32 @@
+{
+  "resourceType": "Device",
+  "id": "deqm-software-system-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: deqm-software-system-example</p><p><b>meta</b>: </p><h3>DeviceNames</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>cqf-tooling</td><td>manufacturer-name</td></tr></table><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/cqfmeasures/CodeSystem/software-system-type tooling}\">Tooling</span></p><h3>Versions</h3><table class=\"grid\"><tr><td>-</td><td><b>Value</b></td></tr><tr><td>*</td><td>1.0.4</td></tr></table></div>"
+  },
+  "deviceName": [
+    {
+      "name": "cqf-tooling",
+      "type": "manufacturer-name"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/software-system-type",
+        "code": "tooling"
+      }
+    ]
+  },
+  "version": [
+    {
+      "value": "1.0.4"
+    }
+  ]
+}

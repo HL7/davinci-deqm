@@ -1,0 +1,25 @@
+﻿<html>
+<head>
+  <title>Bundle-single-indv-mrp-task-report-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>business-rule</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0]</td><td>The code provided (112) does not match the code specified in the measure report (MRP Group)</td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0].population[0]</td><td>The code for this group population has no match in the measure definition</td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0]</td><td>The MeasureReport does not include a group for the group Initial Population </td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0]</td><td>The MeasureReport does not include a group for the group Numerator </td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0]</td><td>The MeasureReport does not include a group for the group Denominator </td><td></td></tr>
+<tr><td>error</td><td>required</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0].measureScore.value</td><td>The value is invalid - it must be between 0 and 1</td><td></td></tr>
+<tr><td>error</td><td>invariant</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport)</td><td>deqm-2: If the measure scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required [extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()]</td><td></td></tr>
+<tr><td>warning</td><td>code-invalid</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[2].resource.ofType(Coverage).relationship.coding[0]</td><td>A code with no system has no defined meaning. A system should be provided</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0].code.coding[0]</td><td>Code System URI &quot;http://example.org&quot; is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0].population[0].code.coding[0]</td><td>Code System URI &quot;http://example.org&quot; is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[1].resource.ofType(Task).code.coding[0]</td><td>Code System URI &quot;http://www.ama-assn.org/go/cpt&quot; is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[5].resource.ofType(Patient).extension[2]</td><td>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[5].resource.ofType(Patient).extension[4]</td><td>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/single-indv-mrp-task-report: Bundle.entry[6].resource.ofType(Encounter).type[0].coding[0]</td><td>Code System URI &quot;http://www.ama-assn.org/go/cpt&quot; is unknown so the code cannot be validated</td><td></td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,232 @@
+I"ú.
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#profiles" id="markdown-toc-profiles">Profiles</a></li>
+  <li><a href="#summary-measure-reporting" id="markdown-toc-summary-measure-reporting">Summary Measure Reporting</a></li>
+</ul>
+
+</div>
+
+<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+
+<ul>
+  <li>Do not remove this line (it will not be displayed)</li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>A summary report contains calculated summary data for one or more Clinical Quality Measures (CQMs) for a specified population of patients within a particular health system over a specific period of time. For example, a colorectal cancer screening CQM has patient counts for the initial population, denominator, denominator exclusions, and numerator respectively for a specified population of patients. Summary reports may also contain summary data for stratifier criteria (such as gender or age) as defined in a CQM.</p>
+
+<p>The Summary reporting scenario is supported by the <a href="StructureDefinition-summary-measurereport-deqm.html">DEQM Summary MeasureReport Profile</a>. Transactions between Reporters (for example, organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of summary level quality reports for CQMs to various quality reporting programs.</p>
+
+<h2 id="profiles">Profiles</h2>
+
+<p>The following resources are used in the summary reporting scenario:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource Type</th>
+      <th>Profile Name</th>
+      <th>Link to Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Measure</td>
+      <td>CQFM Measure Profile</td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
+    </tr>
+    <tr>
+      <td>Summary MeasureReport</td>
+      <td>DEQM Summary MeasureReport Profile</td>
+      <td><a href="StructureDefinition-summary-measurereport-deqm.html">DEQM Summary MeasureReport Profile</a></td>
+    </tr>
+    <tr>
+      <td>Organization</td>
+      <td>DEQM Organization Profile</td>
+      <td><a href="StructureDefinition-organization-deqm.html">DEQM Organization</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="summary-measure-reporting">Summary Measure Reporting</h2>
+
+<p>When the results of a quality measure are completed for a population at the end of a measurement period, they are POSTed to the quality measure Receiverâ€™s FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resources are bundled together as a set of <code class="highlighter-rouge">POST</code> interactions and sent as a single <a href="http://hl7.org/fhir/R4/http.html#transaction">transaction</a> interaction using the Standard FHIR API. Multiple summary results can be sent in a single FHIR Bundle as described <a href="indv-reporting.html#individual-measure-reporting">here</a>.  (Note that if the Bundle consist of only Summary MeasureReports, then a <a href="http://hl7.org/fhir/R4/bundle.html#collection">collection</a> bundle is used.)</p>
+
+<p>Posting a Summary Measure Report is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios SHALL contains only the new and updated DEQM and QI Core Profiles since the last transaction or those that need to be deleted. (<code class="highlighter-rouge">Bundle.request.method</code> = POST, PUT, or DELETE).</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+  <figure class="figure">
+    <figcaption class="figure-caption">
+      <p><strong>Figure 2-11 POST Summary Report</strong>&lt;/figcaption&gt;
+  <img src="summ_report_post.jpg" class="figure-img-narrow img-responsive img-rounded center-block" alt="summ_report_post.jpg" />
+&lt;/figure&gt;</p>
+
+      <p></p>
+      <p>&lt;/div&gt;</p>
+
+      <h3 class="no_toc" id="usage">Usage</h3>
+
+      <p>for a single MeasureReport:</p>
+
+      <p><code class="highlighter-rouge">POST|[base]/MeasureReport</code></p>
+
+      <p>for a Bundle Transaction:</p>
+
+      <p><code class="highlighter-rouge">POST|[base]</code></p>
+
+      <p>
+  <button class="btn btn-info btn-lg" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#mrp-summary-report-example" aria-expanded="false" aria-controls="collapseExample">
+    Click Here To See POST summary Report Example
+  </button>
+</p>
+
+      <div class="collapse" id="mrp-summary-report-example">
+        <div class="card card-body">
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h4 class="no_toc" id="examples"&gt;Examples&lt;/h4&gt;
+</code></pre></div>          </div>
+
+          <p><strong>Scenario:</strong></p>
+
+          <p>Payer X who is acting in the role of a Reporter submits a MRP Summary Report for MRP for period P to Receiver Z.  The body of the request is MeasureReport resource containing the required  summary data for MRP attestation for the period. (Note that this a simplified example and just populates the count for initial population. However, counts for all populations specified in an eCQM <em>should</em> be reported in a summary report)  An HTTP Status success code is returned on successful submission.</p>
+
+          <p><strong>POST Summary Report</strong></p>
+
+          <p><code class="highlighter-rouge">POST [base]/MeasureReport</code></p>
+
+          <p><strong>Request body</strong></p>
+          <div class="highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>{
+  "resourceType": "MeasureReport",
+  "id": "summ-measurereport01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: summ-measurereport01&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: summary&lt;/p&gt;&lt;p&gt;&lt;b&gt;measure&lt;/b&gt;: &lt;a href=\"http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example\"&gt;http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Sep 5, 2018, 9:59:52 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;reporter&lt;/b&gt;: &lt;a href=\"Organization-organization01.html\"&gt;Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\"&gt;Healthcare Provider&lt;/span&gt;; name: DaVinciHospital01; ph: (+1) 401-555-1212&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Aug 1, 2018, 12:00:00 AM --&amp;gt; Sep 1, 2018, 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;improvementNotation&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\"&gt;Increased score indicates improvement&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://example.org mrp-group}\"&gt;MRP Group&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: initial-population&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\"&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 100&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: numerator&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\"&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 80&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: denominator&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\"&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 100&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 0.8&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+            "code": "proportion"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+  "date": "2018-09-05T16:59:52.404Z",
+  "reporter": {
+    "reference": "Organization/organization01"
+  },
+  "period": {
+    "start": "2018-08-01",
+    "end": "2018-09-01"
+  },
+  "improvementNotation": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "code": "increase",
+        "display": "Increased score indicates improvement"
+      }
+    ]
+  },
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://example.org",
+            "code": "mrp-group",
+            "display": "MRP Group"
+          }
+        ],
+        "text": "MRP Group"
+      },
+      "population": [
+        {
+          "id": "initial-population",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 100
+        },
+        {
+          "id": "numerator",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 80
+        },
+        {
+          "id": "denominator",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "count": 100
+        }
+      ],
+      "measureScore": {
+        "value": 0.8
+      }
+    }
+  ]
+}
+</code></pre>
+            </div>
+          </div>
+
+          <p><strong>Response</strong></p>
+
+          <div class="highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <p>for an example of a Summary MeasureReport with counts for multiple populations and stratifiers specified in an eCQM see the <a href="MeasureReport-summ-medicare-stratification-example.html">Medicare Stratification Example</a> and the  <a href="col.html#summary-measurereport">COL Summary MeasureReport</a>.  For an example of a Bundle of multiple summary results see the <a href="Bundle-multiple-summ-report.html">Bundle Multiple Summ Report</a>.</p>
+
+      <p><br /></p>
+
+    </figcaption>
+  </figure>
+</div>
+:ET

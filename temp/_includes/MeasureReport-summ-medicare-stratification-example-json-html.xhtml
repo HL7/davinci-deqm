@@ -1,0 +1,352 @@
+{% raw %}<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport">resourceType</a>" : "MeasureReport",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.id">id</a>" : "summ-medicare-stratification-example",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: summ-medicare-stratification-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: summary&lt;/p&gt;&lt;p&gt;&lt;b&gt;measure&lt;/b&gt;: &lt;a href=\&quot;http://example.org/fhir/Measure/measure-medicare-stratification-example\&quot;&gt;http://example.org/fhir/Measure/measure-medicare-stratification-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Jan 1, 2018, 12:00:00 AM --&amp;gt; Dec 31, 2018, 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;improvementNotation&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\&quot;&gt;Increased score indicates improvement&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;group&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}\&quot;&gt;initial-population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 10000&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}\&quot;&gt;denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 8000&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}\&quot;&gt;numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 4000&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}\&quot;&gt;numerator-administrative&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 2000&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}\&quot;&gt;numerator-medical&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 1000&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}\&quot;&gt;numerator-supplemental&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 1000&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 50 %&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratifier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageType}\&quot;&gt;Coverage Type&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/SOP MEDICARE}\&quot;&gt;Medicare&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}\&quot;&gt;initial-population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 1747&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}\&quot;&gt;denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 392&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}\&quot;&gt;numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 243&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}\&quot;&gt;numerator-administrative&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 154&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}\&quot;&gt;numerator-medical&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 12&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}\&quot;&gt;numerator-supplemental&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 77&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 61.99 %&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratifier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageTypeAndClass}\&quot;&gt;Coverage Type and Class&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;stratum&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageType}\&quot;&gt;Coverage Type&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/SOP MEDICARE}\&quot;&gt;Medicare&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;component&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageClass}\&quot;&gt;Coverage Class&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/medicare-subgroup Non-LIS/DE,Nondisability}\&quot;&gt;Non-LIS/DE,Nondisability&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}\&quot;&gt;initial-population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 745&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}\&quot;&gt;denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 150&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}\&quot;&gt;numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 103&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}\&quot;&gt;numerator-administrative&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 77&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}\&quot;&gt;numerator-medical&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 7&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}\&quot;&gt;numerator-supplemental&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 19&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 68.67 %&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-scoring",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "proportion"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">status</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">type</a>" : "summary",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">measure</a>" : "http://example.org/fhir/Measure/measure-medicare-stratification-example",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">period</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2018-01-01",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2018-12-31"
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.improvementNotation">improvementNotation</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "increase",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Increased score indicates improvement"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population">population</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "initial-population"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 10000
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "denominator"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 8000
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 4000
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-administrative"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 2000
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-medical"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 1000
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-supplemental"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 1000
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.measureScore">measureScore</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 50,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "%",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "%"
+      },
+      "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier">stratifier</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">code</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/stratifier-classifications",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "CoverageType",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Coverage Type"
+                }
+              ]
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">stratum</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">value</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/SOP",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "MEDICARE",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Medicare"
+                  }
+                ]
+              },
+              "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">population</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "initial-population"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 1747
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "denominator"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 392
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 243
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-administrative"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 154
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-medical"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 12
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-supplemental"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 77
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">measureScore</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 61.99,
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "%",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "%"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">code</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/stratifier-classifications",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "CoverageTypeAndClass",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Coverage Type and Class"
+                }
+              ]
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">stratum</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component">component</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/stratifier-classifications",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "CoverageType",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Coverage Type"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.value">value</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/SOP",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "MEDICARE",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Medicare"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/stratifier-classifications",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "CoverageClass",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Coverage Class"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.value">value</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/medicare-subgroup",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "Non-LIS/DE,Nondisability",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Non-LIS/DE,Nondisability"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">population</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "initial-population"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 745
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "denominator"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 150
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 103
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-administrative"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 77
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-medical"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 7
+                },
+                {
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">code</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/CodeSystem/measure-population-type",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator-supplemental"
+                      }
+                    ]
+                  },
+                  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">count</a>" : 19
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">measureScore</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 68.67,
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "%",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "%"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+{% endraw %}

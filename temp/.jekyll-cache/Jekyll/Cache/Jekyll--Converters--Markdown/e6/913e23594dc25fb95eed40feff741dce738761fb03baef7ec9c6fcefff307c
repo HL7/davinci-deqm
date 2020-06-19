@@ -1,0 +1,31 @@
+I"F
+<div class="markdown-toc">
+
+</div>
+
+<p>Refer to the specific FHIR resources and profiles for each measure’s requirements for guidance in appropriate use of value sets, terminologies and code systems.</p>
+
+<h3 class="no_toc" id="value-sets">Value Sets</h3>
+
+<li>
+  <p><a href="ValueSet-update-type.html">DEQM Update Type Value Set</a>&lt;/li&gt;</p>
+
+  <h3 class="no_toc" id="code-systems">Code Systems<sup id="fnref:5"><a href="#fn:5" class="footnote">1</a></sup></h3>
+
+  <li>
+    <p><a href="CodeSystem-update-type.html">DEQM Update Type Code System</a>&lt;/li&gt;</p>
+
+    <hr />
+
+    <p><br /></p>
+
+  </li>
+</li>
+<div class="footnotes">
+  <ol>
+    <li id="fn:5">
+      <p>May includes DEQM defined code systems and externally defined code systems <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

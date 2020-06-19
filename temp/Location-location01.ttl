@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Location/location01> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "location01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: location01</p><p><b>meta</b>: </p><p><b>name</b>: DaVinciClinic01</p><p><b>address</b>: 102 Heritage Dr. Somerset NJ 08873 USA </p></div>"
+  ];
+  fhir:Location.name [ fhir:value "DaVinciClinic01"];
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "102 Heritage Dr.";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Somerset" ];
+     fhir:Address.state [ fhir:value "NJ" ];
+     fhir:Address.postalCode [ fhir:value "08873" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Location/location01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/Location/location01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

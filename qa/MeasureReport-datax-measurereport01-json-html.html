@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+  <title>MeasureReport-datax-measurereport01-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport">resourceType</a>" : "MeasureReport",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.id">id</a>" : "datax-measurereport01",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: datax-measurereport01&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: data-collection&lt;/p&gt;&lt;p&gt;&lt;b&gt;measure&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example\&quot;&gt;http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-patient01.html\&quot;&gt;Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\&quot;&gt;Married&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Sep 5, 2018, 9:59:52 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;reporter&lt;/b&gt;: &lt;a href=\&quot;Organization-organization01.html\&quot;&gt;Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\&quot;&gt;Healthcare Provider&lt;/span&gt;; name: DaVinciHospital01; ph: (+1) 401-555-1212&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Aug 1, 2018, 12:00:00 AM --&amp;gt; Sep 1, 2018, 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;evaluatedResource&lt;/b&gt;: &lt;a href=\&quot;Task-Task01.html\&quot;&gt;Generated Summary: id: Task01; 19009; status: completed; intent: plan; priority: routine; &lt;span title=\&quot;Codes: {http://www.ama-assn.org/go/cpt 1111F}\&quot;&gt;Medication Reconciliation&lt;/span&gt;; executionPeriod: Jun 11, 2017, 12:00:00 AM --&amp;gt; Jun 11, 2017, 12:00:00 AM; authoredOn: Sep 25, 2018, 7:24:23 AM&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Device/deqm-software-system-example"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "incremental"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">status</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">type</a>" : "data-collection",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">measure</a>" : "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/patient01"
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.date">date</a>" : "2018-09-05T16:59:52.404Z",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.reporter">reporter</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/organization01"
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">period</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2018-08-01",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2018-09-01"
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.evaluatedResource">evaluatedResource</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Task/Task01"
+    }
+  ]
+}</pre>
+</body>
+</html>

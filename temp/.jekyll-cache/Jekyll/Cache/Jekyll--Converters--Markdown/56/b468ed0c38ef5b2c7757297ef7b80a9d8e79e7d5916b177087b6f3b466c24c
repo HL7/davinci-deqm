@@ -1,0 +1,61 @@
+I"à<h3 class="no_toc" id="examples">Examples</h3>
+
+<p><strong>Scenario:</strong></p>
+
+<p>Provider X acting in the role of Producer submits MRP data for Patient Y to Payer Z who is acting in the role of Consumer.  The body of the request is a Parameters resource containing the required profiles for MRP attestation using Task as the resource used to evaluate the measure.  An HTTP Status success code is returned on successful submission.</p>
+
+<p><strong>Request using <code class="highlighter-rouge">POST</code></strong></p>
+
+<p><code class="highlighter-rouge">POST [base]/Measure/measure-mrp/$submit-data</code></p>
+
+<p><strong>Request body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "resourceType":"Parameters",
+   "parameter":[
+      {
+         "name":"measurereport",
+         "resource":"{"resourceType": "MeasureReport",
+         ...}
+      },
+      {
+        "name":"resource",
+        "resource":"{"resourceType": "Task",
+        ...}
+      },
+      {
+        "name":"resource",
+        "resource":"{"resourceType": "Patient",
+        ...}
+      },
+      {
+        "name":"resource",
+        "resource":"{"resourceType": "Location",
+          ...}
+      },
+      {
+        "name":"resource",
+        "resource":"{"resourceType": "Practitioner",
+        ...}
+      },
+      {
+        "name":"resource",
+        "resource":"{"resourceType": "Organization",
+        ...}
+      },
+      {
+        "name":"resource",
+        "resource":"{"resourceType": "Coverage",
+        ...}
+      },
+
+    ]
+ }
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+:ET

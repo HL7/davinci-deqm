@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Device/deqm-software-system-example> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "deqm-software-system-example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: deqm-software-system-example</p><p><b>meta</b>: </p><h3>DeviceNames</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>cqf-tooling</td><td>manufacturer-name</td></tr></table><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/us/cqfmeasures/CodeSystem/software-system-type tooling}\">Tooling</span></p><h3>Versions</h3><table class=\"grid\"><tr><td>-</td><td><b>Value</b></td></tr><tr><td>*</td><td>1.0.4</td></tr></table></div>"
+  ];
+  fhir:Device.deviceName [
+     fhir:index 0;
+     fhir:Device.deviceName.name [ fhir:value "cqf-tooling" ];
+     fhir:Device.deviceName.type [ fhir:value "manufacturer-name" ]
+  ];
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/software-system-type" ];
+       fhir:Coding.code [ fhir:value "tooling" ]
+     ]
+  ];
+  fhir:Device.version [
+     fhir:index 0;
+     fhir:Device.version.value [ fhir:value "1.0.4" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Device/deqm-software-system-example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/Device/deqm-software-system-example.ttl> .
+
+# -------------------------------------------------------------------------------------
+

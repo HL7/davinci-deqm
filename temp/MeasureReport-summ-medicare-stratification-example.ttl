@@ -1,0 +1,330 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/MeasureReport/summ-medicare-stratification-example> a fhir:MeasureReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "summ-medicare-stratification-example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: summ-medicare-stratification-example</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href=\"http://example.org/fhir/Measure/measure-medicare-stratification-example\">http://example.org/fhir/Measure/measure-medicare-stratification-example</a></p><p><b>period</b>: Jan 1, 2018, 12:00:00 AM --&gt; Dec 31, 2018, 12:00:00 AM</p><p><b>improvementNotation</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}\">initial-population</span></p><p><b>count</b>: 10000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}\">denominator</span></p><p><b>count</b>: 8000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}\">numerator</span></p><p><b>count</b>: 4000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}\">numerator-administrative</span></p><p><b>count</b>: 2000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}\">numerator-medical</span></p><p><b>count</b>: 1000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}\">numerator-supplemental</span></p><p><b>count</b>: 1000</p></blockquote><p><b>measureScore</b>: 50 %</p><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageType}\">Coverage Type</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Codes: {http://example.org/CodeSystem/SOP MEDICARE}\">Medicare</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}\">initial-population</span></p><p><b>count</b>: 1747</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}\">denominator</span></p><p><b>count</b>: 392</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}\">numerator</span></p><p><b>count</b>: 243</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}\">numerator-administrative</span></p><p><b>count</b>: 154</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}\">numerator-medical</span></p><p><b>count</b>: 12</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}\">numerator-supplemental</span></p><p><b>count</b>: 77</p></blockquote><p><b>measureScore</b>: 61.99 %</p></blockquote></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageTypeAndClass}\">Coverage Type and Class</span></p><blockquote><p><b>stratum</b></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageType}\">Coverage Type</span></p><p><b>value</b>: <span title=\"Codes: {http://example.org/CodeSystem/SOP MEDICARE}\">Medicare</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageClass}\">Coverage Class</span></p><p><b>value</b>: <span title=\"Codes: {http://example.org/CodeSystem/medicare-subgroup Non-LIS/DE,Nondisability}\">Non-LIS/DE,Nondisability</span></p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}\">initial-population</span></p><p><b>count</b>: 745</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}\">denominator</span></p><p><b>count</b>: 150</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}\">numerator</span></p><p><b>count</b>: 103</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}\">numerator-administrative</span></p><p><b>count</b>: 77</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}\">numerator-medical</span></p><p><b>count</b>: 7</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}\">numerator-supplemental</span></p><p><b>count</b>: 19</p></blockquote><p><b>measureScore</b>: 68.67 %</p></blockquote></blockquote></blockquote></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-scoring" ];
+         fhir:Coding.code [ fhir:value "proportion" ]
+       ]
+     ]
+  ];
+  fhir:MeasureReport.status [ fhir:value "complete"];
+  fhir:MeasureReport.type [ fhir:value "summary"];
+  fhir:MeasureReport.measure [
+     fhir:value "http://example.org/fhir/Measure/measure-medicare-stratification-example";
+     fhir:link <http://example.org/fhir/Measure/measure-medicare-stratification-example>
+  ];
+  fhir:MeasureReport.period [
+     fhir:Period.start [ fhir:value "2018-01-01"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2018-12-31"^^xsd:date ]
+  ];
+  fhir:MeasureReport.improvementNotation [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-improvement-notation" ];
+       fhir:Coding.code [ fhir:value "increase" ];
+       fhir:Coding.display [ fhir:value "Increased score indicates improvement" ]
+     ]
+  ];
+  fhir:MeasureReport.group [
+     fhir:index 0;
+     fhir:MeasureReport.group.population [
+       fhir:index 0;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+           fhir:Coding.code [ fhir:value "initial-population" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "10000"^^xsd:integer ]
+     ], [
+       fhir:index 1;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "8000"^^xsd:integer ]
+     ], [
+       fhir:index 2;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "4000"^^xsd:integer ]
+     ], [
+       fhir:index 3;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+           fhir:Coding.code [ fhir:value "numerator-administrative" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "2000"^^xsd:integer ]
+     ], [
+       fhir:index 4;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+           fhir:Coding.code [ fhir:value "numerator-medical" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "1000"^^xsd:integer ]
+     ], [
+       fhir:index 5;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+           fhir:Coding.code [ fhir:value "numerator-supplemental" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "1000"^^xsd:integer ]
+     ];
+     fhir:MeasureReport.group.measureScore [
+       fhir:Quantity.value [ fhir:value "50"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "%" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "%" ]
+     ];
+     fhir:MeasureReport.group.stratifier [
+       fhir:index 0;
+       fhir:MeasureReport.group.stratifier.code [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/stratifier-classifications" ];
+           fhir:Coding.code [ fhir:value "CoverageType" ];
+           fhir:Coding.display [ fhir:value "Coverage Type" ]
+         ]
+       ];
+       fhir:MeasureReport.group.stratifier.stratum [
+         fhir:index 0;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/SOP" ];
+             fhir:Coding.code [ fhir:value "MEDICARE" ];
+             fhir:Coding.display [ fhir:value "Medicare" ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "initial-population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "1747"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "392"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "243"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator-administrative" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "154"^^xsd:integer ]
+         ], [
+           fhir:index 4;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator-medical" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "12"^^xsd:integer ]
+         ], [
+           fhir:index 5;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator-supplemental" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "77"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "61.99"^^xsd:decimal ];
+           fhir:Quantity.unit [ fhir:value "%" ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "%" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:MeasureReport.group.stratifier.code [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/stratifier-classifications" ];
+           fhir:Coding.code [ fhir:value "CoverageTypeAndClass" ];
+           fhir:Coding.display [ fhir:value "Coverage Type and Class" ]
+         ]
+       ];
+       fhir:MeasureReport.group.stratifier.stratum [
+         fhir:index 0;
+         fhir:MeasureReport.group.stratifier.stratum.component [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.component.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/stratifier-classifications" ];
+               fhir:Coding.code [ fhir:value "CoverageType" ];
+               fhir:Coding.display [ fhir:value "Coverage Type" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.component.value [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/SOP" ];
+               fhir:Coding.code [ fhir:value "MEDICARE" ];
+               fhir:Coding.display [ fhir:value "Medicare" ]
+             ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.component.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/stratifier-classifications" ];
+               fhir:Coding.code [ fhir:value "CoverageClass" ];
+               fhir:Coding.display [ fhir:value "Coverage Class" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.component.value [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/medicare-subgroup" ];
+               fhir:Coding.code [ fhir:value "Non-LIS/DE,Nondisability" ];
+               fhir:Coding.display [ fhir:value "Non-LIS/DE,Nondisability" ]
+             ]
+           ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "initial-population" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "745"^^xsd:integer ]
+         ], [
+           fhir:index 1;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "denominator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "150"^^xsd:integer ]
+         ], [
+           fhir:index 2;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "103"^^xsd:integer ]
+         ], [
+           fhir:index 3;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator-administrative" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "77"^^xsd:integer ]
+         ], [
+           fhir:index 4;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator-medical" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "7"^^xsd:integer ]
+         ], [
+           fhir:index 5;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0;
+               fhir:Coding.system [ fhir:value "http://example.org/CodeSystem/measure-population-type" ];
+               fhir:Coding.code [ fhir:value "numerator-supplemental" ]
+             ]
+           ];
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "19"^^xsd:integer ]
+         ];
+         fhir:MeasureReport.group.stratifier.stratum.measureScore [
+           fhir:Quantity.value [ fhir:value "68.67"^^xsd:decimal ];
+           fhir:Quantity.unit [ fhir:value "%" ];
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+           fhir:Quantity.code [ fhir:value "%" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/MeasureReport/summ-medicare-stratification-example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/MeasureReport/summ-medicare-stratification-example.ttl> .
+
+# -------------------------------------------------------------------------------------
+

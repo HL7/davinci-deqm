@@ -1,0 +1,764 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Bundle/single-indv-mrp-task-report> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "single-indv-mrp-task-report"];
+  fhir:Bundle.type [ fhir:value "transaction"];
+  fhir:Bundle.timestamp [ fhir:value "2019-12-06T06:28:16.152480Z"^^xsd:dateTime];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:97e6dbd2-17f1-11ea-82fa-4ccc6a181ed3" ];
+     fhir:Bundle.entry.resource <urn:uuid:97e6dbd2-17f1-11ea-82fa-4ccc6a181ed3>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "MeasureReport" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:97e702cc-17f1-11ea-8b65-4ccc6a181ed3" ];
+     fhir:Bundle.entry.resource <urn:uuid:97e702cc-17f1-11ea-8b65-4ccc6a181ed3>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Task" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:97e729ba-17f1-11ea-ae32-4ccc6a181ed3" ];
+     fhir:Bundle.entry.resource <urn:uuid:97e729ba-17f1-11ea-ae32-4ccc6a181ed3>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Coverage" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:97e750b6-17f1-11ea-89ea-4ccc6a181ed3" ];
+     fhir:Bundle.entry.resource <urn:uuid:97e750b6-17f1-11ea-89ea-4ccc6a181ed3>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:97e750b7-17f1-11ea-b4af-4ccc6a181ed3" ];
+     fhir:Bundle.entry.resource <urn:uuid:97e750b7-17f1-11ea-b4af-4ccc6a181ed3>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8" ];
+     fhir:Bundle.entry.resource <urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71" ];
+     fhir:Bundle.entry.resource <urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:0000016d-235f-39b3-0000-0000000000fa" ];
+     fhir:Bundle.entry.resource <urn:uuid:0000016d-235f-39b3-0000-0000000000fa>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Practitioner" ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726" ];
+     fhir:Bundle.entry.resource <urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Organization" ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742" ];
+     fhir:Bundle.entry.resource <urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Location" ]
+     ]
+  ] .
+
+<urn:uuid:97e6dbd2-17f1-11ea-82fa-4ccc6a181ed3> a fhir:MeasureReport;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier" ];
+     fhir:Extension.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.3.2074.1" ];
+       fhir:Identifier.value [ fhir:value "0015HQN9BD3304E" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.reference [ fhir:value "urn:uuid:97e750b6-17f1-11ea-89ea-4ccc6a181ed3" ]
+     ]
+  ];
+  fhir:MeasureReport.status [ fhir:value "complete"];
+  fhir:MeasureReport.type [ fhir:value "individual"];
+  fhir:MeasureReport.measure [
+     fhir:value "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example";
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example>
+  ];
+  fhir:MeasureReport.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8" ]
+  ];
+  fhir:MeasureReport.date [ fhir:value "2018-09-05T16:59:52.404Z"^^xsd:dateTime];
+  fhir:MeasureReport.reporter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726" ]
+  ];
+  fhir:MeasureReport.period [
+     fhir:Period.start [ fhir:value "2018-08-01"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2018-09-01"^^xsd:date ]
+  ];
+  fhir:MeasureReport.group [
+     fhir:index 0;
+     fhir:MeasureReport.group.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org" ];
+         fhir:Coding.code [ fhir:value "112" ];
+         fhir:Coding.display [ fhir:value "112" ]
+       ]
+     ];
+     fhir:MeasureReport.group.population [
+       fhir:index 0;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://example.org" ];
+           fhir:Coding.code [ fhir:value "initial-population" ];
+           fhir:Coding.display [ fhir:value "Initial Population" ]
+         ]
+       ]
+     ];
+     fhir:MeasureReport.group.measureScore [
+       fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ]
+     ]
+  ];
+  fhir:MeasureReport.evaluatedResource [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:97e702cc-17f1-11ea-8b65-4ccc6a181ed3" ]
+  ] .
+
+<urn:uuid:97e702cc-17f1-11ea-8b65-4ccc6a181ed3> a fhir:Task;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Task.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://example.org" ];
+     fhir:Identifier.value [ fhir:value "19009" ]
+  ];
+  fhir:Task.status [ fhir:value "completed"];
+  fhir:Task.intent [ fhir:value "plan"];
+  fhir:Task.priority [ fhir:value "routine"];
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.ama-assn.org/go/cpt" ];
+       fhir:Coding.code [ fhir:value "1111F" ];
+       fhir:Coding.display [ fhir:value "Medication Reconciliation" ]
+     ]
+  ];
+  fhir:Task.for [
+     fhir:Reference.reference [ fhir:value "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8" ]
+  ];
+  fhir:Task.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71" ]
+  ];
+  fhir:Task.executionPeriod [
+     fhir:Period.start [ fhir:value "2017-06-11"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2017-06-11"^^xsd:date ]
+  ];
+  fhir:Task.authoredOn [ fhir:value "2018-09-25T14:24:23.584Z"^^xsd:dateTime];
+  fhir:Task.owner [
+     fhir:Reference.reference [ fhir:value "urn:uuid:0000016d-235f-39b3-0000-0000000000fa" ]
+  ] .
+
+<urn:uuid:97e729ba-17f1-11ea-ae32-4ccc6a181ed3> a fhir:Coverage;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Coverage.status [ fhir:value "active"];
+  fhir:Coverage.policyHolder [
+     fhir:Reference.reference [ fhir:value "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8" ]
+  ];
+  fhir:Coverage.subscriber [
+     fhir:Reference.reference [ fhir:value "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8" ]
+  ];
+  fhir:Coverage.subscriberId [ fhir:value "A123456789"];
+  fhir:Coverage.beneficiary [
+     fhir:Reference.reference [ fhir:value "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8" ]
+  ];
+  fhir:Coverage.relationship [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "self" ]
+     ]
+  ];
+  fhir:Coverage.payor [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:97e750b7-17f1-11ea-b4af-4ccc6a181ed3" ]
+  ] .
+
+<urn:uuid:97e750b6-17f1-11ea-89ea-4ccc6a181ed3> a fhir:Organization;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "TAX" ];
+         fhir:Coding.display [ fhir:value "Tax ID number" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.4.4" ];
+     fhir:Identifier.value [ fhir:value "456789124" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "www.irs.gov" ]
+     ]
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+       fhir:Coding.code [ fhir:value "other" ];
+       fhir:Coding.display [ fhir:value "Other" ]
+     ]
+  ];
+  fhir:Organization.name [ fhir:value "DV Quality Measure Data Reporter"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 616-555-1212" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "160 Glen Eagles Road";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Grand Rapids" ];
+     fhir:Address.state [ fhir:value "MI" ];
+     fhir:Address.postalCode [ fhir:value "49503" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ] .
+
+<urn:uuid:97e750b7-17f1-11ea-b4af-4ccc6a181ed3> a fhir:Organization;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "TAX" ];
+         fhir:Coding.display [ fhir:value "Tax ID number" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.4.4" ];
+     fhir:Identifier.value [ fhir:value "456789125" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "www.irs.gov" ]
+     ]
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+       fhir:Coding.code [ fhir:value "ins" ];
+       fhir:Coding.display [ fhir:value "Insurance Company" ]
+     ]
+  ];
+  fhir:Organization.name [ fhir:value "DVPayer04"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(+1) 616-555-1212" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "160 Glen Eagles Road";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Grand Rapids" ];
+     fhir:Address.state [ fhir:value "MI" ];
+     fhir:Address.postalCode [ fhir:value "49503" ];
+     fhir:Address.country [ fhir:value "USA" ]
+  ] .
+
+<urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8> a fhir:Patient;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2106-3" ];
+         fhir:Coding.display [ fhir:value "White" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "White" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2186-5" ];
+         fhir:Coding.display [ fhir:value "Not Hispanic or Latino" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Not Hispanic or Latino" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName" ];
+     fhir:Extension.valueString [ fhir:value "Freda902 Tillman293" ]
+  ], [
+     fhir:index 3;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex" ];
+     fhir:Extension.valueCode [ fhir:value "F" ]
+  ], [
+     fhir:index 4;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/patient-birthPlace" ];
+     fhir:Extension.valueAddress [
+       fhir:Address.city [ fhir:value "Faro" ];
+       fhir:Address.state [ fhir:value "Algarve" ];
+       fhir:Address.country [ fhir:value "PT" ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://github.com/synthetichealth/synthea" ];
+     fhir:Identifier.value [ fhir:value "0156e3a9-c4e1-4c0a-a53e-03ce3984ac65" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "MR" ];
+         fhir:Coding.display [ fhir:value "Medical Record Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medical Record Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.smarthealthit.org" ];
+     fhir:Identifier.value [ fhir:value "0156e3a9-c4e1-4c0a-a53e-03ce3984ac65" ]
+  ], [
+     fhir:index 2;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "SS" ];
+         fhir:Coding.display [ fhir:value "Social Security Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Social Security Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-ssn" ];
+     fhir:Identifier.value [ fhir:value "999-61-8566" ]
+  ], [
+     fhir:index 3;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "DL" ];
+         fhir:Coding.display [ fhir:value "Driver's license Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Driver's license Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.840.1.113883.4.3.25" ];
+     fhir:Identifier.value [ fhir:value "S99966861" ]
+  ], [
+     fhir:index 4;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "PPN" ];
+         fhir:Coding.display [ fhir:value "Passport Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Passport Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber" ];
+     fhir:Identifier.value [ fhir:value "X52208740X" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "McDermott739" ];
+     fhir:HumanName.given [
+       fhir:value "Debbie941";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Mrs.";
+       fhir:index 0
+     ]
+  ], [
+     fhir:index 1;
+     fhir:HumanName.use [ fhir:value "maiden" ];
+     fhir:HumanName.family [ fhir:value "Funk324" ];
+     fhir:HumanName.given [
+       fhir:value "Debbie941";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Mrs.";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "555-755-4280" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "1961-02-26"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "latitude" ];
+         fhir:Extension.valueDecimal [ fhir:value "42.21379047108309"^^xsd:decimal ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "longitude" ];
+         fhir:Extension.valueDecimal [ fhir:value "-72.73951315911818"^^xsd:decimal ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/geolocation" ]
+     ];
+     fhir:Address.line [
+       fhir:value "903 Wolff Ville";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Westfield" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01085" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ];
+  fhir:Patient.maritalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus" ];
+       fhir:Coding.code [ fhir:value "M" ];
+       fhir:Coding.display [ fhir:value "Married" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "M" ]
+  ];
+  fhir:Patient.multipleBirthBoolean [ fhir:value "false"^^xsd:boolean];
+  fhir:Patient.communication [
+     fhir:index 0;
+     fhir:Patient.communication.language [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:ietf:bcp:47" ];
+         fhir:Coding.code [ fhir:value "pt" ];
+         fhir:Coding.display [ fhir:value "Portuguese" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Portuguese" ]
+     ]
+  ] .
+
+<urn:uuid:1f33ae07-0891-4c2a-a376-fcd18800cb71> a fhir:Encounter;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "AMB" ]
+  ];
+  fhir:Encounter.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.ama-assn.org/go/cpt" ];
+       fhir:Coding.code [ fhir:value "99221" ];
+       fhir:Coding.display [ fhir:value "Initial hospital care" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Initial hospital care" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8" ];
+     fhir:Reference.display [ fhir:value "Mrs. Debbie941 McDermott739" ]
+  ];
+  fhir:Encounter.participant [
+     fhir:index 0;
+     fhir:Encounter.participant.individual [
+       fhir:Reference.reference [ fhir:value "urn:uuid:0000016d-235f-39b3-0000-0000000000fa" ];
+       fhir:Reference.display [ fhir:value "Dr. Manuel446 Granados71" ]
+     ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "1976-06-20T10:41:49-07:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2018-04-29T10:41:49-07:00"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.location [
+     fhir:index 0;
+     fhir:Encounter.location.location [
+       fhir:Reference.reference [ fhir:value "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742" ];
+       fhir:Reference.display [ fhir:value "NOBLE HOSPITAL" ]
+     ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:Reference.reference [ fhir:value "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726" ];
+     fhir:Reference.display [ fhir:value "NOBLE HOSPITAL" ]
+  ] .
+
+<urn:uuid:0000016d-235f-39b3-0000-0000000000fa> a fhir:Practitioner;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "250" ]
+  ];
+  fhir:Practitioner.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Granados71" ];
+     fhir:HumanName.given [
+       fhir:value "Manuel446";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Dr.";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct" ];
+       fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "Manuel446.Granados71@example.com" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Practitioner.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "115 WEST SILVER STREET";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "WESTFIELD" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01085" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ];
+  fhir:Practitioner.gender [ fhir:value "male"] .
+
+<urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726> a fhir:Organization;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "9999999999" ]
+  ];
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Organization.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+       fhir:Coding.code [ fhir:value "prov" ];
+       fhir:Coding.display [ fhir:value "Healthcare Provider" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Healthcare Provider" ]
+  ];
+  fhir:Organization.name [ fhir:value "NOBLE HOSPITAL"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "4135682811" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "115 WEST SILVER STREET";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "WESTFIELD" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01085" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ] .
+
+<urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742> a fhir:Location;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+  ];
+  fhir:Location.status [ fhir:value "active"];
+  fhir:Location.name [ fhir:value "NOBLE HOSPITAL"];
+  fhir:Location.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "4135682811" ]
+  ];
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "115 WEST SILVER STREET";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "WESTFIELD" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01085" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ];
+  fhir:Location.position [
+     fhir:Location.position.longitude [ fhir:value "-72.755911"^^xsd:decimal ];
+     fhir:Location.position.latitude [ fhir:value "42.138838"^^xsd:decimal ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:Reference.reference [ fhir:value "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726" ];
+     fhir:Reference.display [ fhir:value "NOBLE HOSPITAL" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/Bundle/single-indv-mrp-task-report.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/Bundle/single-indv-mrp-task-report.ttl> .
+
+# -------------------------------------------------------------------------------------
+

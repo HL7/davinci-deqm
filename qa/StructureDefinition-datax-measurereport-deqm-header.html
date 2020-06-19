@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-datax-measurereport-deqm-header</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<p>
+The official URL for this profile is:
+</p>
+<pre>http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm</pre>
+<p>
+<p>[MeasureReport] is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.
+When a data producer needs to send data to a data consumer, they use the <strong>DEQM Data-Exchange MeasureReport Profile</strong> defined here.  The <code>type</code> element in this profile is set to “data-collection”.  Along with the MeasureReport profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on.  When a data producer sends a MeasureReport and the associated data, they may not have all the data that is required to calculate the measure report.  Additional data may need to be collected later or there may be additional data used in the measure that the aggregator owns such as a continuous coverage period requirement.</p>
+</p>
+<p>
+This profile builds on <a href="http://hl7.org/fhir/R4/measurereport.html">MeasureReport</a>.</p>
+<p>
+This profile was published on Tue Jun 19 00:00:00 PDT 2018 as a active by HL7 International - Clinical Quality Information Work Group.
+</p>
+</body>
+</html>

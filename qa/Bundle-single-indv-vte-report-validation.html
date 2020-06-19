@@ -1,0 +1,17 @@
+﻿<html>
+<head>
+  <title>Bundle-single-indv-vte-report-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>invalid</td><td>Bundle/single-indv-vte-report: Bundle.entry[0].resource.ofType(MeasureReport).measure</td><td>URL value &quot;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-vte-1-FHIR&quot; does not resolve</td><td></td></tr>
+<tr><td>error</td><td>invariant</td><td>Bundle/single-indv-vte-report: Bundle.entry[0].resource.ofType(MeasureReport)</td><td>deqm-2: If the measure scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required [extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()]</td><td></td></tr>
+<tr><td>warning</td><td>required</td><td>Bundle/single-indv-vte-report: Bundle.entry[0].resource.ofType(MeasureReport)</td><td>The Measure &quot;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-vte-1-FHIR&quot; could not be resolved, so no validation can be performed against the Measure</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/single-indv-vte-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0].population[0].code.coding[0]</td><td>Code System URI &quot;http://fhir/example.org&quot; is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/single-indv-vte-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0].population[1].code.coding[0]</td><td>Code System URI &quot;http://fhir/example.org&quot; is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/single-indv-vte-report: Bundle.entry[0].resource.ofType(MeasureReport).group[0].population[2].code.coding[0]</td><td>Code System URI &quot;http://fhir/example.org&quot; is unknown so the code cannot be validated</td><td></td></tr>
+</table>
+</body>
+</html>

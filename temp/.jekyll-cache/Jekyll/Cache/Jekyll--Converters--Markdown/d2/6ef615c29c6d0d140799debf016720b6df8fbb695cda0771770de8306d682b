@@ -1,0 +1,129 @@
+I"<h3 class="no_toc" id="example">Example</h3>
+
+<p><strong>Scenario</strong></p>
+
+<p>Provider X acting in the role of the Producer requests data requirements for the MRP measure from Payer Z which is acting in the role of Consumer.  A Library resource containing the required resources for MRP attestation returned on successful evaluation.</p>
+
+<p><strong>Request using <code class="highlighter-rouge">GET</code></strong></p>
+
+<p><code class="highlighter-rouge">GET [base]/Measure/measure-mrp/$data-requirements?periodStart=2018&amp;periodEnd=2018</code></p>
+
+<p><strong>Request using <code class="highlighter-rouge">POST</code></strong></p>
+
+<p><code class="highlighter-rouge">POST [base]/Measure/measure-mrp/$data-requirements</code></p>
+
+<p><strong>Request body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "resourceType":"Parameters",
+   "parameter":[
+      {
+         "name":"periodStart",
+         "valueDate":"2018"
+      },
+      {
+         "name":"periodEnd",
+         "valueDate":"2018"
+      }
+    ]
+ }
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "Library",
+  "id": "library-mrp-example",
+  "text": {
+    "status": "generated",
+    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: library-mrp-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;a href=\"http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example\"&gt;http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;version&lt;/b&gt;: 1.1.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: DEQMLibraryMRPExample&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: DEQM Library MRP Example&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/library-type module-definition}\"&gt;Module Definition&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Jun 19, 2020, 9:23:47 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: HL7 International - Clinical Quality Information Work Group&lt;/p&gt;&lt;p&gt;&lt;b&gt;contact&lt;/b&gt;: http://www.hl7.org/Special/committees/cqi/index.cfm&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Example Library resource to demonstrate the framework for MRP&lt;/p&gt;&lt;p&gt;&lt;b&gt;jurisdiction&lt;/b&gt;: &lt;span title=\"Codes: {urn:iso:std:iso:3166 US}\"&gt;United States of America&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dataRequirement&lt;/b&gt;: , , , , , , &lt;/p&gt;&lt;/div&gt;"
+  },
+  "url": "http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example",
+  "version": "1.1.0",
+  "name": "DEQMLibraryMRPExample",
+  "title": "DEQM Library MRP Example",
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "module-definition"
+      }
+    ]
+  },
+  "date": "2020-06-19T09:23:47-07:00",
+  "publisher": "HL7 International - Clinical Quality Information Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+        }
+      ]
+    }
+  ],
+  "description": "Example Library resource to demonstrate the framework for MRP",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "MeasureReport",
+      "profile": [
+        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+      ]
+    },
+    {
+      "type": "Patient",
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+      ]
+    },
+    {
+      "type": "Encounter",
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+      ]
+    },
+    {
+      "type": "Location",
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"
+      ]
+    },
+    {
+      "type": "Task",
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
+      ]
+    },
+    {
+      "type": "Organization",
+      "profile": [
+        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+      ]
+    },
+    {
+      "type": "Practitioner",
+      "profile": [
+        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+      ]
+    }
+  ]
+}
+</code></pre></div></div>
+:ET

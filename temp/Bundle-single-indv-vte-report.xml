@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="single-indv-vte-report"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4"/>
+    <resource>
+      <MeasureReport>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <status value="complete"/>
+        <type value="individual"/>
+        <measure value="http://hl7.org/fhir/us/cqfmeasures/Measure/measure-vte-1-FHIR"/>
+        <subject>
+          <reference value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"/>
+        </subject>
+        <date value="2019-03-14"/>
+        <reporter>
+          <reference value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc5"/>
+        </reporter>
+        <period>
+          <start value="2018-12-31"/>
+          <end value="2019-01-01"/>
+        </period>
+        <group>
+          <population>
+            <code>
+              <coding>
+                <system value="http://fhir/example.org"/>
+                <code value="initial-population"/>
+                <display value="Initial Population"/>
+              </coding>
+            </code>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://fhir/example.org"/>
+                <code value="numerator"/>
+                <display value="Numerator"/>
+              </coding>
+            </code>
+          </population>
+          <population>
+            <code>
+              <coding>
+                <system value="http://fhir/example.org"/>
+                <code value="denominator"/>
+                <display value="Denominator"/>
+              </coding>
+            </code>
+          </population>
+          <measureScore>
+            <value value="100"/>
+          </measureScore>
+        </group>
+      </MeasureReport>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MeasureReport"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc5"/>
+    <resource>
+      <Organization>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="TAX"/>
+              <display value="Tax ID number"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.840.1.113883.4.4"/>
+          <value value="123456789"/>
+          <assigner>
+            <display value="www.irs.gov"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+          </coding>
+        </type>
+        <name value="DaVinciHospital01"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="(+1) 401-555-1212"/>
+        </telecom>
+        <address>
+          <line value="73 Lakewood Street"/>
+          <city value="Warwick"/>
+          <state value="RI"/>
+          <postalCode value="02886"/>
+          <country value="USA"/>
+        </address>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"/>
+    <resource>
+      <Patient>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
+          <valueCode value="F"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+          <extension url="ombCategory">
+            <valueCoding>
+              <system value="urn:oid:2.16.840.1.113883.6.238"/>
+              <code value="2106-3"/>
+              <display value="White"/>
+            </valueCoding>
+          </extension>
+          <extension url="text">
+            <valueString value="White"/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
+          <extension url="ombCategory">
+            <valueCoding>
+              <system value="urn:oid:2.16.840.1.113883.6.238"/>
+              <code value="2186-5"/>
+              <display value="Not Hispanic or Latino"/>
+            </valueCoding>
+          </extension>
+          <extension url="text">
+            <valueString value="Not Hispanic or Latino"/>
+          </extension>
+        </extension>
+        <identifier>
+          <use value="usual"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MR"/>
+              <display value="Medical record number"/>
+            </coding>
+          </type>
+          <system value="http://hospital.davinci.org"/>
+          <value value="67890"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="official"/>
+          <family value="Webster"/>
+          <given value="Thelma"/>
+        </name>
+        <gender value="female"/>
+        <birthDate value="1948-04-28"/>
+        <deceasedBoolean value="false"/>
+        <address>
+          <use value="home"/>
+          <line value="7496 Beaver Ridge Ave"/>
+          <city value="Thornton"/>
+          <state value="NJ"/>
+          <postalCode value="07003"/>
+          <country value="USA"/>
+        </address>
+        <maritalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+            <code value="M"/>
+            <display value="Married"/>
+          </coding>
+        </maritalStatus>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47"/>
+              <code value="en-US"/>
+              <display value="English (Region=United States)"/>
+            </coding>
+          </language>
+          <preferred value="true"/>
+        </communication>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc7"/>
+    <resource>
+      <Encounter>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="32485007"/>
+            <display value="Hospital admission"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"/>
+        </subject>
+        <period>
+          <start value="2018-07-19T06:10:27Z"/>
+          <end value="2018-07-19T06:10:27Z"/>
+        </period>
+        <location>
+          <location>
+            <reference value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc8"/>
+            <display value="Mother Charity Hospital"/>
+          </location>
+        </location>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc8"/>
+    <resource>
+      <Location>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <system value="http://www.hl7.org/oid/"/>
+          <value value="1.2.3.4.181"/>
+        </identifier>
+        <status value="active"/>
+        <name value="Mother Charity Hospital"/>
+        <mode value="instance"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="(313) 555-5671"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <use value="work"/>
+          <type value="physical"/>
+          <line value="869 W Oak Street"/>
+          <city value="Royal Oak"/>
+          <district value="Oakland County"/>
+          <state value="MI"/>
+          <postalCode value="48073"/>
+        </address>
+        <physicalType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+            <code value="bu"/>
+            <display value="Building"/>
+          </coding>
+        </physicalType>
+      </Location>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Location"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc9"/>
+    <resource>
+      <MedicationAdministration>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p></div>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1658634"/>
+            <display value="heparin sodium, porcine 5000 UNT per 0.5 ML Injection"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2019-12-05T06:10:27Z"/>
+          <end value="2019-12-05T06:10:27Z"/>
+        </effectivePeriod>
+        <dosage>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="34206005"/>
+              <display value="Subcutaneous route"/>
+            </coding>
+          </route>
+          <dose>
+            <value value="1"/>
+            <unit value="cc"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mL"/>
+          </dose>
+        </dosage>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+</Bundle>

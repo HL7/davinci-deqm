@@ -1,0 +1,163 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/consumer-server> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "consumer-server"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Consumer Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 1.1.0</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-10-22</li><li>Published by: HL7 International - Clinical Decision Support Work Group</li></ul><p><p>This profile defines the expected capabilities of a Da Vinci DEQM Consumer Server when conforming to the Da Vinci DEQM Implementation Guide.  Consumers include systems that are primary consumers of patient healthcare information and systems that consume data from Producers.  This CapabilityStatement resource includes the complete list of the <em>recommended</em>  Da Vinci DEQM profiles and RESTful operations that a Da Vinci DEQM Consumer Server could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements.</p></p><h3 id=\"igs\" class=\"no_toc\">SHALL Support the Following Implementation Guides:</h3><ul><li><a href=\"http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore|3.3.0\">http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore|3.3.0</a></li></ul><ul><li><a href=\"http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures\">http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures</a></li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>Da Vinci DEQM Consumer Server <strong>SHALL</strong></p><ol><li>Support at least one transaction defined in the <em>Framework</em> Section of  this  Implementation Guide.</li><li>Declare a CapabilityStatement identifying the list of supported profiles and operations.</li><li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"http://hl7.org/fhir/STU3/http.html\">FHIR RESTful API</a>.</li><li>Support both xml and json resource formats for all interactions.</li></ol><p id=\"security\"><strong>Security:</strong></p><p>For general security consideration refer to the <a href=\"http://build.fhir.org/secpriv-module.html\">Security and Privacy Considerations</a>.</p><p><strong>Summary of System Wide Interactions</strong></p><li><strong>MAY</strong> support the	<code>transaction</code> interaction.</li><li><strong>MAY</strong> support the	<code>batch</code> interaction.</li><li><strong>MAY</strong> support the	<code>search-system</code> interaction.</li><li><strong>MAY</strong> support the	<code>history-system</code> interaction.</li><h3 id=\"resource--details\" class=\"no_toc\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported <code>_includes</code></th><th>Supported <code>_revincludes</code></th><th>Supported Operations</th></tr></thead><tbody><tr><td><a href=\"#measure\">Measure</a></td><td><a href=\"http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm\">CQFM Measure</a></td><td>\n							\n						</td><td>\n							\n						</td><td>\n              \n            </td><td>\n							\n							$submit-data, \n							$data-requirements\n						</td></tr></tbody></table><br/><h4 id=\"measure\" class=\"no_toc\">Measure</h4><p>Supported Profiles:\n				\n											<a href=\"http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm\">CQFM Measure</a>\n				\n				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n																							<code>read</code>.</li></ul><p>Operation  Summary:</p><ul><li><strong>SHALL</strong> support the \n																								<a href=\"http://hl7.org/fhir/OperationDefinition/Measure-submit-data\">$submit-data</a> operation\n																								, \n																								<a href=\"http://hl7.org/fhir/OperationDefinition/Measure-data-requirements\">$data-requirements</a> operation\n																								</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n					A Server <strong>SHOULD</strong> be capable of returning a Measure resource using:\n					<br/>\n						<code class=\"highlighter-rouge\">GET [base]/Measure/[id]</code>\n				</li><br/>  <!-- Only SHOULDs for include for now the capability statement does not create the primitive extensios for this yet -->  <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><hr/><br/></div>"
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/consumer-server"];
+  fhir:CapabilityStatement.version [ fhir:value "1.1.0"];
+  fhir:CapabilityStatement.name [ fhir:value "ConsumerServerCapabilityStatement"];
+  fhir:CapabilityStatement.title [ fhir:value "Consumer Server CapabilityStatement"];
+  fhir:CapabilityStatement.status [ fhir:value "active"];
+  fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CapabilityStatement.date [ fhir:value "2019-10-22T00:00:00-07:00"^^xsd:dateTime];
+  fhir:CapabilityStatement.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cqi/index.cfm" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This profile defines the expected capabilities of a Da Vinci DEQM Consumer Server when conforming to the Da Vinci DEQM Implementation Guide.  Consumers include systems that are primary consumers of patient healthcare information and systems that consume data from Producers.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that a Da Vinci DEQM Consumer Server could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements."];
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.1"];
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:CapabilityStatement.patchFormat [
+     fhir:value "application/json-patch+json";
+     fhir:index 0
+  ];
+  fhir:CapabilityStatement.implementationGuide [
+     fhir:value "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0";
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.1.0>
+  ], [
+     fhir:value "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore|3.3.0";
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore|3.3.0>
+  ], [
+     fhir:value "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures";
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures>
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "Da Vinci DEQM Consumer Server **SHALL**\n\n1. Support at least one transaction defined in the *Framework* Section of  this  Implementation Guide.\n1. Declare a CapabilityStatement identifying the list of supported profiles and operations.\n1. Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for [FHIR RESTful API](http://hl7.org/fhir/STU3/http.html).\n1. Support both xml and json resource formats for all interactions.\n" ];
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html)." ]
+     ];
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Measure" ];
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.operation [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.operation.name [ fhir:value "submit-data" ];
+         fhir:CapabilityStatement.rest.resource.operation.definition [
+           fhir:value "http://hl7.org/fhir/OperationDefinition/Measure-submit-data";
+           fhir:link <http://hl7.org/fhir/OperationDefinition/Measure-submit-data>
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.operation.name [ fhir:value "data-requirements" ];
+         fhir:CapabilityStatement.rest.resource.operation.definition [
+           fhir:value "http://hl7.org/fhir/OperationDefinition/Measure-data-requirements";
+           fhir:link <http://hl7.org/fhir/OperationDefinition/Measure-data-requirements>
+         ]
+       ]
+     ];
+     fhir:CapabilityStatement.rest.interaction [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "transaction" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "batch" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "search-system" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "history-system" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/consumer-server.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/davinci-deqm/CapabilityStatement/consumer-server.ttl> .
+
+# -------------------------------------------------------------------------------------
+

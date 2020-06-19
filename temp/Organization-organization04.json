@@ -1,0 +1,64 @@
+{
+  "resourceType": "Organization",
+  "id": "organization04",
+  "meta": {
+    "versionId": "4",
+    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: organization04</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 456789123 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type ins}\">Insurance Company</span></p><p><b>name</b>: DVPayer04</p><p><b>telecom</b>: ph: (+1) 616-555-1212</p><p><b>address</b>: 160 Glen Eagles Road Grand Rapids MI 49503 USA </p></div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "TAX",
+            "display": "Tax ID number"
+          }
+        ]
+      },
+      "system": "urn:oid:2.16.840.1.113883.4.4",
+      "value": "456789123",
+      "assigner": {
+        "display": "www.irs.gov"
+      }
+    }
+  ],
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "ins",
+          "display": "Insurance Company"
+        }
+      ]
+    }
+  ],
+  "name": "DVPayer04",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(+1) 616-555-1212"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "160 Glen Eagles Road"
+      ],
+      "city": "Grand Rapids",
+      "state": "MI",
+      "postalCode": "49503",
+      "country": "USA"
+    }
+  ]
+}

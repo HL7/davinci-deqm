@@ -1,0 +1,7 @@
+{% raw %}<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>deqm-2</td><td>MeasureReport</td><td>If the measure scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required<br/>: extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()</td><td></td></tr>
+<tr><td>deqm-1</td><td>MeasureReport.period</td><td>Date precision SHALL  be at least to day ( YYYY-MM-DD )<br/>: start.matches('^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*') and end.matches('^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*')</td><td></td></tr>
+</table>
+{% endraw %}

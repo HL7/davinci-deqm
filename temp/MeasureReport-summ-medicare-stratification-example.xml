@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="summ-medicare-stratification-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: summ-medicare-stratification-example</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://example.org/fhir/Measure/measure-medicare-stratification-example">http://example.org/fhir/Measure/measure-medicare-stratification-example</a></p><p><b>period</b>: Jan 1, 2018, 12:00:00 AM --&gt; Dec 31, 2018, 12:00:00 AM</p><p><b>improvementNotation</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}">Increased score indicates improvement</span></p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}">initial-population</span></p><p><b>count</b>: 10000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}">denominator</span></p><p><b>count</b>: 8000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}">numerator</span></p><p><b>count</b>: 4000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}">numerator-administrative</span></p><p><b>count</b>: 2000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}">numerator-medical</span></p><p><b>count</b>: 1000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}">numerator-supplemental</span></p><p><b>count</b>: 1000</p></blockquote><p><b>measureScore</b>: 50 %</p><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageType}">Coverage Type</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title="Codes: {http://example.org/CodeSystem/SOP MEDICARE}">Medicare</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}">initial-population</span></p><p><b>count</b>: 1747</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}">denominator</span></p><p><b>count</b>: 392</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}">numerator</span></p><p><b>count</b>: 243</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}">numerator-administrative</span></p><p><b>count</b>: 154</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}">numerator-medical</span></p><p><b>count</b>: 12</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}">numerator-supplemental</span></p><p><b>count</b>: 77</p></blockquote><p><b>measureScore</b>: 61.99 %</p></blockquote></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageTypeAndClass}">Coverage Type and Class</span></p><blockquote><p><b>stratum</b></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageType}">Coverage Type</span></p><p><b>value</b>: <span title="Codes: {http://example.org/CodeSystem/SOP MEDICARE}">Medicare</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/stratifier-classifications CoverageClass}">Coverage Class</span></p><p><b>value</b>: <span title="Codes: {http://example.org/CodeSystem/medicare-subgroup Non-LIS/DE,Nondisability}">Non-LIS/DE,Nondisability</span></p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type initial-population}">initial-population</span></p><p><b>count</b>: 745</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type denominator}">denominator</span></p><p><b>count</b>: 150</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population-type numerator}">numerator</span></p><p><b>count</b>: 103</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-administrative}">numerator-administrative</span></p><p><b>count</b>: 77</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-medical}">numerator-medical</span></p><p><b>count</b>: 7</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://example.org/CodeSystem/measure-population-type numerator-supplemental}">numerator-supplemental</span></p><p><b>count</b>: 19</p></blockquote><p><b>measureScore</b>: 68.67 %</p></blockquote></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"/>
+        <code value="proportion"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="complete"/>
+  <type value="summary"/>
+  <measure value="http://example.org/fhir/Measure/measure-medicare-stratification-example"/>
+  <period>
+    <start value="2018-01-01"/>
+    <end value="2018-12-31"/>
+  </period>
+  <improvementNotation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+      <code value="increase"/>
+      <display value="Increased score indicates improvement"/>
+    </coding>
+  </improvementNotation>
+  <group>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+          <code value="initial-population"/>
+        </coding>
+      </code>
+      <count value="10000"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+          <code value="denominator"/>
+        </coding>
+      </code>
+      <count value="8000"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+          <code value="numerator"/>
+        </coding>
+      </code>
+      <count value="4000"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://example.org/CodeSystem/measure-population-type"/>
+          <code value="numerator-administrative"/>
+        </coding>
+      </code>
+      <count value="2000"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://example.org/CodeSystem/measure-population-type"/>
+          <code value="numerator-medical"/>
+        </coding>
+      </code>
+      <count value="1000"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://example.org/CodeSystem/measure-population-type"/>
+          <code value="numerator-supplemental"/>
+        </coding>
+      </code>
+      <count value="1000"/>
+    </population>
+    <measureScore>
+      <value value="50"/>
+      <unit value="%"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="%"/>
+    </measureScore>
+    <stratifier>
+      <code>
+        <coding>
+          <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+          <code value="CoverageType"/>
+          <display value="Coverage Type"/>
+        </coding>
+      </code>
+      <stratum>
+        <value>
+          <coding>
+            <system value="http://example.org/CodeSystem/SOP"/>
+            <code value="MEDICARE"/>
+            <display value="Medicare"/>
+          </coding>
+        </value>
+        <population>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+              <code value="initial-population"/>
+            </coding>
+          </code>
+          <count value="1747"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+              <code value="denominator"/>
+            </coding>
+          </code>
+          <count value="392"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+              <code value="numerator"/>
+            </coding>
+          </code>
+          <count value="243"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/measure-population-type"/>
+              <code value="numerator-administrative"/>
+            </coding>
+          </code>
+          <count value="154"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/measure-population-type"/>
+              <code value="numerator-medical"/>
+            </coding>
+          </code>
+          <count value="12"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/measure-population-type"/>
+              <code value="numerator-supplemental"/>
+            </coding>
+          </code>
+          <count value="77"/>
+        </population>
+        <measureScore>
+          <value value="61.99"/>
+          <unit value="%"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </measureScore>
+      </stratum>
+    </stratifier>
+    <stratifier>
+      <code>
+        <coding>
+          <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+          <code value="CoverageTypeAndClass"/>
+          <display value="Coverage Type and Class"/>
+        </coding>
+      </code>
+      <stratum>
+        <component>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+              <code value="CoverageType"/>
+              <display value="Coverage Type"/>
+            </coding>
+          </code>
+          <value>
+            <coding>
+              <system value="http://example.org/CodeSystem/SOP"/>
+              <code value="MEDICARE"/>
+              <display value="Medicare"/>
+            </coding>
+          </value>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/stratifier-classifications"/>
+              <code value="CoverageClass"/>
+              <display value="Coverage Class"/>
+            </coding>
+          </code>
+          <value>
+            <coding>
+              <system value="http://example.org/CodeSystem/medicare-subgroup"/>
+              <code value="Non-LIS/DE,Nondisability"/>
+              <display value="Non-LIS/DE,Nondisability"/>
+            </coding>
+          </value>
+        </component>
+        <population>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+              <code value="initial-population"/>
+            </coding>
+          </code>
+          <count value="745"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+              <code value="denominator"/>
+            </coding>
+          </code>
+          <count value="150"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/>
+              <code value="numerator"/>
+            </coding>
+          </code>
+          <count value="103"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/measure-population-type"/>
+              <code value="numerator-administrative"/>
+            </coding>
+          </code>
+          <count value="77"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/measure-population-type"/>
+              <code value="numerator-medical"/>
+            </coding>
+          </code>
+          <count value="7"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="http://example.org/CodeSystem/measure-population-type"/>
+              <code value="numerator-supplemental"/>
+            </coding>
+          </code>
+          <count value="19"/>
+        </population>
+        <measureScore>
+          <value value="68.67"/>
+          <unit value="%"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </measureScore>
+      </stratum>
+    </stratifier>
+  </group>
+</MeasureReport>
