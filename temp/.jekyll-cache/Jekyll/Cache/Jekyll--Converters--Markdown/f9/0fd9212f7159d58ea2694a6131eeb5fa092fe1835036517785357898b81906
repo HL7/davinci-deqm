@@ -1,4 +1,4 @@
-I"͆
+I"ۆ
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
@@ -13,7 +13,7 @@
 
 <p>The VTE-1 measure assesses the number of patients who received venous thromboembolism (VTE) prophylaxis or have documentation why no venous thromboembolism prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission. Note that the Individual Measure Reporting Interaction is the only interaction used for this measure.</p>
 
-<p>The example presented is based on the QDM version of <a href="https://ecqi.healthit.gov/ecqm/measures/cms108v7">CMS 108v7</a>, which has been represented using profiles derived from <a href="http://hl7.org/fhir/us/qicoreindex.html">QI Core</a>.  Additional information regarding the measure specification can be found in the <a href="http://hl7.org/fhir/us/cqfmeasuresindex.html">Quality Measure Implementation Guide</a></p>
+<p>The example presented is based on the QDM version of <a href="https://ecqi.healthit.gov/ecqm/measures/cms108v7">CMS 108v7</a>, which has been represented using profiles derived from <a href="http://hl7.org/fhir/us/qicore/index.html">QI Core</a>.  Additional information regarding the measure specification can be found in the <a href="http://hl7.org/fhir/us/cqfmeasures/index.html">Quality Measure Implementation Guide</a></p>
 
 <h2 id="fhir-resource-overview">FHIR Resource Overview</h2>
 
@@ -31,42 +31,42 @@
     <tr>
       <td>Condition</td>
       <td>QI Core Condition Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-condition.html">QI Core Condition</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-condition.html">QI Core Condition</a></td>
     </tr>
     <tr>
       <td>Coverage</td>
       <td>QI Core Coverage Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-coverage.html">QI Core Coverage</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-coverage.html">QI Core Coverage</a></td>
     </tr>
     <tr>
       <td>DeviceRequest</td>
       <td>QI Core DeviceRequest Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-devicerequest.html">QI Core DeviceRequest</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-devicerequest.html">QI Core DeviceRequest</a></td>
     </tr>
     <tr>
       <td>DeviceUseStatement</td>
       <td>QI Core DeviceUseStatement Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-deviceusestatement.html">QI Core DeviceUseStatement</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-deviceusestatement.html">QI Core DeviceUseStatement</a></td>
     </tr>
     <tr>
       <td>Encounter</td>
       <td>QI Core Encounter Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-encounter.html">QI Core Encounter</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-encounter.html">QI Core Encounter</a></td>
     </tr>
     <tr>
       <td>Library</td>
       <td>CQFM Library Profile</td>
-      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-library-cqfm.html">CQFM Library</a></td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition-library-cqfm.html">CQFM Library</a></td>
     </tr>
     <tr>
       <td>Location</td>
       <td>QI Core Location Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-location.html">QI Core Location</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-location.html">QI Core Location</a></td>
     </tr>
     <tr>
       <td>Measure</td>
       <td>CQFM Measure Profile</td>
-      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
     </tr>
     <tr>
       <td>MeasureReport</td>
@@ -91,7 +91,7 @@
     <tr>
       <td>Observation</td>
       <td>QI Core Observation Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-observation.html">QI Core Observation</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-observation.html">QI Core Observation</a></td>
     </tr>
     <tr>
       <td>Organization</td>
@@ -101,7 +101,7 @@
     <tr>
       <td>Patient</td>
       <td>QI Core Patient Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-patient.html">QI Core Patient</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html">QI Core Patient</a></td>
     </tr>
     <tr>
       <td>Practitioner</td>
@@ -111,12 +111,12 @@
     <tr>
       <td>Procedure</td>
       <td>QI Core Procedure Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-procedure.html">QI Core Procedure</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-procedure.html">QI Core Procedure</a></td>
     </tr>
     <tr>
       <td>ServiceRequest</td>
       <td>QI Core ServiceRequest Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-servicerequest.html">QI Core ServiceRequest</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-servicerequest.html">QI Core ServiceRequest</a></td>
     </tr>
   </tbody>
 </table>

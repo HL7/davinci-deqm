@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "DataExchangeForQualityMeasuresSTU2forFHIRR4"];
   fhir:ImplementationGuide.title [ fhir:value "Data Exchange For Quality Measures STU2 for FHIR R4"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-06-19T09:23:47-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-06-19T10:44:16-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -49,8 +49,8 @@
      fhir:index 0;
      fhir:Element.id [ fhir:value "qicore" ];
      fhir:ImplementationGuide.dependsOn.uri [
-       fhir:value "http://hl7.org/fhir/us/qicore";
-       fhir:link <http://hl7.org/fhir/us/qicore>
+       fhir:value "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore";
+       fhir:link <http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore>
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.qicore" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "4.0.0" ]
@@ -58,8 +58,8 @@
      fhir:index 1;
      fhir:Element.id [ fhir:value "uscore" ];
      fhir:ImplementationGuide.dependsOn.uri [
-       fhir:value "http://hl7.org/fhir/us/core";
-       fhir:link <http://hl7.org/fhir/us/core>
+       fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core";
+       fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core>
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.1.0" ]
@@ -67,8 +67,8 @@
      fhir:index 2;
      fhir:Element.id [ fhir:value "cqfm" ];
      fhir:ImplementationGuide.dependsOn.uri [
-       fhir:value "http://hl7.org/fhir/us/cqfmeasures";
-       fhir:link <http://hl7.org/fhir/us/cqfmeasures>
+       fhir:value "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures";
+       fhir:link <http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures>
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.cqfmeasures" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "current" ]
@@ -1528,6 +1528,7 @@
          fhir:link <http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/organization-deqm" ]
        ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DEQM Organization Profile" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "The DEQM Organization Profile defines the constraints for representing the organization for which the practitioner was working when he performed the measure to which he is attesting." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [

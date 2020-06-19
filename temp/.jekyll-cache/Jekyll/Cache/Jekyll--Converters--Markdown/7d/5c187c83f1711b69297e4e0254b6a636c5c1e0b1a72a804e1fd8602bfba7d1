@@ -1,4 +1,4 @@
-I"B
+I"B
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
@@ -16,7 +16,7 @@
 
 <h3 class="no_toc" id="relationship-of-measure-and-measurereport-resources">Relationship of Measure and MeasureReport Resources</h3>
 
-<p>The <a href="http://hl7.org/fhir/R4/clinicalreasoning-quality-reporting.html">Quality Reporting</a> Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The <a href="http://hl7.org/fhir/R4//clinicalreasoning-quality-reporting.html#reporting-individual-data">Reporting Individual Data</a> section describes how to use a MeasureReport resource to represent the results of an individual calculation.</p>
+<p>The <a href="http://hl7.org/fhir/R4/clinicalreasoning-quality-reporting.html">Quality Reporting</a> Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The <a href="http://hl7.org/fhir/R4/clinicalreasoning-quality-reporting.html#reporting-individual-data">Reporting Individual Data</a> section describes how to use a MeasureReport resource to represent the results of an individual calculation.</p>
 
 <h3 class="no_toc" id="relationship-between-qi-core-deqm-and-cqms">Relationship between QI Core, DEQM, and CQMs</h3>
 
@@ -96,7 +96,7 @@ was missing from the EHR.</p>
     <tr>
       <td>Measure</td>
       <td>CQFM Measure Profile</td>
-      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
     </tr>
     <tr>
       <td>Individual MeasureReport</td>
@@ -111,7 +111,7 @@ was missing from the EHR.</p>
     <tr>
       <td>Patient</td>
       <td>QI Core Patient Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-patient.html">QI Core Patient</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html">QI Core Patient</a></td>
     </tr>
   </tbody>
 </table>

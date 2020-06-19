@@ -7,7 +7,7 @@
     "name": "DataExchangeForQualityMeasuresSTU2forFHIRR4",
     "title": "Data Exchange For Quality Measures STU2 for FHIR R4",
     "version": "1.1.0",
-    "date": "2020-06-19T09:23:47-07:00",
+    "date": "2020-06-19T10:44:16-07:00",
     "status": "draft"
   },
   "Patient/patient01": {
@@ -144,7 +144,7 @@
     "name": "DEQMLibraryMRPExample",
     "title": "DEQM Library MRP Example",
     "version": "1.1.0",
-    "date": "2020-06-19T09:23:47-07:00",
+    "date": "2020-06-19T10:44:16-07:00",
     "status": "active"
   },
   "Organization/organization03": {
@@ -272,6 +272,7 @@
     "source": "input/resources/structuredefinition-organization-deqm.xml",
     "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm",
     "name": "DEQMOrganizationProfile",
+    "title": "DEQM Organization Profile",
     "version": "1.1.0",
     "date": "2018-06-18T17:00:00-07:00",
     "status": "active"
@@ -306,7 +307,7 @@
     "name": "DEQMSubmitDataUpdateType",
     "title": "DEQM Submit Data Update Type Extension",
     "version": "1.1.0",
-    "date": "2020-06-19T09:23:47-07:00",
+    "date": "2020-06-19T10:44:16-07:00",
     "status": "active"
   },
   "StructureDefinition/extension-certificationIdentifier": {
@@ -328,7 +329,7 @@
     "name": "DEQMUpdateTypeValueSet",
     "title": "DEQM Update Type Value Set",
     "version": "1.1.0",
-    "date": "2020-06-19T09:23:47-07:00",
+    "date": "2020-06-19T10:44:16-07:00",
     "status": "active"
   },
   "StructureDefinition/extension-reportingVendor": {
@@ -350,7 +351,7 @@
     "name": "DEQMUpdateTypeCodeSystem",
     "title": "DEQM Update Type Code System",
     "version": "1.1.0",
-    "date": "2020-06-19T09:23:47-07:00",
+    "date": "2020-06-19T10:44:16-07:00",
     "status": "active"
   },
   "StructureDefinition/datax-measurereport-deqm": {
@@ -471,7 +472,7 @@
     "name": "DEQMMeasureScoringExtension",
     "title": "DEQM Measure Scoring Extension",
     "version": "1.1.0",
-    "date": "2020-06-19T09:23:47-07:00",
+    "date": "2020-06-19T10:44:16-07:00",
     "status": "active"
   }
 }

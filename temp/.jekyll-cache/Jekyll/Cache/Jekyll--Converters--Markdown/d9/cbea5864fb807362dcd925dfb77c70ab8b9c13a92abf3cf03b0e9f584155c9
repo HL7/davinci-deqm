@@ -1,4 +1,4 @@
-I"©Æ
+I"¨Æ
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
@@ -56,12 +56,12 @@
     <tr>
       <td>Library</td>
       <td>CQFM Library Profile</td>
-      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-library-cqfm.html">CQFM Library</a></td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition-library-cqfm.html">CQFM Library</a></td>
     </tr>
     <tr>
       <td>Measure</td>
       <td>CQFM Measure Profile</td>
-      <td><a href="http://hl7.org/fhir/us/cqfmeasuresStructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
+      <td><a href="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition-measure-cqfm.html">CQFM Measure</a></td>
     </tr>
     <tr>
       <td>MeasureReport</td>
@@ -76,7 +76,7 @@
     <tr>
       <td>Patient</td>
       <td>QI Core Patient Profile</td>
-      <td><a href="http://hl7.org/fhir/us/qicoreStructureDefinition-qicore-patient.html">QI Core Patient</a></td>
+      <td><a href="http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html">QI Core Patient</a></td>
     </tr>
   </tbody>
 </table>
@@ -216,7 +216,7 @@
   "id": "library-mrp-example",
   "text": {
     "status": "generated",
-    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: library-mrp-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;a href=\"http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example\"&gt;http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;version&lt;/b&gt;: 1.1.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: DEQMLibraryMRPExample&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: DEQM Library MRP Example&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/library-type module-definition}\"&gt;Module Definition&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Jun 19, 2020, 9:23:47 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: HL7 International - Clinical Quality Information Work Group&lt;/p&gt;&lt;p&gt;&lt;b&gt;contact&lt;/b&gt;: http://www.hl7.org/Special/committees/cqi/index.cfm&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Example Library resource to demonstrate the framework for MRP&lt;/p&gt;&lt;p&gt;&lt;b&gt;jurisdiction&lt;/b&gt;: &lt;span title=\"Codes: {urn:iso:std:iso:3166 US}\"&gt;United States of America&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dataRequirement&lt;/b&gt;: , , , , , , &lt;/p&gt;&lt;/div&gt;"
+    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: library-mrp-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;a href=\"http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example\"&gt;http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;version&lt;/b&gt;: 1.1.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: DEQMLibraryMRPExample&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: DEQM Library MRP Example&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\"Codes: {http://terminology.hl7.org/CodeSystem/library-type module-definition}\"&gt;Module Definition&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Jun 19, 2020, 10:44:16 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: HL7 International - Clinical Quality Information Work Group&lt;/p&gt;&lt;p&gt;&lt;b&gt;contact&lt;/b&gt;: http://www.hl7.org/Special/committees/cqi/index.cfm&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Example Library resource to demonstrate the framework for MRP&lt;/p&gt;&lt;p&gt;&lt;b&gt;jurisdiction&lt;/b&gt;: &lt;span title=\"Codes: {urn:iso:std:iso:3166 US}\"&gt;United States of America&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dataRequirement&lt;/b&gt;: , , , , , , &lt;/p&gt;&lt;/div&gt;"
   },
   "url": "http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example",
   "version": "1.1.0",
@@ -231,7 +231,7 @@
       }
     ]
   },
-  "date": "2020-06-19T09:23:47-07:00",
+  "date": "2020-06-19T10:44:16-07:00",
   "publisher": "HL7 International - Clinical Quality Information Work Group",
   "contact": [
     {
@@ -756,7 +756,7 @@
                                         </ul>
                                       </li>
                                       <li>When resolving references, references are never resolved outside the Parameters resource.  Specifically, resolution stops at the elements Parameters.parameter.resource.‚Äù</li>
-                                      <li>The matching <a href="http://hl7.org/fhir/R4//http.html#transaction-response">transaction response</a> is returned by the operation endpoint server.</li>
+                                      <li>The matching <a href="http://hl7.org/fhir/R4/http.html#transaction-response">transaction response</a> is returned by the operation endpoint server.</li>
                                     </ul>
 
                                     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST|[base]

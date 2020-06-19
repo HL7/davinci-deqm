@@ -5,7 +5,7 @@
   "igName": "DataExchangeForQualityMeasuresSTU2forFHIRR4",
   "packageId": "hl7.fhir.us.davinci-deqm",
   "igVer": "1.1.0",
-  "errorCount": 110,
+  "errorCount": 108,
   "version": "4.0.1",
   "revision": "a53ec6ee1b",
   "versionFull": "4.0.1-a53ec6ee1b",
@@ -14,7 +14,7 @@
   "toolingVersionFull": "4.4.0 (3)",
   "totalFiles": 64,
   "processedFiles": 294,
-  "genDate": "Fri, Jun 19, 2020 09:23-0700",
+  "genDate": "Fri, Jun 19, 2020 10:44-0700",
   "genDay": "19/06/2020",
   "ig": {
     "id": "hl7.fhir.us.davinci-deqm",
@@ -33,7 +33,7 @@
         ]
       }
     ],
-    "date": "2020-06-19T09:23:47-07:00",
+    "date": "2020-06-19T10:44:16-07:00",
     "copyright": "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1"
   },

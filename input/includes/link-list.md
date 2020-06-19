@@ -23,8 +23,8 @@
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [Consumer Server CapabilityStatement]: CapabilityStatement-consumer-server.json.html
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
-[CQFM Library]: {{site.data.fhir.cqfm}}StructureDefinition-library-cqfm.html
-[CQFM Measure]: {{site.data.fhir.cqfm}}StructureDefinition-measure-cqfm.html
+[CQFM Library]: {{site.data.fhir.cqfm}}/StructureDefinition-library-cqfm.html
+[CQFM Measure]: {{site.data.fhir.cqfm}}/StructureDefinition-measure-cqfm.html
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
@@ -75,26 +75,26 @@
 [NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
-[QI Core *Must Support*]: {{site.data.fhir.qicore}}index.html#mustsupport "QI Core definition of *Must Support*"
-[QI Core Condition]: {{site.data.fhir.qicore}}StructureDefinition-qicore-condition.html
-[QI Core Coverage]: {{site.data.fhir.qicore}}StructureDefinition-qicore-coverage.html
-[QI Core DeviceUseStatement]:{{site.data.fhir.qicore}}StructureDefinition-qicore-deviceusestatement.html
-[QI Core DeviceRequest]: {{site.data.fhir.qicore}}StructureDefinition-qicore-devicerequest.html
-[QI Core DiagnosticReport]:{{site.data.fhir.qicore}}StructureDefinition-qicore-diagnosticreport-lab.html
-[QI Core Encounter]: {{site.data.fhir.qicore}}StructureDefinition-qicore-encounter.html
-[QI Core Location]: {{site.data.fhir.qicore}}StructureDefinition-qicore-location.html
-[QI Core Observation]: {{site.data.fhir.qicore}}StructureDefinition-qicore-observation.html
-[QI Core Patient]: {{site.data.fhir.qicore}}StructureDefinition-qicore-patient.html
-[QI Core Practitioner]: {{site.data.fhir.qicore}}StructureDefinition-qicore-practitioner.html
-[QI Core Procedure]: {{site.data.fhir.qicore}}StructureDefinition-qicore-procedure.html
-[QI Core ServiceRequest]: {{site.data.fhir.qicore}}StructureDefinition-qicore-servicerequest.html
-[QI Core Task]: {{site.data.fhir.qicore}}StructureDefinition-qicore-task.html
-[QI Core Profiles]: {{site.data.fhir.qicore}}index.html
-[QI Core]: {{site.data.fhir.qicore}}index.html
+[QI Core *Must Support*]: {{site.data.fhir.qicore}}/index.html#mustsupport "QI Core definition of *Must Support*"
+[QI Core Condition]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-condition.html
+[QI Core Coverage]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-coverage.html
+[QI Core DeviceUseStatement]:{{site.data.fhir.qicore}}/StructureDefinition-qicore-deviceusestatement.html
+[QI Core DeviceRequest]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-devicerequest.html
+[QI Core DiagnosticReport]:{{site.data.fhir.qicore}}/StructureDefinition-qicore-diagnosticreport-lab.html
+[QI Core Encounter]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-encounter.html
+[QI Core Location]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-location.html
+[QI Core Observation]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-observation.html
+[QI Core Patient]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-patient.html
+[QI Core Practitioner]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-practitioner.html
+[QI Core Procedure]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-procedure.html
+[QI Core ServiceRequest]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-servicerequest.html
+[QI Core Task]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-task.html
+[QI Core Profiles]: {{site.data.fhir.qicore}}/index.html
+[QI Core]: {{site.data.fhir.qicore}}/index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
-[Quality Measure Implementation Guide]: {{site.data.fhir.cqfm}}index.html
+[Quality Measure Implementation Guide]: {{site.data.fhir.cqfm}}/index.html
 [Quality Reporting]: {{site.data.fhir.path}}clinicalreasoning-quality-reporting.html
-[Reporting Individual Data]: {{site.data.fhir.path}}/clinicalreasoning-quality-reporting.html#reporting-individual-data
+[Reporting Individual Data]: {{site.data.fhir.path}}clinicalreasoning-quality-reporting.html#reporting-individual-data
 [Reporting Vendor]: StructureDefinition-extension-reportingVendor.html
 [SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
@@ -104,7 +104,7 @@
 [Terminology]: terminology.html "Terminology Page"
 [transaction]: {{site.data.fhir.path}}http.html#transaction
 [collection]: {{site.data.fhir.path}}bundle.html#collection
-[US Core]: http://hl7.org/fhir/us/core/index.html
+[US Core]: {{site.data.fhir.uscore}}/index.html
 [Use cases]: usecases.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
@@ -116,12 +116,12 @@
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
 [Reporting Group]: StructureDefinition-extension-reporterGroup.html
 [Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html
-[negation patterns in quality measurements]: {{site.data.fhir.cqfm}}using-cql.html
-[transaction response]: {{site.data.fhir.path}}/http.html#transaction-response
+[negation patterns in quality measurements]: {{site.data.fhir.cqfm}}/using-cql.html
+[transaction response]: {{site.data.fhir.path}}http.html#transaction-response
 [Medicare Stratification Example]: MeasureReport-summ-medicare-stratification-example.html
 [Examples]: all-examples.html
 [Background]: index.html#background
-[US Core Organization Profile]: {{site.data.fhir.uscore}}StructureDefinition-us-core-organization.html
+[US Core Organization Profile]: {{site.data.fhir.uscore}}/StructureDefinition-us-core-organization.html
 [eCQI Resource Center Glossary]: https://ecqi.healthit.gov/glossary
 [data of interest]: index.html#data-of-interest
 [measurement period]: index.html#measurement-period

@@ -10,7 +10,7 @@
   "name": "DataExchangeForQualityMeasuresSTU2forFHIRR4",
   "title": "Data Exchange For Quality Measures STU2 for FHIR R4",
   "status": "draft",
-  "date": "2020-06-19T09:23:47-07:00",
+  "date": "2020-06-19T10:44:16-07:00",
   "publisher": "HL7 International - Clinical Quality Information Work Group",
   "contact": [
     {
@@ -42,19 +42,19 @@
   "dependsOn": [
     {
       "id": "qicore",
-      "uri": "http://hl7.org/fhir/us/qicore",
+      "uri": "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore",
       "packageId": "hl7.fhir.us.qicore",
       "version": "4.0.0"
     },
     {
       "id": "uscore",
-      "uri": "http://hl7.org/fhir/us/core",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
       "packageId": "hl7.fhir.us.core",
       "version": "3.1.0"
     },
     {
       "id": "cqfm",
-      "uri": "http://hl7.org/fhir/us/cqfmeasures",
+      "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures",
       "packageId": "hl7.fhir.us.cqfmeasures",
       "version": "current"
     }
@@ -1547,6 +1547,7 @@
         "reference": {
           "reference": "StructureDefinition/organization-deqm"
         },
+        "name": "DEQM Organization Profile",
         "description": "The DEQM Organization Profile defines the constraints for representing the organization for which the practitioner was working when he performed the measure to which he is attesting.",
         "exampleBoolean": false
       },

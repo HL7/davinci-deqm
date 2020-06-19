@@ -190,7 +190,7 @@
    <artifact name="Reporter Client CapabilityStatement"
              key="CapabilityStatement-reporter-client"
              id="CapabilityStatement/reporter-client"/>
-   <artifact name=""
+   <artifact name="DEQM Organization Profile"
              key="StructureDefinition-organization-deqm"
              id="StructureDefinition/organization-deqm"/>
    <artifact name="Producer Client CapabilityStatement"

@@ -8,6 +8,7 @@
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm",
   "version": "1.1.0",
   "name": "DEQMOrganizationProfile",
+  "title": "DEQM Organization Profile",
   "status": "active",
   "experimental": false,
   "date": "2018-06-18T17:00:00-07:00",

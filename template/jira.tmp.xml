@@ -92,7 +92,7 @@
    <name value="DataExchangeForQualityMeasuresSTU2forFHIRR4"/>
    <title value="Data Exchange For Quality Measures STU2 for FHIR R4"/>
    <status value="draft"/>
-   <date value="2020-06-19T09:23:47-07:00"/>
+   <date value="2020-06-19T10:44:16-07:00"/>
    <publisher value="HL7 International - Clinical Quality Information Work Group"/>
    <contact>
       <telecom>
@@ -112,17 +112,17 @@
    <fhirVersion value="4.0.1"/>
    <fhirVersion value="4.0.1"/>
    <dependsOn id="qicore">
-      <uri value="http://hl7.org/fhir/us/qicore"/>
+      <uri value="http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore"/>
       <packageId value="hl7.fhir.us.qicore"/>
       <version value="4.0.0"/>
    </dependsOn>
    <dependsOn id="uscore">
-      <uri value="http://hl7.org/fhir/us/core"/>
+      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
       <packageId value="hl7.fhir.us.core"/>
       <version value="3.1.0"/>
    </dependsOn>
    <dependsOn id="cqfm">
-      <uri value="http://hl7.org/fhir/us/cqfmeasures"/>
+      <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
       <packageId value="hl7.fhir.us.cqfmeasures"/>
       <version value="current"/>
    </dependsOn>
@@ -1058,6 +1058,7 @@
          <reference>
             <reference value="StructureDefinition/organization-deqm"/>
          </reference>
+         <name value="DEQM Organization Profile"/>
          <description value="The DEQM Organization Profile defines the constraints for representing the organization for which the practitioner was working when he performed the measure to which he is attesting."/>
          <exampleBoolean value="false"/>
          <groupingId value="_str_profile"/>
@@ -1367,7 +1368,7 @@
             </page>
             <page>
                <nameUrl value="StructureDefinition-organization-deqm.html"/>
-               <title value=""/>
+               <title value="DEQM Organization Profile"/>
                <generation value="generated"/>
             </page>
             <page>

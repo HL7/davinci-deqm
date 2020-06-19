@@ -133,7 +133,7 @@ When a data producer needs to send data to a data consumer, they use the **DEQM 
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-organization-deqm.html"
-                     title="StructureDefinition/organization-deqm">StructureDefinition/organization-deqm</a>
+                     title="StructureDefinition/organization-deqm">DEQM Organization Profile</a>
                </td>
                <td>The DEQM Organization Profile defines the constraints for representing the organization for which the practitioner was working when he performed the measure to which he is attesting.</td>
             </tr>

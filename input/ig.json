@@ -34,19 +34,19 @@
             "version": "4.0.0",
             "id": "qicore",
             "packageId": "hl7.fhir.us.qicore",
-            "uri": "http://hl7.org/fhir/us/qicore"
+            "uri": "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore"
         },
         {
             "version": "3.1.0",
             "id": "uscore",
             "packageId": "hl7.fhir.us.core",
-            "uri": "http://hl7.org/fhir/us/core"
+            "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         },
         {
             "version": "current",
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
-            "uri": "http://hl7.org/fhir/us/cqfmeasures"
+            "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
         }
     ],
     "fhirVersion": [

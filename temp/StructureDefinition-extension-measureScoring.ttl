@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "DEQMMeasureScoringExtension"];
   fhir:StructureDefinition.title [ fhir:value "DEQM Measure Scoring Extension"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-06-19T09:23:47-07:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-06-19T10:44:16-07:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

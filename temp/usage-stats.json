@@ -81,7 +81,7 @@
     "Organization": [
       {
         "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm",
-        "title": "DEQMOrganizationProfile"
+        "title": "DEQM Organization Profile"
       }
     ],
     "Practitioner": [
