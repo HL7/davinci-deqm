@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "DEQMUpdateTypeCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "DEQM Update Type Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2020-06-22T19:57:44-07:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2020-06-23T12:10:57-07:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
   fhir:CodeSystem.contact [
      fhir:index 0;

@@ -55,7 +55,7 @@
     "basename": "Extension",
     "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
     "status": "active",
-    "date": "Mon Jun 22 19:57:44 PDT 2020",
+    "date": "Tue Jun 23 12:10:57 PDT 2020",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "description": "This Extension supports the concepts \u0027incremental\u0027 and \u0027snapshot\u0027 and corresponds to the measureScore types in the FHIR R5 version of MeasureReport.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it \u0027incremental\u0027 if the `lastReceivedOn` parameter is present or \u0027snapshot if the `lastReceivedOn` parameter is absent.",
     "contexts": [
@@ -236,7 +236,7 @@
     "basename": "Extension",
     "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
     "status": "active",
-    "date": "Mon Jun 22 19:57:44 PDT 2020",
+    "date": "Tue Jun 23 12:10:57 PDT 2020",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "description": "Indicates how the calculation is performed for the measure, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional measure scoring types to be represented. It is expected to be the same as the scoring element on the referenced Measure",
     "contexts": [

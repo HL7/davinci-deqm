@@ -22,6 +22,6 @@ extensions for capabilitystatement.
 - [ ] add page variables to template so they inherit in notes and intros
    - [ ] {% assign id = {{page.id}} %}
    - [X] remove redundant refs to description
-- [ ] pre-apply trackers FHIR-27862 and FHIR-27818
+- [X] pre-apply trackers FHIR-27862 and FHIR-27818
 - [ ] remove redundant code in profiles (use layouts)
 - [X] remove redundant extension introductions

@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "library-mrp-example"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: library-mrp-example</p><p><b>url</b>: <a href=\"http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example\">http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example</a></p><p><b>version</b>: 1.1.0</p><p><b>name</b>: DEQMLibraryMRPExample</p><p><b>title</b>: DEQM Library MRP Example</p><p><b>status</b>: active</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/library-type module-definition}\">Module Definition</span></p><p><b>date</b>: Jun 22, 2020, 7:57:44 PM</p><p><b>publisher</b>: HL7 International - Clinical Quality Information Work Group</p><p><b>contact</b>: http://www.hl7.org/Special/committees/cqi/index.cfm</p><p><b>description</b>: Example Library resource to demonstrate the framework for MRP</p><p><b>jurisdiction</b>: <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span></p><p><b>dataRequirement</b>: , , , , , , </p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: library-mrp-example</p><p><b>url</b>: <a href=\"http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example\">http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example</a></p><p><b>version</b>: 1.1.0</p><p><b>name</b>: DEQMLibraryMRPExample</p><p><b>title</b>: DEQM Library MRP Example</p><p><b>status</b>: active</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/library-type module-definition}\">Module Definition</span></p><p><b>date</b>: Jun 23, 2020, 12:10:57 PM</p><p><b>publisher</b>: HL7 International - Clinical Quality Information Work Group</p><p><b>contact</b>: http://www.hl7.org/Special/committees/cqi/index.cfm</p><p><b>description</b>: Example Library resource to demonstrate the framework for MRP</p><p><b>jurisdiction</b>: <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span></p><p><b>dataRequirement</b>: , , , , , , </p></div>"
   ];
   fhir:Library.url [ fhir:value "http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example"];
   fhir:Library.version [ fhir:value "1.1.0"];
@@ -24,7 +24,7 @@
        fhir:Coding.code [ fhir:value "module-definition" ]
      ]
   ];
-  fhir:Library.date [ fhir:value "2020-06-22T19:57:44-07:00"^^xsd:dateTime];
+  fhir:Library.date [ fhir:value "2020-06-23T12:10:57-07:00"^^xsd:dateTime];
   fhir:Library.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
   fhir:Library.contact [
      fhir:index 0;
