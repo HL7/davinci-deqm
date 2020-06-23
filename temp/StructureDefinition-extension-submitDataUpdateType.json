@@ -10,7 +10,7 @@
   "name": "DEQMSubmitDataUpdateType",
   "title": "DEQM Submit Data Update Type Extension",
   "status": "active",
-  "date": "2020-06-19T10:44:16-07:00",
+  "date": "2020-06-22T19:57:44-07:00",
   "publisher": "HL7 International - Clinical Quality Information Work Group",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "This Extension supports the concepts 'incremental' and 'snapshot'.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent.",
+  "description": "This Extension supports the concepts 'incremental' and 'snapshot' and corresponds to the measureScore types in the FHIR R5 version of MeasureReport.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent.",
   "jurisdiction": [
     {
       "coding": [

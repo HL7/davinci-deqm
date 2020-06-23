@@ -17,7 +17,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: indv-measurereport01</p><p><b>meta</b>: </p><p><b>status</b>: complete</p><p><b>type</b>: individual</p><p><b>measure</b>: <a href=\"http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example\">http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example</a></p><p><b>subject</b>: <a href=\"Patient-patient01.html\">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p><p><b>date</b>: Sep 5, 2018, 9:59:52 AM</p><p><b>reporter</b>: <a href=\"Organization-organization01.html\">Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span>; name: DaVinciHospital01; ph: (+1) 401-555-1212</a></p><p><b>period</b>: Aug 1, 2018, 12:00:00 AM --&gt; Sep 1, 2018, 12:00:00 AM</p><p><b>improvementNotation</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org mrp-group}\">MRP Group</span></p><blockquote><p><b>population</b></p><p><b>id</b>: initial-population</p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p></blockquote><blockquote><p><b>population</b></p><p><b>id</b>: numerator</p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p></blockquote><blockquote><p><b>population</b></p><p><b>id</b>: denominator</p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p></blockquote><p><b>measureScore</b>: 0.8</p></blockquote><p><b>evaluatedResource</b>: <a href=\"Task-Task01.html\">Generated Summary: id: Task01; 19009; status: completed; intent: plan; priority: routine; <span title=\"Codes: {http://www.ama-assn.org/go/cpt 1111F}\">Medication Reconciliation</span>; executionPeriod: Jun 11, 2017, 12:00:00 AM --&gt; Jun 11, 2017, 12:00:00 AM; authoredOn: Sep 25, 2018, 7:24:23 AM</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: indv-measurereport01</p><p><b>meta</b>: </p><p><b>status</b>: complete</p><p><b>type</b>: individual</p><p><b>measure</b>: <a href=\"http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example\">http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example</a></p><p><b>subject</b>: <a href=\"Patient-patient01.html\">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p><p><b>date</b>: Sep 5, 2018, 9:59:52 AM</p><p><b>reporter</b>: <a href=\"Organization-organization01.html\">Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span>; name: DaVinciHospital01; ph: (+1) 401-555-1212</a></p><p><b>period</b>: Aug 1, 2018, 12:00:00 AM --&gt; Sep 1, 2018, 12:00:00 AM</p><p><b>improvementNotation</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title=\"Codes: {http://example.org mrp-group}\">MRP Group</span></p><blockquote><p><b>population</b></p><p><b>id</b>: initial-population</p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 100</p></blockquote><blockquote><p><b>population</b></p><p><b>id</b>: numerator</p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 80</p></blockquote><blockquote><p><b>population</b></p><p><b>id</b>: denominator</p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 100</p></blockquote><p><b>measureScore</b>: 0.8</p></blockquote><p><b>evaluatedResource</b>: <a href=\"Task-Task01.html\">Generated Summary: id: Task01; 19009; status: completed; intent: plan; priority: routine; <span title=\"Codes: {http://www.ama-assn.org/go/cpt 1111F}\">Medication Reconciliation</span>; executionPeriod: Jun 11, 2017, 12:00:00 AM --&gt; Jun 11, 2017, 12:00:00 AM; authoredOn: Sep 25, 2018, 7:24:23 AM</a></p></div>"
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
@@ -92,7 +92,8 @@
            fhir:Coding.code [ fhir:value "initial-population" ];
            fhir:Coding.display [ fhir:value "Initial Population" ]
          ]
-       ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "100"^^xsd:integer ]
      ], [
        fhir:index 1;
        fhir:Element.id [ fhir:value "numerator" ];
@@ -103,7 +104,8 @@
            fhir:Coding.code [ fhir:value "numerator" ];
            fhir:Coding.display [ fhir:value "Numerator" ]
          ]
-       ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "80"^^xsd:integer ]
      ], [
        fhir:index 2;
        fhir:Element.id [ fhir:value "denominator" ];
@@ -114,7 +116,8 @@
            fhir:Coding.code [ fhir:value "denominator" ];
            fhir:Coding.display [ fhir:value "Denominator" ]
          ]
-       ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "100"^^xsd:integer ]
      ];
      fhir:MeasureReport.group.measureScore [
        fhir:Quantity.value [ fhir:value "0.8"^^xsd:decimal ]

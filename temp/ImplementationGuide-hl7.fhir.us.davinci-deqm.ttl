@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "DataExchangeForQualityMeasuresSTU2forFHIRR4"];
   fhir:ImplementationGuide.title [ fhir:value "Data Exchange For Quality Measures STU2 for FHIR R4"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-06-19T10:44:16-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-06-22T19:57:44-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -1241,7 +1241,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-alternateScoreType" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "DEQM Alternate Score Type Extension" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation. This extension corresponds to the measureScore types in the FHIR R5 version of MeasureReport." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 44;
@@ -1421,7 +1421,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-reportingVendor" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "DEQM Reporting Vendor Extension" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to the vendor who queried the data, calculated results and/or generated the report. The 'reporting vendor' is intended to represent the submitting entity when it is not the same as the reporting entity." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to the vendor who queried the data, calculated results and/or generated the report. The 'reporting vendor' is intended to represent the submitting entity when it is not the same as the reporting entity. This extension is used when the Receiver is interested in getting vendor information in the report." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 54;
@@ -1457,7 +1457,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-certificationIdentifier" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "DEQM Certification Identifier Extension" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information.  This Extension is used when the receiver is interested in getting EHR certification information in the report." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 56;
@@ -1475,7 +1475,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-submitDataUpdateType" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "DEQM Submit Data Update Type Extension" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Extension supports the concepts 'incremental' and 'snapshot'.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Extension supports the concepts 'incremental' and 'snapshot' and corresponds to the measureScore types in the FHIR R5 version of MeasureReport.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 57;

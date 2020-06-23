@@ -22,7 +22,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="A reference to the vendor who queried the data, calculated results and/or generated the report. The &#39;reporting vendor&#39; is intended to represent the submitting entity when it is not the same as the reporting entity."/>
+  <description value="A reference to the vendor who queried the data, calculated results and/or generated the report. The &#39;reporting vendor&#39; is intended to represent the submitting entity when it is not the same as the reporting entity. This extension is used when the Receiver is interested in getting vendor information in the report."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

@@ -16,7 +16,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information."/>
+  <description value="An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information.  This Extension is used when the receiver is interested in getting EHR certification information in the report."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

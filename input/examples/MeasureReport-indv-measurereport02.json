@@ -78,7 +78,8 @@
               }
             ]
           },
-          "id": "initial-population"
+          "id": "initial-population",
+          "count": 100
         },
         {
           "code": {
@@ -90,7 +91,8 @@
               }
             ]
           },
-          "id": "numerator"
+          "id": "numerator",
+          "count": 80
         },
         {
           "code": {
@@ -102,7 +104,8 @@
               }
             ]
           },
-          "id": "denominator"
+          "id": "denominator",
+          "count": 100
         }
       ],
       "measureScore": {

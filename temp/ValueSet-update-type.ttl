@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "DEQMUpdateTypeValueSet"];
   fhir:ValueSet.title [ fhir:value "DEQM Update Type Value Set"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2020-06-19T10:44:16-07:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2020-06-22T19:57:44-07:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
   fhir:ValueSet.contact [
      fhir:index 0;

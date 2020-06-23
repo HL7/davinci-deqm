@@ -11,7 +11,7 @@
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">name</a>" : "DataExchangeForQualityMeasuresSTU2forFHIRR4",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">title</a>" : "Data Exchange For Quality Measures STU2 for FHIR R4",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a>" : "2020-06-19T10:44:16-07:00",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a>" : "2020-06-22T19:57:44-07:00",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">publisher</a>" : "HL7 International - Clinical Quality Information Work Group",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.contact">contact</a>" : [
     {
@@ -1261,7 +1261,7 @@
           "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/extension-alternateScoreType"
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "DEQM Alternate Score Type Extension",
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation.",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation. This extension corresponds to the measureScore types in the FHIR R5 version of MeasureReport.",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
@@ -1441,7 +1441,7 @@
           "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/extension-reportingVendor"
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "DEQM Reporting Vendor Extension",
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "A reference to the vendor who queried the data, calculated results and/or generated the report. The 'reporting vendor' is intended to represent the submitting entity when it is not the same as the reporting entity.",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "A reference to the vendor who queried the data, calculated results and/or generated the report. The 'reporting vendor' is intended to represent the submitting entity when it is not the same as the reporting entity. This extension is used when the Receiver is interested in getting vendor information in the report.",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
@@ -1477,7 +1477,7 @@
           "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/extension-certificationIdentifier"
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "DEQM Certification Identifier Extension",
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information.",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information.  This Extension is used when the receiver is interested in getting EHR certification information in the report.",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
@@ -1495,7 +1495,7 @@
           "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/extension-submitDataUpdateType"
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "DEQM Submit Data Update Type Extension",
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "This Extension supports the concepts 'incremental' and 'snapshot'.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent.",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "This Extension supports the concepts 'incremental' and 'snapshot' and corresponds to the measureScore types in the FHIR R5 version of MeasureReport.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent.",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {

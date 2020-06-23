@@ -28,7 +28,7 @@
        fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cqi/index.cfm" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information."];
+  fhir:StructureDefinition.description [ fhir:value "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information.  This Extension is used when the receiver is interested in getting EHR certification information in the report."];
   fhir:StructureDefinition.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [

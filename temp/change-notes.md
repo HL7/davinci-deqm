@@ -45,7 +45,9 @@ Changes and Updates for version 1.1.1
     - Add [software name/version extension](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.extension:vendor) to MeasureReport Profiles (FHIR-25721)
     - Add required [`id`](StructureDefinition-summary-measurereport-deqm-definitions.html#MeasureReport.group.population.code) element to the MeasureReport profiles (FHIR-25716)
     - [Document](datax.html#provenance) that $submit-data and $collect-data should support the use of the X-Provenance header (FHIR-25624)
-    - A extensions for [software and version](StructureDefinition-datax-measurereport-deqm-definitions.html#MeasureReport.extension:software) (FHIR-25721)  
+    - A extensions for [software and version](StructureDefinition-datax-measurereport-deqm-definitions.html#MeasureReport.extension:software) (FHIR-25721)
+    - Define [default profiles](guidance.html#default-profiles-used-in-the-evaluation-of-a-measure) for this implementation guide (FHIR-27818)
+    - Add [`MeasureReport.group.population.count` as 0..1 Must Support](StructureDefinition-indv-measurereport-deqm.html#profile) for individual report profile. (FHIR-27862)
 
 
     {% include link-list.md %}

@@ -22,7 +22,7 @@ Note that FHIR operations allow the implementation to be viewed as a 'black box'
   This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned and will align with the outcomes of the Argonaut project.
   {:.stu-note}
 
-## Profiles
+## Default Profiles
 
 The following resources are used in all data exchange transactions:
 

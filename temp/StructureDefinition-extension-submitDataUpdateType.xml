@@ -15,7 +15,7 @@
   <name value="DEQMSubmitDataUpdateType"/>
   <title value="DEQM Submit Data Update Type Extension"/>
   <status value="active"/>
-  <date value="2020-06-19T10:44:16-07:00"/>
+  <date value="2020-06-22T19:57:44-07:00"/>
   <publisher value="HL7 International - Clinical Quality Information Work Group"/>
   <contact>
     <telecom>
@@ -23,7 +23,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="This Extension supports the concepts &#39;incremental&#39; and &#39;snapshot&#39;.&#xA;&#xA;- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).&#xA;- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.&#xA; When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it &#39;incremental&#39; if the `lastReceivedOn` parameter is present or &#39;snapshot if the `lastReceivedOn` parameter is absent."/>
+  <description value="This Extension supports the concepts &#39;incremental&#39; and &#39;snapshot&#39; and corresponds to the measureScore types in the FHIR R5 version of MeasureReport.&#xA;&#xA;- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).&#xA;- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.&#xA; When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it &#39;incremental&#39; if the `lastReceivedOn` parameter is present or &#39;snapshot if the `lastReceivedOn` parameter is absent."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

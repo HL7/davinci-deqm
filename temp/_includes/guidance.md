@@ -55,9 +55,9 @@ The [DEQM Individual MeasureReport Profile] is used when a measure is reported f
 
 The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure measurement period. It  includes the measure outcome data and is similar to a QRDA Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
 
-### Other Profiles Used in the Evaluation of a Measure
+### Default Profiles Used in the Evaluation of a Measure
 
-Depending on the specific Measure and Interaction, various DEQM, QI Core, and CQFM Profiles are used in the evaluation of a measure and referenced by a MeasureReport.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
+ Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI Core profiles and are used as the default instead of the corresponding QI Core profile.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
 ### Negation Patterns for Quality Measures
 

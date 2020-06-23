@@ -1,8 +1,0 @@
-I"�<p>This Extension supports the concepts ‘incremental’ and ‘snapshot’.</p>
-
-<ul>
-  <li>The DEQM Consumer Server <strong>SHALL</strong> use this Extension to advertise whether it supports <a href="index.html#incremental-update">snapshot</a> or <a href="index.html#snapshot-update">incremental</a> updates for the <a href="datax.html#submit-data">DEQM Submit Data transaction</a>.</li>
-  <li>The DEQM Producer Client <strong>SHALL</strong> use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.
- When responding to the <a href="datax.html#collect-data">DEQM Collect Data transaction</a>, the DEQM Producer Server <strong>SHALL</strong>  value it ‘incremental’ if the <code class="highlighter-rouge">lastReceivedOn</code> parameter is present or ‘snapshot if the <code class="highlighter-rouge">lastReceivedOn</code> parameter is absent.</li>
-</ul>
-:ET

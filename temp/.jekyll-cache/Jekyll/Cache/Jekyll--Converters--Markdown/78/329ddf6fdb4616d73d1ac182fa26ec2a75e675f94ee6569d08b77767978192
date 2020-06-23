@@ -1,2 +1,0 @@
-I"	<p>Possible value types for the measureScore elements <em>in addition to</em> the standard <a href="http://hl7.org/fhir/STU3/datatypes.html#quantity">Quantity</a> type. The alternate type is determined by the Quality Measure <a href="http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html">Aggregate Method</a> extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation.</p>
-:ET

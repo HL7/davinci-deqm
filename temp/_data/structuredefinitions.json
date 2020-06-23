@@ -55,9 +55,9 @@
     "basename": "Extension",
     "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
     "status": "active",
-    "date": "Fri Jun 19 10:44:16 PDT 2020",
+    "date": "Mon Jun 22 19:57:44 PDT 2020",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
-    "description": "This Extension supports the concepts \u0027incremental\u0027 and \u0027snapshot\u0027.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it \u0027incremental\u0027 if the `lastReceivedOn` parameter is present or \u0027snapshot if the `lastReceivedOn` parameter is absent.",
+    "description": "This Extension supports the concepts \u0027incremental\u0027 and \u0027snapshot\u0027 and corresponds to the measureScore types in the FHIR R5 version of MeasureReport.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it \u0027incremental\u0027 if the `lastReceivedOn` parameter is present or \u0027snapshot if the `lastReceivedOn` parameter is absent.",
     "contexts": [
       {
         "type": "CapabiltityStatement.rest.resource.operation"
@@ -80,7 +80,7 @@
     "status": "active",
     "date": "Tue Jun 19 00:00:00 PDT 2018",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
-    "description": "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information.",
+    "description": "An identifier that represents the EHR certication number (CERHT).  See [Certified EHR Technology](https://www.cms.gov/regulations-and-guidance/legislation/ehrincentiveprograms/certification.html) For more information.  This Extension is used when the receiver is interested in getting EHR certification information in the report.",
     "contexts": [
       {
         "type": "MeasureReport"
@@ -100,7 +100,7 @@
     "status": "active",
     "date": "Tue Jun 19 00:00:00 PDT 2018",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
-    "description": "A reference to the vendor who queried the data, calculated results and/or generated the report. The \u0027reporting vendor\u0027 is intended to represent the submitting entity when it is not the same as the reporting entity.",
+    "description": "A reference to the vendor who queried the data, calculated results and/or generated the report. The \u0027reporting vendor\u0027 is intended to represent the submitting entity when it is not the same as the reporting entity. This extension is used when the Receiver is interested in getting vendor information in the report.",
     "contexts": [
       {
         "type": "MeasureReport"
@@ -215,7 +215,7 @@
     "status": "active",
     "date": "Tue Jun 19 00:00:00 PDT 2018",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
-    "description": "Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation.",
+    "description": "Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/STU3/datatypes.html#quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/2019May/StructureDefinition-cqfm-aggregateMethod.html) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation. This extension corresponds to the measureScore types in the FHIR R5 version of MeasureReport.",
     "contexts": [
       {
         "type": "MeasureReport.group.measureScore"
@@ -236,7 +236,7 @@
     "basename": "Extension",
     "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
     "status": "active",
-    "date": "Fri Jun 19 10:44:16 PDT 2020",
+    "date": "Mon Jun 22 19:57:44 PDT 2020",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "description": "Indicates how the calculation is performed for the measure, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional measure scoring types to be represented. It is expected to be the same as the scoring element on the referenced Measure",
     "contexts": [

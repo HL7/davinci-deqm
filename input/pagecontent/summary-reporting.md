@@ -13,7 +13,7 @@ A summary report contains calculated summary data for one or more Clinical Quali
 
 The Summary reporting scenario is supported by the [DEQM Summary MeasureReport Profile]. Transactions between Reporters (for example, organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of summary level quality reports for CQMs to various quality reporting programs.
 
-## Profiles
+## Default Profiles
 
 The following resources are used in the summary reporting scenario:
 

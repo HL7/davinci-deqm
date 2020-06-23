@@ -72,7 +72,7 @@ was missing from the EHR.
 
 {:.no_toc}
 
-## Profiles
+## Default Profiles
 
 The following resources are used in all individual reporting transactions.
 
