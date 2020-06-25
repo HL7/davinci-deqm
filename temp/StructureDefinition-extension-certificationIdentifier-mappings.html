@@ -1,21 +1,25 @@
 ---
 ---
+<!-- get modelType -->
+{% include fragment-modelType.html id='extension-certificationIdentifier' %}
+
 {% include fragment-pagebegin.html %}
 <div style="counter-reset: section 5" class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
   {% include fragment-profile-navtabs.html type='StructureDefinition' id='extension-certificationIdentifier' active='mapping' %}
-  <a name="root"> </a>
-  <h2 id="root">{{modelType}}: DEQMCertificationIdentifierExtension - Mappings</h2>
 
-  <p>Mappings for the extension-certificationIdentifier Profile.</p>
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: DEQMCertificationIdentifierExtension - Mappings</h2>
+
+<p>Mappings for the extension-certificationIdentifier {{modelType | downcase }}.</p>
 
   <!-- insert intro if present -->
-  {% include fragment-intro.html %}
+  {% include fragment-intro.html type='StructureDefinition' id='extension-certificationIdentifier' %}
 
   {%include StructureDefinition-extension-certificationIdentifier-maps.xhtml%}
 
   <!-- insert notes if present -->
-  {% include fragment-notes.html %}
+  {% include fragment-notes.html type='StructureDefinition' id='extension-certificationIdentifier' %}
 
 </div>
 {% assign includetabscripts = 'true' %}

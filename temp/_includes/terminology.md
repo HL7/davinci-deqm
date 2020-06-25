@@ -1,12 +1,12 @@
 
 Refer to the specific FHIR resources and profiles for each measure’s requirements for guidance in appropriate use of value sets, terminologies and code systems.
 
-### Value Sets
+## Value Sets
 {:.no_toc}
 
 {% include list-simple-valuesets.xhtml %}
 
-### Code Systems[^5]
+## Code Systems[^5]
 {:.no_toc}
 
 {% include list-simple-codesystems.xhtml %}

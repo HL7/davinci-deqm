@@ -1,21 +1,25 @@
 ---
 ---
+<!-- get modelType -->
+{% include fragment-modelType.html id='extension-reporterGroup' %}
+
 {% include fragment-pagebegin.html %}
 <div style="counter-reset: section 4" class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
   {% include fragment-profile-navtabs.html type='StructureDefinition' id='extension-reporterGroup' active='definition' %}
-  <a name="root"> </a>
-  <h2 id="root">{{modelType}}: DEQMReporterGroupExtension - Detailed Descriptions</h2>
 
-  <p>Definitions for the extension-reporterGroup Profile.</p>
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: DEQMReporterGroupExtension - Detailed Descriptions</h2>
+
+<p>Definitions for the extension-reporterGroup {{modelType | downcase}}.</p>
 
   <!-- insert intro if present -->
-  {% include fragment-intro.html %}
+  {% include fragment-intro.html type='StructureDefinition' id='extension-reporterGroup' %}
 
   {%include StructureDefinition-extension-reporterGroup-dict.xhtml%}
 
   <!-- insert notes if present -->
-  {% include fragment-notes.html %}
+  {% include fragment-notes.html type='StructureDefinition' id='extension-reporterGroup' %}
 
 </div>
 {% assign includetabscripts = 'true' %}

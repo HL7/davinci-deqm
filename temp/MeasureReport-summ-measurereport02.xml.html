@@ -1,25 +1,35 @@
 ---
 ---
+
+{% if 'xml' == 'xml' %}
+{% assign section = '7' %}
+{% elsif 'xml' == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
 {% include fragment-pagebegin.html %}
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-  {% include fragment-base-navtabs.html type='MeasureReport' id='summ-measurereport02' active='xml' %}
-  <a name="root"> </a>
+<div style="counter-reset: section {{section}}" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+{% include fragment-base-navtabs.html type='MeasureReport' id='summ-measurereport02' active='xml' %}
+
+<a name="root"> </a>
 {% if site.data.artifacts[page.path].example %}
   {% assign example = 'Example ' %}
 {% endif %}
 {% assign prefix = site.data.artifacts[page.path].type %}
-  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title}}</h2>
+<h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title}}</h2>
 
-  <p><a href="MeasureReport-summ-measurereport02.xml">Raw xml</a></p>
+<p><a href="MeasureReport-summ-measurereport02.xml" no-download="true">Raw xml</a> | <a href="MeasureReport-summ-measurereport02.xml" download>Download</a></p>
 
   <!-- insert intro if present -->
-  {% include fragment-intro.html %}
+  {% include fragment-intro.html type='MeasureReport' id='summ-measurereport02' %}
 
   {% include MeasureReport-summ-measurereport02-xml-html.xhtml %}
 
   <!-- insert notes if present -->
-  {% include fragment-notes.html %}
+  {% include fragment-notes.html type='MeasureReport' id='summ-measurereport02' %}
 
 </div>
 {% include fragment-pageend.html %}

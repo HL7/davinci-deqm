@@ -1,18 +1,14 @@
 ---
 ---
+<!-- get modelType -->
+{% include fragment-modelType.html id='coverage-deqm' %}
+
 {% include fragment-pagebegin.html %}
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
   {% include fragment-profile-navtabs.html type='StructureDefinition' id='coverage-deqm' active='content' %}
 
   <a name="root"> </a>
-{% if site.data.structuredefinitions['coverage-deqm'].kind == 'logical' %}
-  {% assign modelType = 'Logical Model' %}
-{% elsif site.data.structuredefinitions['coverage-deqm'].kind == 'resource' %}
-  {% assign modelType = 'Resource Profile' %}
-{% else %}
-  {% assign modelType = 'Data Type Profile' %}
-{% endif %}
   <h2 id="root">{{modelType}}: DEQMCoverageProfile</h2>
   <p>{{site.data.structuredefinitions['coverage-deqm'].description | markdownify}}</p>
   <p>
@@ -21,7 +17,7 @@
   <pre>{{site.data.structuredefinitions['coverage-deqm'].url}}</pre>
 
 <!-- insert intro if present -->
-{% include fragment-intro.html %}
+{% include fragment-intro.html type='StructureDefinition' id='coverage-deqm' %}
 
   <!-- no uri -->
   <a name="profile"> </a>
@@ -39,6 +35,9 @@
       </li>
       <li>
         <a href="#tabs-snap">Snapshot Table</a>
+      </li>
+      <li>
+        <a href="#tabs-snapms">Snapshot Table (Must Support)</a>
       </li>
 {% unless excludexml == 'y' %}
 <!--      <li>
@@ -118,6 +117,14 @@
       </div>
     </div>-->
 {% endunless %}
+    <a name="tabs-snapms"> </a>
+    <div id="tabs-snapms">
+      <div id="tbl-snap">
+        <div id="tbl-snap-inner">
+          {%include StructureDefinition-coverage-deqm-snapshot-by-mustsupport.xhtml%}
+        </div>
+      </div>
+    </div>
     <a name="tabs-all"> </a>
     <div id="tabs-all">
       <div id="all-summ">
@@ -189,7 +196,7 @@
   {%include StructureDefinition-coverage-deqm-inv.xhtml%}
 
 <!-- insert notes if present -->
-{% include fragment-notes.html %}
+{% include fragment-notes.html type='StructureDefinition' id='coverage-deqm' %}
 
 </div>
 {% assign includetabscripts = 'true' %}

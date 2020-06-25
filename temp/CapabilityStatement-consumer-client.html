@@ -14,12 +14,12 @@
   <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title}}</h2>
 
   <!-- insert intro if present -->
-  {% include fragment-intro.html %}
+  {% include fragment-intro.html type='CapabilityStatement' id='consumer-client' %}
 
   {% include CapabilityStatement-consumer-client-html.xhtml %}
 
   <!-- insert notes if present -->
-  {% include fragment-notes.html %}
+  {% include fragment-notes.html type='CapabilityStatement' id='consumer-client' %}
 
 </div>
 {% include fragment-pageend.html %}

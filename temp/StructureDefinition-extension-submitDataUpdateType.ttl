@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "DEQMSubmitDataUpdateType"];
   fhir:StructureDefinition.title [ fhir:value "DEQM Submit Data Update Type Extension"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-06-23T12:10:57-07:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-06-25T09:57:32-07:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 International - Clinical Quality Information Work Group"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

@@ -1,21 +1,25 @@
 ---
 ---
+<!-- get modelType -->
+{% include fragment-modelType.html id='extension-submitDataUpdateType' %}
+
 {% include fragment-pagebegin.html %}
 <div style="counter-reset: section 4" class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
   {% include fragment-profile-navtabs.html type='StructureDefinition' id='extension-submitDataUpdateType' active='definition' %}
-  <a name="root"> </a>
-  <h2 id="root">{{modelType}}: DEQMSubmitDataUpdateType - Detailed Descriptions</h2>
 
-  <p>Definitions for the extension-submitDataUpdateType Profile.</p>
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: DEQMSubmitDataUpdateType - Detailed Descriptions</h2>
+
+<p>Definitions for the extension-submitDataUpdateType {{modelType | downcase}}.</p>
 
   <!-- insert intro if present -->
-  {% include fragment-intro.html %}
+  {% include fragment-intro.html type='StructureDefinition' id='extension-submitDataUpdateType' %}
 
   {%include StructureDefinition-extension-submitDataUpdateType-dict.xhtml%}
 
   <!-- insert notes if present -->
-  {% include fragment-notes.html %}
+  {% include fragment-notes.html type='StructureDefinition' id='extension-submitDataUpdateType' %}
 
 </div>
 {% assign includetabscripts = 'true' %}

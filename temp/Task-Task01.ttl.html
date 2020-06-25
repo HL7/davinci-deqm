@@ -1,25 +1,35 @@
 ---
 ---
+
+{% if 'ttl' == 'xml' %}
+{% assign section = '7' %}
+{% elsif 'ttl' == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
 {% include fragment-pagebegin.html %}
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-  {% include fragment-base-navtabs.html type='Task' id='Task01' active='ttl' %}
-  <a name="root"> </a>
+<div style="counter-reset: section {{section}}" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+{% include fragment-base-navtabs.html type='Task' id='Task01' active='ttl' %}
+
+<a name="root"> </a>
 {% if site.data.artifacts[page.path].example %}
   {% assign example = 'Example ' %}
 {% endif %}
 {% assign prefix = site.data.artifacts[page.path].type %}
-  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title}}</h2>
+<h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title}}</h2>
 
-  <p><a href="Task-Task01.ttl">Raw ttl</a></p>
+<p><a href="Task-Task01.ttl" no-download="true">Raw ttl</a> | <a href="Task-Task01.ttl" download>Download</a></p>
 
   <!-- insert intro if present -->
-  {% include fragment-intro.html %}
+  {% include fragment-intro.html type='Task' id='Task01' %}
 
   {% include Task-Task01-ttl-html.xhtml %}
 
   <!-- insert notes if present -->
-  {% include fragment-notes.html %}
+  {% include fragment-notes.html type='Task' id='Task01' %}
 
 </div>
 {% include fragment-pageend.html %}
