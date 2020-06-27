@@ -11,7 +11,7 @@ R4 publish punch list:
   - [X] fix Section  numbering
   - [X] create snapshot for current build
   - [X] update master with latest changes
-  - [ ] Add openapi link to CapabilityStatement page
+  - [X] Add openapi link to CapabilityStatement page
 - [ ] fix remaining QA Issues
 - [X] update ig.json pages - add terminology
 - [ ] update and fix dependency links
