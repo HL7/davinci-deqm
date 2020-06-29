@@ -396,6 +396,9 @@ definition:
           - generation: markdown
             nameUrl: summary-reporting.html
             title: Summary Reporting
+          - generation: markdown
+            nameUrl: gaps-in-care-reporting.html
+            title: Gaps in Care Reporting
         title: Framework
       - generation: markdown
         nameUrl: usecases.html
@@ -409,6 +412,9 @@ definition:
           - generation: markdown
             nameUrl: vte1.html
             title: Venous Thromboembolism Prophylaxis (VTE-1)
+          - generation: markdown
+            nameUrl: gic-col.html
+            title: Gaps in Care Colorectal Cancer Screening
         title: Example Use Cases
       - generation: markdown
         nameUrl: profiles.html
@@ -457,6 +463,13 @@ definition:
             title: StructureDefinition Extension submitDataUpdateType
         title: Profiles and Extensions
       - generation: markdown
+        nameUrl: operations.html
+        page:
+          - generation: generated
+            nameUrl: OperationDefinition-care-gaps.html
+            title: Operations
+        title: Operations
+      - generation: markdown
         nameUrl: terminology.html
         page:
           - generation: generated
@@ -478,7 +491,6 @@ definition:
           - generation: generated
             nameUrl: CapabilityStatement-receiver-server.html
             title: CapabilityStatement Receiver Server
-          - generation: generated
             nameUrl: CapabilityStatement-reporter-client.html
             title: CapabilityStatement Reporter Client
           - generation: generated

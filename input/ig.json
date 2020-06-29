@@ -681,6 +681,11 @@
                             "generation": "markdown",
                             "nameUrl": "summary-reporting.html",
                             "title": "Summary Reporting"
+                        },
+                        {
+                            "generation": "markdown",
+                            "nameUrl": "gaps-in-care-reporting.html",
+                            "title": "Gaps in Care Reporting"
                         }
                     ],
                     "title": "Framework"
@@ -783,6 +788,16 @@
                         }
                     ],
                     "title": "Profiles and Extensions"
+                },
+                {
+                    "generation": "markdown",
+                    "nameUrl": "operations.html",
+                    "page": [{
+                            "generation": "generated",
+                            "nameUrl": "OperationDefinition-care-gaps.html",
+                            "title": "OperationDefinition care-gaps"
+                        }],
+                    "title": "Operations"
                 },
                 {
                     "generation": "markdown",

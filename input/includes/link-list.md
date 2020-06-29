@@ -133,3 +133,4 @@
 [Bundle Multiple Summ Report]: Bundle-multiple-summ-report.html
 [Software System]: {{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html
 [Default Profiles]: {{site.data.fhir.path}}implementationguide.html#default
+[Gaps In Care Reporting]: gaps-in-care-reporting.html

@@ -202,6 +202,9 @@
    <artifact name="DEQM MedicationAdministration Profile"
              key="StructureDefinition-medicationadministration-deqm"
              id="StructureDefinition/medicationadministration-deqm"/>
+   <artifact name=""
+             key="OperationDefinition-care-gaps"
+             id="OperationDefinition/care-gaps"/>
    <artifact name="ExampleScenario" key="ExampleScenario" deprecated="true"/>
    <artifact name="MeasureReport" key="MeasureReport" deprecated="true"/>
    <artifact name="Organization" key="Organization" deprecated="true"/>
@@ -215,11 +218,13 @@
    <page name="Data Exchange" key="datax"/>
    <page name="Individual Reporting" key="indv-reporting"/>
    <page name="Summary Reporting" key="summary-reporting"/>
+   <page name="Gaps in Care Reporting" key="gaps-in-care-reporting"/>
    <page name="Example Use Cases" key="usecases"/>
    <page name="Medication Reconciliation Post-Discharge (MRP)" key="mrp"/>
    <page name="Colorectal Cancer Screening (COL)" key="col"/>
    <page name="Venous Thromboembolism Prophylaxis (VTE-1)" key="vte1"/>
    <page name="Profiles and Extensions" key="profiles"/>
+   <page name="Operations" key="operations"/>
    <page name="Terminology" key="terminology"/>
    <page name="Capability Statements" key="capstatements"/>
    <page name="All Examples" key="all-examples"/>
