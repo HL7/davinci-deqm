@@ -23,7 +23,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
-  -  [Gaps in Care Reporting] gives guidance on the interactions between Reporters and Receivers to exchange gaps in care reports for a measure.
+  -  [Gaps in Care Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the gaps in care reports for a measure.
 
 - [Use cases]\: Three* exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
 
@@ -107,7 +107,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
   : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions. This can be equal to or a subset of the Measurement Period.
 
 {: #gaps-through-period}Gaps Through Period
-  : TODO: add definition ... The period of time defined by the 
+  : TODO: add definition ... The period of time defined by the
 
 {: #snapshot-update}Snapshot Update
   : In contrast to the Incremental Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains all the DEQM and QI Core Profiles for each transaction.  If the Consumer supports snapshot updates, the contents of the updated payload entirely replaces the previous payload.
