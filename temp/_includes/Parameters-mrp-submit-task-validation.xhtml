@@ -1,9 +1,0 @@
-{% raw %}<table class="grid">
-<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
-<tr><td>error</td><td>structure</td><td>Parameters/mrp-submit-task: Parameters.parameter[0].resource.ofType(MeasureReport)</td><td>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem is not allowed to be used at this point (allowed = e:Measure; this element is [[Parameters.parameter.resource.ofType(MeasureReport), BackboneElement.resource, MeasureReport])</td><td></td></tr>
-<tr><td>error</td><td>business-rule</td><td>Parameters/mrp-submit-task: Parameters.parameter[0].resource.ofType(MeasureReport)</td><td>The MeasureReport does not include a group for the group MRP Group </td><td></td></tr>
-<tr><td>error</td><td>invariant</td><td>Parameters/mrp-submit-task: Parameters.parameter[3].resource.ofType(Practitioner)</td><td>deqm-4: Either an NPI, EIN, or CCN identifier SHALL be present [(identifier.system contains 'urn:oid:2.16.840.1.113883.4.4') or (identifier.system contains 'urn:oid:2.16.840.1.113883.4.336')]</td><td></td></tr>
-<tr><td>warning</td><td>code-invalid</td><td>Parameters/mrp-submit-task: Parameters.parameter[5].resource.ofType(Coverage).relationship.coding[0]</td><td>A code with no system has no defined meaning. A system should be provided</td><td></td></tr>
-<tr><td>information</td><td>unknown</td><td>Parameters/mrp-submit-task: Parameters.parameter[2].resource.ofType(Task).code.coding[0]</td><td>Code System URI &quot;http://www.ama-assn.org/go/cpt&quot; is unknown so the code cannot be validated</td><td></td></tr>
-</table>
-{% endraw %}

@@ -1,3 +1,0 @@
-- [Measurereport Indv Measurereport01](MeasureReport-indv-measurereport01.html)
-- [Measurereport Indv Measurereport02](MeasureReport-indv-measurereport02.html)
-- [Measurereport Indv Measurereport03](MeasureReport-indv-measurereport03.html)
