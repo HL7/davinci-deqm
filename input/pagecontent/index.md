@@ -107,7 +107,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
   : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions. This can be equal to or a subset of the Measurement Period.
 
 {: #gaps-through-period}Gaps Through Period
-  : TODO: add definition ... The period of time defined by the
+  : The period of time defined by the reporters for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively. 
 
 {: #snapshot-update}Snapshot Update
   : In contrast to the Incremental Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains all the DEQM and QI Core Profiles for each transaction.  If the Consumer supports snapshot updates, the contents of the updated payload entirely replaces the previous payload.
