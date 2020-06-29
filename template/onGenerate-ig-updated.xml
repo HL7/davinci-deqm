@@ -10,11 +10,11 @@
       </div>
    </text>
    <url value="http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm"/>
-   <version value="1.1.0"/>
+   <version value="1.2.0"/>
    <name value="DataExchangeForQualityMeasuresSTU2forFHIRR4"/>
    <title value="Data Exchange For Quality Measures STU2 for FHIR R4"/>
    <status value="draft"/>
-   <date value="2020-06-23T12:10:57-07:00"/>
+   <date value="2020-06-29T07:15:41-07:00"/>
    <publisher value="HL7 International - Clinical Quality Information Work Group"/>
    <contact>
       <telecom>
@@ -53,7 +53,10 @@
          <name value="Behavior: Capability Statements"/>
          <description value="The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems complying with the implementation guide are expected to declare conformance to one or more of the following capability statements."/>
       </grouping>
-
+      <grouping id="_dyn_operationdefinition">
+         <name value="Behavior: Operation Definitions"/>
+         <description value="These are custom operations that can be supported by and/or invoked by systems complying with this implementation guide"/>
+      </grouping>
 
 
 
@@ -1030,6 +1033,19 @@
          <exampleBoolean value="false"/>
          <groupingId value="_str_profile"/>
       </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="OperationDefinition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="OperationDefinition-care-gaps.html"/>
+         </extension>
+         <reference>
+            <reference value="OperationDefinition/care-gaps"/>
+         </reference>
+         <description value="The following lists the minimum In Parameters must be provided when call the $care-gaps operations:&#xA;periodStart&#xA;periodStop&#xA;subject | provider | organization   - must provide either a subject, or an organization (e.g., TIN), or a provider + organization combination (e.g., NPI + TIN)"/>
+         <groupingId value="_dyn_operationdefinition"/>
+      </resource>
       <page>
          <nameUrl value="toc.html"/>
          <title value="Table of Contents"/>
@@ -1061,6 +1077,11 @@
             <page>
                <nameUrl value="summary-reporting.html"/>
                <title value="Summary Reporting"/>
+               <generation value="markdown"/>
+            </page>
+            <page>
+               <nameUrl value="gaps-in-care-reporting.html"/>
+               <title value="Gaps in Care Reporting"/>
                <generation value="markdown"/>
             </page>
          </page>
@@ -1156,6 +1177,16 @@
             <page>
                <nameUrl value="StructureDefinition-extension-submitDataUpdateType.html"/>
                <title value="StructureDefinition Extension submitDataUpdateType"/>
+               <generation value="generated"/>
+            </page>
+         </page>
+         <page>
+            <nameUrl value="operations.html"/>
+            <title value="Operations"/>
+            <generation value="markdown"/>
+            <page>
+               <nameUrl value="OperationDefinition-care-gaps.html"/>
+               <title value="OperationDefinition care-gaps"/>
                <generation value="generated"/>
             </page>
          </page>
@@ -1256,6 +1287,11 @@
             <page>
                <nameUrl value="CapabilityStatement-consumer-client.html"/>
                <title value="Consumer Client CapabilityStatement"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="OperationDefinition-care-gaps.html"/>
+               <title value=""/>
                <generation value="generated"/>
             </page>
             <page>
