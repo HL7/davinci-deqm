@@ -1,0 +1,63 @@
+﻿<html>
+<head>
+  <title>MeasureReport-datax-measurereport03-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:MeasureReport;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;datax-measurereport03&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: datax-measurereport03&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: data-collection&lt;/p&gt;&lt;p&gt;&lt;b&gt;measure&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR\&quot;&gt;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-patient03.html\&quot;&gt;Generated Summary: id: patient03; Medical record number = 34567 (USUAL); active; Virginia Hartman (OFFICIAL); gender: female; birthDate: 1983-09-12; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus U}\&quot;&gt;unmarried&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Jan 1, 2019, 8:59:52 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;reporter&lt;/b&gt;: &lt;a href=\&quot;Organization-organization03.html\&quot;&gt;Generated Summary: id: organization03; Provider number = 345678912 (OFFICIAL), Provider number = 082584 (SECONDARY); active; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\&quot;&gt;Healthcare Provider&lt;/span&gt;; name: DaVinciHospital03; ph: (+1) 201-555-1212&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Jan 1, 2018, 12:00:00 AM --&amp;gt; Dec 31, 2018, 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;evaluatedResource&lt;/b&gt;: &lt;a href=\&quot;Observation-observation03.html\&quot;&gt;Generated Summary: id: observation03; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}\&quot;&gt;Laboratory&lt;/span&gt;; &lt;span title=\&quot;Codes: {http://loinc.org 77353-1}\&quot;&gt;Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative&lt;/span&gt;; effective: Jun 22, 2018, 12:00:00 AM&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;incremental&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">fhir:MeasureReport.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;complete&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">fhir:MeasureReport.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;data-collection&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">fhir:MeasureReport.measure</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&quot;;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&gt;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.subject">fhir:MeasureReport.subject</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/patient03&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.date">fhir:MeasureReport.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2019-01-01T16:59:52.404Z&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.reporter">fhir:MeasureReport.reporter</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Organization/organization03&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">fhir:MeasureReport.period</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2018-01-01&quot;^^xsd:date ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:Period.end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2018-12-31&quot;^^xsd:date ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.evaluatedResource">fhir:MeasureReport.evaluatedResource</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/observation03&quot; ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

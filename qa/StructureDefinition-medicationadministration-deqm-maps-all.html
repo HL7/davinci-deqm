@@ -1,0 +1,233 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-medicationadministration-deqm-maps-all</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>DEQMMedicationAdministrationProfile</b></td></tr>
+ <tr><td>MedicationAdministration</td><td>Event</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Event.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiates</td><td>Event.instantiates</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td>Event.partOf</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Event.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>Event.statusReason</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>Event.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Event.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>Event.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>Event.occurrence[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Event.performer</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>Event.performer.function</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>Event.performer.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>Event.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>Event.reasonReference</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;request</td><td>Event.basedOn</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;device</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>Event.note</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosage</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;eventHistory</td><td></td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>DEQMMedicationAdministrationProfile</b></td></tr>
+ <tr><td>MedicationAdministration</td><td>Entity. Role, or Act, SubstanceAdministration</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiates</td><td>.outboundRelationship[typeCode=DEFN].target[classCode=unspecified]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td>.outboundRelationship[typeCode=COMP]/target[classCode=SBADM or PROC,moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>.statusCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>.outboundRelationship[typeCode=RSON]/target[classCode=OBS,moodCode=EVN, code=&quot;reason not given&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>.inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=&quot;type of medication usage&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>.participation[typeCode=CSM].role[classCode=ADMM]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=SBJ].role[classCode=PAT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>.inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN, code=&quot;type of encounter or episode&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td>.outboundRelationship[typeCode=PERT].target[A_SupportingClinicalStatement CMET minimal with many different choices of classCodes(ORG, ENC, PROC, SPLY, SBADM, OBS) and each of the act class codes draws from one or more of the following moodCodes (EVN, DEF, INT PRMS, RQO, PRP, APT, ARQ, GOL)]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>.participation[typeCode=PRF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>participation[typeCode=PRF].functionCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>.outboundRelationship[typeCode=RSON]/target[classCode=OBS,moodCode=EVN, code=&quot;reason for use ASSERTION&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;request</td><td>InFullfillmentOf-&gt;SubstanceAdministration</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;device</td><td>device-&gt;Access  OR device-&gt;AssignedDevice</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>.inboundRelationship[typeCode=SUBJ]/source[classCode=OBS,moodCode=EVN,code=&quot;annotation&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosage</td><td>component-&gt;SubstanceAdministrationEvent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site</td><td>.approachSiteCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td>.routeCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method</td><td>.methodCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose</td><td>.doseQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x]</td><td>.rateQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;eventHistory</td><td>.inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>DEQMMedicationAdministrationProfile</b></td></tr>
+ <tr><td>MedicationAdministration</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiates</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>FiveWs.done[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>FiveWs.why[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;request</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;device</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosage</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;eventHistory</td><td></td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>DEQMMedicationAdministrationProfile</b></td></tr>
+ <tr><td>MedicationAdministration</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiates</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>RXA-20-Completion Status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>RXA-9-Administration Notes / RXA-18 Substance/Treatment Refusal Reason</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td>RXA-5-Administered Code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3-Patient ID List</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>PV1-19-Visit Number</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>RXA-3-Date/Time Start of Administration / RXA-4-Date/Time End of Administration</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>RXA-10-Administering Provider / PRT-5-Participation Person: PRT-4-Participation='AP' (RXA-10 is deprecated)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>RXE-27 Give Indication</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;request</td><td>ORC-2-Placer Order Number / ORC-3-Filler Order Number</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;device</td><td>PRT-10 Participation Device / RXR-3 Administrative Device</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosage</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site</td><td>RXR-2 Administration Site / RXR-6 Administration Site Modifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td>RXR-1-Route</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method</td><td>RXR-4-Administration Method</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose</td><td>RXA-6 Administered Amount / RXA-7 Administered Units</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x]</td><td>RXA-12-Administered Per (Time Unit)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;eventHistory</td><td></td> </tr>
+</table>
+<a name="w3c.prov"> </a><h3>Mappings for W3C PROV (<a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>DEQMMedicationAdministrationProfile</b></td></tr>
+ <tr><td>MedicationAdministration</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiates</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;medication[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;context</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInformation</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>no mapping</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;request</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;device</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosage</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;eventHistory</td><td></td> </tr>
+</table>
+</body>
+</html>

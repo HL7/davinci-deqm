@@ -1,0 +1,1005 @@
+﻿<html>
+<head>
+  <title>Bundle-multiple-summ-report-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Bundle;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;multiple-summ-report&quot;];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">fhir:Bundle.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;transaction&quot;];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">fhir:Bundle.timestamp</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2020-06-18T20:16:02.653993Z&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">fhir:Bundle.entry</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:uuid:884bd27a-b1a0-11ea-b615-a4d18ccf5172&quot; ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport">fhir:Bundle.entry.resource</a> &lt;urn:uuid:884bd27a-b1a0-11ea-b615-a4d18ccf5172&gt;;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ];
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;MeasureReport&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172&quot; ];
+     <a href="http://hl7.org/fhir/R4/organization.html#Organization">fhir:Bundle.entry.resource</a> &lt;urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172&gt;;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ];
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Organization&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:uuid:884cd4e0-b1a0-11ea-b615-a4d18ccf5172&quot; ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport">fhir:Bundle.entry.resource</a> &lt;urn:uuid:884cd4e0-b1a0-11ea-b615-a4d18ccf5172&gt;;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ];
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;MeasureReport&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:uuid:884ec872-b1a0-11ea-b615-a4d18ccf5172&quot; ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport">fhir:Bundle.entry.resource</a> &lt;urn:uuid:884ec872-b1a0-11ea-b615-a4d18ccf5172&gt;;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:Bundle.entry.request</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:Bundle.entry.request.method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;POST&quot; ];
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:Bundle.entry.request.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;MeasureReport&quot; ]     ]
+  ].
+
+&lt;urn:uuid:884bd27a-b1a0-11ea-b615-a4d18ccf5172&gt; <a href="http://hl7.org/fhir/R4/measurereport.html">a</a> fhir:MeasureReport;
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCodeableConcept</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;proportion&quot; ]       ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">fhir:MeasureReport.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;complete&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">fhir:MeasureReport.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;summary&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">fhir:MeasureReport.measure</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://example.org/fhir/Measure/measure-medicare-stratification-example&quot;;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://example.org/fhir/Measure/measure-medicare-stratification-example&gt;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">fhir:MeasureReport.period</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2018-01-01&quot;^^xsd:date ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:Period.end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2018-12-31&quot;^^xsd:date ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.improvementNotation">fhir:MeasureReport.improvementNotation</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-improvement-notation&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;increase&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Increased score indicates improvement&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group">fhir:MeasureReport.group</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population">fhir:MeasureReport.group.population</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10000&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;8000&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;4000&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-administrative&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;2000&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-medical&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;1000&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-supplemental&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;1000&quot;^^xsd:integer ]     ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.measureScore">fhir:MeasureReport.group.measureScore</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;50&quot;^^xsd:decimal ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">fhir:Quantity.unit</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;%&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">fhir:Quantity.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://unitsofmeasure.org&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">fhir:Quantity.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;%&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier">fhir:MeasureReport.group.stratifier</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">fhir:MeasureReport.group.stratifier.code</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/stratifier-classifications&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;CoverageType&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Coverage Type&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">fhir:MeasureReport.group.stratifier.stratum</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/SOP&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MEDICARE&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Medicare&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;1747&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;392&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;243&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-administrative&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;154&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-medical&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;12&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-supplemental&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;77&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;61.99&quot;^^xsd:decimal ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">fhir:Quantity.unit</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;%&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">fhir:Quantity.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://unitsofmeasure.org&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">fhir:Quantity.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;%&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">fhir:MeasureReport.group.stratifier.code</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/stratifier-classifications&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;CoverageTypeAndClass&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Coverage Type and Class&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">fhir:MeasureReport.group.stratifier.stratum</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component">fhir:MeasureReport.group.stratifier.stratum.component</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.code">fhir:MeasureReport.group.stratifier.stratum.component.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/stratifier-classifications&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;CoverageType&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Coverage Type&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.value">fhir:MeasureReport.group.stratifier.stratum.component.value</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/SOP&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MEDICARE&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Medicare&quot; ]             ]           ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.code">fhir:MeasureReport.group.stratifier.stratum.component.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/stratifier-classifications&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;CoverageClass&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Coverage Class&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.component.value">fhir:MeasureReport.group.stratifier.stratum.component.value</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/medicare-subgroup&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Non-LIS/DE,Nondisability&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Non-LIS/DE,Nondisability&quot; ]             ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;745&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;150&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;103&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-administrative&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;77&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-medical&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;7&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/CodeSystem/measure-population-type&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator-supplemental&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;19&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;68.67&quot;^^xsd:decimal ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">fhir:Quantity.unit</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;%&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">fhir:Quantity.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://unitsofmeasure.org&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">fhir:Quantity.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;%&quot; ]         ]       ]     ]
+  ].
+
+&lt;urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172&gt; <a href="http://hl7.org/fhir/R4/organization.html">a</a> fhir:Organization;
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">fhir:Meta.versionId</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;4&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2019-02-21T01:47:54.000+00:00&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">fhir:Organization.identifier</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">fhir:Identifier.use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;official&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:Identifier.type</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;TAX&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Tax ID number&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.4.4&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;123456789&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">fhir:Identifier.assigner</a> [
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;www.irs.gov&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.active">fhir:Organization.active</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.type">fhir:Organization.type</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/organization-type&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;prov&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Healthcare Provider&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.name">fhir:Organization.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;DaVinciHospital01&quot;];
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.telecom">fhir:Organization.telecom</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;phone&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;(+1) 401-555-1212&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/organization.html#Organization.address">fhir:Organization.address</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">fhir:Address.line</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;73 Lakewood Street&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">fhir:Address.city</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Warwick&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">fhir:Address.state</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;RI&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">fhir:Address.postalCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;02886&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">fhir:Address.country</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;USA&quot; ]
+  ].
+
+&lt;urn:uuid:884cd4e0-b1a0-11ea-b615-a4d18ccf5172&gt; <a href="http://hl7.org/fhir/R4/measurereport.html">a</a> fhir:MeasureReport;
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCodeableConcept</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;proportion&quot; ]       ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">fhir:MeasureReport.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;complete&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">fhir:MeasureReport.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;summary&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">fhir:MeasureReport.measure</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&quot;;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR&gt;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.date">fhir:MeasureReport.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2019-09-05T16:59:52.404Z&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.reporter">fhir:MeasureReport.reporter</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">fhir:MeasureReport.period</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2019-08-01&quot;^^xsd:date ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:Period.end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2019-09-01&quot;^^xsd:date ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.improvementNotation">fhir:MeasureReport.improvementNotation</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-improvement-notation&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;increase&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Increased score indicates improvement&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group">fhir:MeasureReport.group</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.code">fhir:MeasureReport.group.code</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;group-1&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;group-1&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population">fhir:MeasureReport.group.population</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;100&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;60&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;100&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]     ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.measureScore">fhir:MeasureReport.group.measureScore</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;66&quot;^^xsd:decimal ]     ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier">fhir:MeasureReport.group.stratifier</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">fhir:MeasureReport.group.stratifier.code</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sde-ethnicity&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SDE Ethnicity&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">fhir:MeasureReport.group.stratifier.stratum</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.6.238&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;2135-2&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Hispanic or Latino&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;50&quot;^^xsd:decimal ]         ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.6.238&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;2186-5&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Not Hispanic or Latino&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;70&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;50&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;70&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;71&quot;^^xsd:decimal ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">fhir:MeasureReport.group.stratifier.code</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sde-payer&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SDE Payer&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">fhir:MeasureReport.group.stratifier.stratum</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Payer123&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;King HMO&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;50&quot;^^xsd:decimal ]         ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Payer456&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Green Circle&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;33&quot;^^xsd:decimal ]         ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Payer789&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;GoodHealth of California&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;100&quot;^^xsd:decimal ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">fhir:MeasureReport.group.stratifier.code</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sde-race&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SDE Race&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">fhir:MeasureReport.group.stratifier.stratum</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.6.238&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;2054-5&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Black or African American&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;50&quot;^^xsd:decimal ]         ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.6.238&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;2106-3&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;White&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;30&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;33&quot;^^xsd:decimal ]         ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.6.238&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;2028-9&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Asian&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;100&quot;^^xsd:decimal ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.code">fhir:MeasureReport.group.stratifier.code</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir/example.org&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sde-sex&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SDE Sex&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum">fhir:MeasureReport.group.stratifier.stratum</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/administrative-gender&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;male&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Male&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;20&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;5&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;57&quot;^^xsd:decimal ]         ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/administrative-gender&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;female&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Female&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;60&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;40&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;60&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;4&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;72&quot;^^xsd:decimal ]         ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.value">fhir:MeasureReport.group.stratifier.stratum.value</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/administrative-gender&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;other&quot; ];
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Other&quot; ]           ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population">fhir:MeasureReport.group.stratifier.stratum.population</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.code">fhir:MeasureReport.group.stratifier.stratum.population.code</a> [
+             <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+               <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator-exclusion&quot; ];
+               <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator Exclusion&quot; ]             ]           ];
+           <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.population.count">fhir:MeasureReport.group.stratifier.stratum.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]         ];
+         <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.stratifier.stratum.measureScore">fhir:MeasureReport.group.stratifier.stratum.measureScore</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;0&quot;^^xsd:decimal ]         ]       ]     ]
+  ].
+
+&lt;urn:uuid:884ec872-b1a0-11ea-b615-a4d18ccf5172&gt; <a href="http://hl7.org/fhir/R4/measurereport.html">a</a> fhir:MeasureReport;
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCodeableConcept</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;proportion&quot; ]       ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">fhir:MeasureReport.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;complete&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">fhir:MeasureReport.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;summary&quot;];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">fhir:MeasureReport.measure</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example&quot;;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example&gt;
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.date">fhir:MeasureReport.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2018-09-05T16:59:52.404Z&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.reporter">fhir:MeasureReport.reporter</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">fhir:MeasureReport.period</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2018-08-01&quot;^^xsd:date ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:Period.end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2018-09-01&quot;^^xsd:date ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.improvementNotation">fhir:MeasureReport.improvementNotation</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-improvement-notation&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;increase&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Increased score indicates improvement&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group">fhir:MeasureReport.group</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.code">fhir:MeasureReport.group.code</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;mrp-group&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;MRP Group&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;MRP Group&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population">fhir:MeasureReport.group.population</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;initial-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial Population&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;100&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;numerator&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Numerator&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;80&quot;^^xsd:integer ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">fhir:MeasureReport.group.population.code</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/measure-population&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;denominator&quot; ];
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Denominator&quot; ]         ]       ];
+       <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">fhir:MeasureReport.group.population.count</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;100&quot;^^xsd:integer ]     ];
+     <a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.measureScore">fhir:MeasureReport.group.measureScore</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;0.8&quot;^^xsd:decimal ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

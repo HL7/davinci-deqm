@@ -1,0 +1,134 @@
+﻿<html>
+<head>
+  <title>MeasureReport-indv-measurereport02-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport">resourceType</a>" : "MeasureReport",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.id">id</a>" : "indv-measurereport02",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: indv-measurereport02&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: complete&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: individual&lt;/p&gt;&lt;p&gt;&lt;b&gt;measure&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example\&quot;&gt;http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-patient01.html\&quot;&gt;Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\&quot;&gt;Married&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Sep 5, 2018, 9:59:52 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;reporter&lt;/b&gt;: &lt;a href=\&quot;Organization-organization01.html\&quot;&gt;Generated Summary: id: organization01; Tax ID number = 123456789 (OFFICIAL); active; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}\&quot;&gt;Healthcare Provider&lt;/span&gt;; name: DaVinciHospital01; ph: (+1) 401-555-1212&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: Aug 1, 2018, 12:00:00 AM --&amp;gt; Sep 1, 2018, 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;improvementNotation&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\&quot;&gt;Increased score indicates improvement&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://example.org mrp-group}\&quot;&gt;MRP Group&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: initial-population&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}\&quot;&gt;Initial Population&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 1&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: numerator&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}\&quot;&gt;Numerator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 1&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;population&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: denominator&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}\&quot;&gt;Denominator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;count&lt;/b&gt;: 1&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;measureScore&lt;/b&gt;: 1&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;evaluatedResource&lt;/b&gt;: &lt;a href=\&quot;Observation-observation01.html\&quot;&gt;Generated Summary: id: observation01; &lt;span title=\&quot;Codes: {http://acme.org/observation-category measure}\&quot;&gt;Measure&lt;/span&gt;; &lt;span title=\&quot;Codes: {http://www.ama-assn.org/go/cpt 1111F}\&quot;&gt;Medication Reconciliation&lt;/span&gt;; effective: Sep 29, 2018, 7:15:04 AM; issued: Sep 29, 2018, 7:15:04 AM; value&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-scoring",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "proportion"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.840.1.113883.3.2074.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "0015HQN9BD3304E"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/organization02"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.status">status</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.type">type</a>" : "individual",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.measure">measure</a>" : "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/patient01"
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.date">date</a>" : "2018-09-05T16:59:52.404Z",
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.reporter">reporter</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/organization01"
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.period">period</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2018-08-01",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2018-09-01"
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.improvementNotation">improvementNotation</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "increase",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Increased score indicates improvement"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "mrp-group",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "MRP Group"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "MRP Group"
+      },
+      "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population">population</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.id">id</a>" : "initial-population",
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "initial-population",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Initial Population"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 1
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.id">id</a>" : "numerator",
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "numerator",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Numerator"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 1
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.id">id</a>" : "denominator",
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.code">code</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/measure-population",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "denominator",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Denominator"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.population.count">count</a>" : 1
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.group.measureScore">measureScore</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/measurereport.html#MeasureReport.evaluatedResource">evaluatedResource</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/observation01"
+    }
+  ]
+}</pre>
+</body>
+</html>
