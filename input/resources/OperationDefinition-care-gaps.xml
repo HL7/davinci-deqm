@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="care-gaps"/>
+    <meta>
+        <versionId value="15"/>
+        <lastUpdated value="2020-06-19T20:43:02.252+00:00"/>
+        <source value="#KkMRZuFozWkSKZ9K"/>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
+    </meta>
+    <url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/care-gaps"/>
+    <name value="care-gaps"/>
+    <status value="draft"/>
+    <kind value="operation"/>
+    <publisher value="Clinical Quality Information"/>
+    <description value="The following lists the minimum In Parameters must be provided when call the $care-gaps operations:&#xA;periodStart&#xA;periodStop&#xA;subject | provider | organization   - must provide either a subject, or an organization (e.g., TIN), or a provider + organization combination (e.g., NPI + TIN)"/>
+    <code value="caregaps"/>
+    <base value="http://hl7.org/fhir/OperationDefinition/Measure-care-gaps"/>
+    <system value="false"/>
+    <type value="false"/>
+    <instance value="false"/>
+    <parameter>
+        <name value="periodStart"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <documentation value="The start of the targeted gaps through period. This maybe the start of the measurement period defined by a measure, or a customized desired performance period start date determined by a payer, a provider, a measure program, and etc.. "/>
+        <type value="date"/>
+    </parameter>
+    <parameter>
+        <name value="periodEnd"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <documentation value="The end of the targeted gaps through period (the gaps through date). The gaps through date could be a past date or a future date.  For example, today's date is 2020-06-18, 1) if periodEnd date is 2020-09-30, it returns gaps through 2020-09-30, and 2) if the periodEnd date is 2020-05-31, it returns gaps through 2020-05-31. "/>
+        <type value="date"/>
+    </parameter>
+    <parameter>
+        <name value="topic"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="The category or domain to be used to determine which measures are considered for the care gaps report. Such as screening measures, HEDIS measure domains, chronic disease measures. For example, setting topic to be screening measures will run care gaps on all screening measures. Topic may also be a &quot;value set&quot; that is defined with a list of domains/categories, etc. Topic examples: &quot;screening&quot;, &quot;pediatric&quot;. When multiple topics are provided, it is expected to be union of measures in those topics."/>
+        <type value="string"/>
+    </parameter>
+    <parameter>
+        <name value="subject"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Subject will be a reference to either Patient or Group. Must provide either Patient/123 or Group/123, cannot simply provide 123. If only provide 123, then the operation would not know if it is a Patient reference or a Group reference. "/>
+        <type value="string"/>
+        <searchType value="reference"/>
+    </parameter>
+    <parameter>
+        <name value="practitioner"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Reference to a practitioner for which the gaps in care report will be created. For a practitioner focused gaps in care report, this is a required In Parameter. Need to make sure that practitioner is authorized to get the care-gaps report for. What measures the practitioner are eligible or qualified."/>
+        <type value="string"/>
+    </parameter>
+    <parameter>
+        <name value="organization"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Provider organization for which the gaps in care report will be created. For a provider organization focused gaps in care report, this is a required In Parameter"/>
+        <type value="string"/>
+    </parameter>
+    <parameter>
+        <name value="status"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="The status of gaps for a measure or measures, whether the gaps is an open gap or a closed gap. For a positive proportion measure, gap means it is not being in the numerator. For an inverse (negative) proportion measure [e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)], gap means it is being in the numerator."/>
+        <type value="code"/>
+    </parameter>
+    <parameter>
+        <name value="measure"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="The measure(s)for which the gaps in care will be reported. E.g., CMS125v8 (Breast Cancer Screening), CMS130v8 (Colorectal Cancer Screening)"/>
+        <type value="string"/>
+    </parameter>
+    <parameter>
+        <name value="program"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS MIPS, HQR programs.  Program is represented in Measure using element useContext (useageContext). When code attribute of useContext is &quot;program&quot; (&quot;program&quot; is a code in the UsageContextType value set),  then the value attribute of useContext would be a specific program. useContext is 0..*, multiple programs could be specified for a measure."/>
+        <type value="string"/>
+    </parameter>
+    <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="The result of the care gaps report will be returned as a document bundle for each patient with a MeasureReport entry for each included measure"/>
+        <type value="Bundle"/>
+    </parameter>
+</OperationDefinition>
