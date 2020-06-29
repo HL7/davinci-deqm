@@ -1,3 +1,0 @@
-
-{"severity":"error","code":"required","details":{"text":"Unable to find ImplementationGuide.definition.resource.name for the resource OperationDefinition/care-gaps.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[63]"]}
-,
