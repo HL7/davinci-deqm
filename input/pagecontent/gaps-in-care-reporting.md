@@ -10,12 +10,8 @@ Description of Gaps in Care Reporting. Contents coming ...
 {% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-12 Care Gaps Operation - Single Patient" %}
 {% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-13 Care Gaps Operation - Group of Patients" %}
 
-### How to Construct a Gaps in Care Reports
-Gaps through Concept
-Prospectively
-Retrospectively
-[Bundle]
-DetectedIssue
+### How to Construct a Gaps in Care Report
+TODO: This section describes  ...
 
 #### Attribution
 This section describes the relationship with the ATR IG and how attributions for the gaps in care report are depend on the ATR IG.
@@ -26,10 +22,10 @@ The following resources are used in the summary reporting scenario:
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Bundle|DEQM GIC Bundle Profile||
-|Composition|DEQM GIC Composition Profile||
-|DetectedIssue|DEQM GIC Detected Issue Profile||
-|MeasureReport|DEQM GIC MeasureReport Profile||
+|Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
+|Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
+|DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
+|Individual MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
 
 ### Gaps in Care reporting
 
