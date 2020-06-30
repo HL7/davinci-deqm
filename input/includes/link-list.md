@@ -134,3 +134,7 @@
 [Software System]: {{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html
 [Default Profiles]: {{site.data.fhir.path}}implementationguide.html#default
 [Gaps In Care Reporting]: gaps-in-care-reporting.html
+[DEQM Gaps In Care Bundle Profile]: StructureDefinition-gaps-bundle-deqm.html
+[DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
+[DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
+[DEQM Gaps In Care Individual MeasureReport Profile]: StructureDefinition-gaps-indv-measurereport-deqm.html

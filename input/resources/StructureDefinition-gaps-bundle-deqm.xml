@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="gaps-bundle-deqm"/>
+    <meta>
+        <versionId value="3"/>
+        <lastUpdated value="2020-06-09T19:16:40.101+00:00"/>
+        <source value="#XyCOimZZB7spgZfm"/>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+            <display value="Resource encoded in summary mode"/>
+        </tag>
+    </meta>
+    <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"/>
+    <name value="DEQMGapsInCareBundleProfile"/>
+    <title value="DEQM Gaps In Care Bundle Profile"/>
+    <status value="active"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Bundle"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <derivation value="constraint"/>
+</StructureDefinition>
