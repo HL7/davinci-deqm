@@ -25,7 +25,7 @@ The following resources are used in the summary reporting scenario:
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
-|Individual MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
+|Individual MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile||
 
 ### Gaps in Care reporting
 
