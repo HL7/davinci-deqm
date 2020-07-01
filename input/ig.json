@@ -785,6 +785,16 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-extension-submitDataUpdateType.html",
                             "title": "StructureDefinition Extension submitDataUpdateType"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-gaps-indv-measurereport-deqm.html",
+                            "title": "StructureDefinition Gaps Indv MeasureReport Deqm"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-extension-populationReference.html",
+                            "title": "StructureDefinition Extension populationReference"
                         }
                     ],
                     "title": "Profiles and Extensions"

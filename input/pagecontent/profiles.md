@@ -16,7 +16,7 @@ Payers and providers need common data specification, measure specification, repo
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
-|Individual MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile||
+|MeasureReport|DEQM Gaps Individual MeasureReport Profile|[DEQM Gaps Individual MeasureReport Profile]|
 
 
 <br />
@@ -31,6 +31,8 @@ Payers and providers need common data specification, measure specification, repo
 |[DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)|
 |[DEQM Certification Identifier Extension](StructureDefinition-extension-certificationIdentifier.html)|
 |[DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)|
+|[DEQM Population Reference Extension](StructureDefinition-extension-populationReference.html)|
+
 
 <br />
 
