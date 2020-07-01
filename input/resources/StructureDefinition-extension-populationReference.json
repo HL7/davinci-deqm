@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "extension-populationReference",
-  "url": "http://www.fhir.org/guides/test3/StructureDefinition/extension-populationReference",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
   "version": "0.0.0",
   "name": "DEQMPopulationReferenceExtension",
   "title": "DEQM Population Reference Extension",
@@ -50,7 +50,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://www.fhir.org/guides/test3/StructureDefinition/extension-populationReference"
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference"
       },
       {
         "id": "Extension.value[x]",
