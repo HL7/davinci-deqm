@@ -163,6 +163,9 @@
    <artifact name="DEQM Individual MeasureReport Profile"
              key="StructureDefinition-indv-measurereport-deqm"
              id="StructureDefinition/indv-measurereport-deqm"/>
+   <artifact name="DEQM Gaps Individual MeasureReport Profile"
+             key="StructureDefinition-gaps-indv-measurereport-deqm"
+             id="StructureDefinition/gaps-indv-measurereport-deqm"/>
    <artifact name="Receiver Server CapabilityStatement"
              key="CapabilityStatement-receiver-server"
              id="CapabilityStatement/receiver-server"/>
@@ -181,6 +184,9 @@
    <artifact name="DEQM Certification Identifier Extension"
              key="StructureDefinition-extension-certificationIdentifier"
              id="StructureDefinition/extension-certificationIdentifier"/>
+   <artifact name="DEQM Population Reference Extension"
+             key="StructureDefinition-extension-populationReference"
+             id="StructureDefinition/extension-populationReference"/>
    <artifact name="DEQM Submit Data Update Type Extension"
              key="StructureDefinition-extension-submitDataUpdateType"
              id="StructureDefinition/extension-submitDataUpdateType"/>
@@ -202,9 +208,21 @@
    <artifact name="DEQM MedicationAdministration Profile"
              key="StructureDefinition-medicationadministration-deqm"
              id="StructureDefinition/medicationadministration-deqm"/>
+   <artifact name="DEQM Gaps In Care Bundle Profile"
+             key="StructureDefinition-gaps-bundle-deqm"
+             id="StructureDefinition/gaps-bundle-deqm"/>
+   <artifact name="DEQM Gaps In Care Document Type Code System"
+             key="CodeSystem-gaps-doc-type"
+             id="CodeSystem/gaps-doc-type"/>
+   <artifact name="DEQM Gaps In Care Composition Profile"
+             key="StructureDefinition-gaps-composition-deqm"
+             id="StructureDefinition/gaps-composition-deqm"/>
    <artifact name=""
              key="OperationDefinition-care-gaps"
              id="OperationDefinition/care-gaps"/>
+   <artifact name="DEQM Gaps In Care Detected Issue Profile"
+             key="StructureDefinition-gaps-detectedissue-deqm"
+             id="StructureDefinition/gaps-detectedissue-deqm"/>
    <artifact name="ExampleScenario" key="ExampleScenario" deprecated="true"/>
    <artifact name="MeasureReport" key="MeasureReport" deprecated="true"/>
    <artifact name="Organization" key="Organization" deprecated="true"/>
@@ -223,6 +241,7 @@
    <page name="Medication Reconciliation Post-Discharge (MRP)" key="mrp"/>
    <page name="Colorectal Cancer Screening (COL)" key="col"/>
    <page name="Venous Thromboembolism Prophylaxis (VTE-1)" key="vte1"/>
+   <page name="Gaps in Care Colorectal Cancer Screening" key="gic-col"/>
    <page name="Profiles and Extensions" key="profiles"/>
    <page name="Operations" key="operations"/>
    <page name="Terminology" key="terminology"/>

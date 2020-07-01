@@ -34,7 +34,6 @@ dependsOn:
     uri: 'http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures'
 fhirVersion:
   - 4.0.1
-  - 4.0.1
 definition:
   parameter:
     - code: foo
@@ -340,6 +339,9 @@ definition:
         reference: StructureDefinition/indv-measurereport-deqm
     - exampleBoolean: false
       reference:
+        reference: StructureDefinition/gaps-indv-measurereport-deqm
+    - exampleBoolean: false
+      reference:
         reference: CapabilityStatement/receiver-server
     - exampleBoolean: false
       reference:
@@ -356,6 +358,11 @@ definition:
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-certificationIdentifier
+
+    - exampleBoolean: false
+      reference:
+        reference: StructureDefinition/extension-populationReference
+
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-submitDataUpdateType
@@ -466,7 +473,7 @@ definition:
             title: StructureDefinition Gaps Indv MeasureReport Deqm
           - generation: generated
             nameUrl: StructureDefinition-extension-populationReference.html
-            title: StructureDefinition Extension populationReference            
+            title: StructureDefinition Extension populationReference
         title: Profiles and Extensions
       - generation: markdown
         nameUrl: operations.html

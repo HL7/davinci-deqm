@@ -50,7 +50,6 @@
         }
     ],
     "fhirVersion": [
-        "4.0.1",
         "4.0.1"
     ],
     "definition": {
@@ -578,6 +577,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/gaps-indv-measurereport-deqm"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "CapabilityStatement/receiver-server"
                 }
             },
@@ -609,6 +614,12 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-certificationIdentifier"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/extension-populationReference"
                 }
             },
             {
@@ -708,6 +719,11 @@
                             "generation": "markdown",
                             "nameUrl": "vte1.html",
                             "title": "Venous Thromboembolism Prophylaxis (VTE-1)"
+                        },
+                        {
+                            "generation": "markdown",
+                            "nameUrl": "gic-col.html",
+                            "title": "Gaps in Care Colorectal Cancer Screening"
                         }
                     ],
                     "title": "Example Use Cases"
@@ -802,11 +818,13 @@
                 {
                     "generation": "markdown",
                     "nameUrl": "operations.html",
-                    "page": [{
+                    "page": [
+                        {
                             "generation": "generated",
                             "nameUrl": "OperationDefinition-care-gaps.html",
-                            "title": "OperationDefinition care-gaps"
-                        }],
+                            "title": "Operations"
+                        }
+                    ],
                     "title": "Operations"
                 },
                 {
@@ -839,11 +857,6 @@
                             "generation": "generated",
                             "nameUrl": "CapabilityStatement-consumer-server.html",
                             "title": "CapabilityStatement Consumer Server"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "CapabilityStatement-receiver-server.html",
-                            "title": "CapabilityStatement Receiver Server"
                         },
                         {
                             "generation": "generated",
