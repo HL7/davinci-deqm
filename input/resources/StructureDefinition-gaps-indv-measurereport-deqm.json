@@ -24,7 +24,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "MeasureReport",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MeasureReport",
+  "baseDefinition": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm",
   "derivation": "constraint",
   "differential": {
     "element": [
