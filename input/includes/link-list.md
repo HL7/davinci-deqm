@@ -137,4 +137,4 @@
 [DEQM Gaps In Care Bundle Profile]: StructureDefinition-gaps-bundle-deqm.html
 [DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
 [DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
-[DEQM Gaps Individual MeasureReport Profile]: StructureDefinition-gaps-indv-measurereport-deqm.html
+[DEQM Gaps In Care Individual MeasureReport Profile]: StructureDefinition-gaps-indv-measurereport-deqm.html
