@@ -2,16 +2,6 @@
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
     <id value="gaps-bundle-deqm"/>
-    <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2020-06-09T19:16:40.101+00:00"/>
-        <source value="#XyCOimZZB7spgZfm"/>
-        <tag>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
-            <code value="SUBSETTED"/>
-            <display value="Resource encoded in summary mode"/>
-        </tag>
-    </meta>
     <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"/>
     <name value="DEQMGapsInCareBundleProfile"/>
     <title value="DEQM Gaps In Care Bundle Profile"/>
@@ -22,4 +12,17 @@
     <type value="Bundle"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
     <derivation value="constraint"/>
+    <differential>
+        <element id="Bundle">
+            <path value="Bundle"/>
+        </element>
+        <element id="Bundle.type">
+            <path value="Bundle.type"/>
+            <fixedCode value="document"/>
+        </element>
+        <element id="Bundle.entry">
+            <path value="Bundle.entry"/>
+            <min value="1"/>
+        </element>
+    </differential>
 </StructureDefinition>
