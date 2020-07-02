@@ -78,6 +78,10 @@
         <min value="0"/>
         <max value="1"/>
         <documentation value="The status of gaps for a measure or measures, whether the gaps is an open gap or a closed gap. For a positive proportion measure, gap means it is not being in the numerator. For an inverse (negative) proportion measure [e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)], gap means it is being in the numerator."/>
+        <binding>
+          <strength value="required"/>
+          <valueSetUri value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
+        </binding>
         <type value="code"/>
     </parameter>
     <parameter>

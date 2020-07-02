@@ -2,11 +2,6 @@
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
     <id value="gaps-detectedissue-deqm"/>
-    <meta>
-        <versionId value="11"/>
-        <lastUpdated value="2020-06-26T22:09:52.396+00:00"/>
-        <source value="#UfYx9f8AZJHlIDkQ"/>
-    </meta>
     <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
     <name value="DEQMGapsInCareDetectedIssueProfile"/>
     <title value="DEQM Gaps In Care Detected Issue Profile"/>
@@ -1157,6 +1152,13 @@
                 </coding>
             </fixedCodeableConcept>
         </element>
+        <element id="DetectedIssue.patient">
+            <path value="DetectedIssue.patient"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+            </type>
+        </element>
         <element id="DetectedIssue.evidence">
             <path value="DetectedIssue.evidence"/>
             <min value="1"/>
@@ -1166,6 +1168,13 @@
             <short value="This will reference the Measure Report which is part of the bundle. "/>
             <min value="1"/>
             <max value="1"/>
+        </element>
+        <element id="DetectedIssue.evidence.detail.evaluatedResource">
+            <path value="DetectedIssue.evidence.detail.evaluatedResource"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
+            </type>
         </element>
     </differential>
 </StructureDefinition>
