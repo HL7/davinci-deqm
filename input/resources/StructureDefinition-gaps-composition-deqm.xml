@@ -69,6 +69,7 @@
                 <code value="string"/>
             </type>
             <fixedString value="Care Gaps Report"/>
+        </element>
         <element id="Composition.custodian">
             <path value="Composition.custodian"/>
             <short value="Producers have the obligations to either keep the care gaps report for future reference or have the capability to reproduce (exact time stamps as it was originally generated) for auditing purpose.  In an ideal FHIR environment, you would be able to use version histories to recreate a snapshot at a point in time when the report was generated, but not sure how it runs and will be challenging in real world..  From providers perspective, archiving things, because memberships could change. Cannot necessarily re-generate the exact same report at the time it was originally created.   Keeping the custodian is useful to support the use cases, but not making it required in the spec. Since different states may have different regulations. E.g., CA has a stricter regulation. "/>
