@@ -61,27 +61,31 @@
         </element>
         <element id="Composition.date">
             <path value="Composition.date"/>
-            <short value="The time the gap report was run"/>
+            <short value="The time the gaps in care report was created."/>
         </element>
         <element id="Composition.title">
             <path value="Composition.title"/>
             <type>
                 <code value="string"/>
             </type>
-            <fixedString value="Care Gaps Report"/>
+            <fixedString value="This is the title of the gaps in care report."/>
         </element>
         <element id="Composition.custodian">
             <path value="Composition.custodian"/>
-            <short value="Producers have the obligations to either keep the care gaps report for future reference or have the capability to reproduce (exact time stamps as it was originally generated) for auditing purpose.  In an ideal FHIR environment, you would be able to use version histories to recreate a snapshot at a point in time when the report was generated, but not sure how it runs and will be challenging in real world..  From providers perspective, archiving things, because memberships could change. Cannot necessarily re-generate the exact same report at the time it was originally created.   Keeping the custodian is useful to support the use cases, but not making it required in the spec. Since different states may have different regulations. E.g., CA has a stricter regulation. "/>
+            <short value="Producers have the obligations to either keep the gaps in care report for future reference or have the capability to reproduce (exact time stamps as it was originally generated) for auditing purpose. In an ideal FHIR environment, it would be able to use version histories to recreate a snapshot at a point in time when the report was generated, but not sure how it runs and will be challenging in real world. From providers perspective, archiving things, because memberships could change. Cannot necessarily re-generate the exact same report at the time it was originally created. Keeping the custodian is useful to support the use cases, but not making it required in the spec. Since different states may have different regulations. E.g., CA has a stricter regulation. "/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+            </type>
         </element>
         <element id="Composition.section">
             <path value="Composition.section"/>
-            <short value="Must contain at least one section, each section corresponds to a measure"/>
+            <short value="Must contain at least one section, each section corresponds to a measure that the gaps in care report was run against."/>
             <min value="1"/>
         </element>
         <element id="Composition.section.title">
             <path value="Composition.section.title"/>
-            <short value="The would be the measure name (referenced in focus)"/>
+            <short value="This is the measure title for the measure that is referenced in the focus element"/>
         </element>
         <element id="Composition.section.focus">
             <path value="Composition.section.focus"/>
@@ -93,10 +97,10 @@
         </element>
         <element id="Composition.section.entry">
             <path value="Composition.section.entry"/>
-            <short value="The entry is optional. Will only return DetectedIssue when there is an open gap."/>
+            <short value="The entry is optional. Will only return DetectedIssue when there is an open gap for the measure."/>
             <type>
                 <code value="Reference"/>
-                <profile value="http://hl7.org/fhir/us/davincigaps/gaps-detectedIssue-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
             </type>
         </element>
     </differential>
