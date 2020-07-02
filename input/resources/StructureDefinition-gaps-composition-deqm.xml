@@ -89,6 +89,7 @@
         </element>
         <element id="Composition.section.focus">
             <path value="Composition.section.focus"/>
+            <short value="This references a patient specific MeasureReport for the measure that the gaps in care report was for. This is only the reference (a pointer), the actual MeasureReport content is included in another entry in this Bundle (bundle/entry)"/>
             <min value="1"/>
             <type>
                 <code value="Reference"/>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="gaps-group-deqm"/>
+    <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-group-deqm"/>
+    <name value="DEQMGapsInCareGroupProfile"/>
+    <title value="DEQM Gaps In Care Group Profile"/>
+    <status value="active"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Group"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Group"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Group">
+            <path value="Group"/>
+        </element>
+        <element id="Group.member.entity">
+            <path value="Group.member.entity"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>
