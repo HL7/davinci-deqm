@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="gaps-bundle-deqm"/>
+    <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"/>
+    <name value="DEQMGapsInCareBundleProfile"/>
+    <title value="DEQM Gaps In Care Bundle Profile"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <date value="2020-07-01"/>
+    <publisher value="Da Vinci Project"/>
+    <contact>
+      <telecom>
+        <system value="url"/>
+        <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+      </telecom>
+    </contact>
+    <description value="The DEQM Gaps In Care Bundle Profile describes a bundle returned by the Measure care-gaps operation."/>
+    <jurisdiction>
+      <coding>
+        <system value="urn:iso:std:iso:3166"/>
+        <code value="US"/>
+        <display value="United States of America"/>
+      </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Bundle"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Bundle">
+            <path value="Bundle"/>
+        </element>
+        <element id="Bundle.type">
+            <path value="Bundle.type"/>
+            <fixedCode value="document"/>
+        </element>
+        <element id="Bundle.entry">
+            <path value="Bundle.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="$this.resource"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:gapsComposition">
+          <path value="Bundle.entry"/>
+          <sliceName value="gapsComposition"/>
+          <short value="Contains a composition of gaps in care report for an individual for one or more measures"/>
+          <min value="1"/>
+          <max value="*"/>
+          <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:gapsComposition.resource">
+          <path value="Bundle.entry.resource"/>
+          <min value="1"/>
+          <max value="1"/>
+          <type>
+            <code value="Composition"/>
+            <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
+          </type>
+          <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:gapsIndvMeasureReport">
+          <path value="Bundle.entry"/>
+          <sliceName value="gapsIndvMeasureReport"/>
+          <short value="Contains the gaps in care individual MeasureReport referenced in the gaps in care composition"/>
+          <min value="0"/>
+          <max value="*"/>
+          <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:gapsIndvMeasureReport.resource">
+          <path value="Bundle.entry.resource"/>
+          <min value="1"/>
+          <max value="1"/>
+          <type>
+            <code value="MeasureReport"/>
+            <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
+          </type>
+          <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

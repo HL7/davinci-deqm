@@ -6,32 +6,22 @@
     <name value="DEQMGapsInCareCompositionProfile"/>
     <title value="DEQM Gaps In Care Composition Profile"/>
     <status value="active"/>
+    <publisher value="Da Vinci Project"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+        </telecom>
+    </contact>
+    <description value="The DEQM Gaps In Care Composition Profile defines a composition that consists of one or more gaps in care indivdiual MeasureReport(s) for an individual."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+        </coding>
+    </jurisdiction>
     <fhirVersion value="4.0.1"/>
-    <mapping>
-        <identity value="workflow"/>
-        <uri value="http://hl7.org/fhir/workflow"/>
-        <name value="Workflow Pattern"/>
-    </mapping>
-    <mapping>
-        <identity value="rim"/>
-        <uri value="http://hl7.org/v3"/>
-        <name value="RIM Mapping"/>
-    </mapping>
-    <mapping>
-        <identity value="cda"/>
-        <uri value="http://hl7.org/v3/cda"/>
-        <name value="CDA (R2)"/>
-    </mapping>
-    <mapping>
-        <identity value="fhirdocumentreference"/>
-        <uri value="http://hl7.org/fhir/documentreference"/>
-        <name value="FHIR DocumentReference"/>
-    </mapping>
-    <mapping>
-        <identity value="w5"/>
-        <uri value="http://hl7.org/fhir/fivews"/>
-        <name value="FiveWs Pattern Mapping"/>
-    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Composition"/>
@@ -54,6 +44,7 @@
         <element id="Composition.subject">
             <path value="Composition.subject"/>
             <min value="1"/>
+            <short value="What individual the gaps in care report is for"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
@@ -61,18 +52,18 @@
         </element>
         <element id="Composition.date">
             <path value="Composition.date"/>
-            <short value="The time the gaps in care report was created."/>
+            <short value="The datetime the gaps in care report was created"/>
         </element>
         <element id="Composition.title">
             <path value="Composition.title"/>
+            <short value="The title of the gaps in care report"/>
             <type>
                 <code value="string"/>
             </type>
-            <fixedString value="This is the title of the gaps in care report."/>
         </element>
         <element id="Composition.custodian">
             <path value="Composition.custodian"/>
-            <short value="Producers have the obligations to either keep the gaps in care report for future reference or have the capability to reproduce (exact time stamps as it was originally generated) for auditing purpose. In an ideal FHIR environment, it would be able to use version histories to recreate a snapshot at a point in time when the report was generated, but not sure how it runs and will be challenging in real world. From providers perspective, archiving things, because memberships could change. Cannot necessarily re-generate the exact same report at the time it was originally created. Keeping the custodian is useful to support the use cases, but not making it required in the spec. Since different states may have different regulations. E.g., CA has a stricter regulation. "/>
+            <short value="Identifies the organization who is responsible for ongoing maintenance of and access to this gaps in care report"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
@@ -80,16 +71,16 @@
         </element>
         <element id="Composition.section">
             <path value="Composition.section"/>
-            <short value="Must contain at least one section, each section corresponds to a measure that the gaps in care report was run against."/>
+            <short value="Must contain at least one section, each section corresponds to a gaps in care indivdiual MeasureReport, which is for a specific measure and for the same indivdiual identified in the subject element"/>
             <min value="1"/>
         </element>
         <element id="Composition.section.title">
             <path value="Composition.section.title"/>
-            <short value="This is the measure title for the measure that is referenced in the focus element"/>
+            <short value="The title of the measure that is referenced"/>
         </element>
         <element id="Composition.section.focus">
             <path value="Composition.section.focus"/>
-            <short value="This references a patient specific MeasureReport for the measure that the gaps in care report was for. This is only the reference (a pointer), the actual MeasureReport content is included in another entry in this Bundle (bundle/entry)"/>
+            <short value="This references a gaps in care individual MeasureReport"/>
             <min value="1"/>
             <type>
                 <code value="Reference"/>
@@ -98,7 +89,7 @@
         </element>
         <element id="Composition.section.entry">
             <path value="Composition.section.entry"/>
-            <short value="The entry is optional. Will only return DetectedIssue when there is an open gap for the measure."/>
+            <short value="This references a gaps in care DetectedIssue, only if there is open gap(s) for the measure"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
