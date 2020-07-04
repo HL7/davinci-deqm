@@ -1,5 +1,7 @@
 {% assign id = {{page.id}} %}
 
+This profile builds on [DEQM Individual MeasureReport Profile].
+
 ### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present).
