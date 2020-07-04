@@ -77,10 +77,10 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="The status of gaps for a measure or measures, whether the gaps is an open gap or a closed gap. For a positive proportion measure, gap means it is not being in the numerator. For an inverse (negative) proportion measure [e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)], gap means it is being in the numerator."/>
+        <documentation value="Indicates whether to include gaps in care report with either open gap or closed gap. If no status is provided, the default is all gaps. For a positive proportion measure, gap means the patient is not the numerator. For an inverse (negative) proportion measure [e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)], gap means the patient is in the numerator."/>
         <binding>
           <strength value="required"/>
-          <valueSetUri value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
+          <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
         </binding>
         <type value="code"/>
     </parameter>
