@@ -2,23 +2,28 @@
 <OperationDefinition
     xmlns="http://hl7.org/fhir">
     <id value="care-gaps"/>
-    <meta>
-        <versionId value="15"/>
-        <lastUpdated value="2020-06-19T20:43:02.252+00:00"/>
-        <source value="#KkMRZuFozWkSKZ9K"/>
-        <tag>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
-            <code value="SUBSETTED"/>
-            <display value="Resource encoded in summary mode"/>
-        </tag>
-    </meta>
     <url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/care-gaps"/>
     <name value="care-gaps"/>
+    <title value="Care Gaps Operation"/>
     <status value="draft"/>
     <kind value="operation"/>
-    <publisher value="Clinical Quality Information"/>
-    <description value="The following lists the minimum In Parameters must be provided when call the $care-gaps operations:&#xA;periodStart&#xA;periodStop&#xA;subject | provider | organization   - must provide either a subject, or an organization (e.g., TIN), or a provider + organization combination (e.g., NPI + TIN)"/>
-    <code value="caregaps"/>
+    <date value="2020-07-03T00:00:00-07:00"/>
+    <publisher value="Da Vinci Project"/>
+    <contact>
+      <telecom>
+        <system value="url"/>
+        <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+      </telecom>
+    </contact>
+    <description value="Must provide periodStart, periodStop, and subject|provider|organization when call the care-gaps operation. For subject|provider|organization, must provide either a subject, or an organization (e.g., TIN), or a provider and organization combination (e.g., NPI + TIN)"/>
+    <jurisdiction>
+      <coding>
+        <system value="urn:iso:std:iso:3166"/>
+        <code value="US"/>
+        <display value="United States of America"/>
+      </coding>
+    </jurisdiction>
+    <code value="care-gaps"/>
     <base value="http://hl7.org/fhir/OperationDefinition/Measure-care-gaps"/>
     <system value="false"/>
     <type value="false"/>
@@ -28,7 +33,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="1"/>
-        <documentation value="The start of the targeted gaps through period. This maybe the start of the measurement period defined by a measure, or a customized desired performance period start date determined by a payer, a provider, a measure program, and etc.. "/>
+        <documentation value="The start of the targeted gaps through period. This maybe the start of the measurement period defined by a measure, or a customized desired performance period start date determined by a payer, a provider, a measure program, and etc."/>
         <type value="date"/>
     </parameter>
     <parameter>
@@ -36,7 +41,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="1"/>
-        <documentation value="The end of the targeted gaps through period (the gaps through date). The gaps through date could be a past date or a future date.  For example, today's date is 2020-06-18, 1) if periodEnd date is 2020-09-30, it returns gaps through 2020-09-30, and 2) if the periodEnd date is 2020-05-31, it returns gaps through 2020-05-31. "/>
+        <documentation value="The end of the targeted gaps through period (the gaps through date). The gaps through date could be a past date or a future date.  For example, today's date is 2020-06-18, 1) if periodEnd date is 2020-09-30, it returns gaps through 2020-09-30, and 2) if the periodEnd date is 2020-05-31, it returns gaps through 2020-05-31."/>
         <type value="date"/>
     </parameter>
     <parameter>
@@ -52,7 +57,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Subject will be a reference to either Patient or Group. Must provide either Patient/123 or Group/123, cannot simply provide 123. If only provide 123, then the operation would not know if it is a Patient reference or a Group reference. "/>
+        <documentation value="Subject will be a reference to either Patient or Group [DEQM Gaps In Care Group Profile](StructureDefinition-gaps-group-deqm). Must provide either Patient/123 or Group/123, cannot simply provide 123. If only provide 123, then the operation would not know if it is a Patient reference or a Group reference."/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
@@ -69,7 +74,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Provider organization for which the gaps in care report will be created. For a provider organization focused gaps in care report, this is a required In Parameter"/>
+        <documentation value="Provider organization for which the gaps in care report will be created. For a provider organization focused gaps in care report, this is a required In Parameter."/>
         <type value="string"/>
     </parameter>
     <parameter>
@@ -77,7 +82,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Indicates whether to include gaps in care report with either open gap or closed gap. If no status is provided, the default is all gaps. For a positive proportion measure, gap means the patient is not the numerator. For an inverse (negative) proportion measure [e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)], gap means the patient is in the numerator."/>
+        <documentation value="Gaps in care report to include either open gap or closed gap. If no status is provided, the default is all gaps. For a positive proportion measure, gap means the patient is not the numerator. For an inverse (negative) proportion measure [e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)], gap means the patient is in the numerator."/>
         <binding>
           <strength value="required"/>
           <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
@@ -89,7 +94,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The measure(s)for which the gaps in care will be reported. E.g., CMS125v8 (Breast Cancer Screening), CMS130v8 (Colorectal Cancer Screening)"/>
+        <documentation value="The measure(s) for which the gaps in care will be reported. E.g., Breast Cancer Screening measure, Colorectal Cancer Screening measure"/>
         <type value="string"/>
     </parameter>
     <parameter>
@@ -97,7 +102,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS MIPS, HQR programs.  Program is represented in Measure using element useContext (useageContext). When code attribute of useContext is &quot;program&quot; (&quot;program&quot; is a code in the UsageContextType value set),  then the value attribute of useContext would be a specific program. useContext is 0..*, multiple programs could be specified for a measure."/>
+        <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS MIPS, HQR programs. Program is represented in Measure using element useContext (useageContext). When code attribute of useContext is program, then the value attribute of useContext would be a specific program."/>
         <type value="string"/>
     </parameter>
     <parameter>
@@ -105,7 +110,7 @@
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The result of the care gaps report will be returned as a document bundle for each patient with a MeasureReport entry for each included measure"/>
+        <documentation value="The result of the care-gaps operation will be returned as a document bundle using the [DEQM Gaps In Care Bundle Profile](StructureDefinition-gaps-bundle-deqm)."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>
