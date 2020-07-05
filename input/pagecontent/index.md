@@ -122,12 +122,12 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers:
 {: #submission-period}Submission period
   : For this Implementation guide, submission period is the period of time in which data can exchanged when describing the FHIR transactions for data exchange, and measure reporting. The submission period typically overlaps with the measurement period and reporting period.
 
-Glossary added for Gaps in care:
+For additional definitions see the [eCQI Resource Center Glossary]
+
+#### New Glossary for Gaps in Care:
 
 {: #gaps-through-period}Gaps Through Period
   : The period of time defined by the reporters for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
-
-For additional definitions see the [eCQI Resource Center Glossary]
 
 
 ### Table of Acronyms
