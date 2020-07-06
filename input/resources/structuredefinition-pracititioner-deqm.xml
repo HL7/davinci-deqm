@@ -37,7 +37,7 @@
         <key value="deqm-4"/>
         <severity value="error"/>
         <human value="Either an NPI, EIN, or CCN identifier SHALL be present"/>
-        <expression value="(identifier.system contains &#39;urn:oid:2.16.840.1.113883.4.4&#39;) or (identifier.system contains &#39;urn:oid:2.16.840.1.113883.4.336&#39;)"/>
+        <expression value="(identifier.system contains &#39;urn:oid:2.16.840.1.113883.4.4&#39;) or (identifier.system contains &#39;urn:oid:2.16.840.1.113883.4.336&#39;) or (identifier.system contains &#39;http://hl7.org/fhir/sid/us-npi&#39;)"/>
       </constraint>
       <mustSupport value="false"/>
     </element>

@@ -137,7 +137,7 @@
     ],
     "status": "active",
     "title": "Receiver Server CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/receiver-server",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/receiver-server",
     "version": "1.1.0",
     "resourceType": "CapabilityStatement"
 }

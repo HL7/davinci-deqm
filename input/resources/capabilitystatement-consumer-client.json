@@ -153,7 +153,7 @@
     ],
     "status": "active",
     "title": "Consumer Client CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/consumer-client",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/consumer-client",
     "version": "1.1.0",
     "resourceType": "CapabilityStatement"
 }

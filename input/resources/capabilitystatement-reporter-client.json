@@ -137,7 +137,7 @@
     ],
     "status": "active",
     "title": "Reporter Client CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/reporter-client",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/reporter-client",
     "version": "1.1.0",
     "resourceType": "CapabilityStatement"
 }

@@ -144,7 +144,7 @@
     ],
     "status": "active",
     "title": "Consumer Server CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/consumer-server",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/consumer-server",
     "version": "1.1.0",
     "resourceType": "CapabilityStatement"
 }

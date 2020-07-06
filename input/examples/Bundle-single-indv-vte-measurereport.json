@@ -12,6 +12,20 @@
           ]
         },
         "resourceType": "MeasureReport",
+        "id": "b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "proportion",
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                }
+              ]
+            }
+          }
+        ],
         "status": "complete",
         "type": "individual",
         "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-vte-1-FHIR",
@@ -26,6 +40,15 @@
           "end": "2019-01-01",
           "start": "2018-12-31"
         },
+        "improvementNotation": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+              "code": "increase",
+              "display": "Increased score indicates improvement"
+            }
+          ]
+        },
         "group": [
           {
             "population": [
@@ -38,7 +61,8 @@
                       "display": "Initial Population"
                     }
                   ]
-                }
+                },
+                "count": 110
               },
               {
                 "code": {
@@ -49,7 +73,8 @@
                       "display": "Numerator"
                     }
                   ]
-                }
+                },
+                "count": 80
               },
               {
                 "code": {
@@ -60,11 +85,24 @@
                       "display": "Denominator"
                     }
                   ]
-                }
+                },
+                "count": 100
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://fhir/example.org",
+                      "code": "denominator-exclusion",
+                      "display": "Denominator Exclusion"
+                    }
+                  ]
+                },
+                "count": 10
               }
             ],
             "measureScore": {
-              "value": 100
+              "value": 80
             }
           }
         ]
