@@ -1,10 +1,10 @@
 
-##  Introduction
+###  Introduction
 
 Gaps In Care Examples:
 
 
-### Use Cases
+#### Use Cases
 
 |Use Case|care-gaps Operation|Gaps Through Period|Report Creation Date|Gaps In Care Report Results|
 |---|---|---|---|---|
@@ -13,11 +13,11 @@ Gaps In Care Examples:
 
 *Note: If a report is run on 2021-01-03 for a gaps through period from 2020-01-01 to 2020-12-31, this should use $evaluate-measure operation instead of the $care-gaps operation since it is a retrospective report for the entire Performance Period.*
 
-## FHIR Resource Overview
+### FHIR Resource Overview
 
 
 
-### Resources Supported for this Use Case
+#### Resources Supported for this Use Case
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to Profile|
@@ -36,7 +36,7 @@ Gaps In Care Examples:
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
 
-#### Care Gaps Operation {#care-gaps}
+### Care Gaps Operation {#care-gaps}
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
