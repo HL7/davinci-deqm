@@ -151,6 +151,7 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |REST|Representational State Transfer|
 |STU3|FHIR Release 3 (STU)|
 |VTE-1|Venous Thromboembolism Prophylaxis Measure|
+|GIC|Gaps In Care|
 
 <br />
 
