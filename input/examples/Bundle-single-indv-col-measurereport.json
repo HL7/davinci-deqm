@@ -7,11 +7,25 @@
       "fullUrl": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57904",
       "resource": {
         "resourceType": "MeasureReport",
+        "id": "47709cc7-b3ec-4abc-9d26-3df3d3d57904",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
           ]
         },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "proportion",
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                }
+              ]
+            }
+          }
+        ],
         "status": "complete",
         "type": "individual",
         "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
@@ -26,9 +40,20 @@
           "end": "2019-01-01",
           "start": "2018-12-31"
         },
+        "improvementNotation": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+              "code": "increase",
+              "display": "Increased score indicates improvement"
+            }
+          ]
+        },
         "group": [
           {
-            "measureScore" : { "value":1 },
+            "measureScore": {
+              "value": 1
+            },
             "code": {
               "coding": [
                 {
@@ -1066,15 +1091,17 @@
           ]
         },
         "status": "final",
-        "category": [{
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-              "code": "laboratory",
-              "display": "Laboratory"
-            }
-          ]
-        }],
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
         "code": {
           "coding": [
             {
