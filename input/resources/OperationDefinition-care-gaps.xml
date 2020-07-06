@@ -24,9 +24,14 @@
       </coding>
     </jurisdiction>
     <code value="care-gaps"/>
+    <comment value="The effect of invoking this operation is to calculate a measure or a set of measures based on the In Parameters provided and return a document bundle describing the care gaps results
+     of each measure for the specified gaps through period for the given subject (a patient or a group of patients). Note that it is up to the server to determine whether
+     or not the generated care gaps report is persisted. If the server does not persist the
+     results, the operation does not affect state and can be invoked with a GET. Note that this operation is intended to replace the existing Measure $care-gaps operation."/>
     <base value="http://hl7.org/fhir/OperationDefinition/Measure-care-gaps"/>
+    <resource value="Measure"/>
     <system value="false"/>
-    <type value="false"/>
+    <type value="true"/>
     <instance value="false"/>
     <parameter>
         <name value="periodStart"/>

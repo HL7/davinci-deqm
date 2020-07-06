@@ -1,4 +1,7 @@
 
+*ONLY the new contents for Gaps in Care are in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.stu-note}
+
 ###  Introduction
 
 The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
@@ -84,7 +87,7 @@ The reporting scenarios are:
 
 1. **Individual** - Used to report the results of a quality measure for a particular patient along with the complete set of data of interest to a quality reporting receiver
 1. **Summary** - Used to report the results of a quality measure for the applicable population to a quality reporting receiver
-1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure for the applicable population to a quality reporting receiver
+1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure for the applicable population to a quality reporting receiver *NOTE: The actors for Gaps in Care are described in the Gaps in Care Reporting Scenarios section.*
 1. **Patient-List** - A patient list report that includes a listing of patients that satisfied each population criteria in the measure *NOTE: This reporting scenario is out of scope for this version of the Implementation Guide.*
 
 For the reporting scenarios, the actors are Reporters and Receivers:
@@ -92,6 +95,13 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 **Reporters** are the actors submitting the results of a quality measure. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
+
+##### Gaps in Care Reporting Scenarios
+For the Gaps in Care reporting scenarios, the actors are Clients and Servers:
+
+**Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if providers produce gaps in care reports and submit them to payers, then providers serve as clients in this scenario; if payers produce gaps in care reports and provide them to providers, then payers serve as clients in this scenario.
+
+**Servers** are the actors receiving the gaps in care results of quality measure(s). Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if providers produce gaps in care reports and submit them to payers, then payers serve as servers in this scenario; if payers produce gaps in care reports and provide them to providers, then providers serve as servers in this scenario.
 
 ### Glossary
 {: #data-of-interest}Data of Interest
@@ -106,9 +116,6 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 {: #reporting-period}Reporting Period
   : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions. This can be equal to or a subset of the Measurement Period.
 
-{: #gaps-through-period}Gaps Through Period
-  : The period of time defined by the reporters for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively. 
-
 {: #snapshot-update}Snapshot Update
   : In contrast to the Incremental Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains all the DEQM and QI Core Profiles for each transaction.  If the Consumer supports snapshot updates, the contents of the updated payload entirely replaces the previous payload.
 
@@ -116,6 +123,11 @@ For the reporting scenarios, the actors are Reporters and Receivers:
   : For this Implementation guide, submission period is the period of time in which data can exchanged when describing the FHIR transactions for data exchange, and measure reporting. The submission period typically overlaps with the measurement period and reporting period.
 
 For additional definitions see the [eCQI Resource Center Glossary]
+
+#### New Glossary for Gaps in Care:
+
+{: #gaps-through-period}Gaps Through Period
+  : The period of time defined by the reporters for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
 
 
 ### Table of Acronyms
