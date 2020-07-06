@@ -1,5 +1,5 @@
 
-*ONLY the new contents for Gaps in Care are in the scope for ballot for the September, 2020 Ballot Cycle.
+*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
 {:.stu-note}
 
 ###  Introduction
@@ -151,6 +151,7 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |REST|Representational State Transfer|
 |STU3|FHIR Release 3 (STU)|
 |VTE-1|Venous Thromboembolism Prophylaxis Measure|
+|GIC|Gaps In Care|
 
 <br />
 

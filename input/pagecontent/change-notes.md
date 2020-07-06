@@ -49,5 +49,8 @@ Changes and Updates for version 1.1.1
     - Define [default profiles](guidance.html#default-profiles-used-in-the-evaluation-of-a-measure) for this implementation guide (FHIR-27818)
     - Add [`MeasureReport.group.population.count` as 0..1 Must Support](StructureDefinition-indv-measurereport-deqm.html#profile) for individual report profile. (FHIR-27862)
 
+Changes and Updates for version 1.2.0
+
+1. Added contents for Gaps in care
 
     {% include link-list.md %}

@@ -420,8 +420,8 @@ definition:
             nameUrl: vte1.html
             title: Venous Thromboembolism Prophylaxis (VTE-1)
           - generation: markdown
-            nameUrl: gic-col.html
-            title: Gaps in Care Colorectal Cancer Screening
+            nameUrl: gaps-examples.html
+            title: Gaps in Care Example Use Cases
         title: Example Use Cases
       - generation: markdown
         nameUrl: profiles.html

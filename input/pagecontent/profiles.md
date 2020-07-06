@@ -1,4 +1,7 @@
 
+*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.stu-note}
+
 Payers and providers need common data specification, measure specification, report initiation, and transport to share the data required to reflect accurate quality measures. Existing QI-Core and CQFM profiles are used as well as DEQM profiles derived from QI-Core and CQFM profiles and defined in this guide. All of these profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm.  For elements added in FHIR R4, extensions have been created for the STU3 version.
 
 ### Profiles

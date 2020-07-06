@@ -1,5 +1,5 @@
 
-*ONLY the new contents for Gaps in Care are in the scope for ballot for the September, 2020 Ballot Cycle.
+*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
 {:.stu-note}
 
 ### Introduction
@@ -62,7 +62,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 Gaps In Care Measure Reporting is done by a Client who has all of the data that is required to generate a report(s).
 
-The [DEQM Gaps In Care Individual MeasureReport Profile] is used when gaps in care for measure is reported for a specific patient, whether it is with open, closed, or both open or closed gaps depending on the parameters provided for generating the report. This profile is built based on the [DEQM Individual MeasureReport Profile], so it contains all of the data that is relevant to generate the care gap report including the measure outcome and is similar to a QRDA Category 1 report. In addition, this profile further specifies relevant data that were used to generate care gap report could be associated with a specific measure population for a measure. The gaps in care MeasureReport(s) are packaged in a FHIR Bundle that conforms to the [DEQM Gaps In Care Bundle Profile] with Organization, Patient, any other resources that were used to calculate this measure, and DetectedIssue for an open gap. 
+The [DEQM Gaps In Care Individual MeasureReport Profile] is used when gaps in care for measure is reported for a specific patient, whether it is with open, closed, or both open or closed gaps depending on the parameters provided for generating the report. This profile is built on the [DEQM Individual MeasureReport Profile], it contains all of the data that is relevant to generate the gaps in care report including the measure outcome and is similar to a QRDA Category 1 report. In addition, this profile further specifies relevant data that were used to generate gaps in care report could be associated with a specific measure population of a measure. The gaps in care MeasureReport(s) are packaged in a FHIR Bundle that conforms to the [DEQM Gaps In Care Bundle Profile] with Organization, Patient, any other resources that were used to calculate this measure, and DetectedIssue if it is an open gap.
 
 
 ### Default Profiles Used in the Evaluation of a Measure
