@@ -1,34 +1,35 @@
 {
-   "id": "coverage02",
-   "meta": {
-      "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-      "profile": [
-         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
-      ],
-      "versionId": "2"
-   },
-   "status":"active",
-   "beneficiary": {
-      "reference": "Patient/patient02"
-   },
-   "payor": [
+  "id": "coverage02",
+  "meta": {
+    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+    ],
+    "versionId": "2"
+  },
+  "status": "active",
+  "beneficiary": {
+    "reference": "Patient/patient02"
+  },
+  "payor": [
+    {
+      "reference": "Organization/organization04"
+    }
+  ],
+  "policyHolder": {
+    "reference": "Patient/patient02"
+  },
+  "relationship": {
+    "coding": [
       {
-         "reference": "Organization/organization04"
+        "code": "self",
+        "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
       }
-   ],
-   "policyHolder": {
-      "reference": "Patient/patient02"
-   },
-   "relationship": {
-      "coding": [
-         {
-            "code": "self"
-         }
-      ]
-   },
-   "subscriber": {
-      "reference": "Patient/patient02"
-   },
-   "subscriberId": "B123456789",
-   "resourceType": "Coverage"
+    ]
+  },
+  "subscriber": {
+    "reference": "Patient/patient02"
+  },
+  "subscriberId": "B123456789",
+  "resourceType": "Coverage"
 }

@@ -27,15 +27,15 @@
   </improvementNotation>
   <group>
     <population>
-      <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="initial-population"/></coding></code>
+      <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="initial-population"/></coding></code>
       <count value="10000"/>
     </population>
     <population>
-      <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="denominator"/></coding></code>
+      <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="denominator"/></coding></code>
       <count value="8000"/>
     </population>
     <population>
-      <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="numerator"/></coding></code>
+      <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="numerator"/></coding></code>
       <count value="4000"/>
     </population>
     <population>
@@ -62,15 +62,15 @@
       <stratum>
         <value><coding><system value="http://example.org/CodeSystem/SOP"/><code value="MEDICARE"/><display value="Medicare"/></coding></value>
         <population>
-          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="initial-population"/></coding></code>
+          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="initial-population"/></coding></code>
           <count value="1747"/>
         </population>
         <population>
-          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="denominator"/></coding></code>
+          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="denominator"/></coding></code>
           <count value="392"/>
         </population>
         <population>
-          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="numerator"/></coding></code>
+          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="numerator"/></coding></code>
           <count value="243"/>
         </population>
         <population>
@@ -107,15 +107,15 @@
           <value><coding><system value="http://example.org/CodeSystem/medicare-subgroup"/><code value="Non-LIS/DE,Nondisability"/><display value="Non-LIS/DE,Nondisability"/></coding></value>
         </component>
         <population>
-          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="initial-population"/></coding></code>
+          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="initial-population"/></coding></code>
           <count value="745"/>
         </population>
         <population>
-          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="denominator"/></coding></code>
+          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="denominator"/></coding></code>
           <count value="150"/>
         </population>
         <population>
-          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population-type"/><code value="numerator"/></coding></code>
+          <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="numerator"/></coding></code>
           <count value="103"/>
         </population>
         <population>

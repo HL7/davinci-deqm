@@ -2,827 +2,7 @@
    "id": "multiple-indv-mrp-obs-report",
    "entry": [
       {
-         "fullUrl": "urn:uuid:ad24c84a-bf41-11ea-aa04-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "MeasureReport"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
-               ]
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-                  "valueCodeableConcept": {
-                     "coding": [
-                        {
-                           "code": "proportion",
-                           "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                        }
-                     ]
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
-                  "valueIdentifier": {
-                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
-                     "value": "0015HQN9BD3304E"
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
-                  "valueReference": {
-                     "reference": "urn:uuid:ad3b048a-bf41-11ea-9725-4ccc6a181ed3"
-                  }
-               }
-            ],
-            "date": "2018-09-05T16:59:52.404Z",
-            "evaluatedResource": [
-               {
-                  "reference": "Observation/Observation01"
-               }
-            ],
-            "group": [
-               {
-                  "code": {
-                     "coding": [
-                        {
-                           "code": "mrp-group",
-                           "display": "MRP Group",
-                           "system": "http://example.org"
-                        }
-                     ],
-                     "text": "MRP Group"
-                  },
-                  "measureScore": {
-                     "value": 1
-                  },
-                  "population": [
-                     {
-                        "id": "initial-population",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "initial-population",
-                                 "display": "Initial Population",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     },
-                     {
-                        "id": "numerator",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "numerator",
-                                 "display": "Numerator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     },
-                     {
-                        "id": "denominator",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "denominator",
-                                 "display": "Denominator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     }
-                  ]
-               }
-            ],
-            "improvementNotation": {
-               "coding": [
-                  {
-                     "code": "increase",
-                     "display": "Increased score indicates improvement",
-                     "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-                  }
-               ]
-            },
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
-            "period": {
-               "end": "2018-09-01",
-               "start": "2018-08-01"
-            },
-            "reporter": {
-               "reference": "urn:uuid:ad343f0c-bf41-11ea-93a5-4ccc6a181ed3"
-            },
-            "status": "complete",
-            "subject": {
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
-            },
-            "type": "individual",
-            "resourceType": "MeasureReport"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad29d706-bf41-11ea-a2db-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Observation"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-               ]
-            },
-            "category": [
-               {
-                  "coding": [
-                     {
-                        "code": "laboratory",
-                        "display": "Laboratory",
-                        "system": "http://terminology.hl7.org/CodeSystem/observation-category"
-                     }
-                  ]
-               }
-            ],
-            "code": {
-               "coding": [
-                  {
-                     "code": "77353-1",
-                     "display": "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative",
-                     "system": "http://loinc.org"
-                  }
-               ]
-            },
-            "effectiveDateTime": "2018-06-22",
-            "performer": [
-               {
-                  "reference": "urn:uuid:ad3cb12e-bf41-11ea-b098-4ccc6a181ed3"
-               }
-            ],
-            "status": "final",
-            "subject": {
-               "reference": "urn:uuid:ad3c6340-bf41-11ea-a8f6-4ccc6a181ed3"
-            },
-            "resourceType": "Observation"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad343f0c-bf41-11ea-93a5-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Organization"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-21T01:47:54.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-               ],
-               "versionId": "4"
-            },
-            "active": true,
-            "address": [
-               {
-                  "city": "Warwick",
-                  "country": "USA",
-                  "line": [
-                     "73 Lakewood Street"
-                  ],
-                  "postalCode": "02886",
-                  "state": "RI"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.irs.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "TAX",
-                           "display": "Tax ID number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "official",
-                  "value": "123456789"
-               }
-            ],
-            "name": "DaVinciHospital01",
-            "telecom": [
-               {
-                  "system": "phone",
-                  "value": "(+1) 401-555-1212"
-               }
-            ],
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "prov",
-                        "display": "Healthcare Provider",
-                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Organization"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad35d034-bf41-11ea-9213-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Encounter"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
-               ]
-            },
-            "class": {
-               "code": "IMP",
-               "display": "inpatient encounter",
-               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-            },
-            "hospitalization": {
-               "dischargeDisposition": {
-                  "coding": [
-                     {
-                        "code": "home",
-                        "display": "Home",
-                        "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
-                     }
-                  ]
-               }
-            },
-            "period": {
-               "end": "2018-05-29T11:00:00-04:00",
-               "start": "2018-05-29T11:00:00-04:00"
-            },
-            "status": "finished",
-            "subject": {
-               "display": "Jairo Webster",
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
-            },
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "56876005",
-                        "display": "Drug rehabilitation and detoxification",
-                        "system": "http://snomed.info/sct"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Encounter"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad375d90-bf41-11ea-92d4-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Observation"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-               ]
-            },
-            "category": [
-               {
-                  "coding": [
-                     {
-                        "code": "measure",
-                        "display": "Measure",
-                        "system": "http://acme.org/observation-category"
-                     }
-                  ]
-               }
-            ],
-            "code": {
-               "coding": [
-                  {
-                     "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
-                  }
-               ]
-            },
-            "effectiveDateTime": "2018-09-29T14:15:04.424Z",
-            "encounter": {
-               "reference": "urn:uuid:ad35d034-bf41-11ea-9213-4ccc6a181ed3"
-            },
-            "issued": "2018-09-29T14:15:04.424Z",
-            "performer": [
-               {
-                  "reference": "urn:uuid:ad3cb12e-bf41-11ea-b098-4ccc6a181ed3"
-               }
-            ],
-            "status": "final",
-            "subject": {
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
-            },
-            "valueBoolean": true,
-            "resourceType": "Observation"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad375d91-bf41-11ea-8c49-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Patient"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-               ],
-               "versionId": "4"
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-                  "valueCode": "M"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2028-9",
-                           "display": "Asian",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Asian"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2186-5",
-                           "display": "Not Hispanic or Latino",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Not Hispanic or Latino"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-               }
-            ],
-            "active": true,
-            "address": [
-               {
-                  "city": "Lynnwood",
-                  "country": "USA",
-                  "line": [
-                     "6 Rockwell Street"
-                  ],
-                  "postalCode": "07420",
-                  "state": "NJ",
-                  "use": "home"
-               }
-            ],
-            "birthDate": "1967-06-13",
-            "communication": [
-               {
-                  "language": {
-                     "coding": [
-                        {
-                           "code": "en-US",
-                           "display": "English (Region=United States)",
-                           "system": "urn:ietf:bcp:47"
-                        }
-                     ]
-                  },
-                  "preferred": true
-               }
-            ],
-            "deceasedBoolean": false,
-            "gender": "male",
-            "identifier": [
-               {
-                  "system": "http://hospital.davinci.org",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "MR",
-                           "display": "Medical record number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "usual",
-                  "value": "23456"
-               }
-            ],
-            "managingOrganization": {
-               "reference": "urn:uuid:ad3b048a-bf41-11ea-9725-4ccc6a181ed3"
-            },
-            "maritalStatus": {
-               "coding": [
-                  {
-                     "code": "M",
-                     "display": "Married",
-                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                  }
-               ]
-            },
-            "name": [
-               {
-                  "family": "Bernard",
-                  "given": [
-                     "Darien"
-                  ],
-                  "use": "official"
-               }
-            ],
-            "resourceType": "Patient"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad392f30-bf41-11ea-a54d-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Coverage"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-11T14:19:25.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
-               ],
-               "versionId": "2"
-            },
-            "beneficiary": {
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
-            },
-            "payor": [
-               {
-                  "reference": "urn:uuid:ad3c8a37-bf41-11ea-b6fd-4ccc6a181ed3"
-               }
-            ],
-            "policyHolder": {
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
-            },
-            "relationship": {
-               "coding": [
-                  {
-                     "code": "self"
-                  }
-               ]
-            },
-            "status": "active",
-            "subscriber": {
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
-            },
-            "subscriberId": "A123456789",
-            "resourceType": "Coverage"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad3b048a-bf41-11ea-9725-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Organization"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-               ],
-               "versionId": "3"
-            },
-            "active": true,
-            "address": [
-               {
-                  "city": "Englewood",
-                  "country": "USA",
-                  "line": [
-                     "3 Sherwood St."
-                  ],
-                  "postalCode": "07631",
-                  "state": "NJ"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.irs.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "TAX",
-                           "display": "Tax ID number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "official",
-                  "value": "234567891"
-               }
-            ],
-            "name": "DaVinciHospital02",
-            "telecom": [
-               {
-                  "system": "phone",
-                  "value": "(+1) 551-555-1212"
-               }
-            ],
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "prov",
-                        "display": "Healthcare Provider",
-                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Organization"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Patient"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-11T14:19:25.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-               ],
-               "versionId": "5"
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-                  "valueCode": "M"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2106-3",
-                           "display": "White",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "White"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2186-5",
-                           "display": "Not Hispanic or Latino",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Not Hispanic or Latino"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-               }
-            ],
-            "active": true,
-            "address": [
-               {
-                  "city": "Thornton",
-                  "country": "USA",
-                  "line": [
-                     "7496 Beaver Ridge Ave"
-                  ],
-                  "postalCode": "07003",
-                  "state": "NJ",
-                  "use": "home"
-               }
-            ],
-            "birthDate": "1946-12-16",
-            "communication": [
-               {
-                  "language": {
-                     "coding": [
-                        {
-                           "code": "en-US",
-                           "display": "English (Region=United States)",
-                           "system": "urn:ietf:bcp:47"
-                        }
-                     ]
-                  },
-                  "preferred": true
-               }
-            ],
-            "deceasedBoolean": false,
-            "gender": "male",
-            "identifier": [
-               {
-                  "system": "http://hospital.davinci.org",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "MR",
-                           "display": "Medical record number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "usual",
-                  "value": "12345"
-               }
-            ],
-            "managingOrganization": {
-               "reference": "urn:uuid:ad343f0c-bf41-11ea-93a5-4ccc6a181ed3"
-            },
-            "maritalStatus": {
-               "coding": [
-                  {
-                     "code": "M",
-                     "display": "Married",
-                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                  }
-               ]
-            },
-            "name": [
-               {
-                  "family": "Webster",
-                  "given": [
-                     "Jairo"
-                  ],
-                  "use": "official"
-               }
-            ],
-            "resourceType": "Patient"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad3b528c-bf41-11ea-8e2a-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "MeasureReport"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
-               ]
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-                  "valueCodeableConcept": {
-                     "coding": [
-                        {
-                           "code": "proportion",
-                           "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                        }
-                     ]
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
-                  "valueIdentifier": {
-                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
-                     "value": "0015HQN9BD3304E"
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
-                  "valueReference": {
-                     "reference": "urn:uuid:ad3b048a-bf41-11ea-9725-4ccc6a181ed3"
-                  }
-               }
-            ],
-            "date": "2018-09-05T16:59:52.404Z",
-            "evaluatedResource": [
-               {
-                  "reference": "urn:uuid:ad375d90-bf41-11ea-92d4-4ccc6a181ed3"
-               }
-            ],
-            "group": [
-               {
-                  "code": {
-                     "coding": [
-                        {
-                           "code": "mrp-group",
-                           "display": "MRP Group",
-                           "system": "http://example.org"
-                        }
-                     ],
-                     "text": "MRP Group"
-                  },
-                  "measureScore": {
-                     "value": 1
-                  },
-                  "population": [
-                     {
-                        "id": "initial-population",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "initial-population",
-                                 "display": "Initial Population",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     },
-                     {
-                        "id": "numerator",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "numerator",
-                                 "display": "Numerator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     },
-                     {
-                        "id": "denominator",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "denominator",
-                                 "display": "Denominator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     }
-                  ]
-               }
-            ],
-            "improvementNotation": {
-               "coding": [
-                  {
-                     "code": "increase",
-                     "display": "Increased score indicates improvement",
-                     "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-                  }
-               ]
-            },
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
-            "period": {
-               "end": "2018-09-01",
-               "start": "2018-08-01"
-            },
-            "reporter": {
-               "reference": "urn:uuid:ad343f0c-bf41-11ea-93a5-4ccc6a181ed3"
-            },
-            "status": "complete",
-            "subject": {
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
-            },
-            "type": "individual",
-            "resourceType": "MeasureReport"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad3b7986-bf41-11ea-811d-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:a59ab0fe-c0a8-11ea-8c32-c219b93d27f3",
          "request": {
             "method": "POST",
             "url": "MeasureReport"
@@ -1661,18 +841,906 @@
                "start": "2018-12-31"
             },
             "reporter": {
-               "reference": "urn:uuid:ad343f0c-bf41-11ea-93a5-4ccc6a181ed3"
+               "reference": "urn:uuid:a59d5130-c0a8-11ea-b438-c219b93d27f3"
             },
             "status": "complete",
             "subject": {
-               "reference": "urn:uuid:ad3b2b9e-bf41-11ea-a6cb-4ccc6a181ed3"
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
             },
             "type": "individual",
             "resourceType": "MeasureReport"
          }
       },
       {
-         "fullUrl": "urn:uuid:ad3c6340-bf41-11ea-a8f6-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:a59bcb9c-c0a8-11ea-a1cc-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Encounter"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+               ]
+            },
+            "class": {
+               "code": "IMP",
+               "display": "inpatient encounter",
+               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+            },
+            "hospitalization": {
+               "dischargeDisposition": {
+                  "coding": [
+                     {
+                        "code": "home",
+                        "display": "Home",
+                        "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+                     }
+                  ]
+               }
+            },
+            "period": {
+               "end": "2018-05-29T11:00:00-04:00",
+               "start": "2018-05-29T11:00:00-04:00"
+            },
+            "status": "finished",
+            "subject": {
+               "reference": "urn:uuid:a59e61e6-c0a8-11ea-b0fb-c219b93d27f3"
+            },
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "53950000",
+                        "display": "Respiratory therapy",
+                        "system": "http://snomed.info/sct"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Encounter"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59c198a-c0a8-11ea-8315-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Practitioner"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+               ]
+            },
+            "address": [
+               {
+                  "city": "Amherst",
+                  "line": [
+                     "1003 Healthcare Drive"
+                  ],
+                  "postalCode": "01002",
+                  "state": "MA",
+                  "use": "home"
+               }
+            ],
+            "identifier": [
+               {
+                  "assigner": {
+                     "display": "www.cms.gov"
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "PRN",
+                           "display": "Provider number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "official",
+                  "value": "345678912"
+               },
+               {
+                  "assigner": {
+                     "display": "www.cms.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.336",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "PRN",
+                           "display": "Provider number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "secondary",
+                  "value": "082583"
+               }
+            ],
+            "name": [
+               {
+                  "family": "Bone",
+                  "given": [
+                     "Ronald"
+                  ],
+                  "prefix": [
+                     "Dr"
+                  ]
+               }
+            ],
+            "resourceType": "Practitioner"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59c6774-c0a8-11ea-b33e-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "MeasureReport"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+               ]
+            },
+            "extension": [
+               {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                  "valueCodeableConcept": {
+                     "coding": [
+                        {
+                           "code": "proportion",
+                           "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                        }
+                     ]
+                  }
+               },
+               {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "valueIdentifier": {
+                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                     "value": "0015HQN9BD3304E"
+                  }
+               },
+               {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "valueReference": {
+                     "reference": "urn:uuid:a59c8e68-c0a8-11ea-8839-c219b93d27f3"
+                  }
+               }
+            ],
+            "date": "2018-09-05T16:59:52.404Z",
+            "evaluatedResource": [
+               {
+                  "reference": "Observation/Observation01"
+               }
+            ],
+            "group": [
+               {
+                  "code": {
+                     "coding": [
+                        {
+                           "code": "mrp-group",
+                           "display": "MRP Group",
+                           "system": "http://example.org"
+                        }
+                     ],
+                     "text": "MRP Group"
+                  },
+                  "measureScore": {
+                     "value": 1
+                  },
+                  "population": [
+                     {
+                        "id": "initial-population",
+                        "code": {
+                           "coding": [
+                              {
+                                 "code": "initial-population",
+                                 "display": "Initial Population",
+                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                              }
+                           ]
+                        },
+                        "count": 1
+                     },
+                     {
+                        "id": "numerator",
+                        "code": {
+                           "coding": [
+                              {
+                                 "code": "numerator",
+                                 "display": "Numerator",
+                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                              }
+                           ]
+                        },
+                        "count": 1
+                     },
+                     {
+                        "id": "denominator",
+                        "code": {
+                           "coding": [
+                              {
+                                 "code": "denominator",
+                                 "display": "Denominator",
+                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                              }
+                           ]
+                        },
+                        "count": 1
+                     }
+                  ]
+               }
+            ],
+            "improvementNotation": {
+               "coding": [
+                  {
+                     "code": "increase",
+                     "display": "Increased score indicates improvement",
+                     "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+                  }
+               ]
+            },
+            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+            "period": {
+               "end": "2018-09-01",
+               "start": "2018-08-01"
+            },
+            "reporter": {
+               "reference": "urn:uuid:a59d5130-c0a8-11ea-b438-c219b93d27f3"
+            },
+            "status": "complete",
+            "subject": {
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
+            },
+            "type": "individual",
+            "resourceType": "MeasureReport"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59c8e68-c0a8-11ea-8839-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Organization"
+         },
+         "resource": {
+            "meta": {
+               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+               ],
+               "versionId": "3"
+            },
+            "active": true,
+            "address": [
+               {
+                  "city": "Englewood",
+                  "country": "USA",
+                  "line": [
+                     "3 Sherwood St."
+                  ],
+                  "postalCode": "07631",
+                  "state": "NJ"
+               }
+            ],
+            "identifier": [
+               {
+                  "assigner": {
+                     "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "TAX",
+                           "display": "Tax ID number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "official",
+                  "value": "234567891"
+               }
+            ],
+            "name": "DaVinciHospital02",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "(+1) 551-555-1212"
+               }
+            ],
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "prov",
+                        "display": "Healthcare Provider",
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Organization"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Patient"
+         },
+         "resource": {
+            "meta": {
+               "lastUpdated": "2019-02-11T14:19:25.000+00:00",
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+               ],
+               "versionId": "5"
+            },
+            "extension": [
+               {
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                  "valueCode": "M"
+               },
+               {
+                  "extension": [
+                     {
+                        "url": "ombCategory",
+                        "valueCoding": {
+                           "code": "2106-3",
+                           "display": "White",
+                           "system": "urn:oid:2.16.840.1.113883.6.238"
+                        }
+                     },
+                     {
+                        "url": "text",
+                        "valueString": "White"
+                     }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+               },
+               {
+                  "extension": [
+                     {
+                        "url": "ombCategory",
+                        "valueCoding": {
+                           "code": "2186-5",
+                           "display": "Not Hispanic or Latino",
+                           "system": "urn:oid:2.16.840.1.113883.6.238"
+                        }
+                     },
+                     {
+                        "url": "text",
+                        "valueString": "Not Hispanic or Latino"
+                     }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+               }
+            ],
+            "active": true,
+            "address": [
+               {
+                  "city": "Thornton",
+                  "country": "USA",
+                  "line": [
+                     "7496 Beaver Ridge Ave"
+                  ],
+                  "postalCode": "07003",
+                  "state": "NJ",
+                  "use": "home"
+               }
+            ],
+            "birthDate": "1946-12-16",
+            "communication": [
+               {
+                  "language": {
+                     "coding": [
+                        {
+                           "code": "en-US",
+                           "display": "English (Region=United States)",
+                           "system": "urn:ietf:bcp:47"
+                        }
+                     ]
+                  },
+                  "preferred": true
+               }
+            ],
+            "deceasedBoolean": false,
+            "gender": "male",
+            "identifier": [
+               {
+                  "system": "http://hospital.davinci.org",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "MR",
+                           "display": "Medical record number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "usual",
+                  "value": "12345"
+               }
+            ],
+            "managingOrganization": {
+               "reference": "urn:uuid:a59d5130-c0a8-11ea-b438-c219b93d27f3"
+            },
+            "maritalStatus": {
+               "coding": [
+                  {
+                     "code": "M",
+                     "display": "Married",
+                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                  }
+               ]
+            },
+            "name": [
+               {
+                  "family": "Webster",
+                  "given": [
+                     "Jairo"
+                  ],
+                  "use": "official"
+               }
+            ],
+            "resourceType": "Patient"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59d2a3e-c0a8-11ea-80f5-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Patient"
+         },
+         "resource": {
+            "meta": {
+               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+               ],
+               "versionId": "4"
+            },
+            "extension": [
+               {
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                  "valueCode": "M"
+               },
+               {
+                  "extension": [
+                     {
+                        "url": "ombCategory",
+                        "valueCoding": {
+                           "code": "2028-9",
+                           "display": "Asian",
+                           "system": "urn:oid:2.16.840.1.113883.6.238"
+                        }
+                     },
+                     {
+                        "url": "text",
+                        "valueString": "Asian"
+                     }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+               },
+               {
+                  "extension": [
+                     {
+                        "url": "ombCategory",
+                        "valueCoding": {
+                           "code": "2186-5",
+                           "display": "Not Hispanic or Latino",
+                           "system": "urn:oid:2.16.840.1.113883.6.238"
+                        }
+                     },
+                     {
+                        "url": "text",
+                        "valueString": "Not Hispanic or Latino"
+                     }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+               }
+            ],
+            "active": true,
+            "address": [
+               {
+                  "city": "Lynnwood",
+                  "country": "USA",
+                  "line": [
+                     "6 Rockwell Street"
+                  ],
+                  "postalCode": "07420",
+                  "state": "NJ",
+                  "use": "home"
+               }
+            ],
+            "birthDate": "1967-06-13",
+            "communication": [
+               {
+                  "language": {
+                     "coding": [
+                        {
+                           "code": "en-US",
+                           "display": "English (Region=United States)",
+                           "system": "urn:ietf:bcp:47"
+                        }
+                     ]
+                  },
+                  "preferred": true
+               }
+            ],
+            "deceasedBoolean": false,
+            "gender": "male",
+            "identifier": [
+               {
+                  "system": "http://hospital.davinci.org",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "MR",
+                           "display": "Medical record number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "usual",
+                  "value": "23456"
+               }
+            ],
+            "managingOrganization": {
+               "reference": "urn:uuid:a59c8e68-c0a8-11ea-8839-c219b93d27f3"
+            },
+            "maritalStatus": {
+               "coding": [
+                  {
+                     "code": "M",
+                     "display": "Married",
+                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                  }
+               ]
+            },
+            "name": [
+               {
+                  "family": "Bernard",
+                  "given": [
+                     "Darien"
+                  ],
+                  "use": "official"
+               }
+            ],
+            "resourceType": "Patient"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59d5130-c0a8-11ea-b438-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Organization"
+         },
+         "resource": {
+            "meta": {
+               "lastUpdated": "2019-02-21T01:47:54.000+00:00",
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+               ],
+               "versionId": "4"
+            },
+            "active": true,
+            "address": [
+               {
+                  "city": "Warwick",
+                  "country": "USA",
+                  "line": [
+                     "73 Lakewood Street"
+                  ],
+                  "postalCode": "02886",
+                  "state": "RI"
+               }
+            ],
+            "identifier": [
+               {
+                  "assigner": {
+                     "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "TAX",
+                           "display": "Tax ID number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "official",
+                  "value": "123456789"
+               }
+            ],
+            "name": "DaVinciHospital01",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "(+1) 401-555-1212"
+               }
+            ],
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "prov",
+                        "display": "Healthcare Provider",
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Organization"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59d7826-c0a8-11ea-a310-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Organization"
+         },
+         "resource": {
+            "meta": {
+               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+               ],
+               "versionId": "4"
+            },
+            "active": true,
+            "address": [
+               {
+                  "city": "Grand Rapids",
+                  "country": "USA",
+                  "line": [
+                     "160 Glen Eagles Road"
+                  ],
+                  "postalCode": "49503",
+                  "state": "MI"
+               }
+            ],
+            "identifier": [
+               {
+                  "assigner": {
+                     "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "type": {
+                     "coding": [
+                        {
+                           "code": "TAX",
+                           "display": "Tax ID number",
+                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                        }
+                     ]
+                  },
+                  "use": "official",
+                  "value": "456789123"
+               }
+            ],
+            "name": "DVPayer04",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "(+1) 616-555-1212"
+               }
+            ],
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "ins",
+                        "display": "Insurance Company",
+                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Organization"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59d7827-c0a8-11ea-ad7f-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Encounter"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+               ]
+            },
+            "class": {
+               "code": "IMP",
+               "display": "inpatient encounter",
+               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+            },
+            "hospitalization": {
+               "dischargeDisposition": {
+                  "coding": [
+                     {
+                        "code": "home",
+                        "display": "Home",
+                        "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+                     }
+                  ]
+               }
+            },
+            "period": {
+               "end": "2018-05-29T11:00:00-04:00",
+               "start": "2018-05-29T11:00:00-04:00"
+            },
+            "status": "finished",
+            "subject": {
+               "reference": "urn:uuid:a59d2a3e-c0a8-11ea-80f5-c219b93d27f3"
+            },
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "239279000",
+                        "display": "Fixation of fracture",
+                        "system": "http://snomed.info/sct"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Encounter"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59d7828-c0a8-11ea-b1c2-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Coverage"
+         },
+         "resource": {
+            "meta": {
+               "lastUpdated": "2019-02-07T18:47:34.000+00:00",
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+               ],
+               "versionId": "2"
+            },
+            "beneficiary": {
+               "reference": "urn:uuid:a59e61e6-c0a8-11ea-b0fb-c219b93d27f3"
+            },
+            "payor": [
+               {
+                  "reference": "urn:uuid:a59d7826-c0a8-11ea-a310-c219b93d27f3"
+               }
+            ],
+            "policyHolder": {
+               "reference": "urn:uuid:a59e61e6-c0a8-11ea-b0fb-c219b93d27f3"
+            },
+            "relationship": {
+               "coding": [
+                  {
+                     "code": "self",
+                     "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+                  }
+               ]
+            },
+            "status": "active",
+            "subscriber": {
+               "reference": "urn:uuid:a59e61e6-c0a8-11ea-b0fb-c219b93d27f3"
+            },
+            "subscriberId": "C123456789",
+            "resourceType": "Coverage"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59e13ff-c0a8-11ea-8582-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Observation"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+               ]
+            },
+            "category": [
+               {
+                  "coding": [
+                     {
+                        "code": "measure",
+                        "display": "Measure",
+                        "system": "http://example.org/fhir/observation-category"
+                     }
+                  ]
+               }
+            ],
+            "code": {
+               "coding": [
+                  {
+                     "code": "1111F",
+                     "display": "Medication Reconciliation",
+                     "system": "http://www.ama-assn.org/go/cpt"
+                  }
+               ]
+            },
+            "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+            "encounter": {
+               "reference": "urn:uuid:a59d7827-c0a8-11ea-ad7f-c219b93d27f3"
+            },
+            "issued": "2018-09-30T14:15:04.424Z",
+            "performer": [
+               {
+                  "reference": "Practitioner/practitioner02"
+               }
+            ],
+            "status": "final",
+            "subject": {
+               "reference": "urn:uuid:a59d2a3e-c0a8-11ea-80f5-c219b93d27f3"
+            },
+            "valueBoolean": true,
+            "resourceType": "Observation"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59e61e5-c0a8-11ea-9aa4-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Encounter"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+               ]
+            },
+            "class": {
+               "code": "IMP",
+               "display": "inpatient encounter",
+               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+            },
+            "hospitalization": {
+               "dischargeDisposition": {
+                  "coding": [
+                     {
+                        "code": "home",
+                        "display": "Home",
+                        "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+                     }
+                  ]
+               }
+            },
+            "period": {
+               "end": "2018-05-29T11:00:00-04:00",
+               "start": "2018-05-29T11:00:00-04:00"
+            },
+            "status": "finished",
+            "subject": {
+               "display": "Jairo Webster",
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
+            },
+            "type": [
+               {
+                  "coding": [
+                     {
+                        "code": "56876005",
+                        "display": "Drug rehabilitation and detoxification",
+                        "system": "http://snomed.info/sct"
+                     }
+                  ]
+               }
+            ],
+            "resourceType": "Encounter"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59e61e6-c0a8-11ea-b0fb-c219b93d27f3",
          "request": {
             "method": "POST",
             "url": "Patient"
@@ -1796,186 +1864,134 @@
          }
       },
       {
-         "fullUrl": "urn:uuid:ad3c8a36-bf41-11ea-80fa-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:a59e88d8-c0a8-11ea-b291-c219b93d27f3",
          "request": {
             "method": "POST",
-            "url": "Coverage"
+            "url": "MeasureReport"
          },
          "resource": {
             "meta": {
-               "lastUpdated": "2019-02-07T18:47:34.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
-               ],
-               "versionId": "2"
-            },
-            "beneficiary": {
-               "reference": "urn:uuid:ad3c6340-bf41-11ea-a8f6-4ccc6a181ed3"
-            },
-            "payor": [
-               {
-                  "reference": "urn:uuid:ad3c8a37-bf41-11ea-b6fd-4ccc6a181ed3"
-               }
-            ],
-            "policyHolder": {
-               "reference": "urn:uuid:ad3c6340-bf41-11ea-a8f6-4ccc6a181ed3"
-            },
-            "relationship": {
-               "coding": [
-                  {
-                     "code": "self"
-                  }
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
                ]
             },
-            "status": "active",
-            "subscriber": {
-               "reference": "urn:uuid:ad3c6340-bf41-11ea-a8f6-4ccc6a181ed3"
-            },
-            "subscriberId": "C123456789",
-            "resourceType": "Coverage"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad3c8a37-bf41-11ea-b6fd-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Organization"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-               ],
-               "versionId": "4"
-            },
-            "active": true,
-            "address": [
+            "extension": [
                {
-                  "city": "Grand Rapids",
-                  "country": "USA",
-                  "line": [
-                     "160 Glen Eagles Road"
-                  ],
-                  "postalCode": "49503",
-                  "state": "MI"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.irs.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
-                  "type": {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                  "valueCodeableConcept": {
                      "coding": [
                         {
-                           "code": "TAX",
-                           "display": "Tax ID number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                           "code": "proportion",
+                           "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
                         }
                      ]
+                  }
+               },
+               {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "valueIdentifier": {
+                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                     "value": "0015HQN9BD3304E"
+                  }
+               },
+               {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "valueReference": {
+                     "reference": "urn:uuid:a59c8e68-c0a8-11ea-8839-c219b93d27f3"
+                  }
+               }
+            ],
+            "date": "2018-09-05T16:59:52.404Z",
+            "evaluatedResource": [
+               {
+                  "reference": "urn:uuid:a59ed6c2-c0a8-11ea-87e7-c219b93d27f3"
+               }
+            ],
+            "group": [
+               {
+                  "code": {
+                     "coding": [
+                        {
+                           "code": "mrp-group",
+                           "display": "MRP Group",
+                           "system": "http://example.org"
+                        }
+                     ],
+                     "text": "MRP Group"
                   },
-                  "use": "official",
-                  "value": "456789123"
-               }
-            ],
-            "name": "DVPayer04",
-            "telecom": [
-               {
-                  "system": "phone",
-                  "value": "(+1) 616-555-1212"
-               }
-            ],
-            "type": [
-               {
-                  "coding": [
+                  "measureScore": {
+                     "value": 1
+                  },
+                  "population": [
                      {
-                        "code": "ins",
-                        "display": "Insurance Company",
-                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                        "id": "initial-population",
+                        "code": {
+                           "coding": [
+                              {
+                                 "code": "initial-population",
+                                 "display": "Initial Population",
+                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                              }
+                           ]
+                        },
+                        "count": 1
+                     },
+                     {
+                        "id": "numerator",
+                        "code": {
+                           "coding": [
+                              {
+                                 "code": "numerator",
+                                 "display": "Numerator",
+                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                              }
+                           ]
+                        },
+                        "count": 1
+                     },
+                     {
+                        "id": "denominator",
+                        "code": {
+                           "coding": [
+                              {
+                                 "code": "denominator",
+                                 "display": "Denominator",
+                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                              }
+                           ]
+                        },
+                        "count": 1
                      }
                   ]
                }
             ],
-            "resourceType": "Organization"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:ad3cb12e-bf41-11ea-b098-4ccc6a181ed3",
-         "request": {
-            "method": "POST",
-            "url": "Practitioner"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+            "improvementNotation": {
+               "coding": [
+                  {
+                     "code": "increase",
+                     "display": "Increased score indicates improvement",
+                     "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+                  }
                ]
             },
-            "address": [
-               {
-                  "city": "Amherst",
-                  "line": [
-                     "1003 Healthcare Drive"
-                  ],
-                  "postalCode": "01002",
-                  "state": "MA",
-                  "use": "home"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.cms.gov"
-                  },
-                  "system": "http://hl7.org/fhir/sid/us-npi",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "PRN",
-                           "display": "Provider number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "official",
-                  "value": "345678912"
-               },
-               {
-                  "assigner": {
-                     "display": "www.cms.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.336",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "PRN",
-                           "display": "Provider number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "secondary",
-                  "value": "082583"
-               }
-            ],
-            "name": [
-               {
-                  "family": "Bone",
-                  "given": [
-                     "Ronald"
-                  ],
-                  "prefix": [
-                     "Dr"
-                  ]
-               }
-            ],
-            "resourceType": "Practitioner"
+            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+            "period": {
+               "end": "2018-09-01",
+               "start": "2018-08-01"
+            },
+            "reporter": {
+               "reference": "urn:uuid:a59d5130-c0a8-11ea-b438-c219b93d27f3"
+            },
+            "status": "complete",
+            "subject": {
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
+            },
+            "type": "individual",
+            "resourceType": "MeasureReport"
          }
       },
       {
-         "fullUrl": "urn:uuid:ad3cff4a-bf41-11ea-9bc8-4ccc6a181ed3",
+         "fullUrl": "urn:uuid:a59eb00a-c0a8-11ea-8fc7-c219b93d27f3",
          "request": {
             "method": "POST",
             "url": "Coverage"
@@ -1989,33 +2005,170 @@
                "versionId": "2"
             },
             "beneficiary": {
-               "reference": "urn:uuid:ad375d91-bf41-11ea-8c49-4ccc6a181ed3"
+               "reference": "urn:uuid:a59d2a3e-c0a8-11ea-80f5-c219b93d27f3"
             },
             "payor": [
                {
-                  "reference": "urn:uuid:ad3c8a37-bf41-11ea-b6fd-4ccc6a181ed3"
+                  "reference": "urn:uuid:a59d7826-c0a8-11ea-a310-c219b93d27f3"
                }
             ],
             "policyHolder": {
-               "reference": "urn:uuid:ad375d91-bf41-11ea-8c49-4ccc6a181ed3"
+               "reference": "urn:uuid:a59d2a3e-c0a8-11ea-80f5-c219b93d27f3"
             },
             "relationship": {
                "coding": [
                   {
-                     "code": "self"
+                     "code": "self",
+                     "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
                   }
                ]
             },
             "status": "active",
             "subscriber": {
-               "reference": "urn:uuid:ad375d91-bf41-11ea-8c49-4ccc6a181ed3"
+               "reference": "urn:uuid:a59d2a3e-c0a8-11ea-80f5-c219b93d27f3"
             },
             "subscriberId": "B123456789",
             "resourceType": "Coverage"
          }
+      },
+      {
+         "fullUrl": "urn:uuid:a59ed6c2-c0a8-11ea-87e7-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Observation"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+               ]
+            },
+            "category": [
+               {
+                  "coding": [
+                     {
+                        "code": "measure",
+                        "display": "Measure",
+                        "system": "http://example.org/observation-category"
+                     }
+                  ]
+               }
+            ],
+            "code": {
+               "coding": [
+                  {
+                     "code": "1111F",
+                     "display": "Medication Reconciliation",
+                     "system": "http://www.ama-assn.org/go/cpt"
+                  }
+               ]
+            },
+            "effectiveDateTime": "2018-09-29T14:15:04.424Z",
+            "encounter": {
+               "reference": "urn:uuid:a59e61e5-c0a8-11ea-9aa4-c219b93d27f3"
+            },
+            "issued": "2018-09-29T14:15:04.424Z",
+            "performer": [
+               {
+                  "reference": "urn:uuid:a59c198a-c0a8-11ea-8315-c219b93d27f3"
+               }
+            ],
+            "status": "final",
+            "subject": {
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
+            },
+            "valueBoolean": true,
+            "resourceType": "Observation"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59ed6c3-c0a8-11ea-a8d2-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Coverage"
+         },
+         "resource": {
+            "meta": {
+               "lastUpdated": "2019-02-11T14:19:25.000+00:00",
+               "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+               ],
+               "versionId": "2"
+            },
+            "beneficiary": {
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
+            },
+            "payor": [
+               {
+                  "reference": "urn:uuid:a59d7826-c0a8-11ea-a310-c219b93d27f3"
+               }
+            ],
+            "policyHolder": {
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
+            },
+            "relationship": {
+               "coding": [
+                  {
+                     "code": "self",
+                     "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+                  }
+               ]
+            },
+            "status": "active",
+            "subscriber": {
+               "reference": "urn:uuid:a59cdc54-c0a8-11ea-8c7d-c219b93d27f3"
+            },
+            "subscriberId": "A123456789",
+            "resourceType": "Coverage"
+         }
+      },
+      {
+         "fullUrl": "urn:uuid:a59efdf0-c0a8-11ea-8e30-c219b93d27f3",
+         "request": {
+            "method": "POST",
+            "url": "Observation"
+         },
+         "resource": {
+            "meta": {
+               "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+               ]
+            },
+            "category": [
+               {
+                  "coding": [
+                     {
+                        "code": "laboratory",
+                        "display": "Laboratory",
+                        "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                     }
+                  ]
+               }
+            ],
+            "code": {
+               "coding": [
+                  {
+                     "code": "77353-1",
+                     "display": "Noninvasive colorectal cancer DNA and occult blood screening [Interpretation] in Stool Narrative",
+                     "system": "http://loinc.org"
+                  }
+               ]
+            },
+            "effectiveDateTime": "2018-06-22",
+            "performer": [
+               {
+                  "reference": "urn:uuid:a59c198a-c0a8-11ea-8315-c219b93d27f3"
+               }
+            ],
+            "status": "final",
+            "subject": {
+               "reference": "urn:uuid:a59e61e6-c0a8-11ea-b0fb-c219b93d27f3"
+            },
+            "resourceType": "Observation"
+         }
       }
    ],
-   "timestamp": "2020-07-06T04:31:44.815510Z",
+   "timestamp": "2020-07-07T23:21:55.219917Z",
    "type": "transaction",
    "resourceType": "Bundle"
 }

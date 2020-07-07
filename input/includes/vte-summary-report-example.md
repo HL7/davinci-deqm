@@ -36,13 +36,13 @@ Payer X who is acting in the role of a Reporter submits a VTE Summary Report for
   "group": [
     {
       "identifier": {
-        "system": "http://www.acme.org/groups",
+        "system": "http://www.example.org/groups",
         "value": "123"
       },
       "population": [
         {
           "identifier": {
-            "system": "http://www.acme.org/populations",
+            "system": "http://www.example.org/populations",
             "value": "456"
           },
           "code": {
@@ -58,7 +58,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Summary Report for
         },
         {
           "identifier": {
-            "system": "http://www.acme.org/populations",
+            "system": "http://www.example.org/populations",
             "value": "789"
           },
           "code": {
@@ -74,7 +74,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Summary Report for
         },
         {
           "identifier": {
-            "system": "http://www.acme.org/populations",
+            "system": "http://www.example.org/populations",
             "value": "987"
           },
           "code": {

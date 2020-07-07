@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "task01",
+  "id": "task03",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
@@ -9,7 +9,7 @@
   "identifier": [
     {
       "system": "http://example.org/tasks",
-      "value": "19009"
+      "value": "19011"
     }
   ],
   "status": "completed",
@@ -25,17 +25,17 @@
     ]
   },
   "for": {
-    "reference": "Patient/patient01"
+    "reference": "Patient/Patient03"
   },
   "encounter": {
-    "reference": "Encounter/encounter01"
+    "reference": "Encounter/encounter03"
   },
   "executionPeriod": {
-    "start": "2017-06-11",
-    "end": "2017-06-11"
+    "start": "2017-08-11",
+    "end": "2017-08-11"
   },
   "authoredOn": "2018-09-25T14:24:23.584Z",
   "owner": {
-    "reference": "Practitioner/practitioner01"
+    "reference": "Practitioner/practitioner03"
   }
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "observation01",
+  "id": "observation02",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
@@ -11,7 +11,7 @@
     {
       "coding": [
         {
-          "system": "http://example.org/observation-category",
+          "system": "http://example.org/fhir/observation-category",
           "code": "measure",
           "display": "Measure"
         }
@@ -28,16 +28,16 @@
     ]
   },
   "subject": {
-    "reference": "Patient/patient01"
+    "reference": "Patient/patient02"
   },
   "encounter": {
-    "reference": "Encounter/encounter01"
+    "reference": "Encounter/encounter02"
   },
-  "effectiveDateTime": "2018-09-29T14:15:04.424Z",
-  "issued": "2018-09-29T14:15:04.424Z",
+  "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+  "issued": "2018-09-30T14:15:04.424Z",
   "performer": [
     {
-      "reference": "Practitioner/practitioner01"
+      "reference": "Practitioner/practitioner02"
     }
   ],
   "valueBoolean": true

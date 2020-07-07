@@ -185,9 +185,9 @@
       "source": "Observation-observation01.json",
       "base": "Observation-observation01.html"
     },
-    "Encounter/Encounter01": {
+    "Encounter/encounter01": {
       "source": "Encounter-encounter01.json",
-      "base": "Encounter-Encounter01.html"
+      "base": "Encounter-encounter01.html"
     },
     "Patient/patient02": {
       "source": "Patient-patient02.json",
