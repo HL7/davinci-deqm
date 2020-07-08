@@ -368,21 +368,6 @@ definition:
       description: DEQM Task03 example
 
     - exampleBoolean: true
-
-    - exampleBoolean: true
-      name: Task02
-      reference:
-        reference: Task/task02
-      description: DEQM Task02 example
-
-
-    - exampleBoolean: true
-      name: Task03
-      reference:
-        reference: Task/task02
-      description: DEQM Task03 example
-
-    - exampleBoolean: true
       name: Organization01
       reference:
         reference: Organization/organization01
