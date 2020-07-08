@@ -201,7 +201,7 @@
                     "reference": "Patient/patient01"
                 },
                 "encounter": {
-                    "reference": "Encounter/Encounter01"
+                    "reference": "Encounter/encounter01"
                 },
                 "effectiveDateTime": "2018-09-29T14:15:04.424Z",
                 "issued": "2018-09-29T14:15:04.424Z",
@@ -258,7 +258,7 @@
             "name": "resource",
             "resource": {
                 "resourceType": "Encounter",
-                "id": "Encounter01",
+                "id": "encounter01",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"

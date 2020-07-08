@@ -644,7 +644,7 @@ Content-Type: application/fhir+json;charset=UTF-8
     {
       "response": {
         "status": "201 Created",
-        "location": "Encounter/Encounter01/history/2",
+        "location": "Encounter/encounter01/history/2",
         "etag": "1",
         "lastModified": "2019-03-13T01:02:05.965+00:00"
       }

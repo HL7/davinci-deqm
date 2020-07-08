@@ -1,5 +1,10 @@
 {
   "resourceType": "MeasureReport",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+    ]
+  },
   "id": "summ-medicare-stratification-example",
   "extension": [
     {
@@ -17,9 +22,21 @@
   "status": "complete",
   "type": "summary",
   "measure": "http://example.org/fhir/Measure/measure-medicare-stratification-example",
+  "date": "2018-09-05T16:59:52.404Z",
   "period": {
     "start": "2018-01-01",
     "end": "2018-12-31"
+  },
+  "reporter": {
+    "reference": "Organization/organization01",
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup",
+        "valueReference": {
+          "reference": "Group/group01"
+        }
+      }
+    ]
   },
   "improvementNotation": {
     "coding": [

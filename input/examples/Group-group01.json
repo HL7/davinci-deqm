@@ -1,0 +1,32 @@
+{
+  "resourceType": "Group",
+  "id": "group01",
+  "type": "person",
+  "actual": true,
+  "member": [
+    {
+      "entity": {
+        "reference": "Practitioner/practitioner01"
+      },
+      "period": {
+        "start": "2020-07-07"
+      }
+    },
+    {
+      "entity": {
+        "reference": "Practitioner/practitioner02"
+      },
+      "period": {
+        "start": "2020-07-07"
+      }
+    },
+    {
+      "entity": {
+        "reference": "Practitioner/practitioner03"
+      },
+      "period": {
+        "start": "2020-07-07"
+      }
+    }
+  ]
+}

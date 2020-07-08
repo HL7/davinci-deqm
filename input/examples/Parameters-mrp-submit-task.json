@@ -40,7 +40,7 @@
               },
               "evaluatedResource": [
                 {
-                  "reference": "Task/Task01"
+                  "reference": "Task/task01"
                 }
               ]
             }
@@ -202,7 +202,7 @@
                     "reference": "Patient/patient01"
                 },
                 "encounter": {
-                    "reference": "Encounter/Encounter01"
+                    "reference": "Encounter/encounter01"
                 },
                 "executionPeriod": {
                     "start": "2017-06-11",
@@ -259,7 +259,7 @@
             "name": "resource",
             "resource": {
                 "resourceType": "Encounter",
-                "id": "Encounter01",
+                "id": "encounter01",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
