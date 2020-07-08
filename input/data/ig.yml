@@ -229,6 +229,12 @@ definition:
       description: DEQM Observation02 example
 
     - exampleBoolean: true
+      name: Observation03
+      reference:
+        reference: Observation/observation03
+      description: DEQM Observation03 example
+
+    - exampleBoolean: true
       name: Multiple Summ Report
       reference:
         reference: Bundle/multiple-summ-report
@@ -273,7 +279,7 @@ definition:
     - exampleBoolean: true
       name: Observation03
       reference:
-        reference: Observation/observation03
+        reference: Observation/DNA-occultblood
       description: DEQM Observation03 example
     - exampleBoolean: true
       name: Single Indv Mrp Task Report

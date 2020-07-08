@@ -35,7 +35,7 @@
                 },
                 "evaluatedResource": [
                     {
-                        "reference": "Observation/observation03"
+                        "reference": "Observation/DNA-occultblood"
                     }
                 ]
             }
@@ -170,7 +170,7 @@
             "name": "resource",
             "resource": {
                 "resourceType": "Observation",
-                "id": "observation03",
+                "id": "DNA-occultblood",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
