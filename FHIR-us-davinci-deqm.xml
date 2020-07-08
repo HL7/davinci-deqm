@@ -226,6 +226,11 @@
    <artifact name="DEQM MedicationAdministration Profile"
              key="StructureDefinition-medicationadministration-deqm"
              id="StructureDefinition/medicationadministration-deqm"/>
+   <artifact name=""
+             key="Observation-observation02"
+             id="Observation/observation02"/>
+   <artifact name="" key="Encounter-Encounter02" id="Encounter/Encounter02"/>
+   <artifact name="" key="Encounter-Encounter03" id="Encounter/Encounter03"/>
    <artifact name="ExampleScenario" key="ExampleScenario" deprecated="true"/>
    <artifact name="MeasureReport" key="MeasureReport" deprecated="true"/>
    <artifact name="Organization" key="Organization" deprecated="true"/>

@@ -12,7 +12,7 @@ R4 publish punch list:
 - [ ] fix remaining QA Issues
 - [X] update ig.json pages - add terminology
 - [ ] update and fix dependency links (note deprecate using the definitions.csv)
-- [ ] update bundle examples to include new Extensions
+- [X] update bundle examples to include new Extensions
 - [X] update capstatements to include new extension Requirements and
 extensions for capabilitystatement.
 - [ ] remove text highlights

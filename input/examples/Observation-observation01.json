@@ -11,7 +11,7 @@
     {
       "coding": [
         {
-          "system": "http://acme.org/observation-category",
+          "system": "http://example.org/observation-category",
           "code": "measure",
           "display": "Measure"
         }

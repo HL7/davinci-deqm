@@ -43,7 +43,8 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "relationship": {
                "coding": [
                   {
-                     "code": "self"
+                     "code": "self",
+ "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
                   }
                ]
             },
@@ -174,7 +175,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "group": [
                {
                   "identifier": {
-                     "system": "http://www.acme.org/groups",
+                     "system": "http://www.example.org/groups",
                      "value": "112"
                   },
                   "measureScore": 100,
@@ -190,7 +191,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                            ]
                         },
                         "identifier": {
-                           "system": "http://www.acme.org/populations",
+                           "system": "http://www.example.org/populations",
                            "value": "11234"
                         }
                      }
@@ -234,7 +235,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                      {
                         "code": "measure",
                         "display": "Measure",
-                        "system": "http://acme.org/observation-category"
+                        "system": "http://example.org/observation-category"
                      }
                   ]
                }

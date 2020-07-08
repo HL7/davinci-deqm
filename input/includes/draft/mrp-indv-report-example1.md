@@ -44,7 +44,8 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "relationship": {
                "coding": [
                   {
-                     "code": "self"
+                     "code": "self",
+ "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
                   }
                ]
             },
@@ -175,7 +176,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "group": [
                {
                   "identifier": {
-                     "system": "http://www.acme.org/groups",
+                     "system": "http://www.example.org/groups",
                      "value": "112"
                   },
                   "measureScore": 100,
@@ -192,7 +193,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
                            ]
                         },
                         "identifier": {
-                           "system": "http://www.acme.org/populations",
+                           "system": "http://www.example.org/populations",
                            "value": "11234"
                         }
                      }
@@ -558,7 +559,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             },
             "identifier": [
                {
-                  "system": "http://www.acme.org/tasks",
+                  "system": "http://www.example.org/tasks",
                   "value": "19009"
                }
             ],

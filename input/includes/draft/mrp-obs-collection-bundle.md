@@ -24,7 +24,7 @@
                         "value": "1144221847"
                     },
                     {
-                        "system": "http://www.acme.org/organization",
+                        "system": "http://www.example.org/organization",
                         "value": "2523423456"
                     }
                 ],
@@ -48,7 +48,7 @@
                     },
                     {
                         "system": "email",
-                        "value": "hq@acme.org"
+                        "value": "hq@example.org"
                     }
                 ],
                 "address": [
@@ -80,7 +80,7 @@
                 },
                 "identifier": [
                     {
-                        "system": "http://www.acme.org/location",
+                        "system": "http://www.example.org/location",
                         "value": "29"
                     }
                 ],
@@ -323,7 +323,7 @@
                         "value": "9941339108"
                     },
                     {
-                        "system": "http://www.acme.org/practitioners",
+                        "system": "http://www.example.org/practitioners",
                         "value": "25456"
                     }
                 ],
