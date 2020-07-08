@@ -1,2076 +1,2096 @@
 {
-   "id": "multiple-indv-mrp-obs-report",
-   "entry": [
-      {
-         "fullUrl": "urn:uuid:80c6a1d2-c0c3-11ea-a3b9-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Practitioner"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
-               ]
+    "id": "multiple-indv-mrp-obs-report",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:80c6a1d2-c0c3-11ea-a3b9-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Practitioner"
             },
-            "address": [
-               {
-                  "city": "Amherst",
-                  "line": [
-                     "1003 Healthcare Drive"
-                  ],
-                  "postalCode": "01002",
-                  "state": "MA",
-                  "use": "home"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.cms.gov"
-                  },
-                  "system": "http://hl7.org/fhir/sid/us-npi",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "PRN",
-                           "display": "Provider number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "official",
-                  "value": "345678912"
-               },
-               {
-                  "assigner": {
-                     "display": "www.cms.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.336",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "PRN",
-                           "display": "Provider number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "secondary",
-                  "value": "082583"
-               }
-            ],
-            "name": [
-               {
-                  "family": "Bone",
-                  "given": [
-                     "Ronald"
-                  ],
-                  "prefix": [
-                     "Dr"
-                  ]
-               }
-            ],
-            "resourceType": "Practitioner"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Patient"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-               ],
-               "versionId": "4"
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-                  "valueCode": "M"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2028-9",
-                           "display": "Asian",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Asian"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2186-5",
-                           "display": "Not Hispanic or Latino",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Not Hispanic or Latino"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-               }
-            ],
-            "active": true,
-            "address": [
-               {
-                  "city": "Lynnwood",
-                  "country": "USA",
-                  "line": [
-                     "6 Rockwell Street"
-                  ],
-                  "postalCode": "07420",
-                  "state": "NJ",
-                  "use": "home"
-               }
-            ],
-            "birthDate": "1967-06-13",
-            "communication": [
-               {
-                  "language": {
-                     "coding": [
-                        {
-                           "code": "en-US",
-                           "display": "English (Region=United States)",
-                           "system": "urn:ietf:bcp:47"
-                        }
-                     ]
-                  },
-                  "preferred": true
-               }
-            ],
-            "deceasedBoolean": false,
-            "gender": "male",
-            "identifier": [
-               {
-                  "system": "http://hospital.davinci.org",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "MR",
-                           "display": "Medical record number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "usual",
-                  "value": "23456"
-               }
-            ],
-            "managingOrganization": {
-               "reference": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3"
-            },
-            "maritalStatus": {
-               "coding": [
-                  {
-                     "code": "M",
-                     "display": "Married",
-                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                  }
-               ]
-            },
-            "name": [
-               {
-                  "family": "Bernard",
-                  "given": [
-                     "Darien"
-                  ],
-                  "use": "official"
-               }
-            ],
-            "resourceType": "Patient"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c6f328-c0c3-11ea-8021-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Coverage"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-11T14:19:25.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
-               ],
-               "versionId": "2"
-            },
-            "beneficiary": {
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "payor": [
-               {
-                  "reference": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3"
-               }
-            ],
-            "policyHolder": {
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "relationship": {
-               "coding": [
-                  {
-                     "code": "self"
-                  }
-               ]
-            },
-            "status": "active",
-            "subscriber": {
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "subscriberId": "A123456789",
-            "resourceType": "Coverage"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c6f329-c0c3-11ea-a90f-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "MeasureReport"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
-               ]
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-                  "valueCodeableConcept": {
-                     "coding": [
-                        {
-                           "code": "proportion",
-                           "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                        }
-                     ]
-                  }
-               }
-            ],
-            "date": "2019-03-14",
-            "group": [
-               {
-                  "code": {
-                     "coding": [
-                        {
-                           "code": "group-1",
-                           "display": "group-1",
-                           "system": "http://fhir/example.org"
-                        }
-                     ]
-                  },
-                  "measureScore": {
-                     "value": 1
-                  },
-                  "population": [
-                     {
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "initial-population",
-                                 "display": "Initial Population",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     },
-                     {
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "numerator",
-                                 "display": "Numerator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     },
-                     {
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "denominator",
-                                 "display": "Denominator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 1
-                     },
-                     {
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "denominator-exclusion",
-                                 "display": "Denominator Exclusion",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
-                        },
-                        "count": 0
-                     }
-                  ],
-                  "stratifier": [
-                     {
-                        "code": [
-                           {
-                              "coding": [
-                                 {
-                                    "code": "sde-ethnicity",
-                                    "display": "SDE Ethnicity",
-                                    "system": "http://fhir/example.org"
-                                 }
-                              ]
-                           }
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "address": [
+                    {
+                        "city": "Amherst",
+                        "line": [
+                            "1003 Healthcare Drive"
                         ],
-                        "stratum": [
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "2135-2",
-                                       "display": "Hispanic or Latino",
-                                       "system": "urn:oid:2.16.840.1.113883.6.238"
-                                    }
-                                 ]
-                              }
-                           },
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "2186-5",
-                                       "display": "Not Hispanic or Latino",
-                                       "system": "urn:oid:2.16.840.1.113883.6.238"
-                                    }
-                                 ]
-                              }
-                           }
-                        ]
-                     },
-                     {
-                        "code": [
-                           {
-                              "coding": [
-                                 {
-                                    "code": "sde-payer",
-                                    "display": "SDE Payer",
-                                    "system": "http://fhir/example.org"
-                                 }
-                              ]
-                           }
+                        "postalCode": "01002",
+                        "state": "MA",
+                        "use": "home"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "assigner": {
+                            "display": "www.cms.gov"
+                        },
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PRN",
+                                    "display": "Provider number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
+                        },
+                        "use": "official",
+                        "value": "345678912"
+                    },
+                    {
+                        "assigner": {
+                            "display": "www.cms.gov"
+                        },
+                        "system": "urn:oid:2.16.840.1.113883.4.336",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PRN",
+                                    "display": "Provider number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
+                        },
+                        "use": "secondary",
+                        "value": "082583"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Bone",
+                        "given": [
+                            "Ronald"
                         ],
-                        "stratum": [
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "Payer123",
-                                       "display": "King HMO",
-                                       "system": "http://fhir/example.org"
-                                    }
-                                 ]
-                              }
-                           },
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "Payer456",
-                                       "display": "Green Circle",
-                                       "system": "http://fhir/example.org"
-                                    }
-                                 ]
-                              }
-                           },
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "Payer789",
-                                       "display": "GoodHealth of California",
-                                       "system": "http://fhir/example.org"
-                                    }
-                                 ]
-                              }
-                           }
+                        "prefix": [
+                            "Dr"
                         ]
-                     },
-                     {
-                        "code": [
-                           {
-                              "coding": [
-                                 {
-                                    "code": "sde-race",
-                                    "display": "SDE Race",
-                                    "system": "http://fhir/example.org"
-                                 }
-                              ]
-                           }
+                    }
+                ],
+                "resourceType": "Practitioner"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            },
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+                    ],
+                    "versionId": "4",
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                        "valueCode": "M"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2028-9",
+                                    "display": "Asian",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "Asian"
+                            }
                         ],
-                        "stratum": [
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "2054-5",
-                                       "display": "Black or African American",
-                                       "system": "urn:oid:2.16.840.1.113883.6.238"
-                                    }
-                                 ]
-                              }
-                           },
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "2106-3",
-                                       "display": "White",
-                                       "system": "urn:oid:2.16.840.1.113883.6.238"
-                                    }
-                                 ]
-                              }
-                           },
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
-                                    {
-                                       "code": "2028-9",
-                                       "display": "Asian",
-                                       "system": "urn:oid:2.16.840.1.113883.6.238"
-                                    }
-                                 ]
-                              }
-                           }
-                        ]
-                     },
-                     {
-                        "code": [
-                           {
-                              "coding": [
-                                 {
-                                    "code": "sde-sex",
-                                    "display": "SDE Sex",
-                                    "system": "http://fhir/example.org"
-                                 }
-                              ]
-                           }
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "Not Hispanic or Latino"
+                            }
                         ],
-                        "stratum": [
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 1
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+                    }
+                ],
+                "active": true,
+                "address": [
+                    {
+                        "city": "Lynnwood",
+                        "country": "USA",
+                        "line": [
+                            "6 Rockwell Street"
+                        ],
+                        "postalCode": "07420",
+                        "state": "NJ",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1967-06-13",
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "code": "en-US",
+                                    "display": "English (Region=United States)",
+                                    "system": "urn:ietf:bcp:47"
+                                }
+                            ]
+                        },
+                        "preferred": true
+                    }
+                ],
+                "deceasedBoolean": false,
+                "gender": "male",
+                "identifier": [
+                    {
+                        "system": "http://hospital.davinci.org",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "MR",
+                                    "display": "Medical record number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "23456"
+                    }
+                ],
+                "managingOrganization": {
+                    "reference": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3"
+                },
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "code": "M",
+                            "display": "Married",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                        }
+                    ]
+                },
+                "name": [
+                    {
+                        "family": "Bernard",
+                        "given": [
+                            "Darien"
+                        ],
+                        "use": "official"
+                    }
+                ],
+                "resourceType": "Patient"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c6f328-c0c3-11ea-8021-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Coverage"
+            },
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-02-11T14:19:25.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+                    ],
+                    "versionId": "2",
+                    "source": "http://example.org/fhir/server"
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "payor": [
+                    {
+                        "reference": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3"
+                    }
+                ],
+                "policyHolder": {
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "relationship": {
+                    "coding": [
+                        {
+                            "code": "self"
+                        }
+                    ]
+                },
+                "status": "active",
+                "subscriber": {
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "subscriberId": "A123456789",
+                "resourceType": "Coverage"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c6f329-c0c3-11ea-a90f-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "MeasureReport"
+            },
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "code": "proportion",
+                                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "date": "2019-03-14",
+                "group": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "group-1",
+                                    "display": "group-1",
+                                    "system": "http://fhir/example.org"
+                                }
+                            ]
+                        },
+                        "measureScore": {
+                            "value": 1
+                        },
+                        "population": [
+                            {
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "initial-population",
+                                            "display": "Initial Population",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            },
+                            {
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "numerator",
+                                            "display": "Numerator",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            },
+                            {
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "denominator",
+                                            "display": "Denominator",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            },
+                            {
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "denominator-exclusion",
+                                            "display": "Denominator Exclusion",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 0
+                            }
+                        ],
+                        "stratifier": [
+                            {
+                                "code": [
                                     {
-                                       "code": "male",
-                                       "display": "Male",
-                                       "system": "http://hl7.org/fhir/administrative-gender"
+                                        "coding": [
+                                            {
+                                                "code": "sde-ethnicity",
+                                                "display": "SDE Ethnicity",
+                                                "system": "http://fhir/example.org"
+                                            }
+                                        ]
                                     }
-                                 ]
-                              }
-                           },
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
+                                ],
+                                "stratum": [
                                     {
-                                       "code": "female",
-                                       "display": "Female",
-                                       "system": "http://hl7.org/fhir/administrative-gender"
-                                    }
-                                 ]
-                              }
-                           },
-                           {
-                              "population": [
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "initial-population",
-                                             "display": "Initial Population",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "2135-2",
+                                                    "display": "Hispanic or Latino",
+                                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                                }
+                                            ]
+                                        }
                                     },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "numerator",
-                                             "display": "Numerator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator",
-                                             "display": "Denominator",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 },
-                                 {
-                                    "code": {
-                                       "coding": [
-                                          {
-                                             "code": "denominator-exclusion",
-                                             "display": "Denominator Exclusion",
-                                             "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                                          }
-                                       ]
-                                    },
-                                    "count": 0
-                                 }
-                              ],
-                              "value": {
-                                 "coding": [
                                     {
-                                       "code": "other",
-                                       "display": "Other",
-                                       "system": "http://hl7.org/fhir/administrative-gender"
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "2186-5",
+                                                    "display": "Not Hispanic or Latino",
+                                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                                }
+                                            ]
+                                        }
                                     }
-                                 ]
-                              }
-                           }
+                                ]
+                            },
+                            {
+                                "code": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "code": "sde-payer",
+                                                "display": "SDE Payer",
+                                                "system": "http://fhir/example.org"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "stratum": [
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "Payer123",
+                                                    "display": "King HMO",
+                                                    "system": "http://fhir/example.org"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "Payer456",
+                                                    "display": "Green Circle",
+                                                    "system": "http://fhir/example.org"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "Payer789",
+                                                    "display": "GoodHealth of California",
+                                                    "system": "http://fhir/example.org"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "code": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "code": "sde-race",
+                                                "display": "SDE Race",
+                                                "system": "http://fhir/example.org"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "stratum": [
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "2054-5",
+                                                    "display": "Black or African American",
+                                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "2106-3",
+                                                    "display": "White",
+                                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "2028-9",
+                                                    "display": "Asian",
+                                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "code": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "code": "sde-sex",
+                                                "display": "SDE Sex",
+                                                "system": "http://fhir/example.org"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "stratum": [
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 1
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "male",
+                                                    "display": "Male",
+                                                    "system": "http://hl7.org/fhir/administrative-gender"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "female",
+                                                    "display": "Female",
+                                                    "system": "http://hl7.org/fhir/administrative-gender"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "population": [
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "initial-population",
+                                                            "display": "Initial Population",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "numerator",
+                                                            "display": "Numerator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator",
+                                                            "display": "Denominator",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            },
+                                            {
+                                                "code": {
+                                                    "coding": [
+                                                        {
+                                                            "code": "denominator-exclusion",
+                                                            "display": "Denominator Exclusion",
+                                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                                        }
+                                                    ]
+                                                },
+                                                "count": 0
+                                            }
+                                        ],
+                                        "value": {
+                                            "coding": [
+                                                {
+                                                    "code": "other",
+                                                    "display": "Other",
+                                                    "system": "http://hl7.org/fhir/administrative-gender"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
                         ]
-                     }
-                  ]
-               }
-            ],
-            "improvementNotation": {
-               "coding": [
-                  {
-                     "code": "increase",
-                     "display": "Increased score indicates improvement",
-                     "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-                  }
-               ]
-            },
-            "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
-            "period": {
-               "end": "2019-01-01",
-               "start": "2018-12-31"
-            },
-            "reporter": {
-               "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
-            },
-            "status": "complete",
-            "subject": {
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "type": "individual",
-            "resourceType": "MeasureReport"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95676-c0c3-11ea-a491-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "MeasureReport"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
-               ]
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-                  "valueCodeableConcept": {
-                     "coding": [
+                    }
+                ],
+                "improvementNotation": {
+                    "coding": [
                         {
-                           "code": "proportion",
-                           "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                            "code": "increase",
+                            "display": "Increased score indicates improvement",
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
                         }
-                     ]
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
-                  "valueIdentifier": {
-                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
-                     "value": "0015HQN9BD3304E"
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
-                  "valueReference": {
-                     "reference": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3"
-                  }
-               }
-            ],
-            "date": "2018-09-05T16:59:52.404Z",
-            "evaluatedResource": [
-               {
-                  "reference": "urn:uuid:80c9567a-c0c3-11ea-935e-c219b93d27f3"
-               }
-            ],
-            "group": [
-               {
-                  "code": {
-                     "coding": [
-                        {
-                           "code": "mrp-group",
-                           "display": "MRP Group",
-                           "system": "http://example.org"
+                    ]
+                },
+                "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+                "period": {
+                    "end": "2019-01-01",
+                    "start": "2018-12-31"
+                },
+                "reporter": {
+                    "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
+                },
+                "status": "complete",
+                "subject": {
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "type": "individual",
+                "resourceType": "MeasureReport"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95676-c0c3-11ea-a491-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "MeasureReport"
+            },
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "code": "proportion",
+                                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                                }
+                            ]
                         }
-                     ],
-                     "text": "MRP Group"
-                  },
-                  "measureScore": {
-                     "value": 1
-                  },
-                  "population": [
-                     {
-                        "id": "initial-population",
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                        "valueIdentifier": {
+                            "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                            "value": "0015HQN9BD3304E"
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                        "valueReference": {
+                            "reference": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3"
+                        }
+                    }
+                ],
+                "date": "2018-09-05T16:59:52.404Z",
+                "evaluatedResource": [
+                    {
+                        "reference": "urn:uuid:80c9567a-c0c3-11ea-935e-c219b93d27f3"
+                    }
+                ],
+                "group": [
+                    {
                         "code": {
-                           "coding": [
-                              {
-                                 "code": "initial-population",
-                                 "display": "Initial Population",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
+                            "coding": [
+                                {
+                                    "code": "mrp-group",
+                                    "display": "MRP Group",
+                                    "system": "http://example.org"
+                                }
+                            ],
+                            "text": "MRP Group"
                         },
-                        "count": 1
-                     },
-                     {
-                        "id": "numerator",
+                        "measureScore": {
+                            "value": 1
+                        },
+                        "population": [
+                            {
+                                "id": "initial-population",
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "initial-population",
+                                            "display": "Initial Population",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            },
+                            {
+                                "id": "numerator",
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "numerator",
+                                            "display": "Numerator",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            },
+                            {
+                                "id": "denominator",
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "denominator",
+                                            "display": "Denominator",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "improvementNotation": {
+                    "coding": [
+                        {
+                            "code": "increase",
+                            "display": "Increased score indicates improvement",
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+                        }
+                    ]
+                },
+                "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+                "period": {
+                    "end": "2018-09-01",
+                    "start": "2018-08-01"
+                },
+                "reporter": {
+                    "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
+                },
+                "status": "complete",
+                "subject": {
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "type": "individual",
+                "resourceType": "MeasureReport"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            },
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                    ],
+                    "versionId": "3",
+                    "source": "http://example.org/fhir/server"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Englewood",
+                        "country": "USA",
+                        "line": [
+                            "3 Sherwood St."
+                        ],
+                        "postalCode": "07631",
+                        "state": "NJ"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "assigner": {
+                            "display": "www.irs.gov"
+                        },
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "TAX",
+                                    "display": "Tax ID number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
+                        },
+                        "use": "official",
+                        "value": "234567891"
+                    }
+                ],
+                "name": "DaVinciHospital02",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(+1) 551-555-1212"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "prov",
+                                "display": "Healthcare Provider",
+                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                            }
+                        ]
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95678-c0c3-11ea-9bf8-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "class": {
+                    "code": "IMP",
+                    "display": "inpatient encounter",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+                },
+                "hospitalization": {
+                    "dischargeDisposition": {
+                        "coding": [
+                            {
+                                "code": "home",
+                                "display": "Home",
+                                "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+                            }
+                        ]
+                    }
+                },
+                "period": {
+                    "end": "2018-05-29T11:00:00-04:00",
+                    "start": "2018-05-29T11:00:00-04:00"
+                },
+                "status": "finished",
+                "subject": {
+                    "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "239279000",
+                                "display": "Fixation of fracture",
+                                "system": "http://snomed.info/sct"
+                            }
+                        ]
+                    }
+                ],
+                "resourceType": "Encounter"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95679-c0c3-11ea-8bda-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "MeasureReport"
+            },
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "code": "proportion",
+                                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                        "valueIdentifier": {
+                            "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                            "value": "0015HQN9BD3304E"
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                        "valueReference": {
+                            "reference": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3"
+                        }
+                    }
+                ],
+                "date": "2018-09-05T16:59:52.404Z",
+                "evaluatedResource": [
+                    {
+                        "reference": "urn:uuid:80c9567a-c0c3-11ea-935e-c219b93d27f3"
+                    }
+                ],
+                "group": [
+                    {
                         "code": {
-                           "coding": [
-                              {
-                                 "code": "numerator",
-                                 "display": "Numerator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
+                            "coding": [
+                                {
+                                    "code": "mrp-group",
+                                    "display": "MRP Group",
+                                    "system": "http://example.org"
+                                }
+                            ],
+                            "text": "MRP Group"
                         },
-                        "count": 1
-                     },
-                     {
-                        "id": "denominator",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "denominator",
-                                 "display": "Denominator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
+                        "measureScore": {
+                            "value": 1
                         },
-                        "count": 1
-                     }
-                  ]
-               }
-            ],
-            "improvementNotation": {
-               "coding": [
-                  {
-                     "code": "increase",
-                     "display": "Increased score indicates improvement",
-                     "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-                  }
-               ]
-            },
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
-            "period": {
-               "end": "2018-09-01",
-               "start": "2018-08-01"
-            },
-            "reporter": {
-               "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
-            },
-            "status": "complete",
-            "subject": {
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "type": "individual",
-            "resourceType": "MeasureReport"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Organization"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-               ],
-               "versionId": "3"
-            },
-            "active": true,
-            "address": [
-               {
-                  "city": "Englewood",
-                  "country": "USA",
-                  "line": [
-                     "3 Sherwood St."
-                  ],
-                  "postalCode": "07631",
-                  "state": "NJ"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.irs.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
-                  "type": {
-                     "coding": [
+                        "population": [
+                            {
+                                "id": "initial-population",
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "initial-population",
+                                            "display": "Initial Population",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            },
+                            {
+                                "id": "numerator",
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "numerator",
+                                            "display": "Numerator",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            },
+                            {
+                                "id": "denominator",
+                                "code": {
+                                    "coding": [
+                                        {
+                                            "code": "denominator",
+                                            "display": "Denominator",
+                                            "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                                        }
+                                    ]
+                                },
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "improvementNotation": {
+                    "coding": [
                         {
-                           "code": "TAX",
-                           "display": "Tax ID number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                            "code": "increase",
+                            "display": "Increased score indicates improvement",
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
                         }
-                     ]
-                  },
-                  "use": "official",
-                  "value": "234567891"
-               }
-            ],
-            "name": "DaVinciHospital02",
-            "telecom": [
-               {
-                  "system": "phone",
-                  "value": "(+1) 551-555-1212"
-               }
-            ],
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "prov",
-                        "display": "Healthcare Provider",
-                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Organization"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95678-c0c3-11ea-9bf8-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Encounter"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
-               ]
+                    ]
+                },
+                "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+                "period": {
+                    "end": "2018-09-01",
+                    "start": "2018-08-01"
+                },
+                "reporter": {
+                    "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
+                },
+                "status": "complete",
+                "subject": {
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "type": "individual",
+                "resourceType": "MeasureReport"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c9567a-c0c3-11ea-935e-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Observation"
             },
-            "class": {
-               "code": "IMP",
-               "display": "inpatient encounter",
-               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-            },
-            "hospitalization": {
-               "dischargeDisposition": {
-                  "coding": [
-                     {
-                        "code": "home",
-                        "display": "Home",
-                        "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
-                     }
-                  ]
-               }
-            },
-            "period": {
-               "end": "2018-05-29T11:00:00-04:00",
-               "start": "2018-05-29T11:00:00-04:00"
-            },
-            "status": "finished",
-            "subject": {
-               "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
-            },
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "239279000",
-                        "display": "Fixation of fracture",
-                        "system": "http://snomed.info/sct"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Encounter"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95679-c0c3-11ea-8bda-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "MeasureReport"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
-               ]
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-                  "valueCodeableConcept": {
-                     "coding": [
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "measure",
+                                "display": "Measure",
+                                "system": "http://acme.org/observation-category"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
                         {
-                           "code": "proportion",
-                           "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                            "code": "1111F",
+                            "display": "Medication Reconciliation",
+                            "system": "http://www.ama-assn.org/go/cpt"
                         }
-                     ]
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
-                  "valueIdentifier": {
-                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
-                     "value": "0015HQN9BD3304E"
-                  }
-               },
-               {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
-                  "valueReference": {
-                     "reference": "urn:uuid:80c95677-c0c3-11ea-bd58-c219b93d27f3"
-                  }
-               }
-            ],
-            "date": "2018-09-05T16:59:52.404Z",
-            "evaluatedResource": [
-               {
-                  "reference": "urn:uuid:80c9567a-c0c3-11ea-935e-c219b93d27f3"
-               }
-            ],
-            "group": [
-               {
-                  "code": {
-                     "coding": [
+                    ]
+                },
+                "effectiveDateTime": "2018-09-29T14:15:04.424Z",
+                "encounter": {
+                    "reference": "urn:uuid:80c9567c-c0c3-11ea-b284-c219b93d27f3"
+                },
+                "issued": "2018-09-29T14:15:04.424Z",
+                "performer": [
+                    {
+                        "reference": "urn:uuid:80c6a1d2-c0c3-11ea-a3b9-c219b93d27f3"
+                    }
+                ],
+                "status": "final",
+                "subject": {
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "valueBoolean": true,
+                "resourceType": "Observation"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c9567b-c0c3-11ea-97c9-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Observation"
+            },
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "measure",
+                                "display": "Measure",
+                                "system": "http://example.org/fhir/observation-category"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
                         {
-                           "code": "mrp-group",
-                           "display": "MRP Group",
-                           "system": "http://example.org"
+                            "code": "1111F",
+                            "display": "Medication Reconciliation",
+                            "system": "http://www.ama-assn.org/go/cpt"
                         }
-                     ],
-                     "text": "MRP Group"
-                  },
-                  "measureScore": {
-                     "value": 1
-                  },
-                  "population": [
-                     {
-                        "id": "initial-population",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "initial-population",
-                                 "display": "Initial Population",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
+                    ]
+                },
+                "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+                "encounter": {
+                    "reference": "urn:uuid:80c95678-c0c3-11ea-9bf8-c219b93d27f3"
+                },
+                "issued": "2018-09-30T14:15:04.424Z",
+                "performer": [
+                    {
+                        "reference": "Practitioner/practitioner02"
+                    }
+                ],
+                "status": "final",
+                "subject": {
+                    "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
+                },
+                "valueBoolean": true,
+                "resourceType": "Observation"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c9567c-c0c3-11ea-b284-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "class": {
+                    "code": "IMP",
+                    "display": "inpatient encounter",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+                },
+                "hospitalization": {
+                    "dischargeDisposition": {
+                        "coding": [
+                            {
+                                "code": "home",
+                                "display": "Home",
+                                "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+                            }
+                        ]
+                    }
+                },
+                "period": {
+                    "end": "2018-05-29T11:00:00-04:00",
+                    "start": "2018-05-29T11:00:00-04:00"
+                },
+                "status": "finished",
+                "subject": {
+                    "display": "Jairo Webster",
+                    "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "56876005",
+                                "display": "Drug rehabilitation and detoxification",
+                                "system": "http://snomed.info/sct"
+                            }
+                        ]
+                    }
+                ],
+                "resourceType": "Encounter"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            },
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                    ],
+                    "versionId": "4",
+                    "source": "http://example.org/fhir/server"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Grand Rapids",
+                        "country": "USA",
+                        "line": [
+                            "160 Glen Eagles Road"
+                        ],
+                        "postalCode": "49503",
+                        "state": "MI"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "assigner": {
+                            "display": "www.irs.gov"
                         },
-                        "count": 1
-                     },
-                     {
-                        "id": "numerator",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "numerator",
-                                 "display": "Numerator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "TAX",
+                                    "display": "Tax ID number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
                         },
-                        "count": 1
-                     },
-                     {
-                        "id": "denominator",
-                        "code": {
-                           "coding": [
-                              {
-                                 "code": "denominator",
-                                 "display": "Denominator",
-                                 "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                              }
-                           ]
+                        "use": "official",
+                        "value": "456789123"
+                    }
+                ],
+                "name": "DVPayer04",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(+1) 616-555-1212"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "ins",
+                                "display": "Insurance Company",
+                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                            }
+                        ]
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            },
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-02-21T01:47:54.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                    ],
+                    "versionId": "4",
+                    "source": "http://example.org/fhir/server"
+                },
+                "active": true,
+                "address": [
+                    {
+                        "city": "Warwick",
+                        "country": "USA",
+                        "line": [
+                            "73 Lakewood Street"
+                        ],
+                        "postalCode": "02886",
+                        "state": "RI"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "assigner": {
+                            "display": "www.irs.gov"
                         },
-                        "count": 1
-                     }
-                  ]
-               }
-            ],
-            "improvementNotation": {
-               "coding": [
-                  {
-                     "code": "increase",
-                     "display": "Increased score indicates improvement",
-                     "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-                  }
-               ]
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "TAX",
+                                    "display": "Tax ID number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
+                        },
+                        "use": "official",
+                        "value": "123456789"
+                    }
+                ],
+                "name": "DaVinciHospital01",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(+1) 401-555-1212"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "prov",
+                                "display": "Healthcare Provider",
+                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                            }
+                        ]
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95680-c0c3-11ea-aaa3-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Coverage"
             },
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
-            "period": {
-               "end": "2018-09-01",
-               "start": "2018-08-01"
-            },
-            "reporter": {
-               "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
-            },
-            "status": "complete",
-            "subject": {
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "type": "individual",
-            "resourceType": "MeasureReport"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c9567a-c0c3-11ea-935e-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Observation"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-               ]
-            },
-            "category": [
-               {
-                  "coding": [
-                     {
-                        "code": "measure",
-                        "display": "Measure",
-                        "system": "http://acme.org/observation-category"
-                     }
-                  ]
-               }
-            ],
-            "code": {
-               "coding": [
-                  {
-                     "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
-                  }
-               ]
-            },
-            "effectiveDateTime": "2018-09-29T14:15:04.424Z",
-            "encounter": {
-               "reference": "urn:uuid:80c9567c-c0c3-11ea-b284-c219b93d27f3"
-            },
-            "issued": "2018-09-29T14:15:04.424Z",
-            "performer": [
-               {
-                  "reference": "urn:uuid:80c6a1d2-c0c3-11ea-a3b9-c219b93d27f3"
-               }
-            ],
-            "status": "final",
-            "subject": {
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "valueBoolean": true,
-            "resourceType": "Observation"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c9567b-c0c3-11ea-97c9-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Observation"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-               ]
-            },
-            "category": [
-               {
-                  "coding": [
-                     {
-                        "code": "measure",
-                        "display": "Measure",
-                        "system": "http://example.org/fhir/observation-category"
-                     }
-                  ]
-               }
-            ],
-            "code": {
-               "coding": [
-                  {
-                     "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
-                  }
-               ]
-            },
-            "effectiveDateTime": "2018-09-30T14:15:04.424Z",
-            "encounter": {
-               "reference": "urn:uuid:80c95678-c0c3-11ea-9bf8-c219b93d27f3"
-            },
-            "issued": "2018-09-30T14:15:04.424Z",
-            "performer": [
-               {
-                  "reference": "Practitioner/practitioner02"
-               }
-            ],
-            "status": "final",
-            "subject": {
-               "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
-            },
-            "valueBoolean": true,
-            "resourceType": "Observation"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c9567c-c0c3-11ea-b284-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Encounter"
-         },
-         "resource": {
-            "meta": {
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
-               ]
-            },
-            "class": {
-               "code": "IMP",
-               "display": "inpatient encounter",
-               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-            },
-            "hospitalization": {
-               "dischargeDisposition": {
-                  "coding": [
-                     {
-                        "code": "home",
-                        "display": "Home",
-                        "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition"
-                     }
-                  ]
-               }
-            },
-            "period": {
-               "end": "2018-05-29T11:00:00-04:00",
-               "start": "2018-05-29T11:00:00-04:00"
-            },
-            "status": "finished",
-            "subject": {
-               "display": "Jairo Webster",
-               "reference": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3"
-            },
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "56876005",
-                        "display": "Drug rehabilitation and detoxification",
-                        "system": "http://snomed.info/sct"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Encounter"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Organization"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-               ],
-               "versionId": "4"
-            },
-            "active": true,
-            "address": [
-               {
-                  "city": "Grand Rapids",
-                  "country": "USA",
-                  "line": [
-                     "160 Glen Eagles Road"
-                  ],
-                  "postalCode": "49503",
-                  "state": "MI"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.irs.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
-                  "type": {
-                     "coding": [
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+                    ],
+                    "versionId": "2",
+                    "source": "http://example.org/fhir/server"
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
+                },
+                "payor": [
+                    {
+                        "reference": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3"
+                    }
+                ],
+                "policyHolder": {
+                    "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
+                },
+                "relationship": {
+                    "coding": [
                         {
-                           "code": "TAX",
-                           "display": "Tax ID number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                            "code": "self"
                         }
-                     ]
-                  },
-                  "use": "official",
-                  "value": "456789123"
-               }
-            ],
-            "name": "DVPayer04",
-            "telecom": [
-               {
-                  "system": "phone",
-                  "value": "(+1) 616-555-1212"
-               }
-            ],
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "ins",
-                        "display": "Insurance Company",
-                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Organization"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Organization"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-21T01:47:54.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-               ],
-               "versionId": "4"
+                    ]
+                },
+                "status": "active",
+                "subscriber": {
+                    "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
+                },
+                "subscriberId": "B123456789",
+                "resourceType": "Coverage"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Patient"
             },
-            "active": true,
-            "address": [
-               {
-                  "city": "Warwick",
-                  "country": "USA",
-                  "line": [
-                     "73 Lakewood Street"
-                  ],
-                  "postalCode": "02886",
-                  "state": "RI"
-               }
-            ],
-            "identifier": [
-               {
-                  "assigner": {
-                     "display": "www.irs.gov"
-                  },
-                  "system": "urn:oid:2.16.840.1.113883.4.4",
-                  "type": {
-                     "coding": [
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-02-07T18:47:34.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+                    ],
+                    "versionId": "4",
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                        "valueCode": "F"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2054-5",
+                                    "display": "Black or African American",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "Black or African American"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "Not Hispanic or Latino"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+                    }
+                ],
+                "active": true,
+                "address": [
+                    {
+                        "city": "Freehold",
+                        "country": "USA",
+                        "line": [
+                            "213 Lilac Ave."
+                        ],
+                        "postalCode": "48099",
+                        "state": "MI",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1983-09-12",
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "code": "en-US",
+                                    "display": "English (Region=United States)",
+                                    "system": "urn:ietf:bcp:47"
+                                }
+                            ]
+                        },
+                        "preferred": true
+                    }
+                ],
+                "deceasedBoolean": false,
+                "gender": "female",
+                "identifier": [
+                    {
+                        "system": "http://hospital.davinci.org",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "MR",
+                                    "display": "Medical record number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "34567"
+                    }
+                ],
+                "managingOrganization": {
+                    "reference": "Organization/organization03"
+                },
+                "maritalStatus": {
+                    "coding": [
                         {
-                           "code": "TAX",
-                           "display": "Tax ID number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                            "code": "U",
+                            "display": "unmarried",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
                         }
-                     ]
-                  },
-                  "use": "official",
-                  "value": "123456789"
-               }
-            ],
-            "name": "DaVinciHospital01",
-            "telecom": [
-               {
-                  "system": "phone",
-                  "value": "(+1) 401-555-1212"
-               }
-            ],
-            "type": [
-               {
-                  "coding": [
-                     {
-                        "code": "prov",
-                        "display": "Healthcare Provider",
-                        "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                     }
-                  ]
-               }
-            ],
-            "resourceType": "Organization"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95680-c0c3-11ea-aaa3-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Coverage"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
-               ],
-               "versionId": "2"
+                    ]
+                },
+                "name": [
+                    {
+                        "family": "Hartman",
+                        "given": [
+                            "Virginia"
+                        ],
+                        "use": "official"
+                    }
+                ],
+                "resourceType": "Patient"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Patient"
             },
-            "beneficiary": {
-               "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
-            },
-            "payor": [
-               {
-                  "reference": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3"
-               }
-            ],
-            "policyHolder": {
-               "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
-            },
-            "relationship": {
-               "coding": [
-                  {
-                     "code": "self"
-                  }
-               ]
-            },
-            "status": "active",
-            "subscriber": {
-               "reference": "urn:uuid:80c6f326-c0c3-11ea-aad4-c219b93d27f3"
-            },
-            "subscriberId": "B123456789",
-            "resourceType": "Coverage"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Patient"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-07T18:47:34.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-               ],
-               "versionId": "4"
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-                  "valueCode": "F"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2054-5",
-                           "display": "Black or African American",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Black or African American"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2186-5",
-                           "display": "Not Hispanic or Latino",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Not Hispanic or Latino"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-               }
-            ],
-            "active": true,
-            "address": [
-               {
-                  "city": "Freehold",
-                  "country": "USA",
-                  "line": [
-                     "213 Lilac Ave."
-                  ],
-                  "postalCode": "48099",
-                  "state": "MI",
-                  "use": "home"
-               }
-            ],
-            "birthDate": "1983-09-12",
-            "communication": [
-               {
-                  "language": {
-                     "coding": [
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-02-11T14:19:25.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+                    ],
+                    "versionId": "5",
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                        "valueCode": "M"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2106-3",
+                                    "display": "White",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "White"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "ombCategory",
+                                "valueCoding": {
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238"
+                                }
+                            },
+                            {
+                                "url": "text",
+                                "valueString": "Not Hispanic or Latino"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+                    }
+                ],
+                "active": true,
+                "address": [
+                    {
+                        "city": "Thornton",
+                        "country": "USA",
+                        "line": [
+                            "7496 Beaver Ridge Ave"
+                        ],
+                        "postalCode": "07003",
+                        "state": "NJ",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1946-12-16",
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "code": "en-US",
+                                    "display": "English (Region=United States)",
+                                    "system": "urn:ietf:bcp:47"
+                                }
+                            ]
+                        },
+                        "preferred": true
+                    }
+                ],
+                "deceasedBoolean": false,
+                "gender": "male",
+                "identifier": [
+                    {
+                        "system": "http://hospital.davinci.org",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "MR",
+                                    "display": "Medical record number",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "12345"
+                    }
+                ],
+                "managingOrganization": {
+                    "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
+                },
+                "maritalStatus": {
+                    "coding": [
                         {
-                           "code": "en-US",
-                           "display": "English (Region=United States)",
-                           "system": "urn:ietf:bcp:47"
+                            "code": "M",
+                            "display": "Married",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
                         }
-                     ]
-                  },
-                  "preferred": true
-               }
-            ],
-            "deceasedBoolean": false,
-            "gender": "female",
-            "identifier": [
-               {
-                  "system": "http://hospital.davinci.org",
-                  "type": {
-                     "coding": [
+                    ]
+                },
+                "name": [
+                    {
+                        "family": "Webster",
+                        "given": [
+                            "Jairo"
+                        ],
+                        "use": "official"
+                    }
+                ],
+                "resourceType": "Patient"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:80c95683-c0c3-11ea-ad89-c219b93d27f3",
+            "request": {
+                "method": "POST",
+                "url": "Coverage"
+            },
+            "resource": {
+                "meta": {
+                    "lastUpdated": "2019-02-07T18:47:34.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+                    ],
+                    "versionId": "2",
+                    "source": "http://example.org/fhir/server"
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3"
+                },
+                "payor": [
+                    {
+                        "reference": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3"
+                    }
+                ],
+                "policyHolder": {
+                    "reference": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3"
+                },
+                "relationship": {
+                    "coding": [
                         {
-                           "code": "MR",
-                           "display": "Medical record number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                            "code": "self"
                         }
-                     ]
-                  },
-                  "use": "usual",
-                  "value": "34567"
-               }
-            ],
-            "managingOrganization": {
-               "reference": "Organization/organization03"
-            },
-            "maritalStatus": {
-               "coding": [
-                  {
-                     "code": "U",
-                     "display": "unmarried",
-                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                  }
-               ]
-            },
-            "name": [
-               {
-                  "family": "Hartman",
-                  "given": [
-                     "Virginia"
-                  ],
-                  "use": "official"
-               }
-            ],
-            "resourceType": "Patient"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95682-c0c3-11ea-9e33-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Patient"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-11T14:19:25.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-               ],
-               "versionId": "5"
-            },
-            "extension": [
-               {
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-                  "valueCode": "M"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2106-3",
-                           "display": "White",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "White"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-               },
-               {
-                  "extension": [
-                     {
-                        "url": "ombCategory",
-                        "valueCoding": {
-                           "code": "2186-5",
-                           "display": "Not Hispanic or Latino",
-                           "system": "urn:oid:2.16.840.1.113883.6.238"
-                        }
-                     },
-                     {
-                        "url": "text",
-                        "valueString": "Not Hispanic or Latino"
-                     }
-                  ],
-                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-               }
-            ],
-            "active": true,
-            "address": [
-               {
-                  "city": "Thornton",
-                  "country": "USA",
-                  "line": [
-                     "7496 Beaver Ridge Ave"
-                  ],
-                  "postalCode": "07003",
-                  "state": "NJ",
-                  "use": "home"
-               }
-            ],
-            "birthDate": "1946-12-16",
-            "communication": [
-               {
-                  "language": {
-                     "coding": [
-                        {
-                           "code": "en-US",
-                           "display": "English (Region=United States)",
-                           "system": "urn:ietf:bcp:47"
-                        }
-                     ]
-                  },
-                  "preferred": true
-               }
-            ],
-            "deceasedBoolean": false,
-            "gender": "male",
-            "identifier": [
-               {
-                  "system": "http://hospital.davinci.org",
-                  "type": {
-                     "coding": [
-                        {
-                           "code": "MR",
-                           "display": "Medical record number",
-                           "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                        }
-                     ]
-                  },
-                  "use": "usual",
-                  "value": "12345"
-               }
-            ],
-            "managingOrganization": {
-               "reference": "urn:uuid:80c9567f-c0c3-11ea-8364-c219b93d27f3"
-            },
-            "maritalStatus": {
-               "coding": [
-                  {
-                     "code": "M",
-                     "display": "Married",
-                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-                  }
-               ]
-            },
-            "name": [
-               {
-                  "family": "Webster",
-                  "given": [
-                     "Jairo"
-                  ],
-                  "use": "official"
-               }
-            ],
-            "resourceType": "Patient"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:80c95683-c0c3-11ea-ad89-c219b93d27f3",
-         "request": {
-            "method": "POST",
-            "url": "Coverage"
-         },
-         "resource": {
-            "meta": {
-               "lastUpdated": "2019-02-07T18:47:34.000+00:00",
-               "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
-               ],
-               "versionId": "2"
-            },
-            "beneficiary": {
-               "reference": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3"
-            },
-            "payor": [
-               {
-                  "reference": "urn:uuid:80c9567d-c0c3-11ea-836d-c219b93d27f3"
-               }
-            ],
-            "policyHolder": {
-               "reference": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3"
-            },
-            "relationship": {
-               "coding": [
-                  {
-                     "code": "self"
-                  }
-               ]
-            },
-            "status": "active",
-            "subscriber": {
-               "reference": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3"
-            },
-            "subscriberId": "C123456789",
-            "resourceType": "Coverage"
-         }
-      }
-   ],
-   "timestamp": "2020-07-08T02:34:09.805355Z",
-   "type": "transaction",
-   "resourceType": "Bundle"
+                    ]
+                },
+                "status": "active",
+                "subscriber": {
+                    "reference": "urn:uuid:80c95681-c0c3-11ea-a9ea-c219b93d27f3"
+                },
+                "subscriberId": "C123456789",
+                "resourceType": "Coverage"
+            }
+        }
+    ],
+    "timestamp": "2020-07-08T02:34:09.805355Z",
+    "type": "transaction",
+    "resourceType": "Bundle",
+    "meta": {
+        "source": "http://example.org/fhir/server"
+    }
 }

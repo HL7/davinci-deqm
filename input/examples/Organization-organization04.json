@@ -1,60 +1,61 @@
 {
-   "id": "organization04",
-   "meta": {
-      "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-      "profile": [
-         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
-      ],
-      "versionId": "4"
-   },
-   "active": true,
-   "address": [
-      {
-         "city": "Grand Rapids",
-         "country": "USA",
-         "line": [
-            "160 Glen Eagles Road"
-         ],
-         "postalCode": "49503",
-         "state": "MI"
-      }
-   ],
-   "identifier": [
-      {
-         "assigner": {
-            "display": "www.irs.gov"
-         },
-         "system": "urn:oid:2.16.840.1.113883.4.4",
-         "type": {
+    "id": "organization04",
+    "meta": {
+        "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+        ],
+        "versionId": "4",
+        "source": "http://example.org/fhir/server"
+    },
+    "active": true,
+    "address": [
+        {
+            "city": "Grand Rapids",
+            "country": "USA",
+            "line": [
+                "160 Glen Eagles Road"
+            ],
+            "postalCode": "49503",
+            "state": "MI"
+        }
+    ],
+    "identifier": [
+        {
+            "assigner": {
+                "display": "www.irs.gov"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "type": {
+                "coding": [
+                    {
+                        "code": "TAX",
+                        "display": "Tax ID number",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                    }
+                ]
+            },
+            "use": "official",
+            "value": "456789123"
+        }
+    ],
+    "name": "DVPayer04",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "(+1) 616-555-1212"
+        }
+    ],
+    "type": [
+        {
             "coding": [
-               {
-                  "code": "TAX",
-                  "display": "Tax ID number",
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-               }
+                {
+                    "code": "ins",
+                    "display": "Insurance Company",
+                    "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                }
             ]
-         },
-         "use": "official",
-         "value": "456789123"
-      }
-   ],
-   "name": "DVPayer04",
-   "telecom": [
-      {
-         "system": "phone",
-         "value": "(+1) 616-555-1212"
-      }
-   ],
-   "type": [
-      {
-         "coding": [
-            {
-               "code": "ins",
-               "display": "Insurance Company",
-               "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-            }
-         ]
-      }
-   ],
-   "resourceType": "Organization"
+        }
+    ],
+    "resourceType": "Organization"
 }

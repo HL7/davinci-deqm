@@ -1,44 +1,45 @@
 {
-  "resourceType": "Observation",
-  "id": "observation02",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-    ]
-  },
-  "status": "final",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "Observation",
+    "id": "observation02",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+        ],
+        "source": "http://example.org/fhir/server"
+    },
+    "status": "final",
+    "category": [
         {
-          "system": "http://example.org/fhir/observation-category",
-          "code": "measure",
-          "display": "Measure"
+            "coding": [
+                {
+                    "system": "http://example.org/fhir/observation-category",
+                    "code": "measure",
+                    "display": "Measure"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://www.ama-assn.org/go/cpt",
-        "code": "1111F",
-        "display": "Medication Reconciliation"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/patient02"
-  },
-  "encounter": {
-    "reference": "Encounter/encounter02"
-  },
-  "effectiveDateTime": "2018-09-30T14:15:04.424Z",
-  "issued": "2018-09-30T14:15:04.424Z",
-  "performer": [
-    {
-      "reference": "Practitioner/practitioner02"
-    }
-  ],
-  "valueBoolean": true
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "1111F",
+                "display": "Medication Reconciliation"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/patient02"
+    },
+    "encounter": {
+        "reference": "Encounter/encounter02"
+    },
+    "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+    "issued": "2018-09-30T14:15:04.424Z",
+    "performer": [
+        {
+            "reference": "Practitioner/practitioner02"
+        }
+    ],
+    "valueBoolean": true
 }

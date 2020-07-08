@@ -1,101 +1,104 @@
 {
-  "id": "practitioner02",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
-    ]
-  },
-  "active": true,
-  "address": [
-    {
-      "extension": [
+    "id": "practitioner02",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+        ],
+        "source": "http://example.org/fhir/server"
+    },
+    "active": true,
+    "address": [
         {
-          "extension": [
-            {
-              "url": "latitude",
-              "valueDecimal": 41.791776
+            "extension": [
+                {
+                    "extension": [
+                        {
+                            "url": "latitude",
+                            "valueDecimal": 41.791776
+                        },
+                        {
+                            "url": "longitude",
+                            "valueDecimal": -72.718832
+                        }
+                    ],
+                    "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+                }
+            ],
+            "city": "FARMINGTON",
+            "country": "USA",
+            "line": [
+                "UCONN MEDICAL GROUP"
+            ],
+            "postalCode": "060300001",
+            "state": "CT",
+            "text": "UCONN MEDICAL GROUP, FARMINGTON, CT 060300001",
+            "type": "both",
+            "use": "home"
+        }
+    ],
+    "birthDate": "1964-06-19",
+    "communication": [
+        {
+            "coding": [
+                {
+                    "code": "es",
+                    "display": "Spanish",
+                    "system": "urn:ietf:bcp:47",
+                    "userSelected": true
+                }
+            ],
+            "text": "English and Spanish"
+        }
+    ],
+    "gender": "male",
+    "identifier": [
+        {
+            "assigner": {
+                "display": "www.cms.gov"
             },
-            {
-              "url": "longitude",
-              "valueDecimal": -72.718832
-            }
-          ],
-          "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
+            "period": {
+                "start": "2005-07-16T09:00:00-05:00"
+            },
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "type": {
+                "coding": [
+                    {
+                        "code": "PRN",
+                        "display": "Provider number",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                    }
+                ]
+            },
+            "use": "official",
+            "value": "9998266512"
         }
-      ],
-      "city": "FARMINGTON",
-      "country": "USA",
-      "line": [
-        "UCONN MEDICAL GROUP"
-      ],
-      "postalCode": "060300001",
-      "state": "CT",
-      "text": "UCONN MEDICAL GROUP, FARMINGTON, CT 060300001",
-      "type": "both",
-      "use": "home"
-    }
-  ],
-  "birthDate": "1964-06-19",
-  "communication": [
-    {
-      "coding": [
+    ],
+    "name": [
         {
-          "code": "es",
-          "display": "Spanish",
-          "system": "urn:ietf:bcp:47",
-          "userSelected": true
+            "family": "Zieme",
+            "given": [
+                "Emile"
+            ],
+            "suffix": [
+                "M.D."
+            ],
+            "text": "Emile Zieme",
+            "use": "official"
         }
-      ],
-      "text": "English and Spanish"
-    }
-  ],
-  "gender": "male",
-  "identifier": [{
-    "assigner": {
-      "display": "www.cms.gov"
-    },
-    "period": {
-      "start": "2005-07-16T09:00:00-05:00"
-    },
-    "system": "http://hl7.org/fhir/sid/us-npi",
-    "type": {
-      "coding": [
+    ],
+    "telecom": [
         {
-          "code": "PRN",
-          "display": "Provider number",
-          "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            "rank": 1,
+            "system": "phone",
+            "use": "work",
+            "value": "8605555555"
+        },
+        {
+            "rank": 2,
+            "system": "phone",
+            "use": "work",
+            "value": "8605555555"
         }
-      ]
-    },
-    "use": "official",
-    "value": "9998266512"
-  }],
-  "name": [
-    {
-      "family": "Zieme",
-      "given": [
-        "Emile"
-      ],
-      "suffix": [
-        "M.D."
-      ],
-      "text": "Emile Zieme",
-      "use": "official"
-    }
-  ],
-  "telecom": [
-    {
-      "rank": 1,
-      "system": "phone",
-      "use": "work",
-      "value": "8605555555"
-    },
-    {
-      "rank": 2,
-      "system": "phone",
-      "use": "work",
-      "value": "8605555555"
-    }
-  ],
-  "resourceType": "Practitioner"
+    ],
+    "resourceType": "Practitioner"
 }

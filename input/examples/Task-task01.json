@@ -1,41 +1,42 @@
 {
-  "resourceType": "Task",
-  "id": "task01",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
-    ]
-  },
-  "identifier": [
-    {
-      "system": "http://example.org/tasks",
-      "value": "19009"
+    "resourceType": "Task",
+    "id": "task01",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
+        ],
+        "source": "http://example.org/fhir/server"
+    },
+    "identifier": [
+        {
+            "system": "http://example.org/tasks",
+            "value": "19009"
+        }
+    ],
+    "status": "completed",
+    "intent": "plan",
+    "priority": "routine",
+    "code": {
+        "coding": [
+            {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "1111F",
+                "display": "Medication Reconciliation"
+            }
+        ]
+    },
+    "for": {
+        "reference": "Patient/patient01"
+    },
+    "encounter": {
+        "reference": "Encounter/encounter01"
+    },
+    "executionPeriod": {
+        "start": "2017-06-11",
+        "end": "2017-06-11"
+    },
+    "authoredOn": "2018-09-25T14:24:23.584Z",
+    "owner": {
+        "reference": "Practitioner/practitioner01"
     }
-  ],
-  "status": "completed",
-  "intent": "plan",
-  "priority": "routine",
-  "code": {
-    "coding": [
-      {
-        "system": "http://www.ama-assn.org/go/cpt",
-        "code": "1111F",
-        "display": "Medication Reconciliation"
-      }
-    ]
-  },
-  "for": {
-    "reference": "Patient/patient01"
-  },
-  "encounter": {
-    "reference": "Encounter/encounter01"
-  },
-  "executionPeriod": {
-    "start": "2017-06-11",
-    "end": "2017-06-11"
-  },
-  "authoredOn": "2018-09-25T14:24:23.584Z",
-  "owner": {
-    "reference": "Practitioner/practitioner01"
-  }
 }
