@@ -49,8 +49,16 @@ Changes and Updates for version 1.1.1
     - Define [default profiles](guidance.html#default-profiles-used-in-the-evaluation-of-a-measure) for this implementation guide (FHIR-27818)
     - Add [`MeasureReport.group.population.count` as 0..1 Must Support](StructureDefinition-indv-measurereport-deqm.html#profile) for individual report profile. (FHIR-27862)
 
-Changes and Updates for version 1.2.0
+Changes and Updates for version 2.1.0
 
-1. Added contents for Gaps in care
+1. Added content for Gaps in Care reporting
+    - Updated Home Page about Gaps in Care Reporting and added new glossary    
+    - Added Gaps In Care Reporting under Framework
+    - Added Gaps in Care Example Use Cases under Example Use Cases
+    - Added Operations under FHIR Artifacts
+    - Added profiles and extension for Gaps in Care to Profiles and Extensions    
+    - Added terminology for Gaps in Care to Terminology
+    - Added capability statements for Gaps in Care to CapabilityStatements
+
 
     {% include link-list.md %}

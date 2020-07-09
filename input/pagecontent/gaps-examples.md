@@ -43,12 +43,12 @@ Gaps In Care Examples:
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
-{% include img-portrait.html img="gaps-swimlane-caregap-report.png" caption = "Figure 3-xx Care Gaps Workflow" %}
+{% include img-portrait.html img="gaps-swimlane-caregap-report.png" caption = "Figure 3-22 Care Gaps Workflow" %}
 
 ### Gaps In Care MeasureReport
 {:.no_toc}
 
-{% include img-portrait.html img="gic-col-no-gaps.png" caption = "Figure 3-xx Colorectal Cancer Screening Measure - Closed Gap/No Gap" %}
+{% include img-portrait.html img="gic-col-no-gaps.png" caption = "Figure 3-23 Colorectal Cancer Screening Measure - Closed Gap/No Gap" %}
 
 ---
 
