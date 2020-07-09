@@ -1,5 +1,5 @@
 
-## Introduction
+### Introduction
 
 Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of [data of interest] is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data of interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.
 
@@ -22,7 +22,7 @@ Note that FHIR operations allow the implementation to be viewed as a 'black box'
   This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned and will align with the outcomes of the Argonaut project.
   {:.stu-note}
 
-## Default Profiles
+### Default Profiles
 
 The following resources are used in all data exchange transactions:
 
@@ -36,16 +36,16 @@ The following resources are used in all data exchange transactions:
 
 Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
 
-### Graph of DEQM Resources
+#### Graph of DEQM Resources
 {:.no_toc}
 
 The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1:
 
 {% include img.html img="measure-resource-graph.svg" caption="Figure 2-1 DEQM Resource Graph" %}
 
-## Data Exchange
+### Data Exchange
 
-### Submit Data
+#### Submit Data
 {: #submit-data}
 
 {:.highlight-note}
@@ -53,7 +53,7 @@ The DEQM resources form a network through their relationships with each other - 
 
 {% include img.html img="submit-data-step.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
-#### Gather Data Requirements from Consumer
+##### Gather Data Requirements from Consumer
 {:.no_toc}
 
 To support the Submit Data operation, an implementation needs to know specifically what data are required to provide as the payload for the operation.  As described in the [Background] section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
@@ -62,14 +62,14 @@ Note that because the data exchange scenarios described are intended to support 
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Figure 2-3 Data Requirements Operation" %}
 
-##### APIs
+###### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Data Requirements: [$data-requirements] operation
 
-##### Usage
+###### Usage
 {:.no_toc}
 
  The required data for each Measure is discovered by invoking the *Data Requirements* operation on the Consumer's `Measure/[measure-id]` endpoint.  Using either the `GET` or `POST` Syntax, the operation can be invoked as follows:
@@ -84,7 +84,7 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 
 For another example see the [COL Data Requirements Operation] example.
 
-#### Submit Data Operation
+##### Submit Data Operation
 {:.no_toc}
 
 
@@ -94,7 +94,7 @@ Once the Producer understands the data requirements, they will use the *Submit D
 
 <div class="highlight-note" markdown="1">
 
-##### Incremental and Snapshot Updates
+###### Incremental and Snapshot Updates
 {:.no_toc #submit-updates}
 
 When the Producer submits updates to the measure data within the data submission period, the Producer can use [snapshot] or [incremental] updates for submitting data based on Producer and Consumer agreement.  Note that neither method is preferred or a default and has to be agreed upon out of band.
@@ -141,7 +141,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 </div>
 
-##### APIs
+###### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
@@ -149,7 +149,7 @@ In addition to the resources listed above, the following artifacts are used in t
 1. Submit Data operation: [$submit-data]
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
-##### Usage
+###### Usage
 {:.no_toc}
 
 Using the `POST` Syntax, the operation can be invoked by the Producer:
@@ -160,14 +160,14 @@ Using the `POST` Syntax, the operation can be invoked by the Producer:
 
 For a complete un-edited example see the [MRP Submit Data Operation] and [COL Submit Data Operation] examples.
 
-### Collect Data
+#### Collect Data
 {: #collect-data}
 
 In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
 
 {% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 
-#### Collect Data Operation
+##### Collect Data Operation
 {:.no_toc}
 
 
@@ -175,7 +175,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
 {% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
 
-##### Incremental and Snapshot Updates
+###### Incremental and Snapshot Updates
 {:.no_toc #collect-updates}
 
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
@@ -185,7 +185,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
    {% include lastupdated-notsupported-oo.md %}
 
-##### APIs
+###### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
@@ -194,7 +194,7 @@ In addition to the resources listed above, the following artifacts are used in t
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 
-##### Usage
+###### Usage
 {:.no_toc}
 
 **Collect Data:**
@@ -210,9 +210,9 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Con
 
 For a complete un-edited example see the [COL Collect Data Operation] example.
 
-### Submit Data and Collect Data for Multiple Patients
+#### Submit Data and Collect Data for Multiple Patients
 
-#### Submit Data Operation Request for Multiple Patients
+##### Submit Data Operation Request for Multiple Patients
 {:.no_toc}
 
 The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.
@@ -256,13 +256,13 @@ POST|[base]
             ....
 ~~~
 
-#### Collect Data Operation Response for Multiple Patients
+##### Collect Data Operation Response for Multiple Patients
 {:.no_toc}
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
 
-### Provenance
+#### Provenance
 
 Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with provenance data that establishes provenance of the data being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $submit-data and $collect-data transactions described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 

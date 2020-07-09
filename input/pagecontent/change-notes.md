@@ -18,7 +18,7 @@ Changes and Updates for version 1.1.0
 1. Creation of FHIR R4 version.
 1. Additional examples
 
-Changes and Updates for version 1.1.1
+Changes and Updates for version 2.0.0
 
 1. Applied all resolutions from STU2 Ballot
 
