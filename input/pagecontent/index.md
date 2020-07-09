@@ -97,7 +97,9 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
 ##### Gaps in Care Reporting Scenarios
-For the Gaps in Care reporting scenarios, the actors are Clients and Servers:
+For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
+
+{% include img-portrait.html  caption = "Figure 1-5 Gaps in Care Reporting Scenario" img="gaps-reporting-scenario.png" %}
 
 **Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if providers produce gaps in care reports and submit them to payers, then providers serve as clients in this scenario; if payers produce gaps in care reports and provide them to providers, then payers serve as clients in this scenario.
 

@@ -1,4 +1,8 @@
 
+*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+Data Exchange is not in scope for ballot comment. 
+{:.stu-note}
+
 ### Introduction
 
 Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of [data of interest] is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data of interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.

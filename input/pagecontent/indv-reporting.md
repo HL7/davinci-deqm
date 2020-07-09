@@ -1,4 +1,7 @@
 
+*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Individual Reporting is not in scope for ballot comment.
+{:.stu-note}
+
 ### Introduction
 
 An individual patient level report contains quality data for one patient for one or more Clinical Quality Measures (CQMs).  The [data of interest] is the source data (raw applicable patient data) needed to calculate a CQM.  The data elements in the report are defined by the particular CQM being reported on.   When pooled and analyzed, each report contributes the quality data necessary to calculate population measure metrics.

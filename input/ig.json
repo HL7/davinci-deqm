@@ -4,7 +4,7 @@
     "license": "CC0-1.0",
     "name": "DataExchangeForQualityMeasuresSTU2forFHIRR4",
     "copyright": "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
-    "title": "Data Exchange For Quality Measures STU2 for FHIR R4",
+    "title": "Data Exchange For Quality Measures STU3 for FHIR R4",
     "resourceType": "ImplementationGuide",
     "jurisdiction": [
         {
@@ -27,7 +27,7 @@
         }
     ],
     "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.2.0",
-    "version": "1.2.0",
+    "version": "2.1.0",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
