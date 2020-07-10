@@ -1,23 +1,23 @@
 
-## Introduction
+### Introduction
 
 An individual patient level report contains quality data for one patient for one or more Clinical Quality Measures (CQMs).  The [data of interest] is the source data (raw applicable patient data) needed to calculate a CQM.  The data elements in the report are defined by the particular CQM being reported on.   When pooled and analyzed, each report contributes the quality data necessary to calculate population measure metrics.
 
 The Individual reporting scenario is supported by the [DEQM Individual MeasureReport Profile]. Transactions between Reporters (for example, an organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of individual patient level quality reports for CQMs to various quality reporting programs.
 
-### Relationship of Measure and MeasureReport Resources
+#### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
 The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation.
 
-### Relationship between QI Core, DEQM, and CQMs
+#### Relationship between QI Core, DEQM, and CQMs
 {:.no_toc}
 
 As described in the Quality Measurement Standards Landscape section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
 
-## Constructing an Individual Report
+### Constructing an Individual Report
 
-### Generate a DEQM Individual MeasureReport for Which Patients
+#### Generate a DEQM Individual MeasureReport for Which Patients
 {:.no_toc}
 
 Some quality programs may require that individual measure report be
@@ -36,7 +36,7 @@ the exact triggers for sending an individual MeasureReport. Where such
 prescriptive guidelines exist, they take precedence over the more
 general guidance provided here.
 
-### How Much Data Should be Sent
+#### How Much Data Should be Sent
 {:.no_toc}
 
 In general, reporting assumes that Reporters know what measures they select in order to meet their reporting requirements.
@@ -56,7 +56,7 @@ At the very least, an individual measure report should include:
 
 - The conclusive evidence needed to confirm that a criterion was met for that CQM.  For instance, a record for a patient who has been in the Intensive Care Unit undergoing continuous blood pressure monitoring may have much more blood pressure observations than are needed to compute the criteria.
 
-### Missing Data
+#### Missing Data
 {:.no_toc}
 
 Not all data elements defined within the referenced CQM will always be present in the EHR for each patient for which an individual measure report is to be sent. Therefore,  an individual measure report will not contain data for these data elements.  For example, if a CQM has a criterion for "blue eyed patients" and the source system does not capture eye color, then the corresponding report for that patient will missing that observation.
@@ -72,7 +72,7 @@ was missing from the EHR.
 
 {:.no_toc}
 
-## Default Profiles
+### Default Profiles
 
 The following resources are used in all individual reporting transactions.
 
@@ -85,7 +85,7 @@ The following resources are used in all individual reporting transactions.
 
 Depending on the specific Measure and Interaction, various DEQM and QI Core Profiles are used in addition to the profiles listed above.
 
-## Individual Measure Reporting
+### Individual Measure Reporting
 
 When the results of a CQM are completed they are POSTed to the quality measure Receiver's FHIR Server. The Individual MeasureReport(s) and all the referenced resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API.
 
@@ -95,7 +95,7 @@ Note that Multiple individual reports either for the same or multiple patient fo
 
 {% include img-narrow.html  img="indv_report_post.jpg" caption="Figure 2-10 POST Individual Report" %}
 
-### Usage
+#### Usage
 {:.no_toc}
 
 `POST|[base]`

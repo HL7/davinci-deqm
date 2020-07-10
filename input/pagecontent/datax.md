@@ -46,7 +46,7 @@ The DEQM resources form a network through their relationships with each other - 
 ### Data Exchange
 
 #### Submit Data
-{: #submit-data}
+{: #submit-data .toc}
 
 {:.highlight-note}
  The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as  [incremental] or [snapshot] updates. These update methods are described in detail [below](#submit-updates).

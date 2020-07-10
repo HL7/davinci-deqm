@@ -1,9 +1,9 @@
 
-## Introduction
+### Introduction
 
 The Medication Reconciliation Use Case defines the process by which the MRP Measure data can be exchanged between a provider acting in the role of the Producer to a Payer which is acting in the role of the Consumer.  MRP Measure is an attestation that a medication reconciliation post-discharge was performed on a covered member. This use case covers both the request to send attestation information and the unsolicited submission of that data.
 
-## MRP Use Case Background
+### MRP Use Case Background
 
 In the case of medication reconciliation after discharge from the hospital, the patient’s discharge medication(s) is compared with the medication(s) the patient was taking prior to hospitalization. This can avoid medication errors such as omissions, duplications, dosing errors or drug interactions, and should be done at every transition of care in which new medications are ordered or existing orders are rewritten.  This attestation message is intended to be performed by the next provider where the patient returns for follow-up and can then be used by the payer to show compliance for the HEDIS measure Medication Reconciliation Post-Discharge. (Any necessary documentation will also be put in the record)  
 
@@ -13,9 +13,9 @@ Proof of 30 day medication reconciliations is increasingly required for value ba
 
 Note that the exchange of the reconciled medication list, indication of conversations with the patient, and notification of discharge from inpatient systems are out of scope for this version of the use case.
 
-## FHIR Resource Overview
+### FHIR Resource Overview
 
-### Resources supported for this Use Case
+#### Resources supported for this Use Case
 {:.no_toc}
 
 |Resource Type|Profile Name|Link to Profile|
@@ -34,7 +34,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner]|
 |Task|QI Core Task Profile|[QI Core Task]|
 
-## Graph of MRP Resources
+### Graph of MRP Resources
 
 For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure. The *Task* resource is more appropriate to represent an administrative activity that can be performed and the state of completion of that activity tracked.  In the case where systems do not support *Task*, *Observation* can be used to track the status of the process.  The table below compares how the activity is represented
 
@@ -48,18 +48,18 @@ For MRP either a *Task* resource or an *Observation* resource can be used as the
 
 {% include img.html img="mrp-observation.jpg" caption="Figure 3-2 MRP Using Observation" %}
 
-## MRP Data Exchange Interactions
+### MRP Data Exchange Interactions
 
 In the following interactions, the Provider is acting in the role of the *Producer* and the Payer (“Aggregator”) is acting in the role of the *Consumer*.
 
-### Gather Data Requirements from Payer
+#### Gather Data Requirements from Payer
 {:.no_toc}
 
    In this optional step, the Provider queries the Payer (“Aggregator”) for which resources are needed for MRP measure reporting.  Note that instead of using this API, the measure definition can be reviewed manually to determine what data needs to be submitted.
 
         {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
-### Data Exchange Using the Submit Data Operation
+#### Data Exchange Using the Submit Data Operation
 {:.no_toc}
 
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the Payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
@@ -76,11 +76,11 @@ The technical Workflow is outlined in the following figure.  The parts outlined 
 
 {% include examplebutton.html example="submit-data-observation"  b_title = "Click Here To See Example Submit Data operation using Observation option" %}
 
-## MRP Measure Reporting Interactions
+### MRP Measure Reporting Interactions
 
 In the following interactions,  The Payer ("Aggregator") is acting in the role of the *Reporter*.
 
-### Individual MeasureReport
+#### Individual MeasureReport
 
 The Payer (“Aggregator”) pushes the Bundle of supporting resources with the MRP Individual MeasureReport Bundle to the Receiver.
 
@@ -94,7 +94,7 @@ The Payer (“Aggregator”) pushes the Bundle of supporting resources with the 
 
 {% include examplebutton.html example="multiple-indv-mrp-obs-report" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport for Multiple Patients using Observation" %}
 
-### Summary MeasureReport
+#### Summary MeasureReport
 
 The Payer (“Aggregator”) pushes the MRP Summary MeasureReport to the Receiver.
 
