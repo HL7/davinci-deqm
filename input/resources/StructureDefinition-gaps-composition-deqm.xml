@@ -33,7 +33,7 @@
         </element>
         <element id="Composition.type">
             <path value="Composition.type"/>
-            <short value="A LOINC code was requested. This is a temporary code before the offical LOINC code is assigned."/>
+            <comment value="For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding. A LOINC code was requested for gaps in care report. The gaps-doc is a temporary code before the offical LOINC code is assigned."/>
             <fixedCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type"/>
