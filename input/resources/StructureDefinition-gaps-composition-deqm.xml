@@ -33,6 +33,7 @@
         </element>
         <element id="Composition.type">
             <path value="Composition.type"/>
+            <short value="A LOINC code was requested. This is a temporary code before the offical LOINC code is assigned."/>
             <fixedCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type"/>
