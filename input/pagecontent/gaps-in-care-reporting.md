@@ -19,7 +19,7 @@ Bi-directional, real-time, FHIR-based communication that reconciles payer inform
 (TODO: describe use of care-gaps operation and parameters, the return structure of gaps in care report)
 
 #### Attribution
-(TODO: describe the relationship with the ATR IG and how attributions for the gaps in care report are depend on the ATR IG.)
+Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for gaps in care reports is not in the scope of the DEQM IG. Gaps in care reporting references the standards specified in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG] for exchanging Member Attribution Lists between providers and payers.
 
 ### Default Profiles
 
