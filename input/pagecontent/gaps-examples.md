@@ -1,7 +1,9 @@
+{%include highlight.html %}
 
-*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.stu-note}
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.note-to-balloters}
 
+<div class="new-content" markdown="1">
 ###  Introduction
 
 Gaps In Care Examples:
@@ -51,5 +53,5 @@ The Provider will use the Submit Data operation to submit a MeasureReport and th
 {% include img-portrait.html img="gic-col-no-gaps.png" caption = "Figure 3-23 Colorectal Cancer Screening Measure - Closed Gap/No Gap" %}
 
 ---
-
+</div>
 {% include link-list.md %}

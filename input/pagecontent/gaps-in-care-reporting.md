@@ -1,4 +1,9 @@
+{%include highlight.html %}
 
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.note-to-balloters}
+
+<div class="new-content" markdown="1">
 ### Introduction
 
 (TODO: introduction for gaps in care reporting.)
@@ -8,6 +13,8 @@ To succeed in population health and value-based care, gaps in care and informati
 Gaps in care information can adversely affect member outcomes and contribute to inappropriate costs. For providers and payers to improve population health value based care two items must be addressed: 1) Gaps in Care Information: Disparities in claims vs. clinical information which makes it difficult to assess if best practices are being followed: e.g. a diabetic member with no A1C or a member being prescribed insulin with no diabetes diagnosis. 2) Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at time of diagnosis to support effective care coordination.
 
 Bi-directional, real-time, FHIR-based communication that reconciles payer information with clinical EHR data to ensure best practices are followed, improve outcomes, and exchange information to reduce expense and disruption to provider workflows.
+
+Research has shown that care gaps can be both harmful and costly when not properly managed. For example, not managing certain chronic diseases (e.g., diabetes) can lead to serious complications and escalating treatment costs. Resolving gaps in care is important to payers, providers, and the patients they serve. Doing so can positively influence patient health and lead to improvements in quality scores and reimbursement under risk-sharing arrangements such as Medicare.
 
 ### Gaps in Care Reporting
 (TODO: describe gaps in Care reporting.
@@ -20,6 +27,9 @@ Bi-directional, real-time, FHIR-based communication that reconciles payer inform
 
 #### Attribution
 Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for gaps in care reports is not in the scope of the DEQM IG. Gaps in care reporting references the standards specified in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG] for exchanging Member Attribution Lists between providers and payers.
+
+#### Future Considerations
+Structure measures are not in scope for this version. Structure measure that is not patient centric, such as measuring number of ventilators of an organization.
 
 ### Default Profiles
 
@@ -56,6 +66,7 @@ for an example of a Summary MeasureReport with counts for multiple populations a
 
 #### Bulk Data
 (TODO: describe how Bulk Data is used in gaps in care reporting)
+</div>
 
 <br />
 

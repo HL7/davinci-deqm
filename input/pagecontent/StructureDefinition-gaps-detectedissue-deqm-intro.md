@@ -1,8 +1,12 @@
+{%include highlight.html %}
+
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.note-to-balloters}
 
 {% assign id = {{page.id}} %}
 
 This profile builds on [DetectedIssue](https://www.hl7.org/fhir/detectedissue.html).
-
+{:.new-content}
 
 <!--### Mandatory Data Elements and Terminology
 

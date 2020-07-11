@@ -1,6 +1,7 @@
+{%include highlight.html %}
 
-*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.stu-note}
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.note-to-balloters}
 
 Payers and providers need common data specification, measure specification, report initiation, and transport to share the data required to reflect accurate quality measures. Existing QI-Core and CQFM profiles are used as well as DEQM profiles derived from QI-Core and CQFM profiles and defined in this guide. All of these profiles provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm.  For elements added in FHIR R4, extensions have been created for the STU3 version.
 
@@ -16,12 +17,17 @@ Payers and providers need common data specification, measure specification, repo
 |MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+
+<br />
+
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
 |MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
-
+{:.new-content}
 
 <br />
 
@@ -35,8 +41,11 @@ Payers and providers need common data specification, measure specification, repo
 |[DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)|
 |[DEQM Certification Identifier Extension](StructureDefinition-extension-certificationIdentifier.html)|
 |[DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)|
-|[DEQM Population Reference Extension](StructureDefinition-extension-populationReference.html)|
 
+|Link to Profile|
+|---|
+|[DEQM Population Reference Extension](StructureDefinition-extension-populationReference.html)|
+{:.new-content}
 
 <br />
 
