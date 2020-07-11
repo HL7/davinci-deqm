@@ -1,6 +1,6 @@
 
-*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.stu-note}
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.note-to-balloters}
 
 Refer to the specific FHIR resources and profiles for each measure’s requirements for guidance in appropriate use of value sets, terminologies and code systems.
 

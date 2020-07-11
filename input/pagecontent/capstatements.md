@@ -1,6 +1,6 @@
 
 ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.stu-note}
+{:.note-to-balloters}
 
 {% include list-simple-capabilitystatements.xhtml %}
 
