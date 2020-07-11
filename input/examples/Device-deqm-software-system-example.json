@@ -1,28 +1,29 @@
 {
-  "resourceType" : "Device",
-  "id" : "deqm-software-system-example",
-  "meta" : {
-    "profile" : [
-      "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"
+    "resourceType": "Device",
+    "id": "deqm-software-system-example",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"
+        ],
+        "source": "http://example.org/fhir/server"
+    },
+    "deviceName": [
+        {
+            "name": "cqf-tooling",
+            "type": "manufacturer-name"
+        }
+    ],
+    "type": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/software-system-type",
+                "code": "tooling"
+            }
+        ]
+    },
+    "version": [
+        {
+            "value": "1.0.4"
+        }
     ]
-  },
-  "deviceName" : [
-    {
-      "name" : "cqf-tooling",
-      "type" : "manufacturer-name"
-    }
-  ],
-  "type" : {
-    "coding" : [
-      {
-        "system" : "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/software-system-type",
-        "code" : "tooling"
-      }
-    ]
-  },
-  "version" : [
-    {
-      "value" : "1.0.4"
-    }
-  ]
 }

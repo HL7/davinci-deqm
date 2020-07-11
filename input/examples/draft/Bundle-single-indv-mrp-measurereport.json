@@ -152,7 +152,8 @@
             "relationship": {
                "coding": [
                   {
-                     "code": "self"
+                     "code": "self",
+ "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
                   }
                ]
             },

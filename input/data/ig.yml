@@ -16,8 +16,8 @@ contact:
       - system: url
         value: 'http://www.hl7.org/Special/committees/cqi/index.cfm'
 url: >-
-  http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.2.0
-version: 1.2.0
+  http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.0.0
+version: 2.0.0
 packageId: hl7.fhir.us.davinci-deqm
 dependsOn:
   - version: 4.0.0
@@ -145,11 +145,20 @@ definition:
       reference:
         reference: Bundle/multiple-indv-mrp-obs-report
       description: DEQM Multiple Indv Mrp Obs Report example
+
+
     - exampleBoolean: true
       name: Measure Mrp Example
       reference:
         reference: Measure/measure-mrp-example
       description: DEQM Measure Mrp Example example
+
+    - exampleBoolean: true
+      name: Measure Date of Last Power Outage
+      reference:
+        reference: Measure/date-of-last-power-outage
+      description: DEQM Measure Date of Last Power Outage example
+
     - exampleBoolean: true
       name: Datax Measurereport03
       reference:
@@ -205,11 +214,25 @@ definition:
       reference:
         reference: Parameters/mrp-submit-obs
       description: DEQM Mrp Submit Obs example
+
     - exampleBoolean: true
       name: Observation01
       reference:
         reference: Observation/observation01
       description: DEQM Observation01 example
+
+    - exampleBoolean: true
+      name: Observation02
+      reference:
+        reference: Observation/observation02
+      description: DEQM Observation02 example
+
+    - exampleBoolean: true
+      name: Observation03
+      reference:
+        reference: Observation/observation03
+      description: DEQM Observation03 example
+
     - exampleBoolean: true
       name: Multiple Summ Report
       reference:
@@ -235,15 +258,27 @@ definition:
       reference:
         reference: Bundle/multiple-indv-mrp-task-report
       description: DEQM Multiple Indv Mrp Task Report example
+
     - exampleBoolean: true
       name: Encounter01
       reference:
-        reference: Encounter/Encounter01
+        reference: Encounter/encounter01
       description: DEQM Encounter01 example
+    - exampleBoolean: true
+      name: Encounter02
+      reference:
+        reference: Encounter/encounter02
+      description: DEQM Encounter02 example
+    - exampleBoolean: true
+      name: Encounter03
+      reference:
+        reference: Encounter/encounter03
+      description: DEQM Encounter03 example
+
     - exampleBoolean: true
       name: Observation03
       reference:
-        reference: Observation/observation03
+        reference: Observation/DNA-occultblood
       description: DEQM Observation03 example
     - exampleBoolean: true
       name: Single Indv Mrp Task Report
@@ -260,6 +295,25 @@ definition:
       reference:
         reference: Practitioner/practitioner01
       description: DEQM Practitioner01 example
+
+    - exampleBoolean: true
+      name: Practitioner02
+      reference:
+        reference: Practitioner/practitioner02
+      description: DEQM Practitioner02 example
+
+    - exampleBoolean: true
+      name: Practitioner03
+      reference:
+        reference: Practitioner/practitioner03
+      description: DEQM Practitioner03 example
+
+    - exampleBoolean: true
+      name: Group01
+      reference:
+        reference: Group/group01
+      description: DEQM Group01 example
+
     - exampleBoolean: true
       name: Indv Measurereport03
       reference:
@@ -285,16 +339,39 @@ definition:
       reference:
         reference: MeasureReport/summ-measurereport02
       description: DEQM Summ Measurereport02 example
+
+    - exampleBoolean: true
+      name: Summary MeasureReport Date of Last Power Outage
+      reference:
+        reference: MeasureReport/date-of-last-power-outage
+      description: DEQM Summary Measurereport Date of Last Power Outage example
+
     - exampleBoolean: true
       name: Datax Measurereport01
       reference:
         reference: MeasureReport/datax-measurereport01
       description: DEQM Datax Measurereport01 example
+
     - exampleBoolean: true
       name: Task01
       reference:
-        reference: Task/Task01
+        reference: Task/task01
       description: DEQM Task01 example
+
+
+    - exampleBoolean: true
+      name: Task02
+      reference:
+        reference: Task/task02
+      description: DEQM Task02 example
+
+
+    - exampleBoolean: true
+      name: Task03
+      reference:
+        reference: Task/task03
+      description: DEQM Task03 example
+
     - exampleBoolean: true
       name: Organization01
       reference:
@@ -504,6 +581,7 @@ definition:
           - generation: generated
             nameUrl: CapabilityStatement-receiver-server.html
             title: CapabilityStatement Receiver Server
+          - generation: generated
             nameUrl: CapabilityStatement-reporter-client.html
             title: CapabilityStatement Reporter Client
           - generation: generated
@@ -525,4 +603,4 @@ definition:
     title: Home
   grouping:
     - name: base
-id: hl7.fhir.us.davinci-deqm-1.2.0
+id: hl7.fhir.us.davinci-deqm-2.0.0

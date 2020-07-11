@@ -1,6 +1,6 @@
 
-*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Individual Reporting is not in scope for ballot comment. 
-{:.stu-note}
+*ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Individual Reporting is not in scope for ballot comment.
+{:.note-to-balloters}
 
 ### Introduction
 
@@ -26,7 +26,7 @@ Posting a Summary Measure Report is typically a one time event, although there m
 
 {% include img-narrow.html img="summ_report_post.jpg" caption="Figure 2-11 POST Summary Report" %}
 
-### Usage
+#### Usage
 {:.no_toc}
 
 for a single MeasureReport:

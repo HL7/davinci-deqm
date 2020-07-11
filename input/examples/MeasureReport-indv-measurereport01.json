@@ -1,121 +1,122 @@
 {
-  "resourceType": "MeasureReport",
-  "id": "indv-measurereport01",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
-    ]
-  },
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "proportion",
-            "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
-      "valueIdentifier": {
-        "system": "urn:oid:2.16.840.1.113883.3.2074.1",
-        "value": "0015HQN9BD3304E"
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
-      "valueReference": {
-        "reference": "Organization/organization02"
-      }
-    }
-  ],
-  "status": "complete",
-  "type": "individual",
-  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
-  "subject": {
-    "reference": "Patient/patient01"
-  },
-  "date": "2018-09-05T16:59:52.404Z",
-  "reporter": {
-    "reference": "Organization/organization01"
-  },
-  "period": {
-    "start": "2018-08-01",
-    "end": "2018-09-01"
-  },
-  "improvementNotation": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
-        "code": "increase",
-        "display": "Increased score indicates improvement"
-      }
-    ]
-  },
-  "group": [
-    {
-      "code": {
-        "coding": [
-          {
-            "system": "http://example.org",
-            "code": "mrp-group",
-            "display": "MRP Group"
-          }
+    "resourceType": "MeasureReport",
+    "id": "indv-measurereport01",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
         ],
-        "text": "MRP Group"
-      },
-      "population": [
+        "source": "http://example.org/fhir/server"
+    },
+    "extension": [
         {
-          "code": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                "code": "initial-population",
-                "display": "Initial Population"
-              }
-            ]
-          },
-          "id": "initial-population",
-          "count": 1
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "proportion",
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                    }
+                ]
+            }
         },
         {
-          "code": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                "code": "numerator",
-                "display": "Numerator"
-              }
-            ]
-          },
-          "id": "numerator",
-          "count": 1
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+            "valueIdentifier": {
+                "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                "value": "0015HQN9BD3304E"
+            }
         },
         {
-          "code": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                "code": "denominator",
-                "display": "Denominator"
-              }
-            ]
-          },
-          "id": "denominator",
-          "count": 1
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+            "valueReference": {
+                "reference": "Organization/organization02"
+            }
         }
-      ],
-      "measureScore": {
-        "value": 1
-      }
-    }
-  ],
-  "evaluatedResource": [
-    {
-      "reference": "Task/Task01"
-    }
-  ]
+    ],
+    "status": "complete",
+    "type": "individual",
+    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+    "subject": {
+        "reference": "Patient/patient01"
+    },
+    "date": "2018-09-05T16:59:52.404Z",
+    "reporter": {
+        "reference": "Organization/organization01"
+    },
+    "period": {
+        "start": "2018-08-01",
+        "end": "2018-09-01"
+    },
+    "improvementNotation": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                "code": "increase",
+                "display": "Increased score indicates improvement"
+            }
+        ]
+    },
+    "group": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://example.org",
+                        "code": "mrp-group",
+                        "display": "MRP Group"
+                    }
+                ],
+                "text": "MRP Group"
+            },
+            "population": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population",
+                                "display": "Initial Population"
+                            }
+                        ]
+                    },
+                    "id": "initial-population",
+                    "count": 1
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "numerator",
+                                "display": "Numerator"
+                            }
+                        ]
+                    },
+                    "id": "numerator",
+                    "count": 1
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator",
+                                "display": "Denominator"
+                            }
+                        ]
+                    },
+                    "id": "denominator",
+                    "count": 1
+                }
+            ],
+            "measureScore": {
+                "value": 1
+            }
+        }
+    ],
+    "evaluatedResource": [
+        {
+            "reference": "Task/task01"
+        }
+    ]
 }

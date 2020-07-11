@@ -142,7 +142,7 @@ Content-Type: application/fhir+json;charset=UTF-8
     {
       "response": {
         "status": "201 Created",
-        "location": "Task/Task01/_history/1",
+        "location": "Task/task01/_history/1",
         ...
       }
     },

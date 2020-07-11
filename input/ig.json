@@ -26,8 +26,8 @@
             ]
         }
     ],
-    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-1.2.0",
-    "version": "2.1.0",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.0.0",
+    "version": "2.0.0",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
@@ -266,6 +266,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Measure Date of Last Power Outage",
+                "reference": {
+                    "reference": "Measure/date-of-last-power-outage"
+                },
+                "description": "DEQM Measure Date of Last Power Outage example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Datax Measurereport03",
                 "reference": {
                     "reference": "MeasureReport/datax-measurereport03"
@@ -362,6 +370,22 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Observation02",
+                "reference": {
+                    "reference": "Observation/observation02"
+                },
+                "description": "DEQM Observation02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Observation03",
+                "reference": {
+                    "reference": "Observation/observation03"
+                },
+                "description": "DEQM Observation03 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Multiple Summ Report",
                 "reference": {
                     "reference": "Bundle/multiple-summ-report"
@@ -404,15 +428,31 @@
                 "exampleBoolean": true,
                 "name": "Encounter01",
                 "reference": {
-                    "reference": "Encounter/Encounter01"
+                    "reference": "Encounter/encounter01"
                 },
                 "description": "DEQM Encounter01 example"
             },
             {
                 "exampleBoolean": true,
+                "name": "Encounter02",
+                "reference": {
+                    "reference": "Encounter/encounter02"
+                },
+                "description": "DEQM Encounter02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Encounter03",
+                "reference": {
+                    "reference": "Encounter/encounter03"
+                },
+                "description": "DEQM Encounter03 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Observation03",
                 "reference": {
-                    "reference": "Observation/observation03"
+                    "reference": "Observation/DNA-occultblood"
                 },
                 "description": "DEQM Observation03 example"
             },
@@ -439,6 +479,30 @@
                     "reference": "Practitioner/practitioner01"
                 },
                 "description": "DEQM Practitioner01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Practitioner02",
+                "reference": {
+                    "reference": "Practitioner/practitioner02"
+                },
+                "description": "DEQM Practitioner02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Practitioner03",
+                "reference": {
+                    "reference": "Practitioner/practitioner03"
+                },
+                "description": "DEQM Practitioner03 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Group01",
+                "reference": {
+                    "reference": "Group/group01"
+                },
+                "description": "DEQM Group01 example"
             },
             {
                 "exampleBoolean": true,
@@ -482,6 +546,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Summary MeasureReport Date of Last Power Outage",
+                "reference": {
+                    "reference": "MeasureReport/date-of-last-power-outage"
+                },
+                "description": "DEQM Summary Measurereport Date of Last Power Outage example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Datax Measurereport01",
                 "reference": {
                     "reference": "MeasureReport/datax-measurereport01"
@@ -492,9 +564,25 @@
                 "exampleBoolean": true,
                 "name": "Task01",
                 "reference": {
-                    "reference": "Task/Task01"
+                    "reference": "Task/task01"
                 },
                 "description": "DEQM Task01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Task02",
+                "reference": {
+                    "reference": "Task/task02"
+                },
+                "description": "DEQM Task02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Task03",
+                "reference": {
+                    "reference": "Task/task03"
+                },
+                "description": "DEQM Task03 example"
             },
             {
                 "exampleBoolean": true,
@@ -900,5 +988,5 @@
             }
         ]
     },
-    "id": "hl7.fhir.us.davinci-deqm-1.2.0"
+    "id": "hl7.fhir.us.davinci-deqm-2.0.0"
 }

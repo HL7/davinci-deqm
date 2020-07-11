@@ -1,6 +1,6 @@
 {
     "resourceType": "Observation",
-    "id": "observation03",
+    "id": "observation02",
     "meta": {
         "profile": [
             "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
@@ -29,10 +29,10 @@
         ]
     },
     "subject": {
-        "reference": "Patient/patient03"
+        "reference": "Patient/patient02"
     },
     "encounter": {
-        "reference": "Encounter/encounter03"
+        "reference": "Encounter/encounter02"
     },
     "effectiveDateTime": "2018-09-30T14:15:04.424Z",
     "issued": "2018-09-30T14:15:04.424Z",

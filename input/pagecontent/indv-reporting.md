@@ -1,6 +1,6 @@
 
 *ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Individual Reporting is not in scope for ballot comment.
-{:.stu-note}
+{:.note-to-balloters}
 
 ### Introduction
 
@@ -8,12 +8,12 @@ An individual patient level report contains quality data for one patient for one
 
 The Individual reporting scenario is supported by the [DEQM Individual MeasureReport Profile]. Transactions between Reporters (for example, an organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of individual patient level quality reports for CQMs to various quality reporting programs.
 
-### Relationship of Measure and MeasureReport Resources
+#### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
 The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation.
 
-### Relationship between QI Core, DEQM, and CQMs
+#### Relationship between QI Core, DEQM, and CQMs
 {:.no_toc}
 
 As described in the Quality Measurement Standards Landscape section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
@@ -98,7 +98,7 @@ Note that Multiple individual reports either for the same or multiple patient fo
 
 {% include img-narrow.html  img="indv_report_post.jpg" caption="Figure 2-10 POST Individual Report" %}
 
-### Usage
+#### Usage
 {:.no_toc}
 
 `POST|[base]`

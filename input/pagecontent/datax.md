@@ -1,7 +1,7 @@
 
 *ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-Data Exchange is not in scope for ballot comment. 
-{:.stu-note}
+Data Exchange is not in scope for ballot comment.
+{:.note-to-balloters}
 
 ### Introduction
 
@@ -47,10 +47,9 @@ The DEQM resources form a network through their relationships with each other - 
 
 {% include img.html img="measure-resource-graph.svg" caption="Figure 2-1 DEQM Resource Graph" %}
 
-### Data Exchange
 
-#### Submit Data
-{: #submit-data}
+### Submit Data
+{: #submit-data .toc}
 
 {:.highlight-note}
  The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as  [incremental] or [snapshot] updates. These update methods are described in detail [below](#submit-updates).

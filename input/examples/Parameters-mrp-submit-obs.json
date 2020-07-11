@@ -5,40 +5,41 @@
         {
             "name": "measure-report",
             "resource": {
-              "resourceType": "MeasureReport",
-              "id": "datax-measurereport02",
-              "meta": {
-                "versionId": "1",
-                "lastUpdated": "2018-09-05T16:59:53.000+00:00",
-                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+                "resourceType": "MeasureReport",
+                "id": "datax-measurereport02",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2018-09-05T16:59:53.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+                        "valueCode": "incremental"
+                    }
+                ],
+                "status": "complete",
+                "type": "data-collection",
+                "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+                "subject": {
+                    "reference": "Patient/patient02"
+                },
+                "date": "2018-09-05T16:59:52.404Z",
+                "reporter": {
+                    "reference": "Organization/organization01"
+                },
+                "period": {
+                    "start": "2018-08-01",
+                    "end": "2018-09-01"
+                },
+                "evaluatedResource": [
+                    {
+                        "reference": "Observation/observation01"
+                    }
                 ]
-              },
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
-                  "valueCode": "incremental"
-                }
-              ],
-              "status": "complete",
-              "type": "data-collection",
-              "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
-              "subject": {
-                "reference": "Patient/patient02"
-              },
-              "date": "2018-09-05T16:59:52.404Z",
-              "reporter": {
-                "reference": "Organization/organization01"
-              },
-              "period": {
-                "start": "2018-08-01",
-                "end": "2018-09-01"
-              },
-              "evaluatedResource": [
-                {
-                  "reference": "Observation/observation01"
-                }
-              ]
             }
         },
         {
@@ -51,7 +52,8 @@
                     "lastUpdated": "2019-02-11T14:19:25.000+00:00",
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "text": {
                     "status": "generated",
@@ -174,7 +176,8 @@
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "status": "final",
                 "category": [
@@ -201,7 +204,7 @@
                     "reference": "Patient/patient01"
                 },
                 "encounter": {
-                    "reference": "Encounter/Encounter01"
+                    "reference": "Encounter/encounter01"
                 },
                 "effectiveDateTime": "2018-09-29T14:15:04.424Z",
                 "issued": "2018-09-29T14:15:04.424Z",
@@ -220,7 +223,8 @@
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "active": true,
                 "gender": "male",
@@ -258,11 +262,12 @@
             "name": "resource",
             "resource": {
                 "resourceType": "Encounter",
-                "id": "Encounter01",
+                "id": "encounter01",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "status": "finished",
                 "class": {
@@ -311,7 +316,8 @@
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
                     ],
-                    "versionId": "2"
+                    "versionId": "2",
+                    "source": "http://example.org/fhir/server"
                 },
                 "status": "active",
                 "beneficiary": {
@@ -347,7 +353,8 @@
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "name": "DaVinciClinic01",
                 "address": {
@@ -370,7 +377,8 @@
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
                     ],
-                    "versionId": "4"
+                    "versionId": "4",
+                    "source": "http://example.org/fhir/server"
                 },
                 "active": true,
                 "address": [
@@ -433,7 +441,8 @@
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
                     ],
-                    "versionId": "3"
+                    "versionId": "3",
+                    "source": "http://example.org/fhir/server"
                 },
                 "active": true,
                 "address": [
@@ -496,7 +505,8 @@
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
                     ],
-                    "versionId": "4"
+                    "versionId": "4",
+                    "source": "http://example.org/fhir/server"
                 },
                 "active": true,
                 "address": [
@@ -550,5 +560,8 @@
                 "resourceType": "Organization"
             }
         }
-    ]
+    ],
+    "meta": {
+        "source": "http://example.org/fhir/server"
+    }
 }

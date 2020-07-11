@@ -5,38 +5,39 @@
         {
             "name": "measure-report",
             "resource": {
-              "resourceType": "MeasureReport",
-              "id": "datax-measurereport03",
-              "meta": {
-                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+                "resourceType": "MeasureReport",
+                "id": "datax-measurereport03",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+                    ],
+                    "source": "http://example.org/fhir/server"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+                        "valueCode": "incremental"
+                    }
+                ],
+                "status": "complete",
+                "type": "data-collection",
+                "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+                "subject": {
+                    "reference": "Patient/patient03"
+                },
+                "date": "2019-01-01T16:59:52.404Z",
+                "reporter": {
+                    "reference": "Organization/organization03"
+                },
+                "period": {
+                    "start": "2018-01-01",
+                    "end": "2018-12-31"
+                },
+                "evaluatedResource": [
+                    {
+                        "reference": "Observation/DNA-occultblood"
+                    }
                 ]
-              },
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
-                  "valueCode": "incremental"
-                }
-              ],
-              "status": "complete",
-              "type": "data-collection",
-              "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
-              "subject": {
-                "reference": "Patient/patient03"
-              },
-              "date": "2019-01-01T16:59:52.404Z",
-              "reporter": {
-                "reference": "Organization/organization03"
-              },
-              "period": {
-                "start": "2018-01-01",
-                "end": "2018-12-31"
-              },
-              "evaluatedResource": [
-                {
-                  "reference": "Observation/observation03"
-                }
-              ]
             }
         },
         {
@@ -49,7 +50,8 @@
                     "lastUpdated": "2019-02-07T18:47:34.000+00:00",
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "text": {
                     "status": "generated",
@@ -168,11 +170,12 @@
             "name": "resource",
             "resource": {
                 "resourceType": "Observation",
-                "id": "observation03",
+                "id": "DNA-occultblood",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "status": "final",
                 "category": [
@@ -213,7 +216,8 @@
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
-                    ]
+                    ],
+                    "source": "http://example.org/fhir/server"
                 },
                 "active": true,
                 "gender": "male",
@@ -256,7 +260,8 @@
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
                     ],
-                    "versionId": "3"
+                    "versionId": "3",
+                    "source": "http://example.org/fhir/server"
                 },
                 "active": true,
                 "address": [
@@ -310,5 +315,8 @@
                 "resourceType": "Organization"
             }
         }
-    ]
+    ],
+    "meta": {
+        "source": "http://example.org/fhir/server"
+    }
 }

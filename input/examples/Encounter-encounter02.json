@@ -1,6 +1,6 @@
 {
     "resourceType": "Encounter",
-    "id": "encounter01",
+    "id": "encounter02",
     "meta": {
         "profile": [
             "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
@@ -18,15 +18,14 @@
             "coding": [
                 {
                     "system": "http://snomed.info/sct",
-                    "code": "56876005",
-                    "display": "Drug rehabilitation and detoxification"
+                    "code": "239279000",
+                    "display": "Fixation of fracture"
                 }
             ]
         }
     ],
     "subject": {
-        "reference": "Patient/patient01",
-        "display": "Jairo Webster"
+        "reference": "Patient/patient02"
     },
     "period": {
         "start": "2018-05-29T11:00:00-04:00",

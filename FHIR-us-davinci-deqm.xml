@@ -3,12 +3,13 @@
                url="http://hl7.org/fhir/us/davinci-deqm"
                ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm"
                defaultWorkgroup=""
-               defaultVersion="1.0.0"
+               defaultVersion="2.0.0"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
                ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2020Feb">
    <version code="current" url="http://build.fhir.org/ig/HL7/davinci-deqm"/>
+   <version code="2.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU2"/>
    <version code="1.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Feb"/>
-   <version code="1.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU2"/>
+   <version code="1.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU1"/>
    <version code="0.2.0"
             url="http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/index.html"
             deprecated="true"/>
@@ -46,6 +47,9 @@
    <artifact name="Measure Mrp Example"
              key="Measure-measure-mrp-example"
              id="Measure/measure-mrp-example"/>
+   <artifact name="Measure Date of Last Power Outage"
+             key="Measure-date-of-last-power-outage"
+             id="Measure/date-of-last-power-outage"/>
    <artifact name="Datax Measurereport03"
              key="MeasureReport-datax-measurereport03"
              id="MeasureReport/datax-measurereport03"/>
@@ -80,6 +84,12 @@
    <artifact name="Observation01"
              key="Observation-observation01"
              id="Observation/observation01"/>
+   <artifact name="Observation02"
+             key="Observation-observation02"
+             id="Observation/observation02"/>
+   <artifact name="Observation03"
+             key="Observation-observation03"
+             id="Observation/observation03"/>
    <artifact name="Multiple Summ Report"
              key="Bundle-multiple-summ-report"
              id="Bundle/multiple-summ-report"/>
@@ -96,11 +106,17 @@
              key="Bundle-multiple-indv-mrp-task-report"
              id="Bundle/multiple-indv-mrp-task-report"/>
    <artifact name="Encounter01"
-             key="Encounter-Encounter01"
-             id="Encounter/Encounter01"/>
+             key="Encounter-encounter01"
+             id="Encounter/encounter01"/>
+   <artifact name="Encounter02"
+             key="Encounter-encounter02"
+             id="Encounter/encounter02"/>
+   <artifact name="Encounter03"
+             key="Encounter-encounter03"
+             id="Encounter/encounter03"/>
    <artifact name="Observation03"
-             key="Observation-observation03"
-             id="Observation/observation03"/>
+             key="Observation-DNA-occultblood"
+             id="Observation/DNA-occultblood"/>
    <artifact name="Single Indv Mrp Task Report"
              key="Bundle-single-indv-mrp-task-report"
              id="Bundle/single-indv-mrp-task-report"/>
@@ -110,6 +126,13 @@
    <artifact name="Practitioner01"
              key="Practitioner-practitioner01"
              id="Practitioner/practitioner01"/>
+   <artifact name="Practitioner02"
+             key="Practitioner-practitioner02"
+             id="Practitioner/practitioner02"/>
+   <artifact name="Practitioner03"
+             key="Practitioner-practitioner03"
+             id="Practitioner/practitioner03"/>
+   <artifact name="Group01" key="Group-group01" id="Group/group01"/>
    <artifact name="Indv Measurereport03"
              key="MeasureReport-indv-measurereport03"
              id="MeasureReport/indv-measurereport03"/>
@@ -125,10 +148,15 @@
    <artifact name="Summ Measurereport02"
              key="MeasureReport-summ-measurereport02"
              id="MeasureReport/summ-measurereport02"/>
+   <artifact name="Summary MeasureReport Date of Last Power Outage"
+             key="MeasureReport-date-of-last-power-outage"
+             id="MeasureReport/date-of-last-power-outage"/>
    <artifact name="Datax Measurereport01"
              key="MeasureReport-datax-measurereport01"
              id="MeasureReport/datax-measurereport01"/>
-   <artifact name="Task01" key="Task-Task01" id="Task/Task01"/>
+   <artifact name="Task01" key="Task-task01" id="Task/task01"/>
+   <artifact name="Task02" key="Task-task02" id="Task/task02"/>
+   <artifact name="Task03" key="Task-task03" id="Task/task03"/>
    <artifact name="Organization01"
              key="Organization-organization01"
              id="Organization/organization01"/>
