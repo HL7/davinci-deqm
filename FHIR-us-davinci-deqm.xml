@@ -236,9 +236,12 @@
    <artifact name="DEQM MedicationAdministration Profile"
              key="StructureDefinition-medicationadministration-deqm"
              id="StructureDefinition/medicationadministration-deqm"/>
-   <artifact name="Gic Reporter Client CapabilityStatement"
-             key="CapabilityStatement-gic-reporter-client"
-             id="CapabilityStatement/gic-reporter-client"/>
+   <artifact name="Example Bundle - cfa709d6-9011-4619-a809-cdac55bc277e"
+             key="Bundle-cfa709d6-9011-4619-a809-cdac55bc277e"
+             id="Bundle/cfa709d6-9011-4619-a809-cdac55bc277e"/>
+   <artifact name="Gaps In Care Client CapabilityStatement"
+             key="CapabilityStatement-gic-client"
+             id="CapabilityStatement/gic-client"/>
    <artifact name="DEQM Gaps In Care Bundle Profile"
              key="StructureDefinition-gaps-bundle-deqm"
              id="StructureDefinition/gaps-bundle-deqm"/>
@@ -260,9 +263,9 @@
    <artifact name="Care Gaps Operation"
              key="OperationDefinition-care-gaps"
              id="OperationDefinition/care-gaps"/>
-   <artifact name="Gic Receiver Server CapabilityStatement"
-             key="CapabilityStatement-gic-receiver-server"
-             id="CapabilityStatement/gic-receiver-server"/>
+   <artifact name="Gaps In Care Server CapabilityStatement"
+             key="CapabilityStatement-gic-server"
+             id="CapabilityStatement/gic-server"/>
    <artifact name="DEQM Gaps In Care Detected Issue Profile"
              key="StructureDefinition-gaps-detectedissue-deqm"
              id="StructureDefinition/gaps-detectedissue-deqm"/>
@@ -284,7 +287,7 @@
    <page name="Medication Reconciliation Post-Discharge (MRP)" key="mrp"/>
    <page name="Colorectal Cancer Screening (COL)" key="col"/>
    <page name="Venous Thromboembolism Prophylaxis (VTE-1)" key="vte1"/>
-   <page name="Gaps in Care Colorectal Cancer Screening" key="gic-col"/>
+   <page name="Gaps in Care Example Use Cases" key="gaps-examples"/>
    <page name="Profiles and Extensions" key="profiles"/>
    <page name="Operations" key="operations"/>
    <page name="Terminology" key="terminology"/>
