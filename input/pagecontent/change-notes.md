@@ -2,14 +2,14 @@
 The Data Exchange For Quality Measures Implementation Guide was developed under the  [Davinci Project](#)
 
 
-Changes and Updates for version 0.2.0
+### Changes and Updates for version 0.2.0
 
 1. Applied all resolutions from STU1 Ballot
 1. Updated and Expanded the Background Section on the Clinical Quality Measures Ecosystem and how this guide fits into that Ecosystem.
 1. Added Guidance on Measure Reporting
 1. Added Use Cases for Colorectal Screening and Venous Thromboembolism Prophylaxis Measure Reporting
 
-Changes and Updates for version 1.0.0
+### Changes and Updates for version 1.0.0
 
 1. Applied all resolutions from May STU1 Ballot
 
@@ -18,7 +18,7 @@ Changes and Updates for version 1.1.0
 1. Creation of FHIR R4 version.
 1. Additional examples
 
-Changes and Updates for version 2.0.0
+### Changes and Updates for version 2.0.0
 
 1. Applied all resolutions from STU2 Ballot
 
@@ -33,12 +33,12 @@ Changes and Updates for version 2.0.0
     - Additional [Preconditions and Assumptions](guidance.html#preconditions-and-assumptions) (FHIR-26088, FHIR-26086, FHIR-26075)
     - Change [Practitioner Identifier OID](StructureDefinition-organization-deqm-definitions.html#Organization.identifier:ein) for Tax ID from ITIN to EIN (FHIR-26613, FHIR-26086)
     - Clarify how [much data is needed](indv-reporting.html#how-much-data-should-be-sent) for individual reporting (FHIR-26090)
-    - Clarify how [much data is needed](datax.html#data-exchange) for data exchange (FHIR-26083)
+    - Clarify how [much data is needed](datax.html) for data exchange (FHIR-26083)
     -  Clarify how data consumers [communicate data requirements](datax.html#collect-data ). (FHIR-26084)
     - Clarify [negation pattern](guidance.html#negation-patterns-for-quality-measures) (FHIR-26077)
-    - Clarify [usage of correct measure version](datax.html#data-exchange) . (FHIR-26081)
+    - Clarify [usage of correct measure version](datax.html) . (FHIR-26081)
     - Clarify [discovery of data requirements](datax.html#gather-data-requirements-from-consumer)). (FHIR-26085)
-    - Clarify [stakeholders](datax.html#data-exchange) (FHIR-26082)
+    - Clarify [stakeholders](datax.html) (FHIR-26082)
     - Add [reference](index.html#introduction) to Da Vinci Guiding Principles (FHIR-26078)
     - Add [implementer notes](StructureDefinition-indv-measurereport-deqm.html#mandatory-data-elements-and-terminology) to  DEQM Data-Exchange MeasureReport Profile  (FHIR-26073)
     - Add [Practitioner Profile](StructureDefinition-practitioner-deqm.html) to accommodate CMS Certification Number identifier(CCN) and add CCN to [Organization Profile](StructureDefinition-organization-deqm.html) (FHIR-25739)

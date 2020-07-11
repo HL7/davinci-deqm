@@ -13,15 +13,14 @@
 {% assign my_array = my_array | sort | uniq %}
 
 {% for i in my_array %}
-<h3>{{ i }}</h3>
-  <ul>
-  {% for p in site.data.ig.definition.resource %}
-      {% if p.exampleBoolean %}
-        {% assign type =  p.reference.reference | split: '/' | first %}
-            {% if type == i %}
-            <li><a href="{{p.reference.reference | replace: '/','-'}}.html">{{p.name}}</a></li>
-            {% endif %}
-       {% endif %}
-   {% endfor %}
-  </ul>
+### {{ i }}
+  {%- for p in site.data.ig.definition.resource -%}
+      {%- if p.exampleBoolean -%}
+        {%- assign type =  p.reference.reference | split: '/' | first -%}
+            {%- if type == i %}
+- [{{p.name}}]({{p.reference.reference | replace: '/','-'}}.html)
+            {%- endif -%}
+       {%- endif -%}
+   {%- endfor %}
+{% comment %} keep this line here for proper rendering {% endcomment %}
 {% endfor %}
