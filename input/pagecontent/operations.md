@@ -3,7 +3,7 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 {:.note-to-balloters}
 
 <div class="new-content" markdown="1">
-This page lists the operations. TODO: add general introduction of this page.
+The list of operations defined by this implementation guide.
 </div>
 
 ### Operations

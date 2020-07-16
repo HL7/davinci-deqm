@@ -15,7 +15,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="Must provide periodStart, periodStop, and subject|provider|organization when call the care-gaps operation. For subject|provider|organization, must provide either a subject, or an organization (e.g., TIN), or a provider and organization combination (e.g., NPI + TIN)"/>
+    <description value="The care-gaps operation is used to determine gaps-in-care based on the results of quality measures."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
