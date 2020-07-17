@@ -79,6 +79,8 @@ In addition to the resources listed above, the following artifacts are used in t
 
 Note the use of the `periodStart` and `periodEnd` parameters supports description of data requirements that filter based on the measurement period. For example, a measure may require data for a certain procedure within the last three years, and the data requirements returned will reflect that period.
 
+{% include error-note.md transaction = 'Data Collection' %}
+
 {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
 For another example see the [COL Data Requirements Operation] example.
@@ -155,6 +157,8 @@ Using the `POST` Syntax, the operation can be invoked by the Producer:
 
 `POST|[base]/Measure/[measure-id]/$submit-data`
 
+{% include error-note.md transaction = 'Submit Data' %}
+
 {% include examplebutton.html example="submit-data-example" b_title = "Click Here To See Example Submit Data Operation (edited for brevity)" %}
 
 For a complete un-edited example see the [MRP Submit Data Operation] and [COL Submit Data Operation] examples.
@@ -204,6 +208,7 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Con
 
 `POST|[base]/Measure/[measure-id]/$collect-data`
 
+{% include error-note.md transaction = 'Collect Data' %}
 
 {% include examplebutton.html example="collect-data-example" b_title = "Click Here To See Example Collect Data operation" %}
 

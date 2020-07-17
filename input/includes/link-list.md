@@ -133,3 +133,4 @@
 [Bundle Multiple Summ Report]: Bundle-multiple-summ-report.html
 [Software System]: {{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html
 [Default Profiles]: {{site.data.fhir.path}}implementationguide.html#default
+[FHIR specification for operation behavior]: {{site.data.fhir.path}}operations.html#response

@@ -3,7 +3,7 @@
 # see comments below for instructions
 
 ig = input/ig.json
-template = /Users/ehaas/Documents/FHIR/ig-template-base
+template = fhir.base.template#current
 
 ##########################
 ### ig.ini parameters: ###
