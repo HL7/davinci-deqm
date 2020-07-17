@@ -1,0 +1,26 @@
+{
+    "resourceType": "DetectedIssue",
+    "id": "5d69ce8b-3b63-4f5b-a70d-82bb608f1cac",
+    "status": "final",
+    "code": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
+                "code": "care-gap",
+                "display": "Gap in Care Detected"
+            }
+        ]
+    },
+    "patient": {
+        "reference": "Patient/numer-EXM125-FHIR4"
+    },
+    "evidence": [
+        {
+            "detail": [
+                {
+                    "reference": "MeasureReport/cac82357-bbef-44f5-b8c6-e1e9ea60d158"
+                }
+            ]
+        }
+    ]
+}
