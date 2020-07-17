@@ -1,0 +1,23 @@
+{
+    "resourceType": "Group",
+    "id": "subject01",
+    "type": "person",
+    "actual": true,
+    "member": [
+        {
+            "entity": {
+                "reference": "Patient/patient01"
+            }
+        },
+        {
+            "entity": {
+                "reference": "Patient/patient02"
+            }
+        },
+        {
+            "entity": {
+                "reference": "Patient/patient03"
+            }
+        }
+    ]
+}
