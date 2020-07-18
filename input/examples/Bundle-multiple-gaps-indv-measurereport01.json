@@ -36,7 +36,7 @@
                         },
                         "entry": [
                             {
-                                "reference": "DetectedIssue/5d69ce8b-3b63-4f5b-a70d-82bb608f1cac"
+                                "reference": "DetectedIssue/gaps-detectedissue01"
                             }
                         ]
                     },
@@ -363,10 +363,10 @@
             }
         },
         {
-            "fullUrl": "DetectedIssue/5d69ce8b-3b63-4f5b-a70d-82bb608f1cac",
+            "fullUrl": "DetectedIssue/gaps-detectedissue01",
             "resource": {
                 "resourceType": "DetectedIssue",
-                "id": "5d69ce8b-3b63-4f5b-a70d-82bb608f1cac",
+                "id": "gaps-detectedissue01",
                 "status": "final",
                 "code": {
                     "coding": [

@@ -618,6 +618,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "gaps-detectedissue01",
+                "reference": {
+                    "reference": "DetectedIssue/gaps-detectedissue01"
+                },
+                "description": "GIC DetectedIssue01 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Patient01",
                 "reference": {
                     "reference": "Patient/patient01"
