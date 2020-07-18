@@ -50,6 +50,8 @@ The following resources are used in the gaps in care measure reporting scenario:
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
 |Individual MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
 
+{% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
+
 ### Gaps in Care Reporting
 (TODO: descriptions about gaps in care reporting)
 
@@ -75,8 +77,12 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
 Headers:
 * `Prefer respond-async`
 * `Accept application/fhir+json`
+</br>Note that both Accept and Prefer are required. Prefer specifies the response is immediate or asynchronous, which MUST be set to respond-async. Accept specifies the format of the optional OpeartionOutcome response to the kick-off request. Currently, only application/fhir+json is supported.
 
-NDJSON response:
+Query Parameters:
+* `_outputFormat (string, optional, defaults to application/fhir+ndjson)`
+
+NDJSON Response:
 
 <br />
 
