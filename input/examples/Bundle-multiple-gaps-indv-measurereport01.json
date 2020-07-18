@@ -9,10 +9,25 @@
                 "resourceType": "Composition",
                 "id": "3fbdaeaa-ab00-477c-aeeb-653130a1bf9c",
                 "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type",
+                            "code": "gaps-doc",
+                            "display": "Gaps in Care Report"
+                        }
+                    ]
+                },
                 "subject": {
                     "reference": "Patient/numer-EXM125-FHIR4"
                 },
-                "title": "Care Gap Report",
+                "date": "2020-07-02T13:08:52+00:00",
+                "author": [
+                    {
+                        "reference": "Organization/organization-datareporter"
+                    }
+                ],
+                "title": "Care Gap Report for patient numer-EXM125-FHIR4",
                 "section": [
                     {
                         "title": "Colorectal Cancer Screening",
