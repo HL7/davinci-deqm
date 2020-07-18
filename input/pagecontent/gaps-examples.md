@@ -4,16 +4,20 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 
 <div class="new-content" markdown="1">
 ###  Introduction
+(Contents under construction ....)
 
-Gaps In Care Examples:
+The Gaps In Care is a powerful report that when used along with other DEQM functionality can result in better care results for the payer, the provider and most importantly the patient.  Below we show a simplistic example to show its potential power.
 
+In our scenario, we imagine that a provider has requested a Gaps in Care report for the Colorectal Screening Measure  from ABC Insurance for his patients using the care-gaps operation.  She does not specify open or closed gaps so she gets both. The report returns two patients.  One patient has a closed gap and the other has an open gap.
+
+As it turns out, the patient with the open gap had a promotion through his employer to try a FitDNA kit for free.  The results were sent to the provider but the payer was unaware.
+
+When the provider notices this in the patient’s chart, she uses the DEQM Submit Data functionality to update the payer’s database.
+Later, the provider again runs the same report but with an updated periodEnd date and both patients now showing as having their Colorectal Cancer Screening Measure Closed
 
 #### Use Cases
 
-
 ### FHIR Resource Overview
-
-
 
 #### Resources Supported for this Use Case
 {:.no_toc}
