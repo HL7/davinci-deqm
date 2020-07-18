@@ -42,31 +42,36 @@ The following resources are used in the gaps in care measure reporting scenario:
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
 |Individual MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
 
-### Gaps in Care reporting
-
-#### $care-gaps Care Gaps Operation
-(TODO: describe operation)
+### Gaps in Care Reporting
+(TODO: descriptions about gaps in care reporting)
 
 #### Usage
 {:.no_toc}
 
-for a single MeasureReport:
-
-`POST|[base]/MeasureReport`
-
-for a Bundle Transaction:
-
 `POST|[base]`
 
-<!--
-{% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See POST summary Report Example" %}
+##### Bulk Data
+{:.no_toc}  
 
-for an example of a Summary MeasureReport with counts for multiple populations and stratifiers specified in an eCQM see the [Medicare Stratification Example] and the  [COL Summary MeasureReport].  For an example of a Bundle of multiple summary results see the [Bundle Multiple Summ Report].-->
+If Clients are requesting Gaps in Care reports for many patients/members, they might want to make use of the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
 
-#### Bulk Data
-(TODO: describe how Bulk Data is used in gaps in care reporting)
-</div>
+**Example**  
+Scenario: The client wants Gaps in Care Reports on many patients. They have created a FHIR Group Resource ([DEQM Gaps In Care Group Profile]) with the id of 123.  Because they expect the creation of the reports to take a while and many FHIR bundles will be returned and be processed, they want to make the request in an asynchronous manner returning NDJSON, which is easier for them to process.
+The request below asks for Group id of 123 to be run asynchronously with FHIR+ndjson as the output format.  The header portions should be entered in the API client header section (example in Postman Headers section tab, enter “Prefer” in Key and “respond-async” in Value)
+{% include examplebutton.html example="post-indv-report-example" b_title = "This is a placeholder, example coming" %}
+
+Run $care-gaps operation in an asynchronous mode:
+```
+GET [base]/Measure/$care-gaps?subject=Group/123&_outputFormat=application/fhir+ndjson
+```
+**Headers:**
+* `Prefer respond-async`
+* `Accept application/fhir+json`
+
+**NDJSON response**
 
 <br />
+
+</div>
 
 {% include link-list.md %}

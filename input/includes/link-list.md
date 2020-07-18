@@ -140,3 +140,4 @@
 [DEQM Gaps In Care Group Profile]: StructureDefinition-gaps-group-deqm.html
 [DEQM Gaps In Care Individual MeasureReport Profile]: StructureDefinition-gaps-indv-measurereport-deqm.html
 [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/2020Feb/index.html
+[Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
