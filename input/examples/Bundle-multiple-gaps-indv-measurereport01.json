@@ -43,11 +43,11 @@
                     {
                         "title": "Cervical Cancer Screening",
                         "focus": {
-                            "reference": "MeasureReport/ac5d7aba-8a7d-4752-87d5-716cfc1cddce"
+                            "reference": "MeasureReport/gaps-indv-measurereport02"
                         },
                         "entry": [
                             {
-                                "reference": "DetectedIssue/1e91885e-2477-41ae-9390-0cf1bd4f2368"
+                                "reference": "DetectedIssue/gaps-detectedissue02"
                             }
                         ]
                     }
@@ -427,10 +427,10 @@
             }
         },
         {
-            "fullUrl": "DetectedIssue/1e91885e-2477-41ae-9390-0cf1bd4f2368",
+            "fullUrl": "DetectedIssue/gaps-detectedissue02",
             "resource": {
                 "resourceType": "DetectedIssue",
-                "id": "1e91885e-2477-41ae-9390-0cf1bd4f2368",
+                "id": "gaps-detectedissue02",
                 "status": "final",
                 "code": {
                     "coding": [
@@ -447,7 +447,7 @@
                     {
                         "detail": [
                             {
-                                "reference": "MeasureReport/ac5d7aba-8a7d-4752-87d5-716cfc1cddce"
+                                "reference": "MeasureReport/gaps-indv-measurereport02"
                             }
                         ]
                     }
