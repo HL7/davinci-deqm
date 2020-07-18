@@ -142,3 +142,5 @@
 [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/2020Feb/index.html
 [Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
 [MeasurePopulationType]: http://hl7.org/fhir/R4/valueset-measure-population.html
+[$care-gaps]: OperationDefinition-care-gaps.html
+[gaps status value set]:http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status
