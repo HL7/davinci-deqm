@@ -1,6 +1,11 @@
 {
     "resourceType": "DetectedIssue",
     "id": "gaps-detectedissue01",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"
+        ]
+    },
     "status": "final",
     "code": {
         "coding": [

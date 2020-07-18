@@ -1,6 +1,11 @@
 {
     "resourceType": "Group",
     "id": "gaps-subject-group01",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-group-deqm"
+        ]
+    },
     "type": "person",
     "actual": true,
     "member": [
