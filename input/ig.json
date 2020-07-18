@@ -610,6 +610,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "gaps-composition01",
+                "reference": {
+                    "reference": "Composition/gaps-composition01"
+                },
+                "description": "GIC Composition01 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Patient01",
                 "reference": {
                     "reference": "Patient/patient01"

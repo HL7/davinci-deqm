@@ -166,6 +166,9 @@
    <artifact name="gaps-indv-measurereport01"
              key="MeasureReport-gaps-indv-measurereport01"
              id="MeasureReport/gaps-indv-measurereport01"/>
+   <artifact name="gaps-composition01"
+             key="Composition-gaps-composition01"
+             id="Composition/gaps-composition01"/>
    <artifact name="Patient01" key="Patient-patient01" id="Patient/patient01"/>
    <artifact name="DEQM Measure Scoring Extension"
              key="StructureDefinition-extension-measureScoring"
@@ -242,9 +245,6 @@
    <artifact name="Example Bundle - cfa709d6-9011-4619-a809-cdac55bc277e"
              key="Bundle-cfa709d6-9011-4619-a809-cdac55bc277e"
              id="Bundle/cfa709d6-9011-4619-a809-cdac55bc277e"/>
-   <artifact name="Care Gap Report for patient numer-EXM125-FHIR4"
-             key="Composition-3fbdaeaa-ab00-477c-aeeb-653130a1bf9c"
-             id="Composition/3fbdaeaa-ab00-477c-aeeb-653130a1bf9c"/>
    <artifact name=""
              key="DetectedIssue-5d69ce8b-3b63-4f5b-a70d-82bb608f1cac"
              id="DetectedIssue/5d69ce8b-3b63-4f5b-a70d-82bb608f1cac"/>
