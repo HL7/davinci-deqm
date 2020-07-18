@@ -13,6 +13,9 @@ Bi-directional, real-time, FHIR-based communication that reconciles payer inform
 
 Research has shown that care gaps can be both harmful and costly when not properly managed. For example, not managing certain chronic diseases (e.g., diabetes) can lead to serious complications and escalating treatment costs. Resolving gaps in care is important to payers, providers, and the patients they serve. Doing so can positively influence patient health and lead to improvements in quality scores and reimbursement under risk-sharing arrangements such as Medicare.
 
+{% include img-portrait.html img="gic-ecosystem.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
+In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Quality Improvement Ecosystem.  In this case between a clinician and a measurement organization, such as a payer, or quality measurement/ population health tool.   Note that a measurement organization might also make the request of their own system.
+
 ### Gaps in Care Reporting
 
 |Use Case|care-gaps Operation|Gaps Through Period|Report Creation Date|Gaps In Care Report Results|

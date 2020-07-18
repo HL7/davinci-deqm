@@ -34,16 +34,18 @@ Gaps In Care Examples:
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
 
+{% include img-portrait.html img="gic-resources.png" caption = "Figure 3-22 Gaps In Care Resources" %}
+
 ### Care Gaps Operation {#care-gaps}
 {:.no_toc}
 The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
-{% include img-portrait.html img="gaps-swimlane-caregap-report.png" caption = "Figure 3-22 Care Gaps Workflow" %}
+{% include img-portrait.html img="gaps-swimlane-caregap-report.png" caption = "Figure 3-23 Care Gaps Workflow" %}
 
 ### Gaps In Care MeasureReport
 {:.no_toc}
 
-{% include img-portrait.html img="gic-col-no-gaps.png" caption = "Figure 3-23 Colorectal Cancer Screening Measure - Closed Gap/No Gap" %}
+{% include img-portrait.html img="gic-example-col.png" caption = "Figure 3-24 Gaps in Care Resources Colorectal Cancer Screening Measure Example" %}
 
 ---
 </div>

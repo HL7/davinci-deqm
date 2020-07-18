@@ -90,9 +90,6 @@ The reporting scenarios are:
 1. **Individual** - Used to report the results of a quality measure for a particular patient along with the complete set of data of interest to a quality reporting receiver
 1. **Summary** - Used to report the results of a quality measure for the applicable population to a quality reporting receiver
 1. **Patient-List** - A patient list report that includes a listing of patients that satisfied each population criteria in the measure *NOTE: This reporting scenario is out of scope for this version of the Implementation Guide.*
-<div class="new-content" markdown="1">
-1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure for the applicable population to a quality reporting receiver *NOTE: The actors for Gaps in Care are described in the Gaps in Care Reporting Scenarios section.*
-</div>
 
 For the reporting scenarios, the actors are Reporters and Receivers:
 
@@ -102,6 +99,9 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 <div class="new-content" markdown="1">
 #### Gaps in Care Reporting Scenarios
+Gaps in Care Reporting is added as a new reporting scenario to this version of the guide.
+1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure for the applicable population to a quality reporting receiver
+
 For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
 
 {% include img-portrait.html  caption = "Figure 1-5 Gaps in Care Reporting Scenario" img="gaps-reporting-scenario.png" %}
