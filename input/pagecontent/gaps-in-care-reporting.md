@@ -5,8 +5,6 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 <div class="new-content" markdown="1">
 ### Introduction
 
-(TODO: introduction for gaps in care reporting.)
-
 To succeed in population health and value-based care, gaps in care and information must be addressed efficiently and in a timely manner. Anticipating or closing gaps in care, at point of care, is an opportunity to improve care quality and cost of care.
 
 Gaps in care information can adversely affect member outcomes and contribute to inappropriate costs. For providers and payers to improve population health value based care two items must be addressed: 1) Gaps in Care Information: Disparities in claims vs. clinical information which makes it difficult to assess if best practices are being followed: e.g. a diabetic member with no A1C or a member being prescribed insulin with no diabetes diagnosis. 2) Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at time of diagnosis to support effective care coordination.
@@ -16,7 +14,14 @@ Bi-directional, real-time, FHIR-based communication that reconciles payer inform
 Research has shown that care gaps can be both harmful and costly when not properly managed. For example, not managing certain chronic diseases (e.g., diabetes) can lead to serious complications and escalating treatment costs. Resolving gaps in care is important to payers, providers, and the patients they serve. Doing so can positively influence patient health and lead to improvements in quality scores and reimbursement under risk-sharing arrangements such as Medicare.
 
 ### Gaps in Care Reporting
-(TODO: describe gaps in Care reporting.
+
+|Use Case|care-gaps Operation|Gaps Through Period|Report Creation Date|Gaps In Care Report Results|
+|---|---|---|---|---|
+|Prospective Use Case|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30|2020-01-01 through 2020-09-30|2020-07-01|Returns gaps through 2020-09-30. Example: If the patient had colonoscopy on 2010-07-03, the report would indicate a gap. Since by 2020-09-30, the colonoscopy would be over 10 years.|
+|Retrospective Use Case|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30|2020-01-01 through 2020-06-30|2020-07-01|Returns gaps through 2020-06-30. Example: If a patient had colonoscopy on 2010-07-03, the report would not ID a gap since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
+
+*Note: If a report is run on 2021-01-03 for a gaps through period from 2020-01-01 to 2020-12-31, this should use $evaluate-measure operation instead of the $care-gaps operation since it is a retrospective report for the entire Performance Period.*
+
 
 {% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-12 Care Gaps Operation - Single Patient" %}
 {% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-13 Care Gaps Operation - Group of Patients" %}

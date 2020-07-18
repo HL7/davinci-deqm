@@ -9,7 +9,7 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
 The second scenario defined in this guide is when a Reporter needs to exchange a measure report with a Receiver.  This guide addresses the Individual Measure Reporting and the Summary Reporting.  As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver.  Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
-For the second measure reporting scenario, this guide also addresses the Gaps in Care Reporting, which is based on the Individual Measure Reporting to further provide capability of indicating an open and/or a closed gap for a specific measure and managing the resolution of the open gap.
+For the measure reporting scenario, this guide also addresses the Gaps in Care Reporting, which is based on the Individual Measure Reporting to further provide capability of indicating an open and/or a closed gap for a specific measure and managing the resolution of the open gap.
 {:.new-content}
 
   Patient List Reporting is a third reporting type which is similar to a QRDA Category 2 report. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
@@ -68,7 +68,7 @@ A third profile [DEQM Gaps In Care Individual MeasureReport Profile] is defined 
 
 Gaps in Care Measure Reporting can be requested by a Client to a Server system who has all of the data that represents what is known about the patient(s) at a point in time during a gaps through period.
 
-When the $care-gaps operation is run on the Server system, it will return a FHIR Composition bundle, using the [DEQM Gaps In Care Composition Profile], for each patient for whom a gaps in care report was requested. That Composition will contain a gaps in care profiled MeasureReport resource [(DEQM Gaps In Care Individual MeasureReport Profile)] for each measure returned.
+When the $care-gaps operation is run on the Server, it will return a FHIR Composition bundle for each patient. The Composition, [DEQM Gaps In Care Composition Profile], will contain 1 to many [DEQM Gaps In Care Individual MeasureReport Profile]. Each MeasureReport is for a single measure.
 
 The [DEQM Gaps In Care Individual MeasureReport Profile] is used when gaps in care for measure is reported for a specific patient, it will indicate the gap status for the patient for a specific measure. Depending on what parameters are provided to the [$care-gaps](OperationDefinition-care-gaps.html) operation for generating the report, a single gaps in care report might have only open gaps, only closed gaps, or both open and closed gaps. This profile is built on the [DEQM Individual MeasureReport Profile], it contains all of the data that is relevant to generate the gaps in care report including the measure outcome and is similar to a QRDA Category 1 report.</br>
 In addition, this profile further specifies relevant data that were used to generate gaps in care report and can indicate which population code ([MeasurePopulationType]) this relevant data applies to (i.e. numerator, denominator, exclusion, etc.) </br>
