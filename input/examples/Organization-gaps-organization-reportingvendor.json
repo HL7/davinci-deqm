@@ -1,0 +1,58 @@
+{
+    "id": "gaps-organization-reportingvendor",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+        ]
+    },
+    "active": true,
+    "address": [
+        {
+            "city": "Whoville",
+            "country": "USA",
+            "line": [
+                "13 Dr Suess Street"
+            ],
+            "postalCode": "01101",
+            "state": "MA"
+        }
+    ],
+    "identifier": [
+        {
+            "assigner": {
+                "display": "www.irs.gov"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.4",
+            "type": {
+                "coding": [
+                    {
+                        "code": "TAX",
+                        "display": "Tax ID number",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                    }
+                ]
+            },
+            "use": "official",
+            "value": "123446789"
+        }
+    ],
+    "name": "GapsReportingVendor01",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "(+1) 401-545-1212"
+        }
+    ],
+    "type": [
+        {
+            "coding": [
+                {
+                    "code": "pay",
+                    "display": "Payer",
+                    "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                }
+            ]
+        }
+    ],
+    "resourceType": "Organization"
+}

@@ -12,7 +12,7 @@
         ]
     },
     "patient": {
-        "reference": "Patient/numer-EXM125-FHIR4"
+        "reference": "Patient/gaps-patient01"
     },
     "evidence": [
         {

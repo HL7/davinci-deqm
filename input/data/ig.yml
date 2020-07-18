@@ -353,6 +353,45 @@ definition:
       description: DEQM Datax Measurereport01 example
 
     - exampleBoolean: true
+      name: Gaps Individual MeasureReport01
+      reference:
+        reference: MeasureReport/gaps-indv-measurereport01
+      description: GIC Individual MeasureReport01 example
+    - exampleBoolean: true
+      name: Gaps Patient01
+      reference:
+        reference: Patient/gaps-patient01
+      description: GIC Patient01 example
+    - exampleBoolean: true
+      name: Gaps Encounter01
+      reference:
+        reference: Encounter/gaps-encounter01
+      description: GIC Encounter01 example
+    - exampleBoolean: true
+      name: Gaps Reporting Vendor Organization
+      reference:
+        reference: Organization/gaps-organization-reportingvendor
+      description: GIC Reporting Vendor Organization example
+
+    - exampleBoolean: true
+      name: Gaps Composition01
+      reference:
+        reference: Composition/gaps-composition01
+      description: GIC Composition01 example
+
+    - exampleBoolean: true
+      name: Gaps DetectedIssue01
+      reference:
+        reference: DetectedIssue/gaps-detectedissue01
+      description: GIC DetectedIssue01 example
+
+    - exampleBoolean: true
+      name: Gaps Group01 subject
+      reference:
+        reference: Group/gaps-subject-group01
+      description: GIC Group01 subject example
+
+    - exampleBoolean: true
       name: Task01
       reference:
         reference: Task/task01

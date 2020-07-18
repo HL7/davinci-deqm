@@ -12,15 +12,15 @@
         ]
     },
     "subject": {
-        "reference": "Patient/numer-EXM125-FHIR4"
+        "reference": "Patient/gaps-patient01"
     },
     "date": "2020-07-02T13:08:52+00:00",
     "author": [
         {
-            "reference": "Organization/organization-datareporter"
+            "reference": "Organization/gaps-organization-reportingvendor"
         }
     ],
-    "title": "Care Gap Report for patient numer-EXM125-FHIR4",
+    "title": "Care Gap Report for patient gaps-patient01",
     "section": [
         {
             "title": "Colorectal Cancer Screening",
