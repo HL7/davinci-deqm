@@ -307,7 +307,7 @@
     },
     "Task/Task01": {
       "source": "Task-task01.json",
-      "base": "Task-Task01.html"
+      "base": "Task-task01.html"
     },
     "StructureDefinition/practitioner-deqm": {
       "base": "StructureDefinition-practitioner-deqm.html",
