@@ -32,6 +32,10 @@
           }
         }
       ],
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid dict\"><tr><td><b>Name: </b></td><td><b>DOB: </b></td><td><b>Measure: </b></td><td><b>Gap Status: </b></td></tr><tr><td style=\"padding-left: 25px; padding-right: 25px;\">Donald Duck</td><td style=\"padding-left: 25px; padding-right: 25px;\">June 9, 1934</td><td style=\"padding-left: 25px; padding-right: 25px;\">Measure/measure-EXM130-FHIR4-7.2.000</td><td style=\"padding-left: 25px; padding-right: 25px;\">Open</td></tr></table></div>"
+      },
     "status": "complete",
     "type": "individual",
     "measure": "Measure/measure-EXM130-FHIR4-7.2.000",
