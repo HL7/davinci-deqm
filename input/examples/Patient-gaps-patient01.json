@@ -6,9 +6,12 @@
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: gaps-patient01</p><p><b>meta</b>: </p><p><b>identifier</b>: Medical Record Number = 999995992 (USUAL)</p><p><b>name</b>: Parker Bruce </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1965-01-01</p></div>"
+  },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
       "extension": [
         {
           "url": "ombCategory",
@@ -22,10 +25,10 @@
           "url": "text",
           "valueString": "Asian"
         }
-      ]
+      ],
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
     },
     {
-      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
       "extension": [
         {
           "url": "ombCategory",
@@ -39,7 +42,8 @@
           "url": "text",
           "valueString": "Hispanic or Latino"
         }
-      ]
+      ],
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
     }
   ],
   "identifier": [
@@ -66,6 +70,6 @@
       ]
     }
   ],
-  "birthDate": "1965-01-01",
-  "gender": "male"
+  "gender": "male",
+  "birthDate": "1965-01-01"
 }
