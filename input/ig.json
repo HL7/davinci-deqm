@@ -626,6 +626,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "gaps-subject-group01",
+                "reference": {
+                    "reference": "Group/gaps-subject-group01"
+                },
+                "description": "GIC Group01 subject example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Patient01",
                 "reference": {
                     "reference": "Patient/patient01"

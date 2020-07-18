@@ -172,6 +172,9 @@
    <artifact name="gaps-detectedissue01"
              key="DetectedIssue-gaps-detectedissue01"
              id="DetectedIssue/gaps-detectedissue01"/>
+   <artifact name="gaps-subject-group01"
+             key="Group-gaps-subject-group01"
+             id="Group/gaps-subject-group01"/>
    <artifact name="Patient01" key="Patient-patient01" id="Patient/patient01"/>
    <artifact name="DEQM Measure Scoring Extension"
              key="StructureDefinition-extension-measureScoring"
@@ -248,7 +251,6 @@
    <artifact name="Example Bundle - cfa709d6-9011-4619-a809-cdac55bc277e"
              key="Bundle-cfa709d6-9011-4619-a809-cdac55bc277e"
              id="Bundle/cfa709d6-9011-4619-a809-cdac55bc277e"/>
-   <artifact name="" key="Group-subject01" id="Group/subject01"/>
    <artifact name="Gaps In Care Client CapabilityStatement"
              key="CapabilityStatement-gic-client"
              id="CapabilityStatement/gic-client"/>
