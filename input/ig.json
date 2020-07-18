@@ -602,6 +602,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "gaps-indv-measurereport01",
+                "reference": {
+                    "reference": "MeasureReport/gaps-indv-measurereport01"
+                },
+                "description": "GIC Individual MeasureReport01 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Patient01",
                 "reference": {
                     "reference": "Patient/patient01"

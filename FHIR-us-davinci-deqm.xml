@@ -163,6 +163,9 @@
    <artifact name="Coverage03"
              key="Coverage-coverage03"
              id="Coverage/coverage03"/>
+   <artifact name="gaps-indv-measurereport01"
+             key="MeasureReport-gaps-indv-measurereport01"
+             id="MeasureReport/gaps-indv-measurereport01"/>
    <artifact name="Patient01" key="Patient-patient01" id="Patient/patient01"/>
    <artifact name="DEQM Measure Scoring Extension"
              key="StructureDefinition-extension-measureScoring"
@@ -239,36 +242,43 @@
    <artifact name="Example Bundle - cfa709d6-9011-4619-a809-cdac55bc277e"
              key="Bundle-cfa709d6-9011-4619-a809-cdac55bc277e"
              id="Bundle/cfa709d6-9011-4619-a809-cdac55bc277e"/>
+   <artifact name="Care Gap Report for patient numer-EXM125-FHIR4"
+             key="Composition-3fbdaeaa-ab00-477c-aeeb-653130a1bf9c"
+             id="Composition/3fbdaeaa-ab00-477c-aeeb-653130a1bf9c"/>
+   <artifact name=""
+             key="DetectedIssue-5d69ce8b-3b63-4f5b-a70d-82bb608f1cac"
+             id="DetectedIssue/5d69ce8b-3b63-4f5b-a70d-82bb608f1cac"/>
+   <artifact name="" key="Group-subject01" id="Group/subject01"/>
    <artifact name="Gaps In Care Client CapabilityStatement"
              key="CapabilityStatement-gic-client"
              id="CapabilityStatement/gic-client"/>
-   <artifact name="DEQM Gaps In Care Bundle Profile"
-             key="StructureDefinition-gaps-bundle-deqm"
-             id="StructureDefinition/gaps-bundle-deqm"/>
-   <artifact name="DEQM Gaps In Care Gap Status Code System"
-             key="CodeSystem-gaps-status"
-             id="CodeSystem/gaps-status"/>
-   <artifact name="DEQM Gaps In Care Group Profile"
-             key="StructureDefinition-gaps-group-deqm"
-             id="StructureDefinition/gaps-group-deqm"/>
-   <artifact name="DEQM Gaps In Care Document Type Code System"
-             key="CodeSystem-gaps-doc-type"
-             id="CodeSystem/gaps-doc-type"/>
-   <artifact name="DEQM Gaps In Care Gaps Status Value Set"
-             key="ValueSet-gaps-status"
-             id="ValueSet/gaps-status"/>
-   <artifact name="DEQM Gaps In Care Composition Profile"
-             key="StructureDefinition-gaps-composition-deqm"
-             id="StructureDefinition/gaps-composition-deqm"/>
-   <artifact name="Care Gaps Operation"
-             key="OperationDefinition-care-gaps"
-             id="OperationDefinition/care-gaps"/>
    <artifact name="Gaps In Care Server CapabilityStatement"
              key="CapabilityStatement-gic-server"
              id="CapabilityStatement/gic-server"/>
+   <artifact name="DEQM Gaps In Care Document Type Code System"
+             key="CodeSystem-gaps-doc-type"
+             id="CodeSystem/gaps-doc-type"/>
+   <artifact name="DEQM Gaps In Care Gap Status Code System"
+             key="CodeSystem-gaps-status"
+             id="CodeSystem/gaps-status"/>
+   <artifact name="Care Gaps Operation"
+             key="OperationDefinition-care-gaps"
+             id="OperationDefinition/care-gaps"/>
+   <artifact name="DEQM Gaps In Care Bundle Profile"
+             key="StructureDefinition-gaps-bundle-deqm"
+             id="StructureDefinition/gaps-bundle-deqm"/>
+   <artifact name="DEQM Gaps In Care Composition Profile"
+             key="StructureDefinition-gaps-composition-deqm"
+             id="StructureDefinition/gaps-composition-deqm"/>
    <artifact name="DEQM Gaps In Care Detected Issue Profile"
              key="StructureDefinition-gaps-detectedissue-deqm"
              id="StructureDefinition/gaps-detectedissue-deqm"/>
+   <artifact name="DEQM Gaps In Care Group Profile"
+             key="StructureDefinition-gaps-group-deqm"
+             id="StructureDefinition/gaps-group-deqm"/>
+   <artifact name="DEQM Gaps In Care Gaps Status Value Set"
+             key="ValueSet-gaps-status"
+             id="ValueSet/gaps-status"/>
    <artifact name="ExampleScenario" key="ExampleScenario" deprecated="true"/>
    <artifact name="MeasureReport" key="MeasureReport" deprecated="true"/>
    <artifact name="Organization" key="Organization" deprecated="true"/>

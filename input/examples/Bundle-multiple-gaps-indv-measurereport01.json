@@ -32,7 +32,7 @@
                     {
                         "title": "Colorectal Cancer Screening",
                         "focus": {
-                            "reference": "MeasureReport/cac82357-bbef-44f5-b8c6-e1e9ea60d158"
+                            "reference": "MeasureReport/gaps-indv-measurereport01"
                         },
                         "entry": [
                             {
@@ -55,10 +55,10 @@
             }
         },
         {
-            "fullUrl": "MeasureReport/cac82357-bbef-44f5-b8c6-e1e9ea60d158",
+            "fullUrl": "MeasureReport/gaps-indv-measurereport01",
             "resource": {
                 "resourceType": "MeasureReport",
-                "id": "cac82357-bbef-44f5-b8c6-e1e9ea60d158",
+                "id": "gaps-indv-measurereport01",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"
@@ -383,7 +383,7 @@
                     {
                         "detail": [
                             {
-                                "reference": "MeasureReport/cac82357-bbef-44f5-b8c6-e1e9ea60d158"
+                                "reference": "MeasureReport/gaps-indv-measurereport01"
                             }
                         ]
                     }
