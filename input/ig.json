@@ -602,7 +602,7 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "gaps-indv-measurereport01",
+                "name": "Gaps Individual MeasureReport01",
                 "reference": {
                     "reference": "MeasureReport/gaps-indv-measurereport01"
                 },
@@ -610,7 +610,7 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "gaps-composition01",
+                "name": "Gaps Composition01",
                 "reference": {
                     "reference": "Composition/gaps-composition01"
                 },
@@ -618,7 +618,7 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "gaps-detectedissue01",
+                "name": "Gaps DetectedIssue01",
                 "reference": {
                     "reference": "DetectedIssue/gaps-detectedissue01"
                 },
@@ -626,7 +626,7 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "gaps-subject-group01",
+                "name": "GIC Group01 subject",
                 "reference": {
                     "reference": "Group/gaps-subject-group01"
                 },
