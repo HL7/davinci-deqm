@@ -1,0 +1,181 @@
+{
+    "resourceType": "MeasureReport",
+    "id": "gaps-indv-measurereport02",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                        "code": "proportion"
+                    }
+                ]
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+            "valueIdentifier": {
+                "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                "value": "0015HQN9BD3304E"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+            "valueReference": {
+                "reference": "Organization/gaps-organization-reportingvendor"
+            }
+        }
+    ],
+    "status": "complete",
+    "type": "individual",
+    "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm124-FHIR",
+    "subject": {
+        "reference": "Patient/gaps-patient01"
+    },
+    "date": "2020-07-02T13:08:52+00:00",
+    "reporter": {
+        "reference": "Organization/organization01"
+    },
+    "period": {
+        "start": "2019-01-01T00:00:00+00:00",
+        "end": "2019-12-31T00:00:00+00:00"
+    },
+    "improvementNotation": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                "code": "increase"
+            }
+        ]
+    },
+    "group": [
+        {
+            "id": "group-1",
+            "population": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population",
+                                "display": "Initial Population"
+                            }
+                        ]
+                    },
+                    "count": 1
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "numerator",
+                                "display": "Numerator"
+                            }
+                        ]
+                    },
+                    "count": 0
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator",
+                                "display": "Denominator"
+                            }
+                        ]
+                    },
+                    "count": 1
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator-exclusion",
+                                "display": "Denominator Exclusion"
+                            }
+                        ]
+                    },
+                    "count": 0
+                }
+            ],
+            "measureScore": {
+                "value": 0.0
+            }
+        }
+    ],
+    "evaluatedResource": [
+        {
+            "reference": "Encounter/gaps-encounter01",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "reference": "Patient/gaps-patient01",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "reference": "Encounter/gaps-encounter01",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "reference": "Patient/gaps-patient01",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

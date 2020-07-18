@@ -1,6 +1,11 @@
 {
     "resourceType": "Bundle",
     "id": "single-gaps-indv-report01",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"
+        ]
+    },
     "type": "document",
     "entry": [
         {
@@ -24,7 +29,7 @@
                 "date": "2020-07-02T13:08:52+00:00",
                 "author": [
                     {
-                        "reference": "Organization/organization01"
+                        "reference": "Organization/gaps-organization-reportingvendor"
                     }
                 ],
                 "title": "Care Gap Report for patient gaps-patient01",

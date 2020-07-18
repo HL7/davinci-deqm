@@ -166,6 +166,9 @@
    <artifact name="Gaps Individual MeasureReport01"
              key="MeasureReport-gaps-indv-measurereport01"
              id="MeasureReport/gaps-indv-measurereport01"/>
+   <artifact name="Gaps Individual MeasureReport02"
+             key="MeasureReport-gaps-indv-measurereport02"
+             id="MeasureReport/gaps-indv-measurereport02"/>
    <artifact name="Gaps Patient01"
              key="Patient-gaps-patient01"
              id="Patient/gaps-patient01"/>
@@ -181,6 +184,9 @@
    <artifact name="Gaps DetectedIssue01"
              key="DetectedIssue-gaps-detectedissue01"
              id="DetectedIssue/gaps-detectedissue01"/>
+   <artifact name="Gaps DetectedIssue02"
+             key="DetectedIssue-gaps-detectedissue02"
+             id="DetectedIssue/gaps-detectedissue02"/>
    <artifact name="Gaps Group01 subject"
              key="Group-gaps-subject-group01"
              id="Group/gaps-subject-group01"/>

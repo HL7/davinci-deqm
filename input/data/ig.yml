@@ -386,10 +386,22 @@ definition:
       description: GIC DetectedIssue01 example
 
     - exampleBoolean: true
+      name: Gaps DetectedIssue02
+      reference:
+        reference: DetectedIssue/gaps-detectedissue02
+      description: GIC DetectedIssue02 example
+
+    - exampleBoolean: true
       name: Gaps Group01 subject
       reference:
         reference: Group/gaps-subject-group01
       description: GIC Group01 subject example
+
+    - exampleBoolean: true
+      name: Gaps Individual MeasureReport02
+      reference:
+        reference: MeasureReport/gaps-indv-measurereport02
+      description: GIC Individual MeasureReport02 example
 
     - exampleBoolean: true
       name: Task01
