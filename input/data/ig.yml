@@ -404,6 +404,12 @@ definition:
       description: GIC Individual MeasureReport02 example
 
     - exampleBoolean: true
+      name: Gaps Bundle Individual MeasureReports
+      reference:
+        reference: Bundle/single-gaps-indv-report01
+      description: GIC Bundle Individual MeasureReports example
+
+    - exampleBoolean: true
       name: Task01
       reference:
         reference: Task/task01

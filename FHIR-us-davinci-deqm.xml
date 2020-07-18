@@ -190,6 +190,9 @@
    <artifact name="Gaps Group01 subject"
              key="Group-gaps-subject-group01"
              id="Group/gaps-subject-group01"/>
+   <artifact name="Gaps Bundle Individual MeasureReports"
+             key="Bundle-single-gaps-indv-report01"
+             id="Bundle/single-gaps-indv-report01"/>
    <artifact name="Patient01" key="Patient-patient01" id="Patient/patient01"/>
    <artifact name="DEQM Measure Scoring Extension"
              key="StructureDefinition-extension-measureScoring"
@@ -263,9 +266,6 @@
    <artifact name="DEQM MedicationAdministration Profile"
              key="StructureDefinition-medicationadministration-deqm"
              id="StructureDefinition/medicationadministration-deqm"/>
-   <artifact name="Example Bundle - single-gaps-indv-report01"
-             key="Bundle-single-gaps-indv-report01"
-             id="Bundle/single-gaps-indv-report01"/>
    <artifact name="Gaps In Care Client CapabilityStatement"
              key="CapabilityStatement-gic-client"
              id="CapabilityStatement/gic-client"/>

@@ -674,6 +674,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Gaps Bundle Individual MeasureReports",
+                "reference": {
+                    "reference": "Bundle/single-gaps-indv-report01"
+                },
+                "description": "GIC Bundle Individual MeasureReports example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Patient01",
                 "reference": {
                     "reference": "Patient/patient01"
