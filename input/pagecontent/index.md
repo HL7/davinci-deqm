@@ -169,7 +169,7 @@ For additional definitions see the [eCQI Resource Center Glossary]
 
 - *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*
 
-- *Bryn Rhodes, Bryn Rhodes, Dynamic Content Group*
+- *Bryn Rhodes, Dynamic Content Group*
 - *Eric Haas, Health eData Inc*
 - *Floyd Eisenberg, iParsimony LLC*
 - *Jocelyn Keegan, Point of Care Partners*

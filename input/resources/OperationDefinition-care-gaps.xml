@@ -119,7 +119,7 @@
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The result of the care-gaps operation will be returned as a document bundle using the [DEQM Gaps In Care Bundle Profile](StructureDefinition-gaps-bundle-deqm)."/>
+        <documentation value="The result of the care-gaps operation will be returned as a document bundle using the [DEQM Gaps In Care Bundle Profile](StructureDefinition-gaps-bundle-deqm.html)."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>
