@@ -33,14 +33,13 @@
   <differential>
     <element id="MedicationRequest">
       <path value="MedicationRequest"/>
-      <mustSupport value="false"/>
     </element>
     <element id="MedicationRequest.medication[x]">
       <path value="MedicationRequest.medication[x]"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>

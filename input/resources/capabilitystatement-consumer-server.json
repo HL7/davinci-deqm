@@ -122,7 +122,7 @@
                                     "valueCode": "SHALL"
                                 },
                                 {
-                                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-updateType",
+                                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
                                     "valueCode": "incremental"
                                 }
                             ],
