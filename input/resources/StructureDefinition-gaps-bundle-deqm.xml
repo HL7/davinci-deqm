@@ -47,44 +47,40 @@
                 <rules value="open"/>
             </slicing>
             <min value="1"/>
-            <max value="*"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:gapsComposition">
+        <element id="Bundle.entry:gaps_composition_entry">
           <path value="Bundle.entry"/>
-          <sliceName value="gapsComposition"/>
+          <sliceName value="gaps_composition_entry"/>
           <short value="Contains a composition of gaps in care report for an individual for one or more measures"/>
           <min value="1"/>
-          <max value="*"/>
           <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:gapsComposition.resource">
+        <element id="Bundle.entry:gaps_composition_entry.resource">
           <path value="Bundle.entry.resource"/>
+          <short value="This Composition uses the DEQM Gaps In Care Composition Profile"/>
           <min value="1"/>
-          <max value="1"/>
           <type>
             <code value="Composition"/>
-            <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
+            <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
           </type>
-          <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:gapsIndvMeasureReport">
+        <element id="Bundle.entry:gaps_indv_measure_report_entry">
           <path value="Bundle.entry"/>
-          <sliceName value="gapsIndvMeasureReport"/>
+          <sliceName value="gaps_indv_measure_report_entry"/>
           <short value="Contains the gaps in care individual MeasureReport referenced in the gaps in care composition"/>
           <min value="0"/>
           <max value="*"/>
           <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:gapsIndvMeasureReport.resource">
+        <element id="Bundle.entry:gaps_indv_measure_report_entry.resource">
           <path value="Bundle.entry.resource"/>
+          <short value="This MeasureReport uses the DEQM Gaps In Care Individual MeasureReport Profile"/>
           <min value="1"/>
-          <max value="1"/>
           <type>
             <code value="MeasureReport"/>
-            <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
+            <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
           </type>
-          <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>
