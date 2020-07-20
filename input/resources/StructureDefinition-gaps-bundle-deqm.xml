@@ -62,7 +62,7 @@
           <min value="1"/>
           <type>
             <code value="Composition"/>
-            <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
+            <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
           </type>
         </element>
         <element id="Bundle.entry:gaps_indv_measure_report_entry">
@@ -79,7 +79,7 @@
           <min value="1"/>
           <type>
             <code value="MeasureReport"/>
-            <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
+            <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
           </type>
         </element>
     </differential>
