@@ -54,6 +54,7 @@
           <sliceName value="gaps_composition_entry"/>
           <short value="Contains a composition of gaps in care report for an individual for one or more measures"/>
           <min value="1"/>
+          <max value="1"/>
           <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry:gaps_composition_entry.resource">

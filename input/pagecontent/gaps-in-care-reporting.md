@@ -97,7 +97,7 @@ The request below asks for Group id of 123 to be run asynchronously with FHIR+nd
 
 Run $care-gaps operation in an asynchronous mode:
 ```
-GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-07-01_outputFormat=application/fhir+ndjson
+GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-07-01&_outputFormat=application/fhir+ndjson
 ```
 Headers:
 * `Prefer respond-async`
