@@ -169,11 +169,19 @@ definition:
       reference:
         reference: Location/location02
       description: DEQM Location02 example
+
     - exampleBoolean: true
-      name: Single Indv Vte Report
+      name: Single Indv Vte Report Option 1
       reference:
-        reference: Bundle/single-indv-vte-report
-      description: DEQM Single Indv Vte Report example
+        reference: Bundle/single-indv-vte-report-option1
+      description: DEQM Single Indv Vte Report example using MedicationAdministration
+
+    - exampleBoolean: true
+      name: Single Indv Vte Report Option 7
+      reference:
+        reference: Bundle/single-indv-vte-report-option7
+      description: DEQM Single Indv Vte Report example using MedicationRequest
+
     - exampleBoolean: true
       name: Col Submit Collect Obs
       reference:

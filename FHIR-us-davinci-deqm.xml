@@ -56,9 +56,12 @@
    <artifact name="Location02"
              key="Location-location02"
              id="Location/location02"/>
-   <artifact name="Single Indv Vte Report"
-             key="Bundle-single-indv-vte-report"
-             id="Bundle/single-indv-vte-report"/>
+   <artifact name="Single Indv Vte Report Option 1"
+             key="Bundle-single-indv-vte-report-option1"
+             id="Bundle/single-indv-vte-report-option1"/>
+   <artifact name="Single Indv Vte Report Option 7"
+             key="Bundle-single-indv-vte-report-option7"
+             id="Bundle/single-indv-vte-report-option7"/>
    <artifact name="Col Submit Collect Obs"
              key="Parameters-col-submit-collect-obs"
              id="Parameters/col-submit-collect-obs"/>
