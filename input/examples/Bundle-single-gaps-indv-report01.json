@@ -14,7 +14,7 @@
     "timestamp": "2020-07-02T13:08:53+00:00",
     "entry": [
       {
-        "fullUrl": "Composition/gaps-composition01",
+        "fullUrl": "http://example.org/fhir/gaps/Composition/gaps-composition01",
         "resource": {
           "resourceType": "Composition",
           "id": "gaps-composition01",
@@ -74,7 +74,7 @@
         }
       },
       {
-        "fullUrl": "MeasureReport/gaps-indv-measurereport01",
+        "fullUrl": "http://example.org/fhir/gaps/MeasureReport/gaps-indv-measurereport01",
         "resource": {
           "resourceType": "MeasureReport",
           "id": "gaps-indv-measurereport01",
@@ -115,7 +115,7 @@
           ],
           "status": "complete",
           "type": "individual",
-          "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+          "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example",
           "subject": {
             "reference": "Patient/gaps-patient01"
           },
@@ -137,7 +137,7 @@
           },
           "group": [
             {
-              "id": "group-1",
+              "id": "group-exm130",
               "population": [
                 {
                   "code": {
@@ -230,7 +230,7 @@
         }
       },
       {
-        "fullUrl": "MeasureReport/gaps-indv-measurereport02",
+        "fullUrl": "http://example.org/fhir/gaps/MeasureReport/gaps-indv-measurereport02",
         "resource": {
           "resourceType": "MeasureReport",
           "id": "gaps-indv-measurereport02",
@@ -271,7 +271,7 @@
           ],
           "status": "complete",
           "type": "individual",
-          "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm124-FHIR",
+          "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm124-example",
           "subject": {
             "reference": "Patient/gaps-patient01"
           },
@@ -293,7 +293,7 @@
           },
           "group": [
             {
-              "id": "group-1",
+              "id": "group-exm124",
               "population": [
                 {
                   "code": {
@@ -408,7 +408,7 @@
         }
       },
       {
-        "fullUrl": "DetectedIssue/gaps-detectedissue01",
+        "fullUrl": "http://example.org/fhir/gaps/DetectedIssue/gaps-detectedissue01",
         "resource": {
           "resourceType": "DetectedIssue",
           "id": "gaps-detectedissue01",
@@ -446,7 +446,7 @@
         }
       },
       {
-        "fullUrl": "DetectedIssue/gaps-detectedissue02",
+        "fullUrl": "http://example.org/fhir/gaps/DetectedIssue/gaps-detectedissue02",
         "resource": {
           "resourceType": "DetectedIssue",
           "id": "gaps-detectedissue02",
@@ -484,7 +484,7 @@
         }
       },
       {
-        "fullUrl": "Encounter/gaps-encounter01",
+        "fullUrl": "http://example.org/fhir/gaps/Encounter/gaps-encounter01",
         "resource": {
           "resourceType": "Encounter",
           "id": "gaps-encounter01",
@@ -524,7 +524,7 @@
         }
       },
       {
-        "fullUrl": "Patient/gaps-patient01",
+        "fullUrl": "http://example.org/fhir/gaps/Patient/gaps-patient01",
         "resource": {
           "resourceType": "Patient",
           "id": "gaps-patient01",
@@ -602,7 +602,7 @@
         }
       },
       {
-        "fullUrl": "Organization/gaps-organization-reportingvendor",
+        "fullUrl": "http://example.org/fhir/gaps/Organization/gaps-organization-reportingvendor",
         "resource": {
           "resourceType": "Organization",
           "id": "gaps-organization-reportingvendor",

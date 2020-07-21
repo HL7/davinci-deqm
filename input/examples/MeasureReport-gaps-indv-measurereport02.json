@@ -38,7 +38,7 @@
   ],
   "status": "complete",
   "type": "individual",
-  "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm124-FHIR",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm124-example",
   "subject": {
     "reference": "Patient/gaps-patient01"
   },
@@ -60,7 +60,7 @@
   },
   "group": [
     {
-      "id": "group-1",
+      "id": "group-exm124",
       "population": [
         {
           "code": {
