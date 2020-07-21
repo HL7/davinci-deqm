@@ -20,7 +20,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "CapabiltityStatement.rest.resource.operation"
+      "expression": "CapabilityStatement.rest.resource.operation"
     },
     {
       "type": "element",

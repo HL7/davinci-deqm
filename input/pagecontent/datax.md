@@ -107,7 +107,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Discovery:**
 
-  - The Consumer **SHALL** advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  Specifically by applying the extension to the `CapabiltityStatement.rest.resource.operation` element for the Submit Data operation and populating the value the code `incremental` or `snapshot` as shown below:
+  - The Consumer **SHALL** advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  Specifically by applying the extension to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and populating the value the code `incremental` or `snapshot` as shown below:
 
      {% include CapabilityStatement-updatetype-snippet.md %}
 
