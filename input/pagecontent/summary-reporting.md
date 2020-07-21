@@ -37,6 +37,8 @@ for a Bundle Transaction:
 
 `POST|[base]`
 
+{% include error-note.md transaction = 'Summary Reporting' %}
+
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See POST summary Report Example" %}
 
 for an example of a Summary MeasureReport with counts for multiple populations and stratifiers specified in an eCQM see the [Medicare Stratification Example] and the  [COL Summary MeasureReport].  For an example of a Bundle of multiple summary results see the [Bundle Multiple Summ Report].
