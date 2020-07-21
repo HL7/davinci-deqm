@@ -196,6 +196,18 @@
    <artifact name="Gaps Bundle Individual MeasureReports"
              key="Bundle-single-gaps-indv-report01"
              id="Bundle/single-gaps-indv-report01"/>
+   <artifact name="Measure Colorectal Cancer Screening (EXM130)"
+             key="Measure-measure-exm130-example"
+             id="Measure/measure-exm130-example"/>
+   <artifact name="Measure Cervical Cancer Screening (EXM124)"
+             key="Measure-measure-exm124-example"
+             id="Measure/measure-exm124-example"/>
+   <artifact name="Library Colorectal Cancer Screening (EXM130)"
+             key="Library-library-exm130-example"
+             id="Library/library-exm130-example"/>
+   <artifact name="Library Cervical Cancer Screening (EXM124)"
+             key="Library-library-exm124-example"
+             id="Library/library-exm124-example"/>
    <artifact name="Patient01" key="Patient-patient01" id="Patient/patient01"/>
    <artifact name="DEQM Measure Scoring Extension"
              key="StructureDefinition-extension-measureScoring"
@@ -269,18 +281,6 @@
    <artifact name="DEQM MedicationAdministration Profile"
              key="StructureDefinition-medicationadministration-deqm"
              id="StructureDefinition/medicationadministration-deqm"/>
-   <artifact name=""
-             key="Library-library-exm124-example"
-             id="Library/library-exm124-example"/>
-   <artifact name=""
-             key="Library-library-exm130-example"
-             id="Library/library-exm130-example"/>
-   <artifact name="Cervical Cancer Screening Measure"
-             key="Measure-measure-exm124-example"
-             id="Measure/measure-exm124-example"/>
-   <artifact name="Colorectal Cancer Screening Measure"
-             key="Measure-measure-exm130-example"
-             id="Measure/measure-exm130-example"/>
    <artifact name="Gaps In Care Client CapabilityStatement"
              key="CapabilityStatement-gic-client"
              id="CapabilityStatement/gic-client"/>

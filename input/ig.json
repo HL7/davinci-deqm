@@ -690,6 +690,38 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Measure Colorectal Cancer Screening (EXM130)",
+                "reference": {
+                    "reference": "Measure/measure-exm130-example"
+                },
+                "description": "Measure Colorectal Cancer Screening (EXM130) example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Measure Cervical Cancer Screening (EXM124)",
+                "reference": {
+                    "reference": "Measure/measure-exm124-example"
+                },
+                "description": "Measure Cervical Cancer Screening (EXM124) example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Library Colorectal Cancer Screening (EXM130)",
+                "reference": {
+                    "reference": "Library/library-exm130-example"
+                },
+                "description": "Library Colorectal Cancer Screening (EXM130) example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Library Cervical Cancer Screening (EXM124)",
+                "reference": {
+                    "reference": "Library/library-exm124-example"
+                },
+                "description": "Library Cervical Cancer Screening (EXM124) example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Patient01",
                 "reference": {
                     "reference": "Patient/patient01"
