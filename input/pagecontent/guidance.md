@@ -9,7 +9,7 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
 The second scenario defined in this guide is when a Reporter needs to exchange a measure report with a Receiver.  This guide addresses the Individual Measure Reporting and the Summary Reporting.  As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver.  Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
-For the measure reporting scenario, this guide also addresses the Gaps in Care Reporting, which is based on the Individual Measure Reporting to further provide capability of indicating an open and/or a closed gap for a specific measure and managing the resolution of the open gap.
+This version of the guide adds the Gaps in Care Reporting scenarios. The Gaps in Care Reporting is used to report the open and/or closed gap(s) for a specific measure or measures for a gaps through period specified by a Client. It further provides capability of managing the resolution of the open gap(s) and tagging clinical data provided in the report to a specific measure population (i.e. denominator, numerator) of the evaluated measure.
 {:.new-content}
 
   Patient List Reporting is a third reporting type which is similar to a QRDA Category 2 report. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
@@ -46,6 +46,9 @@ For the measure reporting scenario, this guide also addresses the Gaps in Care R
 ### DEQM MeasureReport Profiles
 
 The MeasureReport resource is used as an organizer for both the data exchange scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
+
+The MeasureReport resource is also used for the gaps in care reporting scenario, and a new MeasureReport profile is defined to support the specific needs of gaps in care reporting.
+{:.new-content}
 
 #### Data Exchange
 
