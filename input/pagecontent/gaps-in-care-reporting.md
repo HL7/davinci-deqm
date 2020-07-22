@@ -5,22 +5,27 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 <div class="new-content" markdown="1">
 ### Introduction
 
-A gap in care is defined as a discrepancy between recommended best practices and the services that are actually provided and documented. Identifying, anticipating, and communicating care gaps to provider practices, at the point of care, is critical for providing opportunities to improve care quality and reduce cost of care. To succeed in population health and value-based care, gaps in care must be addressed efficiently and in a timely manner. 
+A gap in care is defined as a discrepancy between recommended best practices and the services that are actually provided and documented. Gaps in care can adversely affect member outcomes and contribute to inappropriate costs. Identifying, anticipating, and communicating care gaps to provider practices, at the point of care, is critical for providing opportunities to improve care quality and reduce cost of care. To succeed in population health and value-based care, gaps in care must be addressed efficiently and in a timely manner.
 
-Another benefit of this type of report is that the organization or tool that collects the data, may have information about the patient that the provider is not aware of. For example, a payer might have paid a claim for a self-ordered mammogram and the provider may not be aware that test was completed. The Gaps in Care report defined here, would allow the payer to share that information with the provider managing the patient’s care.
+For providers and payers to improve population health and value-based care, the following two items must be addressed: gaps in care information and incomplete healthcare information.
 
-Gaps in care information can adversely affect member outcomes and contribute to inappropriate costs. For providers and payers to improve population health value based care two items must be addressed: 1) Gaps in Care Information: Disparities in claims vs. clinical information which makes it difficult to assess if best practices are being followed: e.g. a diabetic member with no A1C or a member being prescribed insulin with no diabetes diagnosis. 2) Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at time of diagnosis to support effective care coordination.
+ - Gaps in Care Information: Disparities in claims vs. clinical information, which makes it difficult to assess if best practices are being followed, e.g., a diabetic member with no A1C or a member being prescribed insulin with no diabetes diagnosis.
 
-Bi-directional, real-time, FHIR-based communication that reconciles payer information with clinical EHR data to ensure best practices are followed, improve outcomes, and exchange information to reduce expense and disruption to provider workflows.
+ Research has shown that care gaps can be both harmful and costly when not properly managed. For example, not managing certain chronic diseases (e.g., diabetes) can lead to serious complications and escalating treatment costs. Resolving gaps in care is important to payers, providers, and the patients they serve. Doing so can positively influence patient health and lead to improvements in quality scores and reimbursement under risk-sharing arrangements such as Medicare.
 
-Research has shown that care gaps can be both harmful and costly when not properly managed. For example, not managing certain chronic diseases (e.g., diabetes) can lead to serious complications and escalating treatment costs. Resolving gaps in care is important to payers, providers, and the patients they serve. Doing so can positively influence patient health and lead to improvements in quality scores and reimbursement under risk-sharing arrangements such as Medicare.
+ There are several potential causes of gaps in care. The most straight forward reason is that the care needed has not yet been provided for the patient. While providers cannot always control these gaps being closed, in many situations it can be easily remedied with an office visit, lab order, prescription or other clinical practices.
 
-There are several potential causes of gaps in care. The most straight forward reason is that the care needed has not yet been provided for the patient. While providers cannot always control these gaps being closed, in many situations it can be easily remedied with an office visit, lab order, prescription or other clinical practices.
+ - Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at the time of diagnosis to support effective care coordination.
 
-Additionally, an organization or tool that contains the data for the patients might be missing information that is documented elsewhere and therefore think a Gap in Care exists.  Using this reporting, the two entities managing the patient’s care can identify where there is an issue with documentation and close that gap.
+ An organization or tool that collects the data, may have information about the patient that the provider is not aware of. For example, a payer might have paid a claim for a self-ordered mammogram and the provider may not be aware that test was completed. Using the gaps in care reporting, it allows the payer to share that information with the provider managing the patient's care, and provides an opportunity to help address incomplete healthcare information.
 
 {% include img-portrait.html img="gic-ecosystem.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
-In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Quality Improvement Ecosystem.  In this case between a clinician and a measurement organization, such as a payer, or quality measurement/ population health tool.   Note that a measurement organization might also make the request of their own system.
+In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Quality Improvement Ecosystem. In this case between a clinician and a measurement organization, such as a payer, or quality measurement/ population health tool.  Note that a measurement organization might also make the request of their own system.
+
+#### Relationship of Individual Reporting and Gaps In Care Reporting
+{:.no_toc}
+
+The Gaps In Care Reporting is built on the Individual Reporting, therefore, the descriptions in the [Reporting Individual Data] section about how to use a MeasureReport resource to represent the results of an individual calculation also applies here. This section is then focused on describing the additional data for gaps in care report specified in the [DEQM Gaps In Care Individual MeasureReport Profile].
 
 ### Gaps in Care Reporting
 
