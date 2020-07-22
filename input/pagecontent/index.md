@@ -27,7 +27,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
   <div class="new-content" markdown="1">
-  -  [Gaps in Care Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the gaps in care reports for a measure.
+  -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the gaps in care reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
   </div>
 
 - [Use cases]\: Three* exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
@@ -38,6 +38,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 
     - [Venous Thromboembolism Prophylaxis (VTE-1)]\: This example is based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the
    Preventative Care Meaningful Measure Area.
+
+   <div class="new-content" markdown="1">
+   -  [Gaps in Care]\: This page lists example use cases for gaps in care reporting.
+   </div>
 
 *Additional use cases are planned and will be published in forth-coming companion documents outside this implementation guide.  A link to these scenarios will be provided here when available.
 {:.stu-note}
@@ -50,6 +54,12 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Downloads]\: This page provides links to downloadable artifacts.
 
+<div class="new-content" markdown="1">
+
+- [Terminology]\: This page lists code systems and value sets defined in this guide.
+
+- [Operations]\: This page lists the Operation that is defined in this guide to exchange gaps in care report.
+</div>  
 
 ### Background
 
@@ -99,12 +109,12 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 <div class="new-content" markdown="1">
 #### Gaps in Care Reporting Scenarios
-Gaps in Care Reporting is added as a new reporting scenario to this version of the guide.
-1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure for the applicable population to a quality reporting receiver
+Gaps in Care Reporting is added as the third group of quality reporting scenarios to this version of the guide.
+1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure for a patient or for a group of patients to a Client.
+
+{% include img-portrait.html  caption = "Figure 1-5 Gaps in Care Reporting Scenarios" img="gaps-reporting-scenario.png" %}
 
 For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
-
-{% include img-portrait.html  caption = "Figure 1-5 Gaps in Care Reporting Scenario" img="gaps-reporting-scenario.png" %}
 
 **Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if providers produce gaps in care reports and submit them to payers, then providers serve as clients in this scenario; if payers produce gaps in care reports and provide them to providers, then payers serve as clients in this scenario.
 
@@ -132,7 +142,7 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
 
 <div class="new-content" markdown="1">
 {: #gaps-through-period}Gaps Through Period
-  : The period of time defined by the reporters for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
+  : The period of time defined by the Clients for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
 </div>
 
 For additional definitions see the [eCQI Resource Center Glossary]
@@ -159,7 +169,6 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |REST|Representational State Transfer|
 |STU3|FHIR Release 3 (STU)|
 |VTE-1|Venous Thromboembolism Prophylaxis Measure|
-
 
 <br />
 

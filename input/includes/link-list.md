@@ -145,3 +145,6 @@
 [$care-gaps]: OperationDefinition-care-gaps.html
 [gaps status value set]:http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status
 [FHIR specification for operation behavior]: {{site.data.fhir.path}}operations.html#response
+[Gaps In Care]: gaps-examples.html
+[Operations]: operations.html
+[Terminology]: terminology.html
