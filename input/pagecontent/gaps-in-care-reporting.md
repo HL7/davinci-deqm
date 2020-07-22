@@ -5,7 +5,7 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 <div class="new-content" markdown="1">
 ### Introduction
 
-A “Gap In Care” is defined as a discrepancy between recommended best practices and the services that are actually provided and documented. To succeed in population health and value-based care, gaps in care and information must be addressed efficiently and in a timely manner. Anticipating or closing gaps in care, at point of care, is an opportunity to improve care quality and cost of care.
+A gap in care is defined as a discrepancy between recommended best practices and the services that are actually provided and documented. Identifying, anticipating, and communicating care gaps to provider practices, at the point of care, is critical for providing opportunities to improve care quality and reduce cost of care. To succeed in population health and value-based care, gaps in care must be addressed efficiently and in a timely manner. 
 
 Another benefit of this type of report is that the organization or tool that collects the data, may have information about the patient that the provider is not aware of. For example, a payer might have paid a claim for a self-ordered mammogram and the provider may not be aware that test was completed. The Gaps in Care report defined here, would allow the payer to share that information with the provider managing the patient’s care.
 
