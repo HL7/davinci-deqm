@@ -131,6 +131,11 @@
 [Measure Scoring]: StructureDefinition-extension-measureScoring.html
 [HL7 Da Vinci Guiding Principles]: https://confluence.hl7.org/display/DVP/Da+Vinci+Clinical+Advisory+Council+Members?preview=/66940155/66942916/Guiding%20Principles%20for%20Da%20Vinci%20Implementation%20Guides.pdf
 [Bundle Multiple Summ Report]: Bundle-multiple-summ-report.html
+[Bundle Multiple Indv Report]: Bundle-multiple-indv-mrp-obs-report.html
 [Software System]: {{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html
 [Default Profiles]: {{site.data.fhir.path}}implementationguide.html#default
 [FHIR specification for operation behavior]: {{site.data.fhir.path}}operations.html#response
+[Datax Measurereport01]: MeasureReport-datax-measurereport01.html
+[Indv Measurereport01]: MeasureReport-indv-measurereport01.html
+[Summ Measurereport01]: MeasureReport-summ-measurereport01.json.html
+[Summary MeasureReport Date of Last Power Outage]: MeasureReport-date-of-last-power-outage.html

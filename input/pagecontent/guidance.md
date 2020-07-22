@@ -67,7 +67,7 @@ The negation patterns described here are about approaches for identifying when e
 
 ### Using Contained Resources in the Response Transaction
 
-[Contained] resources **SHOULD NOT** be used when responding to the submit-data or collect-data operation or to the Individual reporting transactions.  The submit-data and collect-data operation response payload are Parameters resources containing resource parameters. The response to the individual reporting transactions are Bundles. The only time contained resource can be used is when the source data exists only within the context of the transaction. For example, if the only information about the patient's coverage is the payor name, the Coverage resource could be contained by the Patient resource:
+[Contained resources] **SHOULD NOT** be used when responding to the submit-data or collect-data operation or to the Individual reporting transactions.  The data exchange transaction payloads are Parameters resources containing resource parameters. The response to the individual reporting transactions are Bundles. The only time contained resource can be used is when the source data exists only within the context of the transaction. For example, if the only information about the patient's coverage is the payor name, the Coverage resource could be contained by the Patient resource:
 
 ~~~
 {

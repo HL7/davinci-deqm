@@ -107,7 +107,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Discovery:**
 
-  - The Consumer **SHALL** advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  Specifically by applying the extension to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and populating the value the code `incremental` or `snapshot` as shown below:
+  - The Consumer **SHALL** advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  The extension is added to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and the code is valued `incremental` or `snapshot` as shown below:
 
      {% include CapabilityStatement-updatetype-snippet.md %}
 
@@ -115,8 +115,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
    - It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer’s CapabilityStatement.
 
-   - The required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] is used to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
-(update examples to show this)**
+   - The Producer **SHALL** populate the required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
 
   - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
 
@@ -128,7 +127,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
     - For example  `MeasureReport.id` + `MeasureReport.meta.source`, `Patient.id` + `Patient.meta.souce`, etc ... must be the same for all data exchange interactions for a patient and measure during the submission period.
 
-  - Note that versions are of the resource can be accessed using the FHIR RESTful history transaction
+  - Note that resource versions can be accessed using the FHIR RESTful history transaction
 
 **Snapshot Update Requirements and Expectations:**
 
@@ -210,7 +209,7 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Con
 
 {% include error-note.md transaction = 'Collect Data' %}
 
-{% include examplebutton.html example="collect-data-example" b_title = "Click Here To See Example Collect Data operation" %}
+{% include examplebutton.html example="collect-data-example" b_title = "Click Here To See Example Collect Data operation (edited for brevity)" %}
 
 For a complete un-edited example see the [COL Collect Data Operation] example.
 
