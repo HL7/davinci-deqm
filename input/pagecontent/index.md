@@ -142,8 +142,20 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
   : For this Implementation guide, submission period is the period of time in which data can exchanged when describing the FHIR transactions for data exchange, and measure reporting. The submission period typically overlaps with the measurement period and reporting period.
 
 <div class="new-content" markdown="1">
+{: #closed-gap}Closed Gap
+  : No discrepancy between what is defined by a quality measure and the care that is actually provided. A previously identified open gap may become closed, if actions were taken to close the open gaps.  
+
 {: #gaps-through-period}Gaps Through Period
-  : The period of time defined by the Clients for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
+  : The period of time defined by a Client for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
+
+{: #inverse-measure}Inverse Measure
+  : A lower calculated performance rate for this measure indicates better clinical care or control. The Diabetes: Hemoglobin A1c (HbA1c) Poor Control (>9%) measure is an example of inverse measure.
+
+{: #open-gap}Open Gap
+  : A discrepancy between what is defined by a quality measure and the care that is actually provided. For example, individuals missing colonoscopy recommended as specified in the Colorectal Cancer Screening measure based on their age groups. For a positive measure, open gaps are identified if an individual is not in the numerator population as specified by the measure. For an inverse measure, open gaps are identified if an individual is in the numerator population as specified by the measure.
+
+{: #positive-measure}Positive Measure
+  : A higher calculated performance rate for this measure indicates better clinical care or control. The Colorectal Cancer Screening measure is an example of positive measure.
 </div>
 
 For additional definitions see the [eCQI Resource Center Glossary]
