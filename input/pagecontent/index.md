@@ -149,7 +149,7 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
   : The period of time defined by a Client for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
 
 {: #gaps-in-care}Gaps In Care
-  : Gaps in care are defined as discrepancies between recommended best practices and the services that are actually provided and documented. The terms gaps in care and care gaps may be used interchangeably. 
+  : Gaps in care are defined as discrepancies between recommended best practices and the services that are actually provided and documented. The terms gaps in care and care gaps may be used interchangeably.
 
 {: #inverse-measure}Inverse Measure
   : A lower calculated performance rate for this measure indicates better clinical care or control. The Diabetes: Hemoglobin A1c (HbA1c) Poor Control (>9%) measure is an example of inverse measure.

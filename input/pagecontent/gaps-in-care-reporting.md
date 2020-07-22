@@ -29,6 +29,8 @@ The Gaps In Care Reporting is built on the Individual Reporting, therefore, the 
 
 ### Gaps in Care Reporting
 
+Gaps through period is the time period defined by a Client for running the gaps in care report. When the gaps through period ends on a date that is in the future, the Gaps in Care Reporting looks for care gaps prospectively, which provides opportunity for providers to evaluate anticipated gaps and take proper actions to close the gaps. When the gaps through period ends on a date that is in the past, this use case is similar to run a Individual MeasureReport for a measurement period. However, using the care-gaps operation and a set of profiles defined for Gaps In Care Reporting, it offers additional capabilities of reporting open and/closed gaps, tagging granular clinical data that were used for calculating measure populations by the evaluate-measure operation, which supports more robust analytics.  
+
 |Use Case|care-gaps Operation|Gaps Through Period|Report Creation Date|Gaps In Care Report Results|
 |---|---|---|---|---|
 |**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30|2020-01-01 through 2020-09-30|2020-07-01|Returns gaps through 2020-09-30. Example: If the patient had colonoscopy on 2010-07-03, the report would indicate a gap. Since by 2020-09-30, the colonoscopy would be over 10 years.|
