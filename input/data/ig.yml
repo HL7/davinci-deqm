@@ -96,7 +96,7 @@ definition:
       value: CI Build
     - code: excludexml
       value: 'false'
-    - code: escludejsn
+    - code: excludejsn
       value: 'false'
     - code: excludettl
       value: 'false'
