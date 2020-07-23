@@ -3,7 +3,7 @@
   "id": "multiple-gaps-indv-report01",
   "parameter": [
     {
-      "name": "single-gaps-open-indv-report01",
+      "name": "return",
       "resource": {
         "resourceType": "Bundle",
         "id": "single-gaps-open-indv-report01",
@@ -676,7 +676,7 @@
       }
     },
     {
-      "name": "single-gaps-closed-indv-report01",
+      "name": "return",
       "resource": {
         "resourceType": "Bundle",
         "id": "single-gaps-closed-indv-report01",
