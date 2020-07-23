@@ -149,3 +149,4 @@
 [Operations]: operations.html
 [Terminology]: terminology.html
 [DEQM Population Reference Extension]: StructureDefinition-extension-populationReference.html
+[base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html

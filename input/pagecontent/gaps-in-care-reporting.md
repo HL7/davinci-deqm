@@ -25,37 +25,49 @@ In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Q
 #### Relationship of Individual Reporting and Gaps In Care Reporting
 {:.no_toc}
 
-The Gaps In Care Reporting is built on the Individual Reporting, where a new [DEQM Gaps In Care Individual MeasureReport Profile] is created based on the [DEQM Individual MeasureReport Profile] by adding extensions to support Gaps In Care Reporting specific requirements. This allows the Gaps In Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation. The [care-gaps](OperationDefinition-care-gaps.html) operation defines a set of in parameters and an out parameter to run a gaps in care report.
+The Gaps In Care Reporting is built on the Individual Reporting, where a new [DEQM Gaps In Care Individual MeasureReport Profile] is created based on the [DEQM Individual MeasureReport Profile] by adding extensions to support Gaps In Care Reporting specific requirements. This allows the Gaps In Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation.
 
 ### Gaps in Care Reporting
 
+#### Gaps Through Period (Retrospective vs. Prospective)
 Gaps through period is the time period defined by a Client for running the gaps in care report. When the gaps through period ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated open gaps and take proper actions to close the gaps. When the gaps through period ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified open gaps can no longer be acted upon.   
 
 |Use Case|care-gaps Operation|Gaps Through Period|Report Creation Date|Gaps In Care Report Results|
 |---|---|---|---|---|
 |**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30|2020-01-01 through 2020-09-30|2020-07-01|Returns gaps through 2020-09-30. Example: If the patient had colonoscopy on 2010-07-03, the report would indicate a gap. Since by 2020-09-30, the colonoscopy would be over 10 years.|
-|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30|2020-01-01 through 2020-06-30|2020-07-01|Returns gaps through 2020-06-30. Example: If a patient had colonoscopy on 2010-07-03, the report would not ID a gap since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
+|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30|2020-01-01 through 2020-06-30|2020-07-01|Returns gaps through 2020-06-30. Example: If a patient had colonoscopy on 2010-07-03, the report would not indicate a gap. Since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
 
-*Note: If a report is run on 2021-01-03 for a gaps through period from 2020-01-01 to 2020-12-31, this should use $evaluate-measure operation instead of the $care-gaps operation since it is a retrospective report for the entire Performance Period.*
+#### Care Gaps Operation
 
+The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a gaps in care report. In this guide, we have extended the care-gap operation in the R4 Release of the FHIR (FHIR R4) Specification allowing for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a gaps in care report based on quality measures available on the Server’s system.
 
+The [base care-gaps operation] in FHIR R4 only allows for 4 input parameters. Those parameters are still allowed although some of the parameters have been modified. The extended operation, [care-gaps](OperationDefinition-care-gaps.html), makes the following changes to the existing input parameters in the base operation:
+- **periodStart** this existing in parameter is still required, but the description is modified to reference the start date of the gaps through period
+- **periodEnd** this existing in parameter is still required, but the description is modified to reference the end of the gaps through period
+-	**topic** is now an optional parameter and the cardinality is updated to allow providing multiple topics
+-	**subject** can now point to either a patient or a group of patients. Subject is optional when run a gaps in care report for an organization or a practitioner of an organization.
+
+Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) defined in this guide:
+- **practitioner** references a practitioner for which the gaps in care report will be created.
+- **organization** references an organization for which the gaps in care report will be created.
+-	**status** if provided, must be a code from the [gaps-status value set], which indicates an open-gap or a closed-gap. If status parameter is not provided when the care-gaps operation is called, it defaults to both open and closed gaps
+-	**measure** is used to input a measure identifier. A Client may call the care-gaps operation to run the gaps in care report on a measure or a list of measures. As a precondition, the Client must communicate with the Server and know the measure identifiers used by the Server to uniquely identify measures
+-	**program** is used to specify one or more programs that a provider or an organization participates in, for example, risk based, value based, or other performance program such as CMS MIPS, HQR programs.
+
+The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter, **return**. Same as the [base care-gaps operation], the *return* here returns a Bundle resource, but conforms to the [DEQM Gaps In Care Bundle Profile].
+
+Through the requirement analysis of the Gaps In Care Reporting for this ballot, it is determined that care-gaps operation requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
+{:.note-to-balloters}
+
+Figure 2-12 shows a workflow for running the care-gaps operation for a single patient.
 {% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-12 Care Gaps Operation - Single Patient" %}
+
+Figure 2-13 shows a workflow for running the care-gaps operation for a group of patients.
 {% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-13 Care Gaps Operation - Group of Patients" %}
 
-### How to Construct a Gaps in Care Report
-In this guide, we have extended base FHIR R4’s [$care-gap] operation allowing for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a gaps in care report based on quality measures available on the Server’s system.
+#### How to Construct a Gaps In Care Report and Bundle
 
-The base $care-gap operation in FHIR R4 only allows for 4 input parameters. Those parameters are still allowed although some of the parameters have been modified. The periodStart and periodEnd parameters are still required. Topic is still present but optional. And subject has been modified as below. The output parameter is still a document bundle but further definition has been added.
-The extended operation, [$care-gaps] operation, makes the following changes to the existing input parameters:
--	**topic** is an optional parameter, but cardinalities is updated to 0 to many to allow multiple topics be specified
--	**subject** can now point to either a patient or a group of patients, as profiled in the [DEQM Gaps In Care Group Profile]
-New optional input parameters are as follows:
-- **practitioner** – this is a reference to a [DEQM Practitioner]. Only 1 practitioner can be specified
-- **organization** – this is a reference to a [DEQM Organization].  Only a single Organization resource can be used
--	**status** – this must be a code from the [gaps-status value set], which indicates an open-gap or a closed-gap. This is an optional parameter. If status is not provided as an input parameter when running the $care-gaps operation, the gaps in care reports return both open and closed gaps
--	**measure** – this is a string input parameter that allows for you to specify one or more measure for which you want a gaps in care report.  You will need to check with the server where you are running your measures to identify how measures are enumerated on their system, i.e. Colorectal Cancer Screening or ABS or CMS111, etc.
--	**program** – this is another string input parameter that allows you to specify one or more programs that your provider or organization participates in, example risk based, value based, or other performance program such as CMS MIPS, HQR programs. See the care-gaps operation for additional details on using this parameter
-- The output parameter, **return**, has been modified.  It still allows for the return of a document bundle for each patient for which a report is generated but the bundle is now profiled, [Gaps In Care Bundle Profile]. As profiled, the document that is returned is further constrained to use the [DEQM Gaps In Care Composition Profile] and [DEQM Gaps In Care Individual MeasureReport Profile]. The [DEQM Gaps in Care Composition Profile] modifies the base FHIR Composition to have a specific code to identify the composition as a Gaps in Care report. The patient and organization are profiled to use QI Core and DEQM profiles respectively. It also requires a reference to the [DEQM Gaps in Care Individual Measure Report]. And allows for a reference to a [DEQM Gaps In Care Detected Issue Profile]; this profile is explained further below. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
+The [care-gaps](OperationDefinition-care-gaps.html) operation returns a document bundle for each patient for which a gaps in care report is generated, the bundle must conform to the [DEQM Gaps In Care Bundle Profile]. As profiled, the document that is returned is further constrained to use the [DEQM Gaps In Care Composition Profile] and [DEQM Gaps In Care Individual MeasureReport Profile]. The [DEQM Gaps in Care Composition Profile] modifies the base FHIR Composition to have a specific code to identify the composition as a Gaps in Care report. The patient and organization are profiled to use QI Core and DEQM profiles respectively. It also requires a reference to the [DEQM Gaps in Care Individual Measure Report]. And allows for a reference to a [DEQM Gaps In Care Detected Issue Profile]; this profile is explained further below. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
 The [DEQM Gaps In Care Individual MeasureReport Profile] is based on the [DEQM Individual MeasureReport Profile] but has added an optional extension to the Evaluated Resources to allow you to indicate how the resource contributed to the measure population type, i.e. initial population, numerator, denominator, numerator-exclusion, etc.
 
