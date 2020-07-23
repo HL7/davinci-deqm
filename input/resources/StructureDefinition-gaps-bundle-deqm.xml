@@ -65,6 +65,7 @@
             <code value="Composition"/>
             <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
           </type>
+          <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry:gaps_indv_measure_report_entry">
           <path value="Bundle.entry"/>
@@ -82,6 +83,7 @@
             <code value="MeasureReport"/>
             <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
           </type>
+          <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>

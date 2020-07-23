@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="care-gaps"/>
     <url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/care-gaps"/>
-    <name value="care-gaps"/>
+    <name value="Care Gaps"/>
     <title value="Care Gaps Operation"/>
     <status value="draft"/>
     <kind value="operation"/>

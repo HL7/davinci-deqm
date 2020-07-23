@@ -4,7 +4,6 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 
 <div class="new-content" markdown="1">
 ###  Introduction
-(Contents under construction ....)
 
 The Gaps In Care is a powerful report that when used along with other DEQM functionality can result in better care results for the payer, the provider and most importantly the patient.  Below we show a simplistic example to show its potential power.
 
@@ -38,16 +37,36 @@ Later, the provider again runs the same report but with an updated periodEnd dat
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
 
-### Care Gaps Operation {#care-gaps}
+### Care Gaps Operation
 {:.no_toc}
-The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
+A Client, such as a provider, will use the [care-gaps](OperationDefinition-care-gaps.html) operation to request a report from the Server, such as a payer, on his/her patients that have Colorectal Cancer Screening gaps in care. When the provider sees that he/she has a patient showing as having an open gap, she/he looks at the chart and sees that a FitDNA test was done. He/she then submits a DEQM Data Exchange MeasureReport and the referenced resources required as supporting evidence for Colorectal Cancer Screening to the payer. Later, the provider repeats the care-gaps operation for Colorectal Cancer Screening to ensure the gaps is now closed.
+
+The Figure 3-22 shows the workflow for gaps in care.
 
 {% include img-portrait.html img="gaps-swimlane-caregap-report.png" caption = "Figure 3-22 Care Gaps Workflow" %}
 
 ### Gaps In Care MeasureReport
 {:.no_toc}
 
-{% include img-portrait.html img="gic-example-col.png" caption = "Figure 3-23 Gaps in Care Resources Colorectal Cancer Screening Measure Example" %}
+The resource graphs below represents the structure of the resources returned in the first [care-gaps](OperationDefinition-care-gaps.html) operation.  Notice there are two patients.  The first is the patient with the open gap because there were no resources in the payers system related to Gaps in Care.  It also contains a Detected Issue resource for tracking that this is an open gap
+
+The second patient has a closed gap.  You notice on the left the evaluatedResources point to two resources that closed the gap, a colonoscopy in 2018 and a fecal occult blood test in 2019.  You will also notice that because the gap is closed, there is no Detected Issue Resource present.
+
+{% include img-portrait.html img="gic-colonoscopy-example-pt1-step1-open-gap.png" caption = "Figure 3-23 Gaps in Care Resources Colonoscopy Patient 1 Example - Initial Run Gaps In Care Report Shows Open Gap" %}
+
+{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-24 Gaps in Care Resources Colonoscopy Patient 2 Example - Initial Run Gaps In Care Report Shows No Gap" %}
+
+{% include examplebutton.html example="get-gaps-bundle-initial-run-example" b_title = "Click Here To See Example of the Gaps In Care Report $care-gaps Was Run Initially" %}
+
+Because the provider knows the first patient has an open Colorectal Cancer Screening, but he as an FitDNA result for the patient, he needs to send this observation to the payer.  To do that he will use the DEQM Data Exchange profile(s) to accomplish that. Please see Colorectal Cancer Screening (COL) Use Case for details on how to complete the DEQM Data Exchange.
+
+Several days later he reruns the Colorectal Cancer Screening care gaps report and confirms that the gap for the first patient was closed.  Note in the Resource Graph below that there is no longer a Detected Issue because both gaps are closed.  And the first patient now has the FitDNA Observation as an evaluated resource.
+
+{% include img-portrait.html img="gic-colonoscopy-example-pt1-step3-gap-closed.png" caption = "Figure 3-25 Gaps in Care Resources Colonoscopy Patient 1 Example - Gaps In Care Report Shows Gap Closed When Re-Run" %}
+
+{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-26 Gaps in Care Resources Colonoscopy Patient 2 Example - Gaps In Care Report Still Shows No Gap When Re-Run" %}
+
+{% include examplebutton.html example="get-gaps-bundle-rerun-example" b_title = "Click Here To See Example of the Gaps In Care Report When Rerun $care-gaps after submit-data" %}
 
 ---
 </div>
