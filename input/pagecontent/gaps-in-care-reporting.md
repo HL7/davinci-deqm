@@ -97,13 +97,8 @@ The following resources are used in the Gaps In Care Reporting scenario:
 Figure 2-14 provides a graphic view of how these resources are related.
 {% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
 
-### Gaps in Care Reporting
-(TODO: descriptions about gaps in care reporting)
-
 #### Usage
 {:.no_toc}
-
-`POST|[base]`
 
 ##### Bulk Data
 {:.no_toc}  
