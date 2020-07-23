@@ -626,6 +626,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Gaps Individual MeasureReport03",
+                "reference": {
+                    "reference": "MeasureReport/gaps-indv-measurereport03"
+                },
+                "description": "GIC Individual MeasureReport03 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Gaps Patient01",
                 "reference": {
                     "reference": "Patient/gaps-patient01"
@@ -634,11 +642,35 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Gaps Patient02",
+                "reference": {
+                    "reference": "Patient/gaps-patient02"
+                },
+                "description": "GIC Patient02 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Gaps Encounter01",
                 "reference": {
                     "reference": "Encounter/gaps-encounter01"
                 },
                 "description": "GIC Encounter01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Encounter02",
+                "reference": {
+                    "reference": "Encounter/gaps-encounter02"
+                },
+                "description": "GIC Encounter02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Procedure01",
+                "reference": {
+                    "reference": "Procedure/gaps-procedure01"
+                },
+                "description": "GIC Procedure01 example"
             },
             {
                 "exampleBoolean": true,
@@ -655,6 +687,14 @@
                     "reference": "Composition/gaps-composition01"
                 },
                 "description": "GIC Composition01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Composition02",
+                "reference": {
+                    "reference": "Composition/gaps-composition02"
+                },
+                "description": "GIC Composition02 example"
             },
             {
                 "exampleBoolean": true,

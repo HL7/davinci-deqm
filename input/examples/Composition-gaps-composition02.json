@@ -1,0 +1,41 @@
+{
+  "resourceType": "Composition",
+  "id": "gaps-composition02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"
+    ]
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type",
+        "code": "gaps-doc",
+        "display": "Gaps in Care Report"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/gaps-patient02"
+  },
+  "date": "2020-06-30T13:08:53+00:00",
+  "author": [
+    {
+      "reference": "Organization/gaps-organization-reportingvendor"
+    }
+  ],
+  "title": "Care Gap Report for patient gaps-patient02",
+  "section": [
+    {
+      "title": "Colorectal Cancer Screening",
+      "focus": {
+        "reference": "MeasureReport/gaps-indv-measurereport03"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>No detected issues.</p></div>"
+      }
+    }
+  ]
+}

@@ -48,6 +48,10 @@
             "title": "Colorectal Cancer Screening",
             "focus": {
               "reference": "MeasureReport/gaps-indv-measurereport03"
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>No detected issues.</p></div>"
             }
           }
         ]

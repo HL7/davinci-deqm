@@ -284,10 +284,10 @@ definition:
       description: DEQM Encounter03 example
 
     - exampleBoolean: true
-      name: Observation03
+      name: ObservationDNA-occultblood
       reference:
         reference: Observation/DNA-occultblood
-      description: DEQM Observation03 example
+      description: DEQM Observation DNA-occultblood example
     - exampleBoolean: true
       name: Single Indv Mrp Task Report
       reference:
@@ -382,10 +382,31 @@ definition:
       description: GIC Reporting Vendor Organization example
 
     - exampleBoolean: true
+      name: Gaps Patient02
+      reference:
+        reference: Patient/gaps-patient02
+      description: GIC Patient02 example
+    - exampleBoolean: true
+      name: Gaps Encounter02
+      reference:
+        reference: Encounter/gaps-encounter02
+      description: GIC Encounter02 example
+    - exampleBoolean: true
+      name: Gaps Procedure01
+      reference:
+        reference: Procedure/gaps-procedure01
+      description: GIC Procedure01 example
+
+    - exampleBoolean: true
       name: Gaps Composition01
       reference:
         reference: Composition/gaps-composition01
       description: GIC Composition01 example
+    - exampleBoolean: true
+      name: Gaps Composition02
+      reference:
+        reference: Composition/gaps-composition02
+      description: GIC Composition02 example
 
     - exampleBoolean: true
       name: Gaps DetectedIssue01
@@ -412,10 +433,22 @@ definition:
       description: GIC Individual MeasureReport02 example
 
     - exampleBoolean: true
+      name: Gaps Individual MeasureReport03
+      reference:
+        reference: MeasureReport/gaps-indv-measurereport03
+      description: GIC Individual MeasureReport03 example
+
+    - exampleBoolean: true
       name: Gaps Bundle Open Individual MeasureReports
       reference:
         reference: Bundle/single-gaps-open-indv-report01
       description: GIC Bundle Open Individual MeasureReports example
+
+    - exampleBoolean: true
+      name: Gaps Bundle Closed Individual MeasureReport02
+      reference:
+        reference: Bundle/single-gaps-closed-indv-report02
+      description: GIC Bundle Closed Individual MeasureReport02 example
 
     - exampleBoolean: true
       name: Measure Colorectal Cancer Screening (EXM130)
