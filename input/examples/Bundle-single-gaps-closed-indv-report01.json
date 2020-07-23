@@ -23,6 +23,10 @@
             "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"
           ]
         },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
         "status": "final",
         "type": {
           "coding": [
@@ -66,6 +70,10 @@
           "profile": [
             "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"
           ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
         },
         "extension": [
           {
@@ -219,6 +227,10 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
           ]
         },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
+        },
         "status": "finished",
         "class": {
           "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -251,22 +263,26 @@
         "resourceType": "Procedure",
         "id": "gaps-procedure01",
         "meta": {
-            "profile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
-            ]
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
         },
         "status": "completed",
         "code": {
-            "coding": [
-                {
-                    "system": "http://www.ama-assn.org/go/cpt",
-                    "code": "44393",
-                    "display": "Colonoscopy through stoma; with ablation of tumor(s), polyp(s), or other lesion(s) not amenable to removal by hot biopsy forceps, bipolar cautery or snare technique"
-                }
-            ]
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "44393",
+              "display": "Colonoscopy through stoma; with ablation of tumor(s), polyp(s), or other lesion(s) not amenable to removal by hot biopsy forceps, bipolar cautery or snare technique"
+            }
+          ]
         },
         "subject": {
-            "reference": "Patient/gaps-patient02"
+          "reference": "Patient/gaps-patient02"
         },
         "performedPeriod": {
           "start": "2018-09-10T08:00:00-00:00",
@@ -283,6 +299,10 @@
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
         },
         "extension": [
           {
@@ -357,6 +377,10 @@
           "profile": [
             "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
           ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p></div>"
         },
         "identifier": [
           {
