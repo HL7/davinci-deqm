@@ -229,6 +229,12 @@
    <artifact name="Gaps Bundle Closed Individual MeasureReport02"
              key="Bundle-single-gaps-closed-indv-report02"
              id="Bundle/single-gaps-closed-indv-report02"/>
+   <artifact name="Gaps Multiple Bundles Individual MeasureReports01"
+             key="Parameters-multiple-gaps-indv-report01"
+             id="Parameters/multiple-gaps-indv-report01"/>
+   <artifact name="Gaps Multiple Bundles Individual MeasureReports02"
+             key="Parameters-multiple-gaps-indv-report02"
+             id="Parameters/multiple-gaps-indv-report02"/>
    <artifact name="Measure Colorectal Cancer Screening (EXM130)"
              key="Measure-measure-exm130-example"
              id="Measure/measure-exm130-example"/>
