@@ -65,25 +65,26 @@ Figure 2-12 shows a workflow for running the care-gaps operation for a single pa
 Figure 2-13 shows a workflow for running the care-gaps operation for a group of patients.
 {% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-13 Care Gaps Operation - Group of Patients" %}
 
-#### How to Construct a Gaps In Care Report and Bundle
+#### How to Construct a Gaps In Care Report
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation returns a document bundle for each patient for which a gaps in care report is generated, the bundle must conform to the [DEQM Gaps In Care Bundle Profile]. As profiled, the document that is returned is further constrained to use the [DEQM Gaps In Care Composition Profile] and [DEQM Gaps In Care Individual MeasureReport Profile]. The [DEQM Gaps in Care Composition Profile] modifies the base FHIR Composition to have a specific code to identify the composition as a Gaps in Care report. The patient and organization are profiled to use QI Core and DEQM profiles respectively. It also requires a reference to the [DEQM Gaps in Care Individual Measure Report]. And allows for a reference to a [DEQM Gaps In Care Detected Issue Profile]; this profile is explained further below. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
+This section describes the profiles used for Gaps In Care Reporting and how they are used to construct a gaps in care report.
 
-The [DEQM Gaps In Care Individual MeasureReport Profile] is based on the [DEQM Individual MeasureReport Profile] but has added an optional extension to the Evaluated Resources to allow you to indicate how the resource contributed to the measure population type, i.e. initial population, numerator, denominator, numerator-exclusion, etc.
+The [care-gaps](OperationDefinition-care-gaps.html) operation returns a document bundle for each patient for which a gaps in care report is generated, the bundle must conform to the [DEQM Gaps In Care Bundle Profile]. A Gaps In Care Bundle must contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile].
 
-Another new profile added to the Gaps in Care Bundle, is the [DEQM Gaps In Care DetectedIssue Profile]. This resource should only be created when there is an open gap. In addition to being a simplistic way to determine if the patient has an open gap (Measure Report contains this information as well in measure score), it can also be loaded by receiving systems and used as a way to track the open gap to resolution.  
+The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition, where its type code is constrained to a specific code to identify the Composition as a gaps in care report. The subject of a Gaps In Care Composition is required, it is used to reference the individual, [QI Core Patient], the gaps in care report is for. The Gaps In Care Composition must contain one to many section(s). Each section references a Gaps In Care Individual MeasureReport for a specific measure. All Gaps In Care Individual MeasureReport referenced must be for the same individual specified in the subject.
 
-The code in the Detected Issue contains the value “care-gap”.  Since the value to represent this type of issue did not exist on the referenced code system but extensions are allowed, we added care-gaps value and code system. The evidence for this Detected Issue points to the DEQM Gaps In Care Individual Measure Report which will identify the specific measure that has not been closed.  As with all other DEQM profiles, we reference the QI Core profile on patient.
+- The Gaps In Care Individual MeasureReport must conform to the [Gaps In Care Individual MeasureReport Profile]. This profile is based on the [DEQM Individual MeasureReport Profile] and adds an optional extension, [DEQM Population Reference Extension], to the evaluatedResource. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the measure population type, i.e. initial population, numerator, denominator, numerator-exclusion, etc.
+
+- If an open gap is identified for a measure that is included in the Gaps In Care Composition, then this Composition must also contain an entry of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure. There must be one DetectedIssue entry for each measure that has open gaps. This resource should only be created when there is an open gap. In addition to being a simplistic way to determine if the patient has an open gap (MeasureReport contains this information as well in measureScore), it can also be loaded by the Client and used as a way to track the open gap to resolution. Note that the code in the Detected Issue contains the value “care-gap”. Since the value to represent this type of issue did not exist on the referenced code system but extensions are allowed, we added care-gaps value and code system. The evidence for this DetectedIssue points to the DEQM Gaps In Care Individual MeasureReport which will identify the specific measure that has not been closed.  
+
+- The Gaps In Care Composition may also contain all supporting resources referenced by the composition and its contained measure reports. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
 #### Attribution
 Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for gaps in care reports is not in the scope of the DEQM IG. Gaps in care reporting references the standards specified in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG] for exchanging Member Attribution Lists between providers and payers.
 
-#### Future Considerations
-Structure measures are not in scope for this version. Structure measure that is not patient centric, such as measuring number of ventilators of an organization.
-
 ### Default Profiles
 
-The following resources are used in the gaps in care measure reporting scenario:
+The following resources are used in the Gaps In Care Reporting scenario:
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
@@ -91,17 +92,13 @@ The following resources are used in the gaps in care measure reporting scenario:
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
-|Individual MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
+|MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
 
+Figure 2-14 provides a graphic view of how these resources are related.
 {% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
-
-### Gaps in Care Reporting
-(TODO: descriptions about gaps in care reporting)
 
 #### Usage
 {:.no_toc}
-
-`POST|[base]`
 
 ##### Bulk Data
 {:.no_toc}  
