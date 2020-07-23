@@ -56,7 +56,7 @@ The second patient has a closed gap.  You notice on the left the evaluatedResour
 
 {% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-24 Gaps in Care Resources Colonoscopy Patient 2 Example - Initial Run Gaps In Care Report Shows No Gap" %}
 
-{% include examplebutton.html example="post-indv-report-example" b_title = "This is a placeholder, example coming" %}
+{% include examplebutton.html example="get-gaps-bundle-initial-run-example" b_title = "Click Here To See Example of the Gaps In Care Report $care-gaps Was Run Initially" %}
 
 Because the provider knows the first patient has an open Colorectal Cancer Screening, but he as an FitDNA result for the patient, he needs to send this observation to the payer.  To do that he will use the DEQM Data Exchange profile(s) to accomplish that. Please see Colorectal Cancer Screening (COL) Use Case for details on how to complete the DEQM Data Exchange.
 
@@ -66,7 +66,7 @@ Several days later he reruns the Colorectal Cancer Screening care gaps report an
 
 {% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-26 Gaps in Care Resources Colonoscopy Patient 2 Example - Gaps In Care Report Still Shows No Gap When Re-Run" %}
 
-{% include examplebutton.html example="post-indv-report-example" b_title = "This is a placeholder, example coming" %}
+{% include examplebutton.html example="get-gaps-bundle-rerun-example" b_title = "Click Here To See Example of the Gaps In Care Report When Rerun $care-gaps after submit-data" %}
 
 ---
 </div>
