@@ -54,6 +54,17 @@
                 "reference": "DetectedIssue/gaps-detectedissue01"
               }
             ]
+          },
+          {
+            "title": "Cervical Cancer Screening",
+            "focus": {
+              "reference": "MeasureReport/gaps-indv-measurereport02"
+            },
+            "entry": [
+              {
+                "reference": "DetectedIssue/gaps-detectedissue02"
+              }
+            ]
           }
         ]
       }
