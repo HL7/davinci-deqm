@@ -89,6 +89,7 @@
 [QI Core Procedure]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-procedure.html
 [QI Core ServiceRequest]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-servicerequest.html
 [QI Core Task]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-task.html
+[QICoreMedicationNotRequested]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-medicationnotrequested.html
 [QI Core Profiles]: {{site.data.fhir.qicore}}/index.html
 [QI Core]: {{site.data.fhir.qicore}}/index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
@@ -139,3 +140,5 @@
 [Indv Measurereport01]: MeasureReport-indv-measurereport01.html
 [Summ Measurereport01]: MeasureReport-summ-measurereport01.json.html
 [Summary MeasureReport Date of Last Power Outage]: MeasureReport-date-of-last-power-outage.html
+[VTE-1 USE Case Option 7]: vte1.html#option-7-measure-report-using-medicationrequest-devicerequest-medicationstatement-or-deviceusestatement
+[Single Indv Vte Report Option 7]: Bundle-single-indv-vte-report-option7.html

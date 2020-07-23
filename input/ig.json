@@ -175,7 +175,7 @@
                 "value": "false"
             },
             {
-                "code": "escludejsn",
+                "code": "excludejsn",
                 "value": "false"
             },
             {
@@ -643,12 +643,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/medicationrequest-deqm"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "StructureDefinition/practitioner-deqm"
                 }
             },
@@ -806,11 +800,6 @@
                     "generation": "markdown",
                     "nameUrl": "profiles.html",
                     "page": [
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-medicationrequest-deqm.html",
-                            "title": "StructureDefinition MedicationRequest Deqm"
-                        },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-practitioner-deqm.html",

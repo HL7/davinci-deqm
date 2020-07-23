@@ -179,9 +179,6 @@
    <artifact name="DEQM Reporter Group Extension"
              key="StructureDefinition-extension-reporterGroup"
              id="StructureDefinition/extension-reporterGroup"/>
-   <artifact name="DEQM MedicationRequest Profile"
-             key="StructureDefinition-medicationrequest-deqm"
-             id="StructureDefinition/medicationrequest-deqm"/>
    <artifact name="DEQM Practitioner Profile"
              key="StructureDefinition-practitioner-deqm"
              id="StructureDefinition/practitioner-deqm"/>

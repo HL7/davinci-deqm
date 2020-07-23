@@ -23,7 +23,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
 |MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
-|MedicationRequest|DEQM MedicationRequest Profile|[DEQM MedicationRequest]|
+|MedicationRequest|Qi Core Medication Not Requested|[QICoreMedicationNotRequested]|
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|

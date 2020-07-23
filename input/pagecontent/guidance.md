@@ -61,9 +61,9 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 ### Negation Patterns for Quality Measures
 
-​Refer to the Quality Measure Implementation Guide for guidance on [negation patterns in quality measurements]. Note that implementations processing negated data may not be returned with a single code, but rather a value set identifier represented by the [Valueset Reference extension] which are part of the QI Core profiles, and should consider data with the appropriate value set identifier as satisfying the criteria for value set membership.
+​Refer to the Quality Measure Implementation Guide for guidance on [negation patterns in quality measurements]. Note that implementations processing negated data may not be returned with a single code, but rather a value set identifier represented by the [Valueset Reference extension] which are part of the QI Core profiles, and should consider data with the appropriate value set identifier as satisfying the criteria for value set membership. The negation pattern for the MedicationRequest resource is demonstrated in the [Single Indv Vte Report Option 7] example.
 
-The negation patterns described here are about approaches for identifying when events are not present or when events are documented as not occurring for a reason. These patterns may appear throughout a measure in any of the various population criteria, depending on measure intent. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed.
+The negation patterns described here are about approaches for identifying when events are not present or when events are documented as not occurring for a reason. These patterns may appear throughout a measure in any of the various population criteria, depending on measure intent. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. An example of this is the [VTE-1 USE Case Option 7].
 
 ### Using Contained Resources in the Response Transaction
 
