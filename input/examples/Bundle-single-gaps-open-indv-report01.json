@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "single-gaps-indv-report01",
+  "id": "single-gaps-open-indv-report01",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"

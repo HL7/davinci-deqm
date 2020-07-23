@@ -682,11 +682,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Gaps Bundle Individual MeasureReports",
+                "name": "Gaps Bundle Open Individual MeasureReports",
                 "reference": {
-                    "reference": "Bundle/single-gaps-indv-report01"
+                    "reference": "Bundle/single-gaps-open-indv-report01"
                 },
-                "description": "GIC Bundle Individual MeasureReports example"
+                "description": "GIC Bundle Open Individual MeasureReports example"
             },
             {
                 "exampleBoolean": true,

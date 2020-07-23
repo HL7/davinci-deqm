@@ -412,10 +412,10 @@ definition:
       description: GIC Individual MeasureReport02 example
 
     - exampleBoolean: true
-      name: Gaps Bundle Individual MeasureReports
+      name: Gaps Bundle Open Individual MeasureReports
       reference:
-        reference: Bundle/single-gaps-indv-report01
-      description: GIC Bundle Individual MeasureReports example
+        reference: Bundle/single-gaps-open-indv-report01
+      description: GIC Bundle Open Individual MeasureReports example
 
     - exampleBoolean: true
       name: Measure Colorectal Cancer Screening (EXM130)

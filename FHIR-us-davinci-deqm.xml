@@ -193,9 +193,9 @@
    <artifact name="Gaps Group01 subject"
              key="Group-gaps-subject-group01"
              id="Group/gaps-subject-group01"/>
-   <artifact name="Gaps Bundle Individual MeasureReports"
-             key="Bundle-single-gaps-indv-report01"
-             id="Bundle/single-gaps-indv-report01"/>
+   <artifact name="Gaps Bundle Open Individual MeasureReports"
+             key="Bundle-single-gaps-open-indv-report01"
+             id="Bundle/single-gaps-open-indv-report01"/>
    <artifact name="Measure Colorectal Cancer Screening (EXM130)"
              key="Measure-measure-exm130-example"
              id="Measure/measure-exm130-example"/>
@@ -281,6 +281,12 @@
    <artifact name="DEQM MedicationAdministration Profile"
              key="StructureDefinition-medicationadministration-deqm"
              id="StructureDefinition/medicationadministration-deqm"/>
+   <artifact name="Example Bundle - Bundle-single-gaps-closed-indv-report02"
+             key="Bundle-Bundle-single-gaps-closed-indv-report02"
+             id="Bundle/Bundle-single-gaps-closed-indv-report02"/>
+   <artifact name="Example Bundle - Bundle-single-gaps-closed-indv-report03"
+             key="Bundle-Bundle-single-gaps-closed-indv-report03"
+             id="Bundle/Bundle-single-gaps-closed-indv-report03"/>
    <artifact name="Gaps In Care Client CapabilityStatement"
              key="CapabilityStatement-gic-client"
              id="CapabilityStatement/gic-client"/>
