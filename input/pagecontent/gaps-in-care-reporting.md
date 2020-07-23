@@ -54,9 +54,9 @@ Several new input parameters are specified and added to the [care-gaps](Operatio
 -	**measure** is used to input a measure identifier. A Client may call the care-gaps operation to run the gaps in care report on a measure or a list of measures. As a precondition, the Client must communicate with the Server and know the measure identifiers used by the Server to uniquely identify measures
 -	**program** is used to specify one or more programs that a provider or an organization participates in, for example, risk based, value based, or other performance program such as CMS MIPS, HQR programs.
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter, **return**. Same as the [base care-gaps operation], the *return* here returns a Bundle resource, but conforms to the [DEQM Gaps In Care Bundle Profile].
+The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter, **return**. In comparison to the return output parameter specified in the [base care-gaps operation], the *return* here returns a Bundle resource, but conforms to the [DEQM Gaps In Care Bundle Profile]. It now also allows 0 to many bundles to be returned.
 
-Through the requirement analysis of the Gaps In Care Reporting for this ballot, it is determined that care-gaps operation requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
+Through the requirement analysis of the Gaps In Care Reporting for this ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
 {:.note-to-balloters}
 
 Figure 2-12 shows a workflow for running the care-gaps operation for a single patient.
@@ -71,7 +71,7 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation returns a document
 
 The [DEQM Gaps In Care Individual MeasureReport Profile] is based on the [DEQM Individual MeasureReport Profile] but has added an optional extension to the Evaluated Resources to allow you to indicate how the resource contributed to the measure population type, i.e. initial population, numerator, denominator, numerator-exclusion, etc.
 
-Another new profile added to the Gaps in Care Bundle, is the [DEQM Gaps In Care Detected Issue Profile]. This resource should only be created when there is an open gap. In addition to being a simplistic way to determine if the patient has an open gap (Measure Report contains this information as well in measure score), it can also be loaded by receiving systems and used as a way to track the open gap to resolution.  
+Another new profile added to the Gaps in Care Bundle, is the [DEQM Gaps In Care DetectedIssue Profile]. This resource should only be created when there is an open gap. In addition to being a simplistic way to determine if the patient has an open gap (Measure Report contains this information as well in measure score), it can also be loaded by receiving systems and used as a way to track the open gap to resolution.  
 
 The code in the Detected Issue contains the value “care-gap”.  Since the value to represent this type of issue did not exist on the referenced code system but extensions are allowed, we added care-gaps value and code system. The evidence for this Detected Issue points to the DEQM Gaps In Care Individual Measure Report which will identify the specific measure that has not been closed.  As with all other DEQM profiles, we reference the QI Core profile on patient.
 
