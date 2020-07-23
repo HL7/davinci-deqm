@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "Bundle-single-gaps-closed-indv-report02",
+  "id": "single-gaps-closed-indv-report01",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"

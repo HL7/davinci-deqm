@@ -730,6 +730,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Gaps Bundle Closed Individual MeasureReport01",
+                "reference": {
+                    "reference": "Bundle/single-gaps-closed-indv-report01"
+                },
+                "description": "GIC Bundle Closed Individual MeasureReport01 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Measure Colorectal Cancer Screening (EXM130)",
                 "reference": {
                     "reference": "Measure/measure-exm130-example"
