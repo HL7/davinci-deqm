@@ -29,7 +29,7 @@ organizations, for public health and for payers.
 <details open>
 <summary>
 
-<b>Figure 1-1: The Quality Imxprovement Ecosystem Diagram</b>
+<b>Figure 1-1: The Quality Improvement Ecosystem Diagram</b>
 
 </summary>
 

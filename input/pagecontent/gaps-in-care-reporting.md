@@ -27,9 +27,26 @@ In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Q
 
 The Gaps In Care Reporting is built on the Individual Reporting, where a new [DEQM Gaps In Care Individual MeasureReport Profile] is created based on the [DEQM Individual MeasureReport Profile] by adding extensions to support Gaps In Care Reporting specific requirements. This allows the Gaps In Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation.
 
+### Default Profiles
+
+The following resources are used in the Gaps In Care Reporting scenario:
+
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
+|Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
+|Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
+|DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
+|Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
+|MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
+
+Figure 2-12 provides a graphic view of how these resources are related.
+{% include img-portrait.html img="gic-resources.png" caption = "Figure 2-12 Gaps In Care Resources" %}
+
 ### Gaps in Care Reporting
 
 #### Gaps Through Period (Retrospective vs. Prospective)
+{:.no_toc}
+
 Gaps through period is the time period defined by a Client for running the gaps in care report. When the gaps through period ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated open gaps and take proper actions to close the gaps. When the gaps through period ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified open gaps can no longer be acted upon.   
 
 |Use Case|care-gaps Operation|Gaps Through Period|Report Creation Date|Gaps In Care Report Results|
@@ -38,6 +55,7 @@ Gaps through period is the time period defined by a Client for running the gaps 
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30|2020-01-01 through 2020-06-30|2020-07-01|Returns gaps through 2020-06-30. Example: If a patient had colonoscopy on 2010-07-03, the report would not indicate a gap. Since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
 
 #### Care Gaps Operation
+{:.no_toc}
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a gaps in care report. In this guide, we have extended the care-gap operation in the R4 Release of the FHIR (FHIR R4) Specification allowing for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a gaps in care report based on quality measures available on the Server’s system.
 
@@ -59,13 +77,14 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation has an out paramet
 Through the requirement analysis of the Gaps In Care Reporting for this ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
 {:.note-to-balloters}
 
-Figure 2-12 shows a workflow for running the care-gaps operation for a single patient.
-{% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-12 Care Gaps Operation - Single Patient" %}
+Figure 2-13 shows a workflow for running the care-gaps operation for a single patient.
+{% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-13 Care Gaps Operation - Single Patient" %}
 
-Figure 2-13 shows a workflow for running the care-gaps operation for a group of patients.
-{% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-13 Care Gaps Operation - Group of Patients" %}
+Figure 2-14 shows a workflow for running the care-gaps operation for a group of patients.
+{% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-14 Care Gaps Operation - Group of Patients" %}
 
 #### How to Construct a Gaps In Care Report
+{:.no_toc}
 
 This section describes the profiles used for Gaps In Care Reporting and how they are used to construct a gaps in care report.
 
@@ -80,41 +99,28 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition,
 - The Gaps In Care Composition may also contain all supporting resources referenced by the composition and its contained measure reports. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
 #### Attribution
+{:.no_toc}
+
 Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for gaps in care reports is not in the scope of the DEQM IG. Gaps in care reporting references the standards specified in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG] for exchanging Member Attribution Lists between providers and payers.
-
-### Default Profiles
-
-The following resources are used in the Gaps In Care Reporting scenario:
-
-|Resource Type|Profile Name|Link to Profile|
-|---|---|---|
-|Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
-|Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
-|DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
-|Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
-|MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
-
-Figure 2-14 provides a graphic view of how these resources are related.
-{% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
 
 #### Usage
 {:.no_toc}
+
+`GET|[base]`
+
+{% include examplebutton.html example="get-gaps-caregap-usage-example" b_title = "Click Here To See Example GET Gaps In Care Report" %}
 
 ##### Bulk Data
 {:.no_toc}  
 
 If Clients are requesting Gaps in Care reports for many patients/members, they might want to make use of the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
 
-**Example**  
-Scenario: The client wants Gaps in Care Reports on many patients. They have created a FHIR Group Resource ([DEQM Gaps In Care Group Profile]) with the id of 123.  Because they expect the creation of the reports to take a while and many FHIR bundles will be returned and be processed, they want to make the request in an asynchronous manner returning NDJSON, which is easier for them to process.
+`GET|[base]`
 
-The request below asks for Group id of 123 to be run asynchronously with FHIR+ndjson as the output format.  The header portions should be entered in the API client header section (example in Postman Headers section tab, enter “Prefer” in Key and “respond-async” in Value)
-{% include examplebutton.html example="post-indv-report-example" b_title = "This is a placeholder, example coming" %}
+{% include examplebutton.html example="get-gaps-caregap-usage-bulk-example" b_title = "Click Here To See Example GET Gaps In Care Report Using Bulk Data" %}
 
 Run $care-gaps operation in an asynchronous mode:
-```
-GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-07-01&_outputFormat=application/fhir+ndjson
-```
+
 Headers:
 * `Prefer respond-async`
 * `Accept application/fhir+json`
@@ -123,8 +129,6 @@ Note that both Accept and Prefer are required. Prefer specifies the response is 
 
 Query Parameters:
 * `_outputFormat (string, optional, defaults to application/fhir+ndjson)`
-
-NDJSON Response:
 
 <br />
 
