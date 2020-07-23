@@ -25,11 +25,11 @@ In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Q
 #### Relationship of Individual Reporting and Gaps In Care Reporting
 {:.no_toc}
 
-The Gaps In Care Reporting is built on the Individual Reporting, therefore, the descriptions in the [Reporting Individual Data] section about how to use a MeasureReport resource to represent the results of an individual calculation also applies here. This section is then focused on describing the additional data for gaps in care report specified in the [DEQM Gaps In Care Individual MeasureReport Profile].
+The Gaps In Care Reporting is built on the Individual Reporting, where a new [DEQM Gaps In Care Individual MeasureReport Profile] is created based on the [DEQM Individual MeasureReport Profile] by adding extensions to support Gaps In Care Reporting specific requirements. This allows the Gaps In Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation. The [care-gaps](OperationDefinition-care-gaps.html) operation defines a set of in parameters and an out parameter to run a gaps in care report.
 
 ### Gaps in Care Reporting
 
-Gaps through period is the time period defined by a Client for running the gaps in care report. When the gaps through period ends on a date that is in the future, the Gaps in Care Reporting looks for care gaps prospectively, which provides opportunity for providers to evaluate anticipated gaps and take proper actions to close the gaps. When the gaps through period ends on a date that is in the past, this use case is similar to run a Individual MeasureReport for a measurement period. However, using the care-gaps operation and a set of profiles defined for Gaps In Care Reporting, it offers additional capabilities of reporting open and/closed gaps, tagging granular clinical data that were used for calculating measure populations by the evaluate-measure operation, which supports more robust analytics.  
+Gaps through period is the time period defined by a Client for running the gaps in care report. When the gaps through period ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated open gaps and take proper actions to close the gaps. When the gaps through period ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified open gaps can no longer be acted upon.   
 
 |Use Case|care-gaps Operation|Gaps Through Period|Report Creation Date|Gaps In Care Report Results|
 |---|---|---|---|---|
