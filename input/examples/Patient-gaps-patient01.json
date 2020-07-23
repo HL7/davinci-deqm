@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: gaps-patient01</p><p><b>meta</b>: </p><p><b>identifier</b>: Medical Record Number = 999995992 (USUAL)</p><p><b>name</b>: Parker Bruce </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1965-01-01</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: gaps-patient01</p><p><b>meta</b>: </p><p><b>identifier</b>: Medical Record Number = 999995992 (USUAL)</p><p><b>name</b>: Parker Susan </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1965-01-01</p></div>"
   },
   "extension": [
     {
@@ -64,12 +64,12 @@
   ],
   "name": [
     {
-      "family": "Bruce",
+      "family": "Susan",
       "given": [
         "Parker"
       ]
     }
   ],
-  "gender": "male",
+  "gender": "female",
   "birthDate": "1965-01-01"
 }
