@@ -96,7 +96,7 @@ definition:
       value: CI Build
     - code: excludexml
       value: 'false'
-    - code: escludejsn
+    - code: excludejsn
       value: 'false'
     - code: excludettl
       value: 'false'
@@ -562,9 +562,6 @@ definition:
         reference: StructureDefinition/extension-reporterGroup
     - exampleBoolean: false
       reference:
-        reference: StructureDefinition/medicationrequest-deqm
-    - exampleBoolean: false
-      reference:
         reference: StructureDefinition/practitioner-deqm
     - exampleBoolean: false
       reference:
@@ -664,9 +661,6 @@ definition:
       - generation: markdown
         nameUrl: profiles.html
         page:
-          - generation: generated
-            nameUrl: StructureDefinition-medicationrequest-deqm.html
-            title: StructureDefinition MedicationRequest Deqm
           - generation: generated
             nameUrl: StructureDefinition-practitioner-deqm.html
             title: StructureDefinition Practitioner Deqm
