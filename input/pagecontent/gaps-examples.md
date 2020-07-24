@@ -23,15 +23,13 @@ Later, the provider again runs the same report but with an updated periodEnd dat
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Condition|QI Core Condition Profile|[QI Core Condition]|
-|Coverage|QI Core Coverage Profile|[QI Core Coverage]|
-|DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport]|
+|Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]
+|Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]
+|DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]
 |Encounter|QI Core Encounter Profile|[QI Core Encounter]|
 |Library|CQFM Library Profile|[CQFM Library]|
-|Location|QI Core Location Profile|[QI Core Location]|
 |Measure|CQFM Measure Profile|[CQFM Measure]|
 |MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
-|Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
@@ -53,11 +51,11 @@ This section contains an example that begins with a provider requesting a Gaps I
 #### Step 1 - Initial Run for a Gaps In Care Report
 The resource graphs below represents the structure of the resources returned in the first [care-gaps](OperationDefinition-care-gaps.html) operation.  Figure 3-23 shows the patient with the open gap because there were no resources in the payers system related to Gaps in Care. It also contains a DetectedIssue resource for tracking that this is an open gap. Figure 3-24 shows the second patient that has a closed gap. The evaluatedResources point to a colonoscopy done in 2018 that closed the gap. Since this is not an open gap, there is no DetectedIssue Resource present.
 
-{% include img-portrait.html img="gic-colonoscopy-example-pt1-step1-open-gap.png" caption = "Figure 3-23 Gaps in Care Resources Colonoscopy Patient 1 Example Step 1 - Open Gap" %}
+{% include img-portrait.html img="gic-colonoscopy-example-pt1-step1-open-gap.png" caption = "Figure 3-23 Gaps in Care Resources Colonoscopy Patient 1 Example: Step 1 - Open Gap" %}
 
-{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-24 Gaps in Care Resources Colonoscopy Patient 2 Example Step 1- Closed Gap" %}
+{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-24 Gaps in Care Resources Colonoscopy Patient 2 Example: Step 1- Closed Gap" %}
 
-{% include examplebutton.html example="get-gaps-bundle-initial-run-example" b_title = "Click Here To See Example of the Gaps In Care Report $care-gaps Was Run Initially" %}
+{% include examplebutton.html example="get-gaps-bundle-initial-run-example" b_title = "Click Here To See Example of the Gaps In Care Report Described in Step 1 Initial Run" %}
 
 #### Step 2 - Data Exchange to Submit Data for Closing Gaps
 
@@ -67,11 +65,11 @@ The provider noticed an open gap was identified for Patient 1 for Colorectal Can
 
 Several days later, the provider reruns the Colorectal Cancer Screening care gaps report and confirms that the gap for the first patient was closed.  Note in the Figure 3-25 below, there is no longer a DetectedIssue for patient 1, because the gap is now closed.  The patient 1 has a recent colonoscopy. In Figure 3-26, there is no change to the patient 2, it still shows closed gap.
 
-{% include img-portrait.html img="gic-colonoscopy-example-pt1-step3-gap-closed.png" caption = "Figure 3-25 Gaps in Care Resources Colonoscopy Patient 1 Example Step 3 - Open Gap Closed" %}
+{% include img-portrait.html img="gic-colonoscopy-example-pt1-step3-gap-closed.png" caption = "Figure 3-25 Gaps in Care Resources Colonoscopy Patient 1 Example: Step 3 - Open Gap Closed" %}
 
-{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-26 Gaps in Care Resources Colonoscopy Patient 2 Example Step 3 - Closed Gap" %}
+{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 3-26 Gaps in Care Resources Colonoscopy Patient 2 Example: Step 3 - Closed Gap" %}
 
-{% include examplebutton.html example="get-gaps-bundle-rerun-example" b_title = "Click Here To See Example of the Gaps In Care Report When Rerun $care-gaps after submit-data" %}
+{% include examplebutton.html example="get-gaps-bundle-rerun-example" b_title = "Click Here To See Example of the Gaps In Care Report Described in Step 3 Rerun" %}
 
 ---
 </div>
