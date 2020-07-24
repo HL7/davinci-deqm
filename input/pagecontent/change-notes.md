@@ -11,14 +11,20 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for version 1.0.0
 
+The current official published version of the DEQM IG for FHIR STU3.
+
 1. Applied all resolutions from May STU1 Ballot
 
-Changes and Updates for version 1.1.0
+### Changes and Updates for version 1.1.0
+
+STU2 Ballot for FHIR R4 Version of DEQM
 
 1. Creation of FHIR R4 version.
 1. Additional examples
 
 ### Changes and Updates for version 2.0.0
+
+The first official published version of the DEQM IG for FHIR R4.
 
 1. Applied all resolutions from STU2 Ballot
 
