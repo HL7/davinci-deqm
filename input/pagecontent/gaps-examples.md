@@ -13,8 +13,6 @@ As it turns out, the first patient with the open gap had a colonoscopy done rece
 
 Later, the provider again runs the same report but with an updated gaps through end date and both patients now showing as having their Colorectal Cancer Screening Measure gaps closed.
 
-#### Use Cases
-
 ### FHIR Resource Overview
 
 #### Resources Supported for this Use Case

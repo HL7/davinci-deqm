@@ -19,9 +19,12 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. A patient the gaps in care report is for
 1. The date the gaps in care report was generated
 1. The organization that reported the data
-1. The gaps through period (the period the gaps in care report covers)
+1. The measurement period
 1. The results of the calculation (the Measure Score)
 
+<div class="new-content" markdown="1">
+1. The gaps through period (Note that in a gaps in care report, it uses the gaps through period instead of the measurement period.)
+</div>
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
@@ -34,6 +37,10 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support])
 1. A certification identifier using the DEQM [Certification Identifier] Extension
 1. Ability to use other types for measure score using the DEQM [Alternate Score Type] Extension
 1. Specify the software systems used by the reporting system using the CQFM [Software System] Extension
+
+<div class="new-content" markdown="1">
+1. Specify population reference for each evaluatedResource using the [DEQM Population Reference Extension]
+</div>
 
 **Additional Profile specific implementation guidance:**
 

@@ -41,6 +41,7 @@
                     <display value="Gaps in Care Report"/>
                 </coding>
             </fixedCodeableConcept>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.subject">
             <path value="Composition.subject"/>
@@ -50,10 +51,12 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
             </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.date">
             <path value="Composition.date"/>
             <short value="The datetime the gaps in care report was created"/>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.title">
             <path value="Composition.title"/>
@@ -61,6 +64,7 @@
             <type>
                 <code value="string"/>
             </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.custodian">
             <path value="Composition.custodian"/>
@@ -69,6 +73,7 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
             </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.section">
             <path value="Composition.section"/>
@@ -87,6 +92,7 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
             </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Composition.section.entry">
             <path value="Composition.section.entry"/>
@@ -95,6 +101,7 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
             </type>
+            <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>
