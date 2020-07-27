@@ -93,7 +93,7 @@
    <artifact name="Multiple Summ Report"
              key="Bundle-multiple-summ-report"
              id="Bundle/multiple-summ-report"/>
-   <artifact name="Deqm Software System Example"
+   <artifact name="DEQM Software System Example"
              key="Device-deqm-software-system-example"
              id="Device/deqm-software-system-example"/>
    <artifact name="Indv Measurereport01"
@@ -114,7 +114,7 @@
    <artifact name="Encounter03"
              key="Encounter-encounter03"
              id="Encounter/encounter03"/>
-   <artifact name="Observation03"
+   <artifact name="DNA Occult Blood"
              key="Observation-DNA-occultblood"
              id="Observation/DNA-occultblood"/>
    <artifact name="Single Indv Mrp Task Report"
