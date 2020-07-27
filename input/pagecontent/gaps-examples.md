@@ -5,14 +5,13 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 <div class="new-content" markdown="1">
 ###  Introduction
 
-The Gaps In Care is a powerful report that when used along with other DEQM functionality can result in better care results for the payer, the provider and most importantly the patient.  Below we show a simplistic example to show its potential power.
+The Gaps In Care is a powerful report that when used along with other DEQM functionality can result in better care results for the payer, the provider, and most importantly the patient.  A simplistic example described below shows its potential power.
 
-In our scenario, we imagine that a provider has requested a Gaps in Care report for the Colorectal Screening Measure  from ABC Insurance for his patients using the care-gaps operation.  She does not specify open or closed gaps so she gets both. The report returns two patients.  One patient has a closed gap and the other has an open gap.
+In this scenario, a provider has requested a Gaps in Care report for the Colorectal Cancer Screening Measure from ABC Insurance for their patients using the [care-gaps](OperationDefinition-care-gaps.html) operation. Since the provider does not specify open or closed gaps, both open and closed gaps will be returned. The gaps in care report returns two patients. The first patient has an open gap and the second patient has a closed gap.
 
-As it turns out, the patient with the open gap had a promotion through his employer to try a FitDNA kit for free.  The results were sent to the provider but the payer was unaware.
+As it turns out, the first patient with the open gap had a colonoscopy done recently that has not been yet been made aware to the ABC Insurance. The provider notices this the patient’s chart and uses the DEQM Submit Data functionality to update the payer’s database.
 
-When the provider notices this in the patient’s chart, she uses the DEQM Submit Data functionality to update the payer’s database.
-Later, the provider again runs the same report but with an updated periodEnd date and both patients now showing as having their Colorectal Cancer Screening Measure Closed
+Later, the provider again runs the same report but with an updated gaps through end date and both patients now showing as having their Colorectal Cancer Screening Measure gaps closed.
 
 #### Use Cases
 
@@ -37,7 +36,7 @@ Later, the provider again runs the same report but with an updated periodEnd dat
 
 ### Care Gaps Operation
 {:.no_toc}
-A Client, such as a provider, will use the [care-gaps](OperationDefinition-care-gaps.html) operation to request a report from the Server, such as a payer, on his/her patients that have Colorectal Cancer Screening gaps in care. When the provider sees that he/she has a patient showing as having an open gap, she/he looks at the chart and sees that a FitDNA test was done. He/she then submits a DEQM Data Exchange MeasureReport and the referenced resources required as supporting evidence for Colorectal Cancer Screening to the payer. Later, the provider repeats the care-gaps operation for Colorectal Cancer Screening to ensure the gaps is now closed.
+A Client, such as a provider, will use the [care-gaps](OperationDefinition-care-gaps.html) operation to request a report from the Server, such as a payer, on his/her patients that have Colorectal Cancer Screening gaps in care. When the provider sees that he/she has a patient showing as having an open gap, he/she looks at the chart and sees that a colonoscopy was done recently. He/she then submits a DEQM Data Exchange MeasureReport and the referenced resources required as supporting evidence for Colorectal Cancer Screening to the payer. Later, the provider repeats the care-gaps operation for Colorectal Cancer Screening to ensure the gaps is now closed.
 
 The Figure 3-22 shows the workflow for gaps in care.
 
