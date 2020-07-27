@@ -103,7 +103,7 @@ The reporting scenarios are:
 
 For the reporting scenarios, the actors are Reporters and Receivers:
 
-**Reporters** are the actors submitting the results of a quality measure. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
+**Reporters** are the actors requesting a report on the gaps in care for their quality measures. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
@@ -111,15 +111,15 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 #### Gaps in Care Reporting Scenarios
 Gaps in Care Reporting is added as a new group of quality reporting scenarios supported in this version of the guide. Similar to the reporting scenarios, a gaps in care report is used to report the results of quality measures on patients or population, but for a gaps through period that is of interest for a Client.
 
-1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open gaps and actions to close gaps for resolution management.
+1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open gaps.
 
 {% include img-portrait.html  caption = "Figure 1-5 Gaps in Care Reporting Scenarios" img="gaps-reporting-scenario.png" %}
 
 For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
 
-**Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if providers produce gaps in care reports and submit them to payers, then providers serve as clients in this scenario; if payers produce gaps in care reports and provide them to providers, then payers serve as clients in this scenario.
+**Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if a provider requests a report from the payer's system, then the provider serves as the client. If a payer requests a report from their own system, they are the client.
 
-**Servers** are the actors receiving the gaps in care results of quality measure(s). Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if providers produce gaps in care reports and submit them to payers, then payers serve as servers in this scenario; if payers produce gaps in care reports and provide them to providers, then providers serve as servers in this scenario.
+**Servers** are the actors receiving the request for the gaps in care report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system servers as the server. If a payer requests a report from their own system, the payer's system servers as the server.
 </div>
 
 ### Glossary
@@ -146,7 +146,7 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
   : No discrepancy exists between recommended best practices and the services that are actually provided and documented. A previously identified open gap may become closed, if actions were taken to close the open gaps.  
 
 {: #gaps-through-period}Gaps Through Period
-  : The period of time defined by a Client for running the gaps in care report. When the end time of the gaps through period is specified as a date in the future, it indicates that the gaps in care report is run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end time of the gaps through period is specified as a date in the past, it indicates that the gaps in care report is run retrospectively.
+  : The period of time defined by a Client for running the gaps in care report. When the end period date of the gaps is specified as a date in the future, it indicates the gaps in care report will be run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end period date of the gaps is specified as a date in the past, it indicates the gaps in care report will be run retrospectively.
 
 {: #gaps-in-care}Gaps In Care
   : Gaps in care are defined as discrepancies between recommended best practices and the services that are actually provided and documented. The terms gaps in care and care gaps may be used interchangeably.
@@ -155,7 +155,7 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
   : A lower calculated performance rate for this measure indicates better clinical care or control. The Diabetes: Hemoglobin A1c (HbA1c) Poor Control (>9%) measure is an example of inverse measure.
 
 {: #open-gap}Open Gap
-  : A discrepancy exists between recommended best practices and the services that are actually provided and documented. For example, individuals missing colonoscopy recommended as specified in the Colorectal Cancer Screening measure based on their age groups. For a positive measure, open gaps are identified if an individual is not in the numerator population as specified by the measure. For an inverse measure, open gaps are identified if an individual is in the numerator population as specified by the measure.
+  : A discrepancy exists between recommended best practices and the services that are actually provided and documented. For example, individuals missing colonoscopy or other screening tests as specified in the Colorectal Cancer Screening measure based on their age groups. For a positive measure, open gaps are identified if an individual is not in the numerator population as specified by the measure. For an inverse measure, open gaps are identified if an individual is in the numerator population as specified by the measure.
 
 {: #positive-measure}Positive Measure
   : A higher calculated performance rate for this measure indicates better clinical care or control. The Colorectal Cancer Screening measure is an example of positive measure.
