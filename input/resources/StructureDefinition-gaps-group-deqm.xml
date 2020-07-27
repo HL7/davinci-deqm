@@ -14,7 +14,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care Group Profile describes a group consists of one or more patients."/>
+    <description value="The DEQM Gaps In Care Group Profile describes a group consisting of one or more patients."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
@@ -37,6 +37,7 @@
           <short value="Who is in group"/>
           <min value="1"/>
           <max value="*"/>
+          <mustSupport value="true"/>
         </element>
         <element id="Group.member.entity">
             <path value="Group.member.entity"/>
@@ -45,6 +46,7 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
             </type>
+            <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>

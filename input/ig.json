@@ -26,8 +26,8 @@
             ]
         }
     ],
-    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.0.0",
-    "version": "2.0.0",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.1.0",
+    "version": "2.1.0",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
@@ -1201,5 +1201,5 @@
             }
         ]
     },
-    "id": "hl7.fhir.us.davinci-deqm-2.0.0"
+    "id": "hl7.fhir.us.davinci-deqm-2.1.0"
 }

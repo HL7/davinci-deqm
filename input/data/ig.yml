@@ -16,8 +16,8 @@ contact:
       - system: url
         value: 'http://www.hl7.org/Special/committees/cqi/index.cfm'
 url: >-
-  http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.0.0
-version: 2.0.0
+  http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.1.0
+version: 2.1.0
 packageId: hl7.fhir.us.davinci-deqm
 dependsOn:
   - version: 4.0.0
@@ -494,25 +494,25 @@ definition:
       reference:
         reference: Measure/measure-exm130-example
       description: Measure Colorectal Cancer Screening (EXM130) example
-    
+
     - exampleBoolean: true
       name: Measure Cervical Cancer Screening (EXM124)
       reference:
-        reference: Measure/measure-exm124-example  
+        reference: Measure/measure-exm124-example
       description: Measure Cervical Cancer Screening (EXM124) example
- 
+
     - exampleBoolean: true
       name: Library Colorectal Cancer Screening (EXM130)
       reference:
           reference: Library/library-exm130-example
       description: Library Colorectal Cancer Screening (EXM130) example
- 
+
     - exampleBoolean: true
       name: Library Cervical Cancer Screening (EXM124)
       reference:
         reference: Library/library-exm124-example
       description: Library Cervical Cancer Screening (EXM124) example
-    
+
     - exampleBoolean: true
       name: Task01
       reference:
@@ -758,4 +758,4 @@ definition:
     title: Home
   grouping:
     - name: base
-id: hl7.fhir.us.davinci-deqm-2.0.0
+id: hl7.fhir.us.davinci-deqm-2.1.0

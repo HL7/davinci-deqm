@@ -14,7 +14,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care DetectedIssue Profile describes detected gaps for each [DEQM Gaps In Care MeasureReport](StructureDefinition-gaps-indv-measurereport-deqm.html) where there is an open gap. Detected Issues should not be created for any DEQM Gaps In Care MeasureReport where the gap is closed or no gap."/>
+    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure that is referenced in the [DEQM Gaps In Care Individual MeasureReport](StructureDefinition-gaps-indv-measurereport-deqm.html) has an open gap. Detected Issues should not be created for any DEQM Gaps In Care Individual MeasureReport where the gap is closed or no gap."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
@@ -43,6 +43,7 @@
                     <display value="Gap in Care Detected"/>
                 </coding>
             </fixedCodeableConcept>
+            <mustSupport value="true"/>
         </element>
         <element id="DetectedIssue.patient">
             <path value="DetectedIssue.patient"/>
@@ -54,6 +55,7 @@
         <element id="DetectedIssue.evidence">
             <path value="DetectedIssue.evidence"/>
             <min value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="DetectedIssue.evidence.detail">
             <path value="DetectedIssue.evidence.detail"/>
@@ -64,6 +66,7 @@
             </type>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>

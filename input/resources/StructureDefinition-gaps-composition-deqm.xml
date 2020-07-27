@@ -13,7 +13,7 @@
             <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
         </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care Composition Profile defines a composition that consists of one or more gaps in care indivdiual MeasureReport(s) for an individual."/>
+    <description value="The DEQM Gaps In Care Composition Profile defines a document composition consisting of one or more gaps in care indivdiual MeasureReport(s) for an individual. Each section of this composition corresponds to a gaps in care indivdiual MeasureReport for a specific measure. The subject of each gaps in care individual MeasureReport referenced by the section must be for the same individual specified in the subject of this Composition."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -46,7 +46,7 @@
         <element id="Composition.subject">
             <path value="Composition.subject"/>
             <min value="1"/>
-            <short value="What individual the gaps in care report is for"/>
+            <short value="What individual the gaps in care report is for. All gaps in care individual MeasureReports referenced must be for this same individual."/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
@@ -68,7 +68,7 @@
         </element>
         <element id="Composition.custodian">
             <path value="Composition.custodian"/>
-            <short value="Identifies the organization who is responsible for ongoing maintenance of and access to this gaps in care report"/>
+            <short value="Identifies the organization who is responsible for ongoing maintenance of and accessing to this gaps in care report"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
@@ -77,7 +77,7 @@
         </element>
         <element id="Composition.section">
             <path value="Composition.section"/>
-            <short value="Must contain at least one section, each section corresponds to a gaps in care indivdiual MeasureReport, which is for a specific measure and for the same indivdiual identified in the subject element"/>
+            <short value="Must contain at least one section, each section corresponds to a gaps in care indivdiual MeasureReport for a specific measure"/>
             <min value="1"/>
         </element>
         <element id="Composition.section.title">
