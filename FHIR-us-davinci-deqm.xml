@@ -75,9 +75,6 @@
    <artifact name="Library Mrp Example"
              key="Library-library-mrp-example"
              id="Library/library-mrp-example"/>
-   <artifact name="Exm130 Fhir R4"
-             key="Library-exm130-fhir-r4"
-             id="Library/exm130-fhir-r4"/>
    <artifact name="Organization04"
              key="Organization-organization04"
              id="Organization/organization04"/>

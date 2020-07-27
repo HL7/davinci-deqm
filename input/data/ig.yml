@@ -16,7 +16,7 @@ contact:
       - system: url
         value: 'http://www.hl7.org/Special/committees/cqi/index.cfm'
 url: >-
-  http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.0.0
+  http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm
 version: 2.0.0
 packageId: hl7.fhir.us.davinci-deqm
 dependsOn:
@@ -207,11 +207,6 @@ definition:
       reference:
         reference: Library/library-mrp-example
       description: DEQM Library Mrp Example example
-    - exampleBoolean: true
-      name: Exm130 Fhir R4
-      reference:
-        reference: Library/exm130-fhir-r4
-      description: DEQM Exm130 Fhir R4 example
     - exampleBoolean: true
       name: Organization04
       reference:
@@ -578,4 +573,4 @@ definition:
     title: Home
   grouping:
     - name: base
-id: hl7.fhir.us.davinci-deqm-2.0.0
+id: hl7.fhir.us.davinci-deqm
