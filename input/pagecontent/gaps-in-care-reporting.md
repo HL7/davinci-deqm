@@ -113,7 +113,7 @@ Member attribution establishes associations between providers and payers. The pr
 ##### Bulk Data
 {:.no_toc}  
 
-If Clients are requesting Gaps in Care reports for many patients/members, they might want to make use of the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
+If Clients are requesting Gaps in Care reports for many patients/members, they may consider making use of the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
 
 `GET|[base]`
 

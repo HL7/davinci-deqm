@@ -4,16 +4,18 @@
 
 **Scenario:**
 
-(TODO: scenario description)
+A Client would like to know if the patient, gaps-patient01, has any open or closed gaps for the colorectal cancer screening measure and the cervical cancer screening measure for the period from 2020-01-01 to 2020-07-01. The Client requests a gaps in care report from a Server's system.
 
 **GET Gaps In Care Report**
 
+
 ```
-GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-07-01
+GET [base]/Measure/$care-gaps?subject=Patient/gaps-patient01&periodStart=2020-01-01&periodEnd=2020-07-01&measure=CMS130v8&measure=CMS124v8
 ```
 
 **Request body**
 ~~~
+(Note that request body is not applicable in this example)
 ~~~
 
 **Response**

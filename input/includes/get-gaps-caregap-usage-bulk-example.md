@@ -4,9 +4,9 @@
 
 **Scenario:**
 
-The client wants Gaps in Care Reports on many patients. They have created a FHIR Group Resource ([DEQM Gaps In Care Group Profile]) with the id of 123.  Because they expect the creation of the reports to take a while and many FHIR bundles will be returned and be processed, they want to make the request in an asynchronous manner returning NDJSON, which is easier for them to process.
+The Client would like to request Gaps in Care Reports on many patients. They have created a FHIR Group Resource ([DEQM Gaps In Care Group Profile]) with the id of 123.  Because they expect the creation of the reports to take a while and many FHIR bundles will be returned and be processed, they would like to make the request in an asynchronous manner returning NDJSON that will be easier for them to process.
 
-The request below asks for Group id of 123 to be run asynchronously with FHIR+ndjson as the output format.  The header portions should be entered in the API client header section (example in Postman Headers section tab, enter “Prefer” in Key and “respond-async” in Value)
+The request below asks for Group id of 123 to be run asynchronously with FHIR+ndjson as the output format. The header portions should be entered in the API client header section (For example, in the Postman tool, enter “Prefer” in Key and “respond-async” in Value as an entry in the Headers tab.)
 
 **GET Gaps In Care Report Using Bulk Data**
 
