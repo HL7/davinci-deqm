@@ -1,4 +1,4 @@
-{% assign id = {{page.id}} %}
+{% assign id = {{include.id}} %}
 
 
 The following data-elements are mandatory (i.e data MUST be present).
