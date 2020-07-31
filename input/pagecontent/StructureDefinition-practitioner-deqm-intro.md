@@ -1,5 +1,5 @@
 
-{% assign id = {{page.id}} %}
+{% assign id = {{include.id}} %}
 
 
 

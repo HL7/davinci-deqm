@@ -1,6 +1,6 @@
 
 This profile is used in the following transactions:
 
-- currently none defined
+- [Venous Thromboembolism Prophylaxis (VTE-1)](vte1.html)
 
  <br />
