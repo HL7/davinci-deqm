@@ -11,19 +11,27 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for version 1.0.0
 
+The current official published version of the DEQM IG for FHIR STU3.
+
 1. Applied all resolutions from May STU1 Ballot
 
-Changes and Updates for version 1.1.0
+### Changes and Updates for version 1.1.0
+
+STU2 Ballot for FHIR R4 Version of DEQM
 
 1. Creation of FHIR R4 version.
 1. Additional examples
 
 ### Changes and Updates for version 2.0.0
 
+The first official published version of the DEQM IG for FHIR R4.
+
 1. Applied all resolutions from STU2 Ballot
 
     - Various Technical Corrections and Corrections to Typographical Errors
     - updated examples
+    - Remove DEQM MedicationRequest ([FHIR-28137](https://jira.hl7.org/browse/FHIR-28137))
+    - Add [example](Bundle-single-indv-vte-report-option7.html) for negation pattern ([FHIR-28137](https://jira.hl7.org/browse/FHIR-28137))
     - Add DEQM [Measure Scoring] Extension to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile ([FHIR-27044](https://jira.hl7.org/browse/FHIR-27044))
     - Add [`MeasureReport.improvementNotation`](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.improvementNotation) to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile ([FHIR-27044](https://jira.hl7.org/browse/FHIR-27044))
     - Add Invariant [deqm-2](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport) to the DEQM Individual MeasureReport Profile and DEQM Summary MeasureReport Profile ([FHIR-27044](https://jira.hl7.org/browse/FHIR-27044))

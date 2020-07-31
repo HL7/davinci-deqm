@@ -43,7 +43,7 @@
             "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         },
         {
-            "version": "current",
+            "version": "2.0.0",
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
@@ -346,14 +346,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Exm130 Fhir R4",
-                "reference": {
-                    "reference": "Library/exm130-fhir-r4"
-                },
-                "description": "DEQM Exm130 Fhir R4 example"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Organization04",
                 "reference": {
                     "reference": "Organization/organization04"
@@ -402,11 +394,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Deqm Software System Example",
+                "name": "DEQM Software System Example",
                 "reference": {
                     "reference": "Device/deqm-software-system-example"
                 },
-                "description": "DEQM Deqm Software System Example example"
+                "description": "DEQM DEQM Software System Example example"
             },
             {
                 "exampleBoolean": true,
@@ -458,11 +450,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Observation03",
+                "name": "DNA Occult Blood",
                 "reference": {
                     "reference": "Observation/DNA-occultblood"
                 },
-                "description": "DEQM Observation03 example"
+                "description": "DEQM DNA Occult Blood example"
             },
             {
                 "exampleBoolean": true,
@@ -1041,37 +1033,37 @@
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-practitioner-deqm.html",
-                            "title": "StructureDefinition Practitioner Deqm"
+                            "title": "StructureDefinition Practitioner DEQM"
                         },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-summary-measurereport-deqm.html",
-                            "title": "StructureDefinition Summary MeasureReport Deqm"
+                            "title": "StructureDefinition Summary MeasureReport DEQM"
                         },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-indv-measurereport-deqm.html",
-                            "title": "StructureDefinition Indv MeasureReport Deqm"
+                            "title": "StructureDefinition Indv MeasureReport DEQM"
                         },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-datax-measurereport-deqm.html",
-                            "title": "StructureDefinition Datax MeasureReport Deqm"
+                            "title": "StructureDefinition Datax MeasureReport DEQM"
                         },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-coverage-deqm.html",
-                            "title": "StructureDefinition Coverage Deqm"
+                            "title": "StructureDefinition Coverage DEQM"
                         },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-organization-deqm.html",
-                            "title": "StructureDefinition Organization Deqm"
+                            "title": "StructureDefinition Organization DEQM"
                         },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-medicationadministration-deqm.html",
-                            "title": "StructureDefinition MedicationAdministration Deqm"
+                            "title": "StructureDefinition MedicationAdministration DEQM"
                         },
                         {
                             "generation": "generated",
