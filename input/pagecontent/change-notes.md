@@ -64,7 +64,7 @@ The first official published version of the DEQM IG for FHIR R4.
     - Updated Home Page about Gaps in Care Reporting and added new glossary and acronym
     - Updated General Guidance about Gaps in Care Reporting
     - Added Gaps In Care Reporting page under Framework
-    - Added Gaps in Care page under Example Use Cases
+    - Added Gaps In Care page under Example Use Cases
     - Updated Profiles/Extensions page under FHIR Artifacts adding new profiles and extension defined for Gaps in Care
     - Added Operations page under FHIR Artifacts listing care-gaps operation defined for Gaps in Care
     - Updated Terminology page under FHIR Artifacts adding new code system and value sets defined for Gaps in Care
