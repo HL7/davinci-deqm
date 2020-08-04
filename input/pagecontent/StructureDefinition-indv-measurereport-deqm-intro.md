@@ -1,4 +1,4 @@
-{% assign id = {{page.id}} %}
+{% assign id = {{include.id}} %}
 
 ### Mandatory Data Elements and Terminology
 

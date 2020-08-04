@@ -1,1 +1,10 @@
 == Suppressed Messages ==
+
+# successful PR to https://github.com/hl7/jIRA-Spec-Artifacts on Jul 27, 2020 https://github.com/HL7/JIRA-Spec-Artifacts/commits/master/xml/FHIR-us-davinci-deqm.xml
+The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.
+# COPIED FROM Data Exchange For Quality Measures STU2 IG This device profile is intended to model software systems as devices, not implantable devices like what the US Core profile is describing. Approved by US Realm on 6/30/2020.
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
+# COPIED FROM Data Exchange For Quality Measures STU2 IG These warnings are all caused by the use of the new text/cql.identifier media type. This has been addressed in the current R5 build and are expected to resolve once the core package updates.
+ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+# the validator is trying to resolve an "example.org" artifact which by convention does not exist.  This warning will be corrected in a future version of the validation engine.
+The Measure "http://example.org/fhir/Measure/measure-medicare-stratification-example" could not be resolved, so no validation can be performed against the Measure
