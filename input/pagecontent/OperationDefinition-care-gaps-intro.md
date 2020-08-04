@@ -11,8 +11,8 @@ This is the new $care-gaps operation. The intent is to replace the existing #car
 Conformance Requirement 1:
 <br>
 A $care-gaps operation SHALL provide at least periodStart, periodStop, and subject|provider|organization, which could be one of the following:
-  - A $care-gaps operation SHALL provide periodStart, periodStop, and a subject
-  - A $care-gaps operation SHALL provide periodStart, periodStop, and an organization
+  - A $care-gaps operation SHALL provide periodStart, periodStop, and a subject; OR
+  - A $care-gaps operation SHALL provide periodStart, periodStop, and an organization; OR
   - A $care-gaps operation SHALL provide periodStart, periodStop, and a provider and an organization
 </div>
 
