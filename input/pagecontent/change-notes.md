@@ -72,4 +72,4 @@ The first official published version of the DEQM IG for FHIR R4.
     - Updated Examples page with new examples created for Gaps in Care
     - Updated Downloads page with new schematrons for Gaps in Care
 
-    {% include link-list.md %}
+{% include link-list.md %}
