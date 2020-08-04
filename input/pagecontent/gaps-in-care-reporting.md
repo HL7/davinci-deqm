@@ -54,6 +54,9 @@ Gaps through period is the time period defined by a Client for running the gaps 
 |**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-09-30|2020-07-01|Example: patient had colonscopy on 2010-07-03|Returns gaps through 2020-09-30. The gaps in care report indicates the patient has an open gap for the colorectal cancer screening measure. Since by 2020-09-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-06-30|2020-07-01|Example: patient had colonscopy on 2010-07-03|Returns gaps through 2020-06-30. The gaps in care report indicates the patient has a closed gap for the colorectal cancer screening measure. Since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
 
+We seek examples of continuous variable measure where prospective use case might be applicable. 
+{:.note-to-balloters}
+
 #### Care Gaps Operation
 {:.no_toc}
 
