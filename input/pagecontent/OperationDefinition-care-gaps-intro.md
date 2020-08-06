@@ -10,10 +10,10 @@ This is the new $care-gaps operation. The intent is to replace the existing $car
 <div class="new-content" markdown="1">
 Conformance Requirement 1:
 <br>
-A $care-gaps operation SHALL provide at least periodStart, periodStop, and subject|provider|organization, which could be one of the following:
+A $care-gaps operation SHALL provide at least periodStart, periodStop, and subject|practitioner|organization, which could be one of the following:
   - A $care-gaps operation SHALL provide periodStart, periodStop, and a subject; OR
   - A $care-gaps operation SHALL provide periodStart, periodStop, and an organization; OR
-  - A $care-gaps operation SHALL provide periodStart, periodStop, and a provider and an organization
+  - A $care-gaps operation SHALL provide periodStart, periodStop, and a practitioner and an organization
 </div>
 
 {% include link-list.md %}
