@@ -7,6 +7,9 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 This is the new $care-gaps operation. The intent is to replace the existing $care-gaps operation in the Clinical Reasoning module with this new $care-gaps operation when FHIR R4 moves to the next version.
 {:.note-to-balloters}
 
+We seek comments on the use of practitioner and organization parameters. The assumption is that patients would have been attributed properly to practitioner and/or organization when these parameters are used. Such attribution varies greatly and is not defined in this guide.
+{:.note-to-balloters}
+
 <div class="new-content" markdown="1">
 Conformance Requirement 1:
 <br>
