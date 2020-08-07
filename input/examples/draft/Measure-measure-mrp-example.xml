@@ -39,7 +39,7 @@
       <!-- 0..* Stratifier criteria for the measure -->
       <code>
         <coding>
-          <system value="http://fhir/example.org"/>
+          <system value="http://example.org/fhir/"/>
           <code value="sde-sex"/>
           <display value="SDE Sex"/>
         </coding>

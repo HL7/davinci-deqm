@@ -1,5 +1,5 @@
 {
-    "status": "draft",
+    "status": "active",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "license": "CC0-1.0",
     "name": "DataExchangeForQualityMeasuresSTU2forFHIRR4",
@@ -511,6 +511,14 @@
                     "reference": "MeasureReport/indv-measurereport03"
                 },
                 "description": "DEQM Indv Measurereport03 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Indv Measurreport Stratification Example",
+                "reference": {
+                    "reference": "MeasureReport/indv-measurreport-stratification-example"
+                },
+                "description": "DEQM Indv Measurreport Stratification Example"
             },
             {
                 "exampleBoolean": true,
