@@ -136,6 +136,9 @@
    <artifact name="Indv Measurereport03"
              key="MeasureReport-indv-measurereport03"
              id="MeasureReport/indv-measurereport03"/>
+   <artifact name="Indv Measurreport Stratification Example"
+             key="MeasureReport-indv-measurreport-stratification-example"
+             id="MeasureReport/indv-measurreport-stratification-example"/>
    <artifact name="Coverage02"
              key="Coverage-coverage02"
              id="Coverage/coverage02"/>

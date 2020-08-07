@@ -8,3 +8,4 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/cqfmeasures/Str
 ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 # the validator is trying to resolve an "example.org" artifact which by convention does not exist.  This warning will be corrected in a future version of the validation engine.
 The Measure "http://example.org/fhir/Measure/measure-medicare-stratification-example" could not be resolved, so no validation can be performed against the Measure
+The Measure "http://example.org/fhir/Measure/measure-medicare-stratification-example" could not be resolved, so no validation can be performed against the Measure

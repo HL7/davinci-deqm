@@ -104,7 +104,7 @@ Note that Multiple individual reports either for the same or multiple patient fo
 
 {% include examplebutton.html example="post-indv-report-example" b_title = "Click Here To See Example POST Individual Report (edited for brevity)" %}
 
-For a complete un-edited examples for both *single* and *multiple* patients see the [MRP Individual MeasureReport], [COL Individual MeasureReport], and [VTE Individual MeasureReport] and [Bundle Multiple Indv Report] examples.
+For a complete un-edited examples for both *single* and *multiple* patients see the [MRP Individual MeasureReport], [COL Individual MeasureReport], and [VTE Individual MeasureReport] and [Bundle Multiple Indv Report] examples.  for an example of a Individual MeasureReport with counts for stratifiers specified in an eCQM see the [Indv Measurreport Stratification Example].
 
 <br />
 

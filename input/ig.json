@@ -514,6 +514,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Indv Measurreport Stratification Example",
+                "reference": {
+                    "reference": "MeasureReport/indv-measurreport-stratification-example"
+                },
+                "description": "DEQM Indv Measurreport Stratification Example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Coverage02",
                 "reference": {
                     "reference": "Coverage/coverage02"
