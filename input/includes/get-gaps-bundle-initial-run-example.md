@@ -632,7 +632,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               },
               "text": {
                 "status": "generated",
-                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Dr Suess Street Whoville MA 01101 USA </p></div>"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Drive Street Cityplace MA 01101 USA </p></div>"
               },
               "identifier": [
                 {
@@ -675,9 +675,9 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "address": [
                 {
                   "line": [
-                    "13 Dr Suess Street"
+                    "13 Drive Street"
                   ],
-                  "city": "Whoville",
+                  "city": "Cityplace",
                   "state": "MA",
                   "postalCode": "01101",
                   "country": "USA"
@@ -1072,7 +1072,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               },
               "text": {
                 "status": "generated",
-                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Dr Suess Street Whoville MA 01101 USA </p></div>"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Drive Street Cityplace MA 01101 USA </p></div>"
               },
               "identifier": [
                 {
@@ -1115,9 +1115,9 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "address": [
                 {
                   "line": [
-                    "13 Dr Suess Street"
+                    "13 Drive Street"
                   ],
-                  "city": "Whoville",
+                  "city": "Cityplace",
                   "state": "MA",
                   "postalCode": "01101",
                   "country": "USA"
