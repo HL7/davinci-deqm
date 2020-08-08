@@ -25,9 +25,6 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](
 1. The organization that is responsible for ongoing maintenance of the gaps in care report
 </div>
 
-We seek comment on using section.focus to reference the DEQM Gaps In Care Individual MeasureReport Profile and whether it would be more appropriate to reference the DEQM Gaps In Care Individual MeasureReport Profile in section.entry.
-{:.note-to-balloters}
-
 <!-- ### Examples-->
 
 <!--{% include list-simple-organizations.xhtml %} -->

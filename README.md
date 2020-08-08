@@ -4,7 +4,21 @@
 
 ## (Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
 
-Authors:  Eric Haas
+Primary Author:  Eric Haas
+
+This Implementation Guide was made possible by the thoughtful contributions of the following people and organizations:
+
+The twenty-two founding Da Vinci Project member organizations.
+
+Bryn Rhodes, Bryn Rhodes, Dynamic Content Group
+Floyd Eisenberg, iParsimony LLC
+Jocelyn Keegan, Point of Care Partners
+Linda Michaelsen, Optum
+Lloyd Mckenzie, Gevity
+Robert Dieterle, EnableCare
+Robert Samples, ESAC
+Viet Nguyen, Stratametrics
+Yan Heras, Optimum eHealth LLC
 
 -----
 

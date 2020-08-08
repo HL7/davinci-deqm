@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "TODO:.",
+  "description": "Identifies which measure population that a specific resource is used for evaluating their logics. This is indicated by associating a resource with an population code selected from the MeasurePopulationType value set, such as numerator and denominator.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -38,7 +38,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Pop Ref",
-        "definition": "TODO:.",
+        "definition": "Population reference indicated by a measure population type code.",
         "min": 0,
         "max": "*"
       },
