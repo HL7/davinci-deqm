@@ -3,11 +3,10 @@
                url="http://hl7.org/fhir/us/davinci-deqm"
                ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm"
                defaultWorkgroup=""
-               defaultVersion="2.1.0"
+               defaultVersion="2.0.0"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
                ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2020Feb">
    <version code="current" url="http://build.fhir.org/ig/HL7/davinci-deqm"/>
-   <version code="2.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Sept"/>
    <version code="2.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU2"/>
    <version code="1.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Feb"/>
    <version code="1.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU1"/>
@@ -273,6 +272,9 @@
    <artifact name="DEQM Individual MeasureReport Profile"
              key="StructureDefinition-indv-measurereport-deqm"
              id="StructureDefinition/indv-measurereport-deqm"/>
+   <artifact name="DEQM Gaps In Care Individual MeasureReport Profile"
+             key="StructureDefinition-gaps-indv-measurereport-deqm"
+             id="StructureDefinition/gaps-indv-measurereport-deqm"/>
    <artifact name="Receiver Server CapabilityStatement"
              key="CapabilityStatement-receiver-server"
              id="CapabilityStatement/receiver-server"/>
@@ -330,9 +332,6 @@
    <artifact name="Care Gaps Operation"
              key="OperationDefinition-care-gaps"
              id="OperationDefinition/care-gaps"/>
-   <artifact name="DEQM Gaps In Care Individual MeasureReport Profile"
-             key="StructureDefinition-gaps-indv-measurereport-deqm"
-             id="StructureDefinition/gaps-indv-measurereport-deqm"/>
    <artifact name="DEQM Gaps In Care Bundle Profile"
              key="StructureDefinition-gaps-bundle-deqm"
              id="StructureDefinition/gaps-bundle-deqm"/>

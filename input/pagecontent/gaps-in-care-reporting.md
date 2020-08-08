@@ -9,7 +9,7 @@ A gap in care is defined as a discrepancy between recommended best practices and
 
 For providers and payers to improve population health and value-based care, the following two items must be addressed: gaps in care information and incomplete healthcare information.
 
- - Gaps in Care Information: Disparities in claims vs. clinical information, which makes it difficult to assess if best practices are being followed, e.g., a diabetic member with no hemoglobin A1C or a member being prescribed insulin with no diabetes diagnosis according to claims data.
+ - Gaps in Care Information: Disparities in claims vs. clinical information which makes it difficult to assess if best practices are being followed, e.g., a diabetic member with no hemoglobin A1C or a member being prescribed insulin with no diabetes diagnosis according to claims data.
 
  Research has shown that care gaps can be both harmful and costly when they are not properly managed. For example, not managing specific aspects of chronic diseases (e.g., hemoglobin A1C and diabetes) can lead to serious complications and escalate healthcare costs. Resolving the gaps in care is important to payers, providers, and the patients they serve. Performing gaps in care can positively influence patient health and improve quality scores and reimbursement under risk-sharing arrangements such as Medicare.
 
@@ -39,7 +39,7 @@ The following resources are used in the Gaps In Care Reporting scenario:
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
 |MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
 
-Figure 2-12 provides a graphic view of how these resources are related.
+Figure 2-12 provides a graphical view of how these resources are related.
 {% include img-portrait.html img="gic-resources.png" caption = "Figure 2-12 Gaps In Care Resources" %}
 
 ### Gaps in Care Reporting
@@ -54,7 +54,7 @@ Gaps through period is the time period defined by a Client for running the gaps 
 |**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-09-30|2020-07-01|Example: patient had colonscopy on 2010-07-03|Returns gaps through 2020-09-30. The gaps in care report indicates the patient has an open gap for the colorectal cancer screening measure. Since by 2020-09-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-06-30|2020-07-01|Example: patient had colonscopy on 2010-07-03|Returns gaps through 2020-06-30. The gaps in care report indicates the patient has a closed gap for the colorectal cancer screening measure. Since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
 
-We seek examples of continuous variable measure where prospective use case might be applicable. 
+We seek examples of continuous variable measure where prospective use case might be applicable.
 {:.note-to-balloters}
 
 #### Care Gaps Operation
