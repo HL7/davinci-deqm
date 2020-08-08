@@ -22,14 +22,14 @@ Gaps in care may be caused by several potential reasons. The most straight forwa
 {% include img-portrait.html img="gic-ecosystem.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
 In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Quality Improvement Ecosystem. The scenario is between a clinician and a measurement organization, such as a payer, or quality measurement/ population health tool. Note that a measurement organization might also make the request within their own system.
 
-#### Relationship of Individual Reporting and Gaps In Care Reporting
+#### Relationship of Individual Reporting and Gaps in Care Reporting
 {:.no_toc}
 
-The Gaps In Care Reporting is built on the Individual Reporting, where a new [DEQM Gaps In Care Individual MeasureReport Profile] is created based on the [DEQM Individual MeasureReport Profile] by adding extensions to support Gaps In Care Reporting specific requirements. This allows the Gaps In Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation.
+The Gaps in Care Reporting is built on the Individual Reporting, where a new [DEQM Gaps In Care Individual MeasureReport Profile] is created based on the [DEQM Individual MeasureReport Profile] by adding extensions to support Gaps in Care Reporting specific requirements. This allows the Gaps in Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation.
 
 ### Default Profiles
 
-The following resources are used in the Gaps In Care Reporting scenario:
+The following resources are used in the Gaps in Care Reporting scenario:
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
@@ -49,7 +49,7 @@ Figure 2-12 provides a graphical view of how these resources are related.
 
 Gaps through period is the time period defined by a Client for running the gaps in care report. When the gaps through period ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated open gaps and take proper actions to close the gaps. When the gaps through period ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified open gaps can no longer be acted upon.   
 
-|Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Creation Date|Colorectal Cancer Screening - Colonscopy Date|Gaps In Care Report|
+|Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Creation Date|Colorectal Cancer Screening - Colonscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
 |**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-09-30|2020-07-01|Example: patient had colonscopy on 2010-07-03|Returns gaps through 2020-09-30. The gaps in care report indicates the patient has an open gap for the colorectal cancer screening measure. Since by 2020-09-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-06-30|2020-07-01|Example: patient had colonscopy on 2010-07-03|Returns gaps through 2020-06-30. The gaps in care report indicates the patient has a closed gap for the colorectal cancer screening measure. Since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
@@ -111,7 +111,7 @@ Member attribution establishes associations between providers and payers. The pr
 
 `GET|[base]`
 
-{% include examplebutton.html example="get-gaps-caregap-usage-example" b_title = "Click Here To See Example GET Gaps In Care Report" %}
+{% include examplebutton.html example="get-gaps-caregap-usage-example" b_title = "Click Here To See Example GET Gaps in Care Report" %}
 
 ##### Bulk Data
 {:.no_toc}  
@@ -120,7 +120,7 @@ If Clients are requesting Gaps in Care reports for many patients/members, they m
 
 `GET|[base]`
 
-{% include examplebutton.html example="get-gaps-caregap-usage-bulk-example" b_title = "Click Here To See Example GET Gaps In Care Report Using Bulk Data" %}
+{% include examplebutton.html example="get-gaps-caregap-usage-bulk-example" b_title = "Click Here To See Example GET Gaps in Care Report Using Bulk Data" %}
 
 Headers:
 * `Prefer respond-async`

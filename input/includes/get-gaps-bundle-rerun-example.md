@@ -3,11 +3,11 @@
 {:.no_toc}
 
 **Scenario:**
-
+After additional data was submitted to the payer system. The provider requested a gaps in care report again on 2020-07-07 for the same group of patients (group id 123) and for the same gaps through period from 2020-01-01 to 2020-12-31. The provider received the report. It showed that gaps-patient01 now has a closed gap for Colorectal Cancer Screening and the gaps-patient02 still has a closed gap.
 
 **Get Gaps In Care Report**
 ```
-GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-07-307
+GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-12-31
 ```
 
 ~~~
