@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2020Sept" ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm" defaultVersion="2.1.0" defaultWorkgroup="cqi" gitUrl="https://github.com/HL7/davinci-deqm" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/davinci-deqm"><version code="current" url="http://build.fhir.org/ig/HL7/davinci-deqm"/>
-<version code="2.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Sept"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm" defaultVersion="2.0.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/davinci-deqm" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/davinci-deqm"><version code="current" url="http://build.fhir.org/ig/HL7/davinci-deqm"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU2"/>
 <version code="1.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Feb"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU1"/>
 <version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/index.html"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html"/>
-<version code="0.1"/>
+<version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html"/>
+<version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -17,9 +17,9 @@
 <artifact id="Coverage/coverage01" key="Coverage-coverage01" name="Coverage01"/>
 <artifact id="Coverage/coverage02" key="Coverage-coverage02" name="Coverage02"/>
 <artifact id="Coverage/coverage03" key="Coverage-coverage03" name="Coverage03"/>
+<artifact id="StructureDefinition/coverage-deqm" key="StructureDefinition-coverage-deqm" name="DEQM  Coverage Profile"/>
 <artifact id="StructureDefinition/extension-alternateScoreType" key="StructureDefinition-extension-alternateScoreType" name="DEQM Alternate Score Type Extension"/>
 <artifact id="StructureDefinition/extension-certificationIdentifier" key="StructureDefinition-extension-certificationIdentifier" name="DEQM Certification Identifier Extension"/>
-<artifact id="StructureDefinition/coverage-deqm" key="StructureDefinition-coverage-deqm" name="DEQM Coverage Profile"/>
 <artifact id="StructureDefinition/datax-measurereport-deqm" key="StructureDefinition-datax-measurereport-deqm" name="DEQM Data Exchange MeasureReport Profile"/>
 <artifact id="StructureDefinition/gaps-bundle-deqm" key="StructureDefinition-gaps-bundle-deqm" name="DEQM Gaps In Care Bundle Profile"/>
 <artifact id="StructureDefinition/gaps-composition-deqm" key="StructureDefinition-gaps-composition-deqm" name="DEQM Gaps In Care Composition Profile"/>
@@ -37,14 +37,15 @@
 <artifact id="StructureDefinition/practitioner-deqm" key="StructureDefinition-practitioner-deqm" name="DEQM Practitioner Profile"/>
 <artifact id="StructureDefinition/extension-reporterGroup" key="StructureDefinition-extension-reporterGroup" name="DEQM Reporter Group Extension"/>
 <artifact id="StructureDefinition/extension-reportingVendor" key="StructureDefinition-extension-reportingVendor" name="DEQM Reporting Vendor Extension"/>
+<artifact id="Device/deqm-software-system-example" key="Device-deqm-software-system-example" name="DEQM Software System Example"/>
 <artifact id="StructureDefinition/extension-submitDataUpdateType" key="StructureDefinition-extension-submitDataUpdateType" name="DEQM Submit Data Update Type Extension"/>
 <artifact id="StructureDefinition/summary-measurereport-deqm" key="StructureDefinition-summary-measurereport-deqm" name="DEQM Summary MeasureReport Profile"/>
 <artifact id="CodeSystem/update-type" key="CodeSystem-update-type" name="DEQM Update Type Code System"/>
 <artifact id="ValueSet/update-type" key="ValueSet-update-type" name="DEQM Update Type Value Set"/>
+<artifact id="Observation/DNA-occultblood" key="Observation-DNA-occultblood" name="DNA Occult Blood"/>
 <artifact id="MeasureReport/datax-measurereport01" key="MeasureReport-datax-measurereport01" name="Datax Measurereport01"/>
 <artifact id="MeasureReport/datax-measurereport02" key="MeasureReport-datax-measurereport02" name="Datax Measurereport02"/>
 <artifact id="MeasureReport/datax-measurereport03" key="MeasureReport-datax-measurereport03" name="Datax Measurereport03"/>
-<artifact id="Device/deqm-software-system-example" key="Device-deqm-software-system-example" name="Deqm Software System Example"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
@@ -78,6 +79,7 @@
 <artifact id="MeasureReport/indv-measurereport01" key="MeasureReport-indv-measurereport01" name="Indv Measurereport01"/>
 <artifact id="MeasureReport/indv-measurereport02" key="MeasureReport-indv-measurereport02" name="Indv Measurereport02"/>
 <artifact id="MeasureReport/indv-measurereport03" key="MeasureReport-indv-measurereport03" name="Indv Measurereport03"/>
+<artifact id="MeasureReport/indv-measurreport-stratification-example" key="MeasureReport-indv-measurreport-stratification-example" name="Indv Measurreport Stratification Example"/>
 <artifact id="Library/library-exm124-example" key="Library-library-exm124-example" name="Library Cervical Cancer Screening (EXM124)"/>
 <artifact id="Library/library-exm130-example" key="Library-library-exm130-example" name="Library Colorectal Cancer Screening (EXM130)"/>
 <artifact id="Library/library-mrp-example" key="Library-library-mrp-example" name="Library Mrp Example"/>
@@ -94,7 +96,6 @@
 <artifact id="Bundle/multiple-indv-mrp-obs-report" key="Bundle-multiple-indv-mrp-obs-report" name="Multiple Indv Mrp Obs Report"/>
 <artifact id="Bundle/multiple-indv-mrp-task-report" key="Bundle-multiple-indv-mrp-task-report" name="Multiple Indv Mrp Task Report"/>
 <artifact id="Bundle/multiple-summ-report" key="Bundle-multiple-summ-report" name="Multiple Summ Report"/>
-<artifact id="Observation/DNA-occultblood" key="Observation-DNA-occultblood" name="Observation DNA Occult Blood"/>
 <artifact id="Observation/observation01" key="Observation-observation01" name="Observation01"/>
 <artifact id="Observation/observation02" key="Observation-observation02" name="Observation02"/>
 <artifact id="Observation/observation03" key="Observation-observation03" name="Observation03"/>
