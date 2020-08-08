@@ -43,7 +43,7 @@ The Figure 3-22 shows the workflow for gaps in care.
 ### Gaps in Care Report
 {:.no_toc}
 
-This section contains an example that begins with a provider requesting a Gaps in Care Report for his/her patients from the payer. The provider receives the report, he/she then submits additional data to the payer for the patient that was identified as having open gaps in the report. He/she then later requests a Gaps in Care Report for these patients again from the payer.
+This section contains an example that begins with a provider requesting a gaps in care report for his/her patients from the payer. The provider receives the report, he/she then submits additional data to the payer for the patient that was identified as having open gaps in the report. He/she then later requests a gaps in care report for these patients again from the payer.
 
 #### Step 1 - Initial Run for a Gaps in Care Report
 The resource graphs below represent the structure of the resources returned from the first [care-gaps](OperationDefinition-care-gaps.html) operation. Figure 3-23 shows the patient, *Gaps Patient01*, has an open gap because there were no resources in the payer system that would put her in numerator or denominator exclusion of the Colorectal Cancer Screening measure. The DetectedIssue resource contained in this gaps in care report serves as a flag indicating *Gaps Patient01* has an open gap for this measure. Figure 3-24 shows the second patient, *Gaps Patient02*, that is in the report has a closed gap. The evaluatedResource points to a colonoscopy procedure done in 2018 that had met the numerator criteria and resulted as a closed gap. Notice that there is no DetectedIssue resource present because *Gaps Patient02* does not have an open gap.

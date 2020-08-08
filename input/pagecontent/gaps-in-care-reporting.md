@@ -17,10 +17,10 @@ Gaps in care may be caused by several potential reasons. The most straight forwa
 
  - Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at the time of diagnosis to support effective care coordination.
 
- An organization or tool that collects the data, may have updated information on the patient care in which the provider may not be aware of. For example, a payer might have paid a claim for a self-ordered mammogram and the provider may not be aware that test was completed. Using the gaps in care reporting, it allows the payer to share that information with the provider managing the patient's care and provides an opportunity to help address incomplete healthcare information. Alternatively, a provider may have data that the payer may not know about at the time a report was run.
+ An organization or tool that collects the data, may have updated information on the patient care in which the provider may not be aware of. For example, a payer might have paid a claim for a self-ordered mammogram and the provider may not be aware that test was completed. Using the Gaps in Care Reporting, it allows the payer to share that information with the provider managing the patient's care and provides an opportunity to help address incomplete healthcare information. Alternatively, a provider may have data that the payer may not know about at the time a report was run.
 
 {% include img-portrait.html img="gic-ecosystem.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
-In Figure 2-12, the cloud represents the Gaps in Care reporting portion of the Quality Improvement Ecosystem. The scenario is between a clinician and a measurement organization, such as a payer, or quality measurement/ population health tool. Note that a measurement organization might also make the request within their own system.
+In Figure 2-12, the cloud represents the Gaps in Care Reporting portion of the Quality Improvement Ecosystem. The scenario is between a clinician and a measurement organization, such as a payer, or quality measurement/ population health tool. Note that a measurement organization might also make the request within their own system.
 
 #### Relationship of Individual Reporting and Gaps in Care Reporting
 {:.no_toc}
@@ -104,7 +104,7 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition,
 #### Attribution
 {:.no_toc}
 
-Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for gaps in care reports is not in the scope of the DEQM IG. Gaps in care reporting references the standards specified in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG] for exchanging Member Attribution Lists between providers and payers.
+Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for gaps in care reports is not in the scope of the DEQM IG. Gaps in Care Reporting references the standards specified in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG] for exchanging Member Attribution Lists between providers and payers.
 
 #### Usage
 {:.no_toc}
@@ -116,7 +116,7 @@ Member attribution establishes associations between providers and payers. The pr
 ##### Bulk Data
 {:.no_toc}  
 
-If Clients are requesting Gaps in Care reports for many patients/members, they may consider using the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
+If Clients are requesting gaps in care reports for many patients/members, they may consider using the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
 
 `GET|[base]`
 
