@@ -7,11 +7,11 @@ ONLY the new content for Gaps in Care is in the scope for ballot for the Septemb
 
 The Gaps in Care is a powerful report that when used along with other DEQM functionality can result in better care results for the payer, the provider, and most importantly the patient. A simplistic example described below shows its potential power.
 
-In this scenario, a provider has requested a Gaps in Care report for the Colorectal Cancer Screening Measure from ABC Insurance for their patients using the [care-gaps](OperationDefinition-care-gaps.html) operation. Since the provider does not specify open or closed gaps, both open and closed gaps will be returned as default. The gaps in care report returns two patients. The first patient has an open gap and the second patient has a closed gap.
+In this scenario, a provider has requested a gaps in care report for the Colorectal Cancer Screening Measure from ABC Insurance for their patients using the [care-gaps](OperationDefinition-care-gaps.html) operation. Since the provider does not specify open or closed gaps, both open and closed gaps will be returned as default. The gaps in care report returns two patients. The first patient has an open gap and the second patient has a closed gap.
 
 The first patient with the open gap had a colonoscopy done recently and the ABC Insurance has not yet been made aware of. The provider uses the DEQM Submit Data functionality to update the payer’s database.
 
-Later, the provider runs the same Gaps in Care report again, both patients now showing as having their Colorectal Cancer Screening Measure gaps closed.
+Later, the provider runs the same gaps in care report again, both patients now showing as having their Colorectal Cancer Screening Measure gaps closed.
 
 ### FHIR Resource Overview
 
