@@ -93,7 +93,7 @@ definition:
     - code: copyrightyear
       value: 2020+
     - code: releaselabel
-      value: CI Build
+      value: Ballot
     - code: excludexml
       value: 'false'
     - code: excludejsn
