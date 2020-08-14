@@ -6,6 +6,5 @@ The jira specification file appears to be out of date with the versions, artifac
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
 # COPIED FROM Data Exchange For Quality Measures STU2 IG These warnings are all caused by the use of the new text/cql.identifier media type. This has been addressed in the current R5 build and are expected to resolve once the core package updates.
 ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-# the validator is trying to resolve an "example.org" artifact which by convention does not exist.  This warning will be corrected in a future version of the validation engine.
-The Measure "http://example.org/fhir/Measure/measure-medicare-stratification-example" could not be resolved, so no validation can be performed against the Measure
+# the validator is trying to resolve an "example.org" artifact which by convention does not exist.
 The Measure "http://example.org/fhir/Measure/measure-medicare-stratification-example" could not be resolved, so no validation can be performed against the Measure
