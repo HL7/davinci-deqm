@@ -4,13 +4,13 @@
 
 **Scenario:**
 
-A Client would like to know if the patient, gaps-patient01, has any open or closed gaps for the colorectal cancer screening measure and the cervical cancer screening measure for the period from 2020-01-01 to 2020-07-01. The Client requests a gaps in care report from a Server's system.
+A Client would like to know if the patient, *gaps-patient01*, has any open or closed gaps for the colorectal cancer screening measure and the cervical cancer screening measure for the period from 2020-01-01 to 2020-12-31. The Client requested a gaps in care report from a Server's system on 2020-06-30.
 
 **GET Gaps In Care Report**
 
 
 ```
-GET [base]/Measure/$care-gaps?subject=Patient/gaps-patient01&periodStart=2020-01-01&periodEnd=2020-07-01&measure=CMS130v8&measure=CMS124v8
+GET [base]/Measure/$care-gaps?subject=Patient/gaps-patient01&periodStart=2020-01-01&periodEnd=2020-12-31&measure=CMS130v8&measure=CMS124v8
 ```
 
 **Request body**
@@ -641,7 +641,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Dr Suess Street Whoville MA 01101 USA </p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Drive Street Cityplace MA 01101 USA </p></div>"
         },
         "identifier": [
           {
@@ -684,9 +684,9 @@ Content-Type: application/fhir+json;charset=UTF-8
         "address": [
           {
             "line": [
-              "13 Dr Suess Street"
+              "13 Drive Street"
             ],
-            "city": "Whoville",
+            "city": "Cityplace",
             "state": "MA",
             "postalCode": "01101",
             "country": "USA"

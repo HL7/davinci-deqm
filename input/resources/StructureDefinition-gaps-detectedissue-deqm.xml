@@ -14,7 +14,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure that is referenced in the [DEQM Gaps In Care Individual MeasureReport](StructureDefinition-gaps-indv-measurereport-deqm.html) has an open gap. Detected Issues should not be created for any DEQM Gaps In Care Individual MeasureReport where the gap is closed or no gap."/>
+    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure that is referenced in the [DEQM Gaps In Care Individual MeasureReport](StructureDefinition-gaps-indv-measurereport-deqm.html) has an open gap. Detected Issues SHALL not be created for any DEQM Gaps In Care Individual MeasureReport where the gap is closed."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>

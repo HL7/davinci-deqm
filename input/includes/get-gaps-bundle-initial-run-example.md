@@ -3,11 +3,11 @@
 {:.no_toc}
 
 **Scenario:**
-Gaps In Care
+The provider requested a gaps in care report on 2020-06-30, which was for a group of patients (group id 123) for the gaps through period from 2020-01-01 to 2020-12-31. The provider received the report, which includes two patients: *gaps-patient01* and *gaps-patient02*. The report shows that *gaps-patient01* has an open gap and *gaps-patient02* has a closed gap for Colorectal Cancer Screening.
 
 **Get Gaps In Care Report**
 ```
-GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-06-30
+GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-12-31
 ```
 
 ~~~
@@ -632,7 +632,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               },
               "text": {
                 "status": "generated",
-                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Dr Suess Street Whoville MA 01101 USA </p></div>"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 ABC Street Whoville MA 01101 USA </p></div>"
               },
               "identifier": [
                 {
@@ -675,7 +675,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "address": [
                 {
                   "line": [
-                    "13 Dr Suess Street"
+                    "13 ABC Street"
                   ],
                   "city": "Whoville",
                   "state": "MA",
@@ -1072,7 +1072,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               },
               "text": {
                 "status": "generated",
-                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 Dr Suess Street Whoville MA 01101 USA </p></div>"
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-organization-reportingvendor</p><p><b>meta</b>: </p><p><b>identifier</b>: Tax ID number = 123446789 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span></p><p><b>name</b>: GapsReportingVendor01</p><p><b>telecom</b>: ph: (+1) 401-545-1212</p><p><b>address</b>: 13 ABC Street Whoville MA 01101 USA </p></div>"
               },
               "identifier": [
                 {
@@ -1115,7 +1115,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "address": [
                 {
                   "line": [
-                    "13 Dr Suess Street"
+                    "13 ABC Street"
                   ],
                   "city": "Whoville",
                   "state": "MA",

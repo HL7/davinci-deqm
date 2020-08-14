@@ -15,7 +15,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care Bundle Profile describes a bundle returned by the Measure [care-gaps](OperationDefinition-care-gaps.html) operation. This bundle consists of a document composition for gaps in care and supporting resources referenced by the composition"/>
+    <description value="The DEQM Gaps In Care Bundle Profile describes a bundle returned by the Measure [care-gaps](OperationDefinition-care-gaps.html) operation. This bundle consists of a document composition for gaps in care and supporting resources referenced by the composition."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
