@@ -135,7 +135,23 @@
 [Bundle Multiple Indv Report]: Bundle-multiple-indv-mrp-obs-report.html
 [Software System]: {{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html
 [Default Profiles]: {{site.data.fhir.path}}implementationguide.html#default
+[Gaps In Care Reporting]: gaps-in-care-reporting.html
+[DEQM Gaps In Care Bundle Profile]: StructureDefinition-gaps-bundle-deqm.html
+[DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
+[DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
+[DEQM Gaps In Care Group Profile]: StructureDefinition-gaps-group-deqm.html
+[DEQM Gaps In Care Individual MeasureReport Profile]: StructureDefinition-gaps-indv-measurereport-deqm.html
+[Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/2020Feb/index.html
+[Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
+[MeasurePopulationType]: http://hl7.org/fhir/R4/valueset-measure-population.html
+[$care-gaps]: OperationDefinition-care-gaps.html
+[gaps status value set]:http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status
 [FHIR specification for operation behavior]: {{site.data.fhir.path}}operations.html#response
+[Gaps In Care]: gaps-examples.html
+[Operations]: operations.html
+[Terminology]: terminology.html
+[DEQM Population Reference Extension]: StructureDefinition-extension-populationReference.html
+[base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html
 [Datax Measurereport01]: MeasureReport-datax-measurereport01.html
 [Indv Measurereport01]: MeasureReport-indv-measurereport01.html
 [Summ Measurereport01]: MeasureReport-summ-measurereport01.json.html

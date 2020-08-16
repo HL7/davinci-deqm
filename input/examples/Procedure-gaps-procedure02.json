@@ -1,0 +1,30 @@
+{
+  "resourceType": "Procedure",
+  "id": "gaps-procedure02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-procedure02</p><p><b>meta</b>: </p><p><b>status</b>: completed</p><p><b>code</b>: <span title=\"Codes: {http://www.ama-assn.org/go/cpt 44393}\">Colonoscopy through stoma; with ablation of tumor(s), polyp(s), or other lesion(s) not amenable to removal by hot biopsy forceps, bipolar cautery or snare technique</span></p><p><b>subject</b>: <a href=\"Patient-gaps-patient01.html\">Generated Summary: id: gaps-patient01; Medical Record Number = 999995992 (USUAL); Parker Susan ; gender: female; birthDate: 1965-01-01</a></p><p><b>performed</b>: Jul 6, 2020, 2:00:00 AM --&gt; Jul 6, 2020, 3:00:00 AM</p></div>"
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "code": "44393",
+        "display": "Colonoscopy through stoma; with ablation of tumor(s), polyp(s), or other lesion(s) not amenable to removal by hot biopsy forceps, bipolar cautery or snare technique"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/gaps-patient01"
+  },
+  "performedPeriod": {
+    "start": "2020-07-06T08:00:00-00:00",
+    "end": "2020-07-06T09:00:00-00:00"
+  }
+}

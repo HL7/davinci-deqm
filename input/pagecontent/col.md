@@ -1,5 +1,8 @@
 
-###  Introduction
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. This example use case is not in scope for ballot comment.
+{:.note-to-balloters}
+
+##  Introduction
 
 The colonoscopy measure such as *HEDIS Colorectal Cancer Screening/CMS130*[^10] is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening for all patients in the population receiving care during the measurement period.
 

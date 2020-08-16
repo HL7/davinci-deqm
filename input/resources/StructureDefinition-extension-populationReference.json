@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-populationReference",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
+  "version": "0.0.0",
+  "name": "DEQMPopulationReferenceExtension",
+  "title": "DEQM Population Reference Extension",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-06-30",
+  "publisher": "Da Vinci Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+        }
+      ]
+    }
+  ],
+  "description": "Identifies which measure population that a specific resource is used for evaluating their logics. This is indicated by associating a resource with a population code selected from the MeasurePopulationType value set, such as numerator and denominator.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Reference"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Population reference",
+        "definition": "Reference a measure population within a measure identified by a measure population type code, such as numerator and denominator.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/measure-population"
+        }
+      }
+    ]
+  }
+}

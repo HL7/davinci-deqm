@@ -1,3 +1,5 @@
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Individual Reporting is not in scope for ballot comment.
+{:.note-to-balloters}
 
 ### Introduction
 

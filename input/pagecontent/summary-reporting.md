@@ -1,4 +1,7 @@
 
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Summary Reporting is not in scope for ballot comment.
+{:.note-to-balloters}
+
 ### Introduction
 
 A summary report contains calculated summary data for one or more Clinical Quality Measures (CQMs) for a specified population of patients within a particular health system over a specific period of time. For example, a colorectal cancer screening CQM has patient counts for the initial population, denominator, denominator exclusions, and numerator respectively for a specified population of patients. Summary reports may also contain summary data for stratifier criteria (such as gender or age) as defined in a CQM.

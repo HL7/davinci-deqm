@@ -1,0 +1,32 @@
+{
+  "resourceType": "Group",
+  "id": "gaps-subject-group01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-group-deqm"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-subject-group01</p><p><b>meta</b>: </p><p><b>type</b>: person</p><p><b>actual</b>: true</p><blockquote><p><b>member</b></p><p><b>entity</b>: <a href=\"Patient-patient01.html\">Generated Summary: id: patient01; Medical record number = 12345 (USUAL); active; Jairo Webster (OFFICIAL); gender: male; birthDate: 1946-12-16; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p></blockquote><blockquote><p><b>member</b></p><p><b>entity</b>: <a href=\"Patient-patient02.html\">Generated Summary: id: patient02; Medical record number = 23456 (USUAL); active; Darien Bernard (OFFICIAL); gender: male; birthDate: 1967-06-13; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></a></p></blockquote><blockquote><p><b>member</b></p><p><b>entity</b>: <a href=\"Patient-patient03.html\">Generated Summary: id: patient03; Medical record number = 34567 (USUAL); active; Virginia Hartman (OFFICIAL); gender: female; birthDate: 1983-09-12; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus U}\">unmarried</span></a></p></blockquote></div>"
+  },
+  "type": "person",
+  "actual": true,
+  "member": [
+    {
+      "entity": {
+        "reference": "Patient/patient01"
+      }
+    },
+    {
+      "entity": {
+        "reference": "Patient/patient02"
+      }
+    },
+    {
+      "entity": {
+        "reference": "Patient/patient03"
+      }
+    }
+  ]
+}

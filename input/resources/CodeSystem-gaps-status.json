@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DEQMGapsStatusCodeSystem",
+  "id": "gaps-status",
+  "title": "DEQM Gaps In Care Gap Status Code System",
+  "publisher":"Da Vinci Project",
+  "description": "This is a code system for gaps in care gap status.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+  "concept": [
+    {
+      "code": "open-gap",
+      "display": "open gap",
+      "definition": "Include only open gaps on report."
+    },
+    {
+      "code": "closed-gap",
+      "display": "closed gap",
+      "definition": "Include only closed gaps on report."
+    }
+  ],
+  "count": 2
+}

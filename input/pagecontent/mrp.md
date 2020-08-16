@@ -1,5 +1,8 @@
 
-### Introduction
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. This example use case is not in scope for ballot comment.
+{:.note-to-balloters}
+
+## Introduction
 
 The Medication Reconciliation Use Case defines the process by which the MRP Measure data can be exchanged between a provider acting in the role of the Producer to a Payer which is acting in the role of the Consumer.  MRP Measure is an attestation that a medication reconciliation post-discharge was performed on a covered member. This use case covers both the request to send attestation information and the unsolicited submission of that data.
 

@@ -58,5 +58,20 @@ The first official published version of the DEQM IG for FHIR R4.
     - Add [`MeasureReport.group.population.count` as 0..1 Must Support](StructureDefinition-indv-measurereport-deqm.html#profile) for individual report profile. ([FHIR-27862](https://jira.hl7.org/browse/FHIR-27862))
     - Add [guidance on standard error response](datax.html#usage-1) to the various transactions described in the framework. ([FHIR-18720](https://jira.hl7.org/browse/FHIR-18720))
 
+<div class="new-content" markdown="1">
+### Changes and Updates for version 2.1.0
 
-    {% include link-list.md %}
+1. Added content for Gaps in Care Reporting
+    - Updated Home Page about Gaps in Care Reporting and added new glossary and acronym
+    - Updated General Guidance about Gaps in Care Reporting
+    - Added Gaps In Care Reporting page under Framework
+    - Added Gaps In Care page under Example Use Cases
+    - Updated Profiles/Extensions page under FHIR Artifacts adding new profiles and extension defined for Gaps in Care
+    - Added Operations page under FHIR Artifacts listing care-gaps operation defined for Gaps in Care
+    - Updated Terminology page under FHIR Artifacts adding new code system and value sets defined for Gaps in Care
+    - Updated capability statements under FHIR Artifacts adding new capability statements defined for Gaps in Care
+    - Updated Examples page with new examples created for Gaps in Care
+    - Updated Downloads page with new schematrons for Gaps in Care
+</div>
+
+{% include link-list.md %}

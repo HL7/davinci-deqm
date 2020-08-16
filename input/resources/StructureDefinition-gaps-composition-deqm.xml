@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="gaps-composition-deqm"/>
+    <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
+    <name value="DEQMGapsInCareCompositionProfile"/>
+    <title value="DEQM Gaps In Care Composition Profile"/>
+    <status value="active"/>
+    <publisher value="Da Vinci Project"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+        </telecom>
+    </contact>
+    <description value="The DEQM Gaps In Care Composition Profile defines a document composition consisting of one or more gaps in care indivdiual MeasureReport(s) for an individual. Each section of this composition corresponds to a gaps in care indivdiual MeasureReport for a specific measure. The subject of each gaps in care individual MeasureReport referenced by the section must be for the same individual specified in the subject of this Composition."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Composition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Composition">
+            <path value="Composition"/>
+        </element>
+        <element id="Composition.type">
+            <path value="Composition.type"/>
+            <comment value="For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding. A LOINC code was requested for gaps in care report. The gaps-doc is a temporary code before the offical LOINC code is assigned."/>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type"/>
+                    <code value="gaps-doc"/>
+                    <display value="Gaps in Care Report"/>
+                </coding>
+            </fixedCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.subject">
+            <path value="Composition.subject"/>
+            <min value="1"/>
+            <short value="What individual the gaps in care report is for. All gaps in care individual MeasureReports referenced must be for this same individual."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.date">
+            <path value="Composition.date"/>
+            <short value="The datetime the gaps in care report was created"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.title">
+            <path value="Composition.title"/>
+            <short value="The title of the gaps in care report"/>
+            <type>
+                <code value="string"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.custodian">
+            <path value="Composition.custodian"/>
+            <short value="Identifies the organization who is responsible for ongoing maintenance of and accessing to this gaps in care report"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section">
+            <path value="Composition.section"/>
+            <short value="Must contain at least one section, each section corresponds to a gaps in care indivdiual MeasureReport for a specific measure"/>
+            <min value="1"/>
+        </element>
+        <element id="Composition.section.title">
+            <path value="Composition.section.title"/>
+            <short value="The title of the measure that is referenced"/>
+        </element>
+        <element id="Composition.section.focus">
+            <path value="Composition.section.focus"/>
+            <short value="This references a gaps in care individual MeasureReport"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section.entry">
+            <path value="Composition.section.entry"/>
+            <short value="This references a gaps in care DetectedIssue, only if there is open gap(s) for the measure"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

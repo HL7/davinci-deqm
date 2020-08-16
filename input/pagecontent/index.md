@@ -1,4 +1,7 @@
 
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
+{:.note-to-balloters}
+
 ###  Introduction
 
 The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
@@ -23,6 +26,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
+  <div class="new-content" markdown="1">
+  -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the gaps in care reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
+  </div>
+
 - [Use cases]\: Three* exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
 
     - [Medication Reconciliation (MRP)]\: This example shows how to implement a data exchange, and individual and summary measure reporting for the medication reconciliation post-discharge measure.
@@ -31,6 +38,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 
     - [Venous Thromboembolism Prophylaxis (VTE-1)]\: This example is based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the
    Preventative Care Meaningful Measure Area.
+
+   <div class="new-content" markdown="1">
+   -  [Gaps in Care]\: This page lists example use cases for gaps in care reporting.
+   </div>
 
 *Additional use cases are planned and will be published in forth-coming companion documents outside this implementation guide.  A link to these scenarios will be provided here when available.
 {:.stu-note}
@@ -43,6 +54,12 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Downloads]\: This page provides links to downloadable artifacts.
 
+<div class="new-content" markdown="1">
+
+- [Terminology]\: This page lists code systems and value sets defined in this guide.
+
+- [Operations]\: This page lists the Operation that is defined in this guide to exchange gaps in care report.
+</div>  
 
 ### Background
 
@@ -86,9 +103,24 @@ The reporting scenarios are:
 
 For the reporting scenarios, the actors are Reporters and Receivers:
 
-**Reporters** are the actors submitting the results of a quality measure. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
+**Reporters** are the actors requesting a report on the gaps in care for their quality measures. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
+
+<div class="new-content" markdown="1">
+#### Gaps in Care Reporting Scenarios
+Gaps in Care Reporting is added as a new group of quality reporting scenarios supported in this version of the guide. Similar to the reporting scenarios, a gaps in care report is used to report the results of quality measures on patients or population, but for a gaps through period that is of interest for a Client.
+
+1. **Gaps in Care** - Used to report the results of open and/or closed gaps of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open gaps.
+
+{% include img-portrait.html  caption = "Figure 1-5 Gaps in Care Reporting Scenarios" img="gaps-reporting-scenario.png" %}
+
+For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
+
+**Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if a provider requests a report from the payer's system, then the provider serves as the client. If a payer requests a report from their own system, they are the client.
+
+**Servers** are the actors receiving the request for the gaps in care report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system servers as the server. If a payer requests a report from their own system, the payer's system servers as the server.
+</div>
 
 ### Glossary
 {: #data-of-interest}Data of Interest
@@ -108,6 +140,26 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 {: #submission-period}Submission period
   : For this Implementation guide, submission period is the period of time in which data can exchanged when describing the FHIR transactions for data exchange, and measure reporting. The submission period typically overlaps with the measurement period and reporting period.
+
+<div class="new-content" markdown="1">
+{: #closed-gap}Closed Gap
+  : No discrepancy exists between recommended best practices and the services that are actually provided and documented. A previously identified open gap may become closed, if actions were taken to close the open gaps.  
+
+{: #gaps-through-period}Gaps Through Period
+  : The period of time defined by a Client for running the gaps in care report. When the end period date of the gaps is specified as a date in the future, it indicates the gaps in care report will be run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end period date of the gaps is specified as a date in the past, it indicates the gaps in care report will be run retrospectively.
+
+{: #gaps-in-care}Gaps In Care
+  : Gaps in care are defined as discrepancies between recommended best practices and the services that are actually provided and documented. The terms gaps in care and care gaps may be used interchangeably.
+
+{: #inverse-measure}Inverse Measure
+  : A lower calculated performance rate for this measure indicates better clinical care or control. The Diabetes: Hemoglobin A1c (HbA1c) Poor Control (>9%) measure is an example of inverse measure.
+
+{: #open-gap}Open Gap
+  : A discrepancy exists between recommended best practices and the services that are actually provided and documented. For example, individuals missing colonoscopy or other screening tests as specified in the Colorectal Cancer Screening measure based on their age groups. For a positive measure, open gaps are identified if an individual is not in the numerator population as specified by the measure. For an inverse measure, open gaps are identified if an individual is in the numerator population as specified by the measure.
+
+{: #positive-measure}Positive Measure
+  : A higher calculated performance rate for this measure indicates better clinical care or control. The Colorectal Cancer Screening measure is an example of positive measure.
+</div>
 
 For additional definitions see the [eCQI Resource Center Glossary]
 
@@ -136,13 +188,20 @@ For additional definitions see the [eCQI Resource Center Glossary]
 
 <br />
 
+|Acronym|Definition|
+|---|---|
+|GIC|Gaps In Care|
+{:.new-content}
+
+<br />
+
 ---
 
 **This Implementation Guide was made possible by the thoughtful contributions of the following people and organizations:**
 
 - *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*
 
-- *Bryn Rhodes, Bryn Rhodes, Dynamic Content Group*
+- *Bryn Rhodes, Dynamic Content Group*
 - *Eric Haas, Health eData Inc*
 - *Floyd Eisenberg, iParsimony LLC*
 - *Jocelyn Keegan, Point of Care Partners*

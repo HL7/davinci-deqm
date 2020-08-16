@@ -1,5 +1,8 @@
 
-### Introduction
+ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. This example use case is not in scope for ballot comment.
+{:.note-to-balloters}
+
+## Introduction
 
 The VTE-1 measure assesses the number of patients who received venous thromboembolism (VTE) prophylaxis or have documentation why no venous thromboembolism prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission. Note that the Individual Measure Reporting Interaction is the only interaction used for this measure.
 
