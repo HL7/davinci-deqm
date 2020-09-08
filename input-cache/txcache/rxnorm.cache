@@ -5,7 +5,7 @@
   "display" : "heparin sodium, porcine 5000 UNT per 0.5 ML Injection"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "eparin sodium, porcine 5000 UNT in 0.5 ML Injection",
+  "display" : "heparin sodium, porcine 5000 UNT in 0.5 mL Injection",
   "severity" : null,
   "error" : ""
 }
@@ -50,7 +50,7 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "eparin sodium, porcine 5000 UNT in 0.5 ML Injection",
+  "display" : "heparin sodium, porcine 5000 UNT in 0.5 mL Injection",
   "severity" : null,
   "error" : ""
 }
@@ -60,7 +60,7 @@ v: {
   "code" : "1658634"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "eparin sodium, porcine 5000 UNT in 0.5 ML Injection",
+  "display" : "heparin sodium, porcine 5000 UNT in 0.5 mL Injection",
   "severity" : null,
   "error" : ""
 }

@@ -85,6 +85,8 @@ definition:
       value: 'true'
     - code: apply-publisher
       value: 'true'
+    - code: apply-copyright
+      value: 'false'
     - code: apply-version
       value: 'true'
     - code: show-inherited-invariants
@@ -94,7 +96,7 @@ definition:
     - code: copyrightyear
       value: 2020+
     - code: releaselabel
-      value: Ballot
+      value: CI Build
     - code: excludexml
       value: 'false'
     - code: excludejsn

@@ -151,6 +151,10 @@
                 "value": "true"
             },
             {
+                "code": "apply-copyright",
+                "value": "false"
+            },
+            {
                 "code": "apply-version",
                 "value": "true"
             },
@@ -168,7 +172,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "Ballot"
+                "value": "CI Build"
             },
             {
                 "code": "excludexml",

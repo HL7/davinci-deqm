@@ -48,6 +48,38 @@ v: {
 }
 -------------------------------------------------------------------------------------
 {"code" : {
+  "code" : "application/elm+xml"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "application/elm+xml",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/cql"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "text/cql",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
   "code" : "NJ"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -1067,38 +1099,6 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Michigan",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "application/elm+xml"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:ietf:bcp:13"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "application/elm+xml",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "text/cql"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:ietf:bcp:13"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "text/cql",
   "severity" : null,
   "error" : ""
 }
