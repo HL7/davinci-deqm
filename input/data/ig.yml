@@ -5,7 +5,7 @@ name: DataExchangeForQualityMeasuresSTU2forFHIRR4
 copyright: >-
   Used by permission of HL7 International - Clinical Quality Information Work
   Group, all rights reserved Creative Commons License
-title: Data Exchange For Quality Measures STU2 for FHIR R4
+title: Data Exchange For Quality Measures STU3 for FHIR R4
 resourceType: ImplementationGuide
 jurisdiction:
   - coding:
@@ -17,7 +17,7 @@ contact:
         value: 'http://www.hl7.org/Special/committees/cqi/index.cfm'
 url: >-
   http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-2.1.0
-version: 2.1.0
+version: current
 packageId: hl7.fhir.us.davinci-deqm
 dependsOn:
   - version: 4.0.0
@@ -31,7 +31,8 @@ dependsOn:
   - version: 2.0.0
     id: cqfm
     packageId: hl7.fhir.us.cqfmeasures
-    uri: 'http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures'
+    uri: >-
+      http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures
 fhirVersion:
   - 4.0.1
 definition:
@@ -145,20 +146,16 @@ definition:
       reference:
         reference: Bundle/multiple-indv-mrp-obs-report
       description: DEQM Multiple Indv Mrp Obs Report example
-
-
     - exampleBoolean: true
       name: Measure Mrp Example
       reference:
         reference: Measure/measure-mrp-example
       description: DEQM Measure Mrp Example example
-
     - exampleBoolean: true
       name: Measure Date of Last Power Outage
       reference:
         reference: Measure/date-of-last-power-outage
       description: DEQM Measure Date of Last Power Outage example
-
     - exampleBoolean: true
       name: Datax Measurereport03
       reference:
@@ -169,19 +166,16 @@ definition:
       reference:
         reference: Location/location02
       description: DEQM Location02 example
-
     - exampleBoolean: true
       name: Single Indv Vte Report Option 1
       reference:
         reference: Bundle/single-indv-vte-report-option1
       description: DEQM Single Indv Vte Report example using MedicationAdministration
-
     - exampleBoolean: true
       name: Single Indv Vte Report Option 7
       reference:
         reference: Bundle/single-indv-vte-report-option7
       description: DEQM Single Indv Vte Report example using MedicationRequest
-
     - exampleBoolean: true
       name: Col Submit Collect Obs
       reference:
@@ -217,25 +211,21 @@ definition:
       reference:
         reference: Parameters/mrp-submit-obs
       description: DEQM Mrp Submit Obs example
-
     - exampleBoolean: true
       name: Observation01
       reference:
         reference: Observation/observation01
       description: DEQM Observation01 example
-
     - exampleBoolean: true
       name: Observation02
       reference:
         reference: Observation/observation02
       description: DEQM Observation02 example
-
     - exampleBoolean: true
       name: Observation03
       reference:
         reference: Observation/observation03
       description: DEQM Observation03 example
-
     - exampleBoolean: true
       name: Multiple Summ Report
       reference:
@@ -261,7 +251,6 @@ definition:
       reference:
         reference: Bundle/multiple-indv-mrp-task-report
       description: DEQM Multiple Indv Mrp Task Report example
-
     - exampleBoolean: true
       name: Encounter01
       reference:
@@ -277,7 +266,6 @@ definition:
       reference:
         reference: Encounter/encounter03
       description: DEQM Encounter03 example
-
     - exampleBoolean: true
       name: DNA Occult Blood
       reference:
@@ -298,37 +286,31 @@ definition:
       reference:
         reference: Practitioner/practitioner01
       description: DEQM Practitioner01 example
-
     - exampleBoolean: true
       name: Practitioner02
       reference:
         reference: Practitioner/practitioner02
       description: DEQM Practitioner02 example
-
     - exampleBoolean: true
       name: Practitioner03
       reference:
         reference: Practitioner/practitioner03
       description: DEQM Practitioner03 example
-
     - exampleBoolean: true
       name: Group01
       reference:
         reference: Group/group01
       description: DEQM Group01 example
-
     - exampleBoolean: true
       name: Indv Measurereport03
       reference:
         reference: MeasureReport/indv-measurereport03
       description: DEQM Indv Measurereport03 example
-
     - exampleBoolean: true
       name: Indv Measurreport Stratification Example
       reference:
         reference: MeasureReport/indv-measurreport-stratification-example
       description: DEQM Indv Measurreport Stratification Example
-
     - exampleBoolean: true
       name: Coverage02
       reference:
@@ -349,45 +331,76 @@ definition:
       reference:
         reference: MeasureReport/summ-measurereport02
       description: DEQM Summ Measurereport02 example
-
     - exampleBoolean: true
       name: Summary MeasureReport Date of Last Power Outage
       reference:
         reference: MeasureReport/date-of-last-power-outage
       description: DEQM Summary Measurereport Date of Last Power Outage example
-
     - exampleBoolean: true
       name: Datax Measurereport01
       reference:
         reference: MeasureReport/datax-measurereport01
       description: DEQM Datax Measurereport01 example
-
+    - exampleBoolean: true
+      name: Task01
+      reference:
+        reference: Task/task01
+      description: DEQM Task01 example
+    - exampleBoolean: true
+      name: Task02
+      reference:
+        reference: Task/task02
+      description: DEQM Task02 example
+    - exampleBoolean: true
+      name: Task03
+      reference:
+        reference: Task/task03
+      description: DEQM Task03 example
+    - exampleBoolean: true
+      name: Organization01
+      reference:
+        reference: Organization/organization01
+      description: DEQM Organization01 example
+    - exampleBoolean: true
+      name: Coverage03
+      reference:
+        reference: Coverage/coverage03
+      description: DEQM Coverage03 example
     - exampleBoolean: true
       name: Gaps Individual MeasureReport01
       reference:
         reference: MeasureReport/gaps-indv-measurereport01
       description: GIC Individual MeasureReport01 example
     - exampleBoolean: true
+      name: Gaps Individual MeasureReport02
+      reference:
+        reference: MeasureReport/gaps-indv-measurereport02
+      description: GIC Individual MeasureReport02 example
+    - exampleBoolean: true
+      name: Gaps Individual MeasureReport03
+      reference:
+        reference: MeasureReport/gaps-indv-measurereport03
+      description: GIC Individual MeasureReport03 example
+    - exampleBoolean: true
+      name: Gaps Individual MeasureReport04
+      reference:
+        reference: MeasureReport/gaps-indv-measurereport04
+      description: GIC Individual MeasureReport04 example
+    - exampleBoolean: true
       name: Gaps Patient01
       reference:
         reference: Patient/gaps-patient01
       description: GIC Patient01 example
     - exampleBoolean: true
-      name: Gaps Encounter01
-      reference:
-        reference: Encounter/gaps-encounter01
-      description: GIC Encounter01 example
-    - exampleBoolean: true
-      name: Gaps Reporting Vendor Organization
-      reference:
-        reference: Organization/gaps-organization-reportingvendor
-      description: GIC Reporting Vendor Organization example
-
-    - exampleBoolean: true
       name: Gaps Patient02
       reference:
         reference: Patient/gaps-patient02
       description: GIC Patient02 example
+    - exampleBoolean: true
+      name: Gaps Encounter01
+      reference:
+        reference: Encounter/gaps-encounter01
+      description: GIC Encounter01 example
     - exampleBoolean: true
       name: Gaps Encounter02
       reference:
@@ -408,7 +421,11 @@ definition:
       reference:
         reference: Procedure/gaps-procedure02
       description: GIC Procedure02 example
-
+    - exampleBoolean: true
+      name: Gaps Reporting Vendor Organization
+      reference:
+        reference: Organization/gaps-organization-reportingvendor
+      description: GIC Reporting Vendor Organization example
     - exampleBoolean: true
       name: Gaps Composition01
       reference:
@@ -424,127 +441,66 @@ definition:
       reference:
         reference: Composition/gaps-composition03
       description: GIC Composition03 example
-
     - exampleBoolean: true
       name: Gaps DetectedIssue01
       reference:
         reference: DetectedIssue/gaps-detectedissue01
       description: GIC DetectedIssue01 example
-
     - exampleBoolean: true
       name: Gaps DetectedIssue02
       reference:
         reference: DetectedIssue/gaps-detectedissue02
       description: GIC DetectedIssue02 example
-
     - exampleBoolean: true
       name: Gaps Group01 subject
       reference:
         reference: Group/gaps-subject-group01
       description: GIC Group01 subject example
-
-    - exampleBoolean: true
-      name: Gaps Individual MeasureReport02
-      reference:
-        reference: MeasureReport/gaps-indv-measurereport02
-      description: GIC Individual MeasureReport02 example
-
-    - exampleBoolean: true
-      name: Gaps Individual MeasureReport03
-      reference:
-        reference: MeasureReport/gaps-indv-measurereport03
-      description: GIC Individual MeasureReport03 example
-
-    - exampleBoolean: true
-      name: Gaps Individual MeasureReport04
-      reference:
-        reference: MeasureReport/gaps-indv-measurereport04
-      description: GIC Individual MeasureReport04 example
-
     - exampleBoolean: true
       name: Gaps Bundle Open Individual MeasureReports
       reference:
         reference: Bundle/single-gaps-open-indv-report01
       description: GIC Bundle Open Individual MeasureReports example
-
     - exampleBoolean: true
       name: Gaps Bundle Closed Individual MeasureReport01
       reference:
         reference: Bundle/single-gaps-closed-indv-report01
       description: GIC Bundle Closed Individual MeasureReport01 example
-
     - exampleBoolean: true
       name: Gaps Bundle Closed Individual MeasureReport02
       reference:
         reference: Bundle/single-gaps-closed-indv-report02
       description: GIC Bundle Closed Individual MeasureReport02 example
-
     - exampleBoolean: true
       name: Gaps Multiple Bundles Individual MeasureReports01
       reference:
         reference: Parameters/multiple-gaps-indv-report01
       description: GIC Gaps Multiple Bundles Individual MeasureReports01 example
-
     - exampleBoolean: true
       name: Gaps Multiple Bundles Individual MeasureReports02
       reference:
         reference: Parameters/multiple-gaps-indv-report02
       description: GIC Gaps Multiple Bundles Individual MeasureReports02 example
-
     - exampleBoolean: true
       name: Measure Colorectal Cancer Screening (EXM130)
       reference:
         reference: Measure/measure-exm130-example
       description: Measure Colorectal Cancer Screening (EXM130) example
-
     - exampleBoolean: true
       name: Measure Cervical Cancer Screening (EXM124)
       reference:
         reference: Measure/measure-exm124-example
       description: Measure Cervical Cancer Screening (EXM124) example
-
     - exampleBoolean: true
       name: Library Colorectal Cancer Screening (EXM130)
       reference:
-          reference: Library/library-exm130-example
+        reference: Library/library-exm130-example
       description: Library Colorectal Cancer Screening (EXM130) example
-
     - exampleBoolean: true
       name: Library Cervical Cancer Screening (EXM124)
       reference:
         reference: Library/library-exm124-example
       description: Library Cervical Cancer Screening (EXM124) example
-
-    - exampleBoolean: true
-      name: Task01
-      reference:
-        reference: Task/task01
-      description: DEQM Task01 example
-
-
-    - exampleBoolean: true
-      name: Task02
-      reference:
-        reference: Task/task02
-      description: DEQM Task02 example
-
-
-    - exampleBoolean: true
-      name: Task03
-      reference:
-        reference: Task/task03
-      description: DEQM Task03 example
-
-    - exampleBoolean: true
-      name: Organization01
-      reference:
-        reference: Organization/organization01
-      description: DEQM Organization01 example
-    - exampleBoolean: true
-      name: Coverage03
-      reference:
-        reference: Coverage/coverage03
-      description: DEQM Coverage03 example
     - exampleBoolean: true
       name: Patient01
       reference:
@@ -595,11 +551,9 @@ definition:
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-certificationIdentifier
-
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-populationReference
-
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-submitDataUpdateType
@@ -736,9 +690,6 @@ definition:
             nameUrl: CapabilityStatement-consumer-server.html
             title: CapabilityStatement Consumer Server
           - generation: generated
-            nameUrl: CapabilityStatement-receiver-server.html
-            title: CapabilityStatement Receiver Server
-          - generation: generated
             nameUrl: CapabilityStatement-reporter-client.html
             title: CapabilityStatement Reporter Client
           - generation: generated
@@ -760,4 +711,4 @@ definition:
     title: Home
   grouping:
     - name: base
-id: hl7.fhir.us.davinci-deqm-2.1.0
+id: hl7.fhir.us.davinci-deqm
