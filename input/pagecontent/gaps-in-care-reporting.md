@@ -13,7 +13,7 @@ For providers and payers to improve population health and value-based care, the 
 
  Research has shown that care gaps can be both harmful and costly when they are not properly managed. For example, not managing specific aspects of chronic diseases (e.g., hemoglobin A1C and diabetes) can lead to serious complications and escalate healthcare costs. Resolving the gaps in care is important to payers, providers, and the patients they serve. Performing gaps in care can positively influence patient health and improve quality scores and reimbursement under risk-sharing arrangements such as Medicare.
 
-Gaps in care may be caused by several potential reasons. The most straight forward reason is that the care needed has not yet been provided for the patient. While providers cannot always control closing the gaps, most scenarios can be easily remedied with an office visit, lab order, prescription or other clinical care practices.
+Gaps in care may be caused by several potential reasons. The most straightforward reason is that the care needed has not yet been provided for the patient. While providers cannot always control closing the gaps, most scenarios can be easily remedied with an office visit, lab order, prescription or other clinical care practices.
 
  - Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at the time of diagnosis to support effective care coordination.
 
