@@ -11,7 +11,7 @@ In this scenario, a provider has requested a gaps in care report for the Colorec
 
 The first patient with the open gap had a colonoscopy done recently and the ABC Insurance has not yet been made aware of. The provider uses the DEQM Submit Data functionality to update the payer’s database.
 
-Later, the provider runs the same gaps in care report again, both patients now showing as having their Colorectal Cancer Screening Measure gaps closed.
+Later, the provider runs the same gaps in care report again, both patients now showing as having their Colorectal Cancer Screening Measure gaps closed. 
 
 ### FHIR Resource Overview
 

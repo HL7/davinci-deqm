@@ -15,7 +15,7 @@ For providers and payers to improve population health and value-based care, the 
 
 Gaps in care may be caused by several potential reasons. The most straightforward reason is that the care needed has not yet been provided for the patient. While providers cannot always control closing the gaps, most scenarios can be easily remedied with an office visit, lab order, prescription or other clinical care practices.
 
- - Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at the time of diagnosis to support effective care coordination.
+ - Incomplete Healthcare Information: For example, a request for cancer treatment without providing date of diagnosis or stage of illness at the time of diagnosis to support effective care coordination. 
 
  An organization or tool that collects the data, may have updated information on the patient care in which the provider may not be aware of. For example, a payer might have paid a claim for a self-ordered mammogram and the provider may not be aware that test was completed. Using the Gaps in Care Reporting, it allows the payer to share that information with the provider managing the patient's care and provides an opportunity to help address incomplete healthcare information. Alternatively, a provider may have data that the payer may not know about at the time a report was run.
 
