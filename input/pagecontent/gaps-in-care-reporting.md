@@ -51,7 +51,7 @@ Gaps through period is the time period defined by a Client for running the gaps 
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Creation Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
-|**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-09-30|2020-07-01|Example: patient had colonoscopy on 2010-07-03|Returns gaps through 2020-09-30. The gaps in care report indicates the patient has an open gap for the colorectal cancer screening measure. Since by 2020-09-30, the colonoscopy would be over 10 years.|
+|**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-09-30|2020-07-01|Example: patient had colonoscopy on 2010-07-03|Returns gaps through 2020-09-30. The gaps in care report indicates the patient has an open gap for the colorectal cancer screening measure. By 2020-09-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-06-30|2020-07-01|Example: patient had colonoscopy on 2010-07-03|Returns gaps through 2020-06-30. The gaps in care report indicates the patient has a closed gap for the colorectal cancer screening measure. Since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
 
 We seek examples of continuous variable measure where prospective use case might be applicable.
@@ -65,7 +65,7 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a g
 The extended operation, [care-gaps](OperationDefinition-care-gaps.html), makes the following changes to the existing input parameters in the base operation:
 - **periodStart** is still required, but the description is modified to reference the start date of the gaps through period.
 - **periodEnd** is still required, but the description is modified to reference the end of the gaps through period.
--	**topic** is an optional parameter and the cardinality is updated allow multiple topics be specified.
+-	**topic** is an optional parameter for which the cardinality has been updated to allow multiple topics to be specified.
 -	**subject** can now point to either a patient or a group of patients. Subject is optional when run a gaps in care report for an organization or a practitioner of an organization.
 
 Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) operation defined in this guide:

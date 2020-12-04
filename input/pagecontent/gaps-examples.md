@@ -56,7 +56,7 @@ The resource graphs below represent the structure of the resources returned from
 
 #### Step 2 - Data Exchange to Submit Data for Closing Gaps
 
-The provider noticed *Gaps Patient01* was indicated as having an open gap for Colorectal Cancer Screening. The provider ordered an colonscopy and the patient was able to get it done in the next few days. Since the payer system did not have this new data, the provider then used the DEQM Data Exchange profile(s) to submit additional data to the payer. Please see [Colorectal Cancer Screening (COL)] Use Case for details on how to complete the DEQM Data Exchange.
+The provider noticed *Gaps Patient01* was indicated as having an open gap for Colorectal Cancer Screening. The provider ordered a colonoscopy and the patient was able to get it done in the next few days. Since the payer system did not have this new data, the provider then used the DEQM Data Exchange profile(s) to submit additional data to the payer. Please see [Colorectal Cancer Screening (COL)] Use Case for details on how to complete the DEQM Data Exchange.
 
 #### Step 3 - Rerun for a Gaps in Care Report
 
