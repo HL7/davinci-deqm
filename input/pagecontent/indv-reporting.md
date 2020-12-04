@@ -93,7 +93,7 @@ When the results of a CQM are completed they are POSTed to the quality measure R
 
 Posting Individual Measure Reports is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios **SHALL** contains only the new and updated DEQM and QI Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
 
-Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced multiple time within the Bundle, the reporting overhead for the Reporter may be reduced when compared to reporting each individual report separately. (See the FHIR specification for more information about using [Bundles] and resolving references in Bundles)
+Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced multiple time within the Bundle, the reporting overhead for the Reporter may be reduced when compared to reporting each individual report separately. (See the FHIR specification for more information about using [Bundles] and resolving references in Bundles)
 
 {% include img-narrow.html  img="indv_report_post.jpg" caption="Figure 2-10 POST Individual Report" %}
 

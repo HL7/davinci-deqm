@@ -13,7 +13,7 @@ We seek comments on the use of practitioner and organization parameters. The ass
 <div class="new-content" markdown="1">
 Conformance Requirement 1:
 <br>
-A $care-gaps operation SHALL provide at least periodStart, periodEnd, and subject|practitioner|organization, which could be one of the following:
+A caller of the $care-gaps operation SHALL provide at least periodStart, periodEnd, and subject|practitioner|organization, which could be one of the following:
   - A $care-gaps operation SHALL provide periodStart, periodEnd, and a subject; OR
   - A $care-gaps operation SHALL provide periodStart, periodEnd, and an organization; OR
   - A $care-gaps operation SHALL provide periodStart, periodEnd, and a practitioner and an organization
