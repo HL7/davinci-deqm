@@ -211,6 +211,8 @@ For additional definitions see the [eCQI Resource Center Glossary]
 - *Robert Samples, ESAC*
 - *Viet Nguyen, Stratametrics*
 - *Yan Heras, Optimum eHealth LLC*
+- *Gay Dolin, Namaste Informatics, LLC*
+- *Rob Reynolds, Dynamic Content Group*
 
 ---
 

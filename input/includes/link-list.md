@@ -2,7 +2,7 @@
 [^2]: Suarez, W., Sethi, K., Craig, P., (February 20, 2017). Health IT Enabled Quality Measurement and Improvement: The HL7 Clinical Quality Information Workgroup. Retrieved from <https://www.hl7.org/documentcenter/public_temp_6C1C8F48-1C23-BA17-0C77FDFC69A7B6F1/calendarofevents/himss/2017/Health%20IT%20Enabled%20Quality%20Measurement%20and%20Improvement_The%20HL7%20Clinical%20Quality%20Work%20Group.pdf>
 [^3]: Health IT Enabled Quality Improvement - A Vision to Achieve Better Health and Health Care. Retrieved from <https://www.healthit.gov/sites/default/files/HITEnabledQualityImprovement-111214.pdf>
 [^4]: Adapting Clinical Guidelines for the Digital Age. Retrieved from <https://www.cdc.gov/ddphss/clinical-guidelines/index.html>
-[^5]: May includes DEQM defined code systems and externally defined code systems
+[^5]: May include DEQM defined code systems and externally defined code systems
 [^6]: This extension not needed because the data element is an element in the R4 Measure Resource.
 [^9]: Changes to QI Core and US Core Organization profiles are being proposed based on the DEQM Organization profile that may lead to this profiles being replaced by the QI Core profile.
 [^10]: HEDIS measures referenced are *example content only* for the purposes of working through standards. Organizations should not be using the HEDIS specified measures for the actual measurement.
@@ -159,3 +159,4 @@
 [VTE-1 USE Case Option 7]: vte1.html#option-7-measure-report-using-medicationrequest-devicerequest-medicationstatement-or-deviceusestatement
 [Single Indv Vte Report Option 7]: Bundle-single-indv-vte-report-option7.html
 [Indv Measurreport Stratification Example]: MeasureReport-indv-measurreport-stratification-example.html
+[The Quality Improvement Ecosystem Diagram]: index.html#quality-improvement-ecosystem
