@@ -24,7 +24,7 @@ The Gap in Care flow is between a provider and a measurement organization’s sy
 
 Figure 2-13 reflects the details within the red circle representing the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem.
 
-{% include img-portrait.html img="gic-ecosystem.png" caption = "Figure 2-13 Gaps in Care Reporting Flow" %}
+{% include img-portrait.html img="gic-operation.png" caption = "Figure 2-13 Gaps in Care Reporting Flow" %}
 
 #### Relationship of Individual Reporting and Gaps in Care Reporting
 {:.no_toc}
@@ -42,10 +42,10 @@ The following resources are used in the Gaps in Care Reporting scenario:
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
-|MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 
-Figure 2-12 provides a graphical view of how these resources are related.
-{% include img-portrait.html img="gic-resources.png" caption = "Figure 2-12 Gaps In Care Resources" %}
+Figure 2-14 provides a graphical view of how these resources are related. A Composition Bundle is created for each Patient(linked via subject element).  The Composition resource references one or more DEQM Individual MeasureReport resources.  One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under evaluatedResource element. The [DEQM Population Reference Extension] element on the resource documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
+{% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
 
 ### Gaps in Care Reporting
 
@@ -85,11 +85,11 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation has an out paramet
 Through the requirement analysis of the Gaps in Care Reporting for this ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
 {:.note-to-balloters}
 
-Figure 2-13 shows a workflow for running the care-gaps operation for a single patient.
-{% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-13 Care Gaps Operation - Single Patient" %}
+Figure 2-15 shows a workflow for running the care-gaps operation for a single patient.
+{% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-15 Care Gaps Operation - Single Patient" %}
 
-Figure 2-14 shows a workflow for running the care-gaps operation for a group of patients.
-{% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-14 Care Gaps Operation - Group of Patients" %}
+Figure 2-16 shows a workflow for running the care-gaps operation for a group of patients.
+{% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-16 Care Gaps Operation - Group of Patients" %}
 
 #### How to Construct a Gaps in Care Report
 {:.no_toc}
@@ -98,11 +98,11 @@ This section describes the profiles used for Gaps in Care Reporting and how they
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation returns a document bundle for each patient for which a gaps in care report is generated, the bundle shall conform to the [DEQM Gaps In Care Bundle Profile]. A Gaps In Care Bundle shall contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile].
 
-The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition, where its type code is constrained to a specific code to identify the Composition as a gaps in care report. The subject of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient], the gaps in care report is for. The Gaps In Care Composition shall contain one to many section(s). Each section references a Gaps In Care Individual MeasureReport for a specific measure. All Gaps In Care Individual MeasureReport referenced shall be for the same patient specified in the Composition subject.
+The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition, where its type code is constrained to a specific code to identify the Composition as a gaps in care report. The subject of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient], the gaps in care report is for. The Gaps In Care Composition shall contain one to many section(s). Each section references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced shall be for the same patient specified in the Composition subject.
 
-- The Gaps In Care Individual MeasureReport shall conform to the [DEQM Gaps In Care Individual MeasureReport Profile]. This profile is based on the [DEQM Individual MeasureReport Profile] and adds an optional extension, [DEQM Population Reference Extension], to the evaluatedResource. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the measure population type, i.e. initial population, numerator, denominator, numerator-exclusion, etc.
+- The Individual MeasureReport shall conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [DEQM Population Reference Extension], on the evaluatedResource. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the measure population type, i.e. initial population, numerator, denominator, numerator-exclusion, etc.
 
-- If an open gap is identified for a measure that is included in the Gaps In Care Composition, then this Composition shall also contain an entry of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure. There shall be one DetectedIssue entry for each measure that has open gaps. This resource should only be created when there is an open gap. In addition to being a simplistic way to determine if the patient has an open gap (MeasureReport contains this information as well in measureScore), it can also be loaded by the Client and used as a way to track the open gap to resolution. Note that the code in the DetectedIssue contains the value “care-gap”, which was added to the referenced code system as an extension. The evidence element of the DetectedIssue resource points to the DEQM Gaps In Care Individual MeasureReport which will identify the specific measure that has not been closed.  
+- If an open gap is identified for a measure that is included in the Gaps In Care Composition, then this Composition shall also contain an entry of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure. There shall be one DetectedIssue entry for each measure that has open gaps. This resource should only be created when there is an open gap. In addition to being a simplistic way to determine if the patient has an open gap (MeasureReport contains this information as well in measureScore), it can also be loaded by the Client and used as a way to track the open gap to resolution. Note that the code in the DetectedIssue contains the value “care-gap”, which was added to the referenced code system as an extension. The evidence element of the DetectedIssue resource points to the DEQM Individual MeasureReport which will identify the specific measure that has not been closed.  
 
 - The [DEQM Gaps in Care Composition Profile] may also contain all supporting resources referenced by the composition and its contained measure reports. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
