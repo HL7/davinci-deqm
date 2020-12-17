@@ -1,8 +1,4 @@
 
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.note-to-balloters}
-
-<div class="new-content" markdown="1">
 ###  Introduction
 
 The Gaps in Care is a powerful report that when used along with other DEQM functionality can result in better care results for the payer, the provider, and most importantly the patient. A simplistic example described below shows its potential power.
@@ -11,7 +7,7 @@ In this scenario, a provider has requested a gaps in care report for the Colorec
 
 The first patient with the open gap had a colonoscopy done recently and the ABC Insurance has not yet been made aware of. The provider uses the DEQM Submit Data functionality to update the payer’s database.
 
-Later, the provider runs the same gaps in care report again, both patients now showing as having their Colorectal Cancer Screening Measure gaps closed. 
+Later, the provider runs the same gaps in care report again, both patients now showing as having their Colorectal Cancer Screening Measure gaps closed.
 
 ### FHIR Resource Overview
 
@@ -26,7 +22,7 @@ Later, the provider runs the same gaps in care report again, both patients now s
 |Encounter|QI Core Encounter Profile|[QI Core Encounter]|
 |Library|CQFM Library Profile|[CQFM Library]|
 |Measure|CQFM Measure Profile|[CQFM Measure]|
-|MeasureReport|DEQM Gaps In Care Individual MeasureReport Profile|[DEQM Gaps In Care Individual MeasureReport Profile]|
+|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |Organization|DEQM Organization Profile|[DEQM Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
@@ -69,5 +65,5 @@ The provider rerun the Colorectal Cancer Screening gaps in care report and confi
 {% include examplebutton.html example="get-gaps-bundle-rerun-example" b_title = "Click Here To See Example of the Gaps in Care Report Described in Step 3" %}
 
 ---
-</div>
+
 {% include link-list.md %}
