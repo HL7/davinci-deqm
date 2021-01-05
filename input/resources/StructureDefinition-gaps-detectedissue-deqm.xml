@@ -51,6 +51,8 @@
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
             </type>
+            <min value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="DetectedIssue.evidence">
             <path value="DetectedIssue.evidence"/>
