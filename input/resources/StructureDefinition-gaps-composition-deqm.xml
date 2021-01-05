@@ -86,17 +86,18 @@
         </element>
         <element id="Composition.section.focus">
             <path value="Composition.section.focus"/>
-            <short value="This references a gaps in care individual MeasureReport"/>
+            <short value="This references a DEQM individual MeasureReport"/>
             <min value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
             </type>
             <mustSupport value="true"/>
         </element>
         <element id="Composition.section.entry">
             <path value="Composition.section.entry"/>
-            <short value="This references a gaps in care DetectedIssue, only if there is open gap(s) for the measure"/>
+            <short value="This references a gaps in care DetectedIssue"/>
+            <min value="1"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
