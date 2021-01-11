@@ -1,10 +1,6 @@
 
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.note-to-balloters}
-
 {% assign id = {{page.id}} %}
 
-<div class="new-content" markdown="1">
 This profile builds on [Bundle](https://www.hl7.org/fhir/bundle.html).
 
 ### Mandatory Data Elements and Terminology
@@ -19,7 +15,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
 1. An entry references a MeasureReport using the [DEQM Gaps In Care Individual MeasureReport Profile] for each measure referenced in the composition.
-</div>
+1. Reference to detected issue for a measure using the [DEQM Gaps In Care DetectedIssue Profile]
 
 
 <!--

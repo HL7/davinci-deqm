@@ -14,7 +14,6 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. A date gaps in care report was created
 1. A title of the gaps in care report
 1. Reference to a measure report using the [DEQM Individual MeasureReport Profile]
-1. Reference to detected issue for a measure using the [DEQM Gaps In Care DetectedIssue Profile]
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
 

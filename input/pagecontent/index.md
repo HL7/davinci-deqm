@@ -1,7 +1,4 @@
 
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.note-to-balloters}
-
 ###  Introduction
 
 The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
@@ -26,9 +23,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
-  <div class="new-content" markdown="1">
+
   -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the gaps in care reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
-  </div>
+
 
 - [Use cases]\: Three* exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
 
@@ -39,9 +36,7 @@ This Guide is divided into several pages which are listed at the top of each pag
     - [Venous Thromboembolism Prophylaxis (VTE-1)]\: This example is based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the
    Preventative Care Meaningful Measure Area.
 
-   <div class="new-content" markdown="1">
    -  [Gaps in Care]\: This page lists example use cases for gaps in care reporting.
-   </div>
 
 *Additional use cases are planned and will be published in forth-coming companion documents outside this implementation guide.  A link to these scenarios will be provided here when available.
 {:.stu-note}
@@ -54,12 +49,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Downloads]\: This page provides links to downloadable artifacts.
 
-<div class="new-content" markdown="1">
 
 - [Terminology]\: This page lists code systems and value sets defined in this guide.
 
 - [Operations]\: This page lists the Operation that is defined in this guide to exchange gaps in care report.
-</div>  
 
 ### Background
 
@@ -107,7 +100,6 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
-<div class="new-content" markdown="1">
 #### Gaps in Care Reporting Scenarios
 Gaps in Care Reporting is added as a new group of quality reporting scenarios supported in this version of the guide. Similar to the reporting scenarios, a gaps in care report is used to report the results of quality measures on patients or population, but for a gaps through period that is of interest for a Client.
 
@@ -122,7 +114,6 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
 **Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if a provider requests a report from the payer's system, then the provider serves as the client. If a payer requests a report from their own system, they are the client.
 
 **Servers** are the actors receiving the request for the gaps in care report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system serves as the server. If a payer requests a report from their own system, the payer's system serves as the server.
-</div>
 
 ### Glossary
 {: #data-of-interest}Data of Interest
@@ -143,7 +134,6 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
 {: #submission-period}Submission period
   : For this Implementation guide, submission period is the period of time in which data can exchanged when describing the FHIR transactions for data exchange, and measure reporting. The submission period typically overlaps with the measurement period and reporting period.
 
-<div class="new-content" markdown="1">
 {: #closed-gap}Closed Gap
   : No discrepancy exists between recommended best practices and the services that are actually provided and documented. A previously identified open gap may become closed, if actions were taken to close the open gaps.  
 
@@ -161,7 +151,6 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
 
 {: #positive-measure}Positive Measure
   : A higher calculated performance rate for this measure indicates better clinical care or control. The Colorectal Cancer Screening measure is an example of positive measure.
-</div>
 
 For additional definitions see the [eCQI Resource Center Glossary]
 
@@ -181,6 +170,7 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |DEQM|Data Exchange For Quality Measures|
 |EHR|Electronic Health Record|
 |FHIR|Fast Healthcare Interoperability Resources|
+|GIC|Gaps In Care|
 |MRP|Medication Reconciliation Post-discharge Measure|
 |QDM|Quality Data Model|
 |R4|FHIR Release 4|
@@ -189,12 +179,6 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |VTE-1|Venous Thromboembolism Prophylaxis Measure|
 
 <br />
-
-|Acronym|Definition|
-|---|---|
-|GIC|Gaps In Care|
-{:.new-content}
-
 <br />
 
 ---

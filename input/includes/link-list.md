@@ -160,3 +160,4 @@
 [Single Indv Vte Report Option 7]: Bundle-single-indv-vte-report-option7.html
 [Indv Measurreport Stratification Example]: MeasureReport-indv-measurreport-stratification-example.html
 [The Quality Improvement Ecosystem Diagram]: index.html#quality-improvement-ecosystem
+[CMS130v8]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v8.html

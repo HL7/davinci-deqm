@@ -1,12 +1,7 @@
 
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.note-to-balloters}
-
-<div class="new-content" markdown="1">
 List of capability statements defined for Gaps In Care:
 - Gaps In Care Client CapabilityStatement
 - Gaps In Care Server CapabilityStatement
-</div>
 
 {% include list-simple-capabilitystatements.xhtml %}
 

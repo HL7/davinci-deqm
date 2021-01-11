@@ -1,5 +1,3 @@
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Individual Reporting is not in scope for ballot comment.
-{:.note-to-balloters}
 
 ### Introduction
 
@@ -42,10 +40,9 @@ general guidance provided here.
 {:.no_toc}
 
 In general, reporting assumes that Reporters know what measures they select in order to meet their reporting requirements.
-A quality program supporting the individual reporting scenario will
-often provide prescriptive guidelines that define additional data,
-outside the smoking gun, that may or must be sent (such as the complete
-problem or medication list). Where such prescriptive guidelines exist,
+As in QDM, the term "smoking gun" is a philosophy where, at a minimum, the conclusive evidence needed to confirm that a criterion was met shall be included in the instance. 
+A quality program supporting the individual reporting scenario will often provide prescriptive guidelines that define additional data,
+outside the smoking gun, that may or must be sent (such as the complete problem or medication list). Where such prescriptive guidelines exist,
 those take precedence over the more general guidance provided here.
 
 The recipient of the report may not have access to additional EHR data about an individual subject.  Therefore, it is important that the report includes all the data relevant to computing CQM criteria, as well as the other data defined in a CQM (for example, data for stratification, risk adjustment, etc). Data for every data element present in the EHR that is required by the referenced CQM shall be included in the resulting MeasureReport bundle.  Additional non-clinical data needed for reporting such as organization, location, or submitter is also reported.

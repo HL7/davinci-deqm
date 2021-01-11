@@ -30,7 +30,7 @@ Later, the provider runs the same gaps in care report again, both patients now s
 
 ### Care Gaps Operation
 {:.no_toc}
-A Client, such as a provider, will use the [care-gaps](OperationDefinition-care-gaps.html) operation to request a Colorectal Cancer Screening measure gaps in care report for his/her patients from the Server, such as a payer. The provider receives the report from the payer system and notices that the report identifies one of the patients as having an open gap. He/she looks at the chart and sees that a colonoscopy was done recently for that patient. He/she then submits a DEQM Data Exchange MeasureReport and the referenced resources required as supporting evidence for the Colorectal Cancer Screening measure to the payer. Later, the provider repeats the care-gaps operation for Colorectal Cancer Screening to ensure the open gaps is now closed for that patient.
+A Client, such as a provider, will use the [care-gaps](OperationDefinition-care-gaps.html) operation to request a Colorectal Cancer Screening measure gaps in care report for his/her patients from the Server, such as a payer. The provider receives the report from the payer system and notices that the report identifies one of the patients as having an open gap. He/she looks at the chart and sees that a colonoscopy was done previously when the patient had a different payer/insurance. He/she then submits a DEQM Data Exchange MeasureReport and the referenced resources required as supporting evidence for the Colorectal Cancer Screening measure to the payer. Later, the provider repeats the care-gaps operation for Colorectal Cancer Screening to ensure the open gaps is now closed for that patient.
 
 The Figure 3-22 shows the workflow for gaps in care.
 
@@ -52,7 +52,7 @@ The resource graphs below represent the structure of the resources returned from
 
 #### Step 2 - Data Exchange to Submit Data for Closing Gaps
 
-The provider noticed *Gaps Patient01* was indicated as having an open gap for Colorectal Cancer Screening. The provider ordered a colonoscopy and the patient was able to get it done in the next few days. Since the payer system did not have this new data, the provider then used the DEQM Data Exchange profile(s) to submit additional data to the payer. Please see [Colorectal Cancer Screening (COL)] Use Case for details on how to complete the DEQM Data Exchange.
+The provider noticed Gaps Patient01 was indicated as having an open gap for Colorectal Cancer Screening. The provider ordered an colonoscopy and the patient was able to get it done in the next few days.  Typically a claim by the colonoscopy performer will close the gap.  However, the provider may elect to send the submit report data to close the gap. Please see [Colorectal Cancer Screening (COL)] Use Case for details on how to complete the DEQM Data Exchange.
 
 #### Step 3 - Rerun for a Gaps in Care Report
 

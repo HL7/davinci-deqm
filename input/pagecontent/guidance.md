@@ -1,5 +1,3 @@
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle.
-{:.note-to-balloters}
 
 ### Introduction
 
@@ -9,8 +7,7 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
 The second scenario defined in this guide is when a Reporter needs to exchange a measure report with a Receiver.  This guide addresses the Individual Measure Reporting and the Summary Reporting.  As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver.  Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
-This version of the guide adds the Gaps in Care Reporting scenario. The Gaps in Care Reporting is used to report the open and/or closed gap(s) for quality measure(s) over a gaps through period specified by a Client. Optionally, the DetectedIssue resource may also be used to report details on the open gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
-{:.new-content}
+This version of the guide adds the Gaps in Care Reporting Scenario. The Gaps in Care Reporting is used to report the open and/or closed gap(s) for quality measure(s) over a gaps through period specified by a Client. Optionally, the DetectedIssue resource may also be used to report details on the open gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
 
   Patient List Reporting is a third reporting type which is similar to a QRDA Category 2 report. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
   {:.stu-note}
@@ -47,8 +44,7 @@ This version of the guide adds the Gaps in Care Reporting scenario. The Gaps in 
 
 The MeasureReport resource is used as an organizer for both the data exchange scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
 
-The MeasureReport resource is also used for the gaps in care reporting scenario. A new MeasureReport profile is defined in this guide to support the specific needs of gaps in care reporting.
-{:.new-content}
+The MeasureReport resource is also used for the Gaps in Care Reporting Scenario. A new MeasureReport profile is defined in this guide to support the specific needs of gaps in care reporting.
 
 #### Data Exchange
 
@@ -63,7 +59,6 @@ The [DEQM Individual MeasureReport Profile] is used when a measure is reported f
 
 The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure measurement period. It  includes the measure outcome data and is similar to a QRDA Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
 
-<div class="new-content" markdown="1">
 #### Gaps in Care Reporting
 
 The [DEQM Gaps In Care Individual MeasureReport Profile] is defined and introduced in this version of the guide.
@@ -74,7 +69,6 @@ When the [care-gaps](OperationDefinition-care-gaps.html) operation is run on the
 
 The [DEQM Gaps In Care Individual MeasureReport Profile] is build on the [DEQM Individual MeasureReport Profile] and is used when gaps in care reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and indication of open gaps. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a gaps in care report, a DEQM Gaps In Care Composition may contain reports for measures with only open gaps, only closed gaps, or both open and closed gaps. The [DEQM Gaps In Care Individual MeasureReport Profile] adds a [DEQM Population Reference Extension] to the evaluatedResource to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluate the colorectal cancer screening measure for the individual. Through the use of this DEQM Population Reference Extension, the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population type code for numerator using the [MeasurePopulationType] value set.
 
-</div>
 
 ### Default Profiles Used in the Evaluation of a Measure
 
@@ -113,7 +107,6 @@ The negation patterns described here are about approaches for identifying when e
 ~~~
 
 [Contained resources] **SHOULD NOT** be used when responding to the [care-gaps](OperationDefinition-care-gaps.html) operation.
-{:.new-content}
 
 ### Must Support
 
