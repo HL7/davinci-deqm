@@ -3,7 +3,7 @@
 
 Clinical Quality Measures are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population.
 
-The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for two purposes in the Quality Measure Ecosystem.  The first interaction is when a Producer, such as a practitioner, or owner of data needs to exchange that data with a Consumer of that data, such as a payer, a registry or public health.  We call this the [Data Exchange] scenario. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract.
+The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for two purposes in the Quality Measure Ecosystem.  The first interaction is when a Producer, such as a practitioner, or owner of data needs to exchange that data with a Consumer of that data, such as a payer, a registry or public health.  We call this the [Data Exchange] Scenario. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract.
 
 The second scenario defined in this guide is when a Reporter needs to exchange a measure report with a Receiver.  This guide addresses the Individual Measure Reporting and the Summary Reporting.  As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver.  Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
@@ -42,7 +42,7 @@ This version of the guide adds the Gaps in Care Reporting Scenario. The Gaps in 
 
 ### DEQM MeasureReport Profiles
 
-The MeasureReport resource is used as an organizer for both the data exchange scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
+The MeasureReport resource is used as an organizer for both the Data Exchange Scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
 
 The MeasureReport resource is also used for the Gaps in Care Reporting Scenario. A new MeasureReport profile is defined in this guide to support the specific needs of gaps in care reporting.
 

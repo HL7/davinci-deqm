@@ -22,6 +22,8 @@ In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portio
 
 The Gap in Care flow is between a provider and a measurement organization’s system performing analytics.
 
+Note that this implementation guide does not address actual workflow around managing the process of requesting a Gaps in Care Report and to whom the report should be sent.
+
 Figure 2-13 reflects the details within the red circle representing the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem.
 
 {% include img-portrait.html img="gic-operation.png" caption = "Figure 2-13 Gaps in Care Reporting Flow" %}

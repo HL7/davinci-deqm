@@ -18,6 +18,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
 
 1. The organization that is responsible for ongoing maintenance of the gaps in care report
+1. Reference to detected issue for a measure using the [DEQM Gaps In Care DetectedIssue Profile]
 
 <!-- ### Examples-->
 

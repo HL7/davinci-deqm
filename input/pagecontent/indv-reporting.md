@@ -40,7 +40,7 @@ general guidance provided here.
 {:.no_toc}
 
 In general, reporting assumes that Reporters know what measures they select in order to meet their reporting requirements.
-As in QDM, the term "smoking gun" is a philosophy where, at a minimum, the conclusive evidence needed to confirm that a criterion was met shall be included in the instance. 
+As in QRDA, the term "smoking gun" is a philosophy where, at a minimum, the conclusive evidence needed to confirm that a criterion was met shall be included in the instance.
 A quality program supporting the individual reporting scenario will often provide prescriptive guidelines that define additional data,
 outside the smoking gun, that may or must be sent (such as the complete problem or medication list). Where such prescriptive guidelines exist,
 those take precedence over the more general guidance provided here.

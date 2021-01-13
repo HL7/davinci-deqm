@@ -15,8 +15,6 @@ The following data-elements are mandatory (i.e data MUST be present).
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
 1. An entry references a MeasureReport using the [DEQM Gaps In Care Individual MeasureReport Profile] for each measure referenced in the composition.
-1. Reference to detected issue for a measure using the [DEQM Gaps In Care DetectedIssue Profile]
-
 
 <!--
 ### Mandatory Data Elements and Terminology
