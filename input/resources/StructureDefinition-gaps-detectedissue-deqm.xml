@@ -61,10 +61,10 @@
         </element>
         <element id="DetectedIssue.evidence.detail">
             <path value="DetectedIssue.evidence.detail"/>
-            <short value="This references the DEQM Gaps In Care MeasureReport that the gap(s) are detected"/>
+            <short value="This references the DEQM Individual MeasureReport"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
             </type>
             <min value="1"/>
             <max value="1"/>
