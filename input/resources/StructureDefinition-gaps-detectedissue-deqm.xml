@@ -58,7 +58,8 @@
         </element>
         <element id="DetectedIssue.evidence.detail">
             <path value="DetectedIssue.evidence.detail"/>
-            <short value="This references either a DEQM Individual MeasureReport or a GuidanceResponse resource. Note that referencing GuidanceResponse allows potential profiling on GuidanceResponse in the future without breaking backward compatibility."/>
+            <short value="This references either a DEQM Individual MeasureReport or a GuidanceResponse resource. Note that referencing the GuidanceResponse resource allows potential profiling on GuidanceResponse in the future without breaking backward compatibility."/>
+            <comment value="The reason that this references a DEQM Individual MeasureReport is because a DEQM Gaps In Care DetectedIssue may be used stand alone and not be part of the DEQM Gaps In Care Composition."/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
