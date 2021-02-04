@@ -6,7 +6,7 @@
     <name value="DEQMGapsInCareDetectedIssueProfile"/>
     <title value="DEQM Gaps In Care Detected Issue Profile"/>
     <status value="active"/>
-    <date value="2020-07-01"/>
+    <date value="2021-02-01"/>
     <publisher value="Da Vinci Project"/>
     <contact>
       <telecom>
@@ -14,7 +14,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure that is referenced in the [DEQM Gaps In Care Individual MeasureReport](StructureDefinition-gaps-indv-measurereport-deqm.html) has an open gap. Detected Issues SHALL not be created for any DEQM Gaps In Care Individual MeasureReport where the gap is closed."/>
+    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure that is referenced in the [DEQM Individual MeasureReport](StructureDefinition-indv-measurereport-deqm.html) has an open gap, a closed gap, or gap status is not applicable."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
@@ -35,14 +35,11 @@
         <element id="DetectedIssue.code">
             <path value="DetectedIssue.code"/>
             <min value="1"/>
-            <short value="A temporary code until official code is assigned"/>
-            <fixedCodeableConcept>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/detectedissue-category"/>
-                    <code value="care-gap"/>
-                    <display value="Gap in Care Detected"/>
-                </coding>
-            </fixedCodeableConcept>
+            <short value="Gaps in Care detected issue type"/>
+            <binding>
+              <strength value="required"/>
+              <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-detectedissue-type"/>
+            </binding>
             <mustSupport value="true"/>
         </element>
         <element id="DetectedIssue.patient">
@@ -61,10 +58,12 @@
         </element>
         <element id="DetectedIssue.evidence.detail">
             <path value="DetectedIssue.evidence.detail"/>
-            <short value="This references the DEQM Individual MeasureReport"/>
+            <short value="This references either a DEQM Individual MeasureReport or a GuidanceResponse resource. Note that referencing the GuidanceResponse resource allows potential profiling on GuidanceResponse in the future without breaking backward compatibility."/>
+            <comment value="The reason that this references a DEQM Individual MeasureReport is because a DEQM Gaps In Care DetectedIssue may be used stand alone and not be part of the DEQM Gaps In Care Composition."/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/GuidanceResponse"/>
             </type>
             <min value="1"/>
             <max value="1"/>

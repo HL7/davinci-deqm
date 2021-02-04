@@ -7,7 +7,7 @@
     <title value="Care Gaps Operation"/>
     <status value="draft"/>
     <kind value="operation"/>
-    <date value="2020-07-03T00:00:00-07:00"/>
+    <date value="2021-02-04"/>
     <publisher value="Da Vinci Project"/>
     <contact>
       <telecom>
@@ -76,6 +76,7 @@
         <max value="1"/>
         <documentation value="Reference to a practitioner [DEQM Practitioner](StructureDefinition-practitioner-deqm.html) for which the gaps in care report will be created. For a practitioner focused gaps in care report, this is a required In Parameter. The Server needs to make sure that practitioner is authorized to get the gaps in care report for and know what measures the practitioner are eligible or qualified."/>
         <type value="string"/>
+        <searchType value="reference"/>
     </parameter>
     <parameter>
         <name value="organization"/>
@@ -84,6 +85,7 @@
         <max value="1"/>
         <documentation value="Reference to an organization [DEQM Organization](StructureDefinition-organization-deqm.html) for which the gaps in care report will be created. For a provider organization focused gaps in care report, this is a required In Parameter."/>
         <type value="string"/>
+        <searchType value="reference"/>
     </parameter>
     <parameter>
         <name value="status"/>
