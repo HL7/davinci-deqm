@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DEQMGapsDetectedIssueTypeValueSet",
+  "id": "gaps-detectedissue-type",
+  "title": "DEQM Gaps In Care DetectedIssue Type Value Set",
+  "description": "Concepts for identified detected issue type in a Gaps in Care measure report",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-detectedissue-type",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status"
+      }
+    ]
+  }
+}

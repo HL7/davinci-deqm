@@ -24,7 +24,8 @@
 <artifact id="StructureDefinition/gaps-bundle-deqm" key="StructureDefinition-gaps-bundle-deqm" name="DEQM Gaps In Care Bundle Profile"/>
 <artifact id="StructureDefinition/gaps-composition-deqm" key="StructureDefinition-gaps-composition-deqm" name="DEQM Gaps In Care Composition Profile"/>
 <artifact id="StructureDefinition/gaps-detectedissue-deqm" key="StructureDefinition-gaps-detectedissue-deqm" name="DEQM Gaps In Care Detected Issue Profile"/>
-<artifact id="CodeSystem/gaps-doc-type" key="CodeSystem-gaps-doc-type" name="DEQM Gaps In Care Document Type Code System"/>
+<artifact id="ValueSet/gaps-detectedissue-type" key="ValueSet-gaps-detectedissue-type" name="DEQM Gaps In Care DetectedIssue Type Value Set"/>
+<artifact deprecated="true" id="CodeSystem/gaps-doc-type" key="CodeSystem-gaps-doc-type" name="DEQM Gaps In Care Document Type Code System"/>
 <artifact id="CodeSystem/gaps-status" key="CodeSystem-gaps-status" name="DEQM Gaps In Care Gap Status Code System"/>
 <artifact id="ValueSet/gaps-status" key="ValueSet-gaps-status" name="DEQM Gaps In Care Gaps Status Value Set"/>
 <artifact id="StructureDefinition/gaps-group-deqm" key="StructureDefinition-gaps-group-deqm" name="DEQM Gaps In Care Group Profile"/>

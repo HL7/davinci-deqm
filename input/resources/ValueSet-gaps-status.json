@@ -10,7 +10,11 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status"
+        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+        "concept": [
+          {"code": "open-gap"},
+          {"code": "closed-gap"}
+        ]        
       }
     ]
   }

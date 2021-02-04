@@ -11,8 +11,8 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
-1. A DetectedIssue code hardcoded to "care-gap"
-1. References the measure the detected issue applies to
+1. A DetectedIssue code from the DEQM Gaps In Care DetectedIssue Type Value Set
+1. References either a DEQM Individual Measure Report or a GuidanceResponse
 1. Reference to patient for which the detected issue applies
 
 
