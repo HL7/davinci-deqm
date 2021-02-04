@@ -61,7 +61,7 @@
           }
         ],
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/ValueSet/measure-population"
         }
       }
