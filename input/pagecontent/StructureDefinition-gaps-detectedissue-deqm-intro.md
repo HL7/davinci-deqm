@@ -12,7 +12,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
 1. A DetectedIssue code from the DEQM Gaps In Care DetectedIssue Type Value Set.
-1. The DetectedIssue.evidence.detail references the measure to which the detected issue applies by either referencing the DEQM Individual Measure Report or the GuidanceResponse resource. The Measure Report contains a reference to the Measure resource.
+1. The DetectedIssue.evidence.detail either references the measure to which the detected issue applies by referencing the DEQM Individual Measure Report or references the GuidanceResponse resource. The Measure Report contains a reference to the Measure resource.
 1. Reference to patient for which the detected issue applies.
 
 
