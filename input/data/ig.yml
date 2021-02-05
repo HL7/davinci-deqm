@@ -454,6 +454,21 @@ definition:
         reference: DetectedIssue/gaps-detectedissue02
       description: GIC DetectedIssue02 example
     - exampleBoolean: true
+      name: Gaps DetectedIssue03
+      reference:
+        reference: DetectedIssue/gaps-detectedissue03
+      description: GIC DetectedIssue03 example
+    - exampleBoolean: true
+      name: Gaps DetectedIssue04
+      reference:
+        reference: DetectedIssue/gaps-detectedissue04
+      description: GIC DetectedIssue04 example
+    - exampleBoolean: true
+      name: Gaps DetectedIssue05
+      reference:
+        reference: DetectedIssue/gaps-detectedissue05
+      description: GIC DetectedIssue05 example    
+    - exampleBoolean: true
       name: Gaps Group01 subject
       reference:
         reference: Group/gaps-subject-group01

@@ -37,9 +37,9 @@
               "type": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type",
-                    "code": "gaps-doc",
-                    "display": "Gaps in Care Report"
+                    "system": "http://loinc.org",
+                    "code": "96315-7",
+                    "display": "Gaps in care report"
                   }
                 ]
               },
@@ -59,10 +59,53 @@
                   "focus": {
                     "reference": "MeasureReport/gaps-indv-measurereport04"
                   },
+                  "entry": [
+                    {
+                      "reference": "DetectedIssue/gaps-detectedissue05"
+                    }
+                  ],
                   "text": {
                     "status": "generated",
                     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>No detected issues.</p></div>"
                   }
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "http://example.org/fhir/gaps/DetectedIssue/gaps-detectedissue05",
+            "resource": {
+              "resourceType": "DetectedIssue",
+              "id": "gaps-detectedissue05",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-detectedissue01</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status care-gap}\">Gap in Care Detected</span></p><p><b>patient</b>: <a href=\"Patient-gaps-patient01.html\">Generated Summary: id: gaps-patient01; Medical Record Number = 999995992 (USUAL); Parker Susan ; gender: female; birthDate: 1965-01-01</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td>-</td><td><b>Detail</b></td></tr><tr><td>*</td><td><a href=\"MeasureReport-gaps-indv-measurereport01.html\">Generated Summary: id: gaps-indv-measurereport01; status: complete; type: individual; measure: http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example; date: Jun 30, 2020, 7:08:52 AM; period: Dec 31, 2019, 5:00:00 PM --&gt; Dec 30, 2020, 5:00:00 PM; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></a></td></tr></table></div>"
+              },
+              "status": "final",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+                    "code": "closed-gap",
+                    "display": "Closed Gap"
+                  }
+                ]
+              },
+              "patient": {
+                "reference": "Patient/gaps-patient01"
+              },
+              "evidence": [
+                {
+                  "detail": [
+                    {
+                      "reference": "MeasureReport/gaps-indv-measurereport04"
+                    }
+                  ]
                 }
               ]
             }
@@ -230,7 +273,7 @@
               "id": "gaps-encounter03",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
                 ]
               },
               "text": {
@@ -270,7 +313,7 @@
               "id": "gaps-procedure02",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure"
                 ]
               },
               "text": {
@@ -303,7 +346,7 @@
               "id": "gaps-patient01",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
                 ]
               },
               "text": {
@@ -477,9 +520,9 @@
               "type": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type",
-                    "code": "gaps-doc",
-                    "display": "Gaps in Care Report"
+                    "system": "http://loinc.org",
+                    "code": "96315-7",
+                    "display": "Gaps in care report"
                   }
                 ]
               },
@@ -502,7 +545,50 @@
                   "text": {
                     "status": "generated",
                     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>No detected issues.</p></div>"
+                  },
+                  "entry": [
+                    {
+                      "reference": "DetectedIssue/gaps-detectedissue03"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "http://example.org/fhir/gaps/DetectedIssue/gaps-detectedissue03",
+            "resource": {
+              "resourceType": "DetectedIssue",
+              "id": "gaps-detectedissue03",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-detectedissue03</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status care-gap}\">Gap in Care Detected</span></p><p><b>patient</b>: <a href=\"Patient-gaps-patient01.html\">Generated Summary: id: gaps-patient01; Medical Record Number = 999995992 (USUAL); Parker Susan ; gender: female; birthDate: 1965-01-01</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td>-</td><td><b>Detail</b></td></tr><tr><td>*</td><td><a href=\"MeasureReport-gaps-indv-measurereport01.html\">Generated Summary: id: gaps-indv-measurereport01; status: complete; type: individual; measure: http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example; date: Jun 30, 2020, 7:08:52 AM; period: Dec 31, 2019, 5:00:00 PM --&gt; Dec 30, 2020, 5:00:00 PM; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></a></td></tr></table></div>"
+              },
+              "status": "final",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+                    "code": "closed-gap",
+                    "display": "Closed Gap"
                   }
+                ]
+              },
+              "patient": {
+                "reference": "Patient/gaps-patient02"
+              },
+              "evidence": [
+                {
+                  "detail": [
+                    {
+                      "reference": "MeasureReport/gaps-indv-measurereport03"
+                    }
+                  ]
                 }
               ]
             }
@@ -670,7 +756,7 @@
               "id": "gaps-encounter02",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
                 ]
               },
               "text": {
@@ -710,7 +796,7 @@
               "id": "gaps-procedure01",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure"
                 ]
               },
               "text": {
@@ -743,7 +829,7 @@
               "id": "gaps-patient02",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
                 ]
               },
               "text": {

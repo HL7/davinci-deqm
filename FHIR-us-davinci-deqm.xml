@@ -59,6 +59,9 @@
 <artifact id="Composition/gaps-composition03" key="Composition-gaps-composition03" name="Gaps Composition03"/>
 <artifact id="DetectedIssue/gaps-detectedissue01" key="DetectedIssue-gaps-detectedissue01" name="Gaps DetectedIssue01"/>
 <artifact id="DetectedIssue/gaps-detectedissue02" key="DetectedIssue-gaps-detectedissue02" name="Gaps DetectedIssue02"/>
+<artifact id="DetectedIssue/gaps-detectedissue03" key="DetectedIssue-gaps-detectedissue03" name="Gaps DetectedIssue03"/>
+<artifact id="DetectedIssue/gaps-detectedissue04" key="DetectedIssue-gaps-detectedissue04" name="Gaps DetectedIssue04"/>
+<artifact id="DetectedIssue/gaps-detectedissue05" key="DetectedIssue-gaps-detectedissue05" name="Gaps DetectedIssue05"/>
 <artifact id="Encounter/gaps-encounter01" key="Encounter-gaps-encounter01" name="Gaps Encounter01"/>
 <artifact id="Encounter/gaps-encounter02" key="Encounter-gaps-encounter02" name="Gaps Encounter02"/>
 <artifact id="Encounter/gaps-encounter03" key="Encounter-gaps-encounter03" name="Gaps Encounter03"/>

@@ -14,9 +14,9 @@
   "type": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-doc-type",
-        "code": "gaps-doc",
-        "display": "Gaps in Care Report"
+        "system": "http://loinc.org",
+        "code": "96315-7",
+        "display": "Gaps in care report"
       }
     ]
   },
