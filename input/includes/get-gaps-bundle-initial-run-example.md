@@ -444,7 +444,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "code": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+                    "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
                     "code": "care-gap",
                     "display": "Gap in Care Detected"
                   }
@@ -482,7 +482,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "code": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+                    "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
                     "code": "care-gap",
                     "display": "Gap in Care Detected"
                   }

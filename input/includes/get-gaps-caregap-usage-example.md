@@ -453,7 +453,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+              "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
               "code": "care-gap",
               "display": "Gap in Care Detected"
             }
@@ -491,7 +491,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+              "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
               "code": "care-gap",
               "display": "Gap in Care Detected"
             }

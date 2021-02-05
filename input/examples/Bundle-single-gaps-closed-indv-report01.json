@@ -84,9 +84,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
-              "code": "closed-gap",
-              "display": "Closed Gap"
+              "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
+              "code": "care-gap",
+              "display": "Care Gap Detected"
             }
           ]
         },
