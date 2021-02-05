@@ -32,8 +32,9 @@
         <element id="DetectedIssue">
             <path value="DetectedIssue"/>
         </element>
-        <element id="DetectedIssue.modifierExtension">
+        <element id="DetectedIssue.modifierExtension:gapStatus">
            <path value="DetectedIssue.modifierExtension"/>
+           <sliceName value="gapStatus"/>
            <min value="1"/>
            <max value="1"/>
            <type>
