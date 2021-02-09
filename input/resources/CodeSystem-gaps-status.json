@@ -19,11 +19,6 @@
       "code": "closed-gap",
       "display": "Closed Gap",
       "definition": "No discrepancy exists between recommended best practices and the services that are actually provided and documented. A previously identified open gap may become closed, if actions were taken to close the open gaps."
-    },
-    {
-      "code": "not-applicable",
-      "display": "Not Applicable",
-      "definition": "There is no gap because the case is not applicable (e.g. the patient is outside the applicable age range, meets exclusion criteria for the measure, or is otherwise ineligible)."
     }
   ],
   "count": 3
