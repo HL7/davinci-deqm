@@ -161,3 +161,12 @@
 [Indv Measurreport Stratification Example]: MeasureReport-indv-measurreport-stratification-example.html
 [The Quality Improvement Ecosystem Diagram]: index.html#quality-improvement-ecosystem
 [CMS130v8]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v8.html
+[open gap]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[open gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[closed gap]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[open and closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[open and/or closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[gaps through period]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[Gaps through period]:  http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[open or closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
