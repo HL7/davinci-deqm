@@ -20,6 +20,8 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](
 1. The organization that is responsible for ongoing maintenance of the gaps in care report
 1. Reference to detected issue for a measure using the [DEQM Gaps In Care DetectedIssue Profile]
 
+Note:  The date range for the Gaps in Care report is specified using the period element in the [DEQM Individual MeasureReport Profile]. 
+
 <!-- ### Examples-->
 
 <!--{% include list-simple-organizations.xhtml %} -->

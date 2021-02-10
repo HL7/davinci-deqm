@@ -153,6 +153,7 @@
     </element>
     <element id="MeasureReport.period">
       <path value="MeasureReport.period"/>
+      <short value="The period for which the report was generated. For the gaps in care use case, this is referred to as the gaps through period."/>
       <min value="1"/>
       <max value="1"/>
       <type>
