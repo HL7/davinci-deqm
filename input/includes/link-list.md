@@ -161,13 +161,13 @@
 [Indv Measurreport Stratification Example]: MeasureReport-indv-measurreport-stratification-example.html
 [The Quality Improvement Ecosystem Diagram]: index.html#quality-improvement-ecosystem
 [CMS130v8]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v8.html
-[closed gap]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[open gap]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[open gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[open and closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[open and/or closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[open or closed gaps]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[gaps through period]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[Gaps through period]:  http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
-[test2]: http://build.fhir.org/ig/HL7/davinci-deqm/index.html#glossary
+[closed gap]: index.html#glossary
+[closed gaps]: index.html#glossary
+[open gap]: index.html#glossary
+[open gaps]: index.html#glossary
+[open and closed gaps]: index.html#glossary
+[open and/or closed gaps]: index.html#glossary
+[open or closed gaps]: index.html#glossary
+[gaps through period]: index.html#glossary
+[Gaps through period]:  index.html#glossary
+[Gaps in Care Colorectal Cancer Screening]: gaps-examples.html

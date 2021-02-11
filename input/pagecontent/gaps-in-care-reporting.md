@@ -133,10 +133,12 @@ Headers:
 * `Prefer respond-async`
 * `Accept application/fhir+json`
 
-Note that both Prefer and Accept are required. **Prefer** specifies the response is immediate or asynchronous, which SHALL be set to *respond-async*. **Accept** specifies the format of the optional OperationOutcome response to the kick-off request. Currently, only *application/fhir+json* is supported. See the base FHIR specification [Asynchronous Request Patterns] for details.
+Note that both Prefer and Accept are required. **Prefer** specifies the response is immediate or asynchronous, which SHALL be set to *respond-async*. **Accept** specifies the format of the optional OperationOutcome response to the kick-off request.  Any of the Serialization Format Representations are supported. See the base FHIR specification [Asynchronous Request Patterns] for details.
 
 Query Parameters:
 * `_outputFormat (string, optional, defaults to application/fhir+ndjson)`
+
+Currently, only *application/fhir+ndjson* is supported.
 
 <br />
 
