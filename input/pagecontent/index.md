@@ -190,15 +190,19 @@ For additional definitions see the [eCQI Resource Center Glossary]
 - *Bryn Rhodes, Dynamic Content Group*
 - *Eric Haas, Health eData Inc*
 - *Floyd Eisenberg, iParsimony LLC*
+- *Gay Dolin, Namaste Informatics, LLC*
 - *Jocelyn Keegan, Point of Care Partners*
 - *Linda Michaelsen, Optum*
 - *Lloyd Mckenzie, Gevity*
+- *Rob Reynolds, Dynamic Content Group*
 - *Robert Dieterle, EnableCare*
 - *Robert Samples, ESAC*
+- *Sam Sayer, The MITRE Corporation*
 - *Viet Nguyen, Stratametrics*
 - *Yan Heras, Optimum eHealth LLC*
-- *Gay Dolin, Namaste Informatics, LLC*
-- *Rob Reynolds, Dynamic Content Group*
+
+
+
 
 ---
 
