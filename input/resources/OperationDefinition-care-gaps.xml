@@ -59,6 +59,7 @@
           <valueSet value="http://hl7.org/fhir/ValueSet/definition-topic"/>
         </binding>
         <type value="string"/>
+        <searchType value="token"/>
     </parameter>
     <parameter>
         <name value="subject"/>
@@ -92,7 +93,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="*"/>
-        <documentation value="Indicates status of a care gap. Status can be either open gap or closed gap. For both open and closed gaps, two seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
+        <documentation value="Indicates status of a care gap. For both open and closed gaps, two seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
         <binding>
           <strength value="extensible"/>
           <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
@@ -100,12 +101,31 @@
         <type value="code"/>
     </parameter>
     <parameter>
-        <name value="measure"/>
+        <name value="measureId"/>
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The measure(s) for which the gaps in care will be reported. E.g., Breast Cancer Screening measure, Colorectal Cancer Screening measure"/>
-        <type value="string"/>
+        <documentation value="The id of a measure that is on the server for which the gaps in care will be reported. E.g., the id on the server for Breast Cancer Screening measure"/>
+        <type value="id"/>
+        <searchType value="string"/>
+    </parameter>
+    <parameter>
+        <name value="measureIdentifier"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="The business identifier of a measure for which the gaps in care will be reported. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system"/>
+        <type value="Identifier"/>
+        <searchType value="token"/>
+    </parameter>
+    <parameter>
+        <name value="measureUrl"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="This the the URL of a measure for which the gaps in care will be reported. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
+        <type value="canonical"/>
+        <searchType value="uri"/>
     </parameter>
     <parameter>
         <name value="program"/>
