@@ -26,7 +26,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Reference"
+      "expression": "resource"
     }
   ],
   "type": "Extension",
