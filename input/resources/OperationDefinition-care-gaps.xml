@@ -53,11 +53,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The category of the measures that is of interest for the care gaps report. This references the topic element in the Measure Resource. Examples of topic may be screening measures, HEDIS measure domains, chronic disease measures. For example, setting topic to be a screening caregory will run care gaps on all screening measures. Topic may also be a &quot;value set&quot; that is defined with a list of domains/categories, etc. Topic examples: &quot;screening&quot;, &quot;pediatric&quot;. When multiple topics are provided, it is expected to be union of measures in those topics. Note - the type of this parameter is a string with a search type of token so that the coding value can be provided as part of a URL and the operation can be invoked using GET."/>
-        <binding>
-          <strength value="example"/>
-          <valueSet value="http://hl7.org/fhir/ValueSet/definition-topic"/>
-        </binding>
+        <documentation value="The category of the measures that is of interest for the care gaps report. This references the topic element in the Measure Resource, example value set [TopicDefinition](http://hl7.org/fhir/ValueSet/definition-topic). Examples of topic may be screening measures, HEDIS measure domains, chronic disease measures. For example, setting topic to be a screening caregory will run care gaps on all screening measures. Topic may also be a &quot;value set&quot; that is defined with a list of domains/categories, etc. Topic examples: &quot;screening&quot;, &quot;pediatric&quot;. When multiple topics are provided, it is expected to be union of measures in those topics. Note - the type of this parameter is a string with a search type of token so that the coding value can be provided as part of a URL and the operation can be invoked using GET."/>
         <type value="string"/>
         <searchType value="token"/>
     </parameter>
