@@ -130,6 +130,7 @@
         <max value="*"/>
         <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS Merit-based Incentive Payment Program (MIPS), Hospital Quality Reporting (HQR) programs. Program is represented in Measure using element useContext (useageContext). When the code attribute of useContext is program, then the value attribute of useContext represents a specific program."/>
         <type value="string"/>
+        <searchType value="token"/>
     </parameter>
     <parameter>
         <name value="return"/>

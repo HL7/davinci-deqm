@@ -13,7 +13,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 1. A modifier extension: DEQMGapStatusModifierExtension.
 1. A DetectedIssue.code with a fixed code CAREGAP.
-1. The DetectedIssue.evidence.detail either references the measure to which the detected issue applies by referencing the DEQM Individual Measure Report or references the GuidanceResponse resource. The Measure Report contains a reference to the Measure resource.
+1. The DetectedIssue.evidence.detail either references the measure to which the detected issue applies by referencing the DEQM Individual Measure Report or references the GuidanceResponse resource. 
 1. A DetectedIssue.patient references the patient for which the detected issue applies.
 
 
