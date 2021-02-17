@@ -53,7 +53,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The category of the measures that is of interest for the care gaps report. This references the topic element in the Measure Resource, example value set [TopicDefinition](http://hl7.org/fhir/ValueSet/definition-topic). Examples of topic may be screening measures, HEDIS measure domains, chronic disease measures. For example, setting topic to be a screening caregory will run care gaps on all screening measures. Topic may also be a &quot;value set&quot; that is defined with a list of domains/categories, etc. Topic examples: &quot;screening&quot;, &quot;pediatric&quot;. When multiple topics are provided, it is expected to be union of measures in those topics. Note - the type of this parameter is a string with a search type of token so that the coding value can be provided as part of a URL and the operation can be invoked using GET."/>
+        <documentation value="The category of the measures that is of interest for the care gaps report. This references the topic element in the Measure Resource. Examples of topic may be screening measures, HEDIS measure domains, chronic disease measures. For example, setting topic to be a screening caregory will run care gaps on all screening measures. Topic may also be a &quot;value set&quot; that is defined with a list of domains/categories, etc. Topic examples: &quot;screening&quot;, &quot;pediatric&quot;. When multiple topics are provided, it is expected to be union of measures in those topics. Note - the type of this parameter is a string with a search type of token so that the coding value can be provided as part of a URL and the operation can be invoked using GET."/>
         <type value="string"/>
         <searchType value="token"/>
     </parameter>
@@ -101,7 +101,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The id of a measure that is on the server for which the gaps in care will be reported. E.g., the id on the server for Breast Cancer Screening measure"/>
+        <documentation value="The id of a measure that is on the server for which the gaps in care will be reported. E.g., the id on the server for Breast Cancer Screening measure."/>
         <type value="id"/>
         <searchType value="string"/>
     </parameter>
@@ -110,7 +110,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The business identifier of a measure for which the gaps in care will be reported. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system"/>
+        <documentation value="The business identifier of a measure for which the gaps in care will be reported. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system."/>
         <type value="Identifier"/>
         <searchType value="token"/>
     </parameter>

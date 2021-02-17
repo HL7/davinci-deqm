@@ -467,7 +467,7 @@ definition:
       name: Gaps DetectedIssue05
       reference:
         reference: DetectedIssue/gaps-detectedissue05
-      description: GIC DetectedIssue05 example    
+      description: GIC DetectedIssue05 example
     - exampleBoolean: true
       name: Gaps Group01 subject
       reference:
@@ -547,9 +547,6 @@ definition:
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/indv-measurereport-deqm
-    - exampleBoolean: false
-      reference:
-        reference: StructureDefinition/gaps-indv-measurereport-deqm
     - exampleBoolean: false
       reference:
         reference: CapabilityStatement/receiver-server

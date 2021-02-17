@@ -9,18 +9,18 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
-1. A composition type code hardcoded to gaps-doc (note: this is a temporary code, a LOINC code was requested)
-1. A subject references [QI Core Patient] who is the subject of the gaps in care report
-1. A date gaps in care report was created
-1. A title of the gaps in care report
-1. Reference to a measure report using the [DEQM Individual MeasureReport Profile]
+1. A Composition.type with a fixed LOINC code 96315-7
+1. A Composition.subject references [QI Core Patient] who is the subject of the gaps in care report
+1. A Composition.date that is the datetime of the gaps in care report was created
+1. A Composition.title that is the title of the gaps in care report
+1. A Composition.section.focus references a measure report using the [DEQM Individual MeasureReport Profile]
+1. A Composition.section.entry references detected issue for a measure using the [DEQM Gaps In Care DetectedIssue Profile]
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
 
-1. The organization that is responsible for ongoing maintenance of the gaps in care report
-1. Reference to detected issue for a measure using the [DEQM Gaps In Care DetectedIssue Profile]
+1. A Composition.custodian references the organization that is responsible for ongoing maintenance of the gaps in care report
 
-Note:  The date range for the Gaps in Care report is specified using the period element in the [DEQM Individual MeasureReport Profile]. 
+Note:  The date range for the Gaps in Care report is specified using the period element in the [DEQM Individual MeasureReport Profile].
 
 <!-- ### Examples-->
 

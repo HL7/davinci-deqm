@@ -13,7 +13,7 @@
             <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
         </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care Composition Profile defines a document composition consisting of one or more gaps in care indivdiual MeasureReport(s) for an individual. Each section of this composition corresponds to a gaps in care indivdiual MeasureReport for a specific measure. The subject of each gaps in care individual MeasureReport referenced by the section must be for the same individual specified in the subject of this Composition."/>
+    <description value="The DEQM Gaps In Care Composition Profile defines a document composition consisting of one or more indivdiual MeasureReport(s). Each section of this composition corresponds to an indivdiual MeasureReport for a specific measure. The subject of each individual MeasureReport referenced by the section must be for the same individual specified in the subject of this Composition."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

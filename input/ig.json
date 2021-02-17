@@ -911,12 +911,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/gaps-indv-measurereport-deqm"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/receiver-server"
                 }
             },
@@ -1130,11 +1124,6 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-extension-submitDataUpdateType.html",
                             "title": "StructureDefinition Extension submitDataUpdateType"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-gaps-indv-measurereport-deqm.html",
-                            "title": "StructureDefinition Gaps Indv MeasureReport Deqm"
                         },
                         {
                             "generation": "generated",
