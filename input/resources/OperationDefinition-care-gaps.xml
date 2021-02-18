@@ -101,9 +101,8 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The id of a measure that is on the server for which the gaps in care will be reported. E.g., the id on the server for Breast Cancer Screening measure."/>
+        <documentation value="The id of a Measure resource that is on the server for which the gaps in care will be reported. E.g., the id of the Measure resource for Breast Cancer Screening measure."/>
         <type value="id"/>
-        <searchType value="string"/>
     </parameter>
     <parameter>
         <name value="measureIdentifier"/>
@@ -112,7 +111,6 @@
         <max value="*"/>
         <documentation value="The business identifier of a measure for which the gaps in care will be reported. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system."/>
         <type value="Identifier"/>
-        <searchType value="token"/>
     </parameter>
     <parameter>
         <name value="measureUrl"/>
@@ -121,7 +119,6 @@
         <max value="*"/>
         <documentation value="This the the URL of a measure for which the gaps in care will be reported. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
         <type value="canonical"/>
-        <searchType value="uri"/>
     </parameter>
     <parameter>
         <name value="program"/>
