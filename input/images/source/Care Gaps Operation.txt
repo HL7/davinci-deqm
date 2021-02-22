@@ -1,0 +1,15 @@
+title Care Gap Operation
+actor Care Manager
+participant Care Management System
+participant Payer System
+participant Payer Attribution System
+participant Measurement Analytic System
+Care Manager->Care Management System: Request care gaps\nfor patients I manage
+Care Management System->Payer System: $care-gaps\n(organization, practitioner)
+Payer System->Payer Attribution System: $attributed-patients\n(organization, practitioner)
+Payer Attribution System->Payer System: Patient Group
+Payer System->Measurement Analytic System: $evaluate-measure(Patient Group)
+Measurement Analytic System->Payer System: MeasureReports
+Payer System->Payer System: Construct Care Gaps
+Payer System->Care Management System: Care Gaps
+Care Management System->Care Manager: Display Care Gaps
