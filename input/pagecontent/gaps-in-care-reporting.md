@@ -85,12 +85,12 @@ Several new input parameters are specified and added to the [care-gaps](Operatio
 The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter: **return**. In comparison to the return output parameter specified in the [base care-gaps operation], the **return** here returns 0 to many Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
 
 Through the requirement analysis of the Gaps in Care Reporting for this ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
-{:.note-to-balloters}
+{:.stu-note}
 
-Figure 2-15 shows a workflow for running the care-gaps operation for a single patient.
+Figure 2-15 shows an example workflow for running the care-gaps operation against a payer's system for a single patient.
 {% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-15 Care Gaps Operation - Single Patient" %}
 
-Figure 2-16 shows a workflow for running the care-gaps operation for a group of patients.
+Figure 2-16 shows an example workflow for running the care-gaps operation against a payer's system for a group of patients.
 {% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-16 Care Gaps Operation - Group of Patients" %}
 
 #### How to Construct a Gaps in Care Report
