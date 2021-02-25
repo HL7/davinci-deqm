@@ -7,7 +7,7 @@
     <title value="Care Gaps Operation"/>
     <status value="draft"/>
     <kind value="operation"/>
-    <date value="2021-02-04"/>
+    <date value="2021-02-24"/>
     <publisher value="Da Vinci Project"/>
     <contact>
       <telecom>
@@ -24,9 +24,9 @@
       </coding>
     </jurisdiction>
     <code value="care-gaps"/>
-    <comment value="The effect of invoking this operation is to calculate a measure or a set of measures based on the In Parameters provided and return a document bundle describing the gaps in care results
-     of each measure for the specified gaps through period for the given subject (a patient or a group of patients). Note that it is up to the Server to determine whether
-     or not the generated gaps in care report is persisted. If the Server does not persist the results, the operation does not affect state and can be invoked with a GET. Note that this operation is intended to replace the existing Measure $care-gaps operation."/>
+    <comment value="The effect of invoking this operation is to calculate a measure or a set of measures based on the In Parameters provided and to return Parameters resource containing one or more document bundles describing the gaps in care results
+     of each measure, for the specified gaps through period and for the given subject (a patient or a group of patients). Note that it is up to the Server to determine whether
+     or not the generated gaps in care report is persisted. If the Server does not persist the results, the operation does not affect state and can be invoked with a GET. Note that this operation is intended to replace the existing base Measure $care-gaps operation in FHIR R5."/>
     <base value="http://hl7.org/fhir/OperationDefinition/Measure-care-gaps"/>
     <resource value="Measure"/>
     <system value="false"/>
@@ -37,7 +37,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="1"/>
-        <documentation value="The start of a gaps through period. This maybe the start of the measurement period defined by a measure, or a customized desired performance period start date determined by a payer, a provider, a measure program, and etc."/>
+        <documentation value="The start of a [gaps through period](index.html#glossary). This maybe the start of the measurement period defined by a measure, or a customized desired performance period start date determined by a payer, a provider, a measure program, and etc."/>
         <type value="date"/>
     </parameter>
     <parameter>
@@ -45,7 +45,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="1"/>
-        <documentation value="The end of a gaps through period (the gaps through date). The gaps through date could be a past date or a future date.  For example, today's date is 2020-06-18, 1) if periodEnd date is 2020-09-30, it returns gaps through 2020-09-30, and 2) if the periodEnd date is 2020-05-31, it returns gaps through 2020-05-31."/>
+        <documentation value="The end of a [gaps through period](index.html#glossary) (the gaps through date). The gaps through date could be a past date or a future date.  For example, today's date is 2020-06-18, 1) if periodEnd date is 2020-09-30, it returns gaps through 2020-09-30, and 2) if the periodEnd date is 2020-05-31, it returns gaps through 2020-05-31."/>
         <type value="date"/>
     </parameter>
     <parameter>
@@ -53,7 +53,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The category of the measures that is of interest for the care gaps report. This references the topic element in the Measure Resource. Examples of topic may be screening measures, HEDIS measure domains, chronic disease measures. For example, setting topic to be a screening caregory will run care gaps on all screening measures. Topic may also be a &quot;value set&quot; that is defined with a list of domains/categories, etc. Topic examples: &quot;screening&quot;, &quot;pediatric&quot;. When multiple topics are provided, it is expected to be union of measures in those topics. Note - the type of this parameter is a string with a search type of token so that the coding value can be provided as part of a URL and the operation can be invoked using GET."/>
+        <documentation value="The category of the measures that is of interest for the care gaps report. This references the [topic](https://www.hl7.org/fhir/measure-definitions.html#Measure.topic) element in the [Measure](https://www.hl7.org/fhir/measure.html) resource. Examples of topic may be screening measures, HEDIS measure domains, chronic disease measures. For example, setting topic to be a screening caregory will run care gaps on all screening measures. Topic may also be a &quot;value set&quot; that is defined with a list of domains/categories, etc. Topic examples: &quot;screening&quot;, &quot;pediatric&quot;. When multiple topics are provided, it is expected to be union of measures in those topics. Note that the type of this parameter is a string with a search type of [token](https://www.hl7.org/fhir/search.html#token), so the $care-gaps operation has only simple input parameters and may be invoked using GET."/>
         <type value="string"/>
         <searchType value="token"/>
     </parameter>
@@ -62,7 +62,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Subject will be a reference to either Patient [QI Core Patient](http://hl7.org/fhir/us/qicore/STU4/StructureDefinition-qicore-patient.html) or Group [DEQM Gaps In Care Group Profile](StructureDefinition-gaps-group-deqm.html). Must provide either Patient/123 or Group/123, cannot simply provide 123. If only provide 123, then the operation would not know if it is a Patient reference or a Group reference."/>
+        <documentation value="Subject will be a reference to either Patient [QI Core Patient](http://hl7.org/fhir/us/qicore/STU4/StructureDefinition-qicore-patient.html) or Group [DEQM Gaps In Care Group Profile](StructureDefinition-gaps-group-deqm.html). Must provide either Patient/123 or Group/123, cannot simply provide 123. If only 123 is provided, then the operation would not know if it is a Patient reference or a Group reference."/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
@@ -89,7 +89,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="*"/>
-        <documentation value="Indicates status of a care gap. For both open and closed gaps, two seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
+        <documentation value="Indicates status of a care gap. For both [open and closed gaps](index.html#glossary), two seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
         <binding>
           <strength value="extensible"/>
           <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
@@ -109,15 +109,16 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The business identifier of a measure for which the gaps in care will be reported. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system."/>
-        <type value="Identifier"/>
+        <documentation value="The business identifier of a measure for which the gaps in care will be reported. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system. Note that the type of this parameter is a string with a search type of [token](https://www.hl7.org/fhir/search.html#token), so the $care-gaps operation has only simple input parameters and may be invoked using GET."/>
+        <type value="string"/>
+        <searchType value="token"/>
     </parameter>
     <parameter>
         <name value="measureUrl"/>
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="This the the URL of a measure for which the gaps in care will be reported. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
+        <documentation value="This the the URL of a measure for which the gaps in care will be reported. A measure URL is specified in the [url](https://www.hl7.org/fhir/measure-definitions.html#Measure.url) element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
         <type value="canonical"/>
     </parameter>
     <parameter>
@@ -125,7 +126,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS Merit-based Incentive Payment Program (MIPS), Hospital Quality Reporting (HQR) programs. Program is represented in Measure using element useContext (useageContext). When the code attribute of useContext is program, then the value attribute of useContext represents a specific program."/>
+        <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS Merit-based Incentive Payment Program (MIPS), Hospital Quality Reporting (HQR) programs. Program is represented in the Measure using element [useContext](https://www.hl7.org/fhir/measure-definitions.html#Measure.useContext). When the code attribute of useContext is program, then the value attribute of useContext represents a specific program. Note that the type of this parameter is a string with a search type of [token](https://www.hl7.org/fhir/search.html#token), so the $care-gaps operation has only simple input parameters and may be invoked using GET."/>
         <type value="string"/>
         <searchType value="token"/>
     </parameter>
@@ -134,7 +135,7 @@
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The result of the care-gaps operation will be returned as a document bundle using the [DEQM Gaps In Care Bundle Profile](StructureDefinition-gaps-bundle-deqm.html)."/>
+        <documentation value="The $care-gaps operation returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, containing one or more document bundles that conform to the [DEQM Gaps In Care Bundle Profile](StructureDefinition-gaps-bundle-deqm.html). Note that the result of the $care-gaps operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>
