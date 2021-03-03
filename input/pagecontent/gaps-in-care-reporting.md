@@ -61,6 +61,8 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 |**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measure=CMS130v8|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The gaps in care report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The gaps in care report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
 
+The timeline below represents the data described above.  A colonoscopy procedure per CMS130v8 is required every 10 years.  If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
+
 {% include img-portrait.html img="Prospective and Retrospective Use Case.png" caption = "Figure 2-15 Prospective and Retrospective Use Case" %}
 
 We seek examples of continuous variable measure where prospective use case might be applicable.
