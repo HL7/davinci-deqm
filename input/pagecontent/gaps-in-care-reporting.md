@@ -56,10 +56,12 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 
 [Gaps through period] is the time period defined by a Client for running the gaps in care report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated [open gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure.  In the example below, CMS Colorectal Cancer Screen [CMS130v8] is used.
 
-|Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Creation Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
+|Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
-|**Prospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-09-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-09-30|2020-07-01|Example: patient had colonoscopy on 2010-07-03|Returns gaps through 2020-09-30. The gaps in care report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2020-09-30, the colonoscopy would be over 10 years.|
-|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-06-30&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-06-30|2020-07-01|Example: patient had colonoscopy on 2010-07-03|Returns gaps through 2020-06-30. The gaps in care report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-07-01, the procedure would have occurred within the specified 10-year timeframe.|
+|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measure=CMS130v8|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The gaps in care report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
+|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The gaps in care report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
+
+{% include img-portrait.html img="Prospective and Retrospective Use Case.png" caption = "Figure 2-15 Prospective and Retrospective Use Case" %}
 
 We seek examples of continuous variable measure where prospective use case might be applicable.
 {:.note-to-balloters}
@@ -87,11 +89,11 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation has an out paramet
 Through the requirement analysis of the Gaps in Care Reporting for this ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
 {:.stu-note}
 
-Figure 2-15 shows an example workflow for running the care-gaps operation against a payer's system for a single patient.
-{% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-15 Care Gaps Operation - Single Patient" %}
+Figure 2-16 shows an example workflow for running the care-gaps operation against a payer's system for a single patient.
+{% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
 
-Figure 2-16 shows an example workflow for running the care-gaps operation against a payer's system for a group of patients.
-{% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-16 Care Gaps Operation - Group of Patients" %}
+Figure 2-17 shows an example workflow for running the care-gaps operation against a payer's system for a group of patients.
+{% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
 
 #### How to Construct a Gaps in Care Report
 {:.no_toc}
