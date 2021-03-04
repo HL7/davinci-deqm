@@ -27,9 +27,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "0.5 ML heparin sodium, porcine 10000 UNT/ML Injection",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "severity" : "error",
+  "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {

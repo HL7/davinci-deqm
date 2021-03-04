@@ -112,6 +112,8 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition,
 
 - The [DEQM Gaps in Care Composition Profile] may also contain all supporting resources referenced by the composition and its contained measure reports. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
+- The date element of the MeasureReport resource contains the date the open/closed gap was calculated.
+
 #### Attribution
 {:.no_toc}
 
