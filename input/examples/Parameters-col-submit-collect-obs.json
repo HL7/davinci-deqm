@@ -3,7 +3,7 @@
     "resourceType": "Parameters",
     "parameter": [
         {
-            "name": "measure-report",
+            "name": "measureReport",
             "resource": {
                 "resourceType": "MeasureReport",
                 "id": "datax-measurereport03",
