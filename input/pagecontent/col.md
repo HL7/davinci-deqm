@@ -1,7 +1,4 @@
 
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. This example use case is not in scope for ballot comment.
-{:.note-to-balloters}
-
 ##  Introduction
 
 The colonoscopy measure such as *HEDIS Colorectal Cancer Screening/CMS130*[^10] is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening for all patients in the population receiving care during the measurement period.
@@ -42,14 +39,14 @@ For COL either an *Observation*, *DiagnosticReport*, *Condition*, or *Procedure*
 #### Option 1: MeasureReport Using Observation
 {:.no_toc}
 
-When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  The following resource graph diagram shows how a laboratory test to meet the screen measure would be represented using a DEQM Individual MeasureReport and its associated resources.
+When certain laboratory results such as fecal occult blood (FOBT) and FIT-DNA are done in a specified time period, the patient has been screened for colorectal cancer.  The valueset binding (i.e., list of codes) in the measure will inform you as to which laboratory results qualify for meeting this measure.  The following resource graph diagram shows how a laboratory test to meet the screen measure would be represented using a DEQM Data Exchange MeasureReport and its associated resources.
 
 {% include img.html img="DEQM Resource Diagram - COL1.jpg" caption ="Figure 3-5 Measure Report Using Observation" %}
 
 #### Option 2: MeasureReport Using DiagnosticReport
 {:.no_toc}
 
-Another way a COL screening measure is met is when certain procedures such as flexible sigmoidoscopy and colonoscopy are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how a procedure report to meet a screening measure would be represented in a DEQM Individual MeasureReport and its associated resources.
+Another way a COL screening measure is met is when certain procedures such as flexible sigmoidoscopy and colonoscopy are performed and a report generated.  In FHIR, the report is represented by a DiagnosticReport.  The measure indicates what ValueSets/Codes can be used to report this measure. The following diagram shows how a procedure report to meet a screening measure would be represented in a DEQM Data Exchange MeasureReport and its associated resources.
 
 
 {% include img.html img="DEQM Resource Diagram - COL2.jpg" caption ="Figure 3-6 Measure Report Using DiagnosticReport" %}
@@ -57,14 +54,14 @@ Another way a COL screening measure is met is when certain procedures such as fl
 #### Option 3: MeasureReport Using Procedure
 {:.no_toc}
 
-There are often times exclusions in a screening measure.  An exclusion is something that removes the requirement for a screening measure.  For example, a total colectomy removes the requirement for Colorectal Cancer Screening.  As with the other options, the measure defines the valueset/codes that constitute a qualifying procedure.  The following diagram shows how you would use a DEQM Individual MeasureReport and its associated resources to report a procedure that represents an exclusion to the measure.
+There are often times exclusions in a screening measure.  An exclusion is something that removes the requirement for a screening measure.  For example, a total colectomy removes the requirement for Colorectal Cancer Screening.  As with the other options, the measure defines the valueset/codes that constitute a qualifying procedure.  The following diagram shows how you would use a DEQM Data Exchange MeasureReport and its associated resources to report a procedure that represents an exclusion to the measure.
 
  {% include img.html img="DEQM Resource Diagram - COL3.jpg" caption ="Figure 3-7 Measure Report Using Procedure"%}
 
 #### Option 4: MeasureReport Using Condition
 {:.no_toc}
 
- An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions such as colorectal cancer.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows how you would use a DEQM Individual MeasureReport and its associated resources to represent a condition that represents an exclusion to the measure.
+ An additional way exclusions are met in the Colorectal Cancer Screening measure is with certain conditions such as colorectal cancer.  The valuesets/codes that allow for the patient not to be screened for colorectal cancer are specified in the measure.  The following MeasureReport diagram shows how you would use a DEQM Data Exchange MeasureReport and its associated resources to represent a condition that represents an exclusion to the measure.
 
 
  {% include img.html img="DEQM Resource Diagram - COL4.jpg" caption ="Figure 3-8 Measure Report Using Condition"%}

@@ -1,12 +1,14 @@
 
-ONLY the new content for Gaps in Care is in the scope for ballot for the September, 2020 Ballot Cycle. Summary Reporting is not in scope for ballot comment.
-{:.note-to-balloters}
 
 ### Introduction
 
 A summary report contains calculated summary data for one or more Clinical Quality Measures (CQMs) for a specified population of patients within a particular health system over a specific period of time. For example, a colorectal cancer screening CQM has patient counts for the initial population, denominator, denominator exclusions, and numerator respectively for a specified population of patients. Summary reports may also contain summary data for stratifier criteria (such as gender or age) as defined in a CQM.
 
 The Summary reporting scenario is supported by the [DEQM Summary MeasureReport Profile]. Transactions between Reporters (for example, organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of summary level quality reports for CQMs to various quality reporting programs.
+
+### Relationship of Measure and MeasureReport Resources
+
+The Quality Reporting Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Population Data]section describes how to use a MeasureReport resource to represent the results of a summary calculation, as well as how to use the $evaluate-measure operation to generate a summary MeasureReport from a Measure.
 
 ### Default Profiles
 

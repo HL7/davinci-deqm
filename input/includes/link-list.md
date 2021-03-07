@@ -170,3 +170,4 @@
 [gaps through period]: index.html#glossary
 [Gaps through period]:  index.html#glossary
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html
+[Reporting Population Data]: http://hl7.org/fhir/clinicalreasoning-quality-reporting.html#reporting-population-data
