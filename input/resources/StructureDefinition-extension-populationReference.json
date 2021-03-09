@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "Identifies which measure population that a specific resource is used for evaluating their logics. This is indicated by associating a resource with a population code selected from the MeasurePopulationType value set, such as numerator and denominator.",
+  "description": "Identifies which measure population that a specific resource is used for evaluating their logics by referencing population criteria id (Measure/group/population/id) specified in Measure resource. For a multiple performance rate measure, referencing population criteria group (Measure/group/id) is necessary to identify a measure population within a population criteria group.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -38,7 +38,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Population reference",
-        "definition": "Reference a measure population within a measure identified by a measure population type code, such as numerator and denominator.",
+        "definition": "Reference a measure population or a measure population within a population criteria group by referencing their unique id specified in a Measure resource.",
         "min": 0,
         "max": "*"
       },
@@ -57,13 +57,10 @@
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "string"
           }
         ],
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ValueSet/measure-population"
-        }
+        "short": "This id SHOULD reference population criteria id or population criteria group id specified in a Measure resource."
       }
     ]
   }
