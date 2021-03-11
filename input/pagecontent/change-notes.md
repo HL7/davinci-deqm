@@ -74,11 +74,12 @@ The first official published version of the DEQM IG for FHIR R4.
 
 ### Changes and Updates for version 3.0.0 (in progress)
 
-1. Applied all resolutions from STU2 Ballot (in progress)
+1. Applied all resolutions from STU3 Ballot (in progress)
     - Various Technical Corrections and Corrections to Typographical Errors
     - Updated examples
     - Change the DEQM Gaps In Care Composition Profile to reference 1..* DEQM Gaps In Care DetectedIssue instead of 0..* ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017))
     - Add a modifier extension gapStatus to the DEQM Gaps In Care DetectedIssue profile ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)).  
-
+    - Updated the Introduction section in Gaps In Care Reporting
+1. Applied resolutions from DEQM trackers (in progress)
 
 {% include link-list.md %}
