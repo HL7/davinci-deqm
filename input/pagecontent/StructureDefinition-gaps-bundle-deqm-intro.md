@@ -9,12 +9,12 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
-1. A Bundle.type with a fixed code "document"
-1. A Bundle.entry references a composition using the [DEQM Gaps In Care Composition Profile] for a  measure
+1. A `Bundle.type` with a fixed code "document"
+1. A `Bundle.entry` references a composition using the [DEQM Gaps In Care Composition Profile] for a  measure
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
-1. A Bundle.entry references a MeasureReport using the [DEQM Individual MeasureReport Profile] for each measure referenced in the composition.
+1. A `Bundle.entry` references a MeasureReport using the [DEQM Individual MeasureReport Profile] for each measure referenced in the composition.
 
 <!--
 ### Mandatory Data Elements and Terminology

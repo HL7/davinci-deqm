@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "Identifies which measure population that a specific resource is used for evaluating their logics by referencing population criteria id (Measure.group.population.id) specified in Measure resource. For a multiple performance rate measure, referencing population criteria group (Measure.group.id) is necessary to identify a measure population within a population criteria group.",
+  "description": "Identifies which measure population that a specific resource is used for evaluating their logics by referencing population criteria id (`Measure.group.population.id`) specified in Measure resource. For a multiple performance rate measure, referencing population criteria group (`Measure.group.id`) is necessary to identify a measure population within a population criteria group.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

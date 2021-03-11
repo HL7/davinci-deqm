@@ -178,15 +178,11 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |STU3|FHIR Release 3 (STU)|
 |VTE-1|Venous Thromboembolism Prophylaxis Measure|
 
-<br />
-
-<br />
 ---
 
 **This Implementation Guide was made possible by the thoughtful contributions of the following people and organizations:**
 
 - *The twenty-two founding [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common) member organizations.*
-
 - *Bryn Rhodes, Dynamic Content Group*
 - *Eric Haas, Health eData Inc*
 - *Floyd Eisenberg, iParsimony LLC*
@@ -200,9 +196,6 @@ For additional definitions see the [eCQI Resource Center Glossary]
 - *Sam Sayer, The MITRE Corporation*
 - *Viet Nguyen, Stratametrics*
 - *Yan Heras, Optimum eHealth LLC*
-
-
-
 
 ---
 
