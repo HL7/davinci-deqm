@@ -246,6 +246,12 @@
       <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
       <min value="1"/>
       <max value="1"/>
+      <constraint>
+        <key value="deqm-5"/>
+        <severity value="error"/>
+        <human value="If the measure scoring type is 'proportion' then the measureScore value SHALL be 0 or 1 for individual reporting" />
+        <expression value="extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion') implies group.measureScore.value.exists()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.measureScore.extension:altscoretype">

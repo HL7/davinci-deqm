@@ -2,7 +2,7 @@
 
 - If the measure scoring type is 'proportion', 'ratio', or 'continuous-variable' then the `improvementNotation` element is required.
 
-- If the measure scoring type is 'proportion' then the `MeasureReport.group.measureScore.value` SHALL be a numerical value between 0 and 1.
+- If the measure scoring type is 'proportion' then the `MeasureReport.group.measureScore.value` SHALL be a numerical value between 0 and 1. 
 
 - The `reporter` should be consistent with the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) if present.
 
