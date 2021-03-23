@@ -279,7 +279,7 @@
        <code value="Extension"/>
        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference"/>
      </type>
-     <mustSupport value="false"/>
+     <mustSupport value="true"/>
    </element>
   </differential>
 </StructureDefinition>
