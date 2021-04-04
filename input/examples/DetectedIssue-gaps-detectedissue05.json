@@ -8,8 +8,21 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-detectedissue01</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status care-gap}\">Gap in Care Detected</span></p><p><b>patient</b>: <a href=\"Patient-gaps-patient01.html\">Generated Summary: id: gaps-patient01; Medical Record Number = 999995992 (USUAL); Parker Susan ; gender: female; birthDate: 1965-01-01</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td>-</td><td><b>Detail</b></td></tr><tr><td>*</td><td><a href=\"MeasureReport-gaps-indv-measurereport01.html\">Generated Summary: id: gaps-indv-measurereport01; status: complete; type: individual; measure: http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example; date: Jun 30, 2020, 7:08:52 AM; period: Dec 31, 2019, 5:00:00 PM --&gt; Dec 30, 2020, 5:00:00 PM; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></a></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><h3>ModifierExtension[http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus]s</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>status</b>: final</p><p><b>code</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/detectedissue-category care-gap}\">Care Gap Detected</span></p><p><b>patient</b>: <a href=\"Patient-gaps-patient01.html\">Generated Summary: Medical Record Number: 999995992 (USUAL); Parker Susan ; gender: female; birthDate: 1965-01-01</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td>-</td><td><b>Detail</b></td></tr><tr><td>*</td><td><a href=\"MeasureReport-gaps-indv-measurereport04.html\">Generated Summary: status: complete; type: individual; measure: http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example; date: Jul 7, 2020, 7:08:52 AM; period: Dec 31, 2019, 5:00:00 PM --&gt; Dec 30, 2020, 5:00:00 PM; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></a></td></tr></table></div>"
   },
+  "modifierExtension": [
+    {
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+            "code": "closed-gap"
+          }
+        ]
+      }
+    }
+  ],
   "status": "final",
   "code": {
     "coding": [
