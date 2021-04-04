@@ -99,7 +99,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "id": "gaps-indv-measurereport01",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
                 ]
               },
               "text": {
@@ -241,7 +241,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "id": "gaps-indv-measurereport02",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
                 ]
               },
               "text": {
@@ -718,7 +718,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
               "id": "gaps-indv-measurereport03",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
                 ]
               },
               "text": {

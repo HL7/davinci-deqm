@@ -172,7 +172,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-indv-measurereport-deqm"
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
                     ],
                     "type": "MeasureReport"
                 }
