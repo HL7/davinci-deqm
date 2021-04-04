@@ -93,9 +93,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
-              "code": "care-gap",
-              "display": "Care Gap Detected"
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "CAREGAP",
+              "display": "Care Gaps"
             }
           ]
         },

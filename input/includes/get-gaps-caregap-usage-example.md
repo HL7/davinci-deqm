@@ -453,9 +453,9 @@ Content-Type: application/fhir+json;charset=UTF-8
         "code": {
           "coding": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
-              "code": "care-gap",
-              "display": "Gap in Care Detected"
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "CAREGAP",
+              "display": "Care Gaps"
             }
           ]
         },
@@ -491,9 +491,9 @@ Content-Type: application/fhir+json;charset=UTF-8
         "code": {
           "coding": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/detectedissue-category",
-              "code": "care-gap",
-              "display": "Gap in Care Detected"
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "CAREGAP",
+              "display": "Care Gaps"
             }
           ]
         },
