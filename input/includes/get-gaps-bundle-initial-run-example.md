@@ -217,14 +217,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "initial-population"
-                          }
-                        ]
-                      }
+                      "valueString": "initial-population"
                     }
                   ],
                   "reference": "Encounter/gaps-encounter01"
@@ -233,14 +226,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "initial-population"
-                          }
-                        ]
-                      }
+                      "valueString": "initial-population"
                     }
                   ],
                   "reference": "Patient/gaps-patient01"
@@ -373,25 +359,11 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "initial-population"
-                          }
-                        ]
-                      }
+                      "valueString": "initial-population"
                     },
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "denominator"
-                          }
-                        ]
-                      }
+                      "valueString": "denominator"
                     }
                   ],
                   "reference": "Encounter/gaps-encounter01"
@@ -400,25 +372,11 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "initial-population"
-                          }
-                        ]
-                      }
+                      "valueString": "initial-population"
                     },
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "denominator"
-                          }
-                        ]
-                      }
+                      "valueString": "denominator"
                     }
                   ],
                   "reference": "Patient/gaps-patient01"
@@ -878,14 +836,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "initial-population"
-                          }
-                        ]
-                      }
+                      "valueString": "initial-population"
                     }
                   ],
                   "reference": "Encounter/gaps-encounter02"
@@ -894,14 +845,7 @@ GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                            "code": "initial-population"
-                          }
-                        ]
-                      }
+                      "valueString": "initial-population"
                     }
                   ],
                   "reference": "Patient/gaps-patient02"
