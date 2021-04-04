@@ -6,10 +6,6 @@
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: final</p><p><b>type</b>: <span title=\"Codes: {http://loinc.org 96315-7}\">Gaps in care report</span></p><p><b>date</b>: Jul 7, 2020, 7:08:53 AM</p><p><b>author</b>: <a href=\"Organization-gaps-organization-reportingvendor.html\">Generated Summary: Tax ID number: 123446789 (OFFICIAL); active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/organization-type pay}\">Payer</span>; name: GapsReportingVendor01; Phone: (+1) 401-545-1212</a></p><p><b>title</b>: Care Gap Report for patient gaps-patient01</p></div>"
-  },
   "status": "final",
   "type": {
     "coding": [

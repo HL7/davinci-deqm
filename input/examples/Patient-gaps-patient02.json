@@ -6,10 +6,6 @@
       "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: gaps-patient02</p><p><b>meta</b>: </p><p><b>identifier</b>: Medical Record Number = 999996992 (USUAL)</p><p><b>name</b>: Thomas Ludwich </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1957-01-01</p></div>"
-  },
   "extension": [
     {
       "extension": [
