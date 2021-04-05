@@ -6,18 +6,18 @@
   "list": [
     {
       "current": true,
-      "descmd": "Continuous Integration Build (latest in version control) (also [R3](http://build.fhir.org/ig/HL7/davinci-deqm))",
+      "desc": "Continuous Integration Build (latest in version control) (also [R3](http://build.fhir.org/ig/HL7/davinci-deqm))",
       "path": "http://build.fhir.org/ig/HL7/davinci-deqm",
       "status": "ci-build",
       "version": "current"
     },
     {
-      "version": "2.1.0",
+      "version": "3.0.0",
       "fhirversion": "4.0.1",
-      "date": "2020-08-15",
-      "desc": "STU 3 Ballot for 2nd Release FHIR R4 Version of DEQM",
-      "changes": "change-notes.html#changes-and-updates-for-version-210",
-      "path": "http://hl7.org/fhir/us/davinci-deqm/2020Sep",
+      "date": "TBD",
+      "desc": "DEQM STU 3 for FHIR R4",
+      "changes": "change-notes.html#changes-and-updates-for-version-300",
+      "path": "http://hl7.org/fhir/us/davinci-deqm/STU3",
       "status": "trial-use",
       "sequence": "STU 3"
     },
