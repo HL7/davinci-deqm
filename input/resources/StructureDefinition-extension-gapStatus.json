@@ -41,7 +41,8 @@
         "definition": "Indicates care gap status.",
         "min": 0,
         "max": "1",
-        "isModifier": "true"
+        "isModifier": true,
+        "isModifierReason": "TODO: add reason"
       },
       {
         "id": "Extension.url",
