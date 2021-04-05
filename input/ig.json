@@ -55,8 +55,8 @@
     "definition": {
         "parameter": [
             {
-                "code": "foo",
-                "value": "bar"
+                "code": "path-expansion-params",
+                "value": "../input/exp-params.json"
             },
             {
                 "code": "logging",
