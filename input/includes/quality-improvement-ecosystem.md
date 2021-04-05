@@ -33,7 +33,7 @@ organizations, for public health and for payers.
 
 </summary>
 
-<img src="quality-improvement-ecosystem.png" alt="Quality
+<img src="quality-improvement-ecosystem_new.png" alt="Quality
 Improvement Ecosystem" class="img-responsive img-rounded
 center-block"/>
 

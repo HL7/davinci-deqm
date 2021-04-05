@@ -18,7 +18,7 @@ A Gap in Care Report is designed to communicate actual or perceived gaps in care
 
 In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram].
 
-{% include img-portrait.html img="gic-ecosystem.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
+{% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
 
 The Gap in Care flow is between a provider and a measurement organization’s system performing analytics.
 
@@ -63,10 +63,7 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 
 The timeline below represents the data described above.  A colonoscopy procedure per CMS130v8 is required every 10 years.  If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
 
-{% include img-portrait.html img="Prospective and Retrospective Use Case.png" caption = "Figure 2-15 Prospective and Retrospective Use Case" %}
-
-We seek examples of continuous variable measure where prospective use case might be applicable.
-{:.note-to-balloters}
+{% include img-portrait.html img="gic-prospective-retrospective.png" caption = "Figure 2-15 Prospective and Retrospective Use Case" %}
 
 #### Care Gaps Operation
 {:.no_toc}

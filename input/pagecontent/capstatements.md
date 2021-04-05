@@ -1,8 +1,4 @@
 
-List of capability statements defined for Gaps In Care:
-- Gaps In Care Client CapabilityStatement
-- Gaps In Care Server CapabilityStatement
-
 {% include list-simple-capabilitystatements.xhtml %}
 
 <br />
