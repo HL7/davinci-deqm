@@ -36,6 +36,9 @@ None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/d
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category), and a coding is recommended to come from this value set) (codes = http://example.org/CodeSystem/observation-category#measure)
 None of the codings provided are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes), and a coding is recommended to come from this value set) (codes = http://www.nlm.nih.gov/research/umls/rxnorm#1658634)
 
+# WARNING: US-Core coding not recognized by the validator
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
+
 # Confirmed profile validation messages
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[0].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
