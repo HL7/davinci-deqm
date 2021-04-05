@@ -38,6 +38,8 @@ None of the codings provided are in the value set http://hl7.org/fhir/us/core/Va
 
 # WARNING: US-Core coding not recognized by the validator
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
 
 # Confirmed profile validation messages
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
