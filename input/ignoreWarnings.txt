@@ -1,29 +1,553 @@
 == Suppressed Messages ==
 
-# COPIED FROM Data Exchange For Quality Measures STU2 IG This device profile is intended to model software systems as devices, not implantable devices like what the US Core profile is describing. Approved by US Realm on 6/30/2020.
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm').baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
 # COPIED FROM Data Exchange For Quality Measures STU2 IG These warnings are all caused by the use of the new text/cql.identifier media type. This has been addressed in the current R5 build and are expected to resolve once the core package updates.
-ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/date-of-last-power-outage: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/measure-mrp-example: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/measure-mrp-example: Measure.group[0].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/measure-mrp-example: Measure.group[0].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+
 # COPIED FROM QICore STU4 IG Known issues with VSAC value sets
-The valueSet reference https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591 on element Coverage.type could not be resolved
-# the validator is trying to resolve an "example.org" artifact which by convention does not exist.
-The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
-The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
-# the validator is trying to resolve an "example.org" Code System which by convention does not exist.
+WARNING: StructureDefinition/coverage-deqm: StructureDefinition.snapshot.element[11].binding: The valueSet reference https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591 on element Coverage.type could not be resolved
+
+# The validator is trying to resolve an "example.org" artifact which by convention does not exist
+WARNING: MeasureReport/summ-medicare-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
+WARNING: Bundle/multiple-summ-report: Bundle.entry[0].resource.ofType(MeasureReport): The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
+WARNING: MeasureReport/indv-measurreport-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
+
+# INFORMATION: The validator is trying to resolve an "example.org" Code System which by convention does not exist
 Code System URI 'http://example.org/fhir/' is unknown so the code cannot be validated
 Code System URI 'http://example.org/CodeSystem/observation-category' is unknown so the code cannot be validated
 Code System URI 'http://example.org/CodeSystem/measure-population-type' is unknown so the code cannot be validated
 Code System URI 'http://example.org/CodeSystem/stratifier-classifications' is unknown so the code cannot be validated
 Code System URI 'http://example.org/CodeSystem/SOP' is unknown so the code cannot be validated
 Code System URI 'http://example.org/CodeSystem/medicare-subgroup' is unknown so the code cannot be validated
-# Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated are not recognized by the validator due to IP restrictions
+
+# INFORMATION: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated are not recognized by the validator due to IP restrictions
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-# Slicing is open so other slices are intentionally allowed
+
+# INFORMATION: Slicing is open so other slices are intentionally allowed
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-# Codings are recommended to come from value sets, not required.  All these are examples.
+
+# INFORMATION: Codings are recommended, not required, to come from value sets.  Confirmed codings examples.
 None of the codings provided are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code (http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code), and a coding is recommended to come from this value set) (codes = http://www.ama-assn.org/go/cpt#44393)
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#96315-7)
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/detectedissue-category (http://hl7.org/fhir/ValueSet/detectedissue-category), and a coding is recommended to come from this value set) (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category), and a coding is recommended to come from this value set) (codes = http://example.org/CodeSystem/observation-category#measure)
 None of the codings provided are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes), and a coding is recommended to come from this value set) (codes = http://www.nlm.nih.gov/research/umls/rxnorm#1658634)
+
+# Confirmed profile validation messages
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[0].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[0].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[1].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[1].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[2].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[2].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[4].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[4].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[5].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[5].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[6].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[6].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[7].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[7].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[8].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[8].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[9].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[9].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[10].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[10].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[11].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[11].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[12].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[12].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[13].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[13].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[14].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[14].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[15].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[15].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[16].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[16].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[3].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[3].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[4].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[4].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[6].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[6].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[7].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[7].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[8].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[8].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[9].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[9].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[10].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[10].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[11].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[11].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[12].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[12].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[13].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[13].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[14].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[14].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[15].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[15].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[16].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[16].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/multiple-summ-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/multiple-summ-report: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-summ-report: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/multiple-summ-report: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/multiple-summ-report: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-summ-report: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm - listed in meta
+INFORMATION: Bundle/multiple-summ-report: Bundle.entry[3].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/multiple-summ-report: Bundle.entry[3].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue03 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue04 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue01 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[0].resource.ofType(Composition).section[1].entry[0]: Details for DetectedIssue/gaps-detectedissue02 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[1].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[1].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[3].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[3].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[4].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[4].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[5].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[5].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[6].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[6].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm - listed in meta
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[1].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[2].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[2].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[4].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[4].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[1].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[1].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[2].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[2].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[3].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[3].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[4].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[4].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[6].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[6].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[7].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[7].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization - listed in meta
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[9].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[9].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-location - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[1].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[1].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[2].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[2].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[3].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[3].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[4].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[4].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[6].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[6].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[7].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[7].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization - listed in meta
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[9].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[9].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-location - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[2].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[2].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[4].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[5].resource.ofType(MedicationAdministration): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationAdministration
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[5].resource.ofType(MedicationAdministration): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationadministration-deqm - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[1].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[2].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[2].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[4].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[5].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[5].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[6].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[6].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationnotrequested - listed in meta
+INFORMATION: Composition/gaps-composition01: Composition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Composition/gaps-composition01: Composition: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Composition/gaps-composition02: Composition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Composition/gaps-composition02: Composition: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Composition/gaps-composition03: Composition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Composition/gaps-composition03: Composition: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Coverage/coverage01: Coverage: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+INFORMATION: Coverage/coverage01: Coverage: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm - listed in meta
+INFORMATION: Coverage/coverage02: Coverage: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+INFORMATION: Coverage/coverage02: Coverage: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm - listed in meta
+INFORMATION: Coverage/coverage03: Coverage: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+INFORMATION: Coverage/coverage03: Coverage: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm - listed in meta
+INFORMATION: DetectedIssue/gaps-detectedissue01: DetectedIssue: Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: DetectedIssue/gaps-detectedissue01: DetectedIssue: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: DetectedIssue/gaps-detectedissue02: DetectedIssue: Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: DetectedIssue/gaps-detectedissue02: DetectedIssue: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: DetectedIssue/gaps-detectedissue03: DetectedIssue: Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: DetectedIssue/gaps-detectedissue03: DetectedIssue: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: DetectedIssue/gaps-detectedissue04: DetectedIssue: Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: DetectedIssue/gaps-detectedissue04: DetectedIssue: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: DetectedIssue/gaps-detectedissue05: DetectedIssue: Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: DetectedIssue/gaps-detectedissue05: DetectedIssue: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Device/deqm-software-system-example: Device: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Device
+INFORMATION: Device/deqm-software-system-example: Device: Validate resource against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm - listed in meta
+INFORMATION: Encounter/encounter01: Encounter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Encounter/encounter01: Encounter: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Encounter/encounter02: Encounter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Encounter/encounter02: Encounter: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Encounter/encounter03: Encounter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Encounter/encounter03: Encounter: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Encounter/gaps-encounter01: Encounter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Encounter/gaps-encounter01: Encounter: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Encounter/gaps-encounter02: Encounter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Encounter/gaps-encounter02: Encounter: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Encounter/gaps-encounter03: Encounter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Encounter/gaps-encounter03: Encounter: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Group/gaps-subject-group01: Group: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Group
+INFORMATION: Group/gaps-subject-group01: Group: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-group-deqm - listed in meta
+INFORMATION: Group/group01: Group: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Group
+INFORMATION: Library/library-exm124-example: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
+INFORMATION: Library/library-exm130-example: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
+INFORMATION: Library/library-mrp-example: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library
+INFORMATION: Location/location01: Location: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Location/location01: Location: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location - listed in meta
+INFORMATION: Location/location02: Location: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Location/location02: Location: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location - listed in meta
+INFORMATION: Location/location03: Location: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Location/location03: Location: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location - listed in meta
+INFORMATION: Measure/date-of-last-power-outage: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
+INFORMATION: Measure/measure-exm124-example: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
+INFORMATION: Measure/measure-exm130-example: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
+INFORMATION: Measure/measure-mrp-example: Measure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Measure
+INFORMATION: MeasureReport/datax-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/datax-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/datax-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/datax-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/datax-measurereport03: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/datax-measurereport03: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/date-of-last-power-outage: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/date-of-last-power-outage: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/gaps-indv-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/gaps-indv-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/gaps-indv-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/gaps-indv-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/gaps-indv-measurereport03: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/gaps-indv-measurereport03: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/gaps-indv-measurereport04: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/gaps-indv-measurereport04: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/indv-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/indv-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/indv-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/indv-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/indv-measurereport03: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/indv-measurereport03: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/indv-measurreport-stratification-example: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/indv-measurreport-stratification-example: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/summ-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/summ-measurereport01: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/summ-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/summ-measurereport02: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm - listed in meta
+INFORMATION: MeasureReport/summ-medicare-stratification-example: MeasureReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: MeasureReport/summ-medicare-stratification-example: MeasureReport: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm - listed in meta
+INFORMATION: MedicationAdministration/medicationadministration01: MedicationAdministration: Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationAdministration
+INFORMATION: MedicationAdministration/medicationadministration01: MedicationAdministration: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationadministration-deqm - listed in meta
+INFORMATION: Observation/DNA-occultblood: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/DNA-occultblood: Observation: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Observation/observation01: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/observation01: Observation: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Observation/observation02: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/observation02: Observation: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Observation/observation03: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/observation03: Observation: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Organization/gaps-organization-reportingvendor: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/gaps-organization-reportingvendor: Organization: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Organization/organization01: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/organization01: Organization: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Organization/organization02: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/organization02: Organization: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Organization/organization03: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/organization03: Organization: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Organization/organization04: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/organization04: Organization: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/col-submit-collect-obs: Parameters: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Parameters
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm - listed in meta
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[2].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[2].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[4].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[4].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Parameters
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[2].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[2].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[4].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[4].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[5].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[5].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[6].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[6].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[9].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[9].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Parameters
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[0].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[1].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[2].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[2].resource.ofType(Task): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[3].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[4].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[4].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[5].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[5].resource.ofType(Coverage): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[6].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Location
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[6].resource.ofType(Location): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[8].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[9].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[9].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Parameters
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue01 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition).section[1].entry[0]: Details for DetectedIssue/gaps-detectedissue02 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[1].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[1].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[3].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[3].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[4].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[4].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[5].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[5].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[6].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[6].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[7].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[1].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue03 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Parameters
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue05 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Composition
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue03 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DetectedIssue
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[1].resource.ofType(DetectedIssue): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MeasureReport
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Encounter
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[3].resource.ofType(Encounter): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[5].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[6].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm - listed in meta
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[0].resource.ofType(Composition): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource.ofType(Bundle).entry[2].resource.ofType(MeasureReport): Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm
+INFORMATION: Patient/gaps-patient01: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Patient/gaps-patient01: Patient: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Patient/gaps-patient02: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Patient/gaps-patient02: Patient: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Patient/patient01: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Patient/patient01: Patient: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Patient/patient02: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Patient/patient02: Patient: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Patient/patient03: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Patient/patient03: Patient: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient - listed in meta
+INFORMATION: Practitioner/practitioner01: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/practitioner01: Practitioner: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Practitioner/practitioner02: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/practitioner02: Practitioner: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Practitioner/practitioner03: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/practitioner03: Practitioner: Validate resource against profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm - listed in meta
+INFORMATION: Procedure/gaps-procedure01: Procedure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Procedure/gaps-procedure01: Procedure: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure - listed in meta
+INFORMATION: Procedure/gaps-procedure02: Procedure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Procedure/gaps-procedure02: Procedure: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
+INFORMATION: Task/task01: Task: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Task/task01: Task: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: Task/task02: Task: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Task/task02: Task: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: Task/task03: Task: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Task
+INFORMATION: Task/task03: Task: Validate resource against profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task - listed in meta
+INFORMATION: ImplementationGuide/hl7.fhir.us.davinci-deqm: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+INFORMATION: CodeSystem/gaps-status: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/update-type: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: OperationDefinition/care-gaps: OperationDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/OperationDefinition
+INFORMATION: StructureDefinition/coverage-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/datax-measurereport-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-alternateScoreType: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-certificationIdentifier: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-gapStatus: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-measureScoring: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-populationReference: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-reporterGroup: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-reportingVendor: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/extension-submitDataUpdateType: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/gaps-bundle-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/gaps-composition-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/gaps-detectedissue-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/gaps-group-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/indv-measurereport-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/medicationadministration-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/summary-measurereport-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: ValueSet/gaps-status: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/update-type: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: CapabilityStatement/consumer-client: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/consumer-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/gic-client: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/gic-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/producer-client: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/producer-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/receiver-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/reporter-client: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: StructureDefinition/organization-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/practitioner-deqm: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
