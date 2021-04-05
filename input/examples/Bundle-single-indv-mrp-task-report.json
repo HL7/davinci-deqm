@@ -70,7 +70,7 @@
                         "code": {
                             "coding": [
                                 {
-                                    "system": "http://example.org",
+                                    "system": "http://example.org/fhir/",
                                     "code": "mrp-group",
                                     "display": "MRP Group"
                                 }
@@ -165,7 +165,7 @@
                 },
                 "identifier": [
                     {
-                        "system": "http://example.org",
+                        "system": "http://example.org/fhir/",
                         "value": "19009"
                     }
                 ],

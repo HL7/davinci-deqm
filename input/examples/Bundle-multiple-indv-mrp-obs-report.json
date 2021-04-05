@@ -21,7 +21,7 @@
                      {
                         "code": "measure",
                         "display": "Measure",
-                        "system": "http://example.org/fhir/observation-category"
+                        "system": "http://example.org/CodeSystem/observation-category"
                      }
                   ]
                }
@@ -675,7 +675,7 @@
                         {
                            "code": "mrp-group",
                            "display": "MRP Group",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ],
                      "text": "MRP Group"
@@ -771,7 +771,7 @@
                      {
                         "code": "measure",
                         "display": "Measure",
-                        "system": "http://example.org/fhir/observation-category"
+                        "system": "http://example.org/CodeSystem/observation-category"
                      }
                   ]
                }
@@ -856,7 +856,7 @@
                         {
                            "code": "mrp-group",
                            "display": "MRP Group",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ],
                      "text": "MRP Group"
@@ -1053,7 +1053,7 @@
                         {
                            "code": "mrp-group",
                            "display": "MRP Group",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ],
                      "text": "MRP Group"
@@ -1202,7 +1202,7 @@
                      {
                         "code": "measure",
                         "display": "Measure",
-                        "system": "http://example.org/observation-category"
+                        "system": "http://example.org/CodeSystem/observation-category"
                      }
                   ]
                }

@@ -235,7 +235,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
                      {
                         "code": "measure",
                         "display": "Measure",
-                        "system": "http://example.org/observation-category"
+                        "system": "http://example.org/CodeSystem/observation-category"
                      }
                   ]
                }

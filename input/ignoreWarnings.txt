@@ -8,5 +8,22 @@ ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 The valueSet reference https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591 on element Coverage.type could not be resolved
 # the validator is trying to resolve an "example.org" artifact which by convention does not exist.
 The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
-# the validator is trying to resolve an "example.org" artifact which by convention does not exist.
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
+# the validator is trying to resolve an "example.org" Code System which by convention does not exist.
+Code System URI 'http://example.org/fhir/' is unknown so the code cannot be validated
+Code System URI 'http://example.org/CodeSystem/observation-category' is unknown so the code cannot be validated
+Code System URI 'http://example.org/CodeSystem/measure-population-type' is unknown so the code cannot be validated
+Code System URI 'http://example.org/CodeSystem/stratifier-classifications' is unknown so the code cannot be validated
+Code System URI 'http://example.org/CodeSystem/SOP' is unknown so the code cannot be validated
+Code System URI 'http://example.org/CodeSystem/medicare-subgroup' is unknown so the code cannot be validated
+# Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated are not recognized by the validator due to IP restrictions
+Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+# Slicing is open so other slices are intentionally allowed
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+# Codings are recommended to come from value sets, not required.  All these are examples.
+None of the codings provided are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code (http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code), and a coding is recommended to come from this value set) (codes = http://www.ama-assn.org/go/cpt#44393)
+None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#96315-7)
+None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/detectedissue-category (http://hl7.org/fhir/ValueSet/detectedissue-category), and a coding is recommended to come from this value set) (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
+None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category), and a coding is recommended to come from this value set) (codes = http://example.org/CodeSystem/observation-category#measure)
+None of the codings provided are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes), and a coding is recommended to come from this value set) (codes = http://www.nlm.nih.gov/research/umls/rxnorm#1658634)

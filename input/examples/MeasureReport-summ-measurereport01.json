@@ -53,7 +53,7 @@
             "code": {
                 "coding": [
                     {
-                        "system": "http://example.org",
+                        "system": "http://example.org/fhir/",
                         "code": "mrp-group",
                         "display": "MRP Group"
                     }

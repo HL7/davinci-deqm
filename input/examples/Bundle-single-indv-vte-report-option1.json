@@ -400,6 +400,12 @@
       "fullUrl": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc9",
       "resource": {
         "resourceType": "MedicationAdministration",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationadministration-deqm"
+          ],
+          "source": "http://example.org/fhir/server"
+        },
         "status": "completed",
         "medicationCodeableConcept": {
           "coding": [
@@ -433,12 +439,6 @@
               }
             ]
           }
-        },
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationadministration-deqm"
-          ],
-          "source": "http://example.org/fhir/server"
         }
       },
       "request": {

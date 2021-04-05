@@ -523,6 +523,11 @@ definition:
       reference:
         reference: Patient/patient01
       description: DEQM Patient01 example
+    - exampleBoolean: true
+      name: MedicationAdministration01
+      reference:
+        reference: MedicationAdministration/medicationadministration01
+      description: DEQM MedicationAdministration example
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-measureScoring

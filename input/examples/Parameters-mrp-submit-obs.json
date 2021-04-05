@@ -184,7 +184,7 @@
                     {
                         "coding": [
                             {
-                                "system": "http://acme.org/observation-category",
+                                "system": "http://example.org/CodeSystem/observation-category",
                                 "code": "measure",
                                 "display": "Measure"
                             }

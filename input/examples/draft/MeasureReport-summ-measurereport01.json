@@ -22,7 +22,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://example.org",
+            "system": "http://example.org/fhir/",
             "code": "112",
             "display": "112"
           }
@@ -33,7 +33,7 @@
           "code": {
             "coding": [
               {
-                "system": "http://example.org",
+                "system": "http://example.org/fhir/",
                 "code": "initial-population",
                 "display": "Initial Population"
               }
@@ -50,7 +50,7 @@
           "code": {
             "coding": [
               {
-                "system": "http://example.org",
+                "system": "http://example.org/fhir/",
                 "code": "4456",
                 "display": "4456"
               }
@@ -64,7 +64,7 @@
                   "code": {
                     "coding": [
                       {
-                        "system": "http://example.org",
+                        "system": "http://example.org/fhir/",
                         "code": "initial-population",
                         "display": "Initial Population"
                       }

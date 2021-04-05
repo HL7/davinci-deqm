@@ -1,11 +1,6 @@
 {
     "resourceType": "Measure",
     "id": "measure-mrp-example",
-    "meta": {
-        "versionId": "1",
-        "lastUpdated": "2018-09-21T20:20:51.000+00:00",
-        "source": "http://example.org/fhir/server"
-    },
     "url": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
     "version": "1.1.1",
     "name": "DEQMMeasureMRPExample",
@@ -61,7 +56,7 @@
             "code": {
                 "coding": [
                     {
-                        "system": "http://example.org",
+                        "system": "http://example.org/fhir/",
                         "code": "mrp-group",
                         "display": "MRP Group"
                     }

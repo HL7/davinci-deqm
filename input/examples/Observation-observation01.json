@@ -12,7 +12,7 @@
         {
             "coding": [
                 {
-                    "system": "http://example.org/observation-category",
+                    "system": "http://example.org/CodeSystem/observation-category",
                     "code": "measure",
                     "display": "Measure"
                 }

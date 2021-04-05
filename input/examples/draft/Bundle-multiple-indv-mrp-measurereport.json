@@ -41,7 +41,7 @@
                         {
                            "code": "112",
                            "display": "112",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ]
                   },
@@ -55,7 +55,7 @@
                               {
                                  "code": "initial-population",
                                  "display": "Initial Population",
-                                 "system": "http://example.org"
+                                 "system": "http://example.org/fhir/"
                               }
                            ]
                         }
@@ -333,7 +333,7 @@
                         {
                            "code": "112",
                            "display": "112",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ]
                   },
@@ -347,7 +347,7 @@
                               {
                                  "code": "initial-population",
                                  "display": "Initial Population",
-                                 "system": "http://example.org"
+                                 "system": "http://example.org/fhir/"
                               }
                            ]
                         }
@@ -497,7 +497,7 @@
                         {
                            "code": "112",
                            "display": "112",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ]
                   },
@@ -511,7 +511,7 @@
                               {
                                  "code": "initial-population",
                                  "display": "Initial Population",
-                                 "system": "http://example.org"
+                                 "system": "http://example.org/fhir/"
                               }
                            ]
                         }

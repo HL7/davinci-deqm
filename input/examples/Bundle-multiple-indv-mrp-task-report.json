@@ -306,7 +306,7 @@
                         {
                            "code": "mrp-group",
                            "display": "MRP Group",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ],
                      "text": "MRP Group"
@@ -946,7 +946,7 @@
                         {
                            "code": "mrp-group",
                            "display": "MRP Group",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ],
                      "text": "MRP Group"
@@ -1316,7 +1316,7 @@
                         {
                            "code": "mrp-group",
                            "display": "MRP Group",
-                           "system": "http://example.org"
+                           "system": "http://example.org/fhir/"
                         }
                      ],
                      "text": "MRP Group"
