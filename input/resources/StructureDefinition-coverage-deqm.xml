@@ -5,7 +5,7 @@
   <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"/>
   <version value="1.1.1"/>
   <name value="DEQMCoverageProfile"/>
-  <title value="DEQM  Coverage Profile"/>
+  <title value="DEQM Coverage Profile"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2018-06-19T00:00:00-07:00"/>
