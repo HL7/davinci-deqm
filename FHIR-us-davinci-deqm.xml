@@ -8,7 +8,6 @@
 <version code="1.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU1"/>
 <version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/index.html"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html"/>
-<version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -34,6 +33,7 @@
 <artifact deprecated="true" id="StructureDefinition/gaps-indv-measurereport-deqm" key="StructureDefinition-gaps-indv-measurereport-deqm" name="DEQM Gaps In Care Individual MeasureReport Profile"/>
 <artifact id="StructureDefinition/indv-measurereport-deqm" key="StructureDefinition-indv-measurereport-deqm" name="DEQM Individual MeasureReport Profile"/>
 <artifact id="StructureDefinition/extension-measureScoring" key="StructureDefinition-extension-measureScoring" name="DEQM Measure Scoring Extension"/>
+<artifact id="MedicationAdministration/medicationadministration01" key="MedicationAdministration-medicationadministration01" name="DEQM MedicationAdministration Example"/>
 <artifact id="StructureDefinition/medicationadministration-deqm" key="StructureDefinition-medicationadministration-deqm" name="DEQM MedicationAdministration Profile"/>
 <artifact id="StructureDefinition/organization-deqm" key="StructureDefinition-organization-deqm" name="DEQM Organization Profile"/>
 <artifact id="StructureDefinition/extension-populationReference" key="StructureDefinition-extension-populationReference" name="DEQM Population Reference Extension"/>
@@ -97,7 +97,6 @@
 <artifact id="Measure/date-of-last-power-outage" key="Measure-date-of-last-power-outage" name="Measure Date of Last Power Outage"/>
 <artifact id="Measure/measure-mrp-example" key="Measure-measure-mrp-example" name="Measure Mrp Example"/>
 <artifact deprecated="true" key="MeasureReport" name="MeasureReport"/>
-<artifact id="MedicationAdministration/medicationadministration01" key="MedicationAdministration-medicationadministration01" name="DEQM MedicationAdministration Example"/>
 <artifact id="Parameters/mrp-submit-obs" key="Parameters-mrp-submit-obs" name="Mrp Submit Obs"/>
 <artifact id="Parameters/mrp-submit-task" key="Parameters-mrp-submit-task" name="Mrp Submit Task"/>
 <artifact id="Bundle/multiple-indv-mrp-obs-report" key="Bundle-multiple-indv-mrp-obs-report" name="Multiple Indv Mrp Obs Report"/>
