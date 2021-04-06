@@ -181,6 +181,6 @@
     "status": "active",
     "title": "Producer Client CapabilityStatement",
     "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/producer-client",
-    "version": "2.1.0",
+    "version": "3.0.0",
     "resourceType": "CapabilityStatement"
 }

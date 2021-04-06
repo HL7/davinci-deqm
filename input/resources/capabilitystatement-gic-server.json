@@ -123,6 +123,6 @@
     "status": "active",
     "title": "Gaps In Care Server CapabilityStatement",
     "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/gic-server",
-    "version": "2.1.0",
+    "version": "3.0.0",
     "resourceType": "CapabilityStatement"
 }

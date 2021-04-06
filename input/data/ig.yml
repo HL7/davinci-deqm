@@ -37,8 +37,8 @@ fhirVersion:
   - 4.0.1
 definition:
   parameter:
-    - code: foo
-      value: bar
+    - code: path-expansion-params
+      value: ../input/exp-params.json
     - code: logging
       value: init
     - code: logging
