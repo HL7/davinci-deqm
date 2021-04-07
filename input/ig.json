@@ -214,11 +214,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Summ Medicare Stratification",
+                "name": "Summ Medicare Stratification Example",
                 "reference": {
                     "reference": "MeasureReport/summ-medicare-stratification-example"
                 },
-                "description": "DEQM Summ Medicare Stratification example"
+                "description": "DEQM Summ Medicare Stratification Example example"
             },
             {
                 "exampleBoolean": true,
@@ -262,11 +262,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Measure Mrp",
+                "name": "Measure Mrp Example",
                 "reference": {
                     "reference": "Measure/measure-mrp-example"
                 },
-                "description": "DEQM Measure Mrp example"
+                "description": "DEQM Measure Mrp Example example"
             },
             {
                 "exampleBoolean": true,
@@ -342,11 +342,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Library Mrp",
+                "name": "Library Mrp Example",
                 "reference": {
                     "reference": "Library/library-mrp-example"
                 },
-                "description": "DEQM Library Mrp example"
+                "description": "DEQM Library Mrp Example example"
             },
             {
                 "exampleBoolean": true,
@@ -398,11 +398,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "DEQM Software System",
+                "name": "DEQM Software System Example",
                 "reference": {
                     "reference": "Device/deqm-software-system-example"
                 },
-                "description": "DEQM DEQM Software System example"
+                "description": "DEQM DEQM Software System Example example"
             },
             {
                 "exampleBoolean": true,
@@ -862,11 +862,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "DEQM MedicationAdministration",
+                "name": "DEQM MedicationAdministration Example",
                 "reference": {
                     "reference": "MedicationAdministration/medicationadministration01"
                 },
-                "description": "DEQM MedicationAdministration example"
+                "description": "DEQM MedicationAdministration Example example"
             },
             {
                 "exampleBoolean": false,
