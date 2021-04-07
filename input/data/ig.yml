@@ -119,10 +119,10 @@ definition:
         reference: Patient/patient02
       description: DEQM Patient02 example
     - exampleBoolean: true
-      name: Summ Medicare Stratification Example
+      name: Summ Medicare Stratification
       reference:
         reference: MeasureReport/summ-medicare-stratification-example
-      description: DEQM Summ Medicare Stratification Example example
+      description: DEQM Summ Medicare Stratification example
     - exampleBoolean: true
       name: Location03
       reference:
@@ -199,10 +199,10 @@ definition:
         reference: Organization/organization03
       description: DEQM Organization03 example
     - exampleBoolean: true
-      name: Library Mrp Example
+      name: Library Mrp
       reference:
         reference: Library/library-mrp-example
-      description: DEQM Library Mrp Example example
+      description: DEQM Library Mrp example
     - exampleBoolean: true
       name: Organization04
       reference:
@@ -234,10 +234,10 @@ definition:
         reference: Bundle/multiple-summ-report
       description: DEQM Multiple Summ Report example
     - exampleBoolean: true
-      name: DEQM Software System Example
+      name: DEQM Software System
       reference:
         reference: Device/deqm-software-system-example
-      description: DEQM DEQM Software System Example example
+      description: DEQM DEQM Software System example
     - exampleBoolean: true
       name: Indv Measurereport01
       reference:
@@ -524,10 +524,10 @@ definition:
         reference: Patient/patient01
       description: DEQM Patient01 example
     - exampleBoolean: true
-      name: DEQM MedicationAdministration Example
+      name: DEQM MedicationAdministration
       reference:
         reference: MedicationAdministration/medicationadministration01
-      description: DEQM MedicationAdministration Example example
+      description: DEQM MedicationAdministration example
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-measureScoring
