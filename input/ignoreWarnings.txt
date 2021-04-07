@@ -29,14 +29,14 @@ Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot b
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 
-# INFORMATION: Codings are recommended, not required, to come from value sets.  Confirmed codings examples.
+# INFORMATION: Confirmed codings examples.
 None of the codings provided are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code (http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code), and a coding is recommended to come from this value set) (codes = http://www.ama-assn.org/go/cpt#44393)
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#96315-7)
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/detectedissue-category (http://hl7.org/fhir/ValueSet/detectedissue-category), and a coding is recommended to come from this value set) (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category), and a coding is recommended to come from this value set) (codes = http://example.org/CodeSystem/observation-category#measure)
 None of the codings provided are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes), and a coding is recommended to come from this value set) (codes = http://www.nlm.nih.gov/research/umls/rxnorm#1658634)
 
-# WARNING: US-Core coding not recognized by the validator
+# WARNING: US-Core coding not recognized by the validator - only getting this on the CI build, not when running the publisher locally (same versions)
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
