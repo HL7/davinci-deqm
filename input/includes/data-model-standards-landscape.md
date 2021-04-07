@@ -1,5 +1,5 @@
 
-### Data Model Standards Landscape
+#### Data Model Standards Landscape
 {: #data-model-standards-landscape}
 
 The quality improvement ecosystem covers every aspect of the healthcare
@@ -67,7 +67,7 @@ measures and decision support artifacts.
 measurement-specific level (in DEQM or HEDIS for example), steps should be taken
 to promote that profile to the broadest consensus group possible.
 
-#### FHIR Version Support
+##### FHIR Version Support
 {:.no_toc #fhir-version-support}
 
 There are three broadly used and fully published versions of the FHIR

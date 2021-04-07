@@ -38,7 +38,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
    -  [Gaps in Care]\: This page lists example use cases for gaps in care reporting.
 
-*Additional use cases are planned and will be published in forth-coming companion documents outside this implementation guide.  A link to these scenarios will be provided here when available.
+*Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
 {:.stu-note}
 
 - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data.
@@ -55,6 +55,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Operations]\: This page lists the Operation that is defined in this guide to exchange gaps in care report.
 
 ### Background
+{: #background}
 
 <!-- Quality Improvement Ecosystem -->
 {% include quality-improvement-ecosystem.md %}

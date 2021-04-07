@@ -1,5 +1,4 @@
-
-### Quality Improvement Ecosystem
+#### Quality Improvement Ecosystem
 {: #quality-improvement-ecosystem}
 
 As shown in step 1 in the diagram below, the Quality Improvement Ecosystem
