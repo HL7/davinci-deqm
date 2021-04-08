@@ -14,13 +14,13 @@ Gaps in Care may exist for several reasons. The following are some common scenar
  - Recommended care was provided prior to the coverage by the current payer
  - Recommended Care was provided between generation of a Gap in Care Report and receipt of the report.
 
-A Gap in Care Report is designed to communicate actual or perceived gaps in care between systems, such as the payer’s system and provider’s EMR. The report provides opportunities for providers to provide missing care and/or to communicate care provision data to payers. The report may also provide information for upcoming care opportunities, prospective gaps.
+A Gaps in Care Report is designed to communicate actual or perceived gaps in care between systems, such as the payer’s system and provider’s EMR. The report provides opportunities for providers to provide missing care and/or to communicate care provision data to payers. The report may also provide information for upcoming care opportunities, prospective gaps.
 
 In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram].
 
 {% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
 
-The Gap in Care flow is between a provider and a measurement organization’s system performing analytics.
+The Gaps in Care flow is between a provider and a measurement organization’s system performing analytics.
 
 Note that this implementation guide does not address actual workflow around managing the process of requesting a Gaps in Care Report and to whom the report should be sent.
 
@@ -31,8 +31,7 @@ Figure 2-13 reflects the details within the red circle representing the Gaps in 
 #### Relationship of Individual Reporting and Gaps in Care Reporting
 {:.no_toc}
 
-The Gaps in Care Reporting is built on the [DEQM Individual MeasureReport Profile]. This allows the Gaps in Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation.
-
+The Gaps in Care Reporting uses the [DEQM Individual MeasureReport Profile]. This allows the Gaps in Care Reporting to use the same machinery as the Individual Reporting to calculate measures and represent the results of individual calculation.
 
 ### Default Profiles
 
@@ -46,7 +45,8 @@ The following resources are used in the Gaps in Care Reporting scenario:
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 
-Figure 2-14 provides a graphical view of how these resources are related. A Composition Bundle is created for each Patient(linked via subject element).  The Composition resource references one or more DEQM Individual MeasureReport resources.  One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under evaluatedResource element. The [DEQM Population Reference Extension] element on the resource documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
+Figure 2-14 provides a graphical view of how these resources are related. A Composition is created for each Patient (linked via `subject` element) and is contained in a Bundle. The Composition resource references one or more DEQM Individual MeasureReport resources. One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under `evaluatedResource` element. The [DEQM Population Reference Extension] on the `evaluatedResource` documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
+
 {% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
 
 ### Gaps in Care Reporting
@@ -61,14 +61,14 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 |**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measure=CMS130v8|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The gaps in care report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The gaps in care report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
 
-The timeline below represents the data described above.  A colonoscopy procedure per CMS130v8 is required every 10 years.  If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
+The timeline below represents the data described above.  A colonoscopy procedure per CMS130v8 is required every 10 years. If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
 
 {% include img-portrait.html img="gic-prospective-retrospective.png" caption = "Figure 2-15 Prospective and Retrospective Use Case" %}
 
 #### Care Gaps Operation
 {:.no_toc}
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a gaps in care report. In this guide, we have extended the [base care-gaps operation] in the R4 Release of the FHIR (FHIR R4) Specification to allow for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a gaps in care report based on the quality measures available in the Server’s system.
+The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a Gaps in Care Report. In this guide, we have extended the [base care-gaps operation] in the R4 Release of the FHIR (FHIR R4) Specification to allow for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a gaps in care report based on the quality measures available in the Server’s system.
 
 A report calculated on any given date provides all of the data from the server's system as of that date. A request for a previous time period will still show all data available as of the date the report is calculated. Therefore, a requester can ask for multiple reports, save them and compare them, but not request data "as of" previous dates.
 

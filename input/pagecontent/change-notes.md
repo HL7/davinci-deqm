@@ -73,13 +73,72 @@ The first official published version of the DEQM IG for FHIR R4.
     - Updated Downloads page with new schematrons for Gaps in Care
 
 ### Changes and Updates for version 3.0.0
-
 1. Applied all resolutions from STU3 Ballot
     - Various Technical Corrections and Corrections to Typographical Errors
+    - Updated the Introduction section in Gaps In Care Reporting ([FHIR-28956](https://jira.hl7.org/browse/FHIR-28956)),([FHIR-28958](https://jira.hl7.org/browse/FHIR-28958)),([FHIR-28959](https://jira.hl7.org/browse/FHIR-28959)) ,([FHIR-28960](https://jira.hl7.org/browse/FHIR-28960)),([FHIR-28961](https://jira.hl7.org/browse/FHIR-28961)),([FHIR-28962](https://jira.hl7.org/browse/FHIR-28962)),([FHIR-28963](https://jira.hl7.org/browse/FHIR-28963)),([FHIR-28974](https://jira.hl7.org/browse/FHIR-28974)),([FHIR-28981](https://jira.hl7.org/browse/FHIR-28981)),([FHIR-28982](https://jira.hl7.org/browse/FHIR-28982)),([FHIR-28983](https://jira.hl7.org/browse/FHIR-28983)),([FHIR-28984](https://jira.hl7.org/browse/FHIR-28984)),([FHIR-28985](https://jira.hl7.org/browse/FHIR-28985)),([FHIR-28986](https://jira.hl7.org/browse/FHIR-28986)),([FHIR-28987](https://jira.hl7.org/browse/FHIR-28987)),([FHIR-28988](https://jira.hl7.org/browse/FHIR-28988)),([FHIR-28989](https://jira.hl7.org/browse/FHIR-28989)),([FHIR-28990](https://jira.hl7.org/browse/FHIR-28990)),([FHIR-28991](https://jira.hl7.org/browse/FHIR-28991)),([FHIR-29009](https://jira.hl7.org/browse/FHIR-29009)),([FHIR-29010](https://jira.hl7.org/browse/FHIR-29010)),([FHIR-29011](https://jira.hl7.org/browse/FHIR-29011)),([FHIR-29020](https://jira.hl7.org/browse/FHIR-29020)),([FHIR-29021](https://jira.hl7.org/browse/FHIR-29021)),([FHIR-29022](https://jira.hl7.org/browse/FHIR-29022)),([FHIR-28964](https://jira.hl7.org/browse/FHIR-28964)),([FHIR-28992](https://jira.hl7.org/browse/FHIR-28992)
+    - Created links for Gaps in Care terminology to Glossary ([FHIR-28955](https://jira.hl7.org/browse/FHIR-28955))
     - Updated examples
+
+    Profile Changes:
+
     - Change the DEQM Gaps In Care Composition Profile to reference 1..* DEQM Gaps In Care DetectedIssue instead of 0..* ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017))
-    - Add a modifier extension gapStatus to the DEQM Gaps In Care DetectedIssue profile ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)).  
-    - Updated the Introduction section in Gaps In Care Reporting
-1. Applied resolutions from DEQM trackers
+    - Add a modifier extension gapStatus to the DEQM Gaps In Care DetectedIssue profile ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)).
+    - Changed patient to 1..1 in DEQM Gaps in Care DetectedIssue profile ([FHIR-28439](https://jira.hl7.org/browse/FHIR-28439))
+    - DetectedIssue.evidence.detail changed to allow MeasureReport or Guidance resource to be Referenced
+        - Changed care-gaps operation to allow 3 parameters to specify measure -  id, url, identifier ([FHIR-28483](https://jira.hl7.org/browse/FHIR-28483))
+    - DEQM Gaps in Care Individual MeasureReport profile was removed.  The extension-populationReference was added to the DEQM Individual MeasureReport profile.  This extension-populationReference SHOULD reference population criteria id specified in a Measure resource. ([FHIR-28497](https://jira.hl7.org/browse/FHIR-28497))
+
+
+    Description Pending:
+    - ([FHIR-28965](https://jira.hl7.org/browse/FHIR-28965))
+    - ([FHIR-28978](https://jira.hl7.org/browse/FHIR-28978))
+    - ([FHIR-29005](https://jira.hl7.org/browse/FHIR-29005))
+    - ([FHIR-29006](https://jira.hl7.org/browse/FHIR-29006))
+    - ([FHIR-29007](https://jira.hl7.org/browse/FHIR-29007))
+    - ([FHIR-28977](https://jira.hl7.org/browse/FHIR-28977))
+    - ([FHIR-28484](https://jira.hl7.org/browse/FHIR-28484))
+    - ([FHIR-28487](https://jira.hl7.org/browse/FHIR-28487))
+    - ([FHIR-28496](https://jira.hl7.org/browse/FHIR-28496))
+    - ([FHIR-28593](https://jira.hl7.org/browse/FHIR-28593))
+
+
+    - ([FHIR-28966](https://jira.hl7.org/browse/FHIR-28966))
+    - ([FHIR-28967](https://jira.hl7.org/browse/FHIR-28967))
+    - ([FHIR-28968](https://jira.hl7.org/browse/FHIR-28968))
+    - ([FHIR-28969](https://jira.hl7.org/browse/FHIR-28960))
+    - ([FHIR-28970](https://jira.hl7.org/browse/FHIR-28970))
+    - ([FHIR-28971](https://jira.hl7.org/browse/FHIR-28971))
+    - ([FHIR-28972](https://jira.hl7.org/browse/FHIR-28972))
+    - ([FHIR-28973](https://jira.hl7.org/browse/FHIR-28973))
+    - ([FHIR-28980](https://jira.hl7.org/browse/FHIR-28980))
+    - ([FHIR-28993](https://jira.hl7.org/browse/FHIR-28993))
+    - ([FHIR-28994](https://jira.hl7.org/browse/FHIR-28994))
+    - ([FHIR-28995](https://jira.hl7.org/browse/FHIR-28995))
+    - ([FHIR-28996](https://jira.hl7.org/browse/FHIR-28996))
+    - ([FHIR-28997](https://jira.hl7.org/browse/FHIR-28997))
+    - ([FHIR-29000](https://jira.hl7.org/browse/FHIR-29000))
+    - ([FHIR-29008](https://jira.hl7.org/browse/FHIR-29008))
+    - ([FHIR-29012](https://jira.hl7.org/browse/FHIR-29012))
+    - ([FHIR-29013](https://jira.hl7.org/browse/FHIR-29013))
+    - ([FHIR-29015](https://jira.hl7.org/browse/FHIR-29015))
+    - ([FHIR-29016](https://jira.hl7.org/browse/FHIR-29016))
+    - ([FHIR-29018](https://jira.hl7.org/browse/FHIR-29018))
+
+    Non-Gaps in Care Changes
+
+    - ([FHIR-27862](https://jira.hl7.org/browse/FHIR-27862))
+    - ([FHIR-29828](https://jira.hl7.org/browse/FHIR-29828))
+    - ([FHIR-30407](https://jira.hl7.org/browse/FHIR-30407))
+    - ([FHIR-29637](https://jira.hl7.org/browse/FHIR-29637))
+    - ([FHIR-28374](https://jira.hl7.org/browse/FHIR-28374))
+    - ([FHIR-29411](https://jira.hl7.org/browse/FHIR-29411))
+    - ([FHIR-29561](https://jira.hl7.org/browse/FHIR-29561))
+    - ([FHIR-30075](https://jira.hl7.org/browse/FHIR-30075))
+    - ([FHIR-31067](https://jira.hl7.org/browse/FHIR-31067))
+    - ([FHIR-28373](https://jira.hl7.org/browse/FHIR-28373))
+    - ([FHIR-29560](https://jira.hl7.org/browse/FHIR-29560))
+    - ([FHIR-31065](https://jira.hl7.org/browse/FHIR-31065))
+    - ([FHIR-28497](https://jira.hl7.org/browse/FHIR-28497))
+
 
 {% include link-list.md %}
