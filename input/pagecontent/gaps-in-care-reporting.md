@@ -26,7 +26,7 @@ Note that this implementation guide does not address actual workflow around mana
 
 Figure 2-13 reflects the details within the red circle representing the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem.
 
-{% include img-portrait.html img="gic-operation.png" caption = "Figure 2-13 Gaps in Care Reporting Flow" %}
+{% include img-portrait.html img="gic-reporting-flow.png" caption = "Figure 2-13 Gaps in Care Reporting Flow" %}
 
 #### Relationship of Individual Reporting and Gaps in Care Reporting
 {:.no_toc}
