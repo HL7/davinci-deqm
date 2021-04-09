@@ -41,6 +41,9 @@ None of the codings provided are in the value set http://hl7.org/fhir/us/core/Va
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
 
+# PR merged into JIRA-Spec-Artifacts (https://github.com/HL7/JIRA-Spec-Artifacts/pull/197), but there is still a difference between the Jira file and the generated file.  Discussed on Zulip (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Jira.20warning.20in.20IG.20qa.202), but still no resolution.
+WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
+
 # Confirmed profile validation messages
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[0].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
