@@ -18,7 +18,7 @@ A Gaps in Care Report is designed to communicate actual or perceived gaps in car
 
 In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram].
 
-{% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 2-12 Quality Measure Ecosystem - Gaps in Care" %}
+{% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 2-12 Quality Improvement Ecosystem - Gaps in Care" %}
 
 The Gaps in Care flow is between a provider and a measurement organization’s system performing analytics.
 
@@ -54,25 +54,25 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 #### Gaps Through Period (Retrospective vs. Prospective)
 {:.no_toc}
 
-[Gaps through period] is the time period defined by a Client for running the gaps in care report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated [open gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure.  In the example below, CMS Colorectal Cancer Screen [CMS130v8] is used.
+[Gaps through period] is the time period defined by a Client for running the Gaps in Care Report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated [open gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure. In the example below, Colorectal Cancer Screen ([CMS130v7]) with measureId EXM130-7.3.000 is used as an example measure.
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
-|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measure=CMS130v8|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The gaps in care report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
-|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measure=CMS130v8|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The gaps in care report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
+|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The gaps in care report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
+|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The gaps in care report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
 
-The timeline below represents the data described above.  A colonoscopy procedure per CMS130v8 is required every 10 years. If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
+The timeline below represents the data described above. A colonoscopy procedure per the Colorectal Cancer Screen measure is required every 10 years. If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
 
 {% include img-portrait.html img="gic-prospective-retrospective.png" caption = "Figure 2-15 Prospective and Retrospective Use Case" %}
 
 #### Care Gaps Operation
 {:.no_toc}
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a Gaps in Care Report. In this guide, we have extended the [base care-gaps operation] in the R4 Release of the FHIR (FHIR R4) Specification to allow for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a gaps in care report based on the quality measures available in the Server’s system.
+The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a Gaps in Care Report. In this guide, we have updated the [base care-gaps operation] in the R4 Release of the FHIR (FHIR R4) Specification to allow for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a Gaps in Care Report based on the quality measures available in the Server’s system.
 
 A report calculated on any given date provides all of the data from the server's system as of that date. A request for a previous time period will still show all data available as of the date the report is calculated. Therefore, a requester can ask for multiple reports, save them and compare them, but not request data "as of" previous dates.
 
-The extended operation, [care-gaps](OperationDefinition-care-gaps.html), makes the following changes to the existing input parameters in the base operation:
+The updated operation, [care-gaps](OperationDefinition-care-gaps.html), makes the following changes to the existing input parameters in the base operation:
 - **periodStart** is still required, but the description is modified to reference the start date of the [gaps through period].
 - **periodEnd** is still required, but the description is modified to reference the end of the [gaps through period].
 -	**topic** is an optional parameter for which the cardinality has been updated to allow multiple topics to be specified.
@@ -81,11 +81,13 @@ The extended operation, [care-gaps](OperationDefinition-care-gaps.html), makes t
 Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) operation defined in this guide:
 - **practitioner** references a practitioner for which the gaps in care report will be created.
 - **organization** references an organization for which the gaps in care report will be created.
--	**status** if provided, SHALL be a code from the [gaps status value set], which indicates an open-gap or a closed-gap. If the status parameter is not provided when running the care-gaps operation, the gaps in care report will return both the [open and closed gaps].
--	**measure** is used to specify one or more measures for which the gaps in care report will be created. The Client will need to check with the Server to know the identifiers used by the Server to uniquely identify measures.
+-	**status** is required, it SHALL be a code from the [gaps status value set], which indicates an open-gap or a closed-gap. For the Gaps in Care Report to return both the [open and closed gaps], status equals to open-gap and closed-gap both need to be provided.
+-	**measureId** is the id of a Measure resource that is on the server for which the gaps in care will be reported. The Client will need to check with the Server to know the identifiers used by the Server to uniquely identify measures. This parameter is one of the three options provided by this operation to specify one or more measures for which the Gaps in Care Report will be created.
+- **measureIdentifier** is the business identifier for a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
+- **measureUrl** is the url of a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
 -	**program** is used to specify one or more programs that a provider or an organization participates in. For example, the program may be a risk based, value based, or other performance program such as the Merit-based Incentive Payment System (MIPS) and Hospital Quality Reporting programs of CMS.
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter: **return**. In comparison to the return output parameter specified in the [base care-gaps operation], the **return** here returns 0 to many Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
+The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter: **return**. In comparison to the return output parameter specified in the [base care-gaps operation], the **return** here returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
 
 Through the requirement analysis of the Gaps in Care Reporting for this ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
 {:.stu-note}
@@ -99,9 +101,9 @@ Figure 2-17 shows an example workflow for running the care-gaps operation agains
 #### How to Construct a Gaps in Care Report
 {:.no_toc}
 
-This section describes the profiles used for Gaps in Care Reporting and how they are used to construct a gaps in care report.
+This section describes the profiles used for Gaps in Care Reporting and how they are used to construct a Gaps in Care Report.
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation returns a [Parameters](https://www.hl7.org/fhir/parameters.html) resource containing zero or more document bundle for each patient for which a gaps in care report is calculated, the bundle SHALL conform to the [DEQM Gaps In Care Bundle Profile]. A Gaps In Care Bundle SHALL contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile].
+The [care-gaps](OperationDefinition-care-gaps.html) operation returns a [Parameters](https://www.hl7.org/fhir/parameters.html) resource that contains zero or more `parameter` with document bundle for each patient for which a Gaps in Care report is calculated, the bundle SHALL conform to the [DEQM Gaps In Care Bundle Profile]. A Gaps In Care Bundle SHALL contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile].
 
 The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a gaps in care report. The subject of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient], the gaps in care report is for. The Gaps In Care Composition SHALL contain one to many section(s). Each section has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced SHALL be for the same patient specified in the Composition `subject`. Each section SHALL also contain one or more entry of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
 
@@ -116,7 +118,7 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 #### Attribution
 {:.no_toc}
 
-Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for gaps in care reports is not in the scope of the DEQM IG. One possible way of exchanging Member Attribution Lists between providers and payers is described in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]
+Member attribution establishes associations between providers and payers. The process of establishing and exchanging member lists for Gaps in Care Reports is not in the scope of the DEQM IG. One possible way of exchanging Member Attribution Lists between providers and payers is described in the [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG].
 
 #### Usage
 {:.no_toc}
@@ -128,7 +130,7 @@ Member attribution establishes associations between providers and payers. The pr
 ##### Bulk Data
 {:.no_toc}  
 
-If Clients are requesting gaps in care reports for many patients/members, they may consider using the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
+If Clients are requesting Gaps in Care Reports for many patients/members, they may consider using the FHIR [Asynchronous Request Patterns] for the Bulk Data exchange operation.
 
 `GET|[base]`
 
@@ -138,7 +140,7 @@ Headers:
 * `Prefer respond-async`
 * `Accept application/fhir+json`
 
-Note that both Prefer and Accept are required. **Prefer** specifies the response is immediate or asynchronous, which SHALL be set to *respond-async*. **Accept** specifies the format of the optional OperationOutcome response to the kick-off request.  Any of the Serialization Format Representations are supported. See the base FHIR specification [Asynchronous Request Patterns] for details.
+Note that both Prefer and Accept are required. **Prefer** specifies the response is immediate or asynchronous, which SHALL be set to *respond-async*. **Accept** specifies the format of the optional OperationOutcome response to the kick-off request. Any of the Serialization Format Representations are supported. See the base FHIR specification [Asynchronous Request Patterns] for details.
 
 Query Parameters:
 * `_outputFormat (string, optional, defaults to application/fhir+ndjson)`
