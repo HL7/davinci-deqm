@@ -4,7 +4,7 @@
 
 **Scenario:**
 
-A Client would like to know if the patient, *gaps-patient01*, has any open or closed gaps for the colorectal cancer screening measure and the cervical cancer screening measure for the period from 2020-01-01 to 2020-12-31. The Client requested a gaps in care report from a Server's system on 2020-06-30.
+A Client would like to know if the patient, *gaps-patient01*, has any open or closed gaps for the colorectal cancer screening measure and the cervical cancer screening measure for the period from 2020-01-01 to 2020-12-31. The Client requested a Gaps in Care Report from a Server's system on 2020-06-30.
 
 **GET Gaps In Care Report**
 

@@ -93,10 +93,10 @@ Through the requirement analysis of the Gaps in Care Reporting for this ballot, 
 {:.stu-note}
 
 Figure 2-16 shows an example workflow for running the care-gaps operation against a payer's system for a single patient.
-{% include img-narrow.html img="Care Gaps Operation Single Patient.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
+{% include img-narrow.html img="gic-care-gaps-operation-single-patient3.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
 
 Figure 2-17 shows an example workflow for running the care-gaps operation against a payer's system for a group of patients.
-{% include img-narrow.html img="Care Gaps Operation.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
+{% include img-narrow.html img="gic-care-gaps-operation-group3.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
 
 #### How to Construct a Gaps in Care Report
 {:.no_toc}
