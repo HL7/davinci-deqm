@@ -3,11 +3,11 @@
 {:.no_toc}
 
 **Scenario:**
-The provider requested a gaps in care report on 2020-06-30, which was for a group of patients (group id 123) for the gaps through period from 2020-01-01 to 2020-12-31. The provider received the report, which includes two patients: *gaps-patient01* and *gaps-patient02*. The report shows that *gaps-patient01* has an open gap and *gaps-patient02* has a closed gap for Colorectal Cancer Screening.
+The provider requested a Gaps in Care Report on 2020-06-30, which was for a group of patients (group id 123) for the gaps through period from 2020-01-01 to 2020-12-31. The provider received the report, which includes two patients: *gaps-patient01* and *gaps-patient02*. The report shows that *gaps-patient01* has an open gap and *gaps-patient02* has a closed gap for Colorectal Cancer Screening.
 
-**Get Gaps In Care Report**
+**Get Gaps in Care Report**
 ```
-GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-12-31
+GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-12-31&status=open-gap&status=closed-gap
 ```
 
 ~~~

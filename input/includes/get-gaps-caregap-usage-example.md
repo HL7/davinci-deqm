@@ -6,11 +6,11 @@
 
 A Client would like to know if the patient, *gaps-patient01*, has any open or closed gaps for the colorectal cancer screening measure and the cervical cancer screening measure for the period from 2020-01-01 to 2020-12-31. The Client requested a Gaps in Care Report from a Server's system on 2020-06-30.
 
-**GET Gaps In Care Report**
+**GET Gaps in Care Report**
 
 
 ```
-GET [base]/Measure/$care-gaps?subject=Patient/gaps-patient01&periodStart=2020-01-01&periodEnd=2020-12-31&measure=CMS130v8&measure=CMS124v8
+GET [base]/Measure/$care-gaps?subject=Patient/gaps-patient01&periodStart=2020-01-01&periodEnd=2020-12-31&measureId=EXM130-7.3.000&measureId=EXM124-8.2.000&status=open-gap&status=closed-gap
 ```
 
 **Request body**
