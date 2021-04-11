@@ -140,8 +140,8 @@
     </element>
     <element id="MeasureReport.reporter">
       <path value="MeasureReport.reporter"/>
-      <short value="The organization or where the measure was completed"/>
-      <definition value="The organization where the measure was completed."/>
+      <short value="Organization that generated the MeasureReport"/>
+      <definition value="Organization that generated the MeasureReport."/>
       <min value="1"/>
       <max value="1"/>
       <type>
