@@ -24,7 +24,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
 
-  -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the gaps in care reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
+  -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
 
 
 - [Use cases]\: Three* exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
@@ -36,7 +36,7 @@ This Guide is divided into several pages which are listed at the top of each pag
     - [Venous Thromboembolism Prophylaxis (VTE-1)]\: This example is based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the
    Preventative Care Meaningful Measure Area.
 
-   -  [Gaps in Care]\: This page lists example use cases for gaps in care reporting.
+   -  [Gaps in Care]\: This page lists example use cases for Gaps in Care Reporting.
 
 *Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
 {:.stu-note}
@@ -114,7 +114,7 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
 
 **Clients** are the actors submitting the gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if a provider requests a report from the payer's system, then the provider serves as the client. If a payer requests a report from their own system, they are the client.
 
-**Servers** are the actors receiving the request for the gaps in care report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system serves as the server. If a payer requests a report from their own system, the payer's system serves as the server.
+**Servers** are the actors receiving the request for the Gaps in Care Report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system serves as the server. If a payer requests a report from their own system, the payer's system serves as the server.
 
 ### Glossary
 {: #closed-gap}Closed Gap
@@ -127,7 +127,7 @@ For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
   : Gaps in care are defined as discrepancies between recommended best practices and the services that are actually provided and documented. The terms gaps in care and care gaps may be used interchangeably.
 
 {: #gaps-through-period}Gaps Through Period
-  : The period of time defined by a Client for running the gaps in care report. When the end period date of the gaps is specified as a date in the future, it indicates the gaps in care report will be run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end period date of the gaps is specified as a date in the past, it indicates the gaps in care report will be run retrospectively.
+  : The period of time defined by a Client for running the Gaps in Care Report. When the end period date of the gaps is specified as a date in the future, it indicates the Gaps in Care Report will be run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end period date of the gaps is specified as a date in the past, it indicates the Gaps in Care Report will be run retrospectively.
 
 {: #incremental-update}Incremental Update
   : In contrast to the Snapshot Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains only the new and updated DEQM and QI Core Profiles since the last transaction. If the Consumer supports incremental updates, the contents of the updated payload updates the previous payload data.

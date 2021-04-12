@@ -6,7 +6,7 @@ As supported in this guide, a gap in care is defined as a discrepancy between st
 Actual gaps in care can adversely affect member outcomes, and lack of awareness that care was provided can contribute to unnecessary costs. Identifying, anticipating, and communicating gaps in care between involved actors, at the point of care, is critical for providing opportunities to improve quality of care.
 
 Research has shown that care gaps can be both harmful and costly when they are not properly managed. For example, not managing specific aspects of chronic diseases (e.g., hemoglobin A1C control with respect to diabetes management) can lead to serious complications and escalate healthcare costs. Resolving gaps in care is important to payers, providers, and the patients they serve. Performing care that resolves gaps in care can positively influence patient health and improve quality scores and reimbursement under risk-sharing arrangements.
-Gaps in Care may exist for several reasons. The following are some common scenarios where an actual or potential gap may exist.
+Gaps in care may exist for several reasons. The following are some common scenarios where an actual or potential gap may exist.
 
  - Recommended care was not provided
  - Recommended care was provided but not documented where expected
@@ -20,7 +20,7 @@ In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portio
 
 {% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 2-12 Quality Improvement Ecosystem - Gaps in Care" %}
 
-The Gaps in Care flow is between a provider and a measurement organization’s system performing analytics.
+The gaps in care flow is between a provider and a measurement organization’s system performing analytics.
 
 Note that this implementation guide does not address actual workflow around managing the process of requesting a Gaps in Care Report and to whom the report should be sent.
 
@@ -58,8 +58,8 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
-|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The gaps in care report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
-|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The gaps in care report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
+|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
+|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The Gaps in Care Report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
 
 The timeline below represents the data described above. A colonoscopy procedure per the Colorectal Cancer Screen measure is required every 10 years. If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
 
@@ -76,11 +76,11 @@ The updated operation, [care-gaps](OperationDefinition-care-gaps.html), makes th
 - **periodStart** is still required, but the description is modified to reference the start date of the [gaps through period].
 - **periodEnd** is still required, but the description is modified to reference the end of the [gaps through period].
 -	**topic** is an optional parameter for which the cardinality has been updated to allow multiple topics to be specified.
--	**subject** can now point to either a patient or a group of patients. Subject is optional when run a gaps in care report for an organization or a practitioner of an organization.
+-	**subject** can now point to either a patient or a group of patients. Subject is optional when run a Gaps in Care report for an organization or a practitioner of an organization.
 
 Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) operation defined in this guide:
-- **practitioner** references a practitioner for which the gaps in care report will be created.
-- **organization** references an organization for which the gaps in care report will be created.
+- **practitioner** references a practitioner for which the Gaps in Care Report will be created.
+- **organization** references an organization for which the Gaps in Care Report will be created.
 -	**status** is required, it SHALL be a code from the [gaps status value set], which indicates an open-gap or a closed-gap. For the Gaps in Care Report to return both the [open and closed gaps], status equals to open-gap and closed-gap both need to be provided.
 -	**measureId** is the id of a Measure resource that is on the server for which the gaps in care will be reported. The Client will need to check with the Server to know the identifiers used by the Server to uniquely identify measures. This parameter is one of the three options provided by this operation to specify one or more measures for which the Gaps in Care Report will be created.
 - **measureIdentifier** is the business identifier for a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
@@ -89,13 +89,13 @@ Several new input parameters are specified and added to the [care-gaps](Operatio
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter: **return**. In comparison to the return output parameter specified in the [base care-gaps operation], the **return** here returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
 
-Through the requirement analysis of the Gaps in Care Reporting for this ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this guide to the next release of the base FHIR specification.
+Through the requirement analysis of the Gaps in Care Reporting for the STU3 ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this version of the guide to the next release of the base FHIR specification.
 {:.stu-note}
 
-Figure 2-16 shows an example workflow for running the care-gaps operation against a payer's system for a single patient.
+Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
 {% include img-narrow.html img="gic-care-gaps-operation-single-patient.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
 
-Figure 2-17 shows an example workflow for running the care-gaps operation against a payer's system for a group of patients.
+Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
 {% include img-narrow.html img="gic-care-gaps-operation-group.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
 
 #### How to Construct a Gaps in Care Report
@@ -105,7 +105,7 @@ This section describes the profiles used for Gaps in Care Reporting and how they
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation returns a [Parameters](https://www.hl7.org/fhir/parameters.html) resource that contains zero or more `parameter` with document bundle for each patient for which a Gaps in Care report is calculated, the bundle SHALL conform to the [DEQM Gaps In Care Bundle Profile]. A Gaps In Care Bundle SHALL contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile].
 
-The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a gaps in care report. The subject of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient], the gaps in care report is for. The Gaps In Care Composition SHALL contain one to many section(s). Each section has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced SHALL be for the same patient specified in the Composition `subject`. Each section SHALL also contain one or more entry of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
+The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The subject of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient], the Gaps in Care Report is for. The Gaps In Care Composition SHALL contain one to many section(s). Each section has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced SHALL be for the same patient specified in the Composition `subject`. Each section SHALL also contain one or more entry of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
 
 - The Individual MeasureReport SHALL conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [DEQM Population Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.population.group.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
 
