@@ -1,4 +1,6 @@
 
+The format of the CapabilityStatement resources are using the standard FHIR Publisher tooling.  They may display differently from prior versions of this Implementaton Guide but No Changes have been made.
+
 {% include list-simple-capabilitystatements.xhtml %}
 
 <br />

@@ -58,10 +58,7 @@ The first official published version of the DEQM IG for FHIR R4.
     - Add [`MeasureReport.group.population.count` as 0..1 Must Support](StructureDefinition-indv-measurereport-deqm.html#profile) for individual report profile. ([FHIR-27862](https://jira.hl7.org/browse/FHIR-27862))
     - Add [guidance on standard error response](datax.html#usage-1) to the various transactions described in the framework. ([FHIR-18720](https://jira.hl7.org/browse/FHIR-18720))
     - Clarified retrospective reporting definition ([FHIR-28993](https://jira.hl7.org/browse/FHIR-28993))
-
 ### Changes and Updates for version 2.1.0
-
-STU3 Ballot for FHIR R4 Version of DEQM
 
 1. Added content for Gaps in Care Reporting
     - Updated Home Page about Gaps in Care Reporting and added new glossary and acronym
@@ -76,9 +73,6 @@ STU3 Ballot for FHIR R4 Version of DEQM
     - Updated Downloads page with new schematrons for Gaps in Care
 
 ### Changes and Updates for version 3.0.0
-
-The second official published version of the DEQM IG for FHIR R4.
-
 1. Applied all resolutions from STU3 Ballot
     - Various Technical Corrections and Corrections to Typographical Errors
     - Updated the Introduction section in Gaps In Care Reporting. ([FHIR-28956](https://jira.hl7.org/browse/FHIR-28956)),([FHIR-28958](https://jira.hl7.org/browse/FHIR-28958)),([FHIR-28959](https://jira.hl7.org/browse/FHIR-28959)) ,([FHIR-28960](https://jira.hl7.org/browse/FHIR-28960)),([FHIR-28961](https://jira.hl7.org/browse/FHIR-28961)),([FHIR-28962](https://jira.hl7.org/browse/FHIR-28962)),([FHIR-28963](https://jira.hl7.org/browse/FHIR-28963)),([FHIR-28974](https://jira.hl7.org/browse/FHIR-28974)),([FHIR-28981](https://jira.hl7.org/browse/FHIR-28981)),([FHIR-28982](https://jira.hl7.org/browse/FHIR-28982)),([FHIR-28983](https://jira.hl7.org/browse/FHIR-28983)),([FHIR-28984](https://jira.hl7.org/browse/FHIR-28984)),([FHIR-28985](https://jira.hl7.org/browse/FHIR-28985)),([FHIR-28986](https://jira.hl7.org/browse/FHIR-28986)),([FHIR-28987](https://jira.hl7.org/browse/FHIR-28987)),([FHIR-28988](https://jira.hl7.org/browse/FHIR-28988)),([FHIR-28989](https://jira.hl7.org/browse/FHIR-28989)),([FHIR-28990](https://jira.hl7.org/browse/FHIR-28990)),([FHIR-28991](https://jira.hl7.org/browse/FHIR-28991)),([FHIR-29009](https://jira.hl7.org/browse/FHIR-29009)),([FHIR-29010](https://jira.hl7.org/browse/FHIR-29010)),([FHIR-29011](https://jira.hl7.org/browse/FHIR-29011)),([FHIR-29020](https://jira.hl7.org/browse/FHIR-29020)),([FHIR-29021](https://jira.hl7.org/browse/FHIR-29021)),([FHIR-29022](https://jira.hl7.org/browse/FHIR-29022)),([FHIR-28964](https://jira.hl7.org/browse/FHIR-28964)),([FHIR-28992](https://jira.hl7.org/browse/FHIR-28992), ([FHIR-28960](https://jira.hl7.org/browse/FHIR-28960))
@@ -97,7 +91,7 @@ The second official published version of the DEQM IG for FHIR R4.
     - Clarified the MeasureReport.date to be the date the report was calculated. ([FHIR-29018](https://jira.hl7.org/browse/FHIR-29018))
     - Updated examples.
 
-2.  Profile Changes:
+    **Profile Changes:**
     - Change the DEQM Gaps In Care Composition Profile to reference 1..* DEQM Gaps In Care DetectedIssue instead of 0..* ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)),  ([FHIR-d](https://jira.hl7.org/browse/FHIR-29012))
     - Noted in DEQM Gaps in Care Composition Profile that the date range for the Gaps in Care report is specified using the period element in the DEQM Individual MeasureReport Profile. ([FHIR-28971](https://jira.hl7.org/browse/FHIR-28971))
     - Add a modifier extension gapStatus to the DEQM Gaps In Care DetectedIssue profile. ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)),  ([FHIR-29012](https://jira.hl7.org/browse/FHIR-29012))
@@ -114,7 +108,7 @@ The second official published version of the DEQM IG for FHIR R4.
     - Add documentation to Reference Measure Extension Explaining How to Use. ([FHIR-28497](https://jira.hl7.org/browse/FHIR-28497))
     - Documentation added description on improvementNotation ([FHIR-28969](https://jira.hl7.org/browse/FHIR-28969))
 
-3. care-gaps operation updates
+    **care-gap operation updates**
     - Changed care-gaps operation to allow 3 parameters to specify measure -  id, url, identifier. ([FHIR-28483](https://jira.hl7.org/browse/FHIR-28483))
     - Updated care-gaps operation practitioner and organization input parameters to be a string(reference). ([FHIR-28966](https://jira.hl7.org/browse/FHIR-28966))
     - On care-gaps operation, noted that the type of this parameter is a string with a search type of token so that the coding value can be provided as part of a URL and the operation can be invoked using GET.". ([FHIR-28967](https://jira.hl7.org/browse/FHIR-28967))
@@ -123,8 +117,7 @@ The second official published version of the DEQM IG for FHIR R4.
     - Clarified that the caller of the care-gaps operations SHALL use specified parameters. ([FHIR-28965](https://jira.hl7.org/browse/FHIR-28965))
     - Changed to the Da Vinci ATR Implementation Guide is one way to represent groups to be used for input. ([FHIR-28374](https://jira.hl7.org/browse/FHIR-28374)), ([FHIR-31065](https://jira.hl7.org/browse/FHIR-31065))
 
-
-4. Non-Gaps in Care Changes
+    **Non-Gaps in Care Changes**
     - Typo correction. ([FHIR-29637](https://jira.hl7.org/browse/FHIR-29637))
     - Clarified that the data included in a report will be based on the date the report is run. ([FHIR-28953](https://jira.hl7.org/browse/FHIR-28953))
     - Updated MedicationAdministration Profile to explain this is an example of how you can use a profile instead of a Measure's CQL to constrain data used in a Measure.  Discussed the pro's and cons of each method. ([FHIR-29560](https://jira.hl7.org/browse/FHIR-29560))
