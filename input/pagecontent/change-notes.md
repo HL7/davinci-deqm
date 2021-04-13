@@ -1,6 +1,5 @@
 
-The Data Exchange For Quality Measures Implementation Guide was developed under the  [Davinci Project](#)
-
+The Data Exchange For Quality Measures Implementation Guide was developed under the [Da Vinci] Project.
 
 ### Changes and Updates for version 0.2.0
 
@@ -17,7 +16,7 @@ The current official published version of the DEQM IG for FHIR STU3.
 
 ### Changes and Updates for version 1.1.0
 
-STU2 Ballot for FHIR R4 Version of DEQM
+STU2 Ballot for FHIR R4 Version of the DEQM IG.
 
 1. Creation of FHIR R4 version.
 1. Additional examples
@@ -58,7 +57,10 @@ The first official published version of the DEQM IG for FHIR R4.
     - Add [`MeasureReport.group.population.count` as 0..1 Must Support](StructureDefinition-indv-measurereport-deqm.html#profile) for individual report profile. ([FHIR-27862](https://jira.hl7.org/browse/FHIR-27862))
     - Add [guidance on standard error response](datax.html#usage-1) to the various transactions described in the framework. ([FHIR-18720](https://jira.hl7.org/browse/FHIR-18720))
     - Clarified retrospective reporting definition ([FHIR-28993](https://jira.hl7.org/browse/FHIR-28993))
+
 ### Changes and Updates for version 2.1.0
+
+STU3 Ballot for FHIR R4 Version of the DEQM IG.
 
 1. Added content for Gaps in Care Reporting
     - Updated Home Page about Gaps in Care Reporting and added new glossary and acronym
@@ -73,9 +75,12 @@ The first official published version of the DEQM IG for FHIR R4.
     - Updated Downloads page with new schematrons for Gaps in Care
 
 ### Changes and Updates for version 3.0.0
+
+The second official published version of the DEQM IG for FHIR R4.
+
 1. Applied all resolutions from STU3 Ballot
     - Various Technical Corrections and Corrections to Typographical Errors
-    - Updated the Introduction section in Gaps In Care Reporting. ([FHIR-28956](https://jira.hl7.org/browse/FHIR-28956)),([FHIR-28958](https://jira.hl7.org/browse/FHIR-28958)),([FHIR-28959](https://jira.hl7.org/browse/FHIR-28959)) ,([FHIR-28960](https://jira.hl7.org/browse/FHIR-28960)),([FHIR-28961](https://jira.hl7.org/browse/FHIR-28961)),([FHIR-28962](https://jira.hl7.org/browse/FHIR-28962)),([FHIR-28963](https://jira.hl7.org/browse/FHIR-28963)),([FHIR-28974](https://jira.hl7.org/browse/FHIR-28974)),([FHIR-28981](https://jira.hl7.org/browse/FHIR-28981)),([FHIR-28982](https://jira.hl7.org/browse/FHIR-28982)),([FHIR-28983](https://jira.hl7.org/browse/FHIR-28983)),([FHIR-28984](https://jira.hl7.org/browse/FHIR-28984)),([FHIR-28985](https://jira.hl7.org/browse/FHIR-28985)),([FHIR-28986](https://jira.hl7.org/browse/FHIR-28986)),([FHIR-28987](https://jira.hl7.org/browse/FHIR-28987)),([FHIR-28988](https://jira.hl7.org/browse/FHIR-28988)),([FHIR-28989](https://jira.hl7.org/browse/FHIR-28989)),([FHIR-28990](https://jira.hl7.org/browse/FHIR-28990)),([FHIR-28991](https://jira.hl7.org/browse/FHIR-28991)),([FHIR-29009](https://jira.hl7.org/browse/FHIR-29009)),([FHIR-29010](https://jira.hl7.org/browse/FHIR-29010)),([FHIR-29011](https://jira.hl7.org/browse/FHIR-29011)),([FHIR-29020](https://jira.hl7.org/browse/FHIR-29020)),([FHIR-29021](https://jira.hl7.org/browse/FHIR-29021)),([FHIR-29022](https://jira.hl7.org/browse/FHIR-29022)),([FHIR-28964](https://jira.hl7.org/browse/FHIR-28964)),([FHIR-28992](https://jira.hl7.org/browse/FHIR-28992), ([FHIR-28960](https://jira.hl7.org/browse/FHIR-28960))
+    - Updated the Introduction section in Gaps In Care Reporting. ([FHIR-28956](https://jira.hl7.org/browse/FHIR-28956)),([FHIR-28958](https://jira.hl7.org/browse/FHIR-28958)),([FHIR-28959](https://jira.hl7.org/browse/FHIR-28959)) ,([FHIR-28960](https://jira.hl7.org/browse/FHIR-28960)),([FHIR-28961](https://jira.hl7.org/browse/FHIR-28961)),([FHIR-28962](https://jira.hl7.org/browse/FHIR-28962)),([FHIR-28963](https://jira.hl7.org/browse/FHIR-28963)),([FHIR-28974](https://jira.hl7.org/browse/FHIR-28974)),([FHIR-28981](https://jira.hl7.org/browse/FHIR-28981)),([FHIR-28982](https://jira.hl7.org/browse/FHIR-28982)),([FHIR-28983](https://jira.hl7.org/browse/FHIR-28983)),([FHIR-28984](https://jira.hl7.org/browse/FHIR-28984)),([FHIR-28985](https://jira.hl7.org/browse/FHIR-28985)),([FHIR-28986](https://jira.hl7.org/browse/FHIR-28986)),([FHIR-28987](https://jira.hl7.org/browse/FHIR-28987)),([FHIR-28988](https://jira.hl7.org/browse/FHIR-28988)),([FHIR-28989](https://jira.hl7.org/browse/FHIR-28989)),([FHIR-28990](https://jira.hl7.org/browse/FHIR-28990)),([FHIR-28991](https://jira.hl7.org/browse/FHIR-28991)),([FHIR-29009](https://jira.hl7.org/browse/FHIR-29009)),([FHIR-29010](https://jira.hl7.org/browse/FHIR-29010)),([FHIR-29011](https://jira.hl7.org/browse/FHIR-29011)),([FHIR-29020](https://jira.hl7.org/browse/FHIR-29020)),([FHIR-29021](https://jira.hl7.org/browse/FHIR-29021)),([FHIR-29022](https://jira.hl7.org/browse/FHIR-29022)),([FHIR-28964](https://jira.hl7.org/browse/FHIR-28964)),([FHIR-28992](https://jira.hl7.org/browse/FHIR-28992)),([FHIR-28960](https://jira.hl7.org/browse/FHIR-28960))
     - Created links for Gaps in Care terminology to Glossary. ([FHIR-28955](https://jira.hl7.org/browse/FHIR-28955))
     - Clarified the description in Figure 1-5. ([FHIR-29005](https://jira.hl7.org/browse/FHIR-29005)), ([FHIR-29006](https://jira.hl7.org/browse/FHIR-29006)), ([FHIR-29007](https://jira.hl7.org/browse/FHIR-29007))
     - Specified that workflow to get the data for the report is not specified by this implementation guide. ([FHIR-28487](https://jira.hl7.org/browse/FHIR-28487))
@@ -86,29 +91,27 @@ The first official published version of the DEQM IG for FHIR R4.
     - Explained that a claim would close the gap but the provider could chose to send the colonscopy report to close the gap as well. ([FHIR-28997](https://jira.hl7.org/browse/FHIR-28997))
     - Fixed link to usecases.html page. ([FHIR-29000](https://jira.hl7.org/browse/FHIR-29000))
     - Added Figure 2-15 to represent Retrospectice and Prospective reporting periods. ([FHIR-29008](https://jira.hl7.org/browse/FHIR-29008))
-    - Clarified Payer and Measure Analytic Systems in diagrams 2-13 and 2.14. ([FHIR-29013](https://jira.hl7.org/browse/FHIR-29013))
+    - Clarified Payer and Measure Analytic Systems in diagrams 2-13 and 2-14. ([FHIR-29013](https://jira.hl7.org/browse/FHIR-29013))
     - Clarified that any of the Serialized Formats for bulk can be used.  Also corrected FHIR JSON to FHIR+NDJSON. ([FHIR-29016](https://jira.hl7.org/browse/FHIR-29016))
-    - Clarified the MeasureReport.date to be the date the report was calculated. ([FHIR-29018](https://jira.hl7.org/browse/FHIR-29018))
+    - Clarified the `MeasureReport.date` to be the date the report was calculated. ([FHIR-29018](https://jira.hl7.org/browse/FHIR-29018))
     - Updated examples.
 
     **Profile Changes:**
-    - Change the DEQM Gaps In Care Composition Profile to reference 1..* DEQM Gaps In Care DetectedIssue instead of 0..* ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)),  ([FHIR-d](https://jira.hl7.org/browse/FHIR-29012))
-    - Noted in DEQM Gaps in Care Composition Profile that the date range for the Gaps in Care report is specified using the period element in the DEQM Individual MeasureReport Profile. ([FHIR-28971](https://jira.hl7.org/browse/FHIR-28971))
+    - Change the DEQM Gaps In Care Composition Profile to reference 1..* DEQM Gaps In Care DetectedIssue instead of 0..*. ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)),  ([FHIR-29012](https://jira.hl7.org/browse/FHIR-29012))
+    - Noted in DEQM Gaps in Care Composition Profile that the date range for the Gaps in Care report is specified using the `period` element in the DEQM Individual MeasureReport Profile. ([FHIR-28971](https://jira.hl7.org/browse/FHIR-28971))
     - Add a modifier extension gapStatus to the DEQM Gaps In Care DetectedIssue profile. ([FHIR-29017](https://jira.hl7.org/browse/FHIR-29017)),  ([FHIR-29012](https://jira.hl7.org/browse/FHIR-29012))
-    - Updated code in Composition.type to the Care Gaps Report code now assigned by LOINC.([FHIR-29828](https://jira.hl7.org/browse/FHIR-29828))
-
+    - Updated code in `Composition.type` to the Gaps in Care Report code now assigned by LOINC.([FHIR-29828](https://jira.hl7.org/browse/FHIR-29828))
     - Changed patient to 1..1 in DEQM Gaps in Care DetectedIssue profile. ([FHIR-28439](https://jira.hl7.org/browse/FHIR-28439))
-    -In DEQM Gaps in Care DetectedIssue profile clarified that the reference to the MeasureReport allows linkage to the FHIR Measure resource. ([FHIR-28973](https://jira.hl7.org/browse/FHIR-28973))
-    - DetectedIssue.evidence.detail changed to allow MeasureReport or Guidance resource to be Referenced. ([FHIR-28486](https://jira.hl7.org/browse/FHIR-28486)
+    - In DEQM Gaps in Care DetectedIssue profile clarified that the reference to the MeasureReport allows linkage to the FHIR Measure resource. ([FHIR-28973](https://jira.hl7.org/browse/FHIR-28973))
+    - DetectedIssue.evidence.detail changed to allow MeasureReport or Guidance resource to be Referenced. ([FHIR-28486](https://jira.hl7.org/browse/FHIR-28486))
     - Updated the DetectedIssue resource to say it may also be used to report details on the open gaps identified and mitigation steps for addressing them. ([FHIR-28978](https://jira.hl7.org/browse/FHIR-28978))
-    - Added a detectedIssue category code to  http://terminology.hl7.org/CodeSystem/v3-ActCode with UTG. ([FHIR-31067](https://jira.hl7.org/browse/FHIR-31067))
-
-    - DEQM Gaps in Care Individual MeasureReport profile was removed.  The extension-populationReference was added to the DEQM Individual MeasureReport profile.  This extension-populationReference SHOULD reference population criteria id specified in a Measure resource. ([FHIR-28497](https://jira.hl7.org/browse/FHIR-28497))
-    - Updated the DEQM Individual and Summary MeasureReport.reporter to be "Organization that generated the report". ([FHIR-28484](https://jira.hl7.org/browse/FHIR-28484))
+    - Added a detectedIssue category code to http://terminology.hl7.org/CodeSystem/v3-ActCode through the Unified Terminology Governance (UTG) process. ([FHIR-31067](https://jira.hl7.org/browse/FHIR-31067))
+    - DEQM Gaps in Care Individual MeasureReport profile was removed.  The extension-populationReference was added to the DEQM Individual MeasureReport profile. This extension-populationReference SHOULD reference population criteria id specified in a Measure resource. ([FHIR-28497](https://jira.hl7.org/browse/FHIR-28497))
+    - Updated the DEQM Individual and Summary `MeasureReport.reporter` to be "Organization that generated the report". ([FHIR-28484](https://jira.hl7.org/browse/FHIR-28484))
     - Add documentation to Reference Measure Extension Explaining How to Use. ([FHIR-28497](https://jira.hl7.org/browse/FHIR-28497))
-    - Documentation added description on improvementNotation ([FHIR-28969](https://jira.hl7.org/browse/FHIR-28969))
+    - Documentation added description on `improvementNotation` ([FHIR-28969](https://jira.hl7.org/browse/FHIR-28969))
 
-    **care-gap operation updates**
+    **care-gaps operation updates**
     - Changed care-gaps operation to allow 3 parameters to specify measure -  id, url, identifier. ([FHIR-28483](https://jira.hl7.org/browse/FHIR-28483))
     - Updated care-gaps operation practitioner and organization input parameters to be a string(reference). ([FHIR-28966](https://jira.hl7.org/browse/FHIR-28966))
     - On care-gaps operation, noted that the type of this parameter is a string with a search type of token so that the coding value can be provided as part of a URL and the operation can be invoked using GET.". ([FHIR-28967](https://jira.hl7.org/browse/FHIR-28967))
