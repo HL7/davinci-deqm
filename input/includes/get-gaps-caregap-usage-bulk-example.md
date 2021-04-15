@@ -12,5 +12,5 @@ The request below asks for Group id of 123 to be run asynchronously with FHIR+nd
 
 Run $care-gaps operation in an asynchronous mode:
 ```
-GET [base]/Measure/$care-gaps?subject=Group/123&periodStart=2020-01-01&periodEnd=2020-09-30&status=open-gap&status=closed-gap&_outputFormat=application/fhir+ndjson
+GET [base]/Measure/$care-gaps?measureurl=http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|2.0.0&subject=Group/123&periodStart=2020-01-01&periodEnd=2020-12-31&status=open-gap&status=closed-gap&_outputFormat=application/fhir+ndjson
 ```
