@@ -41,7 +41,7 @@ Depending on the specific Measure, various DEQM and QI Core Profiles are also us
 
 The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1:
 
-{% include img.html img="measure-resource-graph.svg" caption="Figure 2-1 DEQM Resource Graph" %}
+{% include img.html img="measure-resource-graph.jpg" caption="Figure 2-1 DEQM Resource Graph" %}
 
 
 ### Submit Data
