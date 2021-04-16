@@ -45,9 +45,9 @@ For MRP either a *Task* resource or an *Observation* resource can be used as the
 |The state of completion|`Task.status`|`Observation.valueBoolean`(= "true" for complete) + `Observation.status`|
 {:.grid}
 
-{% include img.html img="mrp-task.jpg" caption="Figure 3-1 MRP Using Task" %}
+{% include img.html img="mrp-task.png" caption="Figure 3-1 MRP Using Task" %}
 
-{% include img.html img="mrp-observation.jpg" caption="Figure 3-2 MRP Using Observation" %}
+{% include img.html img="mrp-observation.png" caption="Figure 3-2 MRP Using Observation" %}
 
 ### MRP Data Exchange Interactions
 

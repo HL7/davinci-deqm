@@ -50,7 +50,7 @@ The medications that qualify for the measure are listed in the value sets of cod
 
 {% include img.html img="DEQM Resource Diagram - VTE1.jpg" caption = "Figure 3-14 MeasureReport Using MedicationAdministration and Condition" %}
 
-#### Option 2:Measure Report Using DeviceUseStatement and Encounter
+#### Option 2: Measure Report Using DeviceUseStatement and Encounter
 {:.no_toc}
 
 VTE-1 has been met when a patient:
