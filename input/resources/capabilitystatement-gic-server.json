@@ -10,8 +10,8 @@
             ]
         }
     ],
-    "date": "2020-07-05",
-    "description": "This profile defines the expected capabilities of a Da Vinci DEQM Gaps In Care Server when conforming to the Da Vinci DEQM Implementation Guide for interactions between Clients and Servers to exchange the gaps in care reports for a measure. Servers are the actors receiving the gaps in care results of quality measure(s). This CapabilityStatement resource includes the complete list of the *recommended* Da Vinci DEQM profiles and RESTful operations that a Gaps In Care Client could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements.",
+    "date": "2021-04-15",
+    "description": "This profile defines the expected capabilities of a Da Vinci DEQM Gaps In Care Server when conforming to the Da Vinci DEQM Implementation Guide for interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Servers are the actors receiving the request for Gaps in Care Reports for quality measure(s). This CapabilityStatement resource includes the complete list of the *recommended* Da Vinci DEQM profiles and RESTful operations that a Gaps In Care Server could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements.",
     "experimental": false,
     "fhirVersion": "4.0.1",
     "format": [
@@ -113,6 +113,54 @@
                         }
                     ],
                     "type": "Measure"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                            "valueCode": "SHALL"
+                        }
+                    ],
+                    "documentation": "The DaVinci DEQM Gaps In Care Server **SHALL** be capable of supporting the DEQM Individual MeasureReport Profile and all the DEQM, CQFM, and QI-Core Profiles they reference.",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHOULD"
+                                }
+                            ],
+                            "code": "create"
+                        }
+                    ],
+                    "supportedProfile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                    ],
+                    "type": "MeasureReport"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                            "valueCode": "SHALL"
+                        }
+                    ],
+                    "documentation": "The DaVinci DEQM Gaps In Care Server **SHALL** be capable of supporting the DEQM Gaps in Care Bundle Profile and all the DEQM, CQFM, and QI-Core Profiles they reference.",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHOULD"
+                                }
+                            ],
+                            "code": "create"
+                        }
+                    ],
+                    "supportedProfile": [
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition-gaps-bundle-deqm.html"
+                    ],
+                    "type": "Bundle"
                 }
             ],
             "security": {

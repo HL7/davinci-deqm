@@ -76,7 +76,7 @@ The updated operation, [care-gaps](OperationDefinition-care-gaps.html), makes th
 - **periodStart** is still required, but the description is modified to reference the start date of the [gaps through period].
 - **periodEnd** is still required, but the description is modified to reference the end of the [gaps through period].
 -	**topic** is an optional parameter for which the cardinality has been updated to allow multiple topics to be specified.
--	**subject** can now point to either a patient or a group of patients. Subject is optional when run a Gaps in Care report for an organization or a practitioner of an organization.
+-	**subject** can now point to either a patient or a group of patients. Subject is optional when run a Gaps in Care Report for an organization or a practitioner of an organization.
 
 Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) operation defined in this guide:
 - **practitioner** references a practitioner for which the Gaps in Care Report will be created.
