@@ -37,7 +37,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="1"/>
-        <documentation value="The start of a [gaps through period](index.html#glossary). This maybe the start of the measurement period defined by a measure, or a customized desired performance period start date determined by a payer, a provider, a measure program, and etc."/>
+        <documentation value="The start of a [gaps through period](index.html#glossary). This may be the start of the measurement period defined by a measure, or a customized desired performance period start date determined by a payer, a provider, a measure program, and etc."/>
         <type value="date"/>
     </parameter>
     <parameter>
