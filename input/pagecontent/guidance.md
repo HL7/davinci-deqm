@@ -107,9 +107,14 @@ The negation patterns described here are about approaches for identifying when e
 
 ### Must Support
 
-- This guide adopts the [QI Core *Must Support*] definition with the following additional expectation:
+Certain elements in the profiles defined in this implementation guide are marked as Must Support. This flag is used to indicate that the element plays a critical role in defining and sharing quality measures, and implementations SHALL understand and process the element.
 
-The receiver of data may not be able to complete processing and may report an error if a Must Support element is unavailable.
+In addition, because this specification makes use of data implementation guides (e.g. US Core, QI-Core), the implications of the Must Support flag for profiles used from those implementation guides must be considered.
+
+For more information, see the definition of [Must Support](http://hl7.org/fhir/R4/conformance-rules.html#mustSupport) in the base FHIR specification.
+
+Must Support guidance here requires additional clarifications, we are seeking implementer feedback on what type of guidance would be most useful.
+{:.stu-note}
 
 <br />
 

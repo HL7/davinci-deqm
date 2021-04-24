@@ -132,11 +132,11 @@ The second official published version of the DEQM IG for FHIR R4.
     - Changed MeasurePopulationType binding to extensible. ([FHIR-30407](https://jira.hl7.org/browse/FHIR-30407))
     - Added extension-reporterGroup to DEQM Individual MeasureReport and DEQM Data Exchange MeasureReport. ([FHIR-29411](https://jira.hl7.org/browse/FHIR-29411))
     - Changed Colorectal Screening example page to use DEQM Data Exchange MeasureReport profile. ([FHIR-29561](https://jira.hl7.org/browse/FHIR-29561))
-    - Update parameter name in MRP example to "measureReport". ([FHIR-30075](https://jira.hl7.org/browse/FHIR-30075))
+    - Updated parameter name in MRP example to "measureReport". ([FHIR-30075](https://jira.hl7.org/browse/FHIR-30075))
     - Explained Relationship of Measure and MeasureReport Resources. ([FHIR-28373](https://jira.hl7.org/browse/FHIR-28373))
-    - Updated outdated Figure 3-1 and 3-2. ([FHIR-31881](https://jira.hl7.org/browse/FHIR-31881))
+    - Updated outdated Figures 3-1 and 3-2. ([FHIR-31881](https://jira.hl7.org/browse/FHIR-31881))
     - Updated outdated Figures 3-5, 3-6, 3-7, and 3-8. ([FHIR-31882](https://jira.hl7.org/browse/FHIR-31882))
     - Simplified the Conformance Requirement 1 language for $care-gaps. ([FHIR-31902](https://jira.hl7.org/browse/FHIR-31902))
-
+    - Updated 2.1.7 Must Support. ([FHIR-31961](https://jira.hl7.org/browse/FHIR-31961))
 
 {% include link-list.md %}
