@@ -1,6 +1,7 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
+  "date": "2020-08-15",
   "name": "DEQMUpdateTypeValueSet",
   "id": "update-type",
   "title": "DEQM Update Type Value Set",

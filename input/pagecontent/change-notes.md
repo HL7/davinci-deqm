@@ -105,7 +105,7 @@ The second official published version of the DEQM IG for FHIR R4.
     - Updated code in Composition.type to the Gaps in Care Report code now assigned by LOINC.([FHIR-29828](https://jira.hl7.org/browse/FHIR-29828))
     - Changed patient to 1..1 in DEQM Gaps in Care DetectedIssue profile. ([FHIR-28439](https://jira.hl7.org/browse/FHIR-28439))
     - Claried that the reference to the MeasureReport allows linkage to the FHIR Measure resource in DEQM Gaps in Care DetectedIssue profile . ([FHIR-28973](https://jira.hl7.org/browse/FHIR-28973))
-    - DetectedIssue.evidence.detail changed to allow MeasureReport or Guidance resource to be Referenced. ([FHIR-28486](https://jira.hl7.org/browse/FHIR-28486)
+    - DetectedIssue.evidence.detail changed to allow MeasureReport or Guidance resource to be Referenced. ([FHIR-28486](https://jira.hl7.org/browse/FHIR-28486))
     - Updated the DetectedIssue resource to say it may also be used to report details on the open gaps identified and mitigation steps for addressing them. ([FHIR-28978](https://jira.hl7.org/browse/FHIR-28978))
     - Added a new CAREGAP code to  http://terminology.hl7.org/CodeSystem/v3-ActCode. ([FHIR-31067](https://jira.hl7.org/browse/FHIR-31067))
     - Removed DEQM Gaps in Care Individual MeasureReport profile that was in the STU3 Ballot version. Added the extension-populationReference to the DEQM Individual MeasureReport profile instead.  This extension-populationReference SHOULD reference population criteria id specified in a Measure resource. ([FHIR-28497](https://jira.hl7.org/browse/FHIR-28497))
