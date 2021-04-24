@@ -24,7 +24,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
 
-  -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
+  -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
 
 
 - [Use cases]\: Three* exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
@@ -52,7 +52,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Terminology]\: This page lists code systems and value sets defined in this guide.
 
-- [Operations]\: This page lists the Operation that is defined in this guide to exchange gaps in care report.
+- [Operations]\: This page lists the Operation that is defined in this guide to exchange Gaps in Care Report.
 
 ### Background
 {: #background}
@@ -110,7 +110,7 @@ The process below can be run as many times as useful during the reporting period
 
 {% include img-portrait.html  caption = "Figure 1-5 Gaps in Care Reporting Scenarios" img="gaps-reporting-scenario.png" %}
 
-For the Gaps in Care reporting scenarios, the actors are Clients and Servers.
+For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 
 **Clients** are the actors requesting gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if a provider requests a report from the payer's system, then the provider serves as the client. If a payer requests a report from their own system, they are the client.
 

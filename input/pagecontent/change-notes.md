@@ -138,5 +138,6 @@ The second official published version of the DEQM IG for FHIR R4.
     - Updated outdated Figures 3-5, 3-6, 3-7, and 3-8. ([FHIR-31882](https://jira.hl7.org/browse/FHIR-31882))
     - Simplified the Conformance Requirement 1 language for $care-gaps. ([FHIR-31902](https://jira.hl7.org/browse/FHIR-31902))
     - Updated 2.1.7 Must Support. ([FHIR-31961](https://jira.hl7.org/browse/FHIR-31961))
-
+    - Updated Figure 1-1 and Figure 2-12 to use the new Quality Improvement Ecosystem diagram.
+    
 {% include link-list.md %}

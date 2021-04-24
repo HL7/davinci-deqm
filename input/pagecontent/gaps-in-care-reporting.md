@@ -35,7 +35,7 @@ The Gaps in Care Reporting uses the [DEQM Individual MeasureReport Profile]. Thi
 
 ### Default Profiles
 
-The following resources are used in the Gaps in Care Reporting scenario:
+The following resources are used in the Gaps in Care Reporting Scenario:
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
