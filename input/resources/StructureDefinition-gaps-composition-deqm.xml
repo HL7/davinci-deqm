@@ -47,7 +47,7 @@
         <element id="Composition.subject">
             <path value="Composition.subject"/>
             <min value="1"/>
-            <short value="What individual the gaps in care report is for. All gaps in care individual MeasureReports referenced must be for this same individual."/>
+            <short value="What individual the gaps in care report is for. All individual MeasureReports referenced must be for this same individual."/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
@@ -78,7 +78,7 @@
         </element>
         <element id="Composition.section">
             <path value="Composition.section"/>
-            <short value="Must contain at least one section, each section corresponds to a gaps in care indivdiual MeasureReport for a specific measure"/>
+            <short value="Must contain at least one section, each section corresponds to an indivdiual MeasureReport for a specific measure"/>
             <min value="1"/>
         </element>
         <element id="Composition.section.title">
