@@ -158,7 +158,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition-gaps-bundle-deqm.html"
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"
                     ],
                     "type": "Bundle"
                 }
