@@ -313,7 +313,7 @@ GET [base]/Measure/$care-gaps?measureurl=http://hl7.org/fhir/us/davinci-deqm/Mea
                 "coding": [
                   {
                     "system": "http://www.ama-assn.org/go/cpt",
-                    "code": "44393",
+                    "code": "45384",
                     "display": "Colonoscopy through stoma; with ablation of tumor(s), polyp(s), or other lesion(s) not amenable to removal by hot biopsy forceps, bipolar cautery or snare technique"
                   }
                 ]
@@ -763,7 +763,7 @@ GET [base]/Measure/$care-gaps?measureurl=http://hl7.org/fhir/us/davinci-deqm/Mea
                 "coding": [
                   {
                     "system": "http://www.ama-assn.org/go/cpt",
-                    "code": "44393",
+                    "code": "45384",
                     "display": "Colonoscopy through stoma; with ablation of tumor(s), polyp(s), or other lesion(s) not amenable to removal by hot biopsy forceps, bipolar cautery or snare technique"
                   }
                 ]
