@@ -65,9 +65,6 @@ INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters/multiple-gaps-in
 INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition).section[1].entry[0]: Details for DetectedIssue/gaps-detectedissue02 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
 None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/detectedissue-category (http://hl7.org/fhir/ValueSet/detectedissue-category), and a coding is recommended to come from this value set) (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 
-# related to the Code 96315-7 issue
-#None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#96315-7)
-
 # example.org The validator is trying to resolve an "example.org" Code System which by convention does not exist
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[8].resource.ofType(MeasureReport).group[0].code.coding[0]: Code System URI 'http://example.org/fhir/' is unknown so the code cannot be validated
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[10].resource.ofType(MeasureReport).group[0].code.coding[0]: Code System URI 'http://example.org/fhir/' is unknown so the code cannot be validated
