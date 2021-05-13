@@ -44,7 +44,7 @@ This version of the guide adds the Gaps in Care Reporting Scenario. The Gaps in 
 
 The MeasureReport resource is used as an organizer for both the Data Exchange Scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
 
-The MeasureReport resource is also used for the Gaps in Care Reporting Scenario. A new MeasureReport profile is defined in this guide to support the specific needs of Gaps in Care Reporting.
+The MeasureReport resource is also used for the Gaps in Care Reporting Scenario. A DEQM MeasureReport profile defined in this guide is used to support the needs of Gaps in Care Reporting.
 
 #### Data Exchange
 
