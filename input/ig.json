@@ -806,19 +806,43 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Gaps Multiple Bundles Individual MeasureReports01",
+                "name": "Gaps Parameters Open Individual MeasureReports",
                 "reference": {
-                    "reference": "Parameters/multiple-gaps-indv-report01"
+                    "reference": "Parameters/single-gaps-open-indv-report01"
                 },
-                "description": "GIC Gaps Multiple Bundles Individual MeasureReports01 example"
+                "description": "GIC Parameters Open Individual MeasureReports example"
             },
             {
                 "exampleBoolean": true,
-                "name": "Gaps Multiple Bundles Individual MeasureReports02",
+                "name": "Gaps Parameters Closed Individual MeasureReport01",
+                "reference": {
+                    "reference": "Parameters/single-gaps-closed-indv-report01"
+                },
+                "description": "GIC Parameters Closed Individual MeasureReport01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Parameters Closed Individual MeasureReport02",
+                "reference": {
+                    "reference": "Parameters/single-gaps-closed-indv-report02"
+                },
+                "description": "GIC Parameters Closed Individual MeasureReport02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Multiple Parameters Individual MeasureReports01",
+                "reference": {
+                    "reference": "Parameters/multiple-gaps-indv-report01"
+                },
+                "description": "GIC Gaps Multiple Parameters Individual MeasureReports01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Multiple Parameters Individual MeasureReports02",
                 "reference": {
                     "reference": "Parameters/multiple-gaps-indv-report02"
                 },
-                "description": "GIC Gaps Multiple Bundles Individual MeasureReports02 example"
+                "description": "GIC Gaps Multiple Parameters Individual MeasureReports02 example"
             },
             {
                 "exampleBoolean": true,
