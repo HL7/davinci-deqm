@@ -38,30 +38,18 @@ ERROR: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resour
 ERROR: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource.ofType(Bundle).entry[0].resource.ofType(Composition).section[1].entry[0]: Unable to find a match for profile DetectedIssue/gaps-detectedissue02 among choices: http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
 
 # SECTION 2 - WARNINGS: COPIED FROM Data Exchange For Quality Measures STU2 IG These warnings are all caused by the use of the text/cql.identifier media type. This has been addressed in the current R5 build and are expected to resolve once the core package updates.
-WARNING: Measure/date-of-last-power-outage: Measure/date-of-last-power-outage: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/measure-mrp-example: Measure/measure-mrp-example: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/measure-mrp-example: Measure/measure-mrp-example: Measure.group[0].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/measure-mrp-example: Measure/measure-mrp-example: Measure.group[0].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/date-of-last-power-outage: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/measure-mrp-example: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/measure-mrp-example: Measure.group[0].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/measure-mrp-example: Measure.group[0].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 
 # SECTION 2 - WARNINGS: COPIED FROM QICore STU4 IG Known issues with VSAC value sets
-WARNING: StructureDefinition/coverage-deqm: StructureDefinition/coverage-deqm: StructureDefinition.snapshot.element[11].binding: The valueSet reference https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591 on element Coverage.type could not be resolved
+WARNING: StructureDefinition/coverage-deqm: StructureDefinition.snapshot.element[11].binding: The valueSet reference https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591 on element Coverage.type could not be resolved
 
 # SECTION 2 - WARNINGS: The validator is trying to resolve an "example.org" artifact which by convention does not exist
-WARNING: MeasureReport/summ-medicare-stratification-example: MeasureReport/summ-medicare-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
-WARNING: Bundle/multiple-summ-report: Bundle/multiple-summ-report: Bundle.entry[0].resource.ofType(MeasureReport): The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
-WARNING: MeasureReport/indv-measurreport-stratification-example: MeasureReport/indv-measurreport-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
-
-# SECTION 2 - WARNINGS: From US Core STU 3 IG issue with us-core-procedure-code ValueSet https://www.hl7.org/fhir/us/core/qa.html
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
-
-# SECTION 2 - WARNINGS: From US Core STU 3 IG issue with us-core-encounter-type ValueSet https://www.hl7.org/fhir/us/core/qa.html
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
-
-# SECTION 2 - WARNINGS: From US Core STU 3 IG issue with us-core-medication-codes ValueSet https://www.hl7.org/fhir/us/core/qa.html
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
-
-# SECTION 2 - WARNINGS: Differences exist between the Jira file and the generated file.  PR merged into JIRA-Spec-Artifacts (https://github.com/HL7/JIRA-Spec-Artifacts/pull/197), but there is still a difference.  Discussed on Zulip (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Jira.20warning.20in.20IG.20qa.202), with no resolution as of yet.
-WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
+WARNING: Bundle/multiple-summ-report: Bundle.entry[0].resource.ofType(MeasureReport): The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
+WARNING: MeasureReport/indv-measurreport-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
+WARNING: MeasureReport/summ-medicare-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 
 # SECTION 3 - INFORMATION: Related to the ActCode#CAREGAP issue
 INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle/single-gaps-closed-indv-report01: Bundle.entry[0].resource.ofType(Composition).section[0].entry[0]: Details for DetectedIssue/gaps-detectedissue03 matching against Profilehttp://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm
