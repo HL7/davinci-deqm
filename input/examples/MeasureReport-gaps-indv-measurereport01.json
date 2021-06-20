@@ -118,6 +118,10 @@
         {
           "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
           "valueString": "initial-population"
+        }, 
+        {
+          "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
+          "valueString": "denominator"
         }
       ],
       "reference": "Encounter/gaps-encounter01"
@@ -127,6 +131,10 @@
         {
           "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
           "valueString": "initial-population"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
+          "valueString": "denominator"
         }
       ],
       "reference": "Patient/gaps-patient01"
