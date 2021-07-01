@@ -51,3 +51,25 @@ Request:
 GET [base]/Measure/$care-gaps?measureIdentifier=http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/cms|130&periodStart=2014-01&periodEnd=2014-03&status=open-gap&subject=Patient/124
 GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130|7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&subject=Patient/124
 ~~~
+
+Request: 
+     
+* Request the first example with an organization instead of a subject.
+     
+* Request the first example with a practitioner and an organization instead of a subject.
+
+~~~
+GET [base]/Measure/$care-gaps?measureIdentifier=http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/cms|130&periodStart=2014-01&periodEnd=2014-03&status=open-gap&organization=Organization/124
+GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130|7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&&organization=Organization/124&practitioner=Practitioner/124
+~~~
+
+Request: 
+     
+* Request the first example with a program of eligible-provider. 
+
+* Request the first example with a program of the code "mips" in the valueset "quality-programs".
+
+~~~
+GET [base]/Measure/$care-gaps?measureId=EXM130-7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&subject=Patient/124&program=eligible-provider
+GET [base]/Measure/$care-gaps?measureId=EXM130-7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&subject=Patient/124&program=http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs|mips
+~~~
