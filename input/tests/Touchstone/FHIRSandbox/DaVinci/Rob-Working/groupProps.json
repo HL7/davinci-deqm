@@ -1,0 +1,5 @@
+{
+   "excludeFromValidation": [
+      ".*/Notifications/01-Process-Message/_reference/resources/.*"
+   ]
+}
