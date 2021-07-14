@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestScript xmlns="http://hl7.org/fhir">
-  <id value="Period-Start-Missing-GIC"/>
+  <id value="Period-Start-None-GIC"/>
   <meta>
     <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
   </meta>
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Period-Start-Missing-GIC-json</p>
+      <p>Period-Start-None-GIC-json</p>
     </div>
   </text>
-  <url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/Period-Start-Missing-GIC"/>
-  <name value="Period-Start-Missing-GIC-json"/>
+  <url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/Period-Start-None-GIC"/>
+  <name value="Period-Start-None-GIC-json"/>
   <status value="active"/>
   <date value="2021-06-22"/>
   <publisher value="AEGIS.net, Inc."/>
@@ -57,9 +57,9 @@
     <defaultValue value="0"/>
     <description value="Number of expected Parameters resources in response.  Will be validated in the test."/>
   </variable>
-  <test id="Period-Start-Missing">
-    <name value="Period-Start-Missing"/>
-    <description value="Query for the gaps in care using periodStart missing parameters. Expected response is 200 (OK)."/>
+  <test id="Period-Start-None">
+    <name value="Period-Start-None"/>
+    <description value="Query for the gaps in care using periodStart missing parameters. Expected response is OperationOutcome (error)."/>
     <action>
       <operation>
         <type>

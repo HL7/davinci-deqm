@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestScript xmlns="http://hl7.org/fhir">
-  <id value="Period-End-Missing-GIC"/>
+  <id value="Topic-None-GIC"/>
   <meta>
     <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
   </meta>
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Period-End-Missing-GIC-json</p>
+      <p>Topic-None-GIC-json</p>
     </div>
   </text>
-  <url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/Period-End-Missing-GIC"/>
-  <name value="Period-End-Missing-GIC-json"/>
+  <url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/Topic-None-GIC"/>
+  <name value="Topic-None-GIC-json"/>
   <status value="active"/>
   <date value="2021-06-22"/>
   <publisher value="AEGIS.net, Inc."/>
@@ -48,18 +48,23 @@
     <description value="Default start of a gaps through period."/>
   </variable>
   <variable>
+    <name value="periodEnd"/>
+    <defaultValue value="2019-12-31"/>
+    <description value="Default end of a gaps through period."/>
+  </variable>
+  <variable>
     <name value="freeformAdditionalParams"/>
     <defaultValue value="status=open-gap&amp;status=closed-gap&amp;subject=Patient/caregaps-parameters-standard&amp;measureId=measure-EXM130-7.3.000"/>
     <description value="Care Gap variable parameters; status is minimum required."/>
   </variable>
   <variable>
     <name value="expectedNumParameters"/>
-    <defaultValue value="0"/>
+    <defaultValue value="1"/>
     <description value="Number of expected Parameters resources in response.  Will be validated in the test."/>
   </variable>
-  <test id="Period-End-Missing">
-    <name value="Period-End-Missing"/>
-    <description value="Query for the gaps in care using periodEnd missing parameters. Expected response is 200 (OK)."/>
+  <test id="Topic-None">
+    <name value="Topic-None"/>
+    <description value="Query for the gaps in care using status out parameters. Expected response is 200 (OK)."/>
     <action>
       <operation>
         <type>

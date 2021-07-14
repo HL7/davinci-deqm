@@ -64,7 +64,7 @@
   </variable>
   <test id="Period-End-Out-Prior">
     <name value="Period-End-Out-Prior"/>
-    <description value="Query for the gaps in care using periodEnd out prior parameters. Expected response is 200 (OK)."/>
+    <description value="Query for the gaps in care using periodEnd out prior parameters. Expected response is OperationOutcome (error)."/>
     <action>
       <operation>
         <type>

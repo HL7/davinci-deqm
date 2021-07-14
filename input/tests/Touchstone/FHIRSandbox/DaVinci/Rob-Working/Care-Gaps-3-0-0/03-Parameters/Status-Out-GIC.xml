@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestScript xmlns="http://hl7.org/fhir">
-  <id value="Period-Start-Out-Post-GIC"/>
+  <id value="Status-Out-GIC"/>
   <meta>
     <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
   </meta>
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>Period-Start-Out-Post-GIC-json</p>
+      <p>Status-Out-GIC-json</p>
     </div>
   </text>
-  <url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/Period-Start-Out-Post-GIC"/>
-  <name value="Period-Start-Out-Post-GIC-json"/>
+  <url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/Status-Out-GIC"/>
+  <name value="Status-Out-GIC-json"/>
   <status value="active"/>
   <date value="2021-06-22"/>
   <publisher value="AEGIS.net, Inc."/>
@@ -44,7 +44,7 @@
   </profile>
   <variable>
     <name value="periodStart"/>
-    <defaultValue value="2020-01-01"/>
+    <defaultValue value="2019-01-01"/>
     <description value="Default start of a gaps through period."/>
   </variable>
   <variable>
@@ -54,7 +54,7 @@
   </variable>
   <variable>
     <name value="freeformAdditionalParams"/>
-    <defaultValue value="status=open-gap&amp;status=closed-gap&amp;subject=Patient/caregaps-parameters-standard&amp;measureId=measure-EXM130-7.3.000"/>
+    <defaultValue value="status=bad-value&amp;subject=Patient/caregaps-parameters-standard&amp;measureId=measure-EXM130-7.3.000"/>
     <description value="Care Gap variable parameters; status is minimum required."/>
   </variable>
   <variable>
@@ -62,9 +62,9 @@
     <defaultValue value="0"/>
     <description value="Number of expected Parameters resources in response.  Will be validated in the test."/>
   </variable>
-  <test id="Period-Start-Out-Post">
-    <name value="Period-Start-Out-Post"/>
-    <description value="Query for the gaps in care using periodStart out post parameters. Expected response is OperationOutcome (error)."/>
+  <test id="Status-Out">
+    <name value="Status-Out"/>
+    <description value="Query for the gaps in care using status out parameters. Expected response is OperationOutcome (error)."/>
     <action>
       <operation>
         <type>
