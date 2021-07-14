@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestScript xmlns="http://hl7.org/fhir">
+	<id value="dv-deqm-capabilities-metadata-xml"/>
+	<meta>
+		<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+	</meta>
+
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml"><p>dv-deqm-capabilities-metadata-xml</p></div>
+	</text>	
+
+	<url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/dv-deqm-capabilities-metadata-xml"/>
+	<name value="dv-deqm-capabilities-metadata-xml"/>
+
+	<status value="active"/>
+	<date value="2021-06-23"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<name value="Touchstone Support"/>
+		<telecom>
+			<system value="email"/>
+			<value value="Touchstone_Support@aegis.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="Da Vinci Capabilities Metadata test against a single server to verify support for the capabilities interaction 'HTTP GET metadata' and the return of a valid CapabilityStatement resource in XML format."/>
+	<copyright value="(c) AEGIS.net, Inc. 2019"/>
+
+	<origin>
+		<index value="1" />
+		<profile>
+			<system value="http://hl7.org/fhir/testscript-profile-origin-types" />
+			<code value="FHIR-Client" />
+		</profile>
+	</origin>
+	<destination>
+		<index value="1" />
+		<profile>
+			<system value="http://hl7.org/fhir/testscript-profile-destination-types" />
+			<code value="FHIR-Server" />
+		</profile>
+	</destination>
+
+	<profile id="CapabilitiesProfile">
+		<reference value="http://hl7.org/fhir/StructureDefinition/CapabilityStatement" />
+	</profile>
+
+	<test id="CapabilitiesMetadataXML">
+		<name value="CapabilitiesMetadataXML"/>
+		<description value="Execute the HTTP GET metadata capabilities operation with HTTP Header Accept set to XML format and no request URL parameters defined. Expected response is 200 (OK) and content of a valid CapabilityStatement resource in XML format. Support for the MRP operations will be validated."/>
+
+		<action>
+			<operation>
+				<type>
+					<system value="http://touchstone.com/fhir/testscript-operation-codes-extended"/>
+					<code value="metadata"/>
+				</type>
+				<description value="HTTP GET metadata capabilities operation with HTTP Header Accept set to XML format and no request URL parameters defined."/>
+				<accept value="xml"/>
+				<contentType value="none"/>
+				<destination value="1" />
+				<encodeRequestUrl value="true"/>
+				<origin value="1" />
+				<params value="/metadata"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is 200(OK)."/>
+				<direction value="response" />
+				<operator value="in"/>
+				<responseCode value="200"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned resource type is CapabilityStatement."/>
+				<direction value="response"/>
+				<resource value="CapabilityStatement"/>
+				<warningOnly value="false"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned CapabilityStatement conforms to the base FHIR specification. Warning only to allow for review of results."/>
+				<direction value="response"/>
+				<validateProfileId value="CapabilitiesProfile"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned CapabilityStatement resource minimally contains the declaration of a RESTful server. Warning only to allow for review of results."/>
+				<direction value="response"/>
+				<expression value="CapabilityStatement.rest.where(mode = 'server').exists()"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned CapabilityStatement resource minimally contains the declaration of support for the Da Vinci DEQM Implementation Guide. Warning only to allow for review of results."/>
+				<direction value="response"/>
+				<expression value="CapabilityStatement.implementationGuide.startsWith('http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm')"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned CapabilityStatement resource minimally contains the declaration of support for the QI Core Implementation Guide. Warning only to allow for review of results."/>
+				<direction value="response"/>
+				<expression value="CapabilityStatement.implementationGuide.startsWith('http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore')"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned CapabilityStatement resource minimally contains the declaration of support for the CQF Measures Implementation Guide. Warning only to allow for review of results."/>
+				<direction value="response"/>
+				<expression value="CapabilityStatement.implementationGuide.startsWith('http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures')"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+	</test>
+</TestScript>

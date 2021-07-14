@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "periodStart",
+      "valueDate": "${PeriodStart}"
+    },
+    {
+      "name": "periodEnd",
+      "valueDate": "${PeriodEnd}"
+    },
+    {
+      "name": "subject",
+      "valueUri": "Patient/${PatientId}"
+    }
+  ]
+}

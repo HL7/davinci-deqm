@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="summ-measurereport01"/>
+  <meta>
+    <source value="http://example.org/fhir/server"/>
+    <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>DEQM Measure Scoring Extension</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-scoring proportion}">Proportion</span></p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example">http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example</a></p><p><b>date</b>: Sep 5, 2018, 4:59:52 PM</p><p><b>reporter</b>: <a href="Organization-organization01.html">Generated Summary: Tax ID number: 123456789 (OFFICIAL); active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span>; name: DaVinciHospital01; Phone: (+1) 401-555-1212</a></p><p><b>period</b>: 2018-08-01 --&gt; 2018-09-01</p><p><b>improvementNotation</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}">Increased score indicates improvement</span></p><blockquote><p><b>group</b></p><p><b>code</b>: <span title="Codes: {http://example.org/fhir/ mrp-group}">MRP Group</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population initial-population}">Initial Population</span></p><p><b>count</b>: 100</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population numerator}">Numerator</span></p><p><b>count</b>: 80</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/measure-population denominator}">Denominator</span></p><p><b>count</b>: 100</p></blockquote><p><b>measureScore</b>: 0.8</p></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"/>
+        <code value="proportion"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="complete"/>
+  <type value="summary"/>
+  <measure value="http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example"/>
+  <date value="2018-09-05T16:59:52.404Z"/>
+  <reporter>
+    <extension url="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup">
+      <valueReference>
+        <reference value="Group/group01"/>
+      </valueReference>
+    </extension>
+    <reference value="Organization/organization01"/>
+  </reporter>
+  <period>
+    <start value="2018-08-01"/>
+    <end value="2018-09-01"/>
+  </period>
+  <improvementNotation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+      <code value="increase"/>
+      <display value="Increased score indicates improvement"/>
+    </coding>
+  </improvementNotation>
+  <group>
+    <code>
+      <coding>
+        <system value="http://example.org/fhir/"/>
+        <code value="mrp-group"/>
+        <display value="MRP Group"/>
+      </coding>
+      <text value="MRP Group"/>
+    </code>
+    <population id="initial-population">
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="100"/>
+    </population>
+    <population id="numerator">
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="numerator"/>
+          <display value="Numerator"/>
+        </coding>
+      </code>
+      <count value="80"/>
+    </population>
+    <population id="denominator">
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="denominator"/>
+          <display value="Denominator"/>
+        </coding>
+      </code>
+      <count value="100"/>
+    </population>
+    <measureScore>
+      <value value="0.8"/>
+    </measureScore>
+  </group>
+</MeasureReport>

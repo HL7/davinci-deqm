@@ -1,0 +1,132 @@
+<RuleSet>
+
+	<description value="XML Ruleset to assert conformance of DEQM resources. Asserts are skipped if there are no matching resources."/>
+	<rule id="rule-validate-deqm-measure-report">
+		<required value="true"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='measure-report']/resource/MeasureReport"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'measure-report').resource.as(MeasureReport)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"/>
+		</param>
+	</rule>
+	<rule id="rule-validate-qi-patient">
+		<required value="true"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='resource']/resource/Patient"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'resource').resource.as(Patient)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+		</param>
+	</rule>
+	<rule id="rule-validate-qi-practitioner">
+		<required value="true"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='resource']/resource/Practitioner"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'resource').resource.as(Practitioner)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"/>
+		</param>
+	</rule>
+	<rule id="rule-validate-qi-encounter">
+		<required value="true"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='resource']/resource/Encounter"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'resource').resource.as(Encounter)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"/>
+		</param>
+	</rule>
+	<rule id="rule-validate-qi-organization">
+		<required value="true"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='resource']/resource/Organization"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'resource').resource.as(Organization)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
+		</param>
+	</rule>
+	<rule id="rule-validate-deqm-coverage">
+		<required value="true"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='resource']/resource/Coverage"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'resource').resource.as(Coverage)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"/>
+		</param>
+	</rule>
+	<rule id="rule-validate-qi-observation">
+		<required value="false"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='resource']/resource/Observation"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'resource').resource.as(Observation)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"/>
+		</param>
+	</rule>
+	<rule id="rule-validate-qi-task">
+		<required value="false"/>
+		<reference value="/FHIRCommon/_reference/rule/AssertValidateXMLExtractProfileId-withFhirPath.groovy"/>
+		<param>
+			<name value="xPath"/>
+			<value value="/Parameters/parameter[./name/@value='resource']/resource/Task"/>
+		</param>
+		<param>
+			<name value="fhirPath"/>
+			<value value="Parameters.parameter.where(name = 'resource').resource.as(Task)"/>
+		</param>
+		<param>
+			<name value="profilePath"/>
+			<value value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"/>
+		</param>
+	</rule>
+</RuleSet>

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestScript xmlns="http://hl7.org/fhir">
+	<id value="End-To-End-Reporting-xml"/>
+	<meta>
+		<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+	</meta>
+
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml"><p>End-To-End-Reporting-xml</p></div>
+	</text>	
+	
+	<url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/End-To-End-Reporting-xml"/>
+	<name value="End-To-End-Reporting-xml"/>
+
+	<status value="active"/>
+	<date value="2021-06-22"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<name value="Touchstone Support"/>
+		<telecom>
+			<system value="email"/>
+			<value value="Touchstone_Support@aegis.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="As a practitioner, get all gaps for a patient. All $care-gaps operations are performed using the FHIR Operation Framework HTTP GET method with url inline parameters. Preconditions: Server has pre-loaded the Clinical Reasoning standard test data set patient and measure data for the patient."/>
+	<copyright value="(c) AEGIS.net, Inc. 2019"/>
+
+	<origin>
+		<index value="1" />
+		<profile>
+			<system value="http://hl7.org/fhir/testscript-profile-origin-types" />
+			<code value="FHIR-Client" />
+		</profile>
+	</origin>
+	<destination>
+		<index value="1" />
+		<profile>
+			<system value="http://hl7.org/fhir/testscript-profile-destination-types" />
+			<code value="FHIR-Server" />
+		</profile>
+	</destination>
+
+	<fixture id="Parameters-end-to-end-submit-data">
+		<autocreate value="false"/>
+		<autodelete value="false"/>
+		<resource>
+			<reference value="./_reference/resources/EXM130-73000-end-to-end-submit-data-bundle.xml"/>
+		</resource>
+	</fixture>
+
+	<profile id="ParametersProfileBase">
+		<reference value="http://hl7.org/fhir/StructureDefinition/Parameters" />
+	</profile>
+
+	<variable>
+		<name value="measureId"/>
+		<defaultValue value="measure-EXM130-7.3.000"/>
+		<description value="Default Measure with Clinical Reasoning standard data set."/>
+	</variable>
+	<variable>
+		<name value="periodStart"/>
+		<defaultValue value="2019-01-01"/>
+		<description value="Default start of a gaps through period."/>
+	</variable>
+	<variable>
+		<name value="periodEnd"/>
+		<defaultValue value="2019-12-31"/>
+		<description value="Default end of a gaps through period."/>
+	</variable>
+	<variable>
+		<name value="statusClosed"/>
+		<defaultValue value="closed-gap"/>
+		<description value="Default Closed Gap status."/>
+	</variable>
+	<variable>
+		<name value="statusOpen"/>
+		<defaultValue value="open-gap"/>
+		<description value="Default Open Gap status."/>
+	</variable>
+	<variable>
+		<name value="subject"/>
+		<defaultValue value="Patient/end-to-end-EXM130"/>
+		<description value="Default Patient with Clinical Reasoning standard data set."/>
+	</variable>
+
+	<setup>
+		<action>
+			<operation>
+				<type>
+					<system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+					<code value="delete"/>
+				</type>
+				<resource value="Encounter"/>
+				<description value="Delete operation to ensure the Encounter created from a previous test execution does not exist on the server."/>
+				<accept value="xml"/>
+				<contentType value="none"/>
+				<encodeRequestUrl value="true"/>
+				<params value="/end-to-end-EXM130-4"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is either 200(OK), 204(No Content) or 404(Not Found)."/>
+				<operator value="in"/>
+				<responseCode value="200,204,404"/>
+				<warningOnly value="false"/>
+			</assert>
+		</action>
+
+		<action>
+			<operation>
+				<type>
+					<system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+					<code value="delete"/>
+				</type>
+				<resource value="Procedure"/>
+				<description value="Delete operation to ensure the Procedure created from a previous test execution does not exist on the server."/>
+				<accept value="xml"/>
+				<contentType value="none"/>
+				<encodeRequestUrl value="true"/>
+				<params value="/end-to-end-EXM130-1"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is either 200(OK), 204(No Content) or 404(Not Found)."/>
+				<operator value="in"/>
+				<responseCode value="200,204,404"/>
+				<warningOnly value="false"/>
+			</assert>
+		</action>
+	</setup>
+
+	<test id="End-To-End-Reporting-xml">
+		<name value="End-To-End-Reporting-xml"/>
+		<description value="Query for the gaps in care for a patient using HTTP GET. Expected response is 200 (OK)."/>
+		<action>
+			<operation>
+				<type>
+					<system value="http://touchstone.com/fhir/testscript-operation-codes-extended"/>
+					<code value="care-gaps"/>
+				</type>
+				<resource value="Measure"/>
+				<description value="Run the $care-gaps operation for a patient."/>
+				<accept value="xml"/>
+				<contentType value="xml"/>
+				<destination value="1" />
+				<encodeRequestUrl value="true"/>
+				<method value="get"/>
+				<origin value="1" />
+				<params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;status=${statusOpen}&amp;status=${statusClosed}&amp;subject=${subject}&amp;measureId=${measureId}"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is 200(OK)."/>
+				<direction value="response" />
+				<operator value="in"/>
+				<responseCode value="200"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the response body contains a Parameters resource"/>
+				<direction value="response" />
+				<resource value="Parameters"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Validate the response Parameters. Warning only to allow for review of results."/>
+				<direction value="response" />
+				<validateProfileId value="ParametersProfileBase"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Check for the existence of at least one open-gap status. Warning only to allow for review of results."/>
+				<direction value="response" />
+				<expression value="Parameters.parameter.where(name = 'return').resource.entry.select(resource as DetectedIssue).modifierExtension.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus').value.where(coding.code = 'open-gap').exists()"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>
+
+		<action>
+			<operation>
+				<type>
+					<system value="http://touchstone.com/fhir/testscript-operation-codes-extended"/>
+					<code value="submit-data"/>
+				</type>
+				<resource value="Measure"/>
+				<description value="Run the $submit-data operation for a patient."/>
+				<accept value="xml"/>
+				<contentType value="xml"/>
+				<destination value="1" />
+				<encodeRequestUrl value="true"/>
+				<origin value="1" />
+				<params value="/${measureId}/$submit-data"/>
+				<sourceId value="Parameters-end-to-end-submit-data"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request body contains a Parameters"/>
+				<direction value="request" />
+				<resource value="Parameters"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Validate the request Parameters. Warning only to allow for review of results."/>
+				<direction value="request" />
+				<validateProfileId value="ParametersProfileBase"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is 200(OK)."/>
+				<direction value="response" />
+				<operator value="in"/>
+				<responseCode value="200"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+
+		<action>
+			<operation>
+				<type>
+					<system value="http://touchstone.com/fhir/testscript-operation-codes-extended"/>
+					<code value="care-gaps"/>
+				</type>
+				<resource value="Measure"/>
+				<description value="Run the $care-gaps operation for a patient."/>
+				<accept value="xml"/>
+				<contentType value="xml"/>
+				<destination value="1" />
+				<encodeRequestUrl value="true"/>
+				<method value="get"/>
+				<origin value="1" />
+				<params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;status=${statusOpen}&amp;status=${statusClosed}&amp;subject=${subject}&amp;measureId=${measureId}"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is 200(OK)."/>
+				<direction value="response" />
+				<operator value="in"/>
+				<responseCode value="200"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+xml'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+xml"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the response body contains a Parameters"/>
+				<direction value="response" />
+				<resource value="Parameters"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Validate the response Parameters. Warning only to allow for review of results."/>
+				<direction value="response" />
+				<validateProfileId value="ParametersProfileBase"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Check for the existence of no open-gap statuses. Warning only to allow for review of results."/>
+				<direction value="response" />
+				<expression value="Parameters.parameter.where(name = 'return').resource.entry.select(resource as DetectedIssue).modifierExtension.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus').value.where(coding.code = 'open-gap').exists().not()"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>
+	</test>
+</TestScript>

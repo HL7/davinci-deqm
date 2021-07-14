@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestScript xmlns="http://hl7.org/fhir">
+	<id value="04-Patient-Group-json"/>
+	<meta>
+		<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+	</meta>
+
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml"><p>04-Patient-Group-json</p></div>
+	</text>	
+	
+	<url value="http://wildfhir.aegis.net/fhir4-0-1/TestScript/04-Patient-Group-json"/>
+	<name value="04-Patient-Group-json"/>
+
+	<status value="active"/>
+	<date value="2020-04-28"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<name value="Touchstone Support"/>
+		<telecom>
+			<system value="email"/>
+			<value value="Touchstone_Support@aegis.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="As a practitioner, get all gaps for all patients in a group. All $care-gaps operations are performed using the FHIR Operation Framework HTTP GET method with url inline parameters. Preconditions: Server knows the patients (a Group of patients) and has measure data for the Group of patients."/>
+	<copyright value="(c) AEGIS.net, Inc. 2019"/>
+
+	<origin>
+		<index value="1" />
+		<profile>
+			<system value="http://hl7.org/fhir/testscript-profile-origin-types" />
+			<code value="FHIR-Client" />
+		</profile>
+	</origin>
+	<destination>
+		<index value="1" />
+		<profile>
+			<system value="http://hl7.org/fhir/testscript-profile-destination-types" />
+			<code value="FHIR-Server" />
+		</profile>
+	</destination>
+
+	<profile id="ParametersProfileBase">
+		<reference value="http://hl7.org/fhir/StructureDefinition/Parameters" />
+	</profile>
+
+
+	<variable>
+		<name value="GroupId"/>
+		<description value="Enter a resource id for a valid Patient Group on the destination system."/>
+		<hint value="[Valid Group Id formatted as Group/groupId]"/>
+	</variable>
+	<variable>
+		<name value="periodStartValue"/>
+		<defaultValue value="2019-01-01"/>
+		<description value="The start of a gaps through period."/>
+	</variable>
+	<variable>
+		<name value="periodEndValue"/>
+		<defaultValue value="2019-12-31"/>
+		<description value="The end of a gaps through period."/>
+	</variable>
+        <variable> 
+               <name value="status"/>  
+               <defaultValue value="open-gap"/>  
+               <description value="open or closed gaps"/> 
+        </variable> 
+
+	<test id="04-Patient-Group-json">
+		<name value="04-Patient-Group-json"/>
+		<description value="Query for the gaps in care for a patient using HTTP GET. Expected response is 200 (OK)."/>
+		<action>
+			<operation>
+				<type>
+					<system value="http://touchstone.com/fhir/testscript-operation-codes-extended"/>
+					<code value="care-gaps"/>
+				</type>
+				<resource value="Measure"/>
+				<description value="Run the $care-gaps operation for a patient."/>
+				<accept value="json"/>
+				<contentType value="json"/>
+				<destination value="1" />
+				<encodeRequestUrl value="true"/>
+				<method value="get"/>
+				<origin value="1" />
+				<params value="/$care-gaps?periodStart=${periodStartValue}&amp;periodEnd=${periodEndValue}&amp;subject=${GroupId}&amp;status=${status}"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept format is the FHIR mime-type 'application/fhir+json'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="application/fhir+json"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Accept contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Accept"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+json'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+json"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the request HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="request"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is 200(OK)."/>
+				<direction value="response" />
+				<operator value="in"/>
+				<responseCode value="200"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type format is the FHIR mime-type 'application/fhir+json'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="application/fhir+json"/>
+				<warningOnly value="true" />
+			</assert>
+		</action>		
+		<action>
+			<assert>
+				<description value="Confirm that the response HTTP Header Content-Type contains 'charset=utf-8'."/>
+				<direction value="response"/>
+				<headerField value="Content-Type"/>
+				<operator value="contains"/>
+				<value value="charset=utf-8"/>
+				<warningOnly value="true"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the response body contains a Parameters"/>
+				<direction value="response" />
+				<resource value="Parameters"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Validate the response Parameters."/>
+				<direction value="response" />
+				<validateProfileId value="ParametersProfileBase"/>
+				<warningOnly value="false" />
+			</assert>
+		</action>
+	</test>
+</TestScript>

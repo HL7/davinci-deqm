@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Parameters xmlns="http://hl7.org/fhir">
+	<parameter>
+		<name value="periodStart"/>
+		<valueDate value="${PeriodStart}"/>
+	</parameter>
+	<parameter>
+		<name value="periodEnd"/>
+		<valueDate value="${PeriodEnd}"/>
+	</parameter>
+	<parameter>
+		<name value="subject"/>
+		<valueUri value="Patient/${PatientId}"/>
+	</parameter>
+</Parameters>
