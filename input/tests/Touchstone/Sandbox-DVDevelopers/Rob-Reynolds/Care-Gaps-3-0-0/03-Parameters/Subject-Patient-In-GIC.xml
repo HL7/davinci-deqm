@@ -64,7 +64,7 @@
   </variable>
   <test id="Subject-Patient-In">
     <name value="Subject-Patient-In"/>
-    <description value="Query for the gaps in care using periodEnd in parameters. Expected response is 200 (OK)."/>
+    <description value="Query for the gaps in care using subject/Patient in parameters. Expected response is 200 (OK)."/>
     <action>
       <operation>
         <type>
