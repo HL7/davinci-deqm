@@ -1506,6 +1506,12 @@
       "topic": [ {
         "coding": [ {
           "system": "http://loinc.org",
+          "code": "57024-2",
+          "display": "Test Topic"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "http://loinc.org",
           "code": "11111-1",
           "display": "Test Topic"
         } ]
