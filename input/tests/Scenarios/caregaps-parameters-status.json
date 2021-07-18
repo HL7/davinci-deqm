@@ -23,6 +23,10 @@
                   "code": "2028-9",
                   "display": "Asian"
                 }
+              },
+              {
+                "url": "text",
+                "valueString": "Asian"
               }
             ]
           },
@@ -36,6 +40,10 @@
                   "code": "2135-2",
                   "display": "Hispanic or Latino"
                 }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
               }
             ]
           }
@@ -292,6 +300,10 @@
                   "code": "2028-9",
                   "display": "Asian"
                 }
+              },
+              {
+                "url": "text",
+                "valueString": "Asian"
               }
             ]
           },
@@ -305,6 +317,10 @@
                   "code": "2135-2",
                   "display": "Hispanic or Latino"
                 }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
               }
             ]
           }
