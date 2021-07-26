@@ -53,9 +53,24 @@
     <description value="Default end of a gaps through period."/>
   </variable>
   <variable>
-    <name value="freeformAdditionalParams"/>
-    <defaultValue value="status=open-gap&amp;status=closed-gap&amp;subject=Patient/caregaps-parameters-standard&amp;measureId=measure-EXM130-7.3.000&amp;program=eligible-provider"/>
-    <description value="Care Gap variable parameters; status is minimum required."/>
+    <name value="status"/>
+    <defaultValue value="status=open-gap&amp;status=closed-gap"/>
+    <description value="Default end of a gaps through status."/>
+  </variable>
+  <variable>
+    <name value="subject"/>
+    <defaultValue value="Patient/caregaps-parameters-standard"/>
+    <description value="Default end of a gaps through subject."/>
+  </variable>
+  <variable>
+    <name value="measureId"/>
+    <defaultValue value="measure-EXM130-7.3.000"/>
+    <description value="Default end of a gaps through measureId."/>
+  </variable>
+  <variable>
+    <name value="program"/>
+    <defaultValue value="eligible-provider"/>
+    <description value="Default end of a gaps through program."/>
   </variable>
   <variable>
     <name value="expectedNumParameters"/>
@@ -79,7 +94,7 @@
         <encodeRequestUrl value="true"/>
         <method value="get"/>
         <origin value="1" />
-        <params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;${freeformAdditionalParams}"/>
+        <params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;${status}&amp;subject=${subject}&amp;measureId=${measureId}&amp;program=${program}"/>
         <responseId value="searchResponse"/>
       </operation>
     </action>
