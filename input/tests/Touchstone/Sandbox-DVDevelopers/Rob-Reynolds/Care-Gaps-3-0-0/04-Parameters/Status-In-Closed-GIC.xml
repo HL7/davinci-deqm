@@ -58,9 +58,9 @@
     <description value="Status."/>
   </variable>
   <variable>
-    <name value="expectedNumParameters"/>
-    <defaultValue value="1"/>
-    <description value="Number of expected Parameters resources in response.  Will be validated in the test."/>
+    <name value="subject"/>
+    <defaultValue value="Patient/caregaps-parameters-standard"/>
+    <description value="Subject parameter."/>
   </variable>
   <variable>
     <name value="measureId"/>
@@ -68,9 +68,9 @@
     <description value="Measure id"/>
   </variable>
   <variable>
-    <name value="subject"/>
-    <defaultValue value="Patient/caregaps-parameters-standard"/>
-    <description value="Subject parameter."/>
+    <name value="expectedNumParameters"/>
+    <defaultValue value="1"/>
+    <description value="Number of expected Parameters resources in response.  Will be validated in the test."/>
   </variable>
   <test id="Status-In-Closed">
     <name value="Status-In-Closed"/>

@@ -53,16 +53,6 @@
     <description value="Default end of a gaps through period."/>
   </variable>
   <variable>
-    <name value="subject"/>
-    <defaultValue value="Patient/caregaps-parameters-standard"/>
-    <description value="Subject parameter."/>
-  </variable>
-  <variable>
-    <name value="measureId"/>
-    <defaultValue value="measure-EXM130-7.3.000"/>
-    <description value="Measure to be processes."/>
-  </variable>
-  <variable>
     <name value="statusClosed"/>
     <defaultValue value="closed-gap"/>
     <description value="Status closed gap"/>
@@ -71,6 +61,16 @@
     <name value="statusNotInIP"/>
     <defaultValue value="not-in-ip"/>
     <description value="Status not in IP"/>
+  </variable>
+  <variable>
+    <name value="subject"/>
+    <defaultValue value="Patient/caregaps-parameters-standard"/>
+    <description value="Subject parameter."/>
+  </variable>
+  <variable>
+    <name value="measureId"/>
+    <defaultValue value="measure-EXM130-7.3.000"/>
+    <description value="Measure to be processes."/>
   </variable>
   <variable>
     <name value="expectedNumParameters"/>
