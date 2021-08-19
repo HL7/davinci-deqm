@@ -58,6 +58,21 @@
     <description value="Care Gap variable parameters; status is minimum required."/>
   </variable>
   <variable>
+    <name value="status"/>
+    <defaultValue value="not-in-ip"/>
+    <description value="Status."/>
+  </variable>
+  <variable>
+    <name value="subject"/>
+    <defaultValue value="Patient/caregaps-parameters-standard"/>
+    <description value="Subject patient."/>
+  </variable>
+  <variable>
+    <name value="measureId"/>
+    <defaultValue value="measure-EXM130-7.3.000"/>
+    <description value="Measure id."/>
+  </variable>
+  <variable>
     <name value="expectedNumParameters"/>
     <defaultValue value="1"/>
     <description value="Number of expected Parameters resources in response.  Will be validated in the test."/>
@@ -79,7 +94,7 @@
         <encodeRequestUrl value="true"/>
         <method value="get"/>
         <origin value="1" />
-        <params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;${freeformAdditionalParams}"/>
+        <params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;status=${status}&amp;subject=${subject}&amp;measureId=${measureId}"/>
         <responseId value="searchResponse"/>
       </operation>
     </action>
