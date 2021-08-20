@@ -53,7 +53,6 @@
     <description value="Default end of a gaps through period."/>
   </variable>
   <variable>
-  <variable>
     <name value="statusOpen"/>
     <defaultValue value="open-gap"/>
     <description value="Status open."/>
@@ -62,7 +61,7 @@
     <name value="statusClosed"/>
     <defaultValue value="closed-gap"/>
     <description value="Status closed."/>
-  </variable>  
+  </variable>
   <variable>
     <name value="subject"/>
     <defaultValue value="Patient/bad-value"/>
@@ -72,7 +71,7 @@
     <name value="measureId"/>
     <defaultValue value="measure-EXM130-7.3.000"/>
     <description value="measureId."/>
-  </variable>    
+  </variable>
   <variable>
     <name value="expectedNumParameters"/>
     <defaultValue value="0"/>
