@@ -53,9 +53,14 @@
     <description value="Default end of a gaps through period."/>
   </variable>
   <variable>
-    <name value="status"/>
-    <defaultValue value="status=open-gap&amp;status=closed-gap"/>
-    <description value="Default end of a gaps through status."/>
+    <name value="statusOpen"/>
+    <defaultValue value="open-gap"/>
+    <description value="Status open gap."/>
+  </variable>
+  <variable>
+    <name value="statusClosed"/>
+    <defaultValue value="closed-gap"/>
+    <description value="Status closed gap."/>
   </variable>
   <variable>
     <name value="subject"/>
@@ -84,7 +89,7 @@
         <encodeRequestUrl value="true"/>
         <method value="get"/>
         <origin value="1" />
-        <params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;${status}&amp;subject=${subject}"/>
+        <params value="/$care-gaps?periodStart=${periodStart}&amp;periodEnd=${periodEnd}&amp;status=${statusOpen}&amp;status=${statusClosed}&amp;subject=${subject}"/>
         <responseId value="searchResponse"/>
       </operation>
     </action>
