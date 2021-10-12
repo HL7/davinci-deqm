@@ -138,4 +138,10 @@ The second official published version of the DEQM IG for FHIR R4.
     - Updated 2.1.7 Must Support. ([FHIR-31961](https://jira.hl7.org/browse/FHIR-31961))
     - Updated Figure 1-1 and Figure 2-12 to use the new Quality Improvement Ecosystem diagram.
 
+### Changes and Updates for Version xxx
+
+  **Terminology Updated**
+  -Added new value to Gap Status Code System of Non Applicable for when a criteria is not met to include the patient in the Initial Population ([FHIR-32980](https://jira.hl7.org/browse/FHIR-32980))
+
+
 {% include link-list.md %}
