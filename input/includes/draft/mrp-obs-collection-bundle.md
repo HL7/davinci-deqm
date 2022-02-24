@@ -141,7 +141,7 @@
                         {
                             "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ext-referenceAny",
                             "valueReference": {
-                                "reference": "Obs/mrp-example1"
+                                "reference": "Observation/mrp-example1"
                             }
                         }
                     ]
