@@ -2,7 +2,7 @@
 
 ## [STU3 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU1)
 
-## (Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
+## [Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
 
 Primary Author:  Eric Haas
 
