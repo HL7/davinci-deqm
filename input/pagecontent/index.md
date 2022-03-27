@@ -197,6 +197,7 @@ For additional definitions see the [eCQI Resource Center Glossary]
 - *Sam Sayer, The MITRE Corporation*
 - *Viet Nguyen, Stratametrics*
 - *Yan Heras, Optimum eHealth LLC*
+
 ---
 
 {% include link-list.md %}
