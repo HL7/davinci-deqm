@@ -1,7 +1,6 @@
 # DaVinci Data Exchange For Quality Measures
 
 
-
 ## [STU3 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU1)
 
 ## [Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
@@ -48,5 +47,7 @@ The following package file contains an NPM package file "hl7.fhir.davinci.deqm" 
 
 ### References  
 
-[HL7 Confluence Workgroup - Data Exchange For Quality Measures ](https://confluence.hl7.org/pages/viewpage.action?pageId=21857600)
+- [HL7 Confluence Workgroup - Data Exchange For Quality Measures ](https://confluence.hl7.org/pages/viewpage.action?pageId=21857600)  
+- [Electronic Clinical Quality Improvement (eCQI) Resource Center](https://ecqi.healthit.gov/)  
+
 
