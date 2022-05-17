@@ -17,7 +17,7 @@ contact:
         value: 'http://www.hl7.org/Special/committees/cqi/index.cfm'
 url: >-
   http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm
-version: 3.0.0
+version: 3.1.0
 packageId: hl7.fhir.us.davinci-deqm
 dependsOn:
   - version: 4.0.0
