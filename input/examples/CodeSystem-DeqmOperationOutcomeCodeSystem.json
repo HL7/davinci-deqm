@@ -1,0 +1,58 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DeqmOperationOutcomeCodeSystem",
+  "id": "DeqmOperationOutcomeCodeSystem",
+  "title": "DeqmOperationOutcomeCodeSystem",
+  "description": "Codesystem for OperationOutcomes used in DEQM settings.",
+  "version": "0.1.0",
+  "url": "https://gitlab.mitre.org/awatson/deqm-sandbox/CodeSystem/DeqmOperationOutcomeCodeSystem",
+  "concept": [
+    {
+      "code": "NotFound",
+      "display": "Data Element Not Found"
+    },
+    {
+      "code": "Missing",
+      "display": "Missing Data Element"
+    },
+    {
+      "code": "Present",
+      "display": "Data Element is Present"
+    },
+    {
+      "code": "InvalidAttribute",
+      "display": "Attribute is Invalid"
+    },
+    {
+      "code": "DateInRange",
+      "display": "Date is within specified range"
+    },
+    {
+      "code": "DateOutOfRange",
+      "display": "Date is out of specified range"
+    },
+    {
+      "code": "ValueInRange",
+      "display": "Value is within specified range"
+    },
+    {
+      "code": "ValueOutOfRange",
+      "display": "Value is out of specified range"
+    },
+    {
+      "code": "CountInRange",
+      "display": "Count is within specified range"
+    },
+    {
+      "code": "CountOutOfRange",
+      "display": "Count is out of specified range"
+    },
+    {
+      "code": "NotAllowed",
+      "display": "Data Element was not used in care gap calculation due to an external requirement"
+    }
+  ],
+  "count": 11
+}
