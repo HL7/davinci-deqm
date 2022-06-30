@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DeqmDataReasonValueSet",
+  "id": "DeqmDataReasonValueSet",
+  "title": "DeqmDataReasonValueSet",
+  "description": "ended valueset for OperationOutcomes used in DEQM settings.",
+  "version": "0.1.0",
+  "url": "https://build.fhir.org/ig/HL7/davinci-deqm/DeqmDataReasonValueSet",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "https://build.fhir.org/ig/HL7/davinci-deqm/StructureDefinition-DeqmDataReasonCodeSystem.html"
+        ]
+      }
+    ]
+  }
+}

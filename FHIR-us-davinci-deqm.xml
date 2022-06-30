@@ -12,6 +12,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="ExampleScenario/FederatedQuery" key="ExampleScenario-FederatedQuery" name=""/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
 <artifact id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
 <artifact id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>
@@ -50,8 +51,8 @@
 <artifact id="MeasureReport/datax-measurereport01" key="MeasureReport-datax-measurereport01" name="Datax Measurereport01"/>
 <artifact id="MeasureReport/datax-measurereport02" key="MeasureReport-datax-measurereport02" name="Datax Measurereport02"/>
 <artifact id="MeasureReport/datax-measurereport03" key="MeasureReport-datax-measurereport03" name="Datax Measurereport03"/>
-<artifact id="CodeSystem/DeqmOperationOutcomeCodeSystem" key="CodeSystem-DeqmOperationOutcomeCodeSystem" name="DeqmOperationOutcomeCodeSystem"/>
-<artifact id="ValueSet/DeqmOperationOutcomeValueSet" key="ValueSet-DeqmOperationOutcomeValueSet" name="DeqmOperationOutcomeValueSet"/>
+<artifact id="CodeSystem/DeqmDataReasonCodeSystem" key="CodeSystem-DeqmDataReasonCodeSystem" name="DeqmDataReasonCodeSystem"/>
+<artifact id="ValueSet/DeqmDataReasonValueSet" key="ValueSet-DeqmDataReasonValueSet" name="DeqmDataReasonValueSet"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>

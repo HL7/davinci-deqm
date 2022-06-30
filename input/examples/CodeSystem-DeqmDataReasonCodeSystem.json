@@ -2,12 +2,12 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "DeqmOperationOutcomeCodeSystem",
-  "id": "DeqmOperationOutcomeCodeSystem",
-  "title": "DeqmOperationOutcomeCodeSystem",
+  "name": "DeqmDataReasonCodeSystem",
+  "id": "DeqmDataReasonCodeSystem",
+  "title": "DeqmDataReasonCodeSystem",
   "description": "Codesystem for OperationOutcomes used in DEQM settings.",
   "version": "0.1.0",
-  "url": "https://gitlab.mitre.org/awatson/deqm-sandbox/CodeSystem/DeqmOperationOutcomeCodeSystem",
+  "url": "https://build.fhir.org/ig/HL7/davinci-deqm/DeqmDataReasonCodeSystem", 
   "concept": [
     {
       "code": "NotFound",

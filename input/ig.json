@@ -198,6 +198,22 @@
         "resource": [
             {
                 "exampleBoolean": true,
+                "name": "DeqmDataReasonCodeSystem",
+                "reference": {
+                    "reference": "CodeSystem/DeqmDataReasonCodeSystem"
+                },
+                "description": "DeqmDataReasonCodeSystem"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "DeqmDataReasonValueSet",
+                "reference": {
+                    "reference": "ValueSet/DeqmDataReasonValueSet"
+                },
+                "description": "DeqmDataReasonValueSet"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Organization02",
                 "reference": {
                     "reference": "Organization/organization02"
