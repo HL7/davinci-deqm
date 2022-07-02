@@ -198,19 +198,19 @@
         "resource": [
             {
                 "exampleBoolean": true,
-                "name": "DeqmDataReasonCodeSystem",
+                "name": "DEQM Data Reason CodeSystem",
                 "reference": {
                     "reference": "CodeSystem/DeqmDataReasonCodeSystem"
                 },
-                "description": "DeqmDataReasonCodeSystem"
+                "description": "DEQM Data Reason CodeSystem"
             },
             {
                 "exampleBoolean": true,
-                "name": "DeqmDataReasonValueSet",
+                "name": "DEQM Data Reason ValueSet",
                 "reference": {
                     "reference": "ValueSet/DeqmDataReasonValueSet"
                 },
-                "description": "DeqmDataReasonValueSet"
+                "description": "DEQM Data Reason ValueSet"
             },
             {
                 "exampleBoolean": true,

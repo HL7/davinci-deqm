@@ -24,6 +24,8 @@
 <artifact id="StructureDefinition/extension-certificationIdentifier" key="StructureDefinition-extension-certificationIdentifier" name="DEQM Certification Identifier Extension"/>
 <artifact id="StructureDefinition/coverage-deqm" key="StructureDefinition-coverage-deqm" name="DEQM Coverage Profile"/>
 <artifact id="StructureDefinition/datax-measurereport-deqm" key="StructureDefinition-datax-measurereport-deqm" name="DEQM Data Exchange MeasureReport Profile"/>
+<artifact id="CodeSystem/DeqmDataReasonCodeSystem" key="CodeSystem-DeqmDataReasonCodeSystem" name="DEQM Data Reason CodeSystem"/>
+<artifact id="ValueSet/DeqmDataReasonValueSet" key="ValueSet-DeqmDataReasonValueSet" name="DEQM Data Reason ValueSet"/>
 <artifact id="StructureDefinition/extension-gapStatus" key="StructureDefinition-extension-gapStatus" name="DEQM Gap Status Modifier Extension"/>
 <artifact id="StructureDefinition/gaps-bundle-deqm" key="StructureDefinition-gaps-bundle-deqm" name="DEQM Gaps In Care Bundle Profile"/>
 <artifact id="StructureDefinition/gaps-composition-deqm" key="StructureDefinition-gaps-composition-deqm" name="DEQM Gaps In Care Composition Profile"/>
@@ -51,8 +53,6 @@
 <artifact id="MeasureReport/datax-measurereport01" key="MeasureReport-datax-measurereport01" name="Datax Measurereport01"/>
 <artifact id="MeasureReport/datax-measurereport02" key="MeasureReport-datax-measurereport02" name="Datax Measurereport02"/>
 <artifact id="MeasureReport/datax-measurereport03" key="MeasureReport-datax-measurereport03" name="Datax Measurereport03"/>
-<artifact id="CodeSystem/DeqmDataReasonCodeSystem" key="CodeSystem-DeqmDataReasonCodeSystem" name="DeqmDataReasonCodeSystem"/>
-<artifact id="ValueSet/DeqmDataReasonValueSet" key="ValueSet-DeqmDataReasonValueSet" name="DeqmDataReasonValueSet"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
