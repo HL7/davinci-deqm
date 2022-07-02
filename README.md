@@ -74,7 +74,7 @@ instructions there, for example `gem install jekyll bundler`.  The end
 result of this should be that the binary "jekyll" is now in your path.
 
 
-### References  
+## References  
 
 - [HL7 Confluence Workgroup - Data Exchange For Quality Measures ](https://confluence.hl7.org/pages/viewpage.action?pageId=21857600)  
 - [Electronic Clinical Quality Improvement (eCQI) Resource Center](https://ecqi.healthit.gov/)  
