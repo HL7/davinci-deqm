@@ -68,9 +68,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 
 #### Data Quality  
-The default profiles provide a baseline for this validation, but specific content may introduce additional validation criteria that are expressed in profiles.
-
-This interplay may be surfaced through the use of IG-specific models in the CQL, but may also be expressed in guidance provided as part of the measure specifications to indicate which profiles are expected to be used to validate data used in the evaluation of a quality measure or care gap.
+The default profiles in this implementation guide provide a baseline for data validation, but note that additional validation criteria may be expressed via Measure specific profiles.  This process begins by modeling the data quality requirements in CQL, then extending one of the default profiles in this guide with the updated CQL, and specifying the profile in the meta data of the FHIR Measure resource.  In effect, the `Measure.meta.profile` field will hold a link to a data profile that contains the CQL script that can be used for data quality, data itegrity checks, and data validation.  
 
 ### Quality Reporting Scenarios
 
