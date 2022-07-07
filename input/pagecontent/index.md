@@ -67,6 +67,11 @@ This Guide is divided into several pages which are listed at the top of each pag
 {% include data-model-standards-landscape.md %}
 
 
+#### Data Quality  
+The default profiles provide a baseline for this validation, but specific content may introduce additional validation criteria that are expressed in profiles.
+
+This interplay may be surfaced through the use of IG-specific models in the CQL, but may also be expressed in guidance provided as part of the measure specifications to indicate which profiles are expected to be used to validate data used in the evaluation of a quality measure or care gap.
+
 ### Quality Reporting Scenarios
 
 This implementation guide describes two groups of quality reporting scenarios as shown in Figure 1-4 below. The first group are *Exchange Scenarios* which focus on exchanging subsets of the [data of interest](#data-of-interest) for a particular measure or set of measures throughout the [measurement period](#measurement-period).  Note that there are use cases for sharing data from a consumer to a producer as well (for example, payers may share screening information with providers). The Second group are *Reporting Scenarios* which focus on communicating the results of a quality measure at the end of a measurement period as part of a quality improvement initiative.
