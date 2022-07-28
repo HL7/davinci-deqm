@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="" defaultWorkgroup="" gitUrl="https://github.com/HL7/davinci-deqm" url="http://hl7.org/fhir/us/davinci-deqm">
-<version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/index.html"/>
-<version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm" defaultVersion="3.0.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/davinci-deqm" url="http://hl7.org/fhir/us/davinci-deqm">
+<version code="current" url="http://build.fhir.org/ig/HL7/davinci-deqm"/>
+<version code="3.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU3"/>
+<version code="2.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Sep"/>
+<version code="2.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU2"/>
+<version code="1.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Feb"/>
+<version code="1.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU1"/>
+<version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2019May"/>
+<version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2018Sep"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="CodeSystem/careGapReasonCS" key="CodeSystem-careGapReasonCS" name="Care Gap Reasons Code System"/>
+<artifact id="ValueSet/careGapReasonVS" key="ValueSet-careGapReasonVS" name="Care Gap Reasons Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
 <artifact id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
 <artifact id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>
@@ -44,6 +52,7 @@
 <artifact id="MeasureReport/datax-measurereport01" key="MeasureReport-datax-measurereport01" name="Datax Measurereport01"/>
 <artifact id="MeasureReport/datax-measurereport02" key="MeasureReport-datax-measurereport02" name="Datax Measurereport02"/>
 <artifact id="MeasureReport/datax-measurereport03" key="MeasureReport-datax-measurereport03" name="Datax Measurereport03"/>
+<artifact id="StructureDefinition/detailedCareGapGuidanceResponse" key="StructureDefinition-detailedCareGapGuidanceResponse" name="Detailed Care Gap Guidance Response"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
@@ -117,6 +126,7 @@
 <artifact id="Practitioner/practitioner03" key="Practitioner-practitioner03" name="Practitioner03"/>
 <artifact id="CapabilityStatement/producer-client" key="CapabilityStatement-producer-client" name="Producer Client CapabilityStatement"/>
 <artifact id="CapabilityStatement/producer-server" key="CapabilityStatement-producer-server" name="Producer Server CapabilityStatement"/>
+<artifact id="StructureDefinition/reasonDetail" key="StructureDefinition-reasonDetail" name="Reason Detail"/>
 <artifact id="CapabilityStatement/receiver-server" key="CapabilityStatement-receiver-server" name="Receiver Server CapabilityStatement"/>
 <artifact id="CapabilityStatement/reporter-client" key="CapabilityStatement-reporter-client" name="Reporter Client CapabilityStatement"/>
 <artifact id="Bundle/single-indv-col-obs-report" key="Bundle-single-indv-col-obs-report" name="Single Indv Col Obs Report"/>
@@ -131,6 +141,7 @@
 <artifact id="Task/task01" key="Task-task01" name="Task01"/>
 <artifact id="Task/task02" key="Task-task02" name="Task02"/>
 <artifact id="Task/task03" key="Task-task03" name="Task03"/>
+<artifact id="StructureDefinition/valueFilter" key="StructureDefinition-valueFilter" name="Value Filter"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="all-examples" name="All Examples"/>
