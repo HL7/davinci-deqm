@@ -78,7 +78,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/valueFilter"
+              "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-valueFilter"
             ]
           }
         ]
