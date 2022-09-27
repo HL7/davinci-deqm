@@ -84,6 +84,7 @@
 [QI Core Encounter]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-encounter.html
 [QI Core Location]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-location.html
 [QI Core Observation]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-observation.html
+[QI Core Organization]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-organization.html
 [QI Core Patient]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-patient.html
 [QI Core Practitioner]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-practitioner.html
 [QI Core Procedure]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-procedure.html

@@ -1,4 +1,8 @@
 
+<div class="bg-info" markdown="1">
+This build site is being updated to support [US Core 3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/), [QI Core] 4.1.1, and [Quality Measure Implementation Guide] 3.0.0. 
+</div>
+
 ###  Introduction
 
 The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.

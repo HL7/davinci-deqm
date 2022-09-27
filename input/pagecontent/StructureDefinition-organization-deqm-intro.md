@@ -22,7 +22,10 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](
 
 **Additional Profile specific implementation guidance:**
 
-The "Full View" tab below displays all the identifier slices including the *EIN*  and *CCN* slices defined in this guide and *NPI* slice which is inherited indirectly from the [US Core Organization Profile].
+<div class="bg-info" markdown="1">
+
+The "Full View" tab below displays all the identifier slices including the *EIN*  and *CCN* slices defined in the [QI Core Organization] profile and *NPI* slice which is inherited indirectly from the [US Core Organization Profile].
+</div>
 
 ### Examples
 
