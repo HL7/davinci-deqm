@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "extension-populationReference",
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-  "version": "0.0.0",
   "name": "DEQMPopulationReferenceExtension",
   "title": "DEQM Population Reference Extension",
   "status": "active",

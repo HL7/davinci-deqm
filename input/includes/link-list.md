@@ -37,7 +37,6 @@
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
-[DEQM Organization]: StructureDefinition-organization-deqm.html
 [DEQM Practitioner]: StructureDefinition-practitioner-deqm.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html

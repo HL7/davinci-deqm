@@ -48,7 +48,7 @@
         {
             "type": "Organization",
             "profile": [
-                "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
             ]
         },
         {

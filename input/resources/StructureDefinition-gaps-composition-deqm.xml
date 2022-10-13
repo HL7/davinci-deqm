@@ -72,7 +72,7 @@
             <short value="Identifies the organization who is responsible for ongoing maintenance of and accessing to this gaps in care report"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
             </type>
             <mustSupport value="true"/>
         </element>

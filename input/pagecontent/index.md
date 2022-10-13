@@ -1,6 +1,11 @@
 
 <div class="bg-info" markdown="1">
-This build site is being updated to support [US Core 3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/), [QI Core] 4.1.1, and [Quality Measure Implementation Guide] 3.0.0. 
+This STU update (version 3.1.0) includes changes to update the IG dependencies only.  
+- Updated from US Core 3.1.0 to [US Core 3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/)
+- Updated from QI Core 3.1.0 to [QI Core] 4.1.1
+- Updated from Quality Measure IG 2.0.0 to [Quality Measure Implementation Guide] 3.0.0.
+- Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898)). 
+  -  Note that changes applied across the IG to use QI Core Organization profile from QI-Core 4.1.1 directly where DEQM Organization profile was referenced and used. 
 </div>
 
 ###  Introduction

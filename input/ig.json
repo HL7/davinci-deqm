@@ -1003,12 +1003,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/organization-deqm"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/producer-client"
                 }
             },
@@ -1116,11 +1110,6 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-coverage-deqm.html",
                             "title": "StructureDefinition Coverage DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-organization-deqm.html",
-                            "title": "StructureDefinition Organization DEQM"
                         },
                         {
                             "generation": "generated",
