@@ -5,8 +5,10 @@
   "name": "DEQMGapsStatusCodeSystem",
   "id": "gaps-status",
   "title": "DEQM Gaps In Care Gap Status Code System",
+  "experimental": false,  
   "publisher":"Da Vinci Project",
   "description": "This is a code system for Gaps in Care gap status.",
+  "caseSensitive": true,
   "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
   "concept": [
     {

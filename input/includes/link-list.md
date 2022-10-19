@@ -89,7 +89,7 @@
 [QI Core Procedure]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-procedure.html
 [QI Core ServiceRequest]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-servicerequest.html
 [QI Core Task]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-task.html
-[QICoreMedicationNotRequested]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-medicationnotrequested.html
+[QICoreMedicationNotRequested]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-mednotrequested.html
 [QI Core Profiles]: {{site.data.fhir.qicore}}/index.html
 [QI Core]: {{site.data.fhir.qicore}}/index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture

@@ -5,8 +5,8 @@
   "name": "DEQMGapsStatusValueSet",
   "id": "gaps-status",
   "title": "DEQM Gaps In Care Gap Status Value Set",
+  "experimental": false,
   "description": "Concepts for care gap status",
-  "version": "0.1.0",
   "url": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status",
   "compose": {
     "include": [
