@@ -6,6 +6,13 @@
       "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure"
     ]
   },
+  "extension":               
+  [
+    {
+      "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+      "valueDateTime": "2018-09-10T09:00:00-00:00"
+    }
+  ],  
   "status": "completed",
   "code": {
     "coding": [

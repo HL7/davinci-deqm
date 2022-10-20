@@ -147,5 +147,6 @@ The second official published version of the DEQM IG for FHIR R4.
         - Updated from Quality Measure IG from 2.0.0 to Quality Measure IG 3.0.0
         - Updated examples and profiles where applicable due to dependency updates
     - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898)). Note that changes applied across the IG to use QI Core Organization profile from QI-Core 4.1.1 directly where DEQM Organization profile was referenced and used. 
+    - Correct ActCode "CAREGAP" display name to match what's in THO. ([FHIR-39302](https://jira.hl7.org/browse/FHIR-39302))
 
 {% include link-list.md %}

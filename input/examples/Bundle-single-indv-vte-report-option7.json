@@ -476,7 +476,7 @@
         "resourceType": "MedicationRequest",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationnotrequested"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-mednotrequested"
           ]
         },
         "status": "completed",

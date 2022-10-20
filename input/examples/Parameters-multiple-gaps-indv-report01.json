@@ -396,7 +396,7 @@
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
                     "code": "CAREGAP",
-                    "display": "Care Gaps"
+                    "display": "Caregap"
                   }
                 ]
               },
@@ -443,7 +443,7 @@
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
                     "code": "CAREGAP",
-                    "display": "Care Gaps"
+                    "display": "Caregap"
                   }
                 ]
               },
@@ -726,7 +726,7 @@
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
                     "code": "CAREGAP",
-                    "display": "Care Gaps"
+                    "display": "Caregap"
                   }
                 ]
               },
@@ -945,6 +945,13 @@
                   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
                 ]
               },
+              "extension": 
+              [              
+                {
+                  "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+                  "valueDateTime": "2018-09-10T09:00:00-00:00"
+                }
+              ],
               "status": "completed",
               "code": {
                 "coding": [

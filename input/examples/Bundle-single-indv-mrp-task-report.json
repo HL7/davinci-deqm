@@ -9,7 +9,7 @@
             },
             "resource": {
                 "resourceType": "MeasureReport",
-                "id": "urn:uuid:97e6dbd2-17f1-11ea-82fa-4ccc6a181ed3",
+                "id": "97e6dbd2-17f1-11ea-82fa-4ccc6a181ed3",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"

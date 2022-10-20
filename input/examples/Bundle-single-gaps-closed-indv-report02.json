@@ -87,7 +87,7 @@
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
               "code": "CAREGAP",
-              "display": "Care Gaps"
+              "display": "Caregap"
             }
           ]
         },
@@ -306,6 +306,13 @@
             "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure"
           ]
         },
+        "extension":               
+        [
+          {
+            "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+            "valueDateTime": "2020-07-06T09:00:00-00:00"
+          }
+        ],         
         "status": "completed",
         "code": {
           "coding": [
