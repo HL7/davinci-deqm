@@ -1033,7 +1033,7 @@
             "meta": {
                "lastUpdated": "2019-02-21T01:47:54.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                ],
                "source": "http://example.org/fhir/server",
                "versionId": "4"
@@ -1154,7 +1154,7 @@
             "meta": {
                "lastUpdated": "2019-03-06T19:03:03.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                ],
                "source": "http://example.org/fhir/server",
                "versionId": "3"
@@ -1403,7 +1403,7 @@
             "meta": {
                "lastUpdated": "2019-02-21T01:47:53.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                ],
                "source": "http://example.org/fhir/server",
                "versionId": "3"

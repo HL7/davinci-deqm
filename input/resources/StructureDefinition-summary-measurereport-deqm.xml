@@ -146,7 +146,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
       </type>
       <mustSupport value="true"/>
     </element>

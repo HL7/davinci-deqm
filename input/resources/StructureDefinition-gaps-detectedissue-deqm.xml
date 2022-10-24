@@ -52,7 +52,7 @@
               <coding>
                   <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
                   <code value="CAREGAP"/>
-                  <display value="Care Gaps"/>
+                  <display value="Caregap"/>
               </coding>
           </fixedCodeableConcept>
           <mustSupport value="true"/>

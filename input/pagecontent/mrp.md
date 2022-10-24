@@ -30,7 +30,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
 |Observation|QI Core Observation Profile|[QI Core Observation]|
-|Organization|DEQM Organization Profile[^9]|[DEQM Organization]|
+|Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
 |Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner]|
 |Task|QI Core Task Profile|[QI Core Task]|

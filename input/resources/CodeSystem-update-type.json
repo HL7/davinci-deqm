@@ -5,8 +5,9 @@
   "name": "DEQMUpdateTypeCodeSystem",
   "id": "update-type",
   "title": "DEQM Update Type Code System",
+  "experimental": false,
   "description": "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates",
-  "version": "0.1.0",
+  "caseSensitive": true,
   "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/update-type",
   "concept": [
     {

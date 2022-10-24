@@ -179,7 +179,7 @@
             "resource": {
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
@@ -244,7 +244,7 @@
             "resource": {
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
@@ -572,7 +572,7 @@
             "resource": {
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
@@ -754,10 +754,17 @@
             "resource": {
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
+                "identifier" : [
+                    {
+                      "use" : "temp",
+                      "system" : "http://exampleoflocation.com",
+                      "value" : "NOBLE HOSPITAL"
+                    }
+                  ],
                 "address": {
                     "city": "WESTFIELD",
                     "country": "US",

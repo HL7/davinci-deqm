@@ -1,4 +1,13 @@
 
+<div class="bg-info" markdown="1">
+This STU update (version 3.1.0) includes changes to update the IG dependencies only.  
+- Updated from US Core 3.1.0 to [US Core 3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/)
+- Updated from QI Core 3.1.0 to [QI Core] 4.1.1
+- Updated from Quality Measure IG 2.0.0 to [Quality Measure Implementation Guide] 3.0.0.
+- Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898)). 
+  -  Note that changes applied across the IG to use QI Core Organization profile from QI-Core 4.1.1 directly where DEQM Organization profile was referenced and used. 
+</div>
+
 ###  Introduction
 
 The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
