@@ -158,8 +158,8 @@
                 "reference": "Organization/organization01"
               },
               "period": {
-                "start": "2020-01-01T00:00:00+00:00",
-                "end": "2020-12-31T00:00:00+00:00"
+                "start": "2020-01-01",
+                "end": "2020-12-31"
               },
               "improvementNotation": {
                 "coding": [
@@ -632,8 +632,8 @@
                 "reference": "Organization/organization01"
               },
               "period": {
-                "start": "2020-01-01T00:00:00+00:00",
-                "end": "2020-12-31T00:00:00+00:00"
+                "start": "2020-01-01",
+                "end": "2020-12-31"
               },
               "improvementNotation": {
                 "coding": [
