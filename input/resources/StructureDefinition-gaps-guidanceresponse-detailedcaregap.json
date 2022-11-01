@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "detailedCareGapGuidanceResponse",
+  "id": "gaps-guidanceresponse-detailedcaregap",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/detailedCareGapGuidanceResponse",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap",
   "version": "3.0.0",
   "name": "DetailedCareGapGuidanceResponse",
   "title": "Detailed Care Gap Guidance Response",
@@ -46,7 +46,7 @@
         "path": "GuidanceResponse.reasonCode",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/careGapReasonVS"
+          "valueSet": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/care-gap-reason"
         }
       },
       {

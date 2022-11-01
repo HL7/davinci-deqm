@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "ReasonForCareGapCS",
-  "id": "careGapReasonCS",
+  "name": "CareGapREason",
+  "id": "care-gap-reason",
   "title": "Care Gap Reasons Code System",
   "version": "3.0.0",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/careGapReasonCS",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
   "concept": [
     {
       "code": "NotFound",
