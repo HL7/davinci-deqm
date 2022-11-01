@@ -23,7 +23,7 @@ Later, the provider runs the same Gaps in Care Report again, both patients now s
 |Library|CQFM Library Profile|[CQFM Library]|
 |Measure|CQFM Measure Profile|[CQFM Measure]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
-|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|

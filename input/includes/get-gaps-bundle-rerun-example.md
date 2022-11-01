@@ -408,7 +408,7 @@ GET [base]/Measure/$care-gaps?measureurl=http://hl7.org/fhir/us/davinci-deqm/Mea
               "id": "gaps-organization-reportingvendor",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                 ]
               },
               "identifier": [
@@ -858,7 +858,7 @@ GET [base]/Measure/$care-gaps?measureurl=http://hl7.org/fhir/us/davinci-deqm/Mea
               "id": "gaps-organization-reportingvendor",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                 ]
               },
               "identifier": [

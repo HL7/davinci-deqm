@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DataReason",
+  "id": "data-reason",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/data-reason",
+  "title": "Data Reason",
+  "description": "Whole code system valueset for the DataReason code system.",
+  "version": "0.1.0",
+  "compose": {
+    "include": [
+      {
+        "system": [
+          "https://build.fhir.org/ig/HL7/davinci-deqm/CodeSystem/data-reason"
+        ]
+      }
+    ]
+  }
+}

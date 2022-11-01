@@ -281,7 +281,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "meta": {
                "lastUpdated": "2019-02-21T01:47:54.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                ],
                "versionId": "4"
             },
@@ -348,7 +348,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "meta": {
                "lastUpdated": "2019-03-06T19:03:03.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                ],
                "versionId": "3"
             },

@@ -1,11 +1,11 @@
 status: active
 publisher: HL7 International - Clinical Quality Information Work Group
 license: CC0-1.0
-name: DataExchangeForQualityMeasuresSTU2forFHIRR4
+name: DataExchangeForQualityMeasuresSTU3forFHIRR4
 copyright: >-
   Used by permission of HL7 International - Clinical Quality Information Work
   Group, all rights reserved Creative Commons License
-title: Data Exchange For Quality Measures STU3 for FHIR R4
+title: Data Exchange For Quality Measures STU3.1.0 for FHIR R4
 resourceType: ImplementationGuide
 jurisdiction:
   - coding:
@@ -20,15 +20,15 @@ url: >-
 version: 3.1.0
 packageId: hl7.fhir.us.davinci-deqm
 dependsOn:
-  - version: 4.0.0
+  - version: 4.1.1
     id: qicore
     packageId: hl7.fhir.us.qicore
     uri: 'http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore'
-  - version: 3.1.0
+  - version: 3.1.1
     id: uscore
     packageId: hl7.fhir.us.core
-    uri: 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core'
-  - version: 2.0.0
+    uri: 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core' 
+  - version: 3.0.0
     id: cqfm
     packageId: hl7.fhir.us.cqfmeasures
     uri: >-
@@ -112,7 +112,7 @@ definition:
       name: Organization02
       reference:
         reference: Organization/organization02
-      description: DEQM Organization02 example
+      description: QICore Organization02 example
     - exampleBoolean: true
       name: Patient02
       reference:
@@ -197,7 +197,7 @@ definition:
       name: Organization03
       reference:
         reference: Organization/organization03
-      description: DEQM Organization03 example
+      description: QICore Organization03 example
     - exampleBoolean: true
       name: Library Mrp Example
       reference:
@@ -207,7 +207,7 @@ definition:
       name: Organization04
       reference:
         reference: Organization/organization04
-      description: DEQM Organization04 example
+      description: QICore Organization04 example
     - exampleBoolean: true
       name: Mrp Submit Obs
       reference:
@@ -362,7 +362,7 @@ definition:
       name: Organization01
       reference:
         reference: Organization/organization01
-      description: DEQM Organization01 example
+      description: QICore Organization01 example
     - exampleBoolean: true
       name: Coverage03
       reference:
@@ -599,9 +599,6 @@ definition:
         reference: CapabilityStatement/reporter-client
     - exampleBoolean: false
       reference:
-        reference: StructureDefinition/organization-deqm
-    - exampleBoolean: false
-      reference:
         reference: CapabilityStatement/producer-client
     - exampleBoolean: false
       reference:
@@ -666,9 +663,6 @@ definition:
           - generation: generated
             nameUrl: StructureDefinition-coverage-deqm.html
             title: StructureDefinition Coverage DEQM
-          - generation: generated
-            nameUrl: StructureDefinition-organization-deqm.html
-            title: StructureDefinition Organization DEQM
           - generation: generated
             nameUrl: StructureDefinition-medicationadministration-deqm.html
             title: StructureDefinition MedicationAdministration DEQM

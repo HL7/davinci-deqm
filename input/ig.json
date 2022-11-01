@@ -27,23 +27,23 @@
         }
     ],
     "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
-            "version": "4.0.0",
+            "version": "4.1.1",
             "id": "qicore",
             "packageId": "hl7.fhir.us.qicore",
             "uri": "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore"
         },
         {
-            "version": "3.1.0",
+            "version": "3.1.1",
             "id": "uscore",
             "packageId": "hl7.fhir.us.core",
             "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         },
         {
-            "version": "2.0.0",
+            "version": "3.0.0",
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
@@ -196,22 +196,6 @@
             }
         ],
         "resource": [
-            {
-                "exampleBoolean": true,
-                "name": "DEQM Data Reason CodeSystem",
-                "reference": {
-                    "reference": "CodeSystem/DeqmDataReasonCodeSystem"
-                },
-                "description": "DEQM Data Reason CodeSystem"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "DEQM Data Reason ValueSet",
-                "reference": {
-                    "reference": "ValueSet/DeqmDataReasonValueSet"
-                },
-                "description": "DEQM Data Reason ValueSet"
-            },
             {
                 "exampleBoolean": true,
                 "name": "Organization02",
@@ -1019,12 +1003,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/organization-deqm"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/producer-client"
                 }
             },
@@ -1132,11 +1110,6 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-coverage-deqm.html",
                             "title": "StructureDefinition Coverage DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-organization-deqm.html",
-                            "title": "StructureDefinition Organization DEQM"
                         },
                         {
                             "generation": "generated",

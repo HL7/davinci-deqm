@@ -37,7 +37,6 @@
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
-[DEQM Organization]: StructureDefinition-organization-deqm.html
 [DEQM Practitioner]: StructureDefinition-practitioner-deqm.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html
@@ -84,12 +83,13 @@
 [QI Core Encounter]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-encounter.html
 [QI Core Location]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-location.html
 [QI Core Observation]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-observation.html
+[QI Core Organization]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-organization.html
 [QI Core Patient]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-patient.html
 [QI Core Practitioner]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-practitioner.html
 [QI Core Procedure]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-procedure.html
 [QI Core ServiceRequest]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-servicerequest.html
 [QI Core Task]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-task.html
-[QICoreMedicationNotRequested]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-medicationnotrequested.html
+[QICoreMedicationNotRequested]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-mednotrequested.html
 [QI Core Profiles]: {{site.data.fhir.qicore}}/index.html
 [QI Core]: {{site.data.fhir.qicore}}/index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture

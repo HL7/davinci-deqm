@@ -2,12 +2,12 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "DeqmDataReasonCodeSystem",
-  "id": "DeqmDataReasonCodeSystem",
-  "title": "DeqmDataReasonCodeSystem",
-  "description": "Codesystem for OperationOutcomes used in DEQM settings.",
+  "name": "DataReason",
+  "id": "data-reason",
+  "title": "Data Reason",
+  "description": "Codesystem to specify reasons related to missing, invalid, or incomplete data resulting in detected issues or care gaps in DEQM.",
   "version": "0.1.0",
-  "url": "https://build.fhir.org/ig/HL7/davinci-deqm/DeqmDataReasonCodeSystem", 
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/data-reason", 
   "concept": [
     {
       "code": "NotFound",

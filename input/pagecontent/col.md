@@ -27,7 +27,7 @@ In the case of colorectal cancer screening, two types of data are reported: 1) t
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
 |Observation|QI Core Observation Profile|[QI Core Observation]|
-|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Procedure|QI Core Procedure Profile|[QI Core Procedure]|
