@@ -48,11 +48,11 @@
 <artifact id="CodeSystem/update-type" key="CodeSystem-update-type" name="DEQM Update Type Code System"/>
 <artifact id="ValueSet/update-type" key="ValueSet-update-type" name="DEQM Update Type Value Set"/>
 <artifact id="Observation/DNA-occultblood" key="Observation-DNA-occultblood" name="DNA Occult Blood"/>
+<artifact id="CodeSystem/data-reason" key="CodeSystem-data-reason" name="Data Reason"/>
+<artifact id="ValueSet/data-reason" key="ValueSet-data-reason" name="Data Reason"/>
 <artifact id="MeasureReport/datax-measurereport01" key="MeasureReport-datax-measurereport01" name="Datax Measurereport01"/>
 <artifact id="MeasureReport/datax-measurereport02" key="MeasureReport-datax-measurereport02" name="Datax Measurereport02"/>
 <artifact id="MeasureReport/datax-measurereport03" key="MeasureReport-datax-measurereport03" name="Datax Measurereport03"/>
-<artifact id="CodeSystem/DeqmDataReasonCodeSystem" key="CodeSystem-DeqmDataReasonCodeSystem" name="DeqmDataReasonCodeSystem"/>
-<artifact id="ValueSet/DeqmDataReasonValueSet" key="ValueSet-DeqmDataReasonValueSet" name="DeqmDataReasonValueSet"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
