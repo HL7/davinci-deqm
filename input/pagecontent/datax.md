@@ -31,7 +31,7 @@ The following resources are used in all data exchange transactions:
 |Library|CQFM Library Profile|[CQFM Library]|
 |Measure|CQFM Measure Profile|[CQFM Measure]|
 |MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
-|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
 
 Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above

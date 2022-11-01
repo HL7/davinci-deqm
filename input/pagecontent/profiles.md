@@ -10,7 +10,6 @@ Payers and providers need common data specification, measure specification, repo
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
 |MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
-|Organization|DEQM Organization Profile|[DEQM Organization]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|

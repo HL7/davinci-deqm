@@ -358,6 +358,13 @@
                     ],
                     "source": "http://example.org/fhir/server"
                 },
+                "identifier" : [
+                    {
+                      "use" : "temp",
+                      "system" : "http://exampleoflocation.com",
+                      "value" : "DaVinciClinic01"
+                    }
+                  ],
                 "name": "DaVinciClinic01",
                 "address": {
                     "line": [
@@ -377,7 +384,7 @@
                 "meta": {
                     "lastUpdated": "2019-02-21T01:47:54.000+00:00",
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                     ],
                     "versionId": "4",
                     "source": "http://example.org/fhir/server"
@@ -441,7 +448,7 @@
                 "meta": {
                     "lastUpdated": "2019-03-06T19:03:03.000+00:00",
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                     ],
                     "versionId": "3",
                     "source": "http://example.org/fhir/server"
@@ -505,7 +512,7 @@
                 "meta": {
                     "lastUpdated": "2019-03-06T19:03:03.000+00:00",
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
                     ],
                     "versionId": "4",
                     "source": "http://example.org/fhir/server"

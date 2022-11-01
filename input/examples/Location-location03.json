@@ -7,6 +7,13 @@
         ],
         "source": "http://example.org/fhir/server"
     },
+    "identifier" : [
+        {
+          "use" : "temp",
+          "system" : "http://exampleoflocation.com",
+          "value" : "DaVinciClinic03"
+        }
+      ],     
     "name": "DaVinciClinic03",
     "address": {
         "line": [
