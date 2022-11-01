@@ -24,8 +24,6 @@
 <artifact id="StructureDefinition/extension-certificationIdentifier" key="StructureDefinition-extension-certificationIdentifier" name="DEQM Certification Identifier Extension"/>
 <artifact id="StructureDefinition/coverage-deqm" key="StructureDefinition-coverage-deqm" name="DEQM Coverage Profile"/>
 <artifact id="StructureDefinition/datax-measurereport-deqm" key="StructureDefinition-datax-measurereport-deqm" name="DEQM Data Exchange MeasureReport Profile"/>
-<artifact id="CodeSystem/DeqmDataReasonCodeSystem" key="CodeSystem-DeqmDataReasonCodeSystem" name="DEQM Data Reason CodeSystem"/>
-<artifact id="ValueSet/DeqmDataReasonValueSet" key="ValueSet-DeqmDataReasonValueSet" name="DEQM Data Reason ValueSet"/>
 <artifact id="StructureDefinition/extension-gapStatus" key="StructureDefinition-extension-gapStatus" name="DEQM Gap Status Modifier Extension"/>
 <artifact id="StructureDefinition/gaps-bundle-deqm" key="StructureDefinition-gaps-bundle-deqm" name="DEQM Gaps In Care Bundle Profile"/>
 <artifact id="StructureDefinition/gaps-composition-deqm" key="StructureDefinition-gaps-composition-deqm" name="DEQM Gaps In Care Composition Profile"/>
