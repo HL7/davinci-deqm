@@ -120,7 +120,11 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
-      <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-measure-cqfm.html "/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.subject">
