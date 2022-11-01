@@ -1,5 +1,6 @@
 # DaVinci Data Exchange For Quality Measures
 
+
 ## [STU3 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU1)
 
 ## [Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
@@ -43,3 +44,10 @@ http://build.fhir.org/ig/HL7/davinci-deqm/build.log
 The following package file contains an NPM package file "hl7.fhir.davinci.deqm" with all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this version of the Implementation Guides. This file should be the first choice whenever generating any implementation artifacts since it contains all of the rules about what makes the profiles valid. Implementers will still need to be familiar with the content of the specification and profiles that apply in order to make a conformant implementation. See the overview on validating FHIR profiles and resource
 
 - [package](http://build.fhir.org/ig/HL7/davinci-deqm/package.tgz)
+
+### References  
+
+- [HL7 Confluence Workgroup - Data Exchange For Quality Measures ](https://confluence.hl7.org/pages/viewpage.action?pageId=21857600)  
+- [Electronic Clinical Quality Improvement (eCQI) Resource Center](https://ecqi.healthit.gov/)  
+
+
