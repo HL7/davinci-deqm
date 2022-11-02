@@ -102,7 +102,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <mustSupport value="true"/>
@@ -124,7 +123,7 @@
       <path value="MeasureReport.measure"/>
       <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
       <type>
-        <code value="Reference"/>
+        <code value="canonical"/>
         <targetProfile value="https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-measure-cqfm.html "/>
       </type>
       <mustSupport value="true"/>
