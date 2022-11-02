@@ -2,9 +2,9 @@
     "status": "active",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "license": "CC0-1.0",
-    "name": "DataExchangeForQualityMeasuresSTU2forFHIRR4",
+    "name": "DEQM",
     "copyright": "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
-    "title": "Data Exchange For Quality Measures STU3 for FHIR R4",
+    "title": "Data Exchange For Quality Measures Implementation Guide",
     "resourceType": "ImplementationGuide",
     "jurisdiction": [
         {
@@ -47,7 +47,7 @@
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
-        }
+        }       
     ],
     "fhirVersion": [
         "4.0.1"
