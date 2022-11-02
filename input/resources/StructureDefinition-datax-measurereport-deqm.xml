@@ -59,6 +59,17 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.extension:vendor">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="vendor"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
 
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
