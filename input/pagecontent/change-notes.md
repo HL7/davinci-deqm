@@ -140,13 +140,13 @@ The second official published version of the DEQM IG for FHIR R4.
 
 ### Changes and Updates for Version 3.1.0
 
-1. Updated the IG dependencies. 
-    - Update Dependencies ([FHIR-37621](https://jira.hl7.org/browse/FHIR-37621))
+1. Updated the IG dependencies 
+    - Update Dependencies. ([FHIR-37621](https://jira.hl7.org/browse/FHIR-37621))
         - Updated from US Core 3.1.0 to US Core 3.1.1 
         - Updated from QI Core 3.1.0 to QI-Core 4.1.1 
-        - Updated from Quality Measure IG from 2.0.0 to Quality Measure IG 3.0.0
+        - Updated from Quality Measure IG 2.0.0 to Quality Measure IG 3.0.0
         - Updated examples and profiles where applicable due to dependency updates
-    - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898)). Note that changes applied across the IG to use QI Core Organization profile from QI-Core 4.1.1 directly where DEQM Organization profile was referenced and used. 
+    - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898))
     - Correct ActCode "CAREGAP" display name to match what's in THO. ([FHIR-39302](https://jira.hl7.org/browse/FHIR-39302))
     - The specified gapStatus code display does not match the actual code display. ([FHIR-36170](https://jira.hl7.org/browse/FHIR-36170))
 
