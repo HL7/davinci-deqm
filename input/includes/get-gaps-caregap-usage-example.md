@@ -592,7 +592,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-organization-reportingvendor",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/organization-deqm"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
           ]
         },
         "identifier": [
