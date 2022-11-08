@@ -180,6 +180,15 @@
       <isSummary value="false"/>
       <mustSupport value="true"/>
     </element>
-
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element id="MeasureReport.group.stratifier">
+      <path value="MeasureReport.group.stratifier"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
   </differential>
 </StructureDefinition>
