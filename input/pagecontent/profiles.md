@@ -5,7 +5,6 @@ Payers and providers need common data specification, measure specification, repo
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Coverage|DEQM Coverage Profile|[DEQM Coverage]|
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
