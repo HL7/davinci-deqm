@@ -919,12 +919,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/practitioner-deqm"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -1086,11 +1080,6 @@
                     "generation": "markdown",
                     "nameUrl": "profiles.html",
                     "page": [
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-practitioner-deqm.html",
-                            "title": "StructureDefinition Practitioner DEQM"
-                        },
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-summary-measurereport-deqm.html",
