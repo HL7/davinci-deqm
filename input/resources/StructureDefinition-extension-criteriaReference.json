@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-criteriaReference",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+  "name": "DEQMCriteriaReferenceExtension",
+  "title": "DEQM Criteria Reference Extension",
+  "status": "active",
+  "experimental": false,
+  "date": "2022-11-15",
+  "publisher": "Da Vinci Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+        }
+      ]
+    }
+  ],
+  "description": "Identifies which measure criteria (i.e. population, stratifier, or supplementalData) was responsible for the inclusion of the evaluatedResource or supplementalData on which it appears.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Reference"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Criteria reference",
+        "definition": "Reference a measure criteria by referencing their unique id specified in a Measure resource (`Measure.group.population.id`, `Measure.group.stratifier.id,` or `Measure.supplementalData.id`).",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "short": "This id SHOULD reference population criteria id specified in a Measure resource."
+      }
+    ]
+  }
+}

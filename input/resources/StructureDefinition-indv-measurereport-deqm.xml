@@ -304,7 +304,7 @@
      <max value="*"/>
      <type>
        <code value="Extension"/>
-       <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference"/>
+       <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference"/>
      </type>
      <mustSupport value="true"/>
    </element>

@@ -985,6 +985,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/extension-criteriaReference"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "StructureDefinition/extension-submitDataUpdateType"
                 }
             },
@@ -1150,6 +1156,11 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-extension-populationReference.html",
                             "title": "StructureDefinition Extension populationReference"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-extension-criteriaReference.html",
+                            "title": "StructureDefinition Extension criteriaReference"
                         }
                     ],
                     "title": "Profiles and Extensions"

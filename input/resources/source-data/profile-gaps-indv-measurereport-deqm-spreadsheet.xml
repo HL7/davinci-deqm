@@ -1224,7 +1224,7 @@
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..*</Data></Cell>
     <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Extension{#populationReference}</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Extension{#criteriaReference}</Data></Cell>
     <Cell ss:StyleID="s106"/>
     <Cell ss:StyleID="s112"/>
     <Cell ss:StyleID="s106"/>
