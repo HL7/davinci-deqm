@@ -71,7 +71,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Reference to a practitioner [DEQM Practitioner](StructureDefinition-practitioner-deqm.html) for which the gaps in care report will be created. For a practitioner focused gaps in care report, this is a required In Parameter. The Server needs to make sure that practitioner is authorized to get the gaps in care report for and know what measures the practitioner are eligible or qualified."/>
+        <documentation value="Reference to a practitioner [QI Core Practitioner](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-practitioner.html) for which the gaps in care report will be created. For a practitioner focused gaps in care report, this is a required In Parameter. The Server needs to make sure that practitioner is authorized to get the gaps in care report for and know what measures the practitioner are eligible or qualified."/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
