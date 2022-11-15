@@ -14,19 +14,19 @@ Later, the provider runs the same Gaps in Care Report again, both patients now s
 #### Resources Supported for this Use Case
 {:.no_toc}
 
-|Resource Type|Profile Name|Link to Profile|
-|---|---|---|
-|Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]
-|Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]
-|DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]
-|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
-|Library|CQFM Library Profile|[CQFM Library]|
-|Measure|CQFM Measure Profile|[CQFM Measure]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
-|Organization|QI Core Organization Profile|[QI Core Organization]|
-|Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
-|Procedure|QI Core Procedure Profile|[QI Core Procedure]|
+|Resource Type| Profile Name                            | Link to Profile                           |
+|---|-----------------------------------------|-------------------------------------------|
+|Bundle| DEQM Gaps In Care Bundle Profile        | [DEQM Gaps In Care Bundle Profile]        
+|Composition| DEQM Gaps In Care Composition Profile   | [DEQM Gaps In Care Composition Profile]   
+|DetectedIssue| DEQM Gaps In Care DetectedIssue Profile | [DEQM Gaps In Care DetectedIssue Profile] 
+|Encounter| QI Core Encounter Profile               | [QI Core Encounter]                       |
+|Library| CQFM Library Profile                    | [CQFM Library]                            |
+|Measure| CQFM Measure Profile                    | [CQFM Measure]                            |
+|MeasureReport| DEQM Individual MeasureReport Profile   | [DEQM Individual MeasureReport Profile]   |
+|Organization| QI Core Organization Profile            | [QI Core Organization]                    |
+|Patient| QI Core Patient Profile                 | [QI Core Patient]                         |
+|Practitioner| QICore Practitioner Profile             | [QI Core Practitioner]                    |
+|Procedure| QI Core Procedure Profile               | [QI Core Procedure]                       |
 
 ### Care Gaps Operation
 {:.no_toc}
