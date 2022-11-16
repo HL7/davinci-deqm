@@ -54,6 +54,10 @@ The resource graphs below represent the structure of the resources returned from
 
 The provider noticed Gaps Patient01 was indicated as having an [open gap] for Colorectal Cancer Screening. The provider ordered an colonoscopy and the patient was able to get it done in the next few days. Typically a claim by the colonoscopy performer will close the gap. However, the provider may elect to send the submit report data to close the gap. Please see [Colorectal Cancer Screening (COL)] Use Case for details on how to complete the DEQM Data Exchange.
 
+In some cases where there is a delay between order and performance, a provider may want to "soft close" the gap for some amount of time due to the existing order.
+This prevents the gap from showing up as "open" for some amount of time or until the order is carried out. While this feature can be important for users, the 
+functionality is left up to the implementer and is out of scope for this implementation guide.
+
 #### Step 3 - Rerun for a Gaps in Care Report
 
 The provider rerun the Colorectal Cancer Screening Gaps in Care Report and confirmed that the [open gap] for *Gaps Patient01* was closed. Note that in the Figure 3-25 below, the DetectedIssue resource for *Gaps Patient01* now has the gap status code "closed-gap", because the [open gap] is now closed. The *Gaps Patient01* shows a recent colonoscopy. Figure 3-26 shows that there are no changes to *Gaps Patient02* comparing to the initially generated report, it still shows [closed gap].
