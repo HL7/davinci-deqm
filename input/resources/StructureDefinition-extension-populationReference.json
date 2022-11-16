@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
   "name": "DEQMPopulationReferenceExtension",
   "title": "DEQM Population Reference Extension",
-  "status": "active",
+  "status": "retired",
   "experimental": false,
   "date": "2021-04-23",
   "publisher": "Da Vinci Project",
