@@ -4,7 +4,7 @@ The request body for this operation is a [FHIR Parameters Resource](https://www.
 
 ### Request Flow
 
-The Data Consumer server SHALL support invocation of the bulk submit-data operation using the [FHIR Asynchronous Request Pattern](http://hl7.org/fhir/async.html) via a POST request containing the FHIR Parameters Resource described above. As with the [standard $submit-data operation](http://hl7.org/fhir/R4/operation-measure-submit-data.html), the bulk submit-data operation will send a POST request to the `$submit-data` endpoint.
+The Data Consumer server SHALL support invocation of the bulk submit-data operation using the [FHIR Asynchronous Request Pattern](http://hl7.org/fhir/async.html) via a POST request containing the FHIR Parameters Resource described above. To avoid overloading the [standard $submit-data operation](http://hl7.org/fhir/R4/operation-measure-submit-data.html), the bulk submit-data operation will send a POST request to the `$bulk-submit-data` endpoint.
 
 When kicking off the request, if the `“prefer”: “respond-async”` header is provided, the bulk submit-data operation will calculate the data requirements for the measure-of-interest. The Data Consumer will kick off an `$export` request to the Data Provider. Then, the data exported from the Data Provider is uploaded to the system.
 
