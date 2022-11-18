@@ -20,7 +20,7 @@ Specifies whether the response is immediate or asynchronous.
 Request: Submit data of interest for FHIR Measure with "test-measure" identifier from the Data Provider http://example.com/
 
 ```
-POST [base]/Measure/test-measure/$submit-data
+POST [base]/Measure/test-measure/$bulk-submit-data
 {
   "resourceType": "Parameters",
   "parameter": [
@@ -58,7 +58,7 @@ HTTP/1.1 202 Accepted
 Request: Submit data of interest related to patients in the group "test-group" for FHIR Measure with id "test-measure" from the Data Provider http://example.com/. Group "test-group" must exist on the export server.
 
 ```
-POST [base]/Measure/test-measure/$submit-data
+POST [base]/Measure/test-measure/$bulk-submit-data
 {
   "resourceType": "Parameters",
   "parameter": [
@@ -92,7 +92,7 @@ HTTP/1.1 202 Accepted
 Request: Submit all FHIR Observations and Procedures of interest for FHIR Measure with id "test-measure" from the Data Provider http://example.com/.
 
 ```
-POST [base]/Measure/test-measure/$submit-data
+POST [base]/Measure/test-measure/$bulk-submit-data
 {
   "resourceType": "Parameters",
   "parameter": [
