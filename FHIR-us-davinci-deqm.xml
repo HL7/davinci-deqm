@@ -54,6 +54,7 @@
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
+<artifact id="OperationDefinition/evaluate-measure" key="OperationDefinition-evaluate-measure" name="EvaluateMeasure"/>
 <artifact deprecated="true" key="ExampleScenario" name="ExampleScenario"/>
 <artifact id="Bundle/single-gaps-closed-indv-report01" key="Bundle-single-gaps-closed-indv-report01" name="Gaps Bundle Closed Individual MeasureReport01"/>
 <artifact id="Bundle/single-gaps-closed-indv-report02" key="Bundle-single-gaps-closed-indv-report02" name="Gaps Bundle Closed Individual MeasureReport02"/>
