@@ -9,7 +9,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
-1. A` Composition.type` with a fixed LOINC code 96315-7
+1. A` Composition.type`
 1. A `Composition.subject` references [QI Core Patient] who is the subject of the Gaps in Care Report
 1. A `Composition.date` that is the datetime of the Gaps in Care Report was created
 1. A `Composition.title` that is the title of the Gaps in Care Report
