@@ -13,6 +13,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/module-definition-library-cqfm" key="StructureDefinition-module-definition-library-cqfm" name="CQFM Module Definition Library"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
 <artifact id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
 <artifact id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>
