@@ -243,7 +243,7 @@
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
       <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <constraint>
         <key value="deqm-5"/>
