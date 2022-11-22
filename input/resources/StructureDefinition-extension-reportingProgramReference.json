@@ -2,29 +2,13 @@
   "resourceType": "StructureDefinition",
   "id": "extension-reportingProgramReference",
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference",
-  "name": "DEQMreportingProgramReferenceExtension",
+  "name": "DEQMReportingProgramReferenceExtension",
   "title": "DEQM Reporting Program Reference Extension",
   "status": "active",
   "experimental": false,
   "date": "2022-11-21",
   "publisher": "Da Vinci Project",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
-        }
-      ]
-    }
-  ],
   "description": "Extension that supports the reporting program as a reference to a Library conforming to the Quality Program profile, as well as a CodeableConcept bound to the Quality Program value set.",
-  "jurisdiction": {
-    "coding": {
-      "system": "urn:iso:std:iso:3166",
-      "code": "US"
-    }
-  },
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -50,22 +34,11 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
         "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference"
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "short": "reportingProgramCode",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://build.fhir.org/ig/HL7/cqf-measures/ValueSet-quality-programs"

@@ -38,6 +38,7 @@
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
 [DEQM Practitioner]: StructureDefinition-practitioner-deqm.html
+[DEQM Reporting Program Reference]: StructureDefinition-extension-reportingProgramReference.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"

@@ -997,6 +997,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/extension-reportingProgramReference"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "CapabilityStatement/reporter-client"
                 }
             },
@@ -1109,6 +1115,11 @@
                         {
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-coverage-deqm.html",
+                            "title": "StructureDefinition Extension reportingProgramReference DEQM"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-exception-reportingProgramReference.html",
                             "title": "StructureDefinition Coverage DEQM"
                         },
                         {
