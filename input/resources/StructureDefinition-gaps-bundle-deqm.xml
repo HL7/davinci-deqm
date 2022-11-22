@@ -67,7 +67,7 @@
           </type>
           <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:indv_measure_report_entry">
+        <!-- <element id="Bundle.entry:indv_measure_report_entry">
           <path value="Bundle.entry"/>
           <sliceName value="indv_measure_report_entry"/>
           <short value="Contains the individual MeasureReport referenced in the gaps in care composition"/>
@@ -84,6 +84,6 @@
             <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
           </type>
           <mustSupport value="true"/>
-        </element>
+        </element> -->
     </differential>
 </StructureDefinition>
