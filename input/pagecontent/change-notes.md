@@ -148,5 +148,6 @@ The second official published version of the DEQM IG for FHIR R4.
         - Updated examples and profiles where applicable due to dependency updates
     - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898)). Note that changes applied across the IG to use QI Core Organization profile from QI-Core 4.1.1 directly where DEQM Organization profile was referenced and used. 
     - Correct ActCode "CAREGAP" display name to match what's in THO. ([FHIR-39302](https://jira.hl7.org/browse/FHIR-39302))
+    - The specified gapStatus code display does not match the actual code display. ([FHIR-36170](https://jira.hl7.org/browse/FHIR-36170))
 
 {% include link-list.md %}
