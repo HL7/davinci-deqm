@@ -33,14 +33,12 @@
   <differential>
     <element id="MeasureReport">
       <path value="MeasureReport"/>
-
-    <constraint>
-      <key value="deqm-2"/>
-      <severity value="error"/>
-      <human value="If the measure scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required" />
-      <expression value="extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()"/>
-    </constraint>
-
+      <constraint>
+        <key value="deqm-2"/>
+        <severity value="error"/>
+        <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required" />
+        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()"/>
+      </constraint>
       <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.extension:scoring">
@@ -90,7 +88,6 @@
       </patternIdentifier>
       <mustSupport value="false"/>
     </element>
-
     <element id="MeasureReport.extension:software">
       <path value="MeasureReport.extension"/>
       <sliceName value="software"/>
@@ -102,7 +99,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <mustSupport value="true"/>
@@ -122,7 +118,11 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
-      <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
+      <type>
+        <code value="canonical"/>
+        <targetProfile value="https://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-measure-cqfm.html "/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.subject">
@@ -189,7 +189,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-
     <element id="MeasureReport.improvementNotation">
       <path value="MeasureReport.improvementNotation"/>
       <min value="0"/>
@@ -197,28 +196,65 @@
       <condition value="deqm-2"/>
       <mustSupport value="true"/>
     </element>
-
-
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
       <min value="1"/>
       <max value="*"/>
       <mustSupport value="true"/>
-      </element>
-
+    </element>
+    <element id="MeasureReport.group.extension:scoring">
+      <path value="MeasureReport.group.extension"/>
+      <constraint>
+        <key value="deqm-3"/>
+        <severity value="error"/>
+        <human value="ensures scoring is either specified only at the root, or on all groups" />
+        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count() = group.count()) xor (%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count()=0)"/>
+      </constraint>
+      <sliceName value="scoring"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"/>
+      </type>
+      <condition value="deqm-3"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:groupImprovementNotation">
+      <path value="MeasureReport.group.extension"/>
+      <constraint>
+        <key value="deqm-4"/>
+        <severity value="error"/>
+        <human value="ensure that if scoring is specified on the group, groupImprovementNotation must be (if the scoring type is other than cohort)" />
+        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').where(valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).exists() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+      </constraint>
+      <sliceName value="groupImprovementNotation"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation"/>
+      </type>
+      <condition value="deqm-4"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.id">
       <path value="MeasureReport.group.id"/>
       <mustSupport value="true"/>
     </element>
-
     <element id="MeasureReport.group.code">
       <path value="MeasureReport.group.code"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population">
       <path value="MeasureReport.group.population"/>
-      <min value="1"/>
-      <max value="*"/>
+      <constraint>
+        <key value="deqm-5"/>
+        <severity value="error"/>
+        <human value="ensure that cardinality is >= 1 if the scoring is other than composite" />
+        <expression value="group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists and group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable' | 'cohort') implies group.population.exists() "/>
+      </constraint>
+      <condition value="deqm-5"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.code">
@@ -268,30 +304,8 @@
     </element>
     <element id="MeasureReport.group.stratifier.code">
       <path value="MeasureReport.group.stratifier.code"/>
-      <short value="What stratifier of the group"/>
-      <definition
-              value="The meaning of this stratifier, as defined in the measure definition."/>
-      <min value="0"/>
+      <min value="1"/>
       <max value="1"/>
-      <base>
-        <path value="MeasureReport.group.stratifier.code"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression
-                value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum">
@@ -342,7 +356,7 @@
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <min value="0"/>
-      <max value="*"/>
+      <max value="0"/>
       <mustSupport value="false"/>
     </element>
   </differential>

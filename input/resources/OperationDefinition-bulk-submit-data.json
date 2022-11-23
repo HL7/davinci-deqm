@@ -1,0 +1,75 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "bulk-submit-data",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>URL: [base]/Measure/$bulk-submit-data</p><p>URL: [base]/Measure/[id]/$bulk-submit-data</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>measureReport</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/measurereport.html\">MeasureReport</a></td><td/><td><div><p>The measure report being submitted</p>\n</div></td></tr><tr><td>IN</td><td>exportType</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td/><td><div><p>(Optional) String of <code>static</code> or <code>dynamic</code>. Defaults to <code>dynamic</code> if omitted.</p>\n<p>If the value is <code>dynamic</code>, the Data Consumer will issue a POST request to the <code>exportUrl</code> to obtain a dataset from the Data Provider.</p>\n<p>If the value is <code>static</code>, the Data Consumer will issue a GET request to the <code>exportUrl</code> to retrieve a Bulk Data manifest file with the location of the Bulk Data files.</p>\n</div></td></tr><tr><td>IN</td><td>exportUrl</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#url\">url</a></td><td/><td><div><p>The absolute URL of the bulk export endpoint of a Data Provider (if the <code>exportType</code> parameter is <code>dynamic</code>) OR the location of a FHIR Bulk Data Export manifest file (if the <code>exportType</code> parameter is <code>static</code>)</p>\n</div></td></tr><tr><td>IN</td><td>_type</td><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>(Optional) Restrict the data exported to only be specific FHIR resource types. See <a href=\"https://hl7.org/fhir/uv/bulkdata/export/index.html#query-parameters\">the bulk data $export spec</a> for more information on '_type'</p>\n</div></td></tr><tr><td>IN</td><td>useTypeFilters</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>(Optional) If enabled, data exported by the 'exportUrl' system will be filtered according to the data requirements of the Measure. Requires support of the _typeFilter experimental parameter in the export server. See <a href=\"https://hl7.org/fhir/uv/bulkdata/export/index.html#example-request-with-_typefilter\">the bulk data $export spec</a> for more information on '_typeFilter'</p>\n</div></td></tr></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 0
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-data",
+  "version": "4.0.1",
+  "name": "Bulk Submit Data",
+  "status": "draft",
+  "kind": "operation",
+  "date": "2022-11-09T10:53:32-05:00",
+  "publisher": "The MITRE Corporation",
+  "description": "The bulk-submit-data operation sends a bulk import request based on the data requirements of a FHIR Measure. This operation is modeled off the existing draft of the [Bulk Data Import Ping and Pull Approach](https://github.com/smart-on-fhir/bulk-import/blob/master/import-pnp.md).",
+  "code": "bulk-submit-data",
+  "resource": [
+    "Measure"
+  ],
+  "system": false,
+  "type": true,
+  "instance": true,
+  "parameter": [
+    {
+      "name": "measureReport",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "The measure report being submitted",
+      "type": "MeasureReport"
+    },
+    {
+      "name": "exportType",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "(Optional) String of `static` or `dynamic`. Defaults to `dynamic` if omitted.\n\nIf the value is `dynamic`, the Data Consumer will issue a POST request to the `exportUrl` to obtain a dataset from the Data Provider.\n\nIf the value is `static`, the Data Consumer will issue a GET request to the `exportUrl` to retrieve a Bulk Data manifest file with the location of the Bulk Data files.",
+      "type": "code"
+    },
+    {
+      "name": "exportUrl",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "The absolute URL of the bulk export endpoint of a Data Provider (if the `exportType` parameter is `dynamic`) OR the location of a FHIR Bulk Data Export manifest file (if the `exportType` parameter is `static`)",
+      "type": "url"
+    },
+    {
+      "name": "_type",
+      "use": "in",
+      "min": 0,
+      "max": "*",
+      "documentation": "(Optional) Restrict the data exported to only be specific FHIR resource types. See [the bulk data $export spec](https://hl7.org/fhir/uv/bulkdata/export/index.html#query-parameters) for more information on '_type'",
+      "type": "string"
+    },
+    {
+      "name": "useTypeFilters",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "(Optional) If enabled, data exported by the 'exportUrl' system will be filtered according to the data requirements of the Measure. Requires support of the _typeFilter experimental parameter in the export server. See [the bulk data $export spec](https://hl7.org/fhir/uv/bulkdata/export/index.html#example-request-with-_typefilter) for more information on '_typeFilter'",
+      "type": "boolean"
+    }
+  ]
+}

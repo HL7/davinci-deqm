@@ -2,9 +2,9 @@
     "status": "active",
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "license": "CC0-1.0",
-    "name": "DataExchangeForQualityMeasuresSTU2forFHIRR4",
+    "name": "DEQM",
     "copyright": "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
-    "title": "Data Exchange For Quality Measures STU3 for FHIR R4",
+    "title": "Data Exchange For Quality Measures Implementation Guide",
     "resourceType": "ImplementationGuide",
     "jurisdiction": [
         {
@@ -21,7 +21,7 @@
             "telecom": [
                 {
                     "system": "url",
-                    "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+                    "value": "http://www.hl7.org/Special/committees/cqi"
                 }
             ]
         }
@@ -47,7 +47,7 @@
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
-        }
+        }       
     ],
     "fhirVersion": [
         "4.0.1"
@@ -919,12 +919,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/practitioner-deqm"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -992,12 +986,6 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-submitDataUpdateType"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/coverage-deqm"
                 }
             },
             {
@@ -1094,11 +1082,6 @@
                     "page": [
                         {
                             "generation": "generated",
-                            "nameUrl": "StructureDefinition-practitioner-deqm.html",
-                            "title": "StructureDefinition Practitioner DEQM"
-                        },
-                        {
-                            "generation": "generated",
                             "nameUrl": "StructureDefinition-summary-measurereport-deqm.html",
                             "title": "StructureDefinition Summary MeasureReport DEQM"
                         },
@@ -1111,11 +1094,6 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-datax-measurereport-deqm.html",
                             "title": "StructureDefinition Datax MeasureReport DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-coverage-deqm.html",
-                            "title": "StructureDefinition Coverage DEQM"
                         },
                         {
                             "generation": "generated",
