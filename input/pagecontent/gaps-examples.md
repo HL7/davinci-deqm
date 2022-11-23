@@ -14,19 +14,19 @@ Later, the provider runs the same Gaps in Care Report again, both patients now s
 #### Resources Supported for this Use Case
 {:.no_toc}
 
-|Resource Type|Profile Name|Link to Profile|
-|---|---|---|
-|Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]
-|Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]
-|DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]
-|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
-|Library|CQFM Library Profile|[CQFM Library]|
-|Measure|CQFM Measure Profile|[CQFM Measure]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
-|Organization|QI Core Organization Profile|[QI Core Organization]|
-|Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
-|Procedure|QI Core Procedure Profile|[QI Core Procedure]|
+|Resource Type| Profile Name                            | Link to Profile                           |
+|---|-----------------------------------------|-------------------------------------------|
+|Bundle| DEQM Gaps In Care Bundle Profile        | [DEQM Gaps In Care Bundle Profile]        
+|Composition| DEQM Gaps In Care Composition Profile   | [DEQM Gaps In Care Composition Profile]   
+|DetectedIssue| DEQM Gaps In Care DetectedIssue Profile | [DEQM Gaps In Care DetectedIssue Profile] 
+|Encounter| QI Core Encounter Profile               | [QI Core Encounter]                       |
+|Library| CQFM Library Profile                    | [CQFM Library]                            |
+|Measure| CQFM Measure Profile                    | [CQFM Measure]                            |
+|MeasureReport| DEQM Individual MeasureReport Profile   | [DEQM Individual MeasureReport Profile]   |
+|Organization| QI Core Organization Profile            | [QI Core Organization]                    |
+|Patient| QI Core Patient Profile                 | [QI Core Patient]                         |
+|Practitioner| QICore Practitioner Profile             | [QI Core Practitioner]                    |
+|Procedure| QI Core Procedure Profile               | [QI Core Procedure]                       |
 
 ### Care Gaps Operation
 {:.no_toc}
@@ -53,6 +53,10 @@ The resource graphs below represent the structure of the resources returned from
 #### Step 2 - Data Exchange to Submit Data for Closing Gaps
 
 The provider noticed Gaps Patient01 was indicated as having an [open gap] for Colorectal Cancer Screening. The provider ordered an colonoscopy and the patient was able to get it done in the next few days. Typically a claim by the colonoscopy performer will close the gap. However, the provider may elect to send the submit report data to close the gap. Please see [Colorectal Cancer Screening (COL)] Use Case for details on how to complete the DEQM Data Exchange.
+
+In some cases where there is a delay between order and performance, a provider may want to "soft close" the gap for some amount of time due to the existing order.
+This prevents the gap from showing up as "open" for some amount of time or until the order is carried out. While this feature can be important for users, the 
+functionality is left up to the implementer and is out of scope for this implementation guide.
 
 #### Step 3 - Rerun for a Gaps in Care Report
 

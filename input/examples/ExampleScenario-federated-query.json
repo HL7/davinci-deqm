@@ -1,0 +1,54 @@
+{
+    "resourceType": "ExampleScenario",
+    "id": "FederatedQuery",
+    "url": "http://example.org/ExampleScenario/FederatedQuery",
+    "status": "active",
+    "actor": [
+      {
+        "actorId": "m6AJtyEk6sSsHWLjt",
+        "type": "entity",
+        "name": "St. Jame’s Infirmary"
+      },
+      {
+        "actorId": "fZzusFYr3PBYyRnot",
+        "type": "person",
+        "name": "Allison Camron, MD"
+      }
+    ],
+    "instance": [
+      {
+        "resourceId": "l4bjaZGQfeNfhAEpb",
+        "resourceType": "Location",
+        "name": "456 Main Street Anytown CT 00014-1234"
+      },
+      {
+        "resourceId": "hsEk35Ayonz755t6u",
+        "resourceType": "HealthcareService",
+        "name": "Emergency Medicine "
+      },
+      {
+        "resourceId": "etKzBJvzbeHDZi7Gd",
+        "resourceType": "Endpoint",
+        "name": "St. James Portal"
+      }
+    ],
+    "process": [
+      {
+        "title": "Query directory for St. James Infirmary",
+        "preConditions": "",
+        "postConditions": "",
+        "step": [
+          {
+            "operation": {
+              "number": "1",
+              "type": "read",
+              "initiator": "Organization/oPxE9d7Wtqjy9WEZx",
+              "receiver": "Device/dTixApQCHxxheiLX3",
+              "name": "Query St. James FHIR server for monthly care gaps report",
+              "description": "/MeasureReport?measure=12345&date=202205"
+            }
+          }
+        ]
+      }
+    ]
+  }

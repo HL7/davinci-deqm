@@ -1,0 +1,146 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "valueFilter",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/valueFilter",
+  "version": "3.0.0",
+  "name": "ValueFilter",
+  "title": "Value Filter",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "DataRequirement"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Value Filter"
+      },
+      {
+        "id": "Extension.extension:path",
+        "path": "Extension.extension",
+        "sliceName": "path",
+        "short": "A value attribute to filter on",
+        "definition": "The value attribute of the filter. The specified path SHALL be a FHIRPath resolveabl\ne on the specified type of the DataRequirement, and SHALL consist only of identifiers, constant indexers, and .resolve\n(). The path is allowed to contain qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to traverse mult\niple-cardinality sub-elements (see the Simple FHIRPath Profile for full details). Note that the index must be an integ\ner constant. The path must resolve to an element of type string, boolean, integer, Quantity, Range, Ratio or SampledDa\nta.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:path.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:path.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "path"
+      },
+      {
+        "id": "Extension.extension:path.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:searchParam",
+        "path": "Extension.extension",
+        "sliceName": "searchParam",
+        "short": "A value (token) parameter to search on",
+        "definition": "A token parameter that refers to a search parameter defined on the specified type of the DataRequirement, and which searches on elements of type string, boolean, integer, Quantity, Range, Ratio or SampledData.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:searchParam.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:searchParam.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "searchParam"
+      },
+      {
+        "id": "Extension.extension:searchParam.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:value",
+        "path": "Extension.extension",
+        "sliceName": "value",
+        "short": "A value (token) parameter to search on",
+        "definition": "The value of the filter. This can be any value type supported by Observation apart from a code or temporal value",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:value.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:value.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "value"
+      },
+      {
+        "id": "Extension.extension:value.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/valueFilter"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

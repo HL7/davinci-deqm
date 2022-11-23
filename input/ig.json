@@ -222,6 +222,30 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example",
+                "reference": {
+                    "reference": "MeasureReport/sde-example"
+                },
+                "description": "Illustration of using supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example - Artifact Bundle",
+                "reference": {
+                    "reference": "Bundle/sde-example-artifact-bundle"
+                },
+                "description": "Artifact bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example - Patient Bundle",
+                "reference": {
+                    "reference": "Bundle/sde-example-patient-bundle"
+                },
+                "description": "Patient data bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Location03",
                 "reference": {
                     "reference": "Location/location03"
@@ -919,12 +943,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/practitioner-deqm"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -985,13 +1003,19 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/extension-criteriaReference"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "StructureDefinition/extension-submitDataUpdateType"
                 }
             },
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/coverage-deqm"
+                    "reference": "StructureDefinition/extension-reportingProgramReference"
                 }
             },
             {
@@ -1088,11 +1112,6 @@
                     "page": [
                         {
                             "generation": "generated",
-                            "nameUrl": "StructureDefinition-practitioner-deqm.html",
-                            "title": "StructureDefinition Practitioner DEQM"
-                        },
-                        {
-                            "generation": "generated",
                             "nameUrl": "StructureDefinition-summary-measurereport-deqm.html",
                             "title": "StructureDefinition Summary MeasureReport DEQM"
                         },
@@ -1108,7 +1127,7 @@
                         },
                         {
                             "generation": "generated",
-                            "nameUrl": "StructureDefinition-coverage-deqm.html",
+                            "nameUrl": "StructureDefinition-exception-reportingProgramReference.html",
                             "title": "StructureDefinition Coverage DEQM"
                         },
                         {
@@ -1150,6 +1169,11 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-extension-populationReference.html",
                             "title": "StructureDefinition Extension populationReference"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-extension-criteriaReference.html",
+                            "title": "StructureDefinition Extension criteriaReference"
                         }
                     ],
                     "title": "Profiles and Extensions"

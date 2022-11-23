@@ -69,6 +69,14 @@ criteria, and it is the job of the individual measure report to include
 relevant data that was present in the EHR, and to not include data that
 was missing from the EHR.
 
+The $care-gaps report indicates instances in which information does not 
+support the occurrence of an expected action. The report indicates absence 
+of evidence; it cannot differentiate between activity that happened yet is 
+missing from the record or from activities that did not occur. However, 
+both of these situations result in the $care-gaps and the provider is 
+notified in that report.  Missing data may be identified in a 
+GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profile].
+
 {:.no_toc}
 
 ### Default Profiles
