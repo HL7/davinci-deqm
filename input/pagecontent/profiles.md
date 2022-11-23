@@ -3,19 +3,18 @@ Payers and providers need common data specification, measure specification, repo
 
 ### Profiles
 
-| Resource Type               |Profile Name|Link to Profile|
-|-----------------------------|---|---|
-| Coverage                    |DEQM Coverage Profile|[DEQM Coverage]|
-| Data Exchange MeasureReport |DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
-| Individual MeasureReport    |DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
-| Summary MeasureReport       |DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-| *MedicationAdministration   |DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
-| Practitioner                |DEQM Practitioner Profile|[DEQM Practitioner]|
-| Bundle                      |DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
-| Composition                 |DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
-| DetectedIssue               |DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
-| Group                       |DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
-| GuidanceResponse            |DEQM Care Gap Guidance Response|[DEQM Care Gap Guidance Response]|
+|Resource Type|Profile Name|Link to Profile|
+|---|---|---|
+|Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
+|Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
+|Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
+|*MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
+|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+|Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
+|Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
+|DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
+|Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
+|GuidanceResponse|DEQM Care Gap Guidance Response|[DEQM Care Gap Guidance Response]|
 
 ### Extensions
 
