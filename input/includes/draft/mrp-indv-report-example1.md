@@ -488,7 +488,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "meta": {
                "lastUpdated": "2019-03-06T19:03:03.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/practitioner-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition-qicore-practitioner"
                ],
                "versionId": "4"
             },
