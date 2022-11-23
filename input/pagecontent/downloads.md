@@ -27,3 +27,19 @@ all the examples that are used in this Implementation Guide available for downlo
 A downloadable version of this IG is available so it can be hosted locally:
 
 - [Downloadable Copy](full-ig.zip)
+
+#### Cross Version Analysis
+
+{% include cross-version-analysis.xhtml %}
+
+#### Dependency Table
+
+{% include dependency-table.xhtml %}
+
+#### Globals Table
+
+{% include globals-table.xhtml %}
+
+#### IP Statements
+
+{% include ip-statements.xhtml %}

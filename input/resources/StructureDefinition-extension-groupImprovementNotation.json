@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-groupImprovementNotation",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation",
+  "version": "1.1.1",
+  "name": "DEQMGroupImprovementNotationExtension",
+  "title": "DEQM Group Improvement Notation Extension",
+  "status": "active",
+  "description": "Indicates how the calculation is performed for the group, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional group scoring types to be represented.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MeasureReport"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/measure-improvement-notation"
+        }
+      }
+    ]
+  }
+}

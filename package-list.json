@@ -2,7 +2,7 @@
   "canonical": "http://hl7.org/fhir/us/davinci-deqm",
   "package-id": "hl7.fhir.us.davinci-deqm",
   "title": "Da Vinci Data Exchange for Quality Measures (DEQM) FHIR IG",
-  "introduction": "The Data Exchange for Quality Measures Implementation Guide (IG) will provide guidance to implementers who wish to request and report clinical and administrative data using FHIR resources and operations in support of quality measure reporting. The main IG will detail the base and profiled FHIR resources and operations which provides a framework to enable the Exchange of Quality Measure Data between Data Aggregators (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients). This guide describes three methods of exchanging data quality and the specific use case of 30-Day Medication Reconciliation Post-Discharge will demonstrate how one of these method can be implemented to exchange the MRP measure data. This IG will span both FHIR STU3 and R4 with additional guidance for backward compatibility with STU3. A future release of this guide will include all the R4 artifacts when then US Core and QI Core profiles and the DEQM Profiles derived from them have been defined",
+  "introduction": "The Data Exchange for Quality Measures Implementation Guide (IG) provides guidance to implementers who wish to request and report clinical and administrative data using FHIR resources and operations in support of quality measure reporting. This IG details the base and profiled FHIR resources and operations which provides a framework to enable the exchange of Quality Measure Data between Data Aggregators (organizations that want to evaluate quality measures) and Providers (organizations that deliver care to patients)",
   "list": [
     {
       "current": true,
@@ -12,62 +12,73 @@
       "version": "current"
     },
     {
-      "version": "3.0.0",
+      "version": "3.1.0",
       "fhirversion": "4.0.1",
       "date": "TBD",
-      "desc": "DEQM STU 3 for FHIR R4",
+      "desc": "DEQM STU3.1.0 Release for FHIR R4",
+      "changes": "change-notes.html#changes-and-updates-for-version-310",
+      "path": "http://hl7.org/fhir/us/davinci-deqm/STU3.1",
+      "status": "trial-use",
+      "sequence": "STU3",
+      "current": true
+    },
+    {
+      "version": "3.0.0",
+      "fhirversion": "4.0.1",
+      "date": "2021-06-21",
+      "desc": "DEQM STU3 Release for FHIR R4",
       "changes": "change-notes.html#changes-and-updates-for-version-300",
       "path": "http://hl7.org/fhir/us/davinci-deqm/STU3",
       "status": "trial-use",
-      "sequence": "STU 3",
+      "sequence": "STU3",
       "current": true
     },
     {
       "version": "2.1.0",
       "fhirversion": "4.0.1",
       "date": "2020-08-15",
-      "desc": "STU 3 Ballot for 2nd Release FHIR R4 Version of DEQM",
+      "desc": "DEQM STU3 Ballot for FHIR R4",
       "changes": "change-notes.html#changes-and-updates-for-version-210",
       "path": "http://hl7.org/fhir/us/davinci-deqm/2020Sep",
-      "status": "trial-use",
-      "sequence": "STU 3"
+      "status": "ballot",
+      "sequence": "STU3"
     },
     {
       "version": "2.0.0",
       "fhirversion": "4.0.1",
       "date": "2020-08-15",
-      "desc": "The current official published version of the DEQM IG for FHIR R4.",
+      "desc": "DEQM STU2 Release for FHIR R4.",
       "changes": "change-notes.html#changes-and-updates-for-version-200",
       "path": "http://hl7.org/fhir/us/davinci-deqm/STU2",
       "status": "trial-use",
-      "sequence": "STU 2"
+      "sequence": "STU2"
     },
     {
       "version": "1.1.0",
       "fhirversion": "4.0.1",
       "date": "2019-12-27",
-      "desc": "STU 2 Ballot for FHIR R4 Version of DEQM",
+      "desc": "DEQM STU2 Ballot for FHIR R4",
       "changes": "change-notes.html",
       "path": "http://hl7.org/fhir/us/davinci-deqm/2020Feb",
       "status": "ballot",
-      "sequence": "STU 2"
+      "sequence": "STU2"
     },
     {
       "version": "1.0.0",
       "fhirversion": "3.0.1",
       "date": "2019-10-31",
-      "desc": "The current official published version of the DEQM IG for FHIR STU3.",
+      "desc": "DEQM Initial Release (STU1) for FHIR STU3.",
       "changes": "change-notes.html",
       "path": "http://hl7.org/fhir/us/davinci-deqm/STU1",
       "status": "trial-use",
-      "sequence": "STU 1"
+      "sequence": "STU1"
     },
     {
       "changes": "STU 3/change-notes.html",
       "date": "2019-03-27",
       "descmd": "STU Ballot 2 for FHIR STU3 Version of DEQM - see [R3 Index](http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html) (No R4 version this time)",
-      "path": "http://hl7.org/fhir/us/davinci-deqm/2019May",
-      "sequence": "STU 1",
+      "path": "http://hl7.org/fhir/us/davinci-deqm/2019May/STU3/index.html",
+      "sequence": "STU1",
       "status": "ballot",
       "version": "0.2.0",
       "fhirversion": "3.0.1"
@@ -75,12 +86,12 @@
     {
       "date": "2018-09-01",
       "descmd": "First public ballot - see [R4 Index](http://hl7.org/fhir/us/davinci-deqm/2018Sep/index.html) and [R3 Index](http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html)",
-      "path": "http://hl7.org/fhir/us/davinci-deqm/2018Sep",
-      "sequence": "STU 1",
+      "path": "http://hl7.org/fhir/us/davinci-deqm/2018Sep/STU3/index.html",
+      "sequence": "STU1",
       "status": "ballot",
       "version": "0.1.0",
       "fhirversion": "3.0.1|3.5.0"
     }
   ],
-  "category": "Financial"
+  "category": "Quality"
 }

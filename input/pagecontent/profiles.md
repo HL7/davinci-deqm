@@ -5,12 +5,10 @@ Payers and providers need common data specification, measure specification, repo
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Coverage|DEQM Coverage Profile|[DEQM Coverage]|
 |Data Exchange MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-|MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
+|*MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
@@ -19,17 +17,21 @@ Payers and providers need common data specification, measure specification, repo
 
 ### Extensions
 
-|Link to Profile|
-|---|
-|[DEQM Measure Scoring Extension](StructureDefinition-extension-measureScoring.html)|
-|[DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html)|
-|[DEQM Reporter Group Extension Extension](StructureDefinition-extension-reporterGroup.html)|
-|[DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)|
-|[DEQM Certification Identifier Extension](StructureDefinition-extension-certificationIdentifier.html)|
-|[DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)|
-|[DEQM Population Reference Extension](StructureDefinition-extension-populationReference.html)|
-|[DEQM Gap Status Extension (Modifier)](StructureDefinition-extension-gapStatus.html)|
+| Link to Profile                                                                                       |
+|-------------------------------------------------------------------------------------------------------|
+| [DEQM Measure Scoring Extension](StructureDefinition-extension-measureScoring.html)                   |
+| [DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html)          |
+| [DEQM Reporter Group Extension Extension](StructureDefinition-extension-reporterGroup.html)           |
+| [DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)                 |
+| [DEQM Certification Identifier Extension](StructureDefinition-extension-certificationIdentifier.html) |
+| [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)     |
+| [DEQM Criteria Reference Extension](StructureDefinition-extension-criteriaReference.html)             |
+| [DEQM Population Reference Extension](StructureDefinition-extension-populationReference.html)         |
+| [DEQM Gap Status Extension (Modifier)](StructureDefinition-extension-gapStatus.html)                  |
 
 <br />
 
 {% include link-list.md %}
+
+
+* Profile is an experimental profile used only for examples.
