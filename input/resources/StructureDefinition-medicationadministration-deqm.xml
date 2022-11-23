@@ -2,12 +2,12 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="medicationadministration-deqm"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationadministration-deqm"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/STU3/StructureDefinition-medicationadministration-deqm.html"/>
   <version value="1.1.1"/>
   <name value="DEQMMedicationAdministrationProfile"/>
   <title value="DEQM MedicationAdministration Profile"/>
   <status value="active"/>
-  <experimental value="false"/>
+  <experimental value="true"/>
   <date value="2018-06-19T00:00:00-07:00"/>
   <publisher value="Da Vinci Project"/>
   <contact>
