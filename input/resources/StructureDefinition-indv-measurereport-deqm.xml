@@ -44,6 +44,17 @@
       <mustSupport value="false"/>
     </element>
 
+    <element id="MeasureReport.extension:supplementalData">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="supplementalData"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.extension:scoring">
       <path value="MeasureReport.extension"/>
       <sliceName value="scoring"/>

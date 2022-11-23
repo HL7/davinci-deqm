@@ -943,6 +943,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/extension-supplementalData"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -1149,6 +1155,11 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-extension-reporterGroup.html",
                             "title": "StructureDefinition Extension reporterGroup"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-extension-supplementalData.html",
+                            "title": "StructureDefinition Extension supplementalData"
                         },
                         {
                             "generation": "generated",
