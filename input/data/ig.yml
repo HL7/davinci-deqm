@@ -589,6 +589,9 @@ definition:
         reference: StructureDefinition/extension-certificationIdentifier
     - exampleBoolean: false
       reference:
+        reference: StructureDefinition/extension-criteriaReference
+    - exampleBoolean: false
+      reference:
         reference: StructureDefinition/extension-populationReference
     - exampleBoolean: false
       reference:
@@ -683,6 +686,9 @@ definition:
           - generation: generated
             nameUrl: StructureDefinition-extension-populationReference.html
             title: StructureDefinition Extension populationReference
+          - generation: generated
+            nameUrl: StructureDefinition-extension-criteriaReference.html
+            title: StructureDefinition Extension criteriaReference
         title: Profiles and Extensions
       - generation: markdown
         nameUrl: operations.html

@@ -152,6 +152,7 @@
 [Operations]: operations.html
 [Terminology]: terminology.html
 [DEQM Population Reference Extension]: StructureDefinition-extension-populationReference.html
+[DEQM Criteria Reference Extension]: StructureDefinition-extension-criteriaReference.html
 [base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html
 [Datax Measurereport01]: MeasureReport-datax-measurereport01.html
 [Indv Measurereport01]: MeasureReport-indv-measurereport01.html

@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "extension-populationReference",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
-  "name": "DEQMPopulationReferenceExtension",
-  "title": "DEQM Population Reference Extension",
-  "status": "retired",
+  "id": "extension-criteriaReference",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+  "name": "DEQMCriteriaReferenceExtension",
+  "title": "DEQM Criteria Reference Extension",
+  "status": "active",
   "experimental": false,
-  "date": "2021-04-23",
+  "date": "2022-11-15",
   "publisher": "Da Vinci Project",
   "contact": [
     {
@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Deprecated: Identifies which measure population that a specific resource is used for evaluating their logics by referencing population criteria id (`Measure.group.population.id`) specified in Measure resource.",
+  "description": "Identifies which measure criteria (i.e. population, stratifier, or supplementalData) was responsible for the inclusion of the evaluatedResource or supplementalData on which it appears.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -36,8 +36,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Population reference",
-        "definition": "Reference a measure population by referencing their unique id specified in a Measure resource (`Measure.group.population.id`).",
+        "short": "Criteria reference",
+        "definition": "Reference a measure criteria by referencing their unique id specified in a Measure resource (`Measure.group.population.id`, `Measure.group.stratifier.id,` or `Measure.supplementalData.id`).",
         "min": 0,
         "max": "*"
       },
@@ -49,7 +49,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference"
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference"
       },
       {
         "id": "Extension.value[x]",
