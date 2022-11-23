@@ -1,0 +1,747 @@
+{
+    "resourceType": "MeasureReport",
+    "id": "sde-example",
+    "contained": [
+        {
+            "resourceType": "Patient",
+            "id": "nhsn-iip-ip101",
+            "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>nhsn-iip-ip101</td></tr><tr><td>Date of birth</td><td><span>19 February 1987</span></td></tr></tbody></table></div>"
+            },
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+                    "extension": [
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2106-3",
+                                "display": "White"
+                            }
+                        },
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "1002-5",
+                                "display": "American Indian or Alaska Native"
+                            }
+                        },
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2028-9",
+                                "display": "Asian"
+                            }
+                        },
+                        {
+                            "url": "detailed",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "1586-7",
+                                "display": "Shoshone"
+                            }
+                        },
+                        {
+                            "url": "detailed",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2036-2",
+                                "display": "Filipino"
+                            }
+                        },
+                        {
+                            "url": "text",
+                            "valueString": "Mixed"
+                        }
+                    ]
+                },
+                {
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+                    "extension": [
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2135-2",
+                                "display": "Hispanic or Latino"
+                            }
+                        },
+                        {
+                            "url": "detailed",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2184-0",
+                                "display": "Dominican"
+                            }
+                        },
+                        {
+                            "url": "detailed",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2148-5",
+                                "display": "Mexican"
+                            }
+                        },
+                        {
+                            "url": "text",
+                            "valueString": "Hispanic or Latino"
+                        }
+                    ]
+                }
+            ],
+            "identifier": [
+                {
+                    "system": "urn:oid:2.16.840.1.113883.6.1000",
+                    "value": "nhsn-iip-ip101"
+                }
+            ],
+            "gender": "female",
+            "birthDate": "1987-02-19"
+        },
+        {
+            "resourceType": "MedicationRequest",
+            "id": "new-nhsn-iip-add101",
+            "medicationCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "1161609",
+                        "display": "metFORMIN Oral Liquid Product"
+                    }
+                ],
+                "text": "metFORMIN Oral Liquid Product"
+            }
+        },
+        {
+            "resourceType": "MedicationRequest",
+            "id": "new-nhsn-iip-add101-10",
+            "medicationCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "1161609",
+                        "display": "metFORMIN Oral Liquid Product"
+                    }
+                ],
+                "text": "metFORMIN Oral Liquid Product"
+            },
+            "dosageInstruction": [
+                {
+                    "timing": {
+                        "repeat": {
+                            "boundsPeriod": {
+                                "start": "2021-02-15T16:43:55Z",
+                                "end": "2021-02-22T21:32:24Z"
+                            },
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d"
+                        },
+                        "code": {
+                            "text": "PRN"
+                        }
+                    },
+                    "asNeededBoolean": true,
+                    "route": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.310.3.7.4.798268.7025",
+                                "code": "6",
+                                "display": "Intramuscular"
+                            }
+                        ],
+                        "text": "Intramuscular"
+                    },
+                    "doseAndRate": [
+                        {
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "http://epic.com/CodeSystem/dose-rate-type",
+                                        "code": "calculated",
+                                        "display": "calculated"
+                                    }
+                                ],
+                                "text": "calculated"
+                            },
+                            "doseQuantity": {
+                                "value": 1,
+                                "unit": "mg",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "mg"
+                            }
+                        },
+                        {
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "http://epic.com/CodeSystem/dose-rate-type",
+                                        "code": "admin-amount",
+                                        "display": "admin-amount"
+                                    }
+                                ],
+                                "text": "admin-amount"
+                            },
+                            "doseQuantity": {
+                                "value": 1,
+                                "unit": "mL",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "mL"
+                            }
+                        },
+                        {
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "http://epic.com/CodeSystem/dose-rate-type",
+                                        "code": "ordered",
+                                        "display": "ordered"
+                                    }
+                                ],
+                                "text": "ordered"
+                            },
+                            "doseQuantity": {
+                                "value": 1,
+                                "unit": "mg",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "mg"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "Observation",
+            "id": "791eebdb-ee7d-464f-bd21-12fe2b4c0dd3",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "2148-5"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "0ce0a9f1-f5a3-42ca-81a6-69c08ee9f79c",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "2135-2"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "5d85b278-443a-4a0f-9778-bdac6223f8fd",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "2184-0"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "57f8ba34-88c0-4152-8a8c-74aa2a508353",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "2106-3"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "16f76e4f-86de-4ff1-b54c-19507069044b",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "1002-5"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "a6d7e84c-7ae0-41e1-9ba3-bb86cf48c7c8",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "2036-2"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "bd705f82-80d1-4a50-8dec-686f5f0a02bd",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "1586-7"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "8c9e0819-2eb4-470b-abbb-ac4fa4b707b1",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
+                    "extension": [
+                        {
+                            "url": "measure",
+                            "valueCanonical": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation"
+                        }
+                    ]
+                }
+            ],
+            "status": "final",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage",
+                        "code": "supplemental-data"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "2028-9"
+                    }
+                ]
+            }
+        }
+    ],
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+            "valueString": "All inpatient encounters (including ED/Observation visits that end within 1 hour of the start of the inpatient encounter) for patients of all ages where at least one ADD was ordered or administered during the encounter that is during the measurement period."
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-chief-complaint"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-encounter-discharge-dispositions"
+                    }
+                ],
+                "reference": "Encounter/nhsn-iip-en101"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-condition"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-condition-during-encounter"
+                    }
+                ],
+                "reference": "Condition/nhsn-iip-con101"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-encounter-locations"
+                    }
+                ],
+                "reference": "Encounter/nhsn-iip-en101"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-medication-request"
+                    }
+                ],
+                "reference": "MedicationRequest/nhsn-iip-add101"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-medication-request"
+                    }
+                ],
+                "reference": "MedicationRequest/nhsn-iip-add101-10"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-minimal-patient"
+                    }
+                ],
+                "reference": "#nhsn-iip-ip101"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-minimal-medication-requests"
+                    }
+                ],
+                "reference": "#new-nhsn-iip-add101"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-minimal-medication-requests"
+                    }
+                ],
+                "reference": "#new-nhsn-iip-add101-10"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-ethnicity-coding"
+                    }
+                ],
+                "reference": "#791eebdb-ee7d-464f-bd21-12fe2b4c0dd3"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-ethnicity-coding"
+                    }
+                ],
+                "reference": "#0ce0a9f1-f5a3-42ca-81a6-69c08ee9f79c"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-ethnicity-coding"
+                    }
+                ],
+                "reference": "#5d85b278-443a-4a0f-9778-bdac6223f8fd"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-race-coding"
+                    }
+                ],
+                "reference": "#57f8ba34-88c0-4152-8a8c-74aa2a508353"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-race-coding"
+                    }
+                ],
+                "reference": "#16f76e4f-86de-4ff1-b54c-19507069044b"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-race-coding"
+                    }
+                ],
+                "reference": "#a6d7e84c-7ae0-41e1-9ba3-bb86cf48c7c8"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-race-coding"
+                    }
+                ],
+                "reference": "#bd705f82-80d1-4a50-8dec-686f5f0a02bd"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
+            "valueReference": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                        "valueString": "sde-race-coding"
+                    }
+                ],
+                "reference": "#8c9e0819-2eb4-470b-abbb-ac4fa4b707b1"
+            }
+        }
+    ],
+    "status": "complete",
+    "type": "individual",
+    "measure": "http://nhsnlink.org/fhir/Measure/NHSNGlycemicControlHypoglycemicInitialPopulation",
+    "subject": {
+        "reference": "Patient/nhsn-iip-ip101"
+    },
+    "date": "2022-10-24T11:36:58-06:00",
+    "period": {
+        "start": "2022-01-01T00:00:00-07:00",
+        "end": "2022-01-31T23:59:59-07:00"
+    },
+    "group": [
+        {
+            "population": [
+                {
+                    "id": "initial-population-01",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
+                            "valueString": "All inpatient encounters, as well as ED and OBS encounters that end within 1 hour of the start of the inpatient encounter, for patients of all ages where at least one antidiabetic drug (ADD) was ordered or administered during the encounter that is during the measurement period."
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population",
+                                "display": "Initial Population"
+                            }
+                        ]
+                    },
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "evaluatedResource": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                    "valueString": "initial-population-01"
+                }
+            ],
+            "reference": "Location/nhsn-iip-loc101"
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                    "valueString": "initial-population-01"
+                }
+            ],
+            "reference": "MedicationRequest/nhsn-iip-add101"
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                    "valueString": "initial-population-01"
+                }
+            ],
+            "reference": "Encounter/nhsn-iip-en101"
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                    "valueString": "initial-population-01"
+                }
+            ],
+            "reference": "MedicationRequest/nhsn-iip-add101-10"
+        }
+    ]
+}

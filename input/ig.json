@@ -222,6 +222,30 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example",
+                "reference": {
+                    "reference": "MeasureReport/sde-example"
+                },
+                "description": "Illustration of using supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example - Artifact Bundle",
+                "reference": {
+                    "reference": "Bundle/sde-example-artifact-bundle"
+                },
+                "description": "Artifact bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example - Patient Bundle",
+                "reference": {
+                    "reference": "Bundle/sde-example-patient-bundle"
+                },
+                "description": "Patient data bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Location03",
                 "reference": {
                     "reference": "Location/location03"

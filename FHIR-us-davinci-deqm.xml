@@ -2,10 +2,10 @@
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm" defaultVersion="3.0.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/davinci-deqm" url="http://hl7.org/fhir/us/davinci-deqm">
 <version code="current" url="http://build.fhir.org/ig/HL7/davinci-deqm"/>
 <version code="3.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU3"/>
-<version code="2.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Sep"/>
-<version code="2.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU2"/>
-<version code="1.1.0" url="http://hl7.org/fhir/us/davinci-deqm/2020Feb"/>
-<version code="1.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU1"/>
+<version code="2.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2020Sep"/>
+<version code="2.0.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/STU2"/>
+<version code="1.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2020Feb"/>
+<version code="1.0.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/STU1"/>
 <version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2019May"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2018Sep"/>
 <version code="0.1" deprecated="true"/>
@@ -13,6 +13,9 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="ExampleScenario/FederatedQuery" key="ExampleScenario-FederatedQuery" name=""/>
+<artifact id="MeasureReport/sde-example" key="MeasureReport-sde-example" name=""/>
+<artifact id="Bundle/sde-example-artifact-bundle" key="Bundle-sde-example-artifact-bundle" name=""/>
+<artifact id="Bundle/sde-example-patient-data-bundle" key="Bundle-sde-example-patient-data-bundle" name=""/>
 <artifact id="CodeSystem/care-gap-reason" key="CodeSystem-care-gap-reason" name="Care Gap Reasons Code System"/>
 <artifact id="ValueSet/care-gap-reason" key="ValueSet-care-gap-reason" name="Care Gap Reasons Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
