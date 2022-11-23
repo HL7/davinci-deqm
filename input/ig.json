@@ -991,6 +991,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/extension-reportingProgramReference"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "CapabilityStatement/reporter-client"
                 }
             },
@@ -1094,6 +1100,11 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-datax-measurereport-deqm.html",
                             "title": "StructureDefinition Datax MeasureReport DEQM"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-exception-reportingProgramReference.html",
+                            "title": "StructureDefinition Coverage DEQM"
                         },
                         {
                             "generation": "generated",

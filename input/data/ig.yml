@@ -598,6 +598,9 @@ definition:
         reference: StructureDefinition/extension-submitDataUpdateType
     - exampleBoolean: false
       reference:
+        reference: StructureDefinition/extension-reportingProgramReference
+    - exampleBoolean: false
+      reference:
         reference: CapabilityStatement/reporter-client
     - exampleBoolean: false
       reference:
@@ -659,6 +662,9 @@ definition:
           - generation: generated
             nameUrl: StructureDefinition-datax-measurereport-deqm.html
             title: StructureDefinition Datax MeasureReport DEQM
+          - generation: generated
+            nameUrl: StructureDefinition-extension-reportingProgramReference.html
+            title: StructureDefinition Extension reportingProgramReference DEQM
           - generation: generated
             nameUrl: StructureDefinition-medicationadministration-deqm.html
             title: StructureDefinition MedicationAdministration DEQM
