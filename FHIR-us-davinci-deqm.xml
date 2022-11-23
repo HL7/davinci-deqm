@@ -14,6 +14,9 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="ExampleScenario/FederatedQuery" key="ExampleScenario-FederatedQuery" name=""/>
+<artifact id="MeasureReport/sde-example" key="MeasureReport-sde-example" name=""/>
+<artifact id="Bundle/sde-example-artifact-bundle" key="Bundle-sde-example-artifact-bundle" name=""/>
+<artifact id="Bundle/sde-example-patient-data-bundle" key="Bundle-sde-example-patient-data-bundle" name=""/>
 <artifact id="CodeSystem/care-gap-reason" key="CodeSystem-care-gap-reason" name="Care Gap Reasons Code System"/>
 <artifact id="ValueSet/care-gap-reason" key="ValueSet-care-gap-reason" name="Care Gap Reasons Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
