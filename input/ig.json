@@ -240,7 +240,7 @@
                 "exampleBoolean": true,
                 "name": "Additional Supplemental Data Example - Patient Bundle",
                 "reference": {
-                    "reference": "Bundle/sde-example-patient-bundle"
+                    "reference": "Bundle/sde-example-patient-data-bundle"
                 },
                 "description": "Patient data bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
             },
