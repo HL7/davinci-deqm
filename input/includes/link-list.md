@@ -29,7 +29,6 @@
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
 [Data Exchange]: datax.html
-[DEQM Coverage]: StructureDefinition-coverage-deqm.html
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Submit Data Update Type Extension]: StructureDefinition-extension-submitDataUpdateType.html
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
@@ -116,6 +115,7 @@
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
 [Reporting Group]: StructureDefinition-extension-reporterGroup.html
 [Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html
+[Valueset Not Done]: https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-notDoneValueSet.html
 [negation patterns in quality measurements]: {{site.data.fhir.cqfm}}/using-cql.html
 [transaction response]: {{site.data.fhir.path}}http.html#transaction-response
 [Medicare Stratification Example]: MeasureReport-summ-medicare-stratification-example.html

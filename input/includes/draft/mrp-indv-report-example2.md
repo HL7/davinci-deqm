@@ -25,7 +25,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "meta": {
                "lastUpdated": "2019-02-11T14:19:25.000+00:00",
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage"
                ],
                "versionId": "2"
             },
