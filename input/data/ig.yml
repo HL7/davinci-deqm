@@ -249,6 +249,11 @@ definition:
         reference: MeasureReport/indv-measurereport02
       description: DEQM Indv Measurereport02 example
     - exampleBoolean: true
+      name: Ratio Measurereport01
+      reference:
+        reference: MeasureReport/ratio-measurereport01
+      description: DEQM Ratio Measurereport01 example
+    - exampleBoolean: true
       name: Multiple Indv Mrp Task Report
       reference:
         reference: Bundle/multiple-indv-mrp-task-report
