@@ -1,0 +1,63 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CareGapREason",
+  "id": "care-gap-reason",
+  "title": "Care Gap Reasons Code System",
+  "version": "3.0.0",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
+  "concept": [
+    {
+      "code": "NotFound",
+      "display": "Data Element Not Found",
+      "definition": "Data Element was not able to be located"
+    },
+    {
+      "code": "Missing",
+      "display": "Missing Data Element",
+      "definition": "Data Element is known to exist (e.g. claim exists for procedure), but was not found"
+    },
+    {
+      "code": "Present",
+      "display": "Data Element is Present",
+      "definition": "Data Element is was found matching the criteria"
+    },
+    {
+      "code": "InvalidAttribute",
+      "display": "Attribute is Invalid",
+      "definition": "Data element was found, but value was not equal to expected value"
+    },
+    {
+      "code": "DateInRange",
+      "display": "Date is within specified range",
+      "definition": "Data element was a temporal type (e.g. DateTime, Period, Duration) was within range of dateFilter constraint"
+    },
+    {
+      "code": "DateOutOfRange",
+      "display": "Date is out of specified range",
+      "definition": "Data element was a temporal type (e.g. DateTime, Period, Duration) was not in range of dateFilter constraint"
+    },
+    {
+      "code": "ValueInRange",
+      "display": "Value is within specified range",
+      "definition": "Data element was a numeric type (e.g. Quantity, Integer, Range, Ratio, SampledData) was within in range of valueFilter constraint"
+    },
+    {
+      "code": "ValueOutOfRange",
+      "display": "Value is out of specified range",
+      "definition": "Data element was a numeric type (e.g. Quantity, Integer, Range, Ratio, SampledData) was not in range of valueFilter constraint"
+    },
+    {
+      "code": "CountInRange",
+      "display": "Count is within specified range",
+      "definition": "The count of data elements found was within specified range"
+    },
+    {
+      "code": "CountOutOfRange",
+      "display": "Count is out of specified range",
+      "definition": "The count of data elements found was out of specified range"
+    }
+  ],
+  "count": 10
+}

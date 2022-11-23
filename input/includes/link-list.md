@@ -29,7 +29,6 @@
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
 [Data Exchange]: datax.html
-[DEQM Coverage]: StructureDefinition-coverage-deqm.html
 [DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
 [DEQM Submit Data Update Type Extension]: StructureDefinition-extension-submitDataUpdateType.html
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
@@ -37,7 +36,6 @@
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
-[DEQM Practitioner]: StructureDefinition-practitioner-deqm.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"
@@ -117,6 +115,7 @@
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
 [Reporting Group]: StructureDefinition-extension-reporterGroup.html
 [Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html
+[Valueset Not Done]: https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-notDoneValueSet.html
 [negation patterns in quality measurements]: {{site.data.fhir.cqfm}}/using-cql.html
 [transaction response]: {{site.data.fhir.path}}http.html#transaction-response
 [Medicare Stratification Example]: MeasureReport-summ-medicare-stratification-example.html
@@ -141,6 +140,8 @@
 [DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
 [DEQM Gaps In Care Group Profile]: StructureDefinition-gaps-group-deqm.html
 [DEQM Gap Status Extension]: StructureDefinition-extension-gapStatus.html
+[DEQM Care Gap Guidance Response]: StructureDefinition-detailedCareGapGuidanceResponse.html
+
 [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/
 [Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
 [MeasurePopulationType]: http://hl7.org/fhir/R4/valueset-measure-population.html

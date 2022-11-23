@@ -187,7 +187,7 @@
             "resource": {
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/coverage-deqm"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
