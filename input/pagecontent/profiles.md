@@ -31,6 +31,12 @@ Payers and providers need common data specification, measure specification, repo
 
 <br />
 
+<div class="new-content" markdown="1">
+[DEQM Group Improvement Notation Extension](StructureDefinition-extension-groupImprovementNotation.html)   
+[DEQM Reporting Program Reference Extension](StructureDefinition-extension-reportingProgramReference.html)  
+[DEQM Supplemental Data Extension](StructureDefinition-extension-supplementalData.html)  
+</div>
+
 {% include link-list.md %}
 
 

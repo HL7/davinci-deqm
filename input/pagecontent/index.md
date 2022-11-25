@@ -1,4 +1,12 @@
 
+<div class="new-content" markdown="1">
+
+Where possible, new and updated content will be highlighted with green text and background
+
+{{ site.data.package_list.list[0].desc }}
+
+</div>
+
 ###  Introduction
 
 The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
