@@ -27,17 +27,17 @@
         }
     ],
     "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
-    "version": "3.1.0",
+    "version": "4.0.0-ballot",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
-            "version": "4.1.1",
+            "version": "5.0.0-ballot",
             "id": "qicore",
             "packageId": "hl7.fhir.us.qicore",
             "uri": "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore"
         },
         {
-            "version": "3.1.1",
+            "version": "5.0.1",
             "id": "uscore",
             "packageId": "hl7.fhir.us.core",
             "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
@@ -47,7 +47,7 @@
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
-        }       
+        }
     ],
     "fhirVersion": [
         "4.0.1"
