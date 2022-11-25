@@ -1,0 +1,35 @@
+package-id: hl7.fhir.us.davinci-deqm
+title: Data Exchange For Quality Measures 
+canonical: 'http://hl7.org/fhir/us/davinci-deqm'
+introduction: >-
+  The Da Vinci Data Exchange for Quality Measures (DEQM) FHIR Implementation Guide (IG) supports value based care data exchange in the US Realm
+list:
+  - version: current
+    desc: |-
+      The following resolutions have been voted on by the members of the sponsoring work group [HL7 International Clinical Quality Information](http://www.hl7.org/Special/committees/cqi/index.cfm).
+
+
+      **Comments and their resolutions**
+
+      Listed below are the resolved trackers for this version:
+
+      **Status**: **Summary**:(**Jira Issue**)
+      1. **Applied**: The provider should be notified when data is missing. ([FHIR-26091](https://jira.hl7.org/browse/FHIR-26091))
+      1. **Applied**: Add a value to GIC Status to represent when a Patient is not in the Initial Population for a Measure ([FHIR-32980](https://jira.hl7.org/browse/FHIR-32980))
+      1. **Applied**: Individual MeasureReport profile does not support performance rate (measureScore) of undefined ([FHIR-33086](https://jira.hl7.org/browse/FHIR-33086))
+      1. **Resolved - change required**: DEQM Gaps in Care Bundle slicing is inconsistent ([FHIR-33175](https://jira.hl7.org/browse/FHIR-33175))
+      1. **Applied**: Need a way to send a "soft close" when a Gap is addressed or dismissed ([FHIR-35038](https://jira.hl7.org/browse/FHIR-35038))
+      1. **Resolved - change required**: Cut and paste error in diagram ([FHIR-35776](https://jira.hl7.org/browse/FHIR-35776))
+      1. **Resolved - change required**: Create profile of GuidanceResponse for DEQM DetectedIssue ([FHIR-35807](https://jira.hl7.org/browse/FHIR-35807))
+      1. **Applied**: Update the discussion of negation patterns ([FHIR-35919](https://jira.hl7.org/browse/FHIR-35919))
+      1. **Resolved - change required**: Add a section to general guidance discussing data quality, integrity, and validation prior to measure evaluation and reporting ([FHIR-35920](https://jira.hl7.org/browse/FHIR-35920))
+      1. **Applied**: Support multiple-rate scoring type measures ([FHIR-36209](https://jira.hl7.org/browse/FHIR-36209))
+      1. **Applied**: Define a supplementalData extension to support explicitly identifying supplementalData results ([FHIR-37558](https://jira.hl7.org/browse/FHIR-37558))
+      1. **Applied**: Remove DEQM Coverage profile ([FHIR-37670](https://jira.hl7.org/browse/FHIR-37670))
+      1. **Applied**: Remove DEQM Practitioner Profile as the only change was for CCN identifier which is not used for a practitioner ([FHIR-37752](https://jira.hl7.org/browse/FHIR-37752))
+      1. **Applied**: Expand population reference extension to allow any criteria reference ([FHIR-37775](https://jira.hl7.org/browse/FHIR-37775))
+      1. **Applied**: Remove DEQM MedicationAdministration ([FHIR-37899](https://jira.hl7.org/browse/FHIR-37899))
+      1. **Applied**: Need a way to specify when you are using DEQM and base FHIR Operations, you still use DEQM specific profiles ([FHIR-37969](https://jira.hl7.org/browse/FHIR-37969))
+      1. **Applied**: Add asynchronous capability for $submit-data operation ([FHIR-38036](https://jira.hl7.org/browse/FHIR-38036))
+      1. **Applied**: Add example MeasureReport for a ratio measure ([FHIR-38073](https://jira.hl7.org/browse/FHIR-38073))
+      1. **Applied**: Measure reports should support quality program ([FHIR-39348](https://jira.hl7.org/browse/FHIR-39348))
