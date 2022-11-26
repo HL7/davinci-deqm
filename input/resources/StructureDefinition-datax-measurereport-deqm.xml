@@ -35,7 +35,6 @@
       <path value="MeasureReport"/>
       <mustSupport value="false"/>
     </element>
-
     <element id="MeasureReport.extension:updatetype">
       <path value="MeasureReport.extension"/>
       <sliceName value="updatetype"/>
@@ -43,11 +42,11 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType"/>
+        <profile
+                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType"/>
       </type>
       <mustSupport value="true"/>
     </element>
-
     <element id="MeasureReport.extension:software">
       <path value="MeasureReport.extension"/>
       <sliceName value="software"/>
@@ -55,7 +54,8 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+        <profile
+                 value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -66,11 +66,11 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
+        <profile
+                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
       </type>
       <mustSupport value="true"/>
     </element>
-
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <mustSupport value="true"/>
@@ -89,7 +89,8 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
-      <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <requirements
+                    value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.subject">
@@ -98,7 +99,8 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+        <targetProfile
+                       value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -116,7 +118,8 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
+        <targetProfile
+                       value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -127,7 +130,8 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
+        <profile
+                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -142,8 +146,10 @@
       <constraint>
         <key value="deqm-1"/>
         <severity value="error"/>
-        <human value="Date precision SHALL be at least to day ( YYYY-MM-DD )"/>
-        <expression value="start.value.matches(&#39;^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*&#39;) and end.value.matches(&#39;^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*&#39;)"/>
+        <human
+               value="Date precision SHALL be at least to day ( YYYY-MM-DD )"/>
+        <expression
+                    value="start.value.matches('^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*') and end.value.matches('^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*')"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -159,38 +165,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.evaluatedResource">
-      <path value="MeasureReport.evaluatedResource"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.group.stratifier.code">
-      <path value="MeasureReport.group.stratifier.code"/>
-      <short value="What stratifier of the group"/>
-      <definition
-              value="The meaning of this stratifier, as defined in the measure definition."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="MeasureReport.group.stratifier.code"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression
-                value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
       <min value="0"/>
@@ -200,6 +174,10 @@
       <path value="MeasureReport.group.stratifier"/>
       <min value="0"/>
       <max value="0"/>
+    </element>
+    <element id="MeasureReport.evaluatedResource">
+      <path value="MeasureReport.evaluatedResource"/>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>

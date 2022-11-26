@@ -41,7 +41,7 @@
         "path": "Extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://build.fhir.org/ig/HL7/cqf-measures/ValueSet-quality-programs"
+          "valueSet": "http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs"
         },
         "min": 0,
         "max": "1"

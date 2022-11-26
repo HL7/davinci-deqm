@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm" defaultVersion="3.1.0" defaultWorkgroup="cqi" gitUrl="https://github.com/HL7/davinci-deqm" url="http://hl7.org/fhir/us/davinci-deqm">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/davinci-deqm/2023Jan" ciUrl="http://build.fhir.org/ig/HL7/davinci-deqm" defaultVersion="3.1.0" defaultWorkgroup="cqi" gitUrl="https://github.com/HL7/davinci-deqm" url="http://hl7.org/fhir/us/davinci-deqm">
 <version code="current" url="http://build.fhir.org/ig/HL7/davinci-deqm"/>
+<version code="4.0.0-ballot" url="http://hl7.org/fhir/us/davinci-deqm/2023Jan"/>
 <version code="3.1.0" url="http://hl7.org/fhir/us/davinci-deqm/STU3.1"/>
 <version code="3.0.0" url="http://hl7.org/fhir/us/davinci-deqm/STU3"/>
 <version code="2.1.0" deprecated="true" url="http://hl7.org/fhir/us/davinci-deqm/2020Sep"/>
@@ -13,10 +14,12 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="MeasureReport/ratio-measurereport01" key="MeasureReport-ratio-measurereport01" name=""/>
 <artifact id="ExampleScenario/FederatedQuery" key="ExampleScenario-FederatedQuery" name=""/>
-<artifact id="MeasureReport/sde-example" key="MeasureReport-sde-example" name=""/>
-<artifact id="Bundle/sde-example-artifact-bundle" key="Bundle-sde-example-artifact-bundle" name=""/>
-<artifact id="Bundle/sde-example-patient-data-bundle" key="Bundle-sde-example-patient-data-bundle" name=""/>
+<artifact id="MeasureReport/sde-example" key="MeasureReport-sde-example" name="Additional Supplemental Data Example"/>
+<artifact id="Bundle/sde-example-artifact-bundle" key="Bundle-sde-example-artifact-bundle" name="Additional Supplemental Data Example - Artifact Bundle"/>
+<artifact id="Bundle/sde-example-patient-data-bundle" key="Bundle-sde-example-patient-data-bundle" name="Additional Supplemental Data Example - Patient Bundle"/>
+<artifact id="OperationDefinition/bulk-submit-data" key="OperationDefinition-bulk-submit-data" name="Bulk Submit Data"/>
 <artifact id="CodeSystem/care-gap-reason" key="CodeSystem-care-gap-reason" name="Care Gap Reasons Code System"/>
 <artifact id="ValueSet/care-gap-reason" key="ValueSet-care-gap-reason" name="Care Gap Reasons Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
@@ -28,8 +31,8 @@
 <artifact id="Coverage/coverage03" key="Coverage-coverage03" name="Coverage03"/>
 <artifact id="StructureDefinition/extension-alternateScoreType" key="StructureDefinition-extension-alternateScoreType" name="DEQM Alternate Score Type Extension"/>
 <artifact id="StructureDefinition/extension-certificationIdentifier" key="StructureDefinition-extension-certificationIdentifier" name="DEQM Certification Identifier Extension"/>
-<artifact id="StructureDefinition/extension-criteriaReference" key="StructureDefinition-extension-criteriaReference" name="DEQM Criteria Reference Extension"/>
 <artifact deprecated="true" id="StructureDefinition/coverage-deqm" key="StructureDefinition-coverage-deqm" name="DEQM Coverage Profile"/>
+<artifact id="StructureDefinition/extension-criteriaReference" key="StructureDefinition-extension-criteriaReference" name="DEQM Criteria Reference Extension"/>
 <artifact id="StructureDefinition/datax-measurereport-deqm" key="StructureDefinition-datax-measurereport-deqm" name="DEQM Data Exchange MeasureReport Profile"/>
 <artifact id="OperationDefinition/deqm.evaluate-measure" key="OperationDefinition-deqm.evaluate-measure" name="DEQM Evaluate Measure"/>
 <artifact id="StructureDefinition/extension-gapStatus" key="StructureDefinition-extension-gapStatus" name="DEQM Gap Status Modifier Extension"/>
@@ -41,6 +44,7 @@
 <artifact id="ValueSet/gaps-status" key="ValueSet-gaps-status" name="DEQM Gaps In Care Gap Status Value Set"/>
 <artifact id="StructureDefinition/gaps-group-deqm" key="StructureDefinition-gaps-group-deqm" name="DEQM Gaps In Care Group Profile"/>
 <artifact deprecated="true" id="StructureDefinition/gaps-indv-measurereport-deqm" key="StructureDefinition-gaps-indv-measurereport-deqm" name="DEQM Gaps In Care Individual MeasureReport Profile"/>
+<artifact id="StructureDefinition/extension-groupImprovementNotation" key="StructureDefinition-extension-groupImprovementNotation" name="DEQM Group Improvement Notation Extension"/>
 <artifact id="StructureDefinition/indv-measurereport-deqm" key="StructureDefinition-indv-measurereport-deqm" name="DEQM Individual MeasureReport Profile"/>
 <artifact id="StructureDefinition/extension-measureScoring" key="StructureDefinition-extension-measureScoring" name="DEQM Measure Scoring Extension"/>
 <artifact id="MedicationAdministration/medicationadministration01" key="MedicationAdministration-medicationadministration01" name="DEQM MedicationAdministration Example"/>
@@ -54,6 +58,7 @@
 <artifact id="Device/deqm-software-system-example" key="Device-deqm-software-system-example" name="DEQM Software System Example"/>
 <artifact id="StructureDefinition/extension-submitDataUpdateType" key="StructureDefinition-extension-submitDataUpdateType" name="DEQM Submit Data Update Type Extension"/>
 <artifact id="StructureDefinition/summary-measurereport-deqm" key="StructureDefinition-summary-measurereport-deqm" name="DEQM Summary MeasureReport Profile"/>
+<artifact id="StructureDefinition/extension-supplementalData" key="StructureDefinition-extension-supplementalData" name="DEQM Supplemental Data Extension"/>
 <artifact id="CodeSystem/update-type" key="CodeSystem-update-type" name="DEQM Update Type Code System"/>
 <artifact id="ValueSet/update-type" key="ValueSet-update-type" name="DEQM Update Type Value Set"/>
 <artifact id="Observation/DNA-occultblood" key="Observation-DNA-occultblood" name="DNA Occult Blood"/>
