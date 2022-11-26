@@ -8,7 +8,7 @@
   "status": "complete",
   "type": "individual",
   "subject": {
-    "reference": "Patient/numer-EXM871-Patient"
+    "reference": "Patient/patient01"
   },
   "measure": "http://ecqi.healthit.gov/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR",
   "group": [
@@ -99,10 +99,10 @@
       "reference": "#e890d16f-b8c3-4887-9628-dd3c6fdf3f00"
     },
     {
-      "reference": "Patient/numer-EXM871-Patient"
+      "reference": "Patient/patient01"
     },
     {
-      "reference": "Encounter/numer-EXM871-InPatient-Encounter"
+      "reference": "Encounter/encounter01"
     }
   ]
 }
