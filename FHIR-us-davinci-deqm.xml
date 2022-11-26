@@ -16,10 +16,10 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="MeasureReport/ratio-measurereport01" key="MeasureReport-ratio-measurereport01" name=""/>
 <artifact id="ExampleScenario/FederatedQuery" key="ExampleScenario-FederatedQuery" name=""/>
-<artifact id="OperationDefinition/bulk-submit-data" key="OperationDefinition-bulk-submit-data" name=""/>
 <artifact id="MeasureReport/sde-example" key="MeasureReport-sde-example" name="Additional Supplemental Data Example"/>
 <artifact id="Bundle/sde-example-artifact-bundle" key="Bundle-sde-example-artifact-bundle" name="Additional Supplemental Data Example - Artifact Bundle"/>
 <artifact id="Bundle/sde-example-patient-data-bundle" key="Bundle-sde-example-patient-data-bundle" name="Additional Supplemental Data Example - Patient Bundle"/>
+<artifact id="OperationDefinition/bulk-submit-data" key="OperationDefinition-bulk-submit-data" name="Bulk Submit Data"/>
 <artifact id="CodeSystem/care-gap-reason" key="CodeSystem-care-gap-reason" name="Care Gap Reasons Code System"/>
 <artifact id="ValueSet/care-gap-reason" key="ValueSet-care-gap-reason" name="Care Gap Reasons Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
