@@ -59,6 +59,10 @@ The [DEQM Individual MeasureReport Profile] is used when a measure is reported f
 
 The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure measurement period. It  includes the measure outcome data and is similar to a QRDA Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
 
+#### Data Quality
+
+The default profiles in this implementation guide provide a baseline for data validation, but note that additional validation criteria may be expressed via Measure specific profiles. The profiles expected by the CQL will be referenced in the retrieve expressions of the logic, and surfaced as profile elements of the data requirements. These references to profiles used by the CQL script are expected to be used for data quality, data integrity checks, and data validation. Data access layers providing resources to a CQL engine are expected to supply resources that conform to the stated profiles. 
+
 #### Gaps in Care Reporting
 
 Gaps in Care Reporting can be requested by a Client to a Server system that has all of the data that is known about the patient(s) at a point in time during a [gaps through period]. The [care-gaps](OperationDefinition-care-gaps.html) operation is used to request and receive Gaps in Care Report for measures.
