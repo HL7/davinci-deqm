@@ -3,7 +3,7 @@
     "id": "practitioner01",
     "meta": {
         "profile": [
-            "https://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner.html"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
         ],
         "source": "http://example.org/fhir/server"
     },
