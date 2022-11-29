@@ -1,0 +1,19 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "nhsn-iip-add101",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1161609",
+        "display": "metFORMIN Oral Liquid Product"
+      }
+    ],
+    "text": "metFORMIN Oral Liquid Product"
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/nhsn-iip-ip101"
+  },
+  "intent": "original-order"
+}
