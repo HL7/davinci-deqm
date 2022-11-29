@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "nhsn-iip-loc101",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
+          "code": "1232-8",
+          "display": "Oncology General Hematology-Oncology Ward"
+        }
+      ]
+    }
+  ]
+}
