@@ -670,6 +670,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Gaps Ratio MeasureReport01",
+                "reference": {
+                    "reference": "MeasureReport/ratio-measurereport01"
+                },
+                "description": "GIC Ratio MeasureReport01 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Gaps Patient01",
                 "reference": {
                     "reference": "Patient/gaps-patient01"
@@ -915,6 +923,70 @@
                     "reference": "MedicationAdministration/medicationadministration01"
                 },
                 "description": "DEQM MedicationAdministration Example example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Endpoint Example",
+                "reference": {
+                    "reference": "Endpoint/endpoint01"
+                },
+                "description": "Endpoint example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "ExampleScenario Example",
+                "reference": {
+                    "reference": "ExampleScenario/FederatedQuery"
+                },
+                "description": "Example Scenario example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Encounter nhsn-iip-en101",
+                "reference": {
+                    "reference": "Encounter/nhsn-iip-en101"
+                },
+                "description": "Encounter example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "MedicationRequest nhsn-iip-add101-10",
+                "reference": {
+                    "reference": "MedicationRequest/nhsn-iip-add101-10"
+                },
+                "description": "MedicationRequest example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Location nhsn-iip-loc101",
+                "reference": {
+                    "reference": "Location/nhsn-iip-loc101"
+                },
+                "description": "Location example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Patient nhsn-iip-ip101",
+                "reference": {
+                    "reference": "Patient/nhsn-iip-ip101"
+                },
+                "description": "Patient example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "MedicationRequest nhsn-iip-add101",
+                "reference": {
+                    "reference": "MedicationRequest/nhsn-iip-add101"
+                },
+                "description": "MedicationRequest example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Condition nhsn-iip-con101",
+                "reference": {
+                    "reference": "Condition/nhsn-iip-con101"
+                },
+                "description": "Condition example"
             },
             {
                 "exampleBoolean": false,
