@@ -27,17 +27,17 @@
         }
     ],
     "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
-    "version": "3.1.0",
+    "version": "4.0.0-ballot",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
-            "version": "4.1.1",
+            "version": "5.0.0-ballot",
             "id": "qicore",
             "packageId": "hl7.fhir.us.qicore",
             "uri": "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore"
         },
         {
-            "version": "3.1.1",
+            "version": "5.0.1",
             "id": "uscore",
             "packageId": "hl7.fhir.us.core",
             "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
@@ -47,7 +47,7 @@
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
-        }       
+        }
     ],
     "fhirVersion": [
         "4.0.1"
@@ -172,7 +172,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "CI Build"
+                "value": "STU 3.1.0"
             },
             {
                 "code": "excludexml",
@@ -219,6 +219,30 @@
                     "reference": "MeasureReport/summ-medicare-stratification-example"
                 },
                 "description": "DEQM Summ Medicare Stratification Example example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example",
+                "reference": {
+                    "reference": "MeasureReport/sde-example"
+                },
+                "description": "Illustration of using supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example - Artifact Bundle",
+                "reference": {
+                    "reference": "Bundle/sde-example-artifact-bundle"
+                },
+                "description": "Artifact bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Additional Supplemental Data Example - Patient Bundle",
+                "reference": {
+                    "reference": "Bundle/sde-example-patient-data-bundle"
+                },
+                "description": "Patient data bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
             },
             {
                 "exampleBoolean": true,
@@ -646,6 +670,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Gaps Ratio MeasureReport01",
+                "reference": {
+                    "reference": "MeasureReport/ratio-measurereport01"
+                },
+                "description": "GIC Ratio MeasureReport01 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Gaps Patient01",
                 "reference": {
                     "reference": "Patient/gaps-patient01"
@@ -893,6 +925,70 @@
                 "description": "DEQM MedicationAdministration Example example"
             },
             {
+                "exampleBoolean": true,
+                "name": "Endpoint Example",
+                "reference": {
+                    "reference": "Endpoint/endpoint01"
+                },
+                "description": "Endpoint example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "ExampleScenario Example",
+                "reference": {
+                    "reference": "ExampleScenario/FederatedQuery"
+                },
+                "description": "Example Scenario example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Encounter nhsn-iip-en101",
+                "reference": {
+                    "reference": "Encounter/nhsn-iip-en101"
+                },
+                "description": "Encounter example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "MedicationRequest nhsn-iip-add101-10",
+                "reference": {
+                    "reference": "MedicationRequest/nhsn-iip-add101-10"
+                },
+                "description": "MedicationRequest example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Location nhsn-iip-loc101",
+                "reference": {
+                    "reference": "Location/nhsn-iip-loc101"
+                },
+                "description": "Location example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Patient nhsn-iip-ip101",
+                "reference": {
+                    "reference": "Patient/nhsn-iip-ip101"
+                },
+                "description": "Patient example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "MedicationRequest nhsn-iip-add101",
+                "reference": {
+                    "reference": "MedicationRequest/nhsn-iip-add101"
+                },
+                "description": "MedicationRequest example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Condition nhsn-iip-con101",
+                "reference": {
+                    "reference": "Condition/nhsn-iip-con101"
+                },
+                "description": "Condition example"
+            },
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-measureScoring"
@@ -919,7 +1015,7 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/practitioner-deqm"
+                    "reference": "StructureDefinition/extension-supplementalData"
                 }
             },
             {
@@ -985,13 +1081,19 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/extension-criteriaReference"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "StructureDefinition/extension-submitDataUpdateType"
                 }
             },
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/coverage-deqm"
+                    "reference": "StructureDefinition/extension-reportingProgramReference"
                 }
             },
             {
@@ -1088,11 +1190,6 @@
                     "page": [
                         {
                             "generation": "generated",
-                            "nameUrl": "StructureDefinition-practitioner-deqm.html",
-                            "title": "StructureDefinition Practitioner DEQM"
-                        },
-                        {
-                            "generation": "generated",
                             "nameUrl": "StructureDefinition-summary-measurereport-deqm.html",
                             "title": "StructureDefinition Summary MeasureReport DEQM"
                         },
@@ -1105,11 +1202,6 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-datax-measurereport-deqm.html",
                             "title": "StructureDefinition Datax MeasureReport DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-coverage-deqm.html",
-                            "title": "StructureDefinition Coverage DEQM"
                         },
                         {
                             "generation": "generated",
@@ -1133,6 +1225,11 @@
                         },
                         {
                             "generation": "generated",
+                            "nameUrl": "StructureDefinition-extension-supplementalData.html",
+                            "title": "StructureDefinition Extension supplementalData"
+                        },
+                        {
+                            "generation": "generated",
                             "nameUrl": "StructureDefinition-extension-reportingVendor.html",
                             "title": "StructureDefinition Extension reportingVendor"
                         },
@@ -1150,6 +1247,11 @@
                             "generation": "generated",
                             "nameUrl": "StructureDefinition-extension-populationReference.html",
                             "title": "StructureDefinition Extension populationReference"
+                        },
+                        {
+                            "generation": "generated",
+                            "nameUrl": "StructureDefinition-extension-criteriaReference.html",
+                            "title": "StructureDefinition Extension criteriaReference"
                         }
                     ],
                     "title": "Profiles and Extensions"

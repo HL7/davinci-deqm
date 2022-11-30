@@ -1,11 +1,10 @@
 
-<div class="bg-info" markdown="1">
-This STU update (version 3.1.0) includes changes to update the IG dependencies only.  
-- Updated from US Core 3.1.0 to [US Core 3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/)
-- Updated from QI Core 3.1.0 to [QI Core] 4.1.1
-- Updated from Quality Measure IG 2.0.0 to [Quality Measure Implementation Guide] 3.0.0.
-- Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898)). 
-  -  Note that changes applied across the IG to use QI Core Organization profile from QI-Core 4.1.1 directly where DEQM Organization profile was referenced and used. 
+<div class="new-content" markdown="1">
+
+Where possible, new and updated content will be highlighted with green text and background
+
+{{ site.data.package_list.list[0].desc }}
+
 </div>
 
 ###  Introduction
@@ -75,6 +74,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 <!-- Data Model Standards Landscape -->
 {% include data-model-standards-landscape.md %}
 
+
+#### Data Quality  
+The default profiles in this implementation guide provide a baseline for data validation, but note that additional validation criteria may be expressed via Measure specific profiles.  This process begins by modeling the data quality requirements in CQL, then extending one of the default profiles in this guide with the updated CQL, and specifying the profile in the meta data of the FHIR Measure resource.  In effect, the `Measure.meta.profile` field will hold a link to a data profile that contains the CQL script that can be used for data quality, data itegrity checks, and data validation.  
 
 ### Quality Reporting Scenarios
 

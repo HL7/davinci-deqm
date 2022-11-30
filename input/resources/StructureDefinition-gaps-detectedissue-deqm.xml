@@ -48,13 +48,12 @@
         <element id="DetectedIssue.code">
           <path value="DetectedIssue.code"/>
           <min value="1"/>
-          <fixedCodeableConcept>
-              <coding>
+          <patternCodeableConcept>
+                <coding>
                   <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
                   <code value="CAREGAP"/>
-                  <display value="Caregap"/>
-              </coding>
-          </fixedCodeableConcept>
+                </coding>
+            </patternCodeableConcept>
           <mustSupport value="true"/>
         </element>
         <element id="DetectedIssue.patient">

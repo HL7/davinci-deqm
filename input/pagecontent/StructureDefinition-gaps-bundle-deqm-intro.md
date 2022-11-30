@@ -12,26 +12,18 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. A `Bundle.type` with a fixed code "document"
 1. A `Bundle.entry` references a composition using the [DEQM Gaps In Care Composition Profile] for a  measure
 
-Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
+<div class="bg-success" markdown="1">
 
-1. A `Bundle.entry` references a MeasureReport using the [DEQM Individual MeasureReport Profile] for each measure referenced in the composition.
+1. A `Bundle.timestamp` 
+1. A `Bundle.identifier` with a system and a value
 
-<!--
-### Mandatory Data Elements and Terminology
+**Additional Profile specific implementation guidance:**
 
-The following data-elements are mandatory (i.e data MUST be present). -->
+Conformance Requirement 1:
 
-<!-- **Each {{site.data.structuredefinitions.[id].type}} must have:** -->
+The DEQM Gaps In Care Bundle SHALL include entries for all patient specific resources including evaluated resources referenced by the included [DEQM Gaps In Care MeasureReport](StructureDefinition-indv-measurereport-deqm.html) and for resources referenced by the [DEQM Gaps In Care DetectedIssue](StructureDefinition-gaps-detectedissue-deqm.html) including GuidanceResponse. 
+</div><!-- new-content -->
 
-<!--1. -->
-
-<!--
-
-Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](guidance.html#must-support)):
-
-1. The beneficiary
-
--->
 
 <!-- ### Examples-->
 

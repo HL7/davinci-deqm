@@ -75,3 +75,5 @@ tmp*.xml
 
 .idea/
 /input-cache
+
+.jekyll-cache

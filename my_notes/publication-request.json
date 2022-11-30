@@ -1,0 +1,10 @@
+{
+  "package-id": "hl7.fhir.us.davinci-deqm",
+  "version": "3.1.0",
+  "path": "http://hl7.org/fhir/us/davinci-deqm/STU3.1",
+  "milestone" : true,
+  "status" : "trial-use",
+  "sequence" : "STU 3",
+  "desc" : "DEQM STU3.1.0 Release for FHIR R4",
+  "changes": "change-notes.html#changes-and-updates-for-version-310"
+}

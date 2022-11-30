@@ -49,7 +49,7 @@ The first official published version of the DEQM IG for FHIR R4.
     - Clarify [stakeholders](datax.html) ([FHIR-26082](https://jira.hl7.org/browse/FHIR-26082))
     - Add [reference](index.html#introduction) to Da Vinci Guiding Principles ([FHIR-26078](https://jira.hl7.org/browse/FHIR-26078))
     - Add [implementer notes](StructureDefinition-indv-measurereport-deqm.html#mandatory-data-elements-and-terminology) to  DEQM Data-Exchange MeasureReport Profile  ([FHIR-26073](https://jira.hl7.org/browse/FHIR-26073))
-    - Add [Practitioner Profile](StructureDefinition-practitioner-deqm.html) to accommodate CMS Certification Number identifier(CCN) and add CCN to DEQM Organization Profile ([FHIR-25739](https://jira.hl7.org/browse/FHIR-25739)). Note that DEQM Organization Profile was removed in STU3.1.1, so the link to DEQM Organization Profile is no longer available from STU3.1.1.
+    - Add [Practitioner Profile](http://hl7.org/fhir/us/davinci-deqm/STU2/StructureDefinition-practitioner-deqm.html) to accommodate CMS Certification Number identifier(CCN) and add CCN to DEQM Organization Profile ([FHIR-25739](https://jira.hl7.org/browse/FHIR-25739)). Note that DEQM Organization Profile was removed in STU3.1.1, so the link to DEQM Organization Profile is no longer available from STU3.1.1.
     - Add [software name/version extension](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.extension:vendor) to MeasureReport Profiles ([FHIR-25721](https://jira.hl7.org/browse/FHIR-25721))
     - Add required [`id`](StructureDefinition-summary-measurereport-deqm-definitions.html#MeasureReport.group.population.code) element to the MeasureReport profiles ([FHIR-25716](https://jira.hl7.org/browse/FHIR-25716))
     - [Document](datax.html#provenance) that $submit-data and $collect-data should support the use of the X-Provenance header ([FHIR-25624](https://jira.hl7.org/browse/FHIR-25624))
@@ -140,13 +140,13 @@ The second official published version of the DEQM IG for FHIR R4.
 
 ### Changes and Updates for Version 3.1.0
 
-1. Updated the IG dependencies. 
-    - Update Dependencies ([FHIR-37621](https://jira.hl7.org/browse/FHIR-37621))
+1. Updated the IG dependencies 
+    - Update Dependencies. ([FHIR-37621](https://jira.hl7.org/browse/FHIR-37621))
         - Updated from US Core 3.1.0 to US Core 3.1.1 
         - Updated from QI Core 3.1.0 to QI-Core 4.1.1 
-        - Updated from Quality Measure IG from 2.0.0 to Quality Measure IG 3.0.0
+        - Updated from Quality Measure IG 2.0.0 to Quality Measure IG 3.0.0
         - Updated examples and profiles where applicable due to dependency updates
-    - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898)). Note that changes applied across the IG to use QI Core Organization profile from QI-Core 4.1.1 directly where DEQM Organization profile was referenced and used. 
+    - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898))
     - Correct ActCode "CAREGAP" display name to match what's in THO. ([FHIR-39302](https://jira.hl7.org/browse/FHIR-39302))
     - The specified gapStatus code display does not match the actual code display. ([FHIR-36170](https://jira.hl7.org/browse/FHIR-36170))
 

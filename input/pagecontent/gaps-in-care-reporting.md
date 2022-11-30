@@ -44,6 +44,7 @@ The following resources are used in the Gaps in Care Reporting Scenario:
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
 |Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
+{: .grid}
 
 Figure 2-14 provides a graphical view of how these resources are related. A Composition is created for each Patient (linked via `subject` element) and is contained in a Bundle. The Composition resource references one or more DEQM Individual MeasureReport resources. One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under `evaluatedResource` element. The [DEQM Population Reference Extension] on the `evaluatedResource` documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
 
@@ -60,6 +61,7 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 |---|---|---|---|---|---|
 |**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The Gaps in Care Report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
+{: .grid}
 
 The timeline below represents the data described above. A colonoscopy procedure per the Colorectal Cancer Screen measure is required every 10 years. If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
 
@@ -114,6 +116,20 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 - The [DEQM Gaps in Care Composition Profile] may also contain all supporting resources referenced by the Composition and its contained measure reports. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
 - The `date` element of the MeasureReport resource contains the date the open/closed gap was calculated.
+
+<div class="bg-success" markdown="1">
+
+#### Gaps in Care Bundle Structure
+
+The [DEQM Gaps In Care Bundle](StructureDefinition-gaps-bundle-deqm.html) is defined as a document bundle (`bundle.type` is `document`), hence, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource.
+
+Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle. 
+- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-indv-measurereport-deqm.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-gaps-detectedissue-deqm.html) resources included in the [DEQM Gaps In Care Composition](StructureDefinition-gaps-composition-deqm.html). 
+- In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resouruce, the resources for the colonoscopy procesure and FOBT lab observation as shown in the figure. 
+- The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
+
+{% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
+</div><!-- new-content -->
 
 #### Attribution
 {:.no_toc}

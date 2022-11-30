@@ -1,0 +1,104 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "nhsn-iip-add101-10",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1161609",
+        "display": "metFORMIN Oral Liquid Product"
+      }
+    ],
+    "text": "metFORMIN Oral Liquid Product"
+  },
+  "dosageInstruction": [
+    {
+      "timing": {
+        "repeat": {
+          "boundsPeriod": {
+            "start": "2021-02-15T16:43:55Z",
+            "end": "2021-02-22T21:32:24Z"
+          },
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        },
+        "code": {
+          "text": "PRN"
+        }
+      },
+      "asNeededBoolean": true,
+      "route": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.840.114350.1.13.310.3.7.4.798268.7025",
+            "code": "6",
+            "display": "Intramuscular"
+          }
+        ],
+        "text": "Intramuscular"
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://epic.com/CodeSystem/dose-rate-type",
+                "code": "calculated",
+                "display": "calculated"
+              }
+            ],
+            "text": "calculated"
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://epic.com/CodeSystem/dose-rate-type",
+                "code": "admin-amount",
+                "display": "admin-amount"
+              }
+            ],
+            "text": "admin-amount"
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://epic.com/CodeSystem/dose-rate-type",
+                "code": "ordered",
+                "display": "ordered"
+              }
+            ],
+            "text": "ordered"
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "active",
+  "subject": {
+    "reference": "Patient/nhsn-iip-ip101"
+  },
+  "intent": "order"
+}

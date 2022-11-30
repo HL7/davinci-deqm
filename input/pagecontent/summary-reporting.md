@@ -14,11 +14,11 @@ The Quality Reporting Page in the R4 Release of the FHIR Specification provides 
 
 The following resources are used in the summary reporting scenario:
 
-|Resource Type|Profile Name|Link to Profile|
-|---|---|---|
-|Measure|CQFM Measure Profile|[CQFM Measure]|
-|Summary MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-|Organization|DEQM Organization Profile|[DEQM Organization]|
+|Resource Type| Profile Name                       |Link to Profile|
+|---|------------------------------------|---|
+|Measure| CQFM Measure Profile               |[CQFM Measure]|
+|Summary MeasureReport| DEQM Summary MeasureReport Profile |[DEQM Summary MeasureReport Profile]|
+|Organization| QICore Organization Profile        |[QI Core Organization] |
 
 ### Summary Measure Reporting
 

@@ -3,11 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="gaps-bundle-deqm"/>
     <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"/>
-    <name value="DEQMGapsInCareBundleProfile"/>
-    <title value="DEQM Gaps In Care Bundle Profile"/>
+    <name value="DEQMGapsInCareBundle"/>
+    <title value="DEQM Gaps In Care Bundle"/>
     <status value="active"/>
     <experimental value="false"/>
-    <date value="2021-04-23"/>
     <publisher value="Da Vinci Project"/>
     <contact>
       <telecom>
@@ -15,7 +14,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care Bundle Profile describes a bundle returned by the Measure [care-gaps](OperationDefinition-care-gaps.html) operation. This bundle consists of a document composition for gaps in care and supporting resources referenced by the composition."/>
+    <description value="The DEQM Gaps In Care Bundle describes a bundle returned by the Measure [care-gaps](OperationDefinition-care-gaps.html) operation. This bundle consists of a document composition for gaps in care and supporting resources referenced by the composition."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
@@ -33,9 +32,30 @@
         <element id="Bundle">
             <path value="Bundle"/>
         </element>
+        <element id="Bundle.identifier">
+            <path value="Bundle.identifier"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>   
+        <element id="Bundle.identifier.system">
+            <path value="Bundle.identifier.system"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>       
+        <element id="Bundle.identifier.value">
+            <path value="Bundle.identifier.value"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>          
         <element id="Bundle.type">
             <path value="Bundle.type"/>
             <fixedCode value="document"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.timestamp">
+            <path value="Bundle.timestamp"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry">
             <path value="Bundle.entry"/>
@@ -64,24 +84,6 @@
           <type>
             <code value="Composition"/>
             <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
-          </type>
-          <mustSupport value="true"/>
-        </element>
-        <element id="Bundle.entry:indv_measure_report_entry">
-          <path value="Bundle.entry"/>
-          <sliceName value="indv_measure_report_entry"/>
-          <short value="Contains the individual MeasureReport referenced in the gaps in care composition"/>
-          <min value="0"/>
-          <max value="*"/>
-          <mustSupport value="true"/>
-        </element>
-        <element id="Bundle.entry:indv_measure_report_entry.resource">
-          <path value="Bundle.entry.resource"/>
-          <short value="This MeasureReport uses the DEQM Individual MeasureReport Profile"/>
-          <min value="1"/>
-          <type>
-            <code value="MeasureReport"/>
-            <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
           </type>
           <mustSupport value="true"/>
         </element>

@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CareGapReasons",
+  "id": "care-gap-reason",
+  "title": "Care Gap Reasons Value Set",
+  "version": "3.0.0",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/care-gap-reason",
+  "experimental": false,
+  "description": "This is a ValueSet for Care Gap Reasons",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason"
+      }
+    ]
+  }
+}
