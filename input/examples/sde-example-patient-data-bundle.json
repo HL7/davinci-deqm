@@ -152,8 +152,8 @@
                     "reference": "Patient/nhsn-iip-ip101"
                 },
                 "period": {
-                    "start": "2022-01-01T08:00:00.0",
-                    "end": "2022-01-31T08:00:00.0"
+                    "start": "2022-01-01",
+                    "end": "2022-01-31"
                 },
                 "diagnosis": [
                     {
@@ -223,7 +223,10 @@
                 "encounter": {
                     "reference": "Encounter/nhsn-iip-en101"
                 },
-                "authoredOn": "2022-01-01T10:00:00.0"
+                "requester": {
+                    "reference": "Practitioner/practitioner01"
+                },
+                "authoredOn": "2022-01-01"
             },
             "request": {
                 "method": "PUT",
@@ -280,12 +283,10 @@
                 },
                 "authoredOn": "2022-01-15T16:50:26Z",
                 "requester": {
-                    "reference": "Practitioner/e9PX1XlXc.HNoRNOB8.Ip3g3",
-                    "display": "Justin R Birge, MD"
+                    "reference": "Practitioner/practitioner01"
                 },
                 "recorder": {
-                    "reference": "Practitioner/ejGwdFhqg0AasCfx7NXLO5Q3",
-                    "display": "Brian L Schmer, PharmD"
+                    "reference": "Practitioner/practitioner02"
                 },
                 "courseOfTherapyType": {
                     "coding": [
@@ -476,7 +477,7 @@
                     "reference": "Patient/nhsn-iip-ip101"
                 },
                 "encounter": {
-                    "reference": "Encounter/nhsn-iip-en101-2"
+                    "reference": "Encounter/nhsn-iip-en101"
                 },
                 "occurrenceDateTime": "2013-05-02T16:16:00-07:00",
                 "reasonCode": [
@@ -575,7 +576,7 @@
                 "subject": {
                     "reference": "Patient/nhsn-iip-ip101"
                 },
-                "onsetDateTime": "2022-01-08T11:00:00.0"
+                "onsetDateTime": "2022-01-08"
             },
             "request": {
                 "method": "PUT",
