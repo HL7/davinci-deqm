@@ -1,7 +1,6 @@
 == Suppressed Messages ==
 
 # SECTION 1 - WARNINGS: The validator is trying to resolve an "example.org" artifact which by convention does not exist
-WARNING: Bundle/multiple-summ-report: Bundle.entry[0].resource.ofType(MeasureReport): The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/indv-measurreport-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/summ-medicare-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 
