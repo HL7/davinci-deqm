@@ -251,6 +251,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
             "code": "2148-5"
           }
         ]
@@ -282,6 +283,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
             "code": "2135-2"
           }
         ]
@@ -313,6 +315,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
             "code": "2184-0"
           }
         ]
@@ -375,6 +378,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
             "code": "1002-5"
           }
         ]
@@ -406,6 +410,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
             "code": "2036-2"
           }
         ]
@@ -437,6 +442,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
             "code": "1586-7"
           }
         ]
@@ -468,6 +474,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
             "code": "2028-9"
           }
         ]
