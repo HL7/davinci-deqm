@@ -5,9 +5,9 @@
     {
       "coding": [
         {
-          "system": "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
-          "code": "1232-8",
-          "display": "Oncology General Hematology-Oncology Ward"
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code": "ONCL",
+          "display": "Medical oncology clinic"
         }
       ]
     }

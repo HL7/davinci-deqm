@@ -496,12 +496,9 @@
         "medicationCodeableConcept": {
           "coding": [
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-notDoneValueSet",
-                  "valueUri": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.232"
-                }
-              ]
+              "system" : "http://snomed.info/sct",
+              "code" : "48603004",
+              "display" : "Product containing warfarin (medicinal product)"
             }
           ],
           "text": "Warfarin Value Set"
