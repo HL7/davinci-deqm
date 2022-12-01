@@ -147,10 +147,10 @@
                 "code": {
                     "coding": [
                         {
-                            "code": "1111F",
-                            "display": "Medication Reconciliation",
-                            "system": "http://www.ama-assn.org/go/cpt"
-                        }
+                            "code": "fulfill",
+                            "display": "Fulfill the focal request",
+                            "system": "http://hl7.org/fhir/CodeSystem/task-code"
+                         }
                     ]
                 },
                 "encounter": {

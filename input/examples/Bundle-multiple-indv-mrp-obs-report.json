@@ -1,5 +1,7 @@
 {
    "id": "multiple-indv-mrp-obs-report",
+   "type": "transaction",
+   "resourceType": "Bundle",
    "entry": [
       {
          "fullUrl": "http://example.org/fhir/receiver/Observation/observation03",
@@ -29,9 +31,9 @@
             "code": {
                "coding": [
                   {
+                     "system": "http://www.ama-assn.org/go/cpt",
                      "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
+                     "display": "Medication Reconciliation"
                   }
                ]
             },
@@ -779,9 +781,9 @@
             "code": {
                "coding": [
                   {
+                     "system": "http://www.ama-assn.org/go/cpt",
                      "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
+                     "display": "Medication Reconciliation"
                   }
                ]
             },
@@ -1210,9 +1212,9 @@
             "code": {
                "coding": [
                   {
+                     "system": "http://www.ama-assn.org/go/cpt",
                      "code": "1111F",
-                     "display": "Medication Reconciliation",
-                     "system": "http://www.ama-assn.org/go/cpt"
+                     "display": "Medication Reconciliation"
                   }
                ]
             },
@@ -1487,7 +1489,5 @@
          }
       }
    ],
-   "timestamp": "2020-07-08T22:17:14.187160Z",
-   "type": "transaction",
-   "resourceType": "Bundle"
+   "timestamp": "2020-07-08T22:17:14.187160Z"
 }
