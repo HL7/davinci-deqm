@@ -1187,134 +1187,21 @@
                 {
                     "generation": "markdown",
                     "nameUrl": "profiles.html",
-                    "page": [
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-summary-measurereport-deqm.html",
-                            "title": "StructureDefinition Summary MeasureReport DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-indv-measurereport-deqm.html",
-                            "title": "StructureDefinition Indv MeasureReport DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-datax-measurereport-deqm.html",
-                            "title": "StructureDefinition Datax MeasureReport DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-medicationadministration-deqm.html",
-                            "title": "StructureDefinition MedicationAdministration DEQM"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-measureScoring.html",
-                            "title": "StructureDefinition Extension measureScoring"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-alternateScoreType.html",
-                            "title": "StructureDefinition Extension alternateScoreType"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-reporterGroup.html",
-                            "title": "StructureDefinition Extension reporterGroup"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-supplementalData.html",
-                            "title": "StructureDefinition Extension supplementalData"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-reportingVendor.html",
-                            "title": "StructureDefinition Extension reportingVendor"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-certificationIdentifier.html",
-                            "title": "StructureDefinition Extension certificationIdentifier"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-submitDataUpdateType.html",
-                            "title": "StructureDefinition Extension submitDataUpdateType"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-populationReference.html",
-                            "title": "StructureDefinition Extension populationReference"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "StructureDefinition-extension-criteriaReference.html",
-                            "title": "StructureDefinition Extension criteriaReference"
-                        }
-                    ],
                     "title": "Profiles and Extensions"
                 },
                 {
                     "generation": "markdown",
                     "nameUrl": "operations.html",
-                    "page": [
-                        {
-                            "generation": "generated",
-                            "nameUrl": "OperationDefinition-care-gaps.html",
-                            "title": "Operations"
-                        }
-                    ],
                     "title": "Operations"
                 },
                 {
                     "generation": "markdown",
                     "nameUrl": "terminology.html",
-                    "page": [
-                        {
-                            "generation": "generated",
-                            "nameUrl": "ValueSet-update-type.html",
-                            "title": "ValueSet Update Type"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "CodeSystem-update-type.html",
-                            "title": "CodeSystem Update Type"
-                        }
-                    ],
                     "title": "Terminology"
                 },
                 {
                     "generation": "markdown",
                     "nameUrl": "capstatements.html",
-                    "page": [
-                        {
-                            "generation": "generated",
-                            "nameUrl": "CapabilityStatement-producer-server.html",
-                            "title": "CapabilityStatement Producer Server"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "CapabilityStatement-consumer-server.html",
-                            "title": "CapabilityStatement Consumer Server"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "CapabilityStatement-reporter-client.html",
-                            "title": "CapabilityStatement Reporter Client"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "CapabilityStatement-producer-client.html",
-                            "title": "CapabilityStatement Producer Client"
-                        },
-                        {
-                            "generation": "generated",
-                            "nameUrl": "CapabilityStatement-consumer-client.html",
-                            "title": "CapabilityStatement Consumer Client"
-                        }
-                    ],
                     "title": "Capability Statements"
                 },
                 {
