@@ -3,6 +3,10 @@
 
 Where possible, new and updated content will be highlighted with green text and background
 
+</div>
+
+<div markdown="1" class="bg-info">
+
 {{ site.data.package_list.list[0].desc }}
 
 </div>
