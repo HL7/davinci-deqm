@@ -6,9 +6,11 @@ The list of operations defined by this implementation guide.
 |Link to operations|
 |---|
 |[$care-gaps Operation](OperationDefinition-care-gaps.html)|
-|[$bulk-submit-data Operation](OperationDefinition-bulk-submit-data.html)|
+
 
 <div class="bg-success" markdown="1">
+|[$bulk-submit-data Operation](OperationDefinition-bulk-submit-data.html)|
+
 [$deqm.evaluate-measure](OperationDefinition-deqm.evaluate-measure.html)
 </div><!-- new-content -->
 
