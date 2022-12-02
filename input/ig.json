@@ -926,22 +926,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Endpoint Example",
-                "reference": {
-                    "reference": "Endpoint/endpoint01"
-                },
-                "description": "Endpoint example"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "ExampleScenario Example",
-                "reference": {
-                    "reference": "ExampleScenario/FederatedQuery"
-                },
-                "description": "Example Scenario example"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Encounter nhsn-iip-en101",
                 "reference": {
                     "reference": "Encounter/nhsn-iip-en101"

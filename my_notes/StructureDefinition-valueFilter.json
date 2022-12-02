@@ -21,6 +21,10 @@
     {
       "type": "element",
       "expression": "DataRequirement"
+    },
+    {
+      "type": "element",
+      "expression": "GuidanceResponse.dataRequirement"
     }
   ],
   "type": "Extension",
