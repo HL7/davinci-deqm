@@ -150,4 +150,33 @@ The second official published version of the DEQM IG for FHIR R4.
     - Correct ActCode "CAREGAP" display name to match what's in THO. ([FHIR-39302](https://jira.hl7.org/browse/FHIR-39302))
     - The specified gapStatus code display does not match the actual code display. ([FHIR-36170](https://jira.hl7.org/browse/FHIR-36170))
 
+### Changes and Updates for Version 4.0.0
+
+1. Applied the following trackers: 
+    - The provider should be notified when data is missing. ([FHIR-26091](https://jira.hl7.org/browse/FHIR-26091))
+    - Add a value to GIC Status to represent when a Patient is not in the Initial Population for a Measure ([FHIR-32980](https://jira.hl7.org/browse/FHIR-32980))
+    -  Add GET examples to cover entire $care-gaps api ([FHIR-33005](https://jira.hl7.org/browse/FHIR-33005))
+    -  In Data Exchange MeasureReport profile, the .measureScore should not be allowed ([FHIR-33084](https://jira.hl7.org/browse/FHIR-33084))
+    -  Individual MeasureReport profile does not support performance rate (measureScore) of undefined ([FHIR-33086](https://jira.hl7.org/browse/FHIR-33086))
+    -  Measure elements cardinality required, but base element is optional ([FHIR-33174](https://jira.hl7.org/browse/FHIR-33174))
+    -  DEQM Gaps in Care Bundle slicing is inconsistent ([FHIR-33175](https://jira.hl7.org/browse/FHIR-33175))
+    -  evaluatedResources in Summary MeasureReport should not be 0..0 ([FHIR-34352](https://jira.hl7.org/browse/FHIR-34352))
+    -  reportingVendor extension should be allowed on exchange profiles ([FHIR-34363](https://jira.hl7.org/browse/FHIR-34363))
+    -  Need a way to send a "soft close" when a Gap is addressed or dismissed ([FHIR-35038](https://jira.hl7.org/browse/FHIR-35038))
+    -  Cut and paste error in diagram ([FHIR-35776](https://jira.hl7.org/browse/FHIR-35776))
+    -  Create profile of GuidanceResponse for DEQM DetectedIssue ([FHIR-35807](https://jira.hl7.org/browse/FHIR-35807))
+    -  Update the discussion of negation patterns ([FHIR-35919](https://jira.hl7.org/browse/FHIR-35919))
+    -  Add a section to general guidance discussing data quality, integrity, and validation prior to measure evaluation and reporting ([FHIR-35920](https://jira.hl7.org/browse/FHIR-35920))
+    -  Correct MeasureReport.group.stratifier.code cardinality due to error in base resource ([FHIR-36054](https://jira.hl7.org/browse/FHIR-36054))
+    -  Support multiple-rate scoring type measures ([FHIR-36209](https://jira.hl7.org/browse/FHIR-36209))
+    -  Define a supplementalData extension to support explicitly identifying supplementalData results ([FHIR-37558](https://jira.hl7.org/browse/FHIR-37558))
+    -  Remove DEQM Coverage profile ([FHIR-37670](https://jira.hl7.org/browse/FHIR-37670))
+    -  Remove DEQM Practitioner Profile as the only change was for CCN identifier which is not used for a practitioner ([FHIR-37752](https://jira.hl7.org/browse/FHIR-37752))
+    -  Expand population reference extension to allow any criteria reference ([FHIR-37775](https://jira.hl7.org/browse/FHIR-37775))
+    -  Remove DEQM MedicationAdministration ([FHIR-37899](https://jira.hl7.org/browse/FHIR-37899))
+    -  Need a way to specify when you are using DEQM and base FHIR Operations, you still use DEQM specific profiles ([FHIR-37969](https://jira.hl7.org/browse/FHIR-37969))
+    -  Add asynchronous capability for $submit-data operation ([FHIR-38036](https://jira.hl7.org/browse/FHIR-38036))
+    -  Add example MeasureReport for a ratio measure ([FHIR-38073](https://jira.hl7.org/browse/FHIR-38073))
+    -  Measure reports should support quality program ([FHIR-39348](https://jira.hl7.org/browse/FHIR-39348))
+
 {% include link-list.md %}

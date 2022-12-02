@@ -3,7 +3,7 @@
   "version" : "4.0.0-ballot",
   "path" : "http://hl7.org/fhir/us/davinci-deqm/2023Jan",
   "status" : "ballot",
-  "sequence" : "CI Build",
+  "sequence" : "STU4 (v4.0.0)",
   "desc" : "STU4 (v4.0.0)",
   "descmd" : "The January 2023 Ballot Version: this version updates the Data Exchange for Quality Measures Implementation Guide (IG) to STU4 (v4.0.0)."
 }
