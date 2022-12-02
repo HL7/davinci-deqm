@@ -16,6 +16,10 @@
     {
       "type": "element",
       "expression": "Reference"
+    },
+    {
+      "type": "element",
+      "expression": "MeasureReport"
     }
   ],
   "type": "Extension",
