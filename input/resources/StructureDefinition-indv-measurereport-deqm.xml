@@ -41,6 +41,17 @@
       </constraint>
       <mustSupport value="false"/>
     </element>
+    <element id="MeasureReport.extension:reportingProgramReference">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="reportingProgramReference"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.extension:supplementalData">
       <path value="MeasureReport.extension"/>
       <sliceName value="supplementalData"/>
@@ -261,7 +272,7 @@
         <key value="deqm-4"/>
         <severity value="error"/>
         <human value="ensure that if scoring is specified on the group, groupImprovementNotation must be (if the scoring type is other than cohort)"/>
-        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').where(valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).exists() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').where(valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).exists() implies group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>

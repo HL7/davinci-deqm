@@ -20,6 +20,17 @@
             }
         },
         {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "ep-ec",
+                        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs"
+                    }
+                ]
+            }
+        },
+        {
             "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
             "valueIdentifier": {
                 "system": "urn:oid:2.16.840.1.113883.3.2074.1",
@@ -68,6 +79,20 @@
                 ],
                 "text": "MRP Group"
             },
+            "extension": [
+                {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "increase",
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                        "display": "Increased score indicates improvement"
+                      }
+                    ]
+                  }
+                }
+              ],
             "population": [
                 {
                     "code": {

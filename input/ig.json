@@ -989,6 +989,14 @@
                 "description": "Condition example"
             },
             {
+                "exampleBoolean": true,
+                "name": "Guidance Response Example",
+                "reference": {
+                    "reference": "GuidanceResponse/guidanceresponse01"
+                },
+                "description": "Guidance Response example"
+            },
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-measureScoring"
