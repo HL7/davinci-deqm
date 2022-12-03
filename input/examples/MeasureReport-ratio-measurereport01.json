@@ -10,7 +10,7 @@
   "subject": {
     "reference": "Patient/patient01"
   },
-  "measure": "http://ecqi.healthit.gov/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR",
+  "measure": "http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR",
   "group": [
     {
       "population": [

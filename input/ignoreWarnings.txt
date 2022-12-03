@@ -1,10 +1,13 @@
 == Suppressed Messages ==
 
+# SECTION 1 - WARNINGS: The extension is retired/deprecated and no longer in use
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference'): The Implementation Guide contains no examples for this extension
+
 # SECTION 1 - WARNINGS: The validator is trying to resolve an "example.org" artifact which by convention does not exist
 WARNING: MeasureReport/indv-measurreport-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/summ-medicare-stratification-example: MeasureReport: The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 WARNING: Bundle/multiple-summ-report: Bundle.entry[0].resource.ofType(MeasureReport): The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
-WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://ecqi.healthit.gov/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
+WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
 
 # SECTION 1 - WARNINGS: The validator is not able to validate codes from the CPT code system where CPT codes are allowed.
 WARNING: Bundle/single-gaps-closed-indv-report01: Bundle.entry[3].resource.ofType(Encounter).type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
