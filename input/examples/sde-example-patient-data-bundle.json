@@ -4,13 +4,13 @@
     "type": "transaction",
     "entry": [
         {
-            "fullUrl": "urn:uuid:050deac6-0544-43df-bff9-7506f868740c",
+            "fullUrl": "urn:uuid:050deac6-0544-43df-bff9-7506f8687469",
             "resource": {
                 "resourceType": "Patient",
-                "id": "nhsn-iip-ip101",
+                "id": "patient04",
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
                     ]
                 },
                 "extension": [
@@ -100,7 +100,7 @@
                 "identifier": [
                     {
                         "system": "urn:oid:2.16.840.1.113883.6.1000",
-                        "value": "nhsn-iip-ip101"
+                        "value": "patient04"
                     }
                 ],
                 "active": true,
@@ -118,17 +118,17 @@
             },
             "request": {
                 "method": "PUT",
-                "url": "Patient/nhsn-iip-ip101"
+                "url": "Patient/patient04"
             }
         },
         {
-            "fullUrl": "urn:uuid:a8979769-9271-4b5d-a320-3e7c16619383",
+            "fullUrl": "urn:uuid:a8979769-9271-4b5d-a320-3e7c16619369",
             "resource": {
                 "resourceType": "Encounter",
-                "id": "nhsn-iip-en101",
+                "id": "encounter04",
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
                     ]
                 },
                 "status": "finished",
@@ -141,15 +141,15 @@
                     {
                         "coding": [
                             {
-                                "system": "http://www.ama-assn.org/go/cpt",
-                                "code": "101"
+                                "system": "http://snomed.info/sct",
+                                "code": "185347001",
+                                "display": "Encounter for problem (procedure)"
                             }
-                        ],
-                        "text": "Medical consultation on inpatient"
+                        ]
                     }
                 ],
                 "subject": {
-                    "reference": "Patient/nhsn-iip-ip101"
+                    "reference": "Patient/patient01"
                 },
                 "period": {
                     "start": "2022-01-01",
@@ -184,14 +184,14 @@
                 "location": [
                     {
                         "location": {
-                            "reference": "Location/nhsn-iip-loc101"
+                            "reference": "Location/location01"
                         }
                     }
                 ]
             },
             "request": {
                 "method": "PUT",
-                "url": "Encounter/nhsn-iip-en101"
+                "url": "Encounter/encounter04"
             }
         },
         {
@@ -315,22 +315,12 @@
                             }
                         },
                         "asNeededBoolean": true,
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:1.2.840.114350.1.13.310.3.7.4.798268.7025",
-                                    "code": "6",
-                                    "display": "Intramuscular"
-                                }
-                            ],
-                            "text": "Intramuscular"
-                        },
                         "doseAndRate": [
                             {
                                 "type": {
                                     "coding": [
                                         {
-                                            "system": "http://epic.com/CodeSystem/dose-rate-type",
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
                                             "code": "calculated",
                                             "display": "calculated"
                                         }
@@ -348,25 +338,7 @@
                                 "type": {
                                     "coding": [
                                         {
-                                            "system": "http://epic.com/CodeSystem/dose-rate-type",
-                                            "code": "admin-amount",
-                                            "display": "admin-amount"
-                                        }
-                                    ],
-                                    "text": "admin-amount"
-                                },
-                                "doseQuantity": {
-                                    "value": 1,
-                                    "unit": "mL",
-                                    "system": "http://unitsofmeasure.org",
-                                    "code": "mL"
-                                }
-                            },
-                            {
-                                "type": {
-                                    "coding": [
-                                        {
-                                            "system": "http://epic.com/CodeSystem/dose-rate-type",
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
                                             "code": "ordered",
                                             "display": "ordered"
                                         }
@@ -467,8 +439,8 @@
                 "code": {
                     "coding": [
                         {
-                            "system": "http://acme.org/tests",
-                            "code": "LIPID"
+                            "system": "http://loinc.org",
+                            "code": "57698-3"
                         }
                     ],
                     "text": "Lipid Panel"
@@ -523,9 +495,9 @@
                     {
                         "coding": [
                             {
-                                "system": "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
-                                "code": "1232-8",
-                                "display": "Oncology General Hematology-Oncology Ward"
+                                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                                "code": "RADO",
+                                "display": "Radiation oncology unit"
                             }
                         ]
                     }
@@ -537,10 +509,10 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:16976a70-59a2-4bbf-aa8b-8835226d9baf",
+            "fullUrl": "urn:uuid:16976a70-59a2-4bbf-aa8b-8835226d9b69",
             "resource": {
                 "resourceType": "Condition",
-                "id": "nhsn-iip-con101",
+                "id": "condition04",
                 "clinicalStatus": {
                     "coding": [
                         {
@@ -580,7 +552,7 @@
             },
             "request": {
                 "method": "PUT",
-                "url": "Condition/nhsn-iip-con101"
+                "url": "Condition/condition04"
             }
         }
     ]
