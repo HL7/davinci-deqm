@@ -154,19 +154,19 @@
           "route": {
             "coding": [
               {
-                "system": "urn:oid:1.2.840.114350.1.13.310.3.7.4.798268.7025",
-                "code": "6",
-                "display": "Intramuscular"
+                "system": "http://snomed.info/sct",
+                "code": "78421000",
+                "display": "Intramuscular use"
               }
             ],
-            "text": "Intramuscular"
+            "text": "Intramuscular use"
           },
           "doseAndRate": [
             {
               "type": {
                 "coding": [
                   {
-                    "system": "http://epic.com/CodeSystem/dose-rate-type",
+                    "system": "http://example.org/CodeSystem/dose-rate-type",
                     "code": "calculated",
                     "display": "calculated"
                   }
@@ -184,7 +184,7 @@
               "type": {
                 "coding": [
                   {
-                    "system": "http://epic.com/CodeSystem/dose-rate-type",
+                    "system": "http://example.org/CodeSystem/dose-rate-type",
                     "code": "admin-amount",
                     "display": "admin-amount"
                   }
@@ -202,7 +202,7 @@
               "type": {
                 "coding": [
                   {
-                    "system": "http://epic.com/CodeSystem/dose-rate-type",
+                    "system": "http://example.org/CodeSystem/dose-rate-type",
                     "code": "ordered",
                     "display": "ordered"
                   }
@@ -343,13 +343,6 @@
             "code": "supplemental-data"
           }
         ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "2106-3"
-          }
-        ]
       }
     },
     {
@@ -482,10 +475,6 @@
     }
   ],
   "extension": [
-    {
-      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-      "valueString": "All inpatient encounters (including ED/Observation visits that end within 1 hour of the start of the inpatient encounter) for patients of all ages where at least one ADD was ordered or administered during the encounter that is during the measurement period."
-    },
     {
       "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData",
       "valueReference": {
@@ -703,12 +692,6 @@
       "population": [
         {
           "id": "initial-population-01",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-              "valueString": "All inpatient encounters, as well as ED and OBS encounters that end within 1 hour of the start of the inpatient encounter, for patients of all ages where at least one antidiabetic drug (ADD) was ordered or administered during the encounter that is during the measurement period."
-            }
-          ],
           "code": {
             "coding": [
               {
