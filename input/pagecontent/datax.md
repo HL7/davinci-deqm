@@ -188,7 +188,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
 - The Consumer uses the Collect Data operation’s `lastReceivedOn` parameter for incremental data exchange - if the  parameter present, it is an incremental update and snapshot if not.
 - The same Snapshot and Incremental Requirements and Expectations described above for the Submit Data transaction apply for Collect Data.
-- If the Producer cannot support the lastReceivedOn parameter then it SHALL return a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the `lastReceivedOn` parameter is not supported  as shown in the following example:
+- If the Producer cannot support the lastReceivedOn parameter then it SHALL return a `400 Bad Request` http error code. An OperationOutcome **SHALL** be returned stating that the `lastReceivedOn` parameter is not supported  as shown in the following example:
 
    {% include lastupdated-notsupported-oo.md %}
 
