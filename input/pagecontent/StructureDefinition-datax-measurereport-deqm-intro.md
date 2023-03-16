@@ -13,6 +13,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. The date the report was generated
 1. The organization that reported the data
 1. The measurement period
+1. A reporter.group
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
