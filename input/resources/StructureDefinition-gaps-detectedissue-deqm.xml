@@ -77,7 +77,7 @@
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
-                <targetProfile value="http://hl7.org/fhir/StructureDefinition/GuidanceResponse"/>
+                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"/>
             </type>
             <min value="1"/>
             <max value="1"/>
