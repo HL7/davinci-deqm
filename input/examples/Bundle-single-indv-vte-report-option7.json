@@ -476,7 +476,7 @@
         "resourceType": "MedicationRequest",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-mednotrequested"
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationnotrequested"
           ]
         },
         "status": "completed",
@@ -493,15 +493,14 @@
             ]
           }
         ],
-        "medicationCodeableConcept": {
-          "coding": [
+        "medicationCodeableConcept" : {
+          "extension" : [
             {
-              "system" : "http://snomed.info/sct",
-              "code" : "48603004",
-              "display" : "Product containing warfarin (medicinal product)"
+              "url" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-notDoneValueSet",
+              "valueCanonical" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1045.39"
             }
           ],
-          "text": "Warfarin Value Set"
+          "text" : "Not Done Value Set: Low Dose Unfractionated Heparin for VTE Prophylaxis"
         },
         "subject": {
           "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"
