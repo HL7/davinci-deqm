@@ -13,12 +13,12 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. The date the report was generated
 1. The organization that reported the data
 1. The measurement period
-1. A reporter.group
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
 1. References to other resources involved in producing the report
 1. Specify the software systems used by the reporting system using the CQFM [Software System]({{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html) Extension
+1. A reporter.group
 
 **Additional Profile specific implementation guidance:**
 

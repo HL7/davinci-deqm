@@ -12,7 +12,7 @@ The Quality Reporting Page in the R4 Release of the FHIR Specification provides 
 
 ### Relationship between QI Core, DEQM, and CQMs
 
-As described in the Quality Measurement Standards Landscape section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports summary reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category III (QRDA Category III), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Summary MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category III in the QDM-CQL-QRDA paradigm.
+As described in the Quality Measurement Standards Landscape section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports summary reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category III (QRDA Category III), QI Core profiles are equivalent to the Quality Data Model (QDM) and the DEQM Summary MeasureReport Profile is equivalent to the QRDA Category III in the QDM-CQL-QRDA paradigm.
 
 ### Default Profiles
 
