@@ -122,7 +122,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
    - The Producer **SHALL** populate the required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
 
-  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
+  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHALL** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
 
     {% include snapshotincremental-notsupported-oo.md %}
 

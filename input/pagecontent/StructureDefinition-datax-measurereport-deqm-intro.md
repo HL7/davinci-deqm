@@ -18,6 +18,7 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support])
 
 1. References to other resources involved in producing the report
 1. Specify the software systems used by the reporting system using the CQFM [Software System]({{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html) Extension
+1. A reporter.group
 
 **Additional Profile specific implementation guidance:**
 
