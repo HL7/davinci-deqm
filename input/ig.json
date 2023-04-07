@@ -1111,6 +1111,12 @@
                 "reference": {
                     "reference": "StructureDefinition/medicationadministration-deqm"
                 }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/extension-measureReportLocation"
+                }
             }
         ],
         "page": {

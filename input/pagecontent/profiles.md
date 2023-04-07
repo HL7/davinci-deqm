@@ -28,6 +28,7 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Criteria Reference Extension](StructureDefinition-extension-criteriaReference.html)             |
 | [~~DEQM Population Reference Extension~~ (Deprecated)](StructureDefinition-extension-populationReference.html)         |
 | [DEQM Gap Status Extension (Modifier)](StructureDefinition-extension-gapStatus.html)                  |
+| [DEQM MeasureReport Location Extension](StructureDefinition-extension-measureReportLocation.html)                  |
 
 <br />
 
