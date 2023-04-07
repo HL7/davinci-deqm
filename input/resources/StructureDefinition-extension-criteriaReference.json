@@ -25,7 +25,15 @@
   "context": [
     {
       "type": "element",
-      "expression": "Reference"
+      "expression": "Measure.group.population"
+    },
+    {
+      "type": "element",
+      "expression": "Measure.group.stratifier"
+    },
+    {
+      "type": "element",
+      "expression": "Measure.supplementalData"
     }
   ],
   "type": "Extension",
@@ -59,7 +67,7 @@
             "code": "string"
           }
         ],
-        "short": "This id SHOULD reference population criteria id specified in a Measure resource."
+        "short": "This id SHOULD reference any criteria id specified in a Measure resource."
       }
     ]
   }
