@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "extension-populationReference",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "deprecated"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference",
   "name": "DEQMPopulationReferenceExtension",
   "title": "DEQM Population Reference Extension",

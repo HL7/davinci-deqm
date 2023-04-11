@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-measureReportLocation"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureReportLocation"/>
+  <version value="1.0.0"/>
+  <name value="DEQMMeasureReportLocationExtension"/>
+  <title value="DEQM MeasureReport Location Extension"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-04-06T00:00:00-07:00"/>
+  <publisher value="Da Vinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="Location from which reported data was gathered. This extension is used to provide the location(s) from which reported data was gathered in a MeasureReport, both individual and summary measure report"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="To provide the capability to support identifying the location(s) from which reported data was gathered."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="MeasureReport"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Location(s) from which reported data was gathered"/>
+      <definition value="Location from which reported data was gathered. This extension is used to provide the location(s) from which reported data was gathered in a MeasureReport, both individual and summary measure report."/>
+      <min value="0"/>
+      <max value= "*"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureReportLocation"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
