@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="extension-measureReportLocation"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureReportLocation"/>
+  <id value="extension-dataLocation"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
   <version value="1.0.0"/>
-  <name value="DEQMMeasureReportLocationExtension"/>
-  <title value="DEQM MeasureReport Location Extension"/>
+  <name value="DEQMDataLocationExtension"/>
+  <title value="DEQM Data Location Extension"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2023-04-06T00:00:00-07:00"/>
@@ -16,7 +16,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="Location from which reported data was gathered. This extension is used to provide the location(s) from which reported data was gathered in a MeasureReport, both individual and summary measure report"/>
+  <description value="Location from which reported data was gathered. This extension is used to provide the location(s) from which reported data was gathered in a MeasureReport, such as individual, summary and data exchange measure report."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -39,7 +39,7 @@
     <element id="Extension">
       <path value="Extension"/>
       <short value="Location(s) from which reported data was gathered"/>
-      <definition value="Location from which reported data was gathered. This extension is used to provide the location(s) from which reported data was gathered in a MeasureReport, both individual and summary measure report."/>
+      <definition value="Location from which reported data was gathered. This extension is used to provide the location(s) from which reported data was gathered in a MeasureReport, such as individual, summary and data exchange measure report."/>
       <min value="0"/>
       <max value= "*"/>
     </element>
@@ -48,7 +48,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureReportLocation"/>
+      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>
