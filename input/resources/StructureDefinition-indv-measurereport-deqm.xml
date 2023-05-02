@@ -140,7 +140,7 @@
       <type>
         <code value="Extension"/>
         <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureReportLocation"/>
+                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
       </type>
     </element>
     <element id="MeasureReport.status">
@@ -297,8 +297,8 @@
       <constraint>
         <key value="deqm-5"/>
         <severity value="error"/>
-        <human value="ensure that cardinality is &gt;= 1 if the scoring is other than composite"/>
-        <expression value="%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists and group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable' | 'cohort') implies group.population.exists()"/>
+        <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
+        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.exists(code = 'proportion'| 'ratio' | 'continuous-variable')) xor (%group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.exists(code = 'proportion'| 'ratio' | 'continuous-variable')) implies group.population.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
