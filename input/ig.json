@@ -1085,7 +1085,7 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-reportingProgramReference"
+                    "reference": "StructureDefinition/extension-reportingProgram"
                 }
             },
             {

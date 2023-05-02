@@ -28,13 +28,13 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Criteria Reference Extension](StructureDefinition-extension-criteriaReference.html)             |
 | [~~DEQM Population Reference Extension~~ (Deprecated)](StructureDefinition-extension-populationReference.html)         |
 | [DEQM Gap Status Extension (Modifier)](StructureDefinition-extension-gapStatus.html)                  |
-| [DEQM MeasureReport Location Extension](StructureDefinition-extension-measureReportLocation.html)                  |
+| [DEQM Data Location Extension](StructureDefinition-extension-dataLocation.html)                  |
 
 <br />
 
 <div class="new-content" markdown="1">
 [DEQM Group Improvement Notation Extension](StructureDefinition-extension-groupImprovementNotation.html)   
-[DEQM Reporting Program Reference Extension](StructureDefinition-extension-reportingProgramReference.html)  
+[DEQM Reporting Program Extension](StructureDefinition-extension-reportingProgram.html)  
 [DEQM Supplemental Data Extension](StructureDefinition-extension-supplementalData.html)  
 </div>
 

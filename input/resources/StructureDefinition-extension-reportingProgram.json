@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "extension-reportingProgramReference",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference",
-  "name": "DEQMReportingProgramReferenceExtension",
-  "title": "DEQM Reporting Program Reference Extension",
+  "id": "extension-reportingProgram",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram",
+  "name": "DEQMReportingProgramExtension",
+  "title": "DEQM Reporting Program Extension",
   "status": "active",
   "experimental": false,
   "date": "2022-11-21",
@@ -30,7 +30,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Reporting program reference",
+        "short": "Reporting program",
         "definition": "Reference the reporting program by referencing their unique id specified in a Library resource that conforms to the Quality Program profile.",
         "min": 0,
         "max": "1"
@@ -38,17 +38,24 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference"
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"
       },
       {
-        "id": "Extension.valueCodeableConcept",
-        "path": "Extension.valueCodeableConcept",
+        "id" : "Extension.value[x]",
+        "path" : "Extension.value[x]",
+        "type" : [
+          {
+            "code" : "CodeableConcept"
+          },
+          {
+            "code" : "canonical",
+            "targetProfile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm"]
+          }
+        ],
         "binding": {
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs"
-        },
-        "min": 0,
-        "max": "1"
+        }
       }
     ]
   }

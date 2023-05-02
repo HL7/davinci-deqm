@@ -41,14 +41,14 @@
       </constraint>
       <mustSupport value="false"/>
     </element>
-    <element id="MeasureReport.extension:reportingProgramReference">
+    <element id="MeasureReport.extension:reportingProgram">
       <path value="MeasureReport.extension"/>
-      <sliceName value="reportingProgramReference"/>
+      <sliceName value="reportingProgram"/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"/>
       </type>
       <mustSupport value="true"/>
     </element>
