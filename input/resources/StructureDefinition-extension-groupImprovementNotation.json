@@ -6,7 +6,7 @@
   "name": "DEQMGroupImprovementNotationExtension",
   "title": "DEQM Group Improvement Notation Extension",
   "status": "active",
-  "description": "Indicates how the calculation is performed for the group, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional group scoring types to be represented.",
+  "description": "Indicates whether improvement in the measure group is noted by an increase or decrease in the measure score.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
