@@ -44,6 +44,27 @@
         <type value="date"/>
     </parameter>
     <parameter>
+      <name value="program"/> 
+      <use value="in"/> 
+      <min value="0"/> 
+      <max value="1"/> 
+      <documentation value="The quality program being reported via canonical reference to ([Library{CQFMQualityProgram}](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm)) indicating which quality program is being reported."/> 
+      <type value="canonical"/>
+      <targetProfile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm"/>
+    </parameter>
+    <parameter>
+      <name value="programCode"/> 
+      <use value="in"/> 
+      <min value="0"/> 
+      <max value="1"/> 
+      <documentation value="The quality program being reported via code from the [Reporting Program value set](http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs) indicating which quality program is being reported."/> 
+      <type value="CodeableConcept"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs"/>
+      </binding> 
+    </parameter>
+    <parameter>
         <name value="measure"/>
         <use value="in"/>
         <min value="0"/>
