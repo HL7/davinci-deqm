@@ -176,7 +176,7 @@
     </element>
     <element id="MeasureReport.date">
       <path value="MeasureReport.date"/>
-      <short value="When the report was calculated"/>
+      <short value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -266,6 +266,17 @@
         <human value="ensures scoring is either specified only at the root, or on all groups"/>
         <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count() = group.count()) xor (%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count()=0)"/>
       </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:calculatedDate">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="calculatedDate"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-calculatedDate"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.extension:groupImprovementNotation">
