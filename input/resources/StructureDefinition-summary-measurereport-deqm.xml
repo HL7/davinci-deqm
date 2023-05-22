@@ -296,8 +296,8 @@
       <constraint>
         <key value="deqm-5"/>
         <severity value="error"/>
-        <human value="ensure that cardinality is &gt;= 1 if the scoring is other than composite"/>
-        <expression value="%resource.group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists and %resource.group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable' | 'cohort') implies %resource.group.population.exists()"/>
+        <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
+        <expression value="((extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  or  ((group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  implies group.population.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>

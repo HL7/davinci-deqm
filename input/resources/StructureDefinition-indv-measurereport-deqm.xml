@@ -139,8 +139,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
       </type>
     </element>
     <element id="MeasureReport.status">
@@ -298,7 +297,7 @@
         <key value="deqm-5"/>
         <severity value="error"/>
         <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
-        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.exists(code = 'proportion'| 'ratio' | 'continuous-variable')) xor (%group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.exists(code = 'proportion'| 'ratio' | 'continuous-variable')) implies group.population.exists()"/>
+        <expression value="((extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  or  ((group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  implies group.population.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
