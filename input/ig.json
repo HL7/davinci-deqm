@@ -1085,7 +1085,7 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-reportingProgramReference"
+                    "reference": "StructureDefinition/extension-reportingProgram"
                 }
             },
             {
@@ -1115,7 +1115,13 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-measureReportLocation"
+                    "reference": "StructureDefinition/extension-dataLocation"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/extension-calculatedDate"
                 }
             }
         ],

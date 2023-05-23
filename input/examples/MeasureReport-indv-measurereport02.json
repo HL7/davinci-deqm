@@ -20,7 +20,7 @@
             }
         },
         {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference",
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram",
             "valueCodeableConcept": {
                 "coding": [
                     {

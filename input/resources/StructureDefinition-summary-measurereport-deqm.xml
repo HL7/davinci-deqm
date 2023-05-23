@@ -41,14 +41,14 @@
       </constraint>
       <mustSupport value="false"/>
     </element>
-    <element id="MeasureReport.extension:reportingProgramReference">
+    <element id="MeasureReport.extension:reportingProgram">
       <path value="MeasureReport.extension"/>
-      <sliceName value="reportingProgramReference"/>
+      <sliceName value="reportingProgram"/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgramReference"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -77,6 +77,7 @@
     <element id="MeasureReport.extension:scoring">
       <path value="MeasureReport.extension"/>
       <sliceName value="scoring"/>
+      <short value="proportion | ratio | continuous-variable | cohort | composite"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -105,7 +106,7 @@
       <type>
         <code value="Extension"/>
         <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureReportLocation"/>
+                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
       </type>
     </element>
     <element id="MeasureReport.extension:cehrt">
@@ -178,6 +179,7 @@
     </element>
     <element id="MeasureReport.date">
       <path value="MeasureReport.date"/>
+      <short value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -253,6 +255,7 @@
     <element id="MeasureReport.group.extension:scoring">
       <path value="MeasureReport.group.extension"/>
       <sliceName value="scoring"/>
+      <short value="proportion | ratio | continuous-variable | cohort | composite"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -268,9 +271,21 @@
       </constraint>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.extension:calculatedDate">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="calculatedDate"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-calculatedDate"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.extension:groupImprovementNotation">
       <path value="MeasureReport.group.extension"/>
       <sliceName value="groupImprovementNotation"/>
+      <short value="increase | decrease"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -296,8 +311,8 @@
       <constraint>
         <key value="deqm-5"/>
         <severity value="error"/>
-        <human value="ensure that cardinality is &gt;= 1 if the scoring is other than composite"/>
-        <expression value="%resource.group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists and %resource.group.extension.('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable' | 'cohort') implies %resource.group.population.exists()"/>
+        <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
+        <expression value="((extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  or  ((group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  implies group.population.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>

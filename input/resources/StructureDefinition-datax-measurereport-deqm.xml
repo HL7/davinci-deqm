@@ -79,7 +79,7 @@
       <type>
         <code value="Extension"/>
         <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureReportLocation"/>
+                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
       </type>
     </element>
     <element id="MeasureReport.status">

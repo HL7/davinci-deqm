@@ -18,7 +18,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
 
-1. Reference to the reporting program using the DEQM [Reporting Program Reference](StructureDefinition-extension-reportingProgramReference.html) Extension
+1. Reference to the reporting program using the DEQM [Reporting Program](StructureDefinition-extension-reportingProgram.html) Extension
 1. Reference to the supplemental data using the DEQM [Supplemental Data](StructureDefinition-extension-supplementalData.html) Extension
 1. The scoring type defined by the referenced Measure using the DEQM [Measure Scoring] Extension
 1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension
