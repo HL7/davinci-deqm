@@ -449,6 +449,11 @@ definition:
         reference: Composition/gaps-composition03
       description: GIC Composition03 example
     - exampleBoolean: true
+      name: GuidanceResponse01
+      reference:
+        reference: GuidanceResponse/guidanceresponse01
+      description: GuidanceResponse01 example
+    - exampleBoolean: true
       name: Gaps DetectedIssue01
       reference:
         reference: DetectedIssue/gaps-detectedissue01
