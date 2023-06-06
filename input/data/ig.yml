@@ -319,11 +319,6 @@ definition:
         reference: MeasureReport/indv-measurreport-stratification-example
       description: DEQM Indv Measurreport Stratification Example
     - exampleBoolean: true
-      name: Coverage02
-      reference:
-        reference: Coverage/coverage02
-      description: DEQM Coverage02 example
-    - exampleBoolean: true
       name: Location01
       reference:
         reference: Location/location01
@@ -368,11 +363,6 @@ definition:
       reference:
         reference: Organization/organization01
       description: QICore Organization01 example
-    - exampleBoolean: true
-      name: Coverage03
-      reference:
-        reference: Coverage/coverage03
-      description: DEQM Coverage03 example
     - exampleBoolean: true
       name: Gaps Individual MeasureReport01
       reference:
