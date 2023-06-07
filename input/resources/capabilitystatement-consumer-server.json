@@ -125,6 +125,21 @@
                             "definition": "http://hl7.org/fhir/OperationDefinition/Measure-submit-data",
                             "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the Consumer\u2019s stated capabilities and the required modifier extension by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
                             "name": "submit-data"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHOULD"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+                                    "valueCode": "incremental"
+                                }
+                            ],
+                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-data",
+                            "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the Consumer\u2019s stated capabilities and the required modifier extension by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
+                            "name": "bulk-submit-data"
                         }
                     ],
                     "supportedProfile": [
