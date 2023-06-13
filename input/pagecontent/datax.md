@@ -114,7 +114,8 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Discovery:**
 
-  - A CapabilityStatement is retrieved from a FHIR endpoint
+  - A CapabilityStatement is retrieved from a FHIR endpoint:
+
   `GET|[base]/metadata`
 
   - The Consumer (server) **SHALL** advertise whether it supports snapshot and/or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  The extension is added to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and the code is valued `incremental` or `snapshot`, as appropriate.  The snippet shown below would be used for supporting both `incremental` and `snapshot` data exchanges:
