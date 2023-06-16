@@ -23,6 +23,13 @@
               "valueCode": "incremental"
             }
           ]
+        },{
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-updateType",
+              "valueCode": "snapshot"
+            }
+          ]
         }
       ]
     }

@@ -141,6 +141,17 @@
                             "definition": "http://hl7.org/fhir/OperationDefinition/Measure-submit-data",
                             "documentation": "It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer Server CapabilityStatement.",
                             "name": "submit-data"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHOULD"
+                                }
+                            ],
+                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-data",
+                            "documentation": "It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer Server CapabilityStatement.",
+                            "name": "bulk-submit-data"
                         }
                     ],
                     "supportedProfile": [

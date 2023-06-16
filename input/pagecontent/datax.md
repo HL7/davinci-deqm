@@ -114,17 +114,21 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Discovery:**
 
-  - The Consumer **SHALL** advertise whether it supports snapshot or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  The extension is added to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and the code is valued `incremental` or `snapshot` as shown below:
+  - A CapabilityStatement is retrieved from a FHIR endpoint:
+
+  `GET|[base]/metadata`
+
+  - The Consumer (server) **SHALL** advertise whether it supports snapshot and/or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  The extension is added to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and the code is valued `incremental` or `snapshot`, as appropriate.  The snippet shown below would be used for supporting both `incremental` and `snapshot` data exchanges:
 
      {% include CapabilityStatement-updatetype-snippet.md %}
 
-   (For a complete example, see the [Consumer Server CapabilityStatement] )
+   (For a complete example showing support for only the `incremental` data exchange, see the [Consumer Server CapabilityStatement] )
 
-   - It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer’s CapabilityStatement.
+   - It is the responsibility of the Producer (client) to discover whether snapshot, incremental or both data exchange is supported by the inspection of the Consumer’s (server) CapabilityStatement.
 
-   - The Producer **SHALL** populate the required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
+   - The Producer (client) **SHALL** populate the required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
 
-  - The Consumer **SHALL** reject the submit data payload if there is mismatch between the Consumer's stated capabilities and the  required modifier extension by returning a `400 Bad Request` http error code. An OperationOutcome **SHALL** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
+  - The Consumer (server) **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server)  by returning a `400 Bad Request` http error code. An OperationOutcome **SHALL** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
 
     {% include snapshotincremental-notsupported-oo.md %}
 
