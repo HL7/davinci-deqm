@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="subjectlist-measurereport-deqm"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/list-measurereport-deqm"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subjectlist-measurereport-deqm"/>
   <name value="DEQMSubjectListMeasureReport"/>
   <title value="DEQM Subject List MeasureReport"/>
   <status value="draft"/>
