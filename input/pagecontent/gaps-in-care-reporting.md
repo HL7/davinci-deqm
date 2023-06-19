@@ -117,7 +117,6 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 
 - The `date` element of the MeasureReport resource contains the date the open/closed gap was calculated.
 
-<div class="bg-success" markdown="1">
 
 #### Gaps in Care Bundle Structure
 
@@ -129,7 +128,7 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
 {% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
-</div><!-- new-content -->
+
 
 #### Attribution
 {:.no_toc}

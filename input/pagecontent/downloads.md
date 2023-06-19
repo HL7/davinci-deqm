@@ -28,8 +28,6 @@ A downloadable version of this IG is available so it can be hosted locally:
 
 - [Downloadable Copy](full-ig.zip)
 
-<div class="new-content" markdown="1">
-
 #### Cross Version Analysis
 
 {% include cross-version-analysis.xhtml %}
@@ -45,5 +43,3 @@ A downloadable version of this IG is available so it can be hosted locally:
 #### IP Statements
 
 {% include ip-statements.xhtml %}
-
-</div>
