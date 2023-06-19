@@ -296,8 +296,8 @@
       <constraint>
         <key value="deqm-4"/>
         <severity value="error"/>
-        <human value="ensure that if scoring is specified on the group, groupImprovementNotation must be (if the scoring type is other than cohort)"/>
-        <expression value="%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').where(valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).exists() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+        <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio', 'continuous-variable' or 'composite' then the groupImprovementNotation element is required."/>
+        <expression value="((extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('cohort')).not()  and  extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  or  ((group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('cohort')).not()  and  group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').value.coding.code.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
