@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="subjectlist-measurereport-deqm"/>
+  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/list-measurereport-deqm"/>
+  <name value="DEQMSubjectListMeasureReport"/>
+  <title value="DEQM Subject List MeasureReport"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Da Vinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="Subject List MeasureReport is for data exchange and reporting on a list of patients, which also allows individual MeasureReports be provided for each of the patients in the population."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="MeasureReport"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="MeasureReport">
+      <path value="MeasureReport"/>
+      <constraint>
+        <key value="deqm-2"/>
+        <severity value="error"/>
+        <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required"/>
+        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()"/>
+      </constraint>
+      <mustSupport value="false"/>
+    </element>
+    <element id="MeasureReport.extension:reportingProgram">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="reportingProgram"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:supplementalData">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="supplementalData"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:supplementalData.extension:criteriaReference">
+      <path value="MeasureReport.extension.extension"/>
+      <sliceName value="criteriaReference"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:scoring">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="scoring"/>
+      <short value="proportion | ratio | continuous-variable | cohort | composite"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"/>
+      </type>
+      <condition value="deqm-2"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:vendor">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="vendor"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:location">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="location"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
+      </type>
+    </element>
+    <element id="MeasureReport.extension:cehrt">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="cehrt"/>
+      <short value="CMS EHR Certifciation ID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:cehrt.valueIdentifier">
+      <path value="MeasureReport.extension.valueIdentifier"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <patternIdentifier>
+        <system value="urn:oid:2.16.840.1.113883.3.2074.1"/>
+      </patternIdentifier>
+      <mustSupport value="false"/>
+    </element>
+    <element id="MeasureReport.extension:software">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="software"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.status">
+      <path value="MeasureReport.status"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/measure-report-status"/>
+      </binding>
+    </element>
+    <element id="MeasureReport.type">
+      <path value="MeasureReport.type"/>
+      <requirements value="For subject-list quality meaure reporting, this report is constrained to reporting on a list of individuals, which also provides individual MeasureReports for the patients on the list."/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="subject-list"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.measure">
+      <path value="MeasureReport.measure"/>
+      <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
+      <type>
+        <code value="canonical"/>
+        <targetProfile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.subject">
+      <path value="MeasureReport.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+      </type>
+      <mustSupport value="true"/>
+    </element> 
+    <element id="MeasureReport.date">
+      <path value="MeasureReport.date"/>
+      <short value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.reporter">
+      <path value="MeasureReport.reporter"/>
+      <short value="Organization that generated the MeasureReport"/>
+      <definition value="Organization that generated the MeasureReport."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.reporter.extension:group">
+      <path value="MeasureReport.reporter.extension"/>
+      <sliceName value="group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period">
+      <path value="MeasureReport.period"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <condition value="deqm-1"/>
+      <constraint>
+        <key value="deqm-1"/>
+        <severity value="error"/>
+        <human value="Date precision SHALL be at least to day ( YYYY-MM-DD )"/>
+        <expression value="start.value.matches('^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*') and end.value.matches('^([0-9]{4})(-)(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9]).*')"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period.start">
+      <path value="MeasureReport.period.start"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.period.end">
+      <path value="MeasureReport.period.end"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.improvementNotation">
+      <path value="MeasureReport.improvementNotation"/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="deqm-2"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group">
+      <path value="MeasureReport.group"/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.id">
+      <path value="MeasureReport.group.id"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:scoring">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="scoring"/>
+      <short value="proportion | ratio | continuous-variable | cohort | composite"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"/>
+      </type>
+      <condition value="deqm-3"/>
+      <constraint>
+        <key value="deqm-3"/>
+        <severity value="error"/>
+        <human value="ensures scoring is either specified only at the root, or on all groups"/>
+        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count() = group.count()) xor (%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count()=0)"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:calculatedDate">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="calculatedDate"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-calculatedDate"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:groupImprovementNotation">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="groupImprovementNotation"/>
+      <short value="increase | decrease"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation"/>
+      </type>
+      <condition value="deqm-4"/>
+      <constraint>
+        <key value="deqm-4"/>
+        <severity value="error"/>
+        <human value="ensure that if scoring is specified on the group, groupImprovementNotation must be (if the scoring type is other than cohort)"/>
+        <expression value="%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').where(valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).exists() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.code">
+      <path value="MeasureReport.group.code"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population">
+      <path value="MeasureReport.group.population"/>
+      <condition value="deqm-5"/>
+      <constraint>
+        <key value="deqm-5"/>
+        <severity value="error"/>
+        <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
+        <expression value="((extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  or  ((group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('composite')).not()  and  group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code.exists())  implies group.population.exists()"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.code">
+      <path value="MeasureReport.group.population.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.count">
+      <path value="MeasureReport.group.population.count"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.subjectResults">
+      <path value="MeasureReport.group.population.subjectResults"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
+      </type>
+      <mustSupport value="true"/>
+    </element> 
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="deqm-6"/>
+        <severity value="error"/>
+        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1 for summary reporting"/>
+        <expression value="extension.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code = ('proportion') implies group.all(measureScore.value &gt;= 0.0 or measureScore.value &lt;= 1.0)"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.measureScore.extension:altscoretype">
+      <path value="MeasureReport.group.measureScore.extension"/>
+      <sliceName value="altscoretype"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier">
+      <path value="MeasureReport.group.stratifier"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.code">
+      <path value="MeasureReport.group.stratifier.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum">
+      <path value="MeasureReport.group.stratifier.stratum"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.value">
+      <path value="MeasureReport.group.stratifier.stratum.value"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.population">
+      <path value="MeasureReport.group.stratifier.stratum.population"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.population.code">
+      <path value="MeasureReport.group.stratifier.stratum.population.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.population.count">
+      <path value="MeasureReport.group.stratifier.stratum.population.count"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.population.subjectResults">
+      <path value="MeasureReport.group.stratifier.stratum.population.subjectResults"/>
+      <min value="1"/>        
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
+      </type>      
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.measureScore">
+      <path value="MeasureReport.group.stratifier.stratum.measureScore"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.measureScore.extension:strataltscoretype">
+      <path value="MeasureReport.group.stratifier.stratum.measureScore.extension"/>
+      <sliceName value="strataltscoretype"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>  
+    <element id="MeasureReport.evaluatedResource">
+      <path value="MeasureReport.evaluatedResource"/>
+      <min value="0"/>
+      <max value="0"/>
+      <mustSupport value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

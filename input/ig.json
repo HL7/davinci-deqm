@@ -622,6 +622,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Subject List MeasureReport01",
+                "reference": {
+                    "reference": "MeasureReport/subjectlist-measurereport01"
+                },
+                "description": "Subject List MeasureReport01 example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Gaps Individual MeasureReport01",
                 "reference": {
                     "reference": "MeasureReport/gaps-indv-measurereport01"
@@ -1105,6 +1113,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/subjectlist-measurereport-deqm"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "StructureDefinition/extension-calculatedDate"
                 }
             }
@@ -1136,6 +1150,11 @@
                             "generation": "markdown",
                             "nameUrl": "summary-reporting.html",
                             "title": "Summary Reporting"
+                        },
+                        {
+                            "generation": "markdown",
+                            "nameUrl": "subjectlist-reporting.html",
+                            "title": "Subject List Reporting"
                         },
                         {
                             "generation": "markdown",
