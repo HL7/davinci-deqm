@@ -841,5 +841,10 @@
                 }
             ]
         }
-    ]
+    ],
+    "evaluatedResource": [
+		{
+			"reference": "Task/task01"
+		}
+	]
 }
