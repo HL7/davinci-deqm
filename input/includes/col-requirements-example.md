@@ -306,6 +306,15 @@ HTTP/1.1 200 OK
   ],
   "dataRequirement": [
     {
+      "type": "Coverage",
+      "profile": [ "http://hl7.org/fhir/StructureDefinition/Coverage" ],
+      "mustSupport": [ "type", "period" ],
+      "codeFilter": [ {
+        "path": "type",
+        "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591"
+      } ]
+    },
+    {
       "type": "Procedure",
       "profile": [
         "http://hl7.org/fhir/StructureDefinition/Procedure"
