@@ -319,6 +319,11 @@ definition:
         reference: MeasureReport/indv-measurreport-stratification-example
       description: DEQM Indv Measurreport Stratification Example
     - exampleBoolean: true
+      name: Subject List MeasureReport01
+      reference:
+        reference: MeasureReport/subjectlist-measurereport01
+      description: DEQM Subject List MeasureReport Example
+    - exampleBoolean: true
       name: Location01
       reference:
         reference: Location/location01
