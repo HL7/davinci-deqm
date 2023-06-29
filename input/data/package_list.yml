@@ -39,3 +39,4 @@ list:
       1. **Applied**: Add asynchronous capability for $submit-data operation ([FHIR-38036](https://jira.hl7.org/browse/FHIR-38036))
       1. **Applied**: Add example MeasureReport for a ratio measure ([FHIR-38073](https://jira.hl7.org/browse/FHIR-38073))
       1. **Applied**: Measure reports should support quality program ([FHIR-39348](https://jira.hl7.org/browse/FHIR-39348))
+      1. **Applied**: Add example PI Measure report ([FHIR-22761](https://jira.hl7.org/browse/FHIR-22761))
