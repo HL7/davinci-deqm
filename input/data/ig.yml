@@ -134,6 +134,11 @@ definition:
         reference: MeasureReport/summ-measurereport01
       description: DEQM Summ Measurereport01 example
     - exampleBoolean: true
+      name: Summ PI Measure report
+      reference:
+        reference: MeasureReport/summ-PI
+      description: Summ PI Measure Report example
+    - exampleBoolean: true
       name: Datax Measurereport02
       reference:
         reference: MeasureReport/datax-measurereport02
