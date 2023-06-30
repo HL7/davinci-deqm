@@ -33,7 +33,8 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Data Location Extension](StructureDefinition-extension-dataLocation.html)                  |
 | [DEQM Group Improvement Notation Extension](StructureDefinition-extension-groupImprovementNotation.html)                  |
 |   [DEQM Reporting Program Extension](StructureDefinition-extension-reportingProgram.html) |
-| [DEQM Supplemental Data Extension](StructureDefinition-extension-supplementalData.html)                  |  
+| [DEQM Supplemental Data Extension](StructureDefinition-extension-supplementalData.html)                  |
+| [DEQM Calculated Date Extension](StructureDefinition-extension-calculatedDate.html)                  |  
 
 
 
