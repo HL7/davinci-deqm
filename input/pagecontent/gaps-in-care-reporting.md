@@ -119,6 +119,7 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 
 
 #### Gaps in Care Bundle Structure
+{:.no_toc}
 
 The [DEQM Gaps In Care Bundle](StructureDefinition-gaps-bundle-deqm.html) is defined as a document bundle (`bundle.type` is `document`), hence, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource.
 
@@ -129,6 +130,28 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 
 {% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
 
+#### Detailed Care Gap Guidance Response
+{:.no_toc}
+
+Derived from the GuidanceResponse resource, the  [Detailed Care Gap Guidance Response](StructureDefinition-gaps-guidanceresponse-detailedcaregap.html) supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps. This section provides a detailed description of how the profile should be used, with a focus on the utilization of the `reasonCode` and the `dataRequirement` along with some practical business use cases.
+
+- **reasonCode** The `GuidanceResponse.reasonCode` has a preferred binding to the Care Gap Reasons value set. It contains codes that represent the reason or rationale behind the identified care gap, such as data element is not found or value is out of the specified range. It helps in categorizing and organizing the gaps based on their underlying causes, facilitating a more targeted approach to addressing them.
+
+- **dataRequirement** The Detailed Care Gap Guidance Response profile added a valueFilter extension to the dataRequirement element, this is in addition to the codeFilter and dateFilter that are specified in the base GuidanceResponse resource. These filters could be used to specify what data are required to address the identified care gaps. 
+
+Example Business Use Cases:
+
+- `Diabetes Management. In this scenario, In this scenario, a patient has an open gap for the Diabetes: Hemoglobin A1c Poor Control (>9%) quality measure. The Detailed Care Gap Guidance Response profile is utilized to provide guidance on addressing this open gap. The reasonCode element may include a code “NotFound” indicating the most recent HbA1c result is missing for the patient. The dataRequirement element then specifies the requirement for a HbA1c test for the patient in order to help address the open gap. `
+
+[Diabetes Management Detailed Care Gap Guidance Response Example](GuidanceResponse-detailedguidanceresponse01.html)
+
+
+- `Medication Adherence. This use case involves a quality measure highlighting low medication adherence rates among a certain patient population. The Detailed Care Gap Guidance Response profile is employed to provide guidance on improving medication adherence for a patient. The reasonCode element might indicate non-compliance with medication regimens. The dataRequirement element may include medication history, prescription records, and patient-reported data. The guidance response offers strategies for enhancing patient education, optimizing medication schedules, and utilizing adherence monitoring tools to address the care gap effectively.`
+
+[Medication Adherence Detailed Care Gap Guidance Response Example](GuidanceResponse-detailedguidanceresponse02.html)
+
+
+By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefinition-gaps-guidanceresponse-detailedcaregap.html), healthcare organizations can receive tailored and actionable guidance on addressing specific care gaps. The inclusion of `reasonCode` and `dataRequirement` enables standardized categorization, context-specific recommendations, and ensures a more focused approach to quality improvement efforts.
 
 #### Attribution
 {:.no_toc}

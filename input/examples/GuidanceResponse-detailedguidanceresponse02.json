@@ -1,0 +1,61 @@
+{
+  "resourceType": "GuidanceResponse",
+  "id": "detailedguidanceresponse02",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"
+    ]
+  },
+  "moduleUri": "http://someguidelineprovider.org/medication-adherence-guidelines.html",
+  "status": "success",
+  "subject": {
+    "reference": "Patient/patient02"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
+          "code": "NonCompliance",
+          "display": "Non-compliance with medication regimens"
+        }
+      ]
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "MedicationStatement",
+      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement",
+      "mustSupport": true
+    },
+    {
+      "type": "MedicationRequest",
+      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+      "mustSupport": true
+    },
+    {
+      "type": "Observation",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "69453-9",
+            "display": "Medication adherence"
+          }
+        ]
+      },
+      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+      "mustSupport": true
+    },
+    {
+      "type": "QuestionnaireResponse",
+      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse",
+      "mustSupport": true
+    }
+  ],
+  "note": [
+    {
+      "text": "Consider providing patient education materials, optimizing medication schedules, and leveraging adherence monitoring tools."
+    }
+  ]
+}

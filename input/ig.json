@@ -973,6 +973,22 @@
                 "description": "Guidance Response example"
             },
             {
+                "exampleBoolean": true,
+                "name": "DetailedGuidanceResponse01",
+                "reference": {
+                    "reference": "GuidanceResponse/detailedguidanceresponse01"
+                },
+                "description": "DEQM DetailedGuidanceResponse01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "DetailedGuidanceResponse02",
+                "reference": {
+                    "reference": "GuidanceResponse/detailedguidanceresponse02"
+                },
+                "description": "DEQM DetailedGuidanceResponse02 example"
+            },
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-measureScoring"
