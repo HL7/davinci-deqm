@@ -15,7 +15,7 @@
   "version": "3.0.0",
   "name": "DetailedCareGapGuidanceResponse",
   "title": "Detailed Care Gap Guidance Response",
-  "description": "Detailed Care Gap Guidance Response",
+  "description": "Derived from the GuidanceResponse resource, the Detailed Care Gap Guidance Response profile supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps.",
   "status": "active",
   "fhirVersion": "4.0.1",
   "mapping": [

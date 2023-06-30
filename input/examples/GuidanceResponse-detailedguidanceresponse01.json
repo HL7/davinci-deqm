@@ -1,0 +1,60 @@
+{
+    "resourceType": "GuidanceResponse",
+    "id": "detailedguidanceresponse01",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"
+      ]
+    },
+    "moduleUri": "http://someguidelineprovider.org/radiology-appropriateness-guidelines.html",
+    "status": "success",
+    "subject": {
+      "reference": "Patient/patient01"
+    },
+    "reasonCode": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
+            "code": "LackOfRegularA1CTesting",
+            "display": "Lack of Regular A1C Testing"
+          }
+        ]
+      }
+    ],
+    "dataRequirement": [
+      {
+        "type": "Observation",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ]
+        },
+        "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+        "mustSupport": true,
+        "constraint": [
+          {
+            "key": "1",
+            "severity": "required",
+            "human": "The A1C test observation must have a status of 'final'."
+          }
+        ]
+      },
+      {
+        "type": "Patient",
+        "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+        "mustSupport": true,
+        "constraint": [
+          {
+            "key": "2",
+            "severity": "required",
+            "human": "The patient resource must include demographic information such as name, date of birth, and gender."
+          }
+        ]
+      }
+    ]
+  }
