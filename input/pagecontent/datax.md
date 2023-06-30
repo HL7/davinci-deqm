@@ -26,7 +26,6 @@ Note that FHIR operations allow the implementation to be viewed as a 'black box'
 
 The following resources are used in all data exchange transactions:
 
-<div class="new-content" markdown="1">
 
 | Resource Type | Profile Name                             | Link to Profile                            |
 |---------------|------------------------------------------|--------------------------------------------|
@@ -37,7 +36,6 @@ The following resources are used in all data exchange transactions:
 | Patient       | QI Core Patient Profile                  | [QI Core Patient]                          |
 | Practitioner  | QI Core Practitioner Profile             | [QI Core Practitioner]                     |
 
-</div>
 
 Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
 

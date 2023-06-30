@@ -34,9 +34,11 @@
 [DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
+[DEQM Individual MeasureReport List]: StructureDefinition-indv-measurereport-list.html
 [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
 [DEQM Reporting Program Reference]: StructureDefinition-extension-reportingProgramReference.html
+[DEQM Subject List MeasureReport Profile]: StructureDefinition-subjectlist-measurereport-deqm.html
 [DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
 [Do Not Perform]: StructureDefinition-extension-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"
@@ -99,6 +101,7 @@
 [SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
 [Subscription]: {{site.data.fhir.path}}subscription.html
+[Subject List Reporting]: subjectlist-reporting.html
 [Summary Measure Reporting Interactions]: summary-reporting.html
 [Summary Reporting]: summary-reporting.html
 [Terminology]: terminology.html "Terminology Page"
