@@ -6,37 +6,37 @@
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"
     ]
   },
+  "reasonCode": [
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "reference",
+              "valueReference": {
+                "reference": "Observation/test01"
+              }
+            },
+            {
+              "url": "path",
+              "valueString": "value"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/reasonDetail"
+        }
+      ],
+      "coding": [
+        {
+          "code": "ValueInRange",
+          "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
+          "display": "Value is within specified range"
+        }
+      ]
+    }
+  ],
   "moduleUri": "http://someguidelineprovider.org/radiology-appropriateness-guidelines.html",
   "status": "success",
   "subject": {
     "reference": "Patient/patient01"
-  },
-  "reasonCode": [
-    {
-    "coding": [
-			{
-				"system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
-				"code": "Present",
-				"display": "Data Element is Present"
-			}
-		]
-    },
-    {
-    "extension": [
-            {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/reasonDetail",
-              "extension" : [{
-                "url" : "reference",
-                "valueReference": {
-                    "reference": "Patient/patient01"
-                    }
-                },
-                 {
-                "url" : "path",
-                "valueString": "example"
-                    }]
-            }    
-          ]
-		}
-	]
+  }
 }
