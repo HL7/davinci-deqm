@@ -178,5 +178,6 @@ The second official published version of the DEQM IG for FHIR R4.
     -  Add asynchronous capability for $submit-data operation ([FHIR-38036](https://jira.hl7.org/browse/FHIR-38036))
     -  Add example MeasureReport for a ratio measure ([FHIR-38073](https://jira.hl7.org/browse/FHIR-38073))
     -  Measure reports should support quality program ([FHIR-39348](https://jira.hl7.org/browse/FHIR-39348))
+    -  Add example PI Measure report ([FHIR-22761](https://jira.hl7.org/browse/FHIR-22761))
 
 {% include link-list.md %}
