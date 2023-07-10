@@ -35,7 +35,7 @@
         <key value="deqm-2"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required"/>
-        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()"/>
+        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()"/>
       </constraint>
       <mustSupport value="false"/>
     </element>
@@ -296,7 +296,7 @@
         <key value="deqm-4"/>
         <severity value="error"/>
         <human value="ensure that if scoring is specified on the group, groupImprovementNotation must be (if the scoring type is other than cohort)"/>
-        <expression value="%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').where(valueCodeableConcept.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).exists() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+        <expression value="%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().not() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').where(value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).exists() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -344,7 +344,7 @@
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1 for summary reporting"/>
-        <expression value="extension.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').valueCodeableConcept.coding.code = ('proportion') implies group.all(measureScore.value &gt;= 0.0 or measureScore.value &lt;= 1.0)"/>
+        <expression value="extension.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code = ('proportion') implies group.all(measureScore.value &gt;= 0.0 or measureScore.value &lt;= 1.0)"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
