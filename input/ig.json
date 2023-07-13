@@ -985,6 +985,22 @@
                 "description": "DEQM DetailedGuidanceResponse02 example"
             },
             {
+                "exampleBoolean": true,
+                "name": "list2",
+                "reference": {
+                    "reference": "List/list2"
+                },
+                "description": "DEQM Individual MeasureReport List example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "summ-PI",
+                "reference": {
+                    "reference": "MeasureReport/summ-PI"
+                },
+                "description": "DEQM MeasureReport Promoting Interoperability (PI) example"
+            },
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-measureScoring"
