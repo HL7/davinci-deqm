@@ -10,11 +10,11 @@
 	<intent value="order"/>
 	<code>
 		<coding>
-			<system value="http://www.ama-assn.org/go/cpt"/>
-			<code value="1111F"> </code>
-			<display value="Medication Reconciliation "/>
+			<system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+			<code value="approve"> </code>
+			<display value="Activate/approve the focal resource"/>
 		</coding>
-		<text value="Medication Reconciliation"/>
+		<text value="Activate/approve the focal resource"/>
 	</code>
 	<!-- what is MRP focus -  if needed - going to be?  multiple MedStatements or List -->
 	<!--

@@ -37,19 +37,6 @@
         }
     ],
     "birthDate": "1964-06-19",
-    "communication": [
-        {
-            "coding": [
-                {
-                    "code": "es",
-                    "display": "Spanish",
-                    "system": "urn:ietf:bcp:47",
-                    "userSelected": true
-                }
-            ],
-            "text": "English and Spanish"
-        }
-    ],
     "gender": "male",
     "identifier": [
         {

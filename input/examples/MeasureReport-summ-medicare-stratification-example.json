@@ -119,10 +119,7 @@
                 }
             ],
             "measureScore": {
-                "value": 50,
-                "unit": "%",
-                "system": "http://unitsofmeasure.org",
-                "code": "%"
+                "value": 0.50
             },
             "stratifier": [
                 {
@@ -217,10 +214,7 @@
                                 }
                             ],
                             "measureScore": {
-                                "value": 61.99,
-                                "unit": "%",
-                                "system": "http://unitsofmeasure.org",
-                                "code": "%"
+                                "value": 0.699
                             }
                         }
                     ]
@@ -350,10 +344,7 @@
                                 }
                             ],
                             "measureScore": {
-                                "value": 68.67,
-                                "unit": "%",
-                                "system": "http://unitsofmeasure.org",
-                                "code": "%"
+                                "value": 0.6867
                             }
                         }
                     ]
