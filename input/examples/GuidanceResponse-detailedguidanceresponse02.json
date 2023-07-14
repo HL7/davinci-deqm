@@ -25,32 +25,50 @@
   "dataRequirement": [
     {
       "type": "MedicationStatement",
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement",
-      "mustSupport": true
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"
+      ],
+      "mustSupport": [
+        "MedicationStatement.???"
+      ]
     },
     {
       "type": "MedicationRequest",
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
-      "mustSupport": true
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+      ],
+      "mustSupport": [
+        "MedicationRequest.???"
+      ]
     },
     {
       "type": "Observation",
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "69453-9",
-            "display": "Medication adherence"
-          }
-        ]
+      "codeFilter": {
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69453-9",
+              "display": "Medication adherence"
+            }
+          ]
+        }
       },
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
-      "mustSupport": true
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      ],
+      "mustSupport": [
+        "Observation.???"
+      ]
     },
     {
       "type": "QuestionnaireResponse",
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse",
-      "mustSupport": true
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+      ],
+      "mustSupport": [
+        "QuestionnaireResponse.???"
+      ]
     }
   ],
   "note": [
