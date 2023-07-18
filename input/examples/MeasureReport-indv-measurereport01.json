@@ -31,6 +31,12 @@
             "valueReference": {
                 "reference": "Organization/organization02"
             }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation",
+            "valueReference": {
+                "reference": "Location/location01"
+            }
         }
     ],
     "status": "complete",
@@ -58,6 +64,12 @@
     },
     "group": [
         {
+            "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-calculatedDate",
+                  "valueDateTime" : "2019-01-01"
+                }
+              ],
             "code": {
                 "coding": [
                     {

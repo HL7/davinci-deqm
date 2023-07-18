@@ -21,21 +21,21 @@
                {
                   "coding": [
                      {
-                        "code": "measure",
-                        "display": "Measure",
-                        "system": "http://example.org/CodeSystem/observation-category"
+                        "code": "exam",
+                        "display": "Exam",
+                        "system": "http://terminology.hl7.org/CodeSystem/observation-category"
                      }
                   ]
                }
             ],
             "code": {
-               "coding": [
+               "coding" : [
                   {
-                     "system": "http://www.ama-assn.org/go/cpt",
-                     "code": "1111F",
-                     "display": "Medication Reconciliation"
+                    "system" : "http://www.ama-assn.org/go/cpt",
+                    "code" : "1111F",
+                    "display" : "Medication Reconciliation"
                   }
-               ]
+                ]
             },
             "effectiveDateTime": "2018-09-30T14:15:04.424Z",
             "encounter": {
@@ -220,19 +220,6 @@
                }
             ],
             "birthDate": "1964-06-19",
-            "communication": [
-               {
-                  "coding": [
-                     {
-                        "code": "es",
-                        "display": "Spanish",
-                        "system": "urn:ietf:bcp:47",
-                        "userSelected": true
-                     }
-                  ],
-                  "text": "English and Spanish"
-               }
-            ],
             "gender": "male",
             "identifier": [
                {
@@ -771,21 +758,21 @@
                {
                   "coding": [
                      {
-                        "code": "measure",
-                        "display": "Measure",
-                        "system": "http://example.org/CodeSystem/observation-category"
+                        "code": "exam",
+                        "display": "Exam",
+                        "system": "http://terminology.hl7.org/CodeSystem/observation-category"
                      }
                   ]
                }
             ],
             "code": {
-               "coding": [
+               "coding" : [
                   {
-                     "system": "http://www.ama-assn.org/go/cpt",
-                     "code": "1111F",
-                     "display": "Medication Reconciliation"
+                    "system" : "http://www.ama-assn.org/go/cpt",
+                    "code" : "1111F",
+                    "display" : "Medication Reconciliation"
                   }
-               ]
+                ]
             },
             "effectiveDateTime": "2018-09-30T14:15:04.424Z",
             "encounter": {
@@ -1202,21 +1189,21 @@
                {
                   "coding": [
                      {
-                        "code": "measure",
-                        "display": "Measure",
-                        "system": "http://example.org/CodeSystem/observation-category"
+                        "code": "exam",
+                        "display": "Exam",
+                        "system": "http://terminology.hl7.org/CodeSystem/observation-category"
                      }
                   ]
                }
             ],
             "code": {
-               "coding": [
+               "coding" : [
                   {
-                     "system": "http://www.ama-assn.org/go/cpt",
-                     "code": "1111F",
-                     "display": "Medication Reconciliation"
+                    "system" : "http://www.ama-assn.org/go/cpt",
+                    "code" : "1111F",
+                    "display" : "Medication Reconciliation"
                   }
-               ]
+                ]
             },
             "effectiveDateTime": "2018-09-29T14:15:04.424Z",
             "encounter": {
