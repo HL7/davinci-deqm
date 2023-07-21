@@ -38,18 +38,13 @@
       }
     },
     {
-      "profile": [
-        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      ],
-      "mustSupport": [
-        "Observation.value???"
-      ]
+      "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation" ],
+      "mustSupport": [ "code", "status", "status.value", "effective" ]
+
     },
     {
       "type": "Patient",
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-      "mustSupport": ["Patient.???"],
-      
+      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"     
     }
   ]
 }
