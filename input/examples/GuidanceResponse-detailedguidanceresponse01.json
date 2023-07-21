@@ -16,8 +16,8 @@
       "coding": [
         {
           "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
-          "code": "LackOfRegularA1CTesting",
-          "display": "Lack of Regular A1C Testing"
+          "code": "Missing",
+          "display": "Missing Data Element"
         }
       ]
     }
@@ -25,26 +25,33 @@
   "dataRequirement": [
     {
       "type": "Observation",
-      "codeFilter": {
-        "code": {
-          "coding": [
+      "codeFilter": [
+        {
+          "code": [
             {
               "system": "http://loinc.org",
               "code": "4548-4",
-              "display": "Hemoglobin A1c"
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
             }
-          ]
+          ],
+          "path": "code.code"
         }
-      }
-    },
-    {
-      "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation" ],
-      "mustSupport": [ "code", "status", "status.value", "effective" ]
-
+      ],
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+      ],
+      "mustSupport": [
+        "code",
+        "status",
+        "status.value",
+        "effective"
+      ]
     },
     {
       "type": "Patient",
-      "profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" ]    
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      ]
     }
   ]
 }

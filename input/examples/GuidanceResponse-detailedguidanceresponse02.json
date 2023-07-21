@@ -16,8 +16,8 @@
       "coding": [
         {
           "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
-          "code": "NonCompliance",
-          "display": "Non-compliance with medication regimens"
+          "code": "CountOutOfRange",
+          "display": "Count is out of specified range"
         }
       ]
     }
@@ -39,16 +39,16 @@
       "type": "Observation",
       "codeFilter": [
         {
-          "code": {
-            "coding": [
+          "code": [
+            
               {
                 "system": "http://loinc.org",
-                "code": "69453-9",
-                "display": "Medication adherence"
+                "code": "99562-1",
+                "display": "Adherence panel [R-Outcomes]"
               }
-            ]
-          },
-          "path": "code.coding.code"
+            
+          ],
+          "path": "code.code"
         }
       ],
       "mustSupport": [
@@ -68,7 +68,7 @@
       "type": "QuestionnaireResponse",
       "profile": [
         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-      ],
+      ]
     }
   ],
   "note": [
