@@ -19,11 +19,11 @@
     "code": {
         "coding": [
             {
-                "system": "http://www.ama-assn.org/go/cpt",
-                "code": "1111F",
-                "display": "Medication Reconciliation"
+               "code": "fulfill",
+               "display": "Fulfill the focal request",
+               "system": "http://hl7.org/fhir/CodeSystem/task-code"
             }
-        ]
+         ]
     },
     "for": {
         "reference": "Patient/patient01"

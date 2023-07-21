@@ -12,21 +12,21 @@
         {
             "coding": [
                 {
-                    "system": "http://example.org/CodeSystem/observation-category",
-                    "code": "measure",
-                    "display": "Measure"
+                   "code": "exam",
+                   "display": "Exam",
+                   "system": "http://terminology.hl7.org/CodeSystem/observation-category"
                 }
-            ]
+             ]
         }
     ],
     "code": {
-        "coding": [
+        "coding" : [
             {
-                "system": "http://www.ama-assn.org/go/cpt",
-                "code": "1111F",
-                "display": "Medication Reconciliation"
+              "system" : "http://www.ama-assn.org/go/cpt",
+              "code" : "1111F",
+              "display" : "Medication Reconciliation"
             }
-        ]
+          ]
     },
     "subject": {
         "reference": "Patient/patient01"

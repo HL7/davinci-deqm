@@ -1,0 +1,23 @@
+{
+"resourceType" : "List",
+      "id" : "list2",
+      "meta" : {
+        "profile" : [
+          "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"
+        ]
+      },
+      "status" : "current",
+      "mode" : "snapshot",
+      "entry" : [
+        {
+          "item" : {
+            "reference" : "MeasureReport/indv-measurereport01"
+          }
+        },
+        {
+          "item" : {
+            "reference" : "MeasureReport/indv-measurereport02"
+          }
+        }
+      ]
+    }
