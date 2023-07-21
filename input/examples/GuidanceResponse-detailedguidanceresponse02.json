@@ -58,7 +58,7 @@
         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       ],
       "mustSupport": [
-        "Observation.???"
+        "Observation.value"
       ]
     },
     {
