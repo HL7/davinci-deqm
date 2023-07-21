@@ -24,41 +24,44 @@
   ],
   "dataRequirement": [
     {
-      "type": "MedicationStatement",
-      "profile": [
-        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"
-      ],
       "mustSupport": [
-        "MedicationStatement.???"
-      ]
-    },
-    {
-      "type": "MedicationRequest",
-      "profile": [
-        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+        "authoredOn",
+        "authoredOn.value",
+        "medication",
+        "reasonCode"
       ],
-      "mustSupport": [
-        "MedicationRequest.???"
-      ]
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-mednotrequested"
+      ],
+      "type": "MedicationRequest"
     },
     {
       "type": "Observation",
-      "codeFilter": {
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "69453-9",
-              "display": "Medication adherence"
-            }
-          ]
+      "codeFilter": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "69453-9",
+                "display": "Medication adherence"
+              }
+            ]
+          },
+          "path": "code.coding.code"
         }
-      },
-      "profile": [
-        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       ],
       "mustSupport": [
-        "Observation.value"
+        "code",
+        "code.coding",
+        "code.coding.code",
+        "value",
+        "status",
+        "status.value",
+        "effective"
+      ],
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
       ]
     },
     {
@@ -66,9 +69,6 @@
       "profile": [
         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
       ],
-      "mustSupport": [
-        "QuestionnaireResponse.???"
-      ]
     }
   ],
   "note": [
