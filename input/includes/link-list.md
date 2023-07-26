@@ -76,7 +76,8 @@
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
 [QI Core *Must Support*]: {{site.data.fhir.qicore}}/index.html#mustsupport "QI Core definition of *Must Support*"
-[QI Core Condition]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-condition.html
+[QI Core Condition Problems Health Concerns]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-condition-problems-health-concerns.html
+[QI Core Condition Encounter Diagnosis]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-condition-encounter-diagnosis.html
 [QI Core Coverage]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-coverage.html
 [QI Core DeviceUseStatement]:{{site.data.fhir.qicore}}/StructureDefinition-qicore-deviceusestatement.html
 [QI Core DeviceRequest]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-devicerequest.html
@@ -86,7 +87,7 @@
 [QI Core Observation]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-observation.html
 [QI Core Organization]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-organization.html
 [QI Core Patient]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-patient.html
-[QI Core Practitioner]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-practitioner.html
+[QI Core Practitioner]: {{site.data.fhir.ver.qicore}}/StructureDefinition-qicore-practitioner.html
 [QI Core Procedure]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-procedure.html
 [QI Core ServiceRequest]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-servicerequest.html
 [QI Core Task]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-task.html
