@@ -20,7 +20,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Element"
+      "expression": "GuidanceResponse.reasonCode"
     }
   ],
   "type": "Extension",
