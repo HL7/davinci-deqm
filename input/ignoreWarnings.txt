@@ -4,8 +4,12 @@
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationReference'): The Implementation Guide contains no examples for this extension
 
 # SECTION 1 - WARNINGS: The validator is trying to resolve an "example.org" artifact which by convention does not exist
-MeasureReport: The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
+The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
+The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
+
+# SECTION 2 - Slicing within these profiles have been confirmed and match in the profile
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0-ballot
 
 # SECTION 2 - INFORMATION: The code for the example is valid and is contained in the valueset referenced
 None of the codings provided are in the value set 'Medication Clinical Drug' (http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4|20170601), and a coding is recommended to come from this value set) (codes = http://www.nlm.nih.gov/research/umls/rxnorm#1361615)
@@ -16,12 +20,12 @@ None of the codings provided are in the value set 'Detected Issue Category' (htt
 # SECTION 2 - INFORMATION - Bundle examples are valid and matches profile
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|4.0.0
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|5.0.1
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization|5.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
 
 # SECTION 2 - INFORMATION - CPT Code System Not Supported, the content containing these codes is from measure developers, built with VSAC-enabled tooling, we are confident the CPT codes referenced here are correct
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://www.ama-assn.org/go/cpt#1111F)
 Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|5.0.1
 Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|5.0.1
+
+# SECTION 2 - INFORMATION - VSAC issues - The tooling infrastructure currently is unable to access these codes. They have been checked and the concepts are correct
+Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
