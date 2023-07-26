@@ -16,41 +16,59 @@
       "coding": [
         {
           "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
-          "code": "NonCompliance",
-          "display": "Non-compliance with medication regimens"
+          "code": "CountOutOfRange",
+          "display": "Count is out of specified range"
         }
       ]
     }
   ],
   "dataRequirement": [
     {
-      "type": "MedicationStatement",
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement",
-      "mustSupport": true
-    },
-    {
-      "type": "MedicationRequest",
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
-      "mustSupport": true
+      "mustSupport": [
+        "authoredOn",
+        "authoredOn.value",
+        "medication",
+        "reasonCode"
+      ],
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-mednotrequested"
+      ],
+      "type": "MedicationRequest"
     },
     {
       "type": "Observation",
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "69453-9",
-            "display": "Medication adherence"
-          }
-        ]
-      },
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
-      "mustSupport": true
+      "codeFilter": [
+        {
+          "code": [
+            
+              {
+                "system": "http://loinc.org",
+                "code": "99562-1",
+                "display": "Adherence panel [R-Outcomes]"
+              }
+            
+          ],
+          "path": "code.code"
+        }
+      ],
+      "mustSupport": [
+        "code",
+        "code.coding",
+        "code.coding.code",
+        "value",
+        "status",
+        "status.value",
+        "effective"
+      ],
+      "profile": [
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+      ]
     },
     {
       "type": "QuestionnaireResponse",
-      "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse",
-      "mustSupport": true
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+      ]
     }
   ],
   "note": [
