@@ -43,7 +43,7 @@
             "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         },
         {
-            "version": "3.0.0",
+            "version": "4.0.0-ballot",
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
