@@ -1,0 +1,4 @@
+<!-- StructureDefinition-extension-gapStatus-intro.md
+gapStatus  -->
+
+The DEQM Gap Status is a modifier extension and is used by the DEQM Gaps In Case DetectedIssue. The gap status allows the `not-applicable` code, which indicates the patient does not meet the initial criteria for the measure. The gap status also allows the `open-gap` code, which indicates the patient has an open care gap as oppose to a `closed-gap` status. These different gap statues will likely affect whether a DEQM Individual MeasureReport or a Detailed Care Gap Guidance Response is referenced in the DetectedIssue as evidence and the nature of the Guidance Response
