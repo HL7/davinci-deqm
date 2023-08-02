@@ -22,10 +22,10 @@ This element does not match any known slice defined in the profile http://hl7.or
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|5.0.1
 
 # SECTION 2 - INFORMATION - CPT Code System Not Supported, the content containing these codes is from measure developers, built with VSAC-enabled tooling, we are confident the CPT codes referenced here are correct
-Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://www.ama-assn.org/go/cpt#1111F)
 Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|5.0.1
 Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|5.0.1
 
-# SECTION 2 - INFORMATION - VSAC issues - The tooling infrastructure currently is unable to access these codes. They have been checked and the concepts are correct
-Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+# SECTION 2 - INFORMATION - VSAC issues - The following codes in the codesystem have been checked and the concepts are correct
+The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
