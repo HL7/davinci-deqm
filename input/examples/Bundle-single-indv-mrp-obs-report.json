@@ -360,7 +360,7 @@
             "resource": {
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
@@ -400,10 +400,6 @@
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
                     },
                     {
-                        "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-                        "valueString": "Freda902 Tillman293"
-                    },
-                    {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
                         "valueCode": "F"
                     },
@@ -418,21 +414,6 @@
                 ],
                 "address": [
                     {
-                        "extension": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "latitude",
-                                        "valueDecimal": 42.21379047108309
-                                    },
-                                    {
-                                        "url": "longitude",
-                                        "valueDecimal": -72.73951315911818
-                                    }
-                                ],
-                                "url": "http://hl7.org/fhir/StructureDefinition/geolocation"
-                            }
-                        ],
                         "city": "Westfield",
                         "country": "US",
                         "line": [
