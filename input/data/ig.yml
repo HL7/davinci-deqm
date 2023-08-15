@@ -136,7 +136,7 @@ definition:
     - exampleBoolean: true
       name: Summ PI Measure report
       reference:
-        reference: MeasureReport/summ-PI
+        reference: MeasureReport/MeasureReport-PI-example
       description: Summ PI Measure Report example
     - exampleBoolean: true
       name: Datax Measurereport02

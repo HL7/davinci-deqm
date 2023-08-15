@@ -516,7 +516,7 @@
             }
           ]
         },
-        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example",
         "period": {
           "end": "2019-09-01",
           "start": "2019-08-01"

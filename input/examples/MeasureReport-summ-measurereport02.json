@@ -22,7 +22,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-exm130-FHIR",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example",
   "date": "2019-09-05T16:59:52.404Z",
   "reporter": {
     "reference": "Organization/organization01"

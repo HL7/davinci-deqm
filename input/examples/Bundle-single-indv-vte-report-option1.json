@@ -29,7 +29,7 @@
         ],
         "status": "complete",
         "type": "individual",
-        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/measure-vte-1-FHIR",
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM108-FHIR",
         "subject": {
           "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"
         },

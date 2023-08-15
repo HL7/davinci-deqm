@@ -866,6 +866,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Measure Venous Thromboembolism Prophylaxis (EXM108)",
+                "reference": {
+                    "reference": "Measure/measure-exm108-example"
+                },
+                "description": "Measure Venous Thromboembolism Prophylaxis (EXM108) example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Measure Colorectal Cancer Screening (EXM130)",
                 "reference": {
                     "reference": "Measure/measure-exm130-example"
@@ -895,6 +903,14 @@
                     "reference": "Library/library-exm124-example"
                 },
                 "description": "Library Cervical Cancer Screening (EXM124) example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Library Venous Thromboembolism Prophylaxis (EXM108)",
+                "reference": {
+                    "reference": "Library/library-exm108-example"
+                },
+                "description": "Library Venous Thromboembolism Prophylaxis (EXM108) example"
             },
             {
                 "exampleBoolean": true,
@@ -994,11 +1010,19 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "summ-PI",
+                "name": "MeasureReport-PI-example",
                 "reference": {
-                    "reference": "MeasureReport/summ-PI"
+                    "reference": "MeasureReport/MeasureReport-PI-example"
                 },
                 "description": "DEQM MeasureReport Promoting Interoperability (PI) example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "EXMPromotingInteroperabilityMeasure",
+                "reference": {
+                    "reference": "Measure/measure-pi-example"
+                },
+                "description": "DEQM Promoting Interoperability (PI) Measure example"
             },
             {
                 "exampleBoolean": false,
