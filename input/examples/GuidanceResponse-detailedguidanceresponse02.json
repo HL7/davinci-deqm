@@ -31,7 +31,7 @@
         "reasonCode"
       ],
       "profile": [
-        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-mednotrequested"
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationnotrequested"
       ],
       "type": "MedicationRequest"
     },

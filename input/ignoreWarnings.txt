@@ -85,6 +85,32 @@ INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].
 INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|4.0.0
 INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|4.0.0
 
+# SECTION 2 - INFORMATION - The following information messages are expected since the slice in the examples do not match the slice in the observation.value[x]
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[0].resource/*Observation/observation03*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[9].resource/*Observation/observation02*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[14].resource/*Observation/observation01*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[4].resource/*Observation/null*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+INFORMATION: Observation/observation01: Observation.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+INFORMATION: Observation/observation02: Observation.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+INFORMATION: Observation/observation03: Observation.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[2].resource/*Observation/observation01*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation|5.0.0
+
+# SECTION 2 - INFORMATION - The following information messages are expected since the slice in the examples do not match the slice in the observation.identifer
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[4].resource/*Organization/organization03*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization|5.0.0
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[16].resource/*Organization/organization03*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization|5.0.0
+INFORMATION: Organization/organization03: Organization.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization|5.0.0
+
+# SECTION 2 - INFORMATION - The following information messages are expected since the slice in the examples do not match the slice in the practitioner.identifer
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[5].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[6].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[5].resource/*Practitioner/null*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
+INFORMATION: Practitioner/practitioner01: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
+
+# SECTION 2 - INFORMATION - The following messages are expected since the elements in the following example do not match the slices in the measure or proportion profile, but they do match in the computable measures profile referenced:
+INFORMATION: Measure/measure-exm108-example: Measure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm|4.0.0
+INFORMATION: Measure/measure-pi-example: Measure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm|4.0.0
+INFORMATION: Measure/measure-pi-example: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm|4.0.0
+
 # SECTION 2 - INFORMATION - The following examples are using valid codes in the CPT codesystem but THO doesn't define the codes. we are confident the CPT codes referenced here are correct
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|5.0.1
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|5.0.1

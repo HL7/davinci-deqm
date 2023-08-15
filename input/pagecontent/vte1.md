@@ -13,7 +13,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Condition|QI Core Condition Profile|[QI Core Condition]|
+|Condition|QI Core Condition Problems Health Concerns Profile|[QI Core Condition Problems Health Concerns]|
 |Coverage|QI Core Coverage Profile|[QI Core Coverage]|
 |DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest]|
 |DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement]|
@@ -29,7 +29,7 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
 |Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
-|Procedure|QI Core Procedure Profile|[QI Core Procedure]|
+|Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
 |ServiceRequest|QI Core ServiceRequest Profile|[QI Core ServiceRequest]|
 
 

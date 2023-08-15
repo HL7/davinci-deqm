@@ -1,6 +1,6 @@
 {
     "resourceType": "MeasureReport",
-    "id": "summ-PI",
+    "id": "MeasureReport-PI-example",
     "meta": {
         "profile": [
             "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
@@ -22,7 +22,7 @@
     ],
     "status": "complete",
     "type": "summary",
-    "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure-measure-pi-exm",
+    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-pi-example",
     "date": "2018-09-05T16:59:52.404Z",
     "period": {
         "start": "2018-08-01",

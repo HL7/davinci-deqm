@@ -63,6 +63,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Correct example using Reason Detail extension ([FHIR-40803](https://jira.hl7.org/browse/FHIR-40803))
     -  Remove Coverage from Resource Diagram ([FHIR-41299](https://jira.hl7.org/browse/FHIR-41299))
     -  Add GuidanceResponse example to Examles page ([FHIR-41315](https://jira.hl7.org/browse/FHIR-41315))
+    -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
 
 ### Changes and Updates for Version 3.1.0
 
