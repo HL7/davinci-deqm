@@ -345,7 +345,7 @@
     </element>
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <condition value="deqm-6"/>
       <mustSupport value="true"/>
