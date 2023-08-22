@@ -106,8 +106,6 @@ INFORMATION: Measure/measure-pi-example: Measure.extension[0]: This element does
 INFORMATION: Measure/measure-pi-example: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm|4.0.0
 
 # SECTION 2 - INFORMATION - The following examples are using valid codes in the CPT codesystem but THO doesn't define the codes. we are confident the CPT codes referenced here are correct
-Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|5.0.1
-Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|5.0.1
 The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://www.ama-assn.org/go/cpt#1111F)
 
