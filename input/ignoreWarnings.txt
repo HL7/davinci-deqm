@@ -17,6 +17,37 @@ INFORMATION: Practitioner/practitioner01: Practitioner.identifier[1]: This eleme
 # SECTION 2 - INFORMATION: The code for the example is valid and is contained in the valueset referenced
 INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[5].resource/*MedicationAdministration/null*/.medication.ofType(CodeableConcept): None of the codings provided are in the value set 'Medication Clinical Drug' (http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4|20170601), and a coding is recommended to come from this value set) (codes = http://www.nlm.nih.gov/research/umls/rxnorm#1361615)
 
+# SECTION 2 - INFORMATION: The following information messages in the examples are related to terminology referenced in profiles with the status of draft . Will address these in future profiles
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[1].resource/*Encounter/encounter02*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[7].resource/*Encounter/encounter03*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[13].resource/*Encounter/encounter01*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[3].resource/*Task/task01*/.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[4].resource/*Encounter/encounter03*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[7].resource/*Task/task03*/.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[9].resource/*Task/task02*/.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[12].resource/*Encounter/encounter01*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[14].resource/*Encounter/encounter02*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[1].resource/*Task/null*/.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[5].resource/*MedicationAdministration/null*/.status: Reference to draft item http://terminology.hl7.org/CodeSystem/medication-admin-status|4.0.1
+INFORMATION: Encounter/encounter01: Encounter.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Encounter/encounter02: Encounter.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Encounter/encounter03: Encounter.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: MedicationAdministration/medicationadministration01: MedicationAdministration.status: Reference to draft item http://terminology.hl7.org/CodeSystem/medication-admin-status|4.0.1
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[0].resource/*Encounter/encounter01*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[2].resource/*Task/Task01*/.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[0].resource/*Encounter/encounter01*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Parameters/single-gaps-closed-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Parameters/single-gaps-closed-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Procedure/gaps-procedure01: Procedure.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Task/task01: Task.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Task/task02: Task.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Task/task03: Task.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Bundle/sde-example-patient-data-bundle: Bundle.entry[1].resource/*Encounter/encounter04*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+
 # SECTION 2 - INFORMATION: Information messages validated: Related to the ActCode#CAREGAP issue, example.org, Slicing is open so other slices are intentionally allowed, Confirmed profile validation messages
 None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 
