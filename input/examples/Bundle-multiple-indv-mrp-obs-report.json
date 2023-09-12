@@ -33,7 +33,7 @@
                   {
                     "system" : "http://www.ama-assn.org/go/cpt",
                     "code" : "1111F",
-                    "display" : "Medication Reconciliation"
+                    "display" : "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
                   }
                 ]
             },
@@ -770,7 +770,7 @@
                   {
                     "system" : "http://www.ama-assn.org/go/cpt",
                     "code" : "1111F",
-                    "display" : "Medication Reconciliation"
+                    "display" : "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
                   }
                 ]
             },
@@ -1201,7 +1201,7 @@
                   {
                     "system" : "http://www.ama-assn.org/go/cpt",
                     "code" : "1111F",
-                    "display" : "Medication Reconciliation"
+                    "display" : "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
                   }
                 ]
             },
