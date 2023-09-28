@@ -1,6 +1,10 @@
 {
     "status": "active",
-    "publisher": "HL7 International - Clinical Quality Information Work Group",
+    "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+        "valueCode" : "cqi"
+    }],
+    "publisher": "HL7 International / Clinical Quality Information",
     "license": "CC0-1.0",
     "name": "DEQM",
     "copyright": "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
@@ -47,6 +51,12 @@
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
+        },
+        {
+            "version": "current",
+            "id": "extensions",
+            "packageId": "hl7.fhir.uv.extensions",
+            "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"
         }
     ],
     "fhirVersion": [
