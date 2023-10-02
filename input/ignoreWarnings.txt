@@ -8,6 +8,9 @@ The Measure 'http://example.org/fhir/Measure/example-stratification-measure' cou
 The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
 
+# SECTION 1 - WARNIGNS: The publisher is having issues in auto-generating a narrative for the parameter examples, discussed here (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.20example.20narratives.20not.20being.20generated)
+Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+
 # SECTION 2 - Information: The following information messages are expected since the elements in the following examples do not match the slice in Practitioner.identifier
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[5].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[6].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
