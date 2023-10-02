@@ -51,12 +51,6 @@
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
-        },
-        {
-            "version": "current",
-            "id": "extensions",
-            "packageId": "hl7.fhir.uv.extensions",
-            "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"
         }
     ],
     "fhirVersion": [
