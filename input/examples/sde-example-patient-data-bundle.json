@@ -383,6 +383,12 @@
                         "subject": {
                             "reference": "Patient/nhsn-iip-ip101"
                         },
+                        "effectivePeriod": {
+                            "start": "2022-01-01T09:30:10+01:00"
+                          },
+                          "performer": [{
+                            "reference": "Organization/organization01"
+                          }],
                         "valueCodeableConcept": {
                             "coding": [
                                 {
