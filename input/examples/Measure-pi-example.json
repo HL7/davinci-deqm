@@ -17,6 +17,12 @@
         "code" : "/1000.d"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem",
+    "valueReference" : {
+      "reference" : "Device/deqm-software-system-example"
+    }
   }],
   "url" : "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-pi-example",
   "identifier" : [{
