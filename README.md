@@ -1,7 +1,7 @@
 # DaVinci Data Exchange For Quality Measures
 
 
-## [STU3 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU1)
+## [STU4 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU4)
 
 ## [Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
 
