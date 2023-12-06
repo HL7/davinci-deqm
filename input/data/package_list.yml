@@ -1,5 +1,5 @@
 package-id: hl7.fhir.us.davinci-deqm
-title: Data Exchange For Quality Measures 
+title: Data Exchange For Quality Measures
 canonical: 'http://hl7.org/fhir/us/davinci-deqm'
 introduction: >-
   The Da Vinci Data Exchange for Quality Measures (DEQM) FHIR Implementation Guide (IG) supports value based care data exchange in the US Realm
@@ -14,6 +14,10 @@ list:
       Listed below are the resolved trackers for this version:
 
       **Status**: **Summary**:(**Jira Issue**)
+      1. **Applied**: Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
+      
+      
+      
       1. **Applied**: The provider should be notified when data is missing. ([FHIR-26091](https://jira.hl7.org/browse/FHIR-26091))
       1. **Applied**: Add a value to GIC Status to represent when a Patient is not in the Initial Population for a Measure ([FHIR-32980](https://jira.hl7.org/browse/FHIR-32980))
       1. **Applied**: Add GET examples to cover entire $care-gaps api ([FHIR-33005](https://jira.hl7.org/browse/FHIR-33005))
