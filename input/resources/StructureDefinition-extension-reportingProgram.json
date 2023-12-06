@@ -49,11 +49,11 @@
           },
           {
             "code" : "canonical",
-            "targetProfile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm"]
+            "targetProfile": ["http://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-quality-program-cqfm.html"]
           }
         ],
         "binding": {
-          "strength": "extensible",
+          "strength": "example",
           "valueSet": "http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs"
         }
       }

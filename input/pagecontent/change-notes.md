@@ -5,6 +5,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 1. applied the following trackers:
    - Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
+   - Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
+     
      
 ### Changes and Updates for Version 4.0.0 (STU4)
 
