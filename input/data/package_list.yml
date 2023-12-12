@@ -1,5 +1,5 @@
 package-id: hl7.fhir.us.davinci-deqm
-title: Data Exchange For Quality Measures 
+title: Data Exchange For Quality Measures
 canonical: 'http://hl7.org/fhir/us/davinci-deqm'
 introduction: >-
   The Da Vinci Data Exchange for Quality Measures (DEQM) FHIR Implementation Guide (IG) supports value based care data exchange in the US Realm
@@ -40,3 +40,4 @@ list:
       1. **Applied**: Add example MeasureReport for a ratio measure ([FHIR-38073](https://jira.hl7.org/browse/FHIR-38073))
       1. **Applied**: Measure reports should support quality program ([FHIR-39348](https://jira.hl7.org/browse/FHIR-39348))
       1. **Applied**: Add example PI Measure report ([FHIR-22761](https://jira.hl7.org/browse/FHIR-22761))
+      1. **Applied**: Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-(qi-core)))

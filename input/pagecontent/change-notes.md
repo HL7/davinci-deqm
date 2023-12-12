@@ -64,6 +64,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Remove Coverage from Resource Diagram ([FHIR-41299](https://jira.hl7.org/browse/FHIR-41299))
     -  Add GuidanceResponse example to Examles page ([FHIR-41315](https://jira.hl7.org/browse/FHIR-41315))
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
+    -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-(qi-core)))
+      
 
 ### Changes and Updates for Version 3.1.0
 

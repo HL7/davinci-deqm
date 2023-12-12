@@ -130,7 +130,7 @@ share standardized FHIR-based electronic Clinical Quality Measures (eCQMs).
 
 ##### Quality Improvement Core Implementation Guide (QI-Core)
 {:.no_toc #quality-improvement-core-implementation-guide-(qi-core)}
-
+<div class="new-content">
 The Quality Improvement Core Implementation Guide, or QI-Core, defines a set
 of FHIR profiles with extensions and bindings needed to create interoperable,
 quality-focused applications. Importantly, the scope of QI-Core includes both
@@ -138,16 +138,7 @@ quality measurement and decision support to ensure that knowledge expressed can
 be shared across both domains. QI-Core is derived from US Core, meaning that
 where possible, QI-Core profiles are based on US Core to ensure alignment with
 and support for quality improvement data within healthcare systems in the US
-Realm.
-
-> Note that QI-Core is intended to be a FHIR-based rendering of a
-quality-focused _logical model_ called QUICK (Quality Information and
-Clinical Knowledge). However, the QUICK model is still in development, so the
-QI-Core profiles are currently built directly as a FHIR Implementation Guide. To
-support the goals of the QUICK logical model, the QI-Core implementation guide
-includes an author-focused _view_ of QUICK, the QUICK _logical
-view_. See the [Relationship Between QUICK, the QI-Core Profiles, and FHIR](http://hl7.org/fhir/us/qicore/index.html#relationships)
-discussion in the QI-Core implementation guide for more information.
+Realm.</div>
 
 ##### Data Exchange for Quality Measures (DEQM)
 {:.no_toc #data-exchange-for-quality-measures-(deqm)}
