@@ -13,7 +13,8 @@ The [Quality Reporting] Page in the R4 Release of the FHIR Specification provide
 #### Relationship between QI Core, DEQM, and CQMs
 {:.no_toc}
 
-As described in the Quality Measurement Standards Landscape section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
+
+As described in the ([Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscape)) section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
 
 ### Constructing an Individual Report
 
@@ -76,7 +77,7 @@ missing from the record or from activities that did not occur. However,
 both of these situations result in the $care-gaps and the provider is 
 notified in that report.  Missing data may be identified in a 
 GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profile].
-</div>
+
 
 {:.no_toc}
 
