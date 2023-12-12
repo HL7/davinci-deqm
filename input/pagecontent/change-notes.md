@@ -64,7 +64,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Remove Coverage from Resource Diagram ([FHIR-41299](https://jira.hl7.org/browse/FHIR-41299))
     -  Add GuidanceResponse example to Examles page ([FHIR-41315](https://jira.hl7.org/browse/FHIR-41315))
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
-    -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](index.html#qualityMeasurementStandardsLandscapeSummary)) and ([here](index.html#qualityMeasurementStandardsLandscapeIndv))
+    -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](indv-reporting.html#qualityMeasurementStandardsLandscapeIndv)) and ([here](summary-reporting.html#qualityMeasurementStandardsLandscapeSummary)
        
 
 ### Changes and Updates for Version 3.1.0
