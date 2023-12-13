@@ -11,12 +11,9 @@ The Summary reporting scenario is supported by the [DEQM Summary MeasureReport P
 The Quality Reporting Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Population Data]section describes how to use a MeasureReport resource to represent the results of a summary calculation, as well as how to use the $evaluate-measure operation to generate a summary MeasureReport from a Measure.
 
 ### Relationship between QI Core, DEQM, and CQMs
-{: qualityMeasurementStandardsLandscapeSummary}
-<div class="new-content">
-As described in the ([Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscape)) section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports summary reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category III (QRDA Category III), QI Core profiles are equivalent to the Quality Data Model (QDM) and the DEQM Summary MeasureReport Profile is equivalent to the QRDA Category III in the QDM-CQL-QRDA paradigm.
-</div>
+{: #qualityMeasurementStandardsLandscapeSummary}
+<span class="bg-success"> As described in the ([Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscape)) section of this implementation guide, </span>the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports summary reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category III (QRDA Category III), QI Core profiles are equivalent to the Quality Data Model (QDM) and the DEQM Summary MeasureReport Profile is equivalent to the QRDA Category III in the QDM-CQL-QRDA paradigm.
 ### Default Profiles
-
 The following resources are used in the summary reporting scenario:
 
 |Resource Type| Profile Name                       |Link to Profile|
