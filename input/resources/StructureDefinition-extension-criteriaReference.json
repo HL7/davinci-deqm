@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "extension-criteriaReference",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "deprecated"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
   "name": "DEQMCriteriaReferenceExtension",
   "title": "DEQM Criteria Reference Extension",
@@ -18,7 +24,7 @@
       ]
     }
   ],
-  "description": "Identifies which measure criteria (i.e. population, stratifier, or supplementalData) was responsible for the inclusion of the evaluatedResource or supplementalData on which it appears.",
+  "description": "Deprecated: Identifies which measure criteria (i.e. population, stratifier, or supplementalData) was responsible for the inclusion of the evaluatedResource or supplementalData on which it appears.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

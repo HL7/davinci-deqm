@@ -76,7 +76,6 @@ missing from the record or from activities that did not occur. However,
 both of these situations result in the $care-gaps and the provider is 
 notified in that report.  Missing data may be identified in a 
 GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profile].
-</div>
 
 {:.no_toc}
 
