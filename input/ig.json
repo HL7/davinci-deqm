@@ -1121,7 +1121,7 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-criteriaReference"
+                    "reference": "StructureDefinition/criteriaReference"
                 }
             },
             {
