@@ -49,7 +49,7 @@
           },
           {
             "code" : "canonical",
-            "targetProfile": ["http://build.fhir.org/ig/HL7/cqf-measures/StructureDefinition-quality-program-cqfm.html"]
+            "targetProfile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/quality-program-cqfm"]
           }
         ],
         "binding": {
