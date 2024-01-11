@@ -13,8 +13,45 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
 **Request body**
 ~~~
 {
-   "id": "indv-report01",
+   "id": "bundle-indv-report01",
+   "resourceType": "Bundle"
+   "type": "transaction",
    "entry": [
+      {
+         "fullUrl": "urn:uuid:a548689e-45e7-11e9-9b0c-5cf3707b2e61",
+         "request": {
+            "method": "POST",
+            "url": "MeasureReport"
+         },
+         "resource": {
+          ...
+            "resourceType": "MeasureReport",
+            "evaluatedResource": [
+              {
+                  "reference": "Coverage/###ID"
+              },
+              {
+                  "reference": "Encounter/###ID"
+              },
+              {
+                  "reference": "Location/###ID"
+              },
+              {
+                  "reference": "Organization/###ID"
+              },
+              {
+                  "reference": "Patient/###ID"
+              },
+              {
+                  "reference": "Practitioner/###ID"
+              },
+              {
+                  "reference": "Task/###ID"
+              }
+
+           ]
+         }
+      },
       {
          "fullUrl": "urn:uuid:a5481b62-45e7-11e9-b20c-5cf3707b2e61",
          "request": {
@@ -46,17 +83,6 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
          "resource": {
           ...
             "resourceType": "Location"
-         }
-      },
-      {
-         "fullUrl": "urn:uuid:a548689e-45e7-11e9-9b0c-5cf3707b2e61",
-         "request": {
-            "method": "POST",
-            "url": "MeasureReport"
-         },
-         "resource": {
-          ...
-            "resourceType": "MeasureReport"
          }
       },
       {
@@ -114,9 +140,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "resourceType": "Task"
          }
       }
-   ],
-   "type": "transaction",
-   "resourceType": "Bundle"
+   ]
 }
 ~~~
 

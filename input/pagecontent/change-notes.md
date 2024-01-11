@@ -66,7 +66,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
     -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-(qi-core)))
     -  Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
-
+    -  In order for Individual MeasureReport to be the equivalent of QRDA Category 1, it needs to share the evaluatedResources ([FHIR-42812](https://jira.hl7.org/browse/FHIR-42812))([Applied here](indv-reporting.html#request-body))
 ### Changes and Updates for Version 3.1.0
 
 1. Updated the IG dependencies 
