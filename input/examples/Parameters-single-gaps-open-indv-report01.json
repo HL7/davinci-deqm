@@ -195,11 +195,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "initial-population"
-                    }, 
+                    },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
@@ -208,11 +208,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "initial-population"
                     },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
@@ -341,11 +341,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "initial-population"
                     },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
@@ -354,11 +354,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "initial-population"
                     },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
