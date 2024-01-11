@@ -62,8 +62,10 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  MeasureReport.date could be misleading ([FHIR-40797](https://jira.hl7.org/browse/FHIR-40797))
     -  Correct example using Reason Detail extension ([FHIR-40803](https://jira.hl7.org/browse/FHIR-40803))
     -  Remove Coverage from Resource Diagram ([FHIR-41299](https://jira.hl7.org/browse/FHIR-41299))
-    -  Add GuidanceResponse example to Examles page ([FHIR-41315](https://jira.hl7.org/browse/FHIR-41315))
+    -  Add GuidanceResponse example to Examples page ([FHIR-41315](https://jira.hl7.org/browse/FHIR-41315))
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
+    -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-(qi-core)))
+    -  Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
     -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](indv-reporting.html#qualityMeasurementStandardsLandscapeIndv)) and ([here](summary-reporting.html#qualityMeasurementStandardsLandscapeSummary)
        
 
