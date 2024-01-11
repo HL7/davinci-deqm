@@ -29,7 +29,7 @@
 <artifact id="Coverage/coverage01" key="Coverage-coverage01" name="Coverage01"/>
 <artifact deprecated="true" id="Coverage/coverage02" key="Coverage-coverage02" name="Coverage02"/>
 <artifact deprecated="true" id="Coverage/coverage03" key="Coverage-coverage03" name="Coverage03"/>
-<artifact id="StructureDefinition/criteriaReference" key="StructureDefinition-criteriaReference" name="Criteria Reference Extension"/>
+<artifact id="StructureDefinition/external-extension-criteriaReference" key="StructureDefinition-external-extension-criteriaReference" name="Criteria Reference Extension"/>
 <artifact id="StructureDefinition/extension-alternateScoreType" key="StructureDefinition-extension-alternateScoreType" name="DEQM Alternate Score Type Extension"/>
 <artifact id="StructureDefinition/extension-calculatedDate" key="StructureDefinition-extension-calculatedDate" name="DEQM Calculated Date Extension"/>
 <artifact id="StructureDefinition/extension-certificationIdentifier" key="StructureDefinition-extension-certificationIdentifier" name="DEQM Certification Identifier Extension"/>
