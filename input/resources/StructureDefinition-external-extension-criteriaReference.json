@@ -51,6 +51,10 @@
     {
       "type": "element",
       "expression": "MeasureReport.evaluatedResource"
+    },
+    {
+      "type": "element",
+      "expression": "Reference"
     }
   ],
   "type": "Extension",
@@ -72,7 +76,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/extension-criteriaReference"
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/criteriaReference"
       },
       {
         "id": "Extension.value[x]",
