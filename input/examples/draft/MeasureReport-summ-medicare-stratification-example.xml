@@ -38,18 +38,6 @@
       <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="numerator"/></coding></code>
       <count value="4000"/>
     </population>
-    <population>
-      <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-administrative"/></coding></code>
-      <count value="2000"/>
-    </population>
-    <population>
-      <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-medical"/></coding></code>
-      <count value="1000"/>
-    </population>
-    <population>
-      <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-supplemental"/></coding></code>
-      <count value="1000"/>
-    </population>
     <measureScore>
       <value value="50"/>
       <unit value="%"/>
@@ -72,18 +60,6 @@
         <population>
           <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="numerator"/></coding></code>
           <count value="243"/>
-        </population>
-        <population>
-          <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-administrative"/></coding></code>
-          <count value="154"/>
-        </population>
-        <population>
-          <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-medical"/></coding></code>
-          <count value="12"/>
-        </population>
-        <population>
-          <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-supplemental"/></coding></code>
-          <count value="77"/>
         </population>
         <measureScore>
           <value value="61.99"/>
@@ -117,18 +93,6 @@
         <population>
           <code><coding><system value="http://terminology.hl7.org/CodeSystem/measure-population"/><code value="numerator"/></coding></code>
           <count value="103"/>
-        </population>
-        <population>
-          <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-administrative"/></coding></code>
-          <count value="77"/>
-        </population>
-        <population>
-          <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-medical"/></coding></code>
-          <count value="7"/>
-        </population>
-        <population>
-          <code><coding><system value="http://example.org/CodeSystem/measure-population-type"/><code value="numerator-supplemental"/></coding></code>
-          <count value="19"/>
         </population>
         <measureScore>
           <value value="68.67"/>

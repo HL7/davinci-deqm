@@ -59,39 +59,6 @@
                   ]
                 },
                 "count": 4000
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "numerator-administrative",
-                      "system": "http://example.org/CodeSystem/measure-population-type"
-                    }
-                  ]
-                },
-                "count": 2000
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "numerator-medical",
-                      "system": "http://example.org/CodeSystem/measure-population-type"
-                    }
-                  ]
-                },
-                "count": 1000
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "numerator-supplemental",
-                      "system": "http://example.org/CodeSystem/measure-population-type"
-                    }
-                  ]
-                },
-                "count": 1000
               }
             ],
             "stratifier": [
@@ -145,39 +112,6 @@
                           ]
                         },
                         "count": 243
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator-administrative",
-                              "system": "http://example.org/CodeSystem/measure-population-type"
-                            }
-                          ]
-                        },
-                        "count": 154
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator-medical",
-                              "system": "http://example.org/CodeSystem/measure-population-type"
-                            }
-                          ]
-                        },
-                        "count": 12
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator-supplemental",
-                              "system": "http://example.org/CodeSystem/measure-population-type"
-                            }
-                          ]
-                        },
-                        "count": 77
                       }
                     ],
                     "value": {
@@ -284,39 +218,6 @@
                           ]
                         },
                         "count": 103
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator-administrative",
-                              "system": "http://example.org/CodeSystem/measure-population-type"
-                            }
-                          ]
-                        },
-                        "count": 77
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator-medical",
-                              "system": "http://example.org/CodeSystem/measure-population-type"
-                            }
-                          ]
-                        },
-                        "count": 7
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator-supplemental",
-                              "system": "http://example.org/CodeSystem/measure-population-type"
-                            }
-                          ]
-                        },
-                        "count": 19
                       }
                     ]
                   }
