@@ -83,39 +83,6 @@
                         ]
                     },
                     "count": 4000
-                },
-                {
-                    "code": {
-                        "coding": [
-                            {
-                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                "code": "numerator-administrative"
-                            }
-                        ]
-                    },
-                    "count": 2000
-                },
-                {
-                    "code": {
-                        "coding": [
-                            {
-                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                "code": "numerator-medical"
-                            }
-                        ]
-                    },
-                    "count": 1000
-                },
-                {
-                    "code": {
-                        "coding": [
-                            {
-                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                "code": "numerator-supplemental"
-                            }
-                        ]
-                    },
-                    "count": 1000
                 }
             ],
             "measureScore": {
@@ -178,39 +145,6 @@
                                         ]
                                     },
                                     "count": 243
-                                },
-                                {
-                                    "code": {
-                                        "coding": [
-                                            {
-                                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                                "code": "numerator-administrative"
-                                            }
-                                        ]
-                                    },
-                                    "count": 154
-                                },
-                                {
-                                    "code": {
-                                        "coding": [
-                                            {
-                                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                                "code": "numerator-medical"
-                                            }
-                                        ]
-                                    },
-                                    "count": 12
-                                },
-                                {
-                                    "code": {
-                                        "coding": [
-                                            {
-                                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                                "code": "numerator-supplemental"
-                                            }
-                                        ]
-                                    },
-                                    "count": 77
                                 }
                             ],
                             "measureScore": {
@@ -308,39 +242,6 @@
                                         ]
                                     },
                                     "count": 103
-                                },
-                                {
-                                    "code": {
-                                        "coding": [
-                                            {
-                                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                                "code": "numerator-administrative"
-                                            }
-                                        ]
-                                    },
-                                    "count": 77
-                                },
-                                {
-                                    "code": {
-                                        "coding": [
-                                            {
-                                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                                "code": "numerator-medical"
-                                            }
-                                        ]
-                                    },
-                                    "count": 7
-                                },
-                                {
-                                    "code": {
-                                        "coding": [
-                                            {
-                                                "system": "http://example.org/CodeSystem/measure-population-type",
-                                                "code": "numerator-supplemental"
-                                            }
-                                        ]
-                                    },
-                                    "count": 19
                                 }
                             ],
                             "measureScore": {
