@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "external-extension-criteriaReference",
-  "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+  "id": "countQuantity",
+  "url": "http://hl7.org/fhir/StructureDefinition/countQuantity",
   "version": "1.0.0",
-  "name": "CriteriaReferenceExtension",
-  "title": "Criteria Reference Extension",
+  "name": "CountQuantity",
+  "title": "Count Quantity",
   "status": "active",
   "experimental": false,
-  "date": "2023-12-15",
+  "date": "2024-01-08T13:31:32-07:00",
   "publisher": "HL7 International / Clinical Decision Support",
   "contact": [
     {
@@ -19,18 +19,8 @@
       ]
     }
   ],
-  "description": "Specifies which criteria is the input for calculations.",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "urn:iso:std:iso:3166",
-          "code": "US"
-        }
-      ]
-    }
-  ],
-  "purpose": "The definition must be able to specify which criteria is the input used.",
+  "description": "Size of the population as a quantity.",
+  "purpose": "To provide support for reporting composite measures that may result in decimal-valued counts for populations.",
   "fhirVersion": "4.0.1",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation": "constraint",
@@ -46,15 +36,11 @@
   "context": [
     {
       "type": "element",
-      "expression": "MeasureReport.supplementalData"
+      "expression": "MeasureReport.group.population.count"
     },
     {
       "type": "element",
       "expression": "MeasureReport.evaluatedResource"
-    },
-    {
-      "type": "element",
-      "expression": "Reference"
     }
   ],
   "type": "Extension",
@@ -63,10 +49,10 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Criteria reference",
-        "definition": "Reference a criteria by specifying that criteria's unique id",
+        "short": "Size of the population as a quantity.",
+        "definition": "A decimal representation of the size of the population.",
         "min": 0,
-        "max": "*"
+        "max": "1"
       },
       {
         "id": "Extension.url",
@@ -76,14 +62,14 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/criteriaReference"
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/countQuantity"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ]
       }
