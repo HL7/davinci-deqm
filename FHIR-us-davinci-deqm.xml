@@ -26,6 +26,7 @@
 <artifact id="Condition/nhsn-iip-con101" key="Condition-nhsn-iip-con101" name="Condition nhsn-iip-con101"/>
 <artifact id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>
 <artifact id="CapabilityStatement/consumer-server" key="CapabilityStatement-consumer-server" name="Consumer Server CapabilityStatement"/>
+<artifact id="StructureDefinition/external-extension-countQuantity" key="StructureDefinition-external-extension-countQuantity" name="Count Quantity"/>
 <artifact id="Coverage/coverage01" key="Coverage-coverage01" name="Coverage01"/>
 <artifact deprecated="true" id="Coverage/coverage02" key="Coverage-coverage02" name="Coverage02"/>
 <artifact deprecated="true" id="Coverage/coverage03" key="Coverage-coverage03" name="Coverage03"/>

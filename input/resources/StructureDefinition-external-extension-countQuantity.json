@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "countQuantity",
+  "id": "external-extension-countQuantity",
   "url": "http://hl7.org/fhir/StructureDefinition/countQuantity",
   "version": "1.0.0",
   "name": "CountQuantity",
