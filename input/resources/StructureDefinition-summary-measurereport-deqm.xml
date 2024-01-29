@@ -92,6 +92,19 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.extension:supplementalData.extension:populationDescription">
+      <path value="MeasureReport.extension.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the supplemental data"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.extension:scoring">
       <path value="MeasureReport.extension"/>
       <sliceName value="scoring"/>
@@ -316,6 +329,19 @@
       <condition value="deqm-4"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.extension:populationDescription">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.code">
       <path value="MeasureReport.group.code"/>
       <mustSupport value="true"/>
@@ -323,6 +349,19 @@
     <element id="MeasureReport.group.population">
       <path value="MeasureReport.group.population"/>
       <condition value="deqm-5"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.extension:populationDescription">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the population"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.code">
@@ -369,6 +408,19 @@
       <path value="MeasureReport.group.stratifier.code"/>
       <min value="1"/>
       <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.extension:populationDescription">
+      <path value="MeasureReport.group.stratifier.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the stratifier"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum">

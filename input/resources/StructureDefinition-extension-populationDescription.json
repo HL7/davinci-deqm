@@ -1,0 +1,72 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-populationDescription",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription",
+  "name": "measurereport-populationDescription",
+  "title": "Measure Report Population Description",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-01-24",
+  "publisher": "Da Vinci Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+        }
+      ]
+    }
+  ],
+  "description": "The human readable description of this population criteria.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MeasureReport.group"
+    },
+     {
+      "type": "element",
+      "expression": "MeasureReport.population"
+    },
+     {
+      "type": "element",
+      "expression": "MeasureReport.stratifier"
+    },
+     {
+      "type": "element",
+      "expression": "MeasureReport.supplementalDataExtension"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Population Description",
+        "definition": "Provides a description of the population on which it appears.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ]
+      }
+    ]
+  }
+}
