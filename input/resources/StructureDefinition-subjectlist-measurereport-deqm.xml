@@ -2,6 +2,15 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="subjectlist-measurereport-deqm"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/countQuantity">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="416406003"/>
+        <display value="Procedure discontinued (situation)"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
   <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subjectlist-measurereport-deqm"/>
   <name value="DEQMSubjectListMeasureReport"/>
   <title value="DEQM Subject List MeasureReport"/>
@@ -196,7 +205,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
       <mustSupport value="true"/>
-    </element> 
+    </element>
     <element id="MeasureReport.date">
       <path value="MeasureReport.date"/>
       <short value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
@@ -332,11 +341,23 @@
     </element>
     <element id="MeasureReport.group.population.count">
       <path value="MeasureReport.group.population.count"/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.population.subjectResults">
+    <element id="MeasureReport.group.population.countQuantity">
+      <path value="MeasureReport.group.population.countQuantity"/>
+      <condition value="popCountQuantity"/>
+      <constraint>
+        <key value="popCountQuantity"/>
+        <severity value="error"/>
+        <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required"/>
+        <expression value="MeasureReport.group.population.countQuantity.exists() xor MeasureReport.group.population.count.exists()"/>
+      </constraint>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>    <element id="MeasureReport.group.population.subjectResults">
       <path value="MeasureReport.group.population.subjectResults"/>
       <min value="1"/>
       <type>
@@ -344,7 +365,7 @@
         <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
       </type>
       <mustSupport value="true"/>
-    </element> 
+    </element>
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
       <min value="1"/>
@@ -399,12 +420,12 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.subjectResults">
       <path value="MeasureReport.group.stratifier.stratum.population.subjectResults"/>
-      <min value="1"/>        
+      <min value="1"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
-      </type>      
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.measureScore">
@@ -421,7 +442,7 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
       </type>
       <mustSupport value="true"/>
-    </element>  
+    </element>
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <min value="0"/>
