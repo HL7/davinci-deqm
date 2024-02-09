@@ -270,6 +270,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Measurereport with contained data",
+                "reference": {
+                    "reference": "MeasureReport/summ-contained-supplemental"
+                },
+                "description": "Measurereport with contained supplemental data"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Mrp Submit Task",
                 "reference": {
                     "reference": "Parameters/mrp-submit-task"

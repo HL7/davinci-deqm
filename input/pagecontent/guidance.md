@@ -9,9 +9,6 @@ The second scenario defined in this guide is when a Reporter needs to exchange a
 
 This version of the guide adds the Gaps in Care Reporting Scenario. The Gaps in Care Reporting is used to report the [open and/or closed gaps] for quality measures over a [gaps through period] specified by a Client. Optionally, it is also used to report details to the open gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
 
-  Patient List Reporting is a third reporting type which is similar to a QRDA Category 2 report. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
-  {:.stu-note}
-
 ### Preconditions and Assumptions
 
 -  Although the exact mechanisms for securing these exchanges are not specified as part of this implementation guide:

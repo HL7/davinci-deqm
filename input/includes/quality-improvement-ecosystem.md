@@ -44,4 +44,4 @@ establish a capable distributed rule processing environment in FHIR. For
 additional information about idealized processes for moving evidence and
 information from guidelines to CDS and measurement, refer to an effort by the
 Centers for Disease Control and Prevention (CDC) called
-[Adapting Clinical Guidelines for the Digital Age](https://www.cdc.gov/ddphss/clinical-guidelines/index.html).
+[Adapting Clinical Guidelines for the Digital Age](https://www.cdc.gov/csels/phio/clinical-guidelines/index.html).
