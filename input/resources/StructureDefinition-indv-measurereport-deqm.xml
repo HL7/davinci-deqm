@@ -382,6 +382,17 @@
       <requirements value="To support the reporting of supplemental data elements."/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.extension:message">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="message"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.evaluatedResource.extension:popref">
       <path value="MeasureReport.evaluatedResource.extension"/>
       <sliceName value="popref"/>
