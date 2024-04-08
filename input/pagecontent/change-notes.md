@@ -1,7 +1,7 @@
 
 The Data Exchange For Quality Measures Implementation Guide was developed under the  [Davinci Project](#)
 
-### Cganges and Updateds for STU5 Ballot for 2024Sept Version of the DEQM IG.
+### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
 1. Applied the following trackers:
    - Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
