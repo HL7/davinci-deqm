@@ -19,22 +19,22 @@ Note that the exchange of the reconciled medication list, indication of conversa
 #### Resources supported for this Use Case
 {:.no_toc}
 
-|Resource Type|Profile Name|Link to Profile|
-|---|---|---|
-|Coverage|QI Core Coverage Profile|[QI Core Coverage]|
-|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
-|Location|QI Core Location Profile|[QI Core Location]|
-|Library|CQFM Library Profile|[CQFM Library]|
-|Measure|CQFM Measure Profile|[CQFM Measure]|
-|MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
-|MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
-|MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-|Observation|QI Core Observation Profile|[QI Core Observation]|
-|Organization|QI Core Organization Profile|[QI Core Organization]|
-|Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile[^9]|[DEQM Practitioner]|
-|Task|QI Core Task Profile|[QI Core Task]|
-
+|Resource Type| Profile Name                             | Link to Profile                            |
+|---|------------------------------------------|--------------------------------------------|
+|Coverage| QI Core Coverage Profile                 | [QI Core Coverage]                         |
+|Encounter| QI Core Encounter Profile                | [QI Core Encounter]                        |
+|Location| QI Core Location Profile                 | [QI Core Location]                         |
+|Library| CQFM Library Profile                     | [CQFM Library]                             |
+|Measure| CQFM Measure Profile                     | [CQFM Measure]                             |
+|MeasureReport| DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile] |
+|MeasureReport| DEQM Individual MeasureReport Profile    | [DEQM Individual MeasureReport Profile]    |
+|MeasureReport| DEQM Summary MeasureReport Profile       | [DEQM Summary MeasureReport Profile]       |
+|Observation| QI Core Observation Profile              | [QI Core Observation]                      |
+|Organization| QI Core Organization Profile             | [QI Core Organization]                     |
+|Patient| QI Core Patient Profile                  | [QI Core Patient]                          |
+|Practitioner| QI Core Practitioner Profile             | [QI Core Practitioner]                     |
+|Task| QI Core Task Profile                     | [QI Core Task]                             |
+{: #practitioner_footnote}
 ### Graph of MRP Resources
 
 For MRP either a *Task* resource or an *Observation* resource can be used as the primary resource for evaluating the measure. The *Task* resource is more appropriate to represent an administrative activity that can be performed and the state of completion of that activity tracked.  In the case where systems do not support *Task*, *Observation* can be used to track the status of the process.  The table below compares how the activity is represented
