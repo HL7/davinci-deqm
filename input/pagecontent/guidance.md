@@ -61,7 +61,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 #### Data Quality
 
-Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated meta data. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
+Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated metadata. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
 
 #### Gaps in Care Reporting
 
