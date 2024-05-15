@@ -33,11 +33,7 @@ The third scenario defined in this guide is the Gaps in Care Reporting. The Gaps
 
     -  Multiple MeasureReport may reference the same instance of a resource.
 
--   Both Consumers and Producers *should* use a common clinical
-    quality language (CQL) that would allow the same measures to be
-    applied in healthcare and at the aggregator. This would also enable
-    the application of the same measures across populations that span
-    multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
+-   Both Consumers and Producers should share a common understanding that allows the same measures to be applied in healthcare and at the aggregator. This understanding can be based on a structured expression language (e.g. CQL) or any agreed upon method. This enables the application of the same measures across populations that span multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
 
 ### DEQM MeasureReport Profiles
 
