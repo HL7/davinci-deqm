@@ -16,7 +16,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="[MeasureReport](http://hl7.org/fhir/R4/measurereport.html)  is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The **DEQM Individual MeasureReport Profile** defined here is used when a measure is reported to an aggregator for one specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure."/>
+  <description value="[MeasureReport](http://hl7.org/fhir/R4/measurereport.html)  is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The **DEQM Individual MeasureReport Profile** defined here is used when a measure is reported to an aggregator for one specific subject. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -191,6 +191,11 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-device"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-relatedperson"/>
       </type>
       <mustSupport value="true"/>
     </element>
