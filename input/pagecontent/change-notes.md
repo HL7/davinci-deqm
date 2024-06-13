@@ -77,6 +77,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Removed optional data element item from required element list of Individual Measure Report profile ([FHIR-44812](https://jira.hl7.org/browse/FHIR-44812))
     -  Added additional subject references in Individual and Data Exchange measure report profiles ([FHIR-46023](https://jira.hl7.org/browse/FHIR-46023))
     -  Removed DEQM MedicationAdministration profile, example and any references to it ([FHIR-45974](https://jira.hl7.org/browse/FHIR-45974))
+    -  Added clarifying text on the usage of CQL to the general guidance section ([FHIR-4359](https://jira.hl7.org/browse/FHIR-43593))
 
 
 
