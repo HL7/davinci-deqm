@@ -15,14 +15,14 @@ occurred.
 
 ### Basic Flow
 
-The basic flow of the [$import] operation uses the [Asynchronous Interaction
+The basic flow of the `$import` operation uses the [Asynchronous Interaction
 Request Pattern](https://hl7.org/fhir/R5/async-bundle.html) applied to the
 measure data exchange workflow as follows:
 1. **Gather**: The Producer gathers the data for submission (e.g., [by gathering
    data requirements](datax.html#gather-data-requirements-from-consumer))
    and organizes them into a set of [inputs](#inputs)
    that the Consumer will retrieve.
-2. **Initiate**: The Producer invokes the [$import] operation on the Consumer's system,
+2. **Initiate**: The Producer invokes the [`$import` operation] on the Consumer's system,
    providing a list of URLs the Consumer can use to retrieve the gathered
    inputs, along with metadata needed for the Consumer to understand the
    request and retrieve and process the inputs in the form of an [Import
@@ -43,7 +43,7 @@ measure data exchange workflow as follows:
    subsequent polls by the Producer will return a 
    [complete](https://hl7.org/fhir/R5/async-bundle.html#3.2.6.2.4.0.3) response
    that includes a Bundle with the [result](StructureDefinition-ImportResult.html)
-   of the [$import] operation.
+   of the `$import` operation.
 
 <br clear="all" />
 <figure style="text-align:center"><img src="./import_basic_flow.png" alt="$import interaction diagram" width="70%" /></figure>
@@ -52,7 +52,7 @@ measure data exchange workflow as follows:
 ### Technical Details
 
 This specification provides detailed requirements around the transfer of data
-using the [$import] operation. The following sections provide an overview of these
+using the `$import` operation. The following sections provide an overview of these
 requirements with links to technical artifacts, including
 - [Input Layout](#input-layout)
 - [Manifest](#manifest)
@@ -87,7 +87,7 @@ MeasureReport instances.
 #### Manifest
 
 The Producer uses the [import manifest](StructureDefinition-ImportManifest.html) 
-it provides as the input to the Consumer's [$import] operation to tell the
+it provides as the input to the Consumer's `$import` operation to tell the
 Consumer what data should be transferred, how to retrieve it, how the inputs
 are organized, and any other necessary details.
 
@@ -98,7 +98,7 @@ in this implementation guide provides both
 2. Specific [patterns](StructureDefinition-ImportManifest.html#patterns-and-examples)
    for specifying common options for data transfer and input content and layout. 
    
-Trading partners exchanging data using the [$import] operation are expected to
+Trading partners exchanging data using the `$import` operation are expected to
 select from and re-use the available pattern where possible and also extend them
 within the provided structure when the patterns don't meet their needs.
 
@@ -154,8 +154,8 @@ on the needs of the particular use.
 To optimize for de-duplication of instances, inputs can be organized *by type*
 where inputs contains only instances of a single resource type. This approach
 follows the approach of outputs returned by the bulk $export operation (see the
-Description of the `output` field [here]
-(https://hl7.org/fhir/uv/bulkdata/STU2/export.html#response---complete-status)).
+Description of the `output` field 
+[here](https://hl7.org/fhir/uv/bulkdata/STU2/export.html#response---complete-status)).
 
 When laying out a set of instances using the *by type* approach, the following
 requirements apply:
@@ -177,7 +177,8 @@ Examples of this layout can be found within [this section below](#layout-by-type
 
 To optimize for self-contained packages, inputs can be organized *by subject*.
 Most commonly, the subjects will be Patient instances, but this approach allows
-for other resource types to be subjects as well. In this approach, submitted
+for other resource types to be subjects as well, 
+[including MeasureReport](#measurereport-instances). In this approach, submitted
 instances are grouped by the subject into blocks which are then grouped into
 inputs.
 
@@ -185,7 +186,7 @@ Inputs that are laid out *by subject* use the same `ndjson` format as *by type*
 inputs with the following differences
 - They contain instances of multiple resource types.
 - In addition to instances within the transferred data set, they include
-  additional Subject Block Header Parameters instances as described in this
+  additional [Subject Block Header Parameters](StructureDefinition-SubjectBlockHeader.html) instances as described in this
   section.
 
 ###### Subejct Blocks
@@ -216,8 +217,9 @@ Each block will meet the following requirements:
        the subject of the block.
     3. Each block SHALL have a unique subject instance.
     4. All instances in a block’s set of instances SHALL be either the subject
-       instance or linked to the subject directly through a reference element or
-       indirectly through a chain of references.
+       instance or linked to the subject directly through a reference element 
+       (inbound to, or outbound from the subject instance) or
+       indirectly through a chain of such references.
     5. All instances referenced by instances in a block’s set of instances SHALL
        be present in the block.
     6. The subjects of all blocks in the inputs SHALL have the same resource type.
@@ -439,7 +441,7 @@ in the following locations:
 - When inputs are laid out *by type*: all MeasureReport instances will be found
   in MeasureReport-specific files.
 - When inputs are laid out *by subject*: MeasureReport instances for the subject
-  SHALL appear at the top of the subject’s block, as either the subject or directly
+  will appear at the top of the subject’s block, as either the subject or directly
   after the subject instance.
 
 Note that because the MeasureReport instances must either be the subject or contain
@@ -555,8 +557,9 @@ to submit the following three data exchange MeasureReports examples from this IG
 
 The following sections contain concrete examples of the input files and 
 [import manifests](StructureDefinition-ImportManifestLayout.html) that
-could be use to communicate the chosen layout. A comparison of the
-various approaches in included in terms of data transferred and processing
+could be used to communicate the chosen layout. A 
+[comparison](#transferred-rows-comparison) of the
+various approaches is included in terms of data transferred and processing
 requirements. The comparison uses number of rows / instances as a proxy for
 size for clarity, but in a real implementation the size on disk would be used
 instead.

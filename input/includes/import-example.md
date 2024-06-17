@@ -1,14 +1,14 @@
 **Scenario:**
 
-Provider X acting in the role of Producer submits Measure data multiple 
+Provider X acting in the role of Producer submits data for multiple 
 measures on multiple patients to Payer Z who is acting in the role of Consumer.
 The body of the request is a Parameters resource containing a list of URLs
 where Payer Z can access the contents of the submission, including the
 MeasureReports. Payer Z returns a location that Provider X can poll for a
 status of the request. During processing Payer Z will return an in-progress
 message in response to polls. Once processing is complete, Payer Z will return
-the full response to the operation with details on any issues encountered
-during processing.
+in response to a poll the full operation output with details on any issues
+encountered during processing.
 
 **Kick-off Request using `POST`**
 

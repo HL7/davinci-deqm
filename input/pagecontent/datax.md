@@ -55,7 +55,7 @@ The DEQM resources form a network through their relationships with each other - 
 
  DEQM defines two operations that can be used by a Producer to submit data to a Consumer:
  - The [$submit-data] operation supports synchronous submission of a single [DEQM Data Exchange MeasureReport Profile] instance and related data. Each call to [$submit-data] submits data for a single subject for a single measure.
- - The bulk [$import] operation supports asynchronous submission of multiple [DEQM Data Exchange MeasureReport Profile] instances and related data. A single call to [$import] can submit data for many subjects and many measures across those subjects.
+ - The bulk `$import` operation supports asynchronous submission of multiple [DEQM Data Exchange MeasureReport Profile] instances and related data. A single call to `$import` can submit data for many subjects and many measures across those subjects.
 
  The steps and options for data submission are the same in each case. The primary difference comes in how FHIR instances are organized for transfer as described below.
 
@@ -98,7 +98,7 @@ For another example see the [COL Data Requirements Operation] example.
 {:.no_toc}
 
 
-Once the Producer understands the data requirements, they will use one of the *Submit Data* operations, [$submit-data] or [$import] to submit one or more MeasureReports and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
+Once the Producer understands the data requirements, they will use one of the *Submit Data* operations, [$submit-data] or [bulk `$import`] to submit one or more MeasureReports and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
 
 {% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submit data Operation" %}
 
@@ -161,7 +161,7 @@ In addition to the resources listed above, the following artifacts are used in t
 
 1. One of the following operations:
   - Submit Data operation: [$submit-data], or
-  - import operation: [$import]
+  - Bulk Import operation: [$import](OperationDefinition-import.html)
 2. Various DEQM and QI Core Profiles depending on the specific Measure
 
 ##### Usage
@@ -310,9 +310,9 @@ POST|[base]
 #### Compared to bulk $import data submission
 {:.no_toc}
 
-The bulk [$import] operation also provides the ability to submit data for multiple subjects and measures across those subjects within a single RESTful call. Compared to the bulk [$import] operation this transaction-based approach is more limited for the following reasons:
-- The transaction approach will support transfer of smaller data sets per invocation compared to [$import]: because the transaction request is synchronous, timeouts, particularly for large requests, may cause the operation to fail to return appropriate response details making tracking difficult. The bulk [$import] approach avoids this by using an asynchronous pattern which is more complex but can support larger data sets.
-- The transaction approach does not provide any mechanism for avoiding duplicative transfer of instanaces when included for multiple subjects and/or measures: because processing makes use of the [$submit-data] operation and each MeasureReport is kept separate there is no opportunity to elimitate duplicated instances. The bulk [$import] approach groups instances by subject or by resource type, meaning that duplicate instances will naturally be elimitated from at least the subject blocks and potentially the whole data set.
+The [bulk `$import`] operation also provides the ability to submit data for multiple subjects and measures across those subjects within a single RESTful call. Compared to the bulk `$import` operation this transaction-based approach is more limited for the following reasons:
+- The transaction approach will support transfer of smaller data sets per invocation compared to `$import`: because the transaction request is synchronous, timeouts, particularly for large requests, may cause the operation to fail to return appropriate response details making tracking difficult. The bulk `$import` approach avoids this by using an asynchronous pattern which is more complex but can support larger data sets.
+- The transaction approach does not provide any mechanism for avoiding duplicative transfer of instanaces when included for multiple subjects and/or measures: because processing makes use of the [$submit-data] operation and each MeasureReport is kept separate there is no opportunity to elimitate duplicated instances. The [bulk `$import`] approach groups instances by subject or by resource type, meaning that duplicate instances will naturally be elimitated from at least the subject blocks and potentially the whole data set.
 
 However, because the transaction approach is simpler, it may be more appropriate for some use cases.
 
