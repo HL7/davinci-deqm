@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-import-manifest-bearer-details",
+  "meta": {
+    "profile": [
+      "http://example.org/StructureDefinition/ImportManifestBearerDetails"
+    ]
+  },
+  "parameter": [
+    {
+      "part": [
+        {
+          "name": "protocol",
+          "valueCode": "https"
+        },
+        {
+          "name": "bearerToken",
+          "valueString": "ZHVtbXkgdG9rZW4="
+        }
+      ],
+      "name": "transferDetails"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://example.com/blob/bigfile.ndjson"
+        }
+      ],
+      "name": "input"
+    }
+  ]
+}

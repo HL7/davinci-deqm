@@ -1,0 +1,157 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImportResult",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportResult",
+  "name": "ImportResult",
+  "title": "Import Result",
+  "status": "draft",
+  "description": "$import operation result structure.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.name"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity",
+        "path": "Parameters.parameter",
+        "sliceName": "requestIdentity",
+        "short": "requestIdentity details from the original request.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "requestIdentity"
+      },
+      {
+        "id": "Parameters.parameter:outcome",
+        "path": "Parameters.parameter",
+        "sliceName": "outcome",
+        "short": "Result of the retrieval and processing of the data set.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Parameters.parameter:outcome.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "outcome"
+      },
+      {
+        "id": "Parameters.parameter:outcome.part",
+        "path": "Parameters.parameter.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.name"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "3"
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:url",
+        "path": "Parameters.parameter.part",
+        "sliceName": "url",
+        "short": "Location of a file containing OperationOutcome instances that provide details on an issue encountered during retrieval and processing of the data set.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:url.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "url"
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:url.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "url"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:operationOutcome",
+        "path": "Parameters.parameter.part",
+        "sliceName": "operationOutcome",
+        "short": "OperationOutcome instance potentially providing details on an issue encountered during retrieval and processing of the data set.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:operationOutcome.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "operationOutcome"
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:operationOutcome.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "OperationOutcome"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:associatedInputUrl",
+        "path": "Parameters.parameter.part",
+        "sliceName": "associatedInputUrl",
+        "short": "URL of the input that these OperationOutcome instances are related to.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:associatedInputUrl.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "associatedInputUrl"
+      },
+      {
+        "id": "Parameters.parameter:outcome.part:associatedInputUrl.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "url"
+          }
+        ]
+      }
+    ]
+  }
+}

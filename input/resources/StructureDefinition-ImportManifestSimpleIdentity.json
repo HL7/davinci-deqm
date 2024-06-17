@@ -1,0 +1,36 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImportManifestSimpleIdentity",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestSimpleIdentity",
+  "name": "ImportManifestSimpleIdentity",
+  "title": "Import Manifest Simple Identity",
+  "status": "draft",
+  "description": "Example Import Manifest Profile where the request identity is a simple string.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter:requestIdentity",
+        "path": "Parameters.parameter",
+        "sliceName": "requestIdentity"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "short": "The submission identifier.",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

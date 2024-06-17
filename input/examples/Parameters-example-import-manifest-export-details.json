@@ -1,0 +1,42 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-import-manifest-export-details",
+  "meta": {
+    "profile": [
+      "http://example.org/StructureDefinition/ImportManifestExportDetails"
+    ]
+  },
+  "parameter": [
+    {
+      "part": [
+        {
+          "name": "query",
+          "valueString": "http://example.com/fhir/$export?_type=Patient"
+        },
+        {
+          "name": "format",
+          "valueCode": "fhir+ndjson"
+        }
+      ],
+      "name": "inputDetails"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://example.com/blob/patientFile.ndjson"
+        },
+        {
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Patient"
+            }
+          ],
+          "name": "inputDetails"
+        }
+      ],
+      "name": "input"
+    }
+  ]
+}

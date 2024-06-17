@@ -640,6 +640,9 @@ definition:
             nameUrl: datax.html
             title: Data Exchange
           - generation: markdown
+            nameUrl: bulk-import.html
+            title: Data Exchange Using Bulk $import
+          - generation: markdown
             nameUrl: indv-reporting.html
             title: Individual Reporting
           - generation: markdown

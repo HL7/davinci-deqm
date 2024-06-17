@@ -1,0 +1,41 @@
+{
+  "resourceType": "Bundle",
+  "id": "example-async-completed-status-bundle-ok",
+  "type": "batch-response",
+  "entry": [
+    {
+      "response": {
+        "status": "200"
+      },
+      "resource": {
+        "resourceType": "Parameters",
+        "parameter": [
+          {
+            "name": "requestIdentity",
+            "valueString": "289873910"
+          },
+          {
+            "name": "outcome",
+            "part": [
+              {
+                "name": "operationOutcome",
+                "resource": {
+                  "resourceType": "OperationOutcome",
+                  "issue": [
+                    {
+                      "severity": "information",
+                      "code": "informational",
+                      "details": {
+                        "text": "All OK"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

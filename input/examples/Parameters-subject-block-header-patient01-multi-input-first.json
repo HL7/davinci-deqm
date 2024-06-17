@@ -1,0 +1,25 @@
+{
+  "resourceType": "Parameters",
+  "id": "subject-block-header-patient01-multi-input-first",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/SubjectBlockHeader"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "subject",
+      "valueReference": {
+        "reference": "Patient/patient01"
+      }
+    },
+    {
+      "name": "multiInputSubject",
+      "valueBoolean": true
+    },
+    {
+      "name": "firstInputOfMulti",
+      "valueBoolean": true
+    }
+  ]
+}

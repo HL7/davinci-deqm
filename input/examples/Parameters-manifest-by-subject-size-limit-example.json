@@ -1,0 +1,81 @@
+{
+  "resourceType": "Parameters",
+  "id": "manifest-by-subject-size-limit-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestLayout"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "valueString": "manifest-by-subject-size-limit-example"
+    },
+    {
+      "part": [
+        {
+          "name": "subjectType",
+          "valueCode": "Patient"
+        }
+      ],
+      "name": "inputDetails"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Subject-Patient-Block-patient03.ndjson"
+        }
+      ],
+      "name": "input"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Subject-Patient-Multi-Input-patient01-1.ndjson"
+        },
+        {
+          "part": [
+            {
+              "name": "multiInputSubject",
+              "valueReference": {
+                "reference": "Patient/patient01"
+              }
+            },
+            {
+              "name": "firstInputOfMulti",
+              "valueBoolean": true
+            }
+          ],
+          "name": "inputDetails"
+        }
+      ],
+      "name": "input"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Subject-Patient-Multi-Input-patient01-2.ndjson"
+        },
+        {
+          "part": [
+            {
+              "name": "multiInputSubject",
+              "valueReference": {
+                "reference": "Patient/patient01"
+              }
+            },
+            {
+              "name": "firstInputOfMulti",
+              "valueBoolean": false
+            }
+          ],
+          "name": "inputDetails"
+        }
+      ],
+      "name": "input"
+    }
+  ]
+}

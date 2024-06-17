@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "id": "manifest-by-subject-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestLayout"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "valueString": "manifest-by-subject-example"
+    },
+    {
+      "name": "inputDetails",
+      "part": [
+        {
+          "name": "subjectType",
+          "valueCode": "Patient"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Subject-Patient-Input-Both.ndjson"
+        }
+      ]
+    }
+  ]
+}

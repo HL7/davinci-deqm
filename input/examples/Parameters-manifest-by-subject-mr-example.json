@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "id": "manifest-by-subject-mr-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestLayout"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "valueString": "manifest-by-subject-mr-example"
+    },
+    {
+      "name": "inputDetails",
+      "part": [
+        {
+          "name": "subjectType",
+          "valueCode": "MeasureReport"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Subject-MR-Input-All.ndjson"
+        }
+      ]
+    }
+  ]
+}

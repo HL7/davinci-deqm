@@ -1,0 +1,35 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-import-result-simple-identity-success",
+  "meta": {
+    "profile": [
+      "http://example.org/StructureDefinition/ImportResult"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "valueString": "289873910"
+    },
+    {
+      "name": "outcome",
+      "part": [
+        {
+          "name": "operationOutcome",
+          "resource": {
+            "resourceType": "OperationOutcome",
+            "issue": [
+              {
+                "severity": "information",
+                "code": "informational",
+                "details": {
+                  "text": "All OK"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

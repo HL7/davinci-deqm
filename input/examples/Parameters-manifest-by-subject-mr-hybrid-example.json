@@ -1,0 +1,87 @@
+{
+  "resourceType": "Parameters",
+  "id": "manifest-by-subject-mr-hybrid-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestLayout"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "valueString": "manifest-by-subject-mr-hybrid-example"
+    },
+    {
+      "part": [
+        {
+          "name": "subjectType",
+          "valueCode": "Patient"
+        }
+      ],
+      "name": "inputDetails"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Subject-MR-Hybrid-Input-All.ndjson"
+        }
+      ],
+      "name": "input"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Organization-File-1.ndjson"
+        },
+        {
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Organization"
+            }
+          ],
+          "name": "inputDetails"
+        }
+      ],
+      "name": "input"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Practitioner-File-1.ndjson"
+        },
+        {
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Practitioner"
+            }
+          ],
+          "name": "inputDetails"
+        }
+      ],
+      "name": "input"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Location-File-1.ndjson"
+        },
+        {
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Location"
+            }
+          ],
+          "name": "inputDetails"
+        }
+      ],
+      "name": "input"
+    }
+  ]
+}

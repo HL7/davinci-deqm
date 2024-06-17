@@ -1,0 +1,33 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-import-manifest-resource-identity",
+  "meta": {
+    "profile": [
+      "http://example.org/StructureDefinition/ImportManifestResourceIdentity"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "status": "complete",
+        "type": "data-collection",
+        "measure": "http://example.com/a-measure",
+        "period": {
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        }
+      }
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://example.com/blob/bigfile.ndjson"
+        }
+      ]
+    }
+  ]
+}
