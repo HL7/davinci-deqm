@@ -28,11 +28,10 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
 |ServiceRequest|QI Core ServiceRequest Profile|[QI Core ServiceRequest]|
 
-
+{: #practitioner-references}
 ### Graph of VTE-1 Resources
 
 In this section we list resource graph diagrams for 7 clinical scenarios that meet the VTE-1 measure.  Note that overlapping boxes in the diagrams represents a choice of one the resources.

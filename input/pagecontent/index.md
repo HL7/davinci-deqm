@@ -69,9 +69,6 @@ This Guide is divided into several pages which are listed at the top of each pag
 {% include data-model-standards-landscape.md %}
 
 
-#### Data Quality  
-The default profiles in this implementation guide provide a baseline for data validation, but note that additional validation criteria may be expressed via Measure specific profiles.  This process begins by modeling the data quality requirements in CQL, then extending one of the default profiles in this guide with the updated CQL, and specifying the profile in the meta data of the FHIR Measure resource.  In effect, the `Measure.meta.profile` field will hold a link to a data profile that contains the CQL script that can be used for data quality, data itegrity checks, and data validation.  
-
 ### Quality Reporting Scenarios
 
 This implementation guide describes two groups of quality reporting scenarios as shown in Figure 1-4 below. The first group are *Exchange Scenarios* which focus on exchanging subsets of the [data of interest](#data-of-interest) for a particular measure or set of measures throughout the [measurement period](#measurement-period).  Note that there are use cases for sharing data from a consumer to a producer as well (for example, payers may share screening information with providers). The Second group are *Reporting Scenarios* which focus on communicating the results of a quality measure at the end of a measurement period as part of a quality improvement initiative.
