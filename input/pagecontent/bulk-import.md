@@ -149,6 +149,16 @@ self-contained packets will depend on the use case and trading partners.
 Therefore, this operation supports a range of options that can be chosen based
 on the needs of the particular use. 
 
+**Example Data Set**{: #example-data-set}
+
+To help explain the layouts pictorally, each section below contains a diagram
+of how the following data set might be split into files using that layout
+and where references would be found:
+1. Patient instances with no outbound references
+2. Practitioner instances with no outbound references
+3. Observation instances that reference Patient and Practitioner instances
+4. MeasureReport instances that reference Patient and Observation instances
+
 ##### *By type*
 
 To optimize for de-duplication of instances, inputs can be organized *by type*
@@ -171,7 +181,13 @@ when to split files and specific requirements. Note that contained instances
 are not considered to be in the set of instances as their are considered to be
 part of their enclosing instance.
 
-Examples of this layout can be found within [this section below](#layout-by-type).
+Examples of this layout can be found within [this section below](#layout-by-type)
+and the following diagram shows how files would be organized for the 
+[example data set](#example-data-set):
+
+<br clear="all" />
+<figure style="text-align:center"><img src="./by_type.png" alt="by type layout example" width="65%" /></figure>
+<br clear="all" />
 
 ##### *By subject*
 
@@ -224,14 +240,16 @@ Each block will meet the following requirements:
        be present in the block.
     6. The subjects of all blocks in the inputs SHALL have the same resource type.
 
-This snippet shows a block for subject `Patient/Pat-123` laid out in `ndjson`. Note how PractitionerRole 
-instances (snippet line 4) linked from Observations linked to the subject (snippet line 3)
+This snippet shows a block for subject `Patient/Pat-123` laid out in `ndjson`. Note how Practitioner 
+instances (e.g., snippet line 6) linked from Observations linked to the subject (e.g., snippet line 5)
 are included in the subject's block:
 ```
 {"resourceType":"Parameters","parameter":[{"name":"subject","valueReference":{"reference":"Patient/Pat-123"}}]}
 {"resourceType":"Patient","id":"Pat-123",...}
-{"resourceType":"Observation","subject":{"reference":"Patient/Pat-123"},"performer":[{"reference":"PractitionerRole/nurse-at-office"}],...}
-{"resourceType":"PractitionerRole","id":"nurse-at-office",...}
+{"resourceType":"MeasureReport","subject":{"reference":"Patient/Pat-123"},"evaluatedResource":[{"reference":"Observation/Obs-1"},...],...}
+...
+{"resourceType":"Observation","id":"Obs-1","subject":{"reference":"Patient/Pat-123"},"performer":[{"reference":"Practitioner/nurse"}],...}
+{"resourceType":"Practitioner","id":"nurse",...}
 ...
 ```
 
@@ -255,24 +273,35 @@ For information on how to handle blocks that are larger than the input size limi
 [this section](#special-case-subjects-too-large-for-a-single-input) below.
 
 This snippet shows an input with two subject blocks `Patient/Pat-123` and `Patient/Pat-456` 
-laid out in `ndjson`. Note how PractitionerRole instances included in multiple subject
-blocks are included in each block (snippet lines 4 and 11):
+laid out in `ndjson`. Note how Practitioner instances included in multiple subject
+blocks are included in each block (e.g., snippet lines 6 and 15):
 ```
 {"resourceType":"Parameters","parameter":[{"name":"subject","valueReference":{"reference":"Patient/Pat-123"}}]}
 {"resourceType":"Patient","id":"Pat-123",...}
-{"resourceType":"Observation","subject":{"reference":"Patient/Pat-123"},"performer":[{"reference":"PractitionerRole/nurse-at-office"}],...}
-{"resourceType":"PractitionerRole","id":"nurse-at-office",...}
+{"resourceType":"MeasureReport","subject":{"reference":"Patient/Pat-123"},"evaluatedResource":[{"reference":"Observation/Obs-1"},...],...}
+...
+{"resourceType":"Observation","id":"Obs-1","subject":{"reference":"Patient/Pat-123"},"performer":[{"reference":"Practitioner/nurse"}],...}
+{"resourceType":"Practitioner","id":"nurse",...}
 ...
 {"resourceType":"Parameters","parameter":[{"name":"subject","valueReference":{"reference":"Patient/Pat-456"}}]}
 {"resourceType":"Patient","id":"Pat-456",...}
-{"resourceType":"Observation","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"PractitionerRole/nurse-at-office"}],...}
-{"resourceType":"Observation","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"PractitionerRole/doctor-at-hospital"}],...}
-{"resourceType":"PractitionerRole","id":"doctor-at-hospital",...}
-{"resourceType":"PractitionerRole","id":"nurse-at-office",...}
+{"resourceType":"MeasureReport","subject":{"reference":"Patient/Pat-456"},"evaluatedResource":[{"reference":"Observation/Obs-2"},...],...}
+...
+{"resourceType":"Observation","id":"Obs-2","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"Practitioner/nurse"}],...}
+{"resourceType":"Observation","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"Practitioner/doctor"}],...}
+{"resourceType":"Practitioner","id":"doctor",...}
+{"resourceType":"Practitioner","id":"nurse",...}
 ...
 ```
 
-For a complete version of an input with multiple subject blocks see [this section below](#layout-by-subject-patient).
+For a complete version of an input with multiple subject blocks see 
+[this section below](#layout-by-subject-patient)
+and the following diagram shows how files would be organized for the 
+[example data set](#example-data-set):
+
+<br clear="all" />
+<figure style="text-align:center"><img src="./by_subject.png" alt="by subject layout example" width="50%" /></figure>
+<br clear="all" />
 
 ##### By subject with shared instances split-out
 
@@ -340,29 +369,40 @@ following requirements:
        instances in a block’s set of instances SHALL NOT be present in the block.
 
 This snippet shows an input with two subject blocks `Patient/Pat-123` and `Patient/Pat-456` laid out in `ndjson`
-where the PractitionerRole instances have been split-out. Note that the 
-`nurse-at-office` PractitionerRole instance is no longer duplicated:
+where the Practitioner instances have been split-out. Note that the 
+`nurse` Practitioner instance is no longer duplicated:
 
 **By Subject Input**
 ```
 {"resourceType":"Parameters","parameter":[{"name":"subject","valueReference":{"reference":"Patient/Pat-123"}}]}
 {"resourceType":"Patient","id":"Pat-123",...}
-{"resourceType":"Observation","subject":{"reference":"Patient/Pat-123"},"performer":[{"reference":"PractitionerRole/nurse-at-office"}],...}
+{"resourceType":"MeasureReport","subject":{"reference":"Patient/Pat-123"},"evaluatedResource":[{"reference":"Observation/Obs-1"},...],...}
+...
+{"resourceType":"Observation","id":"Obs-1","subject":{"reference":"Patient/Pat-123"},"performer":[{"reference":"Practitioner/nurse"}],...}
 ...
 {"resourceType":"Parameters","parameter":[{"name":"subject","valueReference":{"reference":"Patient/Pat-456"}}]}
 {"resourceType":"Patient","id":"Pat-456",...}
-{"resourceType":"Observation","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"PractitionerRole/nurse-at-office"}],...}
-{"resourceType":"Observation","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"PractitionerRole/doctor-at-hospital"}],...}
+{"resourceType":"MeasureReport","subject":{"reference":"Patient/Pat-456"},"evaluatedResource":[{"reference":"Observation/Obs-2"},...],...}
+...
+{"resourceType":"Observation","id":"Obs-2","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"Practitioner/nurse"}],...}
+{"resourceType":"Observation","subject":{"reference":"Patient/Pat-456"},"performer":[{"reference":"Practitioner/doctor"}],...}
 ...
 ```
 
-**By Type PractitionerRole Input**
+**By Type Practitioner Input**
 ```
-{"resourceType":"PractitionerRole","id":"nurse-at-office",...}
-{"resourceType":"PractitionerRole","id":"doctor-at-hospital",...}
+{"resourceType":"Practitioner","id":"nurse",...}
+{"resourceType":"Practitioner","id":"doctor",...}
 ```
 
-For a complete example of a set of hybrid inputs see [this section below](#hybrid-layout-by-subject-patient-with-shared-resource-types-split-out).
+For a complete example of a set of hybrid inputs see 
+[this section below](#hybrid-layout-by-subject-patient-with-shared-resource-types-split-out)
+and the following diagram shows how files would be organized for the 
+[example data set](#example-data-set):
+
+<br clear="all" />
+<figure style="text-align:center"><img src="./by_subject_split-out_practitioner.png" alt="by subject with practitioner split out layout example" width="50%" /></figure>
+<br clear="all" />
 
 #### Input size limits
 
