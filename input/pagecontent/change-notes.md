@@ -4,7 +4,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
 1. Applied the following trackers:
-   - Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
+   - Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](vte1.html#practitioner-references)) and ([here](mrp.html#practitioner_footnote))
+   - Summary measure reporting typo ([FHIR-44570](https://jira.hl7.org/browse/FHIR-44570))([Applied here](summary-reporting.html#summary-measure-reporting))
 
 
 ### Changes and Updates for Version 4.0.0 (STU4)
