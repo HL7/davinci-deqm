@@ -124,8 +124,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
       </type>
     </element>
     <element id="MeasureReport.extension:cehrt">
@@ -196,7 +195,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
       <mustSupport value="true"/>
-    </element> 
+    </element>
     <element id="MeasureReport.date">
       <path value="MeasureReport.date"/>
       <short value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
@@ -344,7 +343,7 @@
         <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
       </type>
       <mustSupport value="true"/>
-    </element> 
+    </element>
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
       <min value="1"/>
@@ -399,12 +398,12 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.subjectResults">
       <path value="MeasureReport.group.stratifier.stratum.population.subjectResults"/>
-      <min value="1"/>        
+      <min value="1"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
-      </type>      
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.measureScore">
@@ -421,7 +420,18 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
       </type>
       <mustSupport value="true"/>
-    </element>  
+    </element>
+    <element id="MeasureReport.extension:message">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="message"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <min value="0"/>
