@@ -16,7 +16,7 @@
 [Clinical Decision Support (CDS)]: http://www.hl7.org/Special/committees/dss/index.cfm
 [Clinical Quality Framework]: http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework&oldid=158051
 [Clinical Quality Information (CQI)]: http://www.hl7.org/Special/committees/cqi/index.cfm
-[CMS 108v7]: https://ecqi.healthit.gov/ecqm/measures/cms108v7
+[ECQI Resource Center]: https://ecqi.healthit.gov
 [COL Collect Data Operation]: col.html#data-exchange-using-the-collect-data-operation
 [Colorectal Cancer Screening (COL)]: col.html
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
