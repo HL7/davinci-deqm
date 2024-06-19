@@ -59,7 +59,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 #### Data Quality
 
-The default profiles in this implementation guide provide a baseline for data validation, but note that additional validation criteria may be expressed via Measure specific profiles. The profiles expected by the CQL will be referenced in the retrieve expressions of the logic, and surfaced as profile elements of the data requirements. These references to profiles used by the CQL script are expected to be used for data quality, data integrity checks, and data validation. Data access layers providing resources to a CQL engine are expected to supply resources that conform to the stated profiles.
+Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated metadata. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
 
 #### Gaps in Care Reporting
 
