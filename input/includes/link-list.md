@@ -179,3 +179,21 @@
 [Gaps through period]:  index.html#glossary
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html
 [Reporting Population Data]: http://hl7.org/fhir/clinicalreasoning-quality-reporting.html#reporting-population-data
+
+[DEQM Bulk Import Overview]: bulk-import.html#bulk-import-overview
+[Bulk Import Inputs]: Bbulk-import.html#inputs
+[Bulk Import Manifest]: StructureDefinition-ImportManifest.html
+[bulk import manifest]: StructureDefinition-ImportManifest.html
+[import manifest]: StructureDefinition-ImportManifest.html
+[Bulk Import Result]: StructureDefinition-ImportResult.html
+[bulk import result]: StructureDefinition-ImportResult.html
+[import result]: StructureDefinition-ImportResult.html
+[import results]: StructureDefinition-ImportResult.html
+[Bulk Import Operation]: OperationDefinition-import.html
+[bulk `$import` operation]: OperationDefinition-import.html
+[bulk import operation]: OperationDefinition-import.html
+[import operation]: OperationDefinition-import.html
+[`$import` operation]: OperationDefinition-import.html
+[$import]: bulk-import.html
+[bulk `$import`]: bulk-import.html
+[bulk import]: bulk-import.html

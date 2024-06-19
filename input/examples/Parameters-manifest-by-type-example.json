@@ -1,0 +1,177 @@
+{
+  "resourceType": "Parameters",
+  "id": "manifest-by-type-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestLayout"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "valueString": "manifest-by-type-example"
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Observation-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Observation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Encounter-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Encounter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Task-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Task"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-MeasureReport-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "MeasureReport"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Coverage-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Coverage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Organization-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Organization"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Patient-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Patient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Practitioner-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Practitioner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://hl7.org/fhir/us/davinci-deqm/Type-Location-File-1.ndjson"
+        },
+        {
+          "name": "inputDetails",
+          "part": [
+            {
+              "name": "resourceType",
+              "valueCode": "Location"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

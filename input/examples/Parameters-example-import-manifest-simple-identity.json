@@ -1,0 +1,24 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-import-manifest-simple-identity",
+  "meta": {
+    "profile": [
+      "http://example.org/StructureDefinition/ImportManifestSimpleIdentity"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "valueString": "289873910"
+    },
+    {
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://example.com/blob/bigfile.ndjson"
+        }
+      ],
+      "name": "input"
+    }
+  ]
+}

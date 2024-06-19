@@ -1,0 +1,17 @@
+{
+  "resourceType": "Parameters",
+  "id": "subject-block-header-patient03",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/SubjectBlockHeader"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "subject",
+      "valueReference": {
+        "reference": "Patient/patient03"
+      }
+    }
+  ]
+}

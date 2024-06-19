@@ -1,0 +1,4 @@
+{"name":"operationOutcome","resource":{"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"invalid","details":{"text":"Invalid submissionId: '289873910' already exists."}}]}}
+{"name":"operationOutcome","resource":{"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"invalid","details":{"text":"Invalid submissionTime: '2024-01-15' is before the current open submission period."}}]}}
+{"name":"operationOutcome","resource":{"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"invalid","details":{"text":"Invalid submittingOrganization: 'Example Org' not registered as a submitter."}}]}}
+{"name":"operationOutcome","resource":{"resourceType":"OperationOutcome","issue":[{"severity":"fatal","code":"processing","details":{"text":"Invalid submission details - could not accept provided files."}}]}}

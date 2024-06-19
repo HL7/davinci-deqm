@@ -1029,6 +1029,148 @@
                 "description": "DEQM Promoting Interoperability (PI) Measure example"
             },
             {
+                "exampleBoolean": true,
+                "name": "manifest-by-subject-example",
+                "reference": {
+                    "reference": "Parameters/manifest-by-subject-example"
+                },
+                "description": "Example Import Manifest for inputs organized by subject (Patient)."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "manifest-by-subject-hybrid-example",
+                "reference": {
+                    "reference": "Parameters/manifest-by-subject-hybrid-example"
+                },
+                "description": "Example Import Manifest for inputs using a hybrid layout with Patient as the subject and Location, Organization, and Practitioner instances split out."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "manifest-by-subject-mr-examplee",
+                "reference": {
+                    "reference": "Parameters/manifest-by-subject-mr-example"
+                },
+                "description": "Example Import Manifest for inputs organized by subject (MeasureReport)"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "manifest-by-subject-mr-hybrid-example",
+                "reference": {
+                    "reference": "Parameters/manifest-by-subject-mr-hybrid-example"
+                },
+                "description": "Example Import Manifest for inputs using a hybrid layout with MeasureReport as the subject and Location, Organization, and Practitioner instances split out."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "manifest-by-subject-size-limit-example",
+                "reference": {
+                    "reference": "Parameters/manifest-by-subject-size-limit-example"
+                },
+                "description": "Example Import Manifest for inputs organized by subject (Patient) where a file size limit forces one subject to be split into multiple inputs."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "manifest-by-type-example",
+                "reference": {
+                    "reference": "Parameters/manifest-by-type-example"
+                },
+                "description": "Example Import Manifest for inputs organized by type."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-async-failed-status-bundle",
+                "reference": {
+                    "reference": "Bundle/example-async-failed-status-bundle"
+                },
+                "description": "Example Bundle returned from a completed asynchronous $import invocation that indicates a failure."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-async-completed-status-bundle-errors",
+                "reference": {
+                    "reference": "Bundle/example-async-completed-status-bundle-errors"
+                },
+                "description": "Example Bundle returned from a completed asynchronous $import invocation that indicates errors during processing."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-async-completed-status-bundle-ok",
+                "reference": {
+                    "reference": "Bundle/example-async-completed-status-bundle-ok"
+                },
+                "description": "Example Bundle returned from a completed asynchronous $import invocation that indicates successful processing."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-manifest-bearer-details",
+                "reference": {
+                    "reference": "Parameters/example-import-manifest-bearer-details"
+                },
+                "description": "Example of an Import Manifest with a bearer token used to retrieve the inputs."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-manifest-complex-identity",
+                "reference": {
+                    "reference": "Parameters/example-import-manifest-complex-identity"
+                },
+                "description": "Example of an Import Manifest with a complex identity specified under the requestIdentiry parameter."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-manifest-export-details",
+                "reference": {
+                    "reference": "Parameters/example-import-manifest-export-details"
+                },
+                "description": "Example of an Import Manifest detailing an $export query used to generate the inputs."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-manifest-resource-identity",
+                "reference": {
+                    "reference": "Parameters/example-import-manifest-resource-identity"
+                },
+                "description": "Example of an Import Manifest with a resource for its identity under the requestIdentity parameter."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-manifest-simple-identity",
+                "reference": {
+                    "reference": "Parameters/example-import-manifest-simple-identity"
+                },
+                "description": "Example of an Import Manifest with a simple string for its identity under the requestIdentity parameter."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-result-complex-identity-error-file",
+                "reference": {
+                    "reference": "Parameters/example-import-result-complex-identity-error-file"
+                },
+                "description": "Example of an Import Result with errors returned through a reference to a file."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-result-resource-identity-input-error-embedded",
+                "reference": {
+                    "reference": "Parameters/example-import-result-resource-identity-input-error-embedded"
+                },
+                "description": "Example of an Import Result with errors returned as an embedded OperationOutcome specific to an input."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "example-import-result-simple-identity-success",
+                "reference": {
+                    "reference": "Parameters/example-import-result-simple-identity-success"
+                },
+                "description": "Example of an Import Result indicating success."
+            },
+
+
+            
+            
+            
+            
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-measureScoring"
@@ -1196,6 +1338,11 @@
                             "generation": "markdown",
                             "nameUrl": "datax.html",
                             "title": "Data Exchange"
+                        },
+                        {
+                            "generation": "markdown",
+                            "nameUrl": "bulk-import.html",
+                            "title": "Data Exchange Using Bulk $import"
                         },
                         {
                             "generation": "markdown",

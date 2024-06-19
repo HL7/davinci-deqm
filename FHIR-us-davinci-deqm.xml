@@ -78,7 +78,11 @@
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
+<artifact id="Parameters/subject-block-header-patient01-multi-input-first" key="Parameters-subject-block-header-patient01-multi-input-first" name="Example Parameters - subject-block-header-patient01-multi-input-first"/>
+<artifact id="Parameters/subject-block-header-patient01-multi-input-subsequent" key="Parameters-subject-block-header-patient01-multi-input-subsequent" name="Example Parameters - subject-block-header-patient01-multi-input-subsequent"/>
+<artifact id="Parameters/subject-block-header-patient03" key="Parameters-subject-block-header-patient03" name="Example Parameters - subject-block-header-patient03"/>
 <artifact deprecated="true" key="ExampleScenario" name="ExampleScenario"/>
+<artifact id="OperationDefinition/import" key="OperationDefinition-import" name="FHIR Bulk Data System Level Import"/>
 <artifact id="Bundle/single-gaps-closed-indv-report01" key="Bundle-single-gaps-closed-indv-report01" name="Gaps Bundle Closed Individual MeasureReport01"/>
 <artifact id="Bundle/single-gaps-closed-indv-report02" key="Bundle-single-gaps-closed-indv-report02" name="Gaps Bundle Closed Individual MeasureReport02"/>
 <artifact id="Bundle/single-gaps-open-indv-report01" key="Bundle-single-gaps-open-indv-report01" name="Gaps Bundle Open Individual MeasureReports"/>
@@ -113,6 +117,14 @@
 <artifact id="Organization/gaps-organization-reportingvendor" key="Organization-gaps-organization-reportingvendor" name="Gaps Reporting Vendor Organization"/>
 <artifact id="Group/group01" key="Group-group01" name="Group01"/>
 <artifact id="GuidanceResponse/guidanceresponse01" key="GuidanceResponse-guidanceresponse01" name="Guidance Response Example"/>
+<artifact id="StructureDefinition/ImportManifestLayout" key="StructureDefinition-ImportManifestLayout" name="Impor tManifest Layout"/>
+<artifact id="StructureDefinition/ImportManifest" key="StructureDefinition-ImportManifest" name="Import Manifest"/>
+<artifact id="StructureDefinition/ImportManifestBearerDetails" key="StructureDefinition-ImportManifestBearerDetails" name="Import Manifest Bearer Details"/>
+<artifact id="StructureDefinition/ImportManifestComplexIdentity" key="StructureDefinition-ImportManifestComplexIdentity" name="Import Manifest Complex Identity"/>
+<artifact id="StructureDefinition/ImportManifestExportDetails" key="StructureDefinition-ImportManifestExportDetails" name="Import Manifest Export Details"/>
+<artifact id="StructureDefinition/ImportManifestResourceIdentity" key="StructureDefinition-ImportManifestResourceIdentity" name="Import Manifest Resource Identity"/>
+<artifact id="StructureDefinition/ImportManifestSimpleIdentity" key="StructureDefinition-ImportManifestSimpleIdentity" name="Import Manifest Simple Identity"/>
+<artifact id="StructureDefinition/ImportResult" key="StructureDefinition-ImportResult" name="Import Result"/>
 <artifact id="MeasureReport/indv-measurereport01" key="MeasureReport-indv-measurereport01" name="Indv Measurereport01"/>
 <artifact id="MeasureReport/indv-measurereport02" key="MeasureReport-indv-measurereport02" name="Indv Measurereport02"/>
 <artifact id="MeasureReport/indv-measurereport03" key="MeasureReport-indv-measurereport03" name="Indv Measurereport03"/>
@@ -159,13 +171,16 @@
 <artifact id="CapabilityStatement/producer-server" key="CapabilityStatement-producer-server" name="Producer Server CapabilityStatement"/>
 <artifact id="StructureDefinition/reasonDetail" key="StructureDefinition-reasonDetail" name="Reason Detail"/>
 <artifact id="CapabilityStatement/receiver-server" key="CapabilityStatement-receiver-server" name="Receiver Server CapabilityStatement"/>
+<artifact id="StructureDefinition/submitting-org-region" key="StructureDefinition-submitting-org-region" name="Region of the submitting organization."/>
 <artifact id="CapabilityStatement/reporter-client" key="CapabilityStatement-reporter-client" name="Reporter Client CapabilityStatement"/>
 <artifact id="Bundle/single-indv-col-obs-report" key="Bundle-single-indv-col-obs-report" name="Single Indv Col Obs Report"/>
 <artifact id="Bundle/single-indv-mrp-obs-report" key="Bundle-single-indv-mrp-obs-report" name="Single Indv Mrp Obs Report"/>
 <artifact id="Bundle/single-indv-mrp-task-report" key="Bundle-single-indv-mrp-task-report" name="Single Indv Mrp Task Report"/>
 <artifact id="Bundle/single-indv-vte-report-option1" key="Bundle-single-indv-vte-report-option1" name="Single Indv Vte Report Option 1"/>
 <artifact id="Bundle/single-indv-vte-report-option7" key="Bundle-single-indv-vte-report-option7" name="Single Indv Vte Report Option 7"/>
+<artifact id="StructureDefinition/SubjectBlockHeader" key="StructureDefinition-SubjectBlockHeader" name="Subject Block Header"/>
 <artifact id="MeasureReport/subjectlist-measurereport01" key="MeasureReport-subjectlist-measurereport01" name="Subject List MeasureReport01"/>
+<artifact id="StructureDefinition/SubmittingOrganization" key="StructureDefinition-SubmittingOrganization" name="Submitting Organization"/>
 <artifact id="MeasureReport/summ-measurereport01" key="MeasureReport-summ-measurereport01" name="Summ Measurereport01"/>
 <artifact id="MeasureReport/summ-measurereport02" key="MeasureReport-summ-measurereport02" name="Summ Measurereport02"/>
 <artifact id="MeasureReport/summ-medicare-stratification-example" key="MeasureReport-summ-medicare-stratification-example" name="Summ Medicare Stratification Example"/>
@@ -173,7 +188,24 @@
 <artifact id="Task/task01" key="Task-task01" name="Task01"/>
 <artifact id="Task/task02" key="Task-task02" name="Task02"/>
 <artifact id="Task/task03" key="Task-task03" name="Task03"/>
+<artifact id="Bundle/example-async-completed-status-bundle-errors" key="Bundle-example-async-completed-status-bundle-errors" name="example-async-completed-status-bundle-errors"/>
+<artifact id="Bundle/example-async-completed-status-bundle-ok" key="Bundle-example-async-completed-status-bundle-ok" name="example-async-completed-status-bundle-ok"/>
+<artifact id="Bundle/example-async-failed-status-bundle" key="Bundle-example-async-failed-status-bundle" name="example-async-failed-status-bundle"/>
+<artifact id="Parameters/example-import-manifest-bearer-details" key="Parameters-example-import-manifest-bearer-details" name="example-import-manifest-bearer-details"/>
+<artifact id="Parameters/example-import-manifest-complex-identity" key="Parameters-example-import-manifest-complex-identity" name="example-import-manifest-complex-identity"/>
+<artifact id="Parameters/example-import-manifest-export-details" key="Parameters-example-import-manifest-export-details" name="example-import-manifest-export-details"/>
+<artifact id="Parameters/example-import-manifest-resource-identity" key="Parameters-example-import-manifest-resource-identity" name="example-import-manifest-resource-identity"/>
+<artifact id="Parameters/example-import-manifest-simple-identity" key="Parameters-example-import-manifest-simple-identity" name="example-import-manifest-simple-identity"/>
+<artifact id="Parameters/example-import-result-complex-identity-error-file" key="Parameters-example-import-result-complex-identity-error-file" name="example-import-result-complex-identity-error-file"/>
+<artifact id="Parameters/example-import-result-resource-identity-input-error-embedded" key="Parameters-example-import-result-resource-identity-input-error-embedded" name="example-import-result-resource-identity-input-error-embedded"/>
+<artifact id="Parameters/example-import-result-simple-identity-success" key="Parameters-example-import-result-simple-identity-success" name="example-import-result-simple-identity-success"/>
 <artifact id="List/list2" key="List-list2" name="list2"/>
+<artifact id="Parameters/manifest-by-subject-example" key="Parameters-manifest-by-subject-example" name="manifest-by-subject-example"/>
+<artifact id="Parameters/manifest-by-subject-hybrid-example" key="Parameters-manifest-by-subject-hybrid-example" name="manifest-by-subject-hybrid-example"/>
+<artifact id="Parameters/manifest-by-subject-mr-example" key="Parameters-manifest-by-subject-mr-example" name="manifest-by-subject-mr-examplee"/>
+<artifact id="Parameters/manifest-by-subject-mr-hybrid-example" key="Parameters-manifest-by-subject-mr-hybrid-example" name="manifest-by-subject-mr-hybrid-example"/>
+<artifact id="Parameters/manifest-by-subject-size-limit-example" key="Parameters-manifest-by-subject-size-limit-example" name="manifest-by-subject-size-limit-example"/>
+<artifact id="Parameters/manifest-by-type-example" key="Parameters-manifest-by-type-example" name="manifest-by-type-example"/>
 <artifact deprecated="true" id="MeasureReport/summ-PI" key="MeasureReport-summ-PI" name="summ-PI"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
@@ -183,6 +215,7 @@
 <page key="change-notes" name="Change Notes"/>
 <page key="col" name="Colorectal Cancer Screening (COL)"/>
 <page key="datax" name="Data Exchange"/>
+<page key="bulk-import" name="Data Exchange Using Bulk $import"/>
 <page key="downloads" name="Downloads"/>
 <page key="usecases" name="Example Use Cases"/>
 <page key="framework" name="Framework"/>

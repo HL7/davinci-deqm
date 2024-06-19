@@ -51,13 +51,17 @@ The DEQM resources form a network through their relationships with each other - 
 {: #submit-data .toc}
 
 {:.highlight-note}
- The [$submit-data] operation allows a Producer to submit data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as  [incremental] or [snapshot] updates. These update methods are described in detail [below](#submit-updates).
+ The submit data operations allow a Producer to push to a consumer data of interest for a particular quality measure within the specified [submission period].  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  The Producer submits the data either as [incremental] or [snapshot] updates. These update methods are described in detail [below](#submit-updates).
 
- Alternatively, data may be submitted in bulk with the [$bulk-submit-data](OperationDefinition-bulk-submit-data.html) operation. This supports both synchronous and asynchronous messaging as described in the operation definition.
+ DEQM defines two operations that can be used by a Producer to submit data to a Consumer:
+ - The [$submit-data] operation supports synchronous submission of a single [DEQM Data Exchange MeasureReport Profile] instance and related data. Each call to [$submit-data] submits data for a single subject for a single measure.
+ - The bulk `$import` operation supports asynchronous submission of multiple [DEQM Data Exchange MeasureReport Profile] instances and related data. A single call to `$import` can submit data for many subjects and many measures across those subjects.
+
+ The steps and options for data submission are the same in each case. The primary difference comes in how FHIR instances are organized for transfer as described below.
 
 {% include img.html img="submit-data-step.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
-##### Gather Data Requirements from Consumer
+#### Gather Data Requirements from Consumer
 {:.no_toc}
 
 To support the Submit Data operation, an implementation needs to know specifically what data are required to provide as the payload for the operation.  As described in the [Background] section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
@@ -66,14 +70,14 @@ Note that because the data exchange scenarios described are intended to support 
 
 {% include img-narrow.html img="data-requirement.jpg" caption="Figure 2-3 Data Requirements Operation" %}
 
-###### APIs
+##### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Data Requirements: [$data-requirements] operation
 
-###### Usage
+##### Usage
 {:.no_toc}
 
  The required data for each Measure is discovered by invoking the *Data Requirements* operation on the Consumer's `Measure/[measure-id]` endpoint.  Using either the `GET` or `POST` Syntax, the operation can be invoked as follows:
@@ -90,17 +94,17 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 
 For another example see the [COL Data Requirements Operation] example.
 
-##### Submit Data Operation
+#### Submit Data Operation
 {:.no_toc}
 
 
-Once the Producer understands the data requirements, they will use the *Submit Data* operation to submit a MeasureReport and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
+Once the Producer understands the data requirements, they will use one of the *Submit Data* operations, [$submit-data] or [bulk `$import`] to submit one or more MeasureReports and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
 
 {% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submit data Operation" %}
 
 <div class="highlight-note" markdown="1">
 
-###### Incremental and Snapshot Updates
+##### Incremental and Snapshot Updates
 {:.no_toc #submit-updates}
 
 When the Producer submits updates to the measure data within the data submission period, the Producer can use [snapshot] or [incremental] updates for submitting data based on Producer and Consumer agreement.  Note that neither method is preferred or a default and has to be agreed upon out of band.
@@ -150,15 +154,20 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 </div>
 
-###### APIs
+##### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Submit Data operation: [$submit-data]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. One of the following operations:
+  - Submit Data operation: [$submit-data], or
+  - Bulk Import operation: [$import](OperationDefinition-import.html)
+2. Various DEQM and QI Core Profiles depending on the specific Measure
 
-###### Usage
+##### Usage
+{:.no_toc}
+
+###### $submit-data
 {:.no_toc}
 
 Using the `POST` Syntax, the operation can be invoked by the Producer:
@@ -171,14 +180,44 @@ Using the `POST` Syntax, the operation can be invoked by the Producer:
 
 For a complete un-edited example see the [MRP Submit Data Operation] and [COL Submit Data Operation] examples.
 
-#### Collect Data
+###### $import
+{:.no_toc}
+
+Using the `POST` Syntax, the operation can be invoked by the Producer:
+
+`POST|[base]/$import`
+
+The Producer **SHALL** invoke the operation using the [Asynchronous Interaction
+Request Pattern](https://hl7.org/fhir/R5/async-bundle.html), specifically by
+setting the `Prefer` HTTP header on the request to `respond-async`.
+
+The body of the request will be an instance of the ImportManifest Parameters
+Profile which includes a list of input files that the Consumer will retrieve
+along with metadata about the request, the contents of the inputs, and how to
+retrieve them. These inputs contain the submitted MeasureReport instances along
+with the supporting data, amounting in total to the same instances as would be
+submitted on a set of [$submit-data] invocations.
+
+{% include examplebutton.html example="import-example" b_title = "Click Here To See An Example Import Operation Flow" %}
+
+For additional detail on the using bulk `$import` for DEQM data exchange see
+- [This general overview](bulk-import.html#bulk-import-overview)
+- Technical requirements around 
+  - the [layout of the exchanged inputs](bulk-import.html#inputs)
+  - the [import manifest] submitted with the operation invocation
+  - the [import results] that are returned asynchronously when the Consumer's processing is complete
+  - the [`$import`](OperationDefinition-import.html) operation and the full set of requests and responses involved
+  - [error handling](OperationDefinition-import.html#error-handling)
+- A [comparison](bulk-import.html#examples-and-comparison) of the manifests and input files used to submit the 3 data exchange MeasureResports found as examples in this implementation guide.
+
+### Collect Data
 {: #collect-data}
 
 In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
 
 {% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 
-##### Collect Data Operation
+#### Collect Data Operation
 {:.no_toc}
 
 
@@ -186,7 +225,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
 {% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
 
-###### Incremental and Snapshot Updates
+##### Incremental and Snapshot Updates
 {:.no_toc #collect-updates}
 
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
@@ -196,7 +235,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
    {% include lastupdated-notsupported-oo.md %}
 
-###### APIs
+##### APIs
 {:.no_toc}
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
@@ -205,7 +244,7 @@ In addition to the resources listed above, the following artifacts are used in t
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 
-###### Usage
+##### Usage
 {:.no_toc}
 
 **Collect Data:**
@@ -222,12 +261,12 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Con
 
 For a complete un-edited example see the [COL Collect Data Operation] example.
 
-#### Submit Data and Collect Data for Multiple Patients
+### Submit Data and Collect Data for Multiple Patients
 
-##### Submit Data Operation Request for Multiple Patients
+#### Submit Data Operation Request for Multiple Patients
 {:.no_toc}
 
-The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.
+The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction. This allows the submission of data for multiple subjects and multiple measures across those subjects.
 
 - The transaction bundle contains an entry for each patient as illustrated in the examples below:
   - The fullUrl is a UUID (`urn:uuid:...`).
@@ -268,15 +307,24 @@ POST|[base]
             ....
 ~~~
 
-##### Collect Data Operation Response for Multiple Patients
+#### Compared to bulk $import data submission
+{:.no_toc}
+
+The [bulk `$import`] operation also provides the ability to submit data for multiple subjects and measures across those subjects within a single RESTful call. Compared to the bulk `$import` operation this transaction-based approach is more limited for the following reasons:
+- The transaction approach will support transfer of smaller data sets per invocation compared to `$import`: because the transaction request is synchronous, timeouts, particularly for large requests, may cause the operation to fail to return appropriate response details making tracking difficult. The bulk `$import` approach avoids this by using an asynchronous pattern which is more complex but can support larger data sets.
+- The transaction approach does not provide any mechanism for avoiding duplicative transfer of instanaces when included for multiple subjects and/or measures: because processing makes use of the [$submit-data] operation and each MeasureReport is kept separate there is no opportunity to elimitate duplicated instances. The [bulk `$import`] approach groups instances by subject or by resource type, meaning that duplicate instances will naturally be elimitated from at least the subject blocks and potentially the whole data set.
+
+However, because the transaction approach is simpler, it may be more appropriate for some use cases.
+
+#### Collect Data Operation Response for Multiple Patients
 {:.no_toc}
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
 
-#### Provenance
+### Provenance
 
-Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $submit-data and $collect-data transactions described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
+Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $submit-data, $import, and $collect-data transactions described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 
 <br />
 

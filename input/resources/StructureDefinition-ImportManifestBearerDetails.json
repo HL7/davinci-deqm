@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImportManifestBearerDetails",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestBearerDetails",
+  "name": "ImportManifestBearerDetails",
+  "title": "Import Manifest Bearer Details",
+  "status": "draft",
+  "description": "Example Import Manifest Profile where a bearer token for input access is provided.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter:transferDetails",
+        "path": "Parameters.parameter",
+        "sliceName": "transferDetails"
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.part",
+        "path": "Parameters.parameter.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.name"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Sub-parameters that provide transfer details.",
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.part:protocol",
+        "path": "Parameters.parameter.part",
+        "sliceName": "protocol",
+        "short": "Part of the transfer details.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.part:protocol.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "protocol"
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.part:protocol.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "short": "The transfer protocol used to retrieve the inputs.",
+        "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "https"
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.part:bearerToken",
+        "path": "Parameters.parameter.part",
+        "sliceName": "bearerToken",
+        "short": "Part of the transfer details.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.part:bearerToken.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "bearerToken"
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.part:bearerToken.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "short": "Token to provide with prefix 'Bearer: ' in the Authorization header on input retrieval requests.",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-import-result-complex-identity-error-file",
+  "meta": {
+    "profile": [
+      "http://example.org/StructureDefinition/ImportResult"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "part": [
+        {
+          "name": "submissionId",
+          "valueString": "289873910"
+        },
+        {
+          "name": "submissionTime",
+          "valueDateTime": "2024-01-15"
+        },
+        {
+          "name": "submittingOrganization",
+          "resource": {
+            "resourceType": "Organization",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/submitting-org-region",
+                "valueCode": "Northeast"
+              }
+            ],
+            "name": "Example Org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "outcome",
+      "part": [
+        {
+          "name": "url",
+          "valueUrl": "https://example.com/blob/import-errors.ndjson"
+        }
+      ]
+    }
+  ]
+}

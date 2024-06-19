@@ -1,0 +1,24 @@
+{
+  "resourceType": "Bundle",
+  "id": "example-async-failed-status-bundle",
+  "type": "batch-response",
+  "entry": [
+    {
+      "response": {
+        "status": "400",
+        "outcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "fatal",
+              "code": "transient",
+              "details": {
+                "text": "Internal System Error: '$import' request not processed."
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,7 +1,3 @@
-
-### Example
-{:.no_toc}
-
 **Scenario**
 
 Provider X acting in the role of the Producer requests data requirements for the MRP measure from Payer Z which is acting in the role of Consumer.  A Library resource containing the required resources for MRP attestation returned on successful evaluation.

@@ -1,6 +1,3 @@
-
-### Examples
-
 **Scenario:**
 
 Payer Z acting in the role of the Consumer collect Patient Z's MRP data from Provider X which is acting in role of the Producer

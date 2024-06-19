@@ -1,0 +1,36 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "import",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/import",
+  "parameter": [
+    {
+      "name": "manifest",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "[Import Manifest](StructureDefinition-ImportManifest.html) Parameters instance containing a list of inputs for the Consumer to retrieve and process with metadata for guidance.",
+      "type": "Resource"
+    },
+    {
+      "name": "return",
+      "use": "out",
+      "min": 1,
+      "max": "1",
+      "documentation": "[Import Result](StructureDefinition-ImportResult.html) Parameters instance containing the results of the `$import` processing.",
+      "type": "Resource"
+    }
+  ],
+  "version": "0.1.0",
+  "name": "BulkDataImport",
+  "title": "FHIR Bulk Data System Level Import",
+  "status": "active",
+  "kind": "operation",
+  "date": "2024-02-12",
+  "description": "FHIR Operation to import data to a FHIR server. This operation SHALL be invoked using the [FHIR Asynchronous Request Interaction Pattern](http://hl7.org/fhir/R5/async-bundle.html)",
+  "code": "import",
+  "system": true,
+  "type": false,
+  "instance": false,
+  "inputProfile": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifest",
+  "outputProfile": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportResult"
+}

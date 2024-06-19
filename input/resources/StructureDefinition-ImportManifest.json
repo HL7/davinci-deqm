@@ -1,0 +1,163 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImportManifest",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifest",
+  "name": "ImportManifest",
+  "title": "Import Manifest",
+  "status": "draft",
+  "description": "Inputs for the $import operation",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.name"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity",
+        "path": "Parameters.parameter",
+        "sliceName": "requestIdentity",
+        "short": "Represents the identity of this specific request. Examples of possible approaches include the use of an identifier, a string, an entire resource instance like MeasureReport, or a combination using parts.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "requestIdentity"
+      },
+      {
+        "id": "Parameters.parameter:transferDetails",
+        "path": "Parameters.parameter",
+        "sliceName": "transferDetails",
+        "short": "Represents details on how to retrieve the inputs. May be overriden or augmented at the input level.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:transferDetails.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "transferDetails"
+      },
+      {
+        "id": "Parameters.parameter:inputDetails",
+        "path": "Parameters.parameter",
+        "sliceName": "inputDetails",
+        "short": "Represents details on the input, such as the format and the scope of the contents. May be overriden or augmented at the input level.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:inputDetails.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "inputDetails"
+      },
+      {
+        "id": "Parameters.parameter:input",
+        "path": "Parameters.parameter",
+        "sliceName": "input",
+        "short": "List of inputs to be retrieved.",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Parameters.parameter:input.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "input"
+      },
+      {
+        "id": "Parameters.parameter:input.part",
+        "path": "Parameters.parameter.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.name"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Parameters.parameter:input.part:url",
+        "path": "Parameters.parameter.part",
+        "sliceName": "url",
+        "short": "Location of this input.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:input.part:url.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "url"
+      },
+      {
+        "id": "Parameters.parameter:input.part:url.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "url"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:input.part:inputDetails",
+        "path": "Parameters.parameter.part",
+        "sliceName": "inputDetails",
+        "short": "Represents details on this input, such as the format and the scope of the contents.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:input.part:inputDetails.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "inputDetails"
+      },
+      {
+        "id": "Parameters.parameter:input.part:transferDetails",
+        "path": "Parameters.parameter.part",
+        "sliceName": "transferDetails",
+        "short": "Represents details on how to retrieve this input.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:input.part:transferDetails.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "transferDetails"
+      }
+    ]
+  }
+}

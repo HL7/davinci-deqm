@@ -1,0 +1,72 @@
+{
+  "resourceType": "Parameters",
+  "id": "example-import-result-resource-identity-input-error-embedded",
+  "meta": {
+    "profile": [
+      "http://example.org/StructureDefinition/ImportResult"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "requestIdentity",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "status": "complete",
+        "type": "data-collection",
+        "measure": "http://example.com/a-measure",
+        "period": {
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        }
+      }
+    },
+    {
+      "name": "outcome",
+      "part": [
+        {
+          "name": "associatedInputUrl",
+          "valueUrl": "https://example.com/blob/bigfile.ndjson"
+        },
+        {
+          "name": "operationOutcome",
+          "resource": {
+            "resourceType": "OperationOutcome",
+            "issue": [
+              {
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "text": "Failed to process entry at row 472: invalid json."
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "outcome",
+      "part": [
+        {
+          "name": "associatedInputUrl",
+          "valueUrl": "https://example.com/blob/bigfile.ndjson"
+        },
+        {
+          "name": "operationOutcome",
+          "resource": {
+            "resourceType": "OperationOutcome",
+            "issue": [
+              {
+                "severity": "information",
+                "code": "informational",
+                "details": {
+                  "text": "Successfully processed 31823 rows."
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

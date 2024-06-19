@@ -1,0 +1,160 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImportManifestComplexIdentity",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifestComplexIdentity",
+  "name": "ImportManifestComplexIdentity",
+  "title": "Import Manifest Complex Identity",
+  "status": "draft",
+  "description": "Example Import Manifest Profile where the request identity includes multiple parts.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/ImportManifest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.parameter:requestIdentity",
+        "path": "Parameters.parameter",
+        "sliceName": "requestIdentity"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part",
+        "path": "Parameters.parameter.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.name"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Sub-parameters that constitute the request identity.",
+        "min": 3,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submissionId",
+        "path": "Parameters.parameter.part",
+        "sliceName": "submissionId",
+        "short": "Part of the request identity.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submissionId.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "submissionId"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submissionId.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "short": "The submission identifier.",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submissionTime",
+        "path": "Parameters.parameter.part",
+        "sliceName": "submissionTime",
+        "short": "Part of the request identity.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submissionTime.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "submissionTime"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submissionTime.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "short": "The submission time.",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submittingOrganization",
+        "path": "Parameters.parameter.part",
+        "sliceName": "submittingOrganization",
+        "short": "Part of the request identity.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submittingOrganization.name",
+        "path": "Parameters.parameter.part.name",
+        "fixedString": "submittingOrganization"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submittingOrganization.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submittingOrganization.value[x]:valueString",
+        "path": "Parameters.parameter.part.value[x]",
+        "sliceName": "valueString",
+        "short": "The submitting organization.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:requestIdentity.part:submittingOrganization.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Organization",
+            "profile": [
+              "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/SubmittingOrganization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}
