@@ -35,7 +35,7 @@
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
 [DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
 [DEQM Individual MeasureReport List]: StructureDefinition-indv-measurereport-list.html
-[DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html
+[//]: # [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html  Removed per FHIR-45974
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
 [DEQM Reporting Program Reference]: StructureDefinition-extension-reportingProgramReference.html
 [DEQM Subject List MeasureReport Profile]: StructureDefinition-subjectlist-measurereport-deqm.html

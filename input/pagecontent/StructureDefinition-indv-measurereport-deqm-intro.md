@@ -9,11 +9,10 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. A status
 1. A measure report type hardcoded to "individual"
 1. The reference to the [Measure]
-1. A patient the report is for
+1. A subject the report is for
 1. The date the report was generated
 1. The organization that reported the data
 1. The period for which the report was generated. For the Gaps in Care use case, this is referred to as the gaps through period.
-1. The results of the calculation (the Measure Score)
 
 
 Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
