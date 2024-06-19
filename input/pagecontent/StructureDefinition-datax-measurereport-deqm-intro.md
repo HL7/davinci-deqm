@@ -9,7 +9,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. A status
 1. measure report type hardcoded to "data-collection"
 1. The reference to the [Measure]({{site.data.fhir.path}}measure.html)
-1. A link to patient the report is about
+1. A link to the subject the report is about
 1. The date the report was generated
 1. The organization that reported the data
 1. The measurement period
