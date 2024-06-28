@@ -138,7 +138,7 @@ Examples of patient "events" that could trigger the submission of an update:
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Submit Data operation: [$submit-data]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. Various DEQM Profiles and potentially data-model-specific profiles, depending on the specific Measure
 
 ###### Usage
 {:.no_toc}
@@ -184,7 +184,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Collect Data operation:[$collect-data]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. Various DEQM Profiles and potentially data-model-specific profiles, depending on the specific Measure
 
 
 ###### Usage
