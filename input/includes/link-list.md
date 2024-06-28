@@ -94,6 +94,7 @@
 [QICoreMedicationNotRequested]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-medicationnotrequested.html
 [QI Core Profiles]: {{site.data.fhir.qicore}}/index.html
 [QI Core]: {{site.data.fhir.qicore}}/index.html
+[CRMI Shareable Measure]: {{site.data.fhir.crmi}}/StructureDefinition-crmi-shareablemeasure.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
 [Quality Measure Implementation Guide]: {{site.data.fhir.cqfm}}/index.html
 [Quality Reporting]: {{site.data.fhir.path}}clinicalreasoning-quality-reporting.html
@@ -109,7 +110,7 @@
 [transaction]: {{site.data.fhir.path}}http.html#transaction
 [collection]: {{site.data.fhir.path}}bundle.html#collection
 [US Core]: {{site.data.fhir.uscore}}/index.html
-[Use cases]: usecases.html
+[Example Use Cases]: usecases.html
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
