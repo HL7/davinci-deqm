@@ -110,8 +110,12 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile
-                       value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-device"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-relatedperson"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -184,7 +188,7 @@
       <min value="0"/>
       <max value="0"/>
     </element>
-    <element id="MeasureReport.group.extension:measurereport-populationDescription">
+    <element id="MeasureReport.group.extension:populationDescription">
       <path value="MeasureReport.group.extension"/>
       <sliceName value="description"/>
       <short value="Description of the group"/>
