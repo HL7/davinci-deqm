@@ -101,7 +101,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -338,7 +338,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -360,7 +360,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -419,7 +419,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>

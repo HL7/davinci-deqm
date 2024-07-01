@@ -188,7 +188,7 @@
       <min value="0"/>
       <max value="0"/>
     </element>
-    <element id="MeasureReport.group.extension:description">
+    <element id="MeasureReport.group.extension:populationDescription">
       <path value="MeasureReport.group.extension"/>
       <sliceName value="description"/>
       <short value="Description of the group"/>
@@ -197,11 +197,11 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group..population.extension:populationDescription">
+    <element id="MeasureReport.group.population.extension:populationDescription">
       <path value="MeasureReport.group.population.extension"/>
       <sliceName value="description"/>
       <short value="Description of the population"/>
@@ -210,7 +210,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"/>
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
