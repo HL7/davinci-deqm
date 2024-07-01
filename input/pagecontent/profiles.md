@@ -34,6 +34,7 @@ Payers and providers need common data specification, measure specification, repo
 |   [DEQM Reporting Program Extension](StructureDefinition-extension-reportingProgram.html) |
 | [DEQM Supplemental Data Extension](StructureDefinition-extension-supplementalData.html)                  |
 | [DEQM Calculated Date Extension](StructureDefinition-extension-calculatedDate.html)                  |  
+| [DEQM Measure Report Population Description Extension](StructureDefinition-extension-populationDescription.html) |
 
 
 

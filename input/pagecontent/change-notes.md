@@ -11,6 +11,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Added additional subject references in Individual and Data Exchange measure report profiles ([FHIR-46023](https://jira.hl7.org/browse/FHIR-46023))
    -  Removed DEQM MedicationAdministration profile, example and any references to it ([FHIR-45974](https://jira.hl7.org/browse/FHIR-45974))
    -  Added clarifying text on the usage of CQL to the general guidance section ([FHIR-4359](https://jira.hl7.org/browse/FHIR-43593))
+   -  Added populationDescription extension definition, and inclusion in MeasureReport profiles. ([FHIR-43324](https://jira.hl7.org/browse/FHIR-43324))  
+   -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
 
 
 ### Changes and Updates for Version 4.0.0 (STU4)
@@ -78,9 +80,6 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
     -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-(qi-core)))
     -  Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
-    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
-
-
 
 ### Changes and Updates for Version 3.1.0
 
