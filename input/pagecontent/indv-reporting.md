@@ -10,6 +10,10 @@ The Individual reporting scenario is supported by the [DEQM Individual MeasureRe
 
 The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation, as well as how to use the $evaluate-measure operation to generate an individual MeasureReport from a Measure.
 
+### Supplemental Data Resources in MeasureReport
+
+The [supplementalData extension](http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
+
 #### Relationship between QI Core, DEQM, and CQMs
 {:.no_toc}
 
@@ -69,12 +73,12 @@ criteria, and it is the job of the individual measure report to include
 relevant data that was present in the EHR, and to not include data that
 was missing from the EHR.
 
-The $care-gaps report indicates instances in which information does not 
-support the occurrence of an expected action. The report indicates absence 
-of evidence; it cannot differentiate between activity that happened yet is 
-missing from the record or from activities that did not occur. However, 
-both of these situations result in the $care-gaps and the provider is 
-notified in that report.  Missing data may be identified in a 
+The $care-gaps report indicates instances in which information does not
+support the occurrence of an expected action. The report indicates absence
+of evidence; it cannot differentiate between activity that happened yet is
+missing from the record or from activities that did not occur. However,
+both of these situations result in the $care-gaps and the provider is
+notified in that report.  Missing data may be identified in a
 GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profile].
 </div>
 
@@ -97,7 +101,7 @@ Depending on the specific Measure and Interaction, various DEQM and QI Core Prof
 
 When the results of a CQM are completed they are POSTed to the quality measure Receiver's FHIR Server. The Individual MeasureReport(s) and all the referenced resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API.
 
-Posting Individual Measure Reports is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios **SHALL** contains only the new and updated DEQM and QI Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
+Posting Individual Measure Reports is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios **SHALL** contain only the new and updated DEQM and QI Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
 
 Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced multiple time within the Bundle, the reporting overhead for the Reporter may be reduced when compared to reporting each individual report separately. (See the FHIR specification for more information about using [Bundles] and resolving references in Bundles)
 
