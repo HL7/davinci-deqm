@@ -91,6 +91,14 @@
         <searchType value="reference"/>
     </parameter>
     <parameter>
+        <name value="parameters"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Any input parameters for the Measure evaluation. If the measure uses CQL, the parameter types are mapped to CQL as specified in the Parameters and Data Requirements section of the Using CQL with FHIR Implementation Guide. Any parameters defined in this input will be bound by name to parameters defined in the logic library referenced from library element of the Measure. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL."/>
+        <type value="Parameters"/>
+    </parameter>
+    <parameter>
         <name value="practitioner"/>
         <use value="in"/>
         <min value="0"/>
