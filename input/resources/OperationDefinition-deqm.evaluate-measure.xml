@@ -44,25 +44,25 @@
         <type value="date"/>
     </parameter>
     <parameter>
-      <name value="program"/> 
-      <use value="in"/> 
-      <min value="0"/> 
-      <max value="1"/> 
-      <documentation value="The quality program being reported via canonical reference to ([Library{CQFMQualityProgram}](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm)) indicating which quality program is being reported."/> 
+      <name value="program"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <documentation value="The quality program being reported via canonical reference to ([Library{CQFMQualityProgram}](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm)) indicating which quality program is being reported."/>
       <type value="canonical"/>
       <targetProfile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm"/>
     </parameter>
     <parameter>
-      <name value="programCode"/> 
-      <use value="in"/> 
-      <min value="0"/> 
-      <max value="1"/> 
-      <documentation value="The quality program being reported via code from the [Reporting Program value set](http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs) indicating which quality program is being reported."/> 
+      <name value="programCode"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <documentation value="The quality program being reported via code from the [Reporting Program value set](http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs) indicating which quality program is being reported."/>
       <type value="CodeableConcept"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs"/>
-      </binding> 
+      </binding>
     </parameter>
     <parameter>
         <name value="measure"/>
@@ -78,15 +78,15 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="The type of measure report: subject, subject-list, or population. If not specified, a default value of subject will be used if the subject parameter is supplied, otherwise, population will be used"/>
+        <documentation value="The type of MeasureReport(s) to return: individual, subject-list, or summary, corresponding to the appropriate DEQM profiles. The data-collection type is not allowed and an error in an OpertionOutcome should be returned. If not specified, a default value depends on the subject. If the subject Group contains a single entry, reportType defaults to individual, and if the subject Group contains multiple entries, reportType defaults to summary. If no subject parameter is provided, reportType defaults to summary."/>
         <type value="code"/>
-    </parameter>    
+    </parameter>
     <parameter>
         <name value="subject"/>
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Subject for which the measure will be calculated. If not specified, the measure will be calculated for all subjects that meet the requirements of the measure. If specified, the measure will only be calculated for the referenced subject(s)"/>
+        <documentation value="Subject(s) for which the measure will be calculated, referenced in a Group. If not specified, the measure will be calculated for all Patient resources on the FHIR server, possibly constrained further by the practitioner parameter. If subject is specified, the measure will only be calculated for the reference(s) in the Group."/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
@@ -94,7 +94,7 @@
         <name value="practitioner"/>
         <use value="in"/>
         <min value="0"/>
-        <max value="1"/> 
+        <max value="1"/>
         <documentation value="Practitioner (references [QICore Practitioner](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner)) for which the measure will be calculated. If specified, the measure will be calculated only for subjects that have a primary relationship to the identified practitioner"/>
         <type value="string"/>
         <searchType value="reference"/>
@@ -112,7 +112,8 @@
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more bundles. The first entry of the bundle is either a [DEQM Individual MeasureReport](StructureDefinition-indv-measurereport-deqm.html) or a [DEQM Summary MeasureReport](StructureDefinition-summary-measurereport-deqm.html) and subsequent entries in the bundle are resources created and/or evaluated as part of the measure calculation. Note that the result of the $evaluate-measure operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*"/>
+        <documentation value="Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more bundles. The first entry of the Bundle is either a [DEQM Individual MeasureReport](StructureDefinition-indv-measurereport-deqm.html), a [DEQM Subject List MeasureReport](StructureDefinition-subjectlist-measurereport-deqm.html), or a [DEQM Summary MeasureReport](StructureDefinition-summary-measurereport-deqm.html) and subsequent entries in the bundle are resources created and/or evaluated as part of the measure calculation.
+          Note that the result of the $evaluate-measure operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>

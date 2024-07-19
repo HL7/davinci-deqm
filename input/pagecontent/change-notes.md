@@ -13,11 +13,12 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Added clarifying text on the usage of CQL to the general guidance section ([FHIR-4359](https://jira.hl7.org/browse/FHIR-43593))
    -  Added populationDescription extension definition, and inclusion in MeasureReport profiles. ([FHIR-43324](https://jira.hl7.org/browse/FHIR-43324))  
    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
+   - Updated the parameter descriptions for reportType, subject, and the return ([FHIR-46253](https://jira.hl7.org/browse/FHIR-46253))([Applied here](OperationDefinition-deqm.evaluate-measure.html))
 
 
 ### Changes and Updates for Version 4.0.0 (STU4)
 
-1. Applied the following trackers: 
+1. Applied the following trackers:
     - The provider should be notified when data is missing. ([FHIR-26091](https://jira.hl7.org/browse/FHIR-26091))
     - Add a value to GIC Status to represent when Patient is not in the Initial Population for a Measure ([FHIR-32980](https://jira.hl7.org/browse/FHIR-32980))
     -  Add GET examples to cover entire $care-gaps api ([FHIR-33005](https://jira.hl7.org/browse/FHIR-33005))
@@ -84,10 +85,10 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for Version 3.1.0
 
-1. Updated the IG dependencies 
+1. Updated the IG dependencies
     - Update Dependencies. ([FHIR-37621](https://jira.hl7.org/browse/FHIR-37621))
-        - Updated from US Core 3.1.0 to US Core 3.1.1 
-        - Updated from QI Core 3.1.0 to QI-Core 4.1.1 
+        - Updated from US Core 3.1.0 to US Core 3.1.1
+        - Updated from QI Core 3.1.0 to QI-Core 4.1.1
         - Updated from Quality Measure IG 2.0.0 to Quality Measure IG 3.0.0
         - Updated examples and profiles where applicable due to dependency updates
     - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898))
