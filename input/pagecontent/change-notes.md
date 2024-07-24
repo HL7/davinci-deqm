@@ -15,6 +15,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
    - Updated the parameter descriptions for reportType, subject, and the return ([FHIR-46253](https://jira.hl7.org/browse/FHIR-46253))([Applied here](OperationDefinition-deqm.evaluate-measure.html))
    - Updated example to make patient02 patient01 and datax-measurereport02 datax-measurereport01 ([FHIR-46162](https://jira.hl7.org/browse/FHIR-46162))([Applied here](Parameters-mrp-submit-obs.json.html))
+   - Added boolean as a possible value for alternateScore extension and added a summary measureReport using that scoring type ([FHIR-46232](https://jira.hl7.org/browse/FHIR-46232))
 
 
 ### Changes and Updates for Version 4.0.0 (STU4)

@@ -71,6 +71,9 @@
       <type>
         <code value="Duration"/>
       </type>
+      <type>
+        <code value="boolean"/>
+      </type>
     </element>
   </differential>
 </StructureDefinition>
