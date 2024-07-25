@@ -12,6 +12,11 @@
   "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
   "concept": [
     {
+      "code": "prospective-gap",
+      "display": "Prospective Gap",
+      "definition": "A discrepancy will exist in the future between recommended best practices and the services that are actually provided and documented unless actions are taken to provide recommended best practices and documentation before it becomes an open gap.  A previously identified prospective gap may become closed if actions were taken to close the prospective gap before it became an open gap, or it may become an open gap if actions are not taken to close it."
+    },
+    {
       "code": "open-gap",
       "display": "Open Gap",
       "definition": "A discrepancy exists between recommended best practices and the services that are actually provided and documented."
