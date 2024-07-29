@@ -131,6 +131,14 @@
         <searchType value="token"/>
     </parameter>
     <parameter>
+        <name value="isDocument"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="The isDocument parameter controls whether a Gaps in Care Composition is returned in the Bundle (i.e. if the Bundle is of type 'Document'). When 'true,' the returned Bundles contain the Gaps in Care Composition. This parameter defaults to 'true.'"/>
+        <type value="boolean"/>
+    </parameter>
+    <parameter>
         <name value="return"/>
         <use value="out"/>
         <min value="0"/>

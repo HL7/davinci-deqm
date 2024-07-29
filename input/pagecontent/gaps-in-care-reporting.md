@@ -118,11 +118,11 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 #### Gaps in Care Bundle Structure
 {:.no_toc}
 
-The [DEQM Gaps In Care Bundle](StructureDefinition-gaps-bundle-deqm.html) is defined as a document bundle (`bundle.type` is `document`), hence, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource.
+The [DEQM Gaps In Care Bundle](StructureDefinition-gaps-bundle-deqm.html) can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
 
-Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle. 
-- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-indv-measurereport-deqm.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-gaps-detectedissue-deqm.html) resources included in the [DEQM Gaps In Care Composition](StructureDefinition-gaps-composition-deqm.html). 
-- In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resouruce, the resources for the colonoscopy procesure and FOBT lab observation as shown in the figure. 
+Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
+- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-indv-measurereport-deqm.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-gaps-detectedissue-deqm.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-gaps-composition-deqm.html). 
+- In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
 {% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
@@ -134,7 +134,7 @@ Derived from the GuidanceResponse resource, the  [Detailed Care Gap Guidance Res
 
 - **reasonCode** The `GuidanceResponse.reasonCode` has a preferred binding to the Care Gap Reasons value set. It contains codes that represent the reason or rationale behind the identified care gap, such as data element is not found or value is out of the specified range. It helps in categorizing and organizing the gaps based on their underlying causes, facilitating a more targeted approach to addressing them.
 
-- **dataRequirement** The Detailed Care Gap Guidance Response profile added a valueFilter extension to the dataRequirement element, this is in addition to the codeFilter and dateFilter that are specified in the base GuidanceResponse resource. These filters could be used to specify what data are required to address the identified care gaps. 
+- **dataRequirement** The Detailed Care Gap Guidance Response profile added a valueFilter extension to the dataRequirement element, this is in addition to the codeFilter and dateFilter that are specified in the base GuidanceResponse resource. These filters could be used to specify what data are required to address the identified care gaps.
 
 Example Business Use Cases:
 
