@@ -36,6 +36,8 @@ This version of the guide adds the Gaps in Care Reporting Scenario. The Gaps in 
 
 -   Both Consumers and Producers should share a common understanding that allows the same measures to be applied in healthcare and at the aggregator. This understanding can be based on a structured expression language (e.g. CQL) or any agreed upon method. This enables the application of the same measures across populations that span multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
 
+    -  The MeasureReport profiles in this IG are used to report CQFM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQFM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQFM Measure, including those not utilizing CQL.
+
 ### DEQM MeasureReport Profiles
 
 The MeasureReport resource is used as an organizer for both the Data Exchange Scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
