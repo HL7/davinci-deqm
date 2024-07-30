@@ -60,7 +60,7 @@
         "parameter": [
             {
                 "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"
+                "value": "http://hl7.org/fhir/StructureDefinition/countQuantity"
             },
             {
                 "code": "path-expansion-params",
@@ -1104,6 +1104,12 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-populationReference"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/extension-criteriaReference"
                 }
             },
             {
