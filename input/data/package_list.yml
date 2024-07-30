@@ -60,3 +60,4 @@ list:
       1. **Applied**: Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
       1. **Applied**: Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](index.html#qualityMeasurementStandardsLandscapeSummary)) and ([here](index.html#qualityMeasurementStandardsLandscapeIndv))
       1. **Applied**: Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
+      1. **Applied**: Relaxed cardinality of measureReport param in build-submit-data operation to 1..* ([FHIR-46424](https://jira.hl7.org/browse/FHIR-46424))
