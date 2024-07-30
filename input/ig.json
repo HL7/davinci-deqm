@@ -1109,12 +1109,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/external-extension-criteriaReference"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "StructureDefinition/extension-submitDataUpdateType"
                 }
             },
