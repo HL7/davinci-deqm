@@ -401,56 +401,6 @@
         "url": "Location"
       }
     },
-    {
-      "fullUrl": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc9",
-      "resource": {
-        "resourceType": "MedicationAdministration",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/medicationadministration-deqm"
-          ],
-          "source": "http://example.org/fhir/server"
-        },
-        "status": "completed",
-        "medicationCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-              "code": "1361615",
-              "display": "heparin sodium, porcine 5000 UNT/ML Injectable Solution"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"
-        },
-        "effectivePeriod": {
-          "start": "2019-12-05T06:10:27Z",
-          "end": "2019-12-05T06:10:27Z"
-        },
-        "dosage": {
-          "dose": {
-            "value": 1,
-            "unit": "cc",
-            "system": "http://unitsofmeasure.org",
-            "code": "mL"
-          },
-          "route": {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "34206005",
-                "display": "Subcutaneous route"
-              }
-            ]
-          }
-        }
-      },
-      "request": {
-        "method": "POST",
-        "url": "MedicationAdministration"
-      }
-    }
   ],
   "meta": {
     "source": "http://example.org/fhir/server"

@@ -52,7 +52,7 @@
       <constraint>
         <key value="deqm-6"/>
         <severity value="error"/>
-        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1 for summary reporting"/>
+        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;=1.0)"/>
       </constraint>
       <mustSupport value="false"/>
@@ -86,7 +86,20 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:supplementalData.extension:populationDescription">
+      <path value="MeasureReport.extension.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the supplemental data"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -159,6 +172,18 @@
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:message">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="message"/>
+      <short value="Messages encountered while creating the report"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -314,6 +339,19 @@
       </constraint>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.extension:populationDescription">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.code">
       <path value="MeasureReport.group.code"/>
       <mustSupport value="true"/>
@@ -321,6 +359,38 @@
     <element id="MeasureReport.group.population">
       <path value="MeasureReport.group.population"/>
       <condition value="deqm-5"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.extension:countQuantity">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="countQuantity"/>
+      <short value="Count as a Quantity"/>
+      <definition value="The count of the population represented as a Quantity. This is used in cases where the count may be a decimal value such as in a ratio measure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity"/>
+      </type>
+      <condition value="popCountQuantity"/>
+      <constraint>
+        <key value="popCountQuantity"/>
+        <severity value="error"/>
+        <human value="The population must either have a count (integer) or a countQuantity (quantity), but not both."/>
+        <expression value="MeasureReport.group.population.extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor MeasureReport.group.population.count.exists()"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.extension:populationDescription">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the population"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.code">
@@ -331,8 +401,17 @@
     </element>
     <element id="MeasureReport.group.population.count">
       <path value="MeasureReport.group.population.count"/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
+      <condition value="popCount"/>
+      <constraint>
+        <key value="popCount"/>
+        <severity value="error"/>
+        <human value="The population must either have a count ."/>
+        <expression value="MeasureReport.group.population.exists() implies
+                 (MeasureReport.group.population.count.exists() xor
+                  MeasureReport.group.population.extension.exists())"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.subjectResults">
@@ -366,6 +445,19 @@
       <path value="MeasureReport.group.stratifier"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.stratifier.extension:populationDescription">
+      <path value="MeasureReport.group.stratifier.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the stratifier"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.stratifier.code">
       <path value="MeasureReport.group.stratifier.code"/>
       <min value="1"/>
@@ -384,6 +476,23 @@
       <path value="MeasureReport.group.stratifier.stratum.population"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
+      <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/countQuantity"/>
+      </type>
+      <condition value="popCountQuantity"/>
+      <constraint>
+        <key value="popCountQuantity"/>
+        <severity value="error"/>
+        <human value="The population must either have a count (integer) or a countQuantity (decimal), but not both."/>
+        <expression value="MeasureReport.group.stratifier.stratum.population.extension:countQuantity.exists() xor MeasureReport.group.stratifier.stratum.population.count.exists()"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.stratifier.stratum.population.code">
       <path value="MeasureReport.group.stratifier.stratum.population.code"/>
       <min value="1"/>
@@ -394,6 +503,15 @@
       <path value="MeasureReport.group.stratifier.stratum.population.count"/>
       <min value="1"/>
       <max value="1"/>
+      <condition value="popCount"/>
+      <constraint>
+        <key value="popCount"/>
+        <severity value="error"/>
+        <human value="The population must either have a count ."/>
+        <expression value="MeasureReport.group.stratifier.stractum.population.exists() implies
+                 (MeasureReport.group.stratifier.stractum.population.count.exists() xor
+                  MeasureReport.group.stratifier.stractum.population.extension.exists())"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.subjectResults">
@@ -418,17 +536,6 @@
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.extension:message">
-      <path value="MeasureReport.extension"/>
-      <sliceName value="message"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
       </type>
       <mustSupport value="true"/>
     </element>

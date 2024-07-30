@@ -59,6 +59,10 @@
     "definition": {
         "parameter": [
             {
+                "code": "special-url",
+                "value": "http://hl7.org/fhir/StructureDefinition/countQuantity"
+            },
+            {
                 "code": "path-expansion-params",
                 "value": "../input/exp-params.json"
             },
@@ -315,14 +319,6 @@
                     "reference": "Location/location02"
                 },
                 "description": "DEQM Location02 example"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "Single Indv Vte Report Option 1",
-                "reference": {
-                    "reference": "Bundle/single-indv-vte-report-option1"
-                },
-                "description": "DEQM Single Indv Vte Report example using MedicationAdministration"
             },
             {
                 "exampleBoolean": true,
@@ -926,14 +922,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "DEQM MedicationAdministration Example",
-                "reference": {
-                    "reference": "MedicationAdministration/medicationadministration01"
-                },
-                "description": "DEQM MedicationAdministration Example example"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Encounter nhsn-iip-en101",
                 "reference": {
                     "reference": "Encounter/nhsn-iip-en101"
@@ -1154,13 +1142,7 @@
                     "reference": "CapabilityStatement/consumer-client"
                 }
             },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/medicationadministration-deqm"
-                }
-            },
-            {
+             {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-dataLocation"
