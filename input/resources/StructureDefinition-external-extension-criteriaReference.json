@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "external-extension-criteriaReference",
-  "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+  "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
   "version": "1.0.0",
   "name": "CriteriaReferenceExtension",
   "title": "Criteria Reference Extension",
@@ -76,7 +76,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/criteriaReference"
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"
       },
       {
         "id": "Extension.value[x]",

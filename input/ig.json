@@ -60,7 +60,7 @@
         "parameter": [
             {
                 "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/criteriaReference"
+                "value": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"
             },
             {
                 "code": "path-expansion-params",

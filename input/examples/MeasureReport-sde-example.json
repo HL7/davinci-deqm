@@ -552,11 +552,11 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-chief-complaint"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-encounter-discharge-dispositions"
           }
         ],
@@ -568,11 +568,11 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-condition"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-condition-during-encounter"
           }
         ],
@@ -584,7 +584,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-encounter-locations"
           }
         ],
@@ -596,7 +596,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-medication-request"
           }
         ],
@@ -608,7 +608,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-medication-request"
           }
         ],
@@ -620,7 +620,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-minimal-patient"
           }
         ],
@@ -632,7 +632,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-minimal-medication-requests"
           }
         ],
@@ -644,7 +644,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-minimal-medication-requests"
           }
         ],
@@ -656,7 +656,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-ethnicity-coding"
           }
         ],
@@ -668,7 +668,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-ethnicity-coding"
           }
         ],
@@ -680,7 +680,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-ethnicity-coding"
           }
         ],
@@ -692,7 +692,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-race-coding"
           }
         ],
@@ -704,7 +704,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-race-coding"
           }
         ],
@@ -716,7 +716,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-race-coding"
           }
         ],
@@ -728,7 +728,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-race-coding"
           }
         ],
@@ -740,7 +740,7 @@
       "valueReference": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-race-coding"
           }
         ],
@@ -782,7 +782,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
           "valueString": "initial-population-01"
         }
       ],
@@ -791,7 +791,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
           "valueString": "initial-population-01"
         }
       ],
@@ -800,7 +800,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
           "valueString": "initial-population-01"
         }
       ],
@@ -809,7 +809,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
           "valueString": "initial-population-01"
         }
       ],

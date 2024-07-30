@@ -88,7 +88,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/criteriaReference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
       </type>
       <mustSupport value="true"/>
     </element>

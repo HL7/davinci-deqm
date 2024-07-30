@@ -7,7 +7,7 @@
       "valueCode" : "deprecated"
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+  "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
   "name": "DEQMCriteriaReferenceExtension",
   "title": "DEQM Criteria Reference Extension",
   "status": "active",
@@ -55,7 +55,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/criteriaReference"
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"
       },
       {
         "id": "Extension.value[x]",
