@@ -229,7 +229,7 @@
                 "valueString": "initial-population"
               },
               {
-                "url": "http://hl7.org/fhir/StructureDefinition/criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "denominator"
               }
             ],
