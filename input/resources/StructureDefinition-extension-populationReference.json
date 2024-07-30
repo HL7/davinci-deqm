@@ -24,7 +24,7 @@
       ]
     }
   ],
-  "description": "Deprecated: Identifies which measure population that a specific resource is used for evaluating their logics by referencing population criteria id (`Measure.group.population.id`) specified in Measure resource.",
+  "description": "DEPRECATED in favor of cqf-criteriaReference: Identifies which measure population that a specific resource is used for evaluating their logics by referencing population criteria id (`Measure.group.population.id`) specified in Measure resource.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

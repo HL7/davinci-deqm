@@ -322,14 +322,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Single Indv Vte Report Option 1",
-                "reference": {
-                    "reference": "Bundle/single-indv-vte-report-option1"
-                },
-                "description": "DEQM Single Indv Vte Report example using MedicationAdministration"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Single Indv Vte Report Option 7",
                 "reference": {
                     "reference": "Bundle/single-indv-vte-report-option7"
@@ -930,14 +922,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "DEQM MedicationAdministration Example",
-                "reference": {
-                    "reference": "MedicationAdministration/medicationadministration01"
-                },
-                "description": "DEQM MedicationAdministration Example example"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Encounter nhsn-iip-en101",
                 "reference": {
                     "reference": "Encounter/nhsn-iip-en101"
@@ -1131,12 +1115,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/external-extension-countQuantity"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "StructureDefinition/extension-submitDataUpdateType"
                 }
             },
@@ -1164,13 +1142,7 @@
                     "reference": "CapabilityStatement/consumer-client"
                 }
             },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/medicationadministration-deqm"
-                }
-            },
-            {
+             {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-dataLocation"

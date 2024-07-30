@@ -16,7 +16,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="[MeasureReport](http://hl7.org/fhir/R4/measurereport.html)  is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The **DEQM Individual MeasureReport Profile** defined here is used when a measure is reported to an aggregator for one specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure."/>
+  <description value="[MeasureReport](http://hl7.org/fhir/R4/measurereport.html)  is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.     The **DEQM Individual MeasureReport Profile** defined here is used when a measure is reported to an aggregator for one specific subject. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  In addition to the MeasureReport, the report would be collected in a Bundle with the Organization, Patient and any other resources that were used to calculate this measure."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -54,7 +54,7 @@
       <constraint>
         <key value="deqm-6"/>
         <severity value="error"/>
-        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1 for summary reporting"/>
+        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;=1.0)"/>
       </constraint>
       <mustSupport value="false"/>
@@ -88,7 +88,20 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:supplementalData.extension:populationDescription">
+      <path value="MeasureReport.extension.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the supplemental data"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -191,6 +204,11 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-device"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-relatedperson"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -313,6 +331,19 @@
       <condition value="deqm-4"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.extension:populationDescription">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.code">
       <path value="MeasureReport.group.code"/>
       <mustSupport value="true"/>
@@ -324,18 +355,33 @@
     </element>
     <element id="MeasureReport.group.population.extension:countQuantity">
       <path value="MeasureReport.group.population.extension"/>
-      <condition value="popCountQuantity"/>
-      <constraint>
-        <key value="popCountQuantity"/>
-        <severity value="error"/>
-        <human value="The population must either have a count (integer) or a countQuantity (decimal), but not both."/>
-        <expression value="MeasureReport.group.population.extension:countQuantity.exists() xor MeasureReport.group.population.count.exists()"/>
-      </constraint>
+      <sliceName value="countQuantity"/>
+      <short value="Count as a Quantity"/>
+      <definition value="The count of the population represented as a Quantity. This is used in cases where the count may be a decimal value such as in a ratio measure."/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/countQuantity"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity"/>
+      </type>
+      <condition value="popCountQuantity"/>
+      <constraint>
+        <key value="popCountQuantity"/>
+        <severity value="error"/>
+        <human value="The population must either have a count (integer) or a countQuantity (quantity), but not both."/>
+        <expression value="MeasureReport.group.population.extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor MeasureReport.group.population.count.exists()"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.extension:populationDescription">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the population"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -382,6 +428,19 @@
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.extension:populationDescription">
+      <path value="MeasureReport.group.stratifier.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the stratifier"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -452,7 +511,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
       </type>
       <mustSupport value="true"/>
     </element>
