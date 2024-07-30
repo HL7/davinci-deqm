@@ -209,7 +209,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
       <mustSupport value="true"/>
-    </element> 
+    </element>
     <element id="MeasureReport.date">
       <path value="MeasureReport.date"/>
       <short value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
@@ -341,6 +341,45 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.extension:numeratorMembership">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="numeratorMembership"/>
+      <short value="Provides the number of subjects in the numerator population membership."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:denominatorMembership">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="denominatorMembership"/>
+      <short value="Provides the number of subjects in the denominator population membership."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:measurePopulationMembership">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="measurePopulationMembership"/>
+      <short value="Provides the number of subjects in the measure population membership."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.code">
       <path value="MeasureReport.group.code"/>
       <mustSupport value="true"/>
@@ -383,7 +422,7 @@
         <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
       </type>
       <mustSupport value="true"/>
-    </element> 
+    </element>
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
       <min value="1"/>
@@ -451,12 +490,12 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.subjectResults">
       <path value="MeasureReport.group.stratifier.stratum.population.subjectResults"/>
-      <min value="1"/>        
+      <min value="1"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
-      </type>      
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.measureScore">
@@ -473,7 +512,7 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
       </type>
       <mustSupport value="true"/>
-    </element>  
+    </element>
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <min value="0"/>

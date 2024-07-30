@@ -1163,6 +1163,24 @@
                 "reference": {
                     "reference": "StructureDefinition/extension-calculatedDate"
                 }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-numeratorMembership"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-denominatorMembership"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-measurePopulationMembership"
+                }
             }
         ],
         "page": {
