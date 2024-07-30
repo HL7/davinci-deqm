@@ -55,5 +55,8 @@ list:
       1. **Applied**: Added clarifying text on the usage of CQL to the general guidance section ([FHIR-4359](https://jira.hl7.org/browse/FHIR-43593))
       1. **Applied**: Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](vte1.html#practitioner-references)) and ([here](mrp.html#practitioner_footnote))
       1. **Applied**: Summary measure reporting typo ([FHIR-44570](https://jira.hl7.org/browse/FHIR-44570))([Applied here](summary-reporting.html#summary-measure-reporting))
+      1. **Applied**: Added inputParameters extension to data, indv, subjectLlist and summary measure report profiles([FHIR-45430](https://jira.hl7.org/browse/FHIR-45430))
+      1. **Applied**: Added parameters to operations list for care-gaps and evaluate-measure operations page per this tracker's description. ([FHIR-31416](https://jira.hl7.org/browse/FHIR-31416))
+      1. **Applied**: Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
       1. **Applied**: Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](index.html#qualityMeasurementStandardsLandscapeSummary)) and ([here](index.html#qualityMeasurementStandardsLandscapeIndv))
       1. **Applied**: Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
