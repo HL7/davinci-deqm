@@ -34,11 +34,9 @@ This version of the guide adds the Gaps in Care Reporting Scenario. The Gaps in 
 
     -  Multiple MeasureReport may reference the same instance of a resource.
 
--   Both Consumers and Producers *should* use a common clinical
-    quality language (CQL) that would allow the same measures to be
-    applied in healthcare and at the aggregator. This would also enable
-    the application of the same measures across populations that span
-    multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
+-   Both Consumers and Producers should share a common understanding that allows the same measures to be applied in healthcare and at the aggregator. This understanding can be based on a structured expression language (e.g. CQL) or any agreed upon method. This enables the application of the same measures across populations that span multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
+
+    -  The MeasureReport profiles in this IG are used to report CQFM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQFM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQFM Measure, including those not utilizing CQL.
 
 ### DEQM MeasureReport Profiles
 
@@ -61,7 +59,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 #### Data Quality
 
-The default profiles in this implementation guide provide a baseline for data validation, but note that additional validation criteria may be expressed via Measure specific profiles. The profiles expected by the CQL will be referenced in the retrieve expressions of the logic, and surfaced as profile elements of the data requirements. These references to profiles used by the CQL script are expected to be used for data quality, data integrity checks, and data validation. Data access layers providing resources to a CQL engine are expected to supply resources that conform to the stated profiles.
+Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated metadata. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
 
 #### Gaps in Care Reporting
 
