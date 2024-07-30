@@ -231,11 +231,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "initial-population"
-                    }, 
+                    },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
@@ -244,11 +244,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "initial-population"
                     },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
@@ -257,7 +257,7 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "numerator"
                     }
                   ],
@@ -312,13 +312,13 @@
                   "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure"
                 ]
               },
-              "extension":               
-               [ 
+              "extension":
+               [
                 {
                   "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
                   "valueDateTime": "2020-07-06T09:00:00-00:00"
                 }
-               ],              
+               ],
               "status": "completed",
               "code": {
                 "coding": [
@@ -705,11 +705,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "initial-population"
-                    }, 
+                    },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
@@ -718,11 +718,11 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "initial-population"
                     },
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "denominator"
                     }
                   ],
@@ -731,7 +731,7 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                       "valueString": "numerator"
                     }
                   ],
@@ -786,12 +786,12 @@
                   "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure"
                 ]
               },
-              "extension":               
+              "extension":
                [ {
                   "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
                   "valueDateTime": "2018-09-10T09:00:00-00:00"
                 }
-               ],               
+               ],
               "status": "completed",
               "code": {
                 "coding": [
