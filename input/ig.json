@@ -59,6 +59,10 @@
     "definition": {
         "parameter": [
             {
+                "code": "special-url",
+                "value": "http://hl7.org/fhir/StructureDefinition/countQuantity"
+            },
+            {
                 "code": "path-expansion-params",
                 "value": "../input/exp-params.json"
             },
