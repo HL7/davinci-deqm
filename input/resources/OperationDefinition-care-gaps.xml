@@ -31,7 +31,7 @@
     <resource value="Measure"/>
     <system value="false"/>
     <type value="true"/>
-    <instance value="false"/>
+    <instance value="true"/>
     <parameter>
         <name value="periodStart"/>
         <use value="in"/>
@@ -67,6 +67,13 @@
         <searchType value="reference"/>
     </parameter>
     <parameter>
+        <name value="subjectGroup"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <type value="Group"/>
+    </parameter>
+    <parameter>
         <name value="parameters"/>
         <use value="in"/>
         <min value="0"/>
@@ -91,6 +98,13 @@
         <documentation value="Reference to an organization [QI Core Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization) for which the gaps in care report will be created. For a provider organization focused gaps in care report, this is a required In Parameter."/>
         <type value="string"/>
         <searchType value="reference"/>
+    </parameter>
+    <parameter>
+        <name value="organizationResource"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <type value="Organization"/>
     </parameter>
     <parameter>
         <name value="status"/>
@@ -128,6 +142,23 @@
         <max value="*"/>
         <documentation value="This the the URL of a measure for which the gaps in care will be reported. A measure URL is specified in the [url](https://www.hl7.org/fhir/measure-definitions.html#Measure.url) element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
         <type value="canonical"/>
+    </parameter>
+    <parameter>
+        <name value="measureResource"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="The measure to be evaluated is provided as a Measure resource."/>
+        <type value="Measure"/>
+    </parameter>
+    <parameter>
+        <name value="measure"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <documentation value="The measure to evaluate. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance"/>
+        <type value="string"/>
+        <searchType value="reference"/>
     </parameter>
     <parameter>
         <name value="manifest"/>
