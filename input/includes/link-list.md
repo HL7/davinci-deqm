@@ -175,6 +175,7 @@
 [open and closed gaps]: index.html#glossary
 [open and/or closed gaps]: index.html#glossary
 [open or closed gaps]: index.html#glossary
+[prospective gap]: index.html#glossary
 [gaps through period]: index.html#glossary
 [Gaps through period]:  index.html#glossary
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html
