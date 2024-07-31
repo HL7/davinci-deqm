@@ -62,6 +62,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 {% include quality-improvement-ecosystem.md %}
 
 <!-- Quality Measurement Standards Landscape -->
+{: #quality-measurement-standards-landscapeIndex}
 {% include quality-measurement-standards-landscape.md %}
 
 <!-- Data Model Standards Landscape -->
@@ -118,6 +119,8 @@ For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 **Servers** are the actors receiving the request for the Gaps in Care Report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system serves as the server. If a payer requests a report from their own system, the payer's system serves as the server.
 
 ### Glossary
+
+
 {: #closed-gap}Closed Gap
   : No discrepancy exists between recommended best practices and the services that are actually provided and documented. A previously identified open gap may become closed, if actions were taken to close the open gaps.
 
@@ -144,6 +147,9 @@ For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 
 {: #positive-measure}Positive Measure
   : A higher calculated performance rate for this measure indicates better clinical care or control. The Colorectal Cancer Screening measure is an example of positive measure.
+
+{: #prospective-gap}Prospective Gap
+  : A discrepancy will exist in the future between recommended best practices and the services that are actually provided and documented unless actions are taken to provide recommended best practices and document before it becomes an open gap.  A previously identified prospective gap may become closed if actions were taken to close the prospective gap, or it may become open if actions are not taken to close it.
 
 {: #reporting-period}Reporting Period
   : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions. This can be equal to or a subset of the Measurement Period.

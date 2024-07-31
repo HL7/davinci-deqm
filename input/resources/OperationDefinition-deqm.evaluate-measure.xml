@@ -44,13 +44,12 @@
         <type value="date"/>
     </parameter>
     <parameter>
-      <name value="program"/> 
-      <use value="in"/> 
-      <min value="0"/> 
-      <max value="1"/> 
-      <documentation value="The quality program being reported via canonical reference to ([Library{CQFMQualityProgram}](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm)) indicating which quality program is being reported."/> 
-      <type value="canonical"/>
-      <targetProfile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm"/>
+        <name value="manifest"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Specifies an asset-collection library that provides dependency version resolution and expansion rules for the operation. See the description of manifest in the Canonical Resource Management Infrastructure IG for a complete description of how manifest values are used to provide defaults for dependency version resolution and expansion parameters. Parameters specified directly in the operation override behaviors specified by the manifest parameter. In general, if this parameter is supplied, it is expected to be used in nested operation calls. For example, in evaluating a measure, if the expansion of a value set is required, this parameter SHALL be supplied to that expansion."/>
+        <type value="canonical"/>
     </parameter>
     <parameter>
       <name value="programCode"/> 
@@ -89,6 +88,14 @@
         <documentation value="Subject for which the measure will be calculated. If not specified, the measure will be calculated for all subjects that meet the requirements of the measure. If specified, the measure will only be calculated for the referenced subject(s)"/>
         <type value="string"/>
         <searchType value="reference"/>
+    </parameter>
+    <parameter>
+        <name value="parameters"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Any input parameters for the Measure evaluation. If the measure uses CQL, the parameter types are mapped to CQL as specified in the Parameters and Data Requirements section of the Using CQL with FHIR Implementation Guide. Any parameters defined in this input will be bound by name to parameters defined in the logic library referenced from library element of the Measure. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL."/>
+        <type value="Parameters"/>
     </parameter>
     <parameter>
         <name value="practitioner"/>
