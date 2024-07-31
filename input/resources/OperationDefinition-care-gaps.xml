@@ -130,14 +130,13 @@
         <type value="canonical"/>
     </parameter>
     <parameter>
-        <name value="program"/>
+        <name value="manifest"/>
         <use value="in"/>
         <min value="0"/>
-        <max value="*"/>
-        <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS Merit-based Incentive Payment Program (MIPS), Hospital Quality Reporting (HQR) programs. Program is represented in the Measure using element [useContext](https://www.hl7.org/fhir/measure-definitions.html#Measure.useContext). When the code attribute of useContext is program, then the value attribute of useContext represents a specific program. Note that the type of this parameter is a string with a search type of [token](https://www.hl7.org/fhir/search.html#token), so the $care-gaps operation has only simple input parameters and may be invoked using GET."/>
-        <type value="string"/>
-        <searchType value="token"/>
-    </parameter>
+        <max value="1"/>
+        <documentation value="Specifies an asset-collection library that provides dependency version resolution and expansion rules for the operation. See the description of manifest in the Canonical Resource Management Infrastructure IG for a complete description of how manifest values are used to provide defaults for dependency version resolution and expansion parameters. Parameters specified directly in the operation override behaviors specified by the manifest parameter. In general, if this parameter is supplied, it is expected to be used in nested operation calls. For example, in evaluating a measure, if the expansion of a value set is required, this parameter SHALL be supplied to that expansion."/>
+        <type value="canonical"/>
+     </parameter>
     <parameter>
         <name value="return"/>
         <use value="out"/>
