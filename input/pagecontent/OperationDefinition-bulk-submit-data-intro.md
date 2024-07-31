@@ -34,16 +34,18 @@ POST [base]/Measure/test-measure/$bulk-submit-data
     },
     {
       "name": "measureReport",
-      "resource": {
-        "resourceType": "MeasureReport",
-        "type": "data-collection,
-        "status": "pending",
-        "measure": "http://example.com/Measure/test-measure",
-        "period": {
-          "start": "2022-01-01",
-          "end": "2022-12-31"
-        }
-      }
+      "resource": [
+          {
+            "resourceType": "MeasureReport",
+            "type": "data-collection,
+            "status": "pending",
+            "measure": "http://example.com/Measure/test-measure",
+            "period": {
+              "start": "2022-01-01",
+              "end": "2022-12-31"
+            }
+          }
+      ]          
     }
   ]
 }
@@ -68,16 +70,18 @@ POST [base]/Measure/test-measure/$bulk-submit-data
     },
     {
       "name": "measureReport",
-      "resource": {
-        "resourceType": "MeasureReport",
-        "type": "data-collection,
-        "status": "pending",
-        "measure": "http://example.com/Measure/test-measure",
-        "period": {
-          "start": "2022-01-01",
-          "end": "2022-12-31"
-        }
-      }
+      "resource": [
+         {
+           "resourceType": "MeasureReport",
+           "type": "data-collection,
+           "status": "pending",
+           "measure": "http://example.com/Measure/test-measure",
+           "period": {
+             "start": "2022-01-01",
+             "end": "2022-12-31"
+           }
+         }
+       ]         
     }
   ]
 }
@@ -110,16 +114,18 @@ POST [base]/Measure/test-measure/$bulk-submit-data
     },
     {
       "name": "measureReport",
-      "resource": {
-        "resourceType": "MeasureReport",
-        "type": "data-collection,
-        "status": "pending",
-        "measure": "http://example.com/Measure/test-measure",
-        "period": {
-          "start": "2022-01-01",
-          "end": "2022-12-31"
-        }
-      }
+      "resource": [
+         {
+           "resourceType": "MeasureReport",
+           "type": "data-collection,
+           "status": "pending",
+           "measure": "http://example.com/Measure/test-measure",
+           "period": {
+             "start": "2022-01-01",
+             "end": "2022-12-31"
+           }
+         }
+      ]         
     }
   ]
 }
