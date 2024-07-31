@@ -10,10 +10,13 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Removed optional data element item from required element list of Individual Measure Report profile ([FHIR-44812](https://jira.hl7.org/browse/FHIR-44812))
    -  Added additional subject references in Individual and Data Exchange measure report profiles ([FHIR-46023](https://jira.hl7.org/browse/FHIR-46023))
    -  Removed DEQM MedicationAdministration profile, example and any references to it ([FHIR-45974](https://jira.hl7.org/browse/FHIR-45974))
-   -  Added clarifying text on the usage of CQL to the general guidance section ([FHIR-4359](https://jira.hl7.org/browse/FHIR-43593))
+   -  Added clarifying text on the usage of CQL to the general guidance section ([FHIR-43593](https://jira.hl7.org/browse/FHIR-43593))
+   -  Added inputParameters extension to data, indv, subjectLlist and summary measure report profiles([FHIR-45430](https://jira.hl7.org/browse/FHIR-45430))
+   -  Added parameters to operations list for care-gaps and evaluate-measure operations page per this tracker's description. ([FHIR-31416](https://jira.hl7.org/browse/FHIR-31416))
    -  Added populationDescription extension definition, and inclusion in MeasureReport profiles. ([FHIR-43324](https://jira.hl7.org/browse/FHIR-43324))  
    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
    -  Added Prospective Gap code to care gaps value set and related narratives ([FHIR-46090](https://jira.hl7.org/browse/FHIR-46090))
+   -  Replaced 'program' parameter with 'manifest' parameter in care gaps and measure/evaluate operations ([FHIR-46371](https://jira.hl7.org/browse/FHIR-46371))
 
 
 ### Changes and Updates for Version 4.0.0 (STU4)
@@ -81,7 +84,10 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
     -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-(qi-core)))
     -  Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
-
+    -  Criteria Reference Extension needs to be more generic and reusable across IGs ([FHIR-41242](https://jira.hl7.org/browse/FHIR-41242) Changes applied in json files
+    -  In order for Individual MeasureReport to be the equivalent of QRDA Category 1, it needs to share the evaluatedResources ([FHIR-42812](https://jira.hl7.org/browse/FHIR-42812))([Applied here](indv-reporting.html#request-body))
+    -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](indv-reporting.html#qualityMeasurementStandardsLandscapeIndv)) and ([here](summary-reporting.html#qualityMeasurementStandardsLandscapeSummary)
+    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
 
 ### Changes and Updates for Version 3.1.0
 

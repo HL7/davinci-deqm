@@ -1,5 +1,4 @@
 #### Quality Measurement Standards Landscape
-{: #quality-measurement-standards-landscape}
 
 This implementation guide is part of a larger FHIR-based quality improvement
 and quality measurement standards landscape, depicted in the following
