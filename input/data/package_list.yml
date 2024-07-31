@@ -58,6 +58,9 @@ list:
       1. **Applied**: Added inputParameters extension to data, indv, subjectLlist and summary measure report profiles([FHIR-45430](https://jira.hl7.org/browse/FHIR-45430))
       1. **Applied**: Added parameters to operations list for care-gaps and evaluate-measure operations page per this tracker's description. ([FHIR-31416](https://jira.hl7.org/browse/FHIR-31416))
       1. **Applied**: Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
+      1. **Applied**: Added Prospective Gap code to care gaps value set and related narratives ([FHIR-46090](https://jira.hl7.org/browse/FHIR-46090))
       1. **Applied**: Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](index.html#qualityMeasurementStandardsLandscapeSummary)) and ([here](index.html#qualityMeasurementStandardsLandscapeIndv))
       1. **Applied**: Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](gaps-in-care-reporting.html#stu-note))
       1. **Applied**: Relaxed cardinality of measureReport param in build-submit-data operation to 1..* ([FHIR-46424](https://jira.hl7.org/browse/FHIR-46424))
+      1. **Applied**: Replaced 'program' parameter with 'manifest' parameter in care gaps  and measure/evaluate operations ([FHIR-46371](https://jira.hl7.org/browse/FHIR-46371))
+
