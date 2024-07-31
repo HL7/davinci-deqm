@@ -49,6 +49,18 @@ The MeasureReport resource is also used for the Gaps in Care Reporting Scenario.
 The [DEQM Data Exchange MeasureReport Profile] is used to get the data from the producer to a consumer of the data.  The consumer might be a system that calculates the measure report but they could also be an aggregator who sends that data on to another system to do measure calculation and reporting.
 Along with Data-Exchange MeasureReport Profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on. When a data producer, such as a practitioner,  sends a MeasureReport bundle, they may not have all the data that is required to calculate the measure report. One example might be because the measure requires outcome data from at a later point in time during the measurement period. Another example where the data producer may not have all the data would be continuous coverage period as the producer of the data may not know the patient was covered on the day the patient was seen.  The Consumer (in this case the payer as aggregator) is the owner of all coverage information.  Therefore, only the consumer could determine if the continuous coverage period requirement is met.
 
+#### Duplicate Data
+
+Implementations SHOULD avoid sending duplicate data (identical FHIR resources) in data exchanges (collect-data or submit-data) or as resolvable references in MeasureReport.evaluatedResources.
+
+Duplicate data is a concern in DEQM because the operations support multiple measures per subject. The same resource instance could be referenced by multiple MeasureReports, or multiple measures may use different elements within the same resource. Another situation to consider when evaluating a measure is when multiple value sets have overlapping codes, then two different CQL retrieve operations can return the same resource instance because it matches a code twice from the overlap.
+
+Note that the $data-requirements operation is currently defined for a single Measure or Library, so it is a responsibility of the data producer to check for, and address, duplicate data.
+
+The Bundles utilized in DEQM operations SHOULD be organized by subject – meaning that a Bundle contains all of the MeasureReport(s) and associated data of interest or evaluated resources for a subject. This reduces the potential for proliferation of duplicate data because resources common to the subject, such as Encounters, would not be repeated across Bundles. A resource instance SHALL occur only once for the data of interest and evaluated resources for with the Bundle. See ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)).
+
+Receiving systems need to consider the possibility that some duplicate data may be present across Bundles, such as an Organization resource that is relevant to more than one subject.
+
 #### Measure Reporting
 
 Measure Reporting is done by a Reporter who has all of the data that is required to generate a report(s). Two profiles for measure reporting have been defined in this guide.

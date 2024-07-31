@@ -19,6 +19,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Added a new operation to allow submission of multiple measures as a bundle ([FHIR-46373](https://jira.hl7.org/browse/FHIR-46373))([Applied here](OperationDefinition-deqm.submit-data.html))
    - Added IN parameter to $care-gaps to specify whether a Gaps in Care Composition is returned in the Bundle and updated profile, and documentation to align ([FHIR-46027](https://jira.hl7.org/browse/FHIR-46027))
    - Created 3 new extensions for numeratorMembership, denominatorMembership, and measurePopulationMembership and added to all 3 Measure Report profiles ([FHIR-44736](https://jira.hl7.org/browse/FHIR-44736))
+   - Added section about Duplicate Data to the Guidance page ([FHIR-40511](https://jira.hl7.org/browse/FHIR-40511))([Applied here](guidance.html#duplicate-data))
 
 
 ### Changes and Updates for Version 4.0.0 (STU4)
