@@ -2,14 +2,13 @@
 ### Introduction
 Clinical Quality Measures are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population.
 
-The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for data exchange scenarios in the Quality Measure Ecosystem.
+The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for two purposes in the Quality Measure Ecosystem.  
 
--  The first interaction is when a Producer, such as a practitioner, or owner of data needs to exchange that data with a Consumer of that data, such as a payer, a registry or public health. We call this the [Data Exchange] Scenario. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract. There may also be use cases where the Producer in this scenario is a Payer and needs to exchange data with a Provider.
+- The first interaction is when a Producer, such as a practitioner, or owner of data needs to exchange that data with a Consumer of that data, such as a payer, a registry or public health. We call this the [Data Exchange] Scenario. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract. There may also be use cases where the Producer in this scenario is a Payer and needs to exchange data with a Provider.
 
--  The second interaction is when a Reporter needs to exchange a measure report with a Receiver. This guide addresses the Individual Measure Reporting and the Summary Reporting. As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver. Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
+- The second interaction is when a Reporter needs to exchange a measure report with a Receiver. This guide addresses the Individual Measure Reporting and the Summary Reporting. As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver. Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
--  The third interaction is Gaps in Care Reporting. Gaps in Care Reporting is used to report the [open and/or closed gaps] for quality measures over a [gaps through period] specified by a Client. Optionally, it is also used to report details to the open gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
-
+- The third interaction is Gaps in Care Reporting. Gaps in Care Reporting is used to report the [open and/or closed gaps] for quality measures over a [gaps through period] specified by a Client. Optionally, it is also used to report details to the open gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
 
 ### Preconditions and Assumptions
 
@@ -33,7 +32,11 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
     -  Multiple MeasureReport may reference the same instance of a resource.
 
--   Both Consumers and Producers should share a common understanding that allows the same measures to be applied in healthcare and at the aggregator. This understanding can be based on a structured expression language (e.g. CQL) or any agreed upon method. This enables the application of the same measures across populations that span multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
+-   Both Consumers and Producers *should* use a common clinical
+    quality language (CQL) that would allow the same measures to be
+    applied in healthcare and at the aggregator. This would also enable
+    the application of the same measures across populations that span
+    multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
 
     -  The MeasureReport profiles in this IG are used to report CQFM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQFM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQFM Measure, including those not utilizing CQL.
 
@@ -76,10 +79,12 @@ The Bundles used in the DEQM operations enable the evaluation and exchange of da
 
  Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI Core profiles and are used as the default instead of the corresponding QI Core profile.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
+<div class="new-content" markdown="1">
 [QI Core Practitioner], [QI Core Organization], and [QI Core Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
 
 
 ### Negation Patterns for Quality Measures
+<div class="new-content" markdown="1">
 ​Refer to the Quality Measure Implementation Guide for guidance on [negation patterns in quality measurements]. Note that implementations processing negated data may not be returned with a single code, but rather a value set identifier represented by the [Not Done Value Set] which are part of the QI Core profiles, and should consider data with the appropriate value set identifier as satisfying the criteria for value set membership. The negation pattern for the MedicationRequest (MedicationNotRequested) resource is demonstrated in the [Single Indv Vte Report Option 7] example.
 </div>
 The negation patterns described here are about approaches for identifying when events are not present or when events are documented as not occurring for a reason. These patterns may appear throughout a measure in any of the various population criteria, depending on measure intent. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. An example of this is the [VTE-1 USE Case Option 7].
