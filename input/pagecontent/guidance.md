@@ -69,16 +69,12 @@ When the [care-gaps](OperationDefinition-care-gaps.html) operation is run on the
 
 The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with only [open gaps], only [closed gaps], or both [open and closed gaps]. The [DEQM Population Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [DEQM Population Reference Extension], the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
 
-### DEQM Operation Bundles Organized by Subject
-
-The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles. 
-
 ### Default Profiles Used in the Evaluation of a Measure
 
  Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI Core profiles and are used as the default instead of the corresponding QI Core profile.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
 [QI Core Practitioner], [QI Core Organization], and [QI Core Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
-
+</div>
 
 ### Negation Patterns for Quality Measures
 ​When DEQM is used to report CQFM Measures that use CQL and the QI-Core data model, negation patterns allow identifying when events are not present or when events are documented as not occurring for a reason.  They may appear throughout a measure in any of the population criteria. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. The negation pattern for the MedicationRequest (MedicationNotRequested) resource is demonstrated in the [Single Indv Vte Report Option 7] example. For more information refer to the [Using CQL IG section on negation] and the [QI Core Negation] page.
@@ -115,7 +111,7 @@ The Bundles used in the DEQM operations enable the evaluation and exchange of da
 
 Certain elements in the profiles defined in this implementation guide are marked as Must Support. This flag is used to indicate that the element plays a critical role in defining and sharing quality measures, and implementations SHALL understand and process the element.
 
-In addition, because this specification makes use of data implementation guides (e.g. US Core, QI-Core), the implications of the Must Support flag for profiles used from those implementation guides must be considered.
+When exchanging data and reporting with DEQM, any Must Support flags in the supporting data model should be respected when exchanging data with DEQM profiles. The use of DEQM profiles alone does not imply that evaluated resources are valid to base FHIR or any other FHIR profiles.
 
 For more information, see the definition of [Must Support](http://hl7.org/fhir/R4/conformance-rules.html#mustSupport) in the base FHIR specification.
 
