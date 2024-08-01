@@ -21,6 +21,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Created 3 new extensions for numeratorMembership, denominatorMembership, and measurePopulationMembership and added to all 3 Measure Report profiles ([FHIR-44736](https://jira.hl7.org/browse/FHIR-44736))
    - Added section about Duplicate Data to the Guidance page ([FHIR-40511](https://jira.hl7.org/browse/FHIR-40511))([Applied here](guidance.html#duplicate-data))
    - Updated measure report introductions as specified ([FHIR-45140](https://jira.hl7.org/browse/FHIR-45140))
+   - Updated practitioner to provider for the IN parameter on deqm.evaluate-measure ([FHIR-46354](https://jira.hl7.org/browse/FHIR-46354))([Applied here](OperationDefinition-deqm.evaluate-measure.html))
 
 
 ### Changes and Updates for Version 4.0.0 (STU4)
