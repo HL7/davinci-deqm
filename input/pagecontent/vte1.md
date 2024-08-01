@@ -4,7 +4,7 @@
 
 The VTE-1 measure assesses the number of patients who received venous thromboembolism (VTE) prophylaxis or have documentation why no venous thromboembolism prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission. Note that the Individual Measure Reporting Interaction is the only interaction used for this measure.
 
-The example presented is based on [ECQI Resource Center], which has been represented using profiles derived from [QI Core].  Additional information regarding the measure specification can be found in the [Quality Measure Implementation Guide]
+The example presented is based on the QDM version of CMS108v7, which has been represented using profiles derived from [QI Core]. Measure specifications are available on the [ECQI Resource Center], [CMS0108v12].
 
 ### FHIR Resource Overview
 
