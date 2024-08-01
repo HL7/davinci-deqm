@@ -1,36 +1,58 @@
 
-{% assign id = {{include.id}} %}
-
+<!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
-
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each {{site.data.structuredefinitions.[id].type}} must have:**
+**Each MeasureReport Must Have:**
+1. status: complete \| pending \| error
+2. type: individual \| subject-list \| summary \| data-collection
+3. measure: What measure was calculated
+4. date: When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent.
+5. reporter: Organization that generated the MeasureReport
+6. period: What period the report covers
+7. period.start: Starting time with inclusive boundary
+8. period.end: End time with inclusive boundary, if not ongoing
+9. group: Measure results for each group
+10. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+11. group.stratifier.code: What stratifier of the group
+12. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+13. group.stratifier.stratum.population.count: Size of the population
 
-1. A status
-1. A measure report type hardcoded to "summary"
-1. The reference to the [Measure]
-1. The date the report was generated
-1. The organization that reported the data
-1. The measurement period that the report covers
-1. The results of the measure calculation for each group
-1. The measure score calculated for each reported group
+**Each MeasureReport Must Support:**
+1. reportingProgram: Reporting program
+2. inputParameters: What parameters
+3. supplementalData: Supplemental Data
+4. criteriaReference: Criteria reference
+5. description: Description of the supplemental data
+6. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+7. vendor: Vendor information
+8. cehrt: CMS EHR Certifciation ID
+9. software: Extension
+10. message: Evaluation messages
+11. group: Group of practitioners responsible for a report
+12. improvementNotation: increase \| decrease
+13. group.id: Unique id for inter-element referencing
+14. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+15. calculatedDate: The date the score was calculated
+16. groupImprovementNotation: increase \| decrease
+17. description: Description of the group
+18. group.code: Meaning of the group
+19. group.population: The populations in the group
+20. countQuantity: Count as a Quantity
+21. description: Description of the population
+22. group.population.count: Size of the population
+23. group.measureScore: What score this group achieved
+24. altscoretype: Possible additional measureScore value types
+25. group.stratifier: Stratification results
+26. description: Description of the stratifier
+27. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
+28. group.stratifier.stratum.value: The stratum value, e.g. male
+29. group.stratifier.stratum.population: Population results in this stratum
+30. group.stratifier.stratum.measureScore: What score this stratum achieved
+31. strataltscoretype: Possible additional measureScore value types
 
-Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
-
-1. Reference to the reporting program using the DEQM [Reporting Program](StructureDefinition-extension-reportingProgram.html) Extension
-1. Reference to the supplemental data using the DEQM [Supplemental Data](StructureDefinition-extension-supplementalData.html) Extension
-1. The scoring type defined by the referenced Measure using the DEQM [Measure Scoring] Extension
-1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension
-1. A certification identifier using the DEQM [Certification Identifier] Extension
-1. Specify the software systems used by the reporting system using the CQFM [Software System]({{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html) Extension
-1. Indicate whether improvement in the measure is noted by an increase or decrease in the measure score
-1. The scoring type for the reported group using the DEQM [Measure Scoring] Extension
-1. Indicate whether improvement in the reported group is noted by an increase or decrease in the measure score
-1. A code that defines the meaning of the reported group
-1. The populations in the reported group
-1. Measure results for each group with separate subgroup calculations (stratifiers)
-1. Ability to use other types for measure score using the DEQM [Alternate Score Type] Extension
+<!--End Generated Intro (DO NOT REMOVE)-->
+{% assign id = {{include.id}} %}
 
 **Additional Profile specific implementation guidance:**
 

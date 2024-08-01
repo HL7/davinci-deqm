@@ -1,20 +1,22 @@
 
+<!--Begin Generated Intro Tag (DO NOT REMOVE)-->
+### Mandatory Data Elements and Terminology
+The following data-elements are mandatory (i.e data MUST be present).
+
+**Each Bundle Must Have:**
+1. identifier: Persistent identifier for the bundle
+2. identifier.system: The namespace for the identifier value
+3. identifier.value: The value that is unique
+4. type: document \| message \| transaction \| transaction-response \| batch \| batch-response \| history \| searchset \| collection
+5. timestamp: When the bundle was assembled
+6. entry: Entry in the bundle - will have a resource or information
+7. entry: Contains a composition of gaps in care report for an individual for one or more measures
+8. entry.resource: This Composition uses the DEQM Gaps In Care Composition Profile
+
+<!--End Generated Intro (DO NOT REMOVE)-->
 {% assign id = {{page.id}} %}
 
 This profile builds on [Bundle](https://www.hl7.org/fhir/bundle.html).
-
-### Mandatory Data Elements and Terminology
-
-The following data-elements are mandatory (i.e data MUST be present).
-
-**Each {{site.data.structuredefinitions.[id].type}} must have:**
-
-1. A `Bundle.type` with a fixed code "document"
-1. A `Bundle.entry` references a composition using the [DEQM Gaps In Care Composition Profile] for a  measure
-
-
-1. A `Bundle.timestamp` 
-1. A `Bundle.identifier` with a system and a value
 
 **Additional Profile specific implementation guidance:**
 

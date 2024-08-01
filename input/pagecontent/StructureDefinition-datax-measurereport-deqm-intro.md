@@ -1,24 +1,30 @@
 {% assign id = {{include.id}} %}
-
-
+<!--Begin Generated Intro Tag (DO NOT REMOVE)-->
+### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each {{site.data.structuredefinitions.[id].type}} must have:**
+**Each MeasureReport Must Have:**
+1. updatetype: Optional Extensions Element
+2. status: complete \| pending \| error
+3. type: individual \| subject-list \| summary \| data-collection
+4. measure: What measure was calculated
+5. subject: What individual(s) the report is for
+6. date: When the report was generated
+7. reporter: The organization where the measure was completed
+8. period: What period the report covers
+9. period.start: Starting time with inclusive boundary
+10. period.end: End time with inclusive boundary, if not ongoing
 
-1. Whether is a [snapshot] or [incremental] update*
-1. A status
-1. measure report type hardcoded to "data-collection"
-1. The reference to the [Measure]({{site.data.fhir.path}}measure.html)
-1. A link to the subject the report is about
-1. The date the report was generated
-1. The organization that reported the data
-1. The measurement period
+**Each MeasureReport Must Support:**
+1. software: Extension
+2. vendor: Vendor information
+3. message: Messages encountered while creating the report
+4. inputParameters: What parameters
+5. group: Group of practitioners responsible for a report
+6. description: Description of the population
+7. evaluatedResource: What data was used to calculate the measure score
 
-Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
-
-1. References to other resources involved in producing the report
-1. Specify the software systems used by the reporting system using the CQFM [Software System]({{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html) Extension
-1. A reporter.group
+<!--End Generated Intro (DO NOT REMOVE)-->
 
 **Additional Profile specific implementation guidance:**
 
