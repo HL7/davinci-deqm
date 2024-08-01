@@ -42,8 +42,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -54,8 +53,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile
-                 value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -66,8 +64,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -78,9 +75,20 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
       </type>
+    </element>
+    <element id="MeasureReport.extension:message">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="message"/>
+      <short value="Messages encountered while creating the report"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
+      </type>
+      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
@@ -100,8 +108,18 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
-      <requirements
-                    value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:inputParameters">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="inputParameters"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-inputParameters"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.subject">
@@ -110,8 +128,13 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile
-                       value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-device"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-relatedperson"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -129,8 +152,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile
-                       value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -141,8 +163,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile
-                 value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -183,6 +204,18 @@
       <path value="MeasureReport.group.stratifier"/>
       <min value="0"/>
       <max value="0"/>
+    </element>
+    <element id="MeasureReport.group.population.extension:populationDescription">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the population"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>

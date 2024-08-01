@@ -173,11 +173,12 @@ definition:
       reference:
         reference: Location/location02
       description: DEQM Location02 example
-    - exampleBoolean: true
-      name: Single Indv Vte Report Option 1
-      reference:
-        reference: Bundle/single-indv-vte-report-option1
-      description: DEQM Single Indv Vte Report example using MedicationAdministration
+    #  Removed per FHIR-45974
+    #- exampleBoolean: true
+    #  name: Single Indv Vte Report Option 1
+    #  reference:
+    #    reference: Bundle/single-indv-vte-report-option1
+    #  description: DEQM Single Indv Vte Report example using MedicationAdministration
     - exampleBoolean: true
       name: Single Indv Vte Report Option 7
       reference:
@@ -558,11 +559,12 @@ definition:
       reference:
         reference: Patient/patient01
       description: DEQM Patient01 example
-    - exampleBoolean: true
-      name: DEQM MedicationAdministration Example
-      reference:
-        reference: MedicationAdministration/medicationadministration01
-      description: DEQM MedicationAdministration Example example
+    #  Removed per FHIR-45974
+    #- exampleBoolean: true
+    #  name: DEQM MedicationAdministration Example
+    #  reference:
+    #    reference: MedicationAdministration/medicationadministration01
+    #  description: DEQM MedicationAdministration Example example
     - exampleBoolean: false
       reference:
         reference: StructureDefinition/extension-measureScoring
@@ -623,9 +625,10 @@ definition:
     - exampleBoolean: false
       reference:
         reference: CapabilityStatement/consumer-client
-    - exampleBoolean: false
-      reference:
-        reference: StructureDefinition/medicationadministration-deqm
+    #  Removed per FHIR-45974
+    #- exampleBoolean: false
+    #  reference:
+    #    reference: StructureDefinition/medicationadministration-deqm
   page:
     generation: markdown
     nameUrl: index.html
@@ -680,9 +683,10 @@ definition:
           - generation: generated
             nameUrl: StructureDefinition-extension-reportingProgramReference.html
             title: StructureDefinition Extension reportingProgramReference DEQM
-          - generation: generated
-            nameUrl: StructureDefinition-medicationadministration-deqm.html
-            title: StructureDefinition MedicationAdministration DEQM
+          #  Removed per FHIR-45974
+          #- generation: generated
+          #  nameUrl: StructureDefinition-medicationadministration-deqm.html
+          #  title: StructureDefinition MedicationAdministration DEQM
           - generation: generated
             nameUrl: StructureDefinition-extension-measureScoring.html
             title: StructureDefinition Extension measureScoring

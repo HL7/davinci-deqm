@@ -59,7 +59,7 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
-|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
+|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has a [prospective gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The Gaps in Care Report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
 {: .grid}
 
@@ -90,9 +90,6 @@ Several new input parameters are specified and added to the [care-gaps](Operatio
 -	**program** is used to specify one or more programs that a provider or an organization participates in. For example, the program may be a risk based, value based, or other performance program such as the Merit-based Incentive Payment System (MIPS) and Hospital Quality Reporting programs of CMS.
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter: **return**. In comparison to the return output parameter specified in the [base care-gaps operation], the **return** here returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
-
-Through the requirement analysis of the Gaps in Care Reporting for the STU3 ballot, it is determined that existing care-gaps operation in FHIR R4 requires a re-design. The plan is to promote the care-gaps operation specified in this version of the guide to the next release of the base FHIR specification.
-{:.stu-note}
 
 Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
 {% include img-narrow.html img="gic-care-gaps-operation-single-patient.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}

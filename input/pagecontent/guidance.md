@@ -1,6 +1,5 @@
 
 ### Introduction
-
 Clinical Quality Measures are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population.
 
 The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the interactions for two purposes in the Quality Measure Ecosystem.  
@@ -10,9 +9,6 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 - The second interaction is when a Reporter needs to exchange a measure report with a Receiver. This guide addresses the Individual Measure Reporting and the Summary Reporting. As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver. Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
 - The third interaction is Gaps in Care Reporting. Gaps in Care Reporting is used to report the [open and/or closed gaps] for quality measures over a [gaps through period] specified by a Client. Optionally, it is also used to report details to the open gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
-
-  Patient List Reporting is a third reporting type which is similar to a QRDA Category 2 report. This Type is out of scope for this version of the Implementation Guide.  In a future version this guide, Patient List Reporting will be addressed.
-  {:.stu-note}
 
 ### Preconditions and Assumptions
 
@@ -42,6 +38,8 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
     the application of the same measures across populations that span
     multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
 
+    -  The MeasureReport profiles in this IG are used to report CQFM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQFM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQFM Measure, including those not utilizing CQL.
+
 ### DEQM MeasureReport Profiles
 
 The MeasureReport resource is used as an organizer for both the Data Exchange Scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
@@ -63,7 +61,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 #### Data Quality
 
-The default profiles in this implementation guide provide a baseline for data validation, but note that additional validation criteria may be expressed via Measure specific profiles. The profiles expected by the CQL will be referenced in the retrieve expressions of the logic, and surfaced as profile elements of the data requirements. These references to profiles used by the CQL script are expected to be used for data quality, data integrity checks, and data validation. Data access layers providing resources to a CQL engine are expected to supply resources that conform to the stated profiles.
+Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated metadata. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
 
 #### Gaps in Care Reporting
 
@@ -73,13 +71,17 @@ When the [care-gaps](OperationDefinition-care-gaps.html) operation is run on the
 
 The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with only [open gaps], only [closed gaps], or both [open and closed gaps]. The [DEQM Population Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [DEQM Population Reference Extension], the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
 
+### DEQM Operation Bundles Organized by Subject
+
+The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles. 
+
 ### Default Profiles Used in the Evaluation of a Measure
 
  Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI Core profiles and are used as the default instead of the corresponding QI Core profile.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
 <div class="new-content" markdown="1">
 [QI Core Practitioner], [QI Core Organization], and [QI Core Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
-</div>
+
 
 ### Negation Patterns for Quality Measures
 <div class="new-content" markdown="1">

@@ -4,7 +4,7 @@
 
 The VTE-1 measure assesses the number of patients who received venous thromboembolism (VTE) prophylaxis or have documentation why no venous thromboembolism prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission. Note that the Individual Measure Reporting Interaction is the only interaction used for this measure.
 
-The example presented is based on the QDM version of [CMS 108v7], which has been represented using profiles derived from [QI Core].  Additional information regarding the measure specification can be found in the [Quality Measure Implementation Guide]
+The example presented is based on the QDM version of CMS108v7, which has been represented using profiles derived from [QI Core]. Measure specifications are available on the [ECQI Resource Center], [CMS0108v12]. Additional information regarding the measure specification can be found in the [Quality Measure Implementation Guide].
 
 ### FHIR Resource Overview
 
@@ -23,16 +23,14 @@ The example presented is based on the QDM version of [CMS 108v7], which has been
 |Measure|CQFM Measure Profile|[CQFM Measure]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-|MedicationAdministration|DEQM MedicationAdministration Profile|[DEQM MedicationAdministration]|
 |MedicationRequest|Qi Core Medication Not Requested|[QICoreMedicationNotRequested]|
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|DEQM Practitioner Profile|[DEQM Practitioner]|
 |Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
 |ServiceRequest|QI Core ServiceRequest Profile|[QI Core ServiceRequest]|
 
-
+{: #practitioner-references}
 ### Graph of VTE-1 Resources
 
 In this section we list resource graph diagrams for 7 clinical scenarios that meet the VTE-1 measure.  Note that overlapping boxes in the diagrams represents a choice of one the resources.
