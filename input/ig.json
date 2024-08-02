@@ -266,6 +266,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Summ Attestation",
+                "reference": {
+                    "reference": "MeasureReport/summ-attestation"
+                },
+                "description": "DEQM Summ Attestation example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Datax Measurereport02",
                 "reference": {
                     "reference": "MeasureReport/datax-measurereport02"
@@ -1158,6 +1166,24 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-calculatedDate"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-numeratorMembership"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-denominatorMembership"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-measurePopulationMembership"
                 }
             }
         ],
