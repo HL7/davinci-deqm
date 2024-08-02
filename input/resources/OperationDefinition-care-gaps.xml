@@ -67,6 +67,14 @@
         <searchType value="reference"/>
     </parameter>
     <parameter>
+        <name value="parameters"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Any input parameters for the Measure evaluation. If the measure uses CQL, the parameter types are mapped to CQL as specified in the Parameters and Data Requirements section of the Using CQL with FHIR Implementation Guide. Any parameters defined in this input will be bound by name to parameters defined in the logic library referenced from library element of the Measure. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL."/>
+        <type value="Parameters"/>
+    </parameter>
+    <parameter>
         <name value="practitioner"/>
         <use value="in"/>
         <min value="0"/>
@@ -122,14 +130,13 @@
         <type value="canonical"/>
     </parameter>
     <parameter>
-        <name value="program"/>
+        <name value="manifest"/>
         <use value="in"/>
         <min value="0"/>
-        <max value="*"/>
-        <documentation value="The programs that a provider (either practitioner or provider organization) participates in, e.g., risk based, value based, or other performance program such as CMS Merit-based Incentive Payment Program (MIPS), Hospital Quality Reporting (HQR) programs. Program is represented in the Measure using element [useContext](https://www.hl7.org/fhir/measure-definitions.html#Measure.useContext). When the code attribute of useContext is program, then the value attribute of useContext represents a specific program. Note that the type of this parameter is a string with a search type of [token](https://www.hl7.org/fhir/search.html#token), so the $care-gaps operation has only simple input parameters and may be invoked using GET."/>
-        <type value="string"/>
-        <searchType value="token"/>
-    </parameter>
+        <max value="1"/>
+        <documentation value="Specifies an asset-collection library that provides dependency version resolution and expansion rules for the operation. See the description of manifest in the Canonical Resource Management Infrastructure IG for a complete description of how manifest values are used to provide defaults for dependency version resolution and expansion parameters. Parameters specified directly in the operation override behaviors specified by the manifest parameter. In general, if this parameter is supplied, it is expected to be used in nested operation calls. For example, in evaluating a measure, if the expansion of a value set is required, this parameter SHALL be supplied to that expansion."/>
+        <type value="canonical"/>
+     </parameter>
     <parameter>
         <name value="isDocument"/>
         <use value="in"/>
