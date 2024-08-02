@@ -59,7 +59,7 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
-|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has an [open gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
+|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has a [prospective gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
 |**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The Gaps in Care Report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
 {: .grid}
 

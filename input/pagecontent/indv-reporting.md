@@ -12,8 +12,9 @@ The [Quality Reporting] Page in the R4 Release of the FHIR Specification provide
 
 #### Relationship between QI Core, DEQM, and CQMs
 {:.no_toc}
+{: qualityMeasurementStandardsLandscapeIndv}
 
-As described in the Quality Measurement Standards Landscape section of this implementation guide, the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
+<span class="bg-success">As described in the [Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscapeIndex) section of this implementation guide, </span>the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
 
 ### Constructing an Individual Report
 
@@ -76,7 +77,6 @@ missing from the record or from activities that did not occur. However,
 both of these situations result in the $care-gaps and the provider is 
 notified in that report.  Missing data may be identified in a 
 GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profile].
-</div>
 
 {:.no_toc}
 
@@ -109,8 +109,10 @@ Note that Multiple individual reports either for the same or multiple patient fo
 `POST|[base]`
 
 {% include error-note.md transaction = 'Individual Reporting' %}
-
+<div class="new-content">
 {% include examplebutton.html example="post-indv-report-example" b_title = "Click Here To See Example POST Individual Report (edited for brevity)" %}
+</div>
+{: #request-body}
 
 For a complete un-edited examples for both *single* and *multiple* patients see the [MRP Individual MeasureReport], [COL Individual MeasureReport], and [VTE Individual MeasureReport] and [Bundle Multiple Indv Report] examples.  for an example of a Individual MeasureReport with counts for stratifiers specified in an eCQM see the [Indv Measurreport Stratification Example].
 
