@@ -95,7 +95,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="The provider for which the report will be run. This may be a reference to a Practitioner, PractitionerRole, or Organization. If specified, the measure will be calculated for subjects that have a primary relationship to the identified provider. How this relationship is determined is implementation-specific. If specified, the measure will be calculated only for subjects that have a primary relationship to the identified provider"/>
+        <documentation value="The provider for which the report will be run. This may be a reference to a Practitioner, PractitionerRole, or Organization. If specified, the measure will be calculated for subjects that have a primary relationship to the identified provider. How this relationship is determined is implementation-specific."/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
