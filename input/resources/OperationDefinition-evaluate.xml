@@ -48,6 +48,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
+        <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary"/>        
         <documentation value="Specifies an asset-collection library that provides dependency version resolution and expansion rules for the operation. See the description of manifest in the Canonical Resource Management Infrastructure IG for a complete description of how manifest values are used to provide defaults for dependency version resolution and expansion parameters. Parameters specified directly in the operation override behaviors specified by the manifest parameter. In general, if this parameter is supplied, it is expected to be used in nested operation calls. For example, in evaluating a measure, if the expansion of a value set is required, this parameter SHALL be supplied to that expansion."/>
         <type value="canonical"/>
     </parameter>
@@ -56,11 +57,11 @@
       <use value="in"/> 
       <min value="0"/> 
       <max value="1"/> 
-      <documentation value="The quality program being reported via code from the [Reporting Program value set](http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs) indicating which quality program is being reported."/> 
+      <documentation value="The quality program being reported via code from the [Reporting Program value set](http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs-example) indicating which quality program is being reported."/> 
       <type value="CodeableConcept"/>
       <binding>
         <strength value="extensible"/>
-        <valueSet value="http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs"/>
+        <valueSet value="http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs-example"/>
       </binding> 
     </parameter>
     <parameter>
