@@ -33,7 +33,7 @@
       "use": "in",
       "min": 1,
       "max": "*",
-      "documentation": "The Bundles that contain one or more MeasureReports and data of interest. See <section created from FHIR-46372> for discussion about the Bundles.",
+      "documentation": "The Bundles that contain one or more MeasureReports and data of interest. See ([Section 2.1.4](guidance.html#deqm-operation-bundles-organized-by-subject)) for discussion about the Bundles.",
       "type": "Bundle"
     }
   ]
