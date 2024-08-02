@@ -9,7 +9,7 @@
   },
   "status": "complete",
   "type": "summary",
-  "measure": "http://example.org/fhir/Measure/CQFMAttestationMeasure",
+  "measure": "http://example.org/fhir/Measure/exampleAttestationMeasure",
   "subject": {
     "reference": "Organization/123"
   },
