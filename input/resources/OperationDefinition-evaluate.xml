@@ -128,6 +128,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
+        <documentation value="A Group resource as the subject for which the gaps in care report will be reported."/>
         <type value="Group"/>
     </parameter>
     
