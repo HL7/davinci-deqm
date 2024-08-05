@@ -49,7 +49,7 @@
           "use": "in",
           "min": 0,
           "max": "*",
-          "documentation": "The id of a Measure resource that is on the server for which the gaps in care will be reported. E.g., the id of the Measure resource for Breast Cancer Screening measure.",
+          "documentation": "The id of a Measure resource that is on the server for which the data-of-interest will be collected. E.g., the id of the Measure resource for Breast Cancer Screening measure.",
           "type": "id"
       },
       {
@@ -57,7 +57,7 @@
           "use": "in",
           "min": 0,
           "max": "*",
-          "documentation": "The business identifier of a measure for which the gaps in care will be reported. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system. Note that the type of this parameter is a string with a search type of token, so the $care-gaps operation has only simple input parameters and may be invoked using GET.",
+          "documentation": "The business identifier of a measure for which the data-of-interest will be collected. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system. Note that the type of this parameter is a string with a search type of token, so the $care-gaps operation has only simple input parameters and may be invoked using GET.",
           "type": "string",
           "searchType": "token"
       },
@@ -66,7 +66,7 @@
           "use": "in",
           "min": 0,
           "max": "*",
-          "documentation": "This the the URL of a measure for which the gaps in care will be reported. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers.",
+          "documentation": "This the the URL of a measure for which the data-of-interest will be collected. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers.",
           "type": "canonical"
       },
       {
@@ -74,7 +74,7 @@
           "use": "in",
           "min": 0,
           "max": "*",
-          "documentation": "The measure to be evaluated is provided as a Measure resource.",
+          "documentation": "The measure for which the data-of-interest will be collected is provided as a Measure resource.",
           "type": "Measure"
       },
       {
@@ -82,7 +82,7 @@
           "use": "in",
           "min": 0,
           "max": "*",
-          "documentation": "The measure to evaluate. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance",
+          "documentation": "The measure for which the data-of-interest will be collected. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance",
           "type": "string",
           "searchType": "token"
       },
@@ -91,7 +91,7 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "Subject for which the measure will be calculated. If not specified, the measure will be calculated for all subjects that meet the requirements of the measure. If specified, the measure will only be calculated for the referenced subject(s)",
+          "documentation": "Subject for which the data-of-interest for the measure will be collected. If not specified, measure data will be collected for all subjects that meet the requirements of the measure.  If specified, the measure will only be collected for the referenced subject(s).",
           "type": "string",
           "searchType": "reference"
       },
@@ -100,7 +100,7 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "",
+          "documentation": "Subject for which the data-of-interest for measure will be collected is provided as a Group resource.",
           "type": "Group"
       },
       {
@@ -108,7 +108,7 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "Practitioner (references [QICore Practitioner](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner)) for which the measure will be calculated. If specified, the measure will be calculated only for subjects that have a primary relationship to the identified practitioner",
+          "documentation": "Practitioner (references [QICore Practitioner](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner)) for which the measure will be collected. If specified, the measure will be calculated only for subjects that have a primary relationship to the identified practitioner",
           "type": "string",
           "searchType": "reference"
       },
@@ -117,7 +117,7 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "The date the results of this measure were last received. This parameter is only valid for patient-level reports and is used to indicate when the last time a result for this patient was received. This information can be used to limit the set of resources returned for a patient-level report",
+          "documentation": "The date the results of this measure were last received. This parameter used to indicate when the last time data for this measure was collected. This information is used to support incremental data collection scenarios.",
           "type": "dateTime"
        },
      {
@@ -125,7 +125,7 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "",
+          "documentation": "Organization resource for which data-of-interest for the given measure will be collected.",
           "type": "Organization"
        },
      {
@@ -133,7 +133,7 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "",
+          "documentation": "Organization (references [QICore Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization)) for which data-of-interest for the given measure will be collected.",
           "type": "string",
           "searchType": "reference"
       },
@@ -142,7 +142,7 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "",
+          "documentation": "Indicates whether data collected conform to the appropriate profiles as specified by the measure.",
           "type": "boolean"
        },
      {
