@@ -104,7 +104,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
 #### Gaps in Care Reporting Scenarios
-Gaps in Care Reporting is added as a new group of quality reporting scenarios supported in this version of the guide. Similar to the reporting scenarios, a Gaps in Care Report is used to report the results of quality measures on patients or population, but for a [gaps through period] that is of interest for a Client.
+Gaps in Care Reporting is a reporting scenario supported in this implementation guide. Similar to the quality reporting scenarios, a Gaps in Care Report is used to report the results of quality measures on patients or population, but for a [gaps through period] that is of interest for a Client.
 
 1. **Gaps in Care** - Used to report the results of [open and/or closed gaps] of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open and/or closed gaps.
 
