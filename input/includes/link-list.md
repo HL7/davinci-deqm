@@ -84,6 +84,7 @@
 [QI Core DiagnosticReport]:{{site.data.fhir.qicore}}/StructureDefinition-qicore-diagnosticreport-lab.html
 [QI Core Encounter]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-encounter.html
 [QI Core Location]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-location.html
+[QI Core Negation]: {{site.data.fhir.qicore}}/negation.html
 [QI Core Observation]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-observation.html
 [QI Core Organization]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-organization.html
 [QI Core Patient]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-patient.html
@@ -110,6 +111,7 @@
 [collection]: {{site.data.fhir.path}}bundle.html#collection
 [US Core]: {{site.data.fhir.uscore}}/index.html
 [Use cases]: usecases.html
+[Using CQL IG section on negation]: {{site.data.fhir.qicore}}/patterns.html#negation-in-fhir
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html

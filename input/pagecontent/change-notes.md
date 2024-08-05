@@ -4,6 +4,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
 1. Applied the following trackers:
+   - Negation Patterns for Quality Measures text change ([FHIR-46246](https://jira.hl7.org/browse/FHIR-46246))([Applied here](guidance.html#negation-patterns-for-quality-measures))
    - Must Support guidance text change ([FHIR-43586](https://jira.hl7.org/browse/FHIR-43586))([Applied here](guidance.html#must-support))
    - Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](vte1.html#practitioner-references)) and ([here](mrp.html#practitioner_footnote))
    - Summary measure reporting typo ([FHIR-44570](https://jira.hl7.org/browse/FHIR-44570))([Applied here](summary-reporting.html#summary-measure-reporting))
