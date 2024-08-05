@@ -57,6 +57,12 @@
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;=1.0)"/>
       </constraint>
+      <constraint>
+        <key value="deqm-7"/>
+        <severity value="error"/>
+        <human value="stratifier.code or the stratifier.stratum.component.code is present, but not both"/>
+        <expression value="stratifier.code xor stratifier.stratrum.component.code exists"/>
+      </constraint>
       <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.extension:reportingProgram">
@@ -483,7 +489,7 @@
     </element>
     <element id="MeasureReport.group.stratifier.code">
       <path value="MeasureReport.group.stratifier.code"/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
