@@ -5,6 +5,10 @@ An individual patient level report contains quality data for one patient for one
 
 The Individual reporting scenario is supported by the [DEQM Individual MeasureReport Profile]. Transactions between Reporters (for example, an organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of individual patient level quality reports for CQMs to various quality reporting programs.
 
+### Supplemental Data Resources in MeasureReport
+
+The [supplementalData extension](http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
+
 #### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
@@ -70,12 +74,12 @@ criteria, and it is the job of the individual measure report to include
 relevant data that was present in the EHR, and to not include data that
 was missing from the EHR.
 
-The $care-gaps report indicates instances in which information does not 
-support the occurrence of an expected action. The report indicates absence 
-of evidence; it cannot differentiate between activity that happened yet is 
-missing from the record or from activities that did not occur. However, 
-both of these situations result in the $care-gaps and the provider is 
-notified in that report.  Missing data may be identified in a 
+The $care-gaps report indicates instances in which information does not
+support the occurrence of an expected action. The report indicates absence
+of evidence; it cannot differentiate between activity that happened yet is
+missing from the record or from activities that did not occur. However,
+both of these situations result in the $care-gaps and the provider is
+notified in that report.  Missing data may be identified in a
 GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profile].
 
 {:.no_toc}
