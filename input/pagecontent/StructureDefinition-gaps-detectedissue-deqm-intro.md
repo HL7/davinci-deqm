@@ -1,16 +1,20 @@
-
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
 **Each DetectedIssue Must Have:**
-1. modifierExtension: Gap Status
-2. code: Issue Category, e.g. drug-drug, duplicate therapy, etc.
-3. patient: Associated patient
-4. evidence: Supporting evidence
-5. evidence.detail: This references either a DEQM Individual MeasureReport or a GuidanceResponse resource. Note that referencing the GuidanceResponse resource allows potential profiling on GuidanceResponse in the future without breaking backward compatibility.
+1. modifierExtension: Extension
+2. modifierExtension: Gap Status
+3. status: registered \| preliminary \| final \| amended +
+4. code: Issue Category, e.g. drug-drug, duplicate therapy, etc.
+5. patient: Associated patient
+6. evidence: Supporting evidence
+7. evidence.detail: This references either a DEQM Individual MeasureReport or a GuidanceResponse resource. Note that referencing the GuidanceResponse resource allows potential profiling on GuidanceResponse in the future without breaking backward compatibility.
+8. mitigation.action: What mitigation?
 
 <!--End Generated Intro (DO NOT REMOVE)-->
+
+
 
 {% assign id = {{page.id}} %}
 

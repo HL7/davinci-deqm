@@ -1,30 +1,34 @@
-{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
 **Each MeasureReport Must Have:**
-1. updatetype: Optional Extensions Element
-2. status: complete \| pending \| error
-3. type: individual \| subject-list \| summary \| data-collection
-4. measure: What measure was calculated
-5. subject: What individual(s) the report is for
-6. date: When the report was generated
-7. reporter: The organization where the measure was completed
-8. period: What period the report covers
-9. period.start: Starting time with inclusive boundary
-10. period.end: End time with inclusive boundary, if not ongoing
+1. extension: Extension
+2. MeasureReport.updatetype: Optional Extensions Element
+3. status: complete \| pending \| error
+4. type: individual \| subject-list \| summary \| data-collection
+5. measure: What measure was calculated
+6. subject: What individual(s) the report is for
+7. date: When the report was generated
+8. reporter: The organization where the measure was completed
+9. period: What period the report covers
+10. period.start: Starting time with inclusive boundary
+11. period.end: End time with inclusive boundary, if not ongoing
+12. group.stratifier.stratum.component.code: What stratifier component of the group
+13. group.stratifier.stratum.component.value: The stratum component value, e.g. male
 
 **Each MeasureReport Must Support:**
-1. software: Extension
-2. vendor: Vendor information
-3. message: Messages encountered while creating the report
-4. inputParameters: What parameters
-5. group: Group of practitioners responsible for a report
-6. description: Description of the population
+1. MeasureReport.software: Extension
+2. MeasureReport.vendor: Vendor information
+3. MeasureReport.message: Messages encountered while creating the report
+4. MeasureReport.inputParameters: What parameters
+5. MeasureReport.reporter.group: Group of practitioners responsible for a report
+6. MeasureReport.group.population.description: Description of the population
 7. evaluatedResource: What data was used to calculate the measure score
 
 <!--End Generated Intro (DO NOT REMOVE)-->
+
+{% assign id = {{include.id}} %}
 
 **Additional Profile specific implementation guidance:**
 
