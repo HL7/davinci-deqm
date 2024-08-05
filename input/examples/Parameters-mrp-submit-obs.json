@@ -6,7 +6,7 @@
             "name": "measureReport",
             "resource": {
                 "resourceType": "MeasureReport",
-                "id": "datax-measurereport02",
+                "id": "datax-measurereport01",
                 "meta": {
                     "versionId": "1",
                     "lastUpdated": "2018-09-05T16:59:53.000+00:00",
@@ -25,7 +25,7 @@
                 "type": "data-collection",
                 "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
                 "subject": {
-                    "reference": "Patient/patient02"
+                    "reference": "Patient/patient01"
                 },
                 "date": "2018-09-05T16:59:52.404Z",
                 "reporter": {

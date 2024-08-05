@@ -27,7 +27,7 @@ dependsOn:
   - version: 3.1.1
     id: uscore
     packageId: hl7.fhir.us.core
-    uri: 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core' 
+    uri: 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core'
   - version: 3.0.0
     id: cqfm
     packageId: hl7.fhir.us.cqfmeasures
@@ -143,6 +143,11 @@ definition:
       reference:
         reference: MeasureReport/datax-measurereport02
       description: DEQM Datax Measurereport02 example
+    - exampleBoolean: true
+      name: Summ Measurereport Attestation
+      reference:
+        reference: MeasureReport/summ-attestation
+      description: DEQM Summ Attestation example
     - exampleBoolean: true
       name: Mrp Submit Task
       reference:
