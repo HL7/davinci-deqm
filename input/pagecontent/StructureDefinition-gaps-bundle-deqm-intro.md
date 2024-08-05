@@ -1,8 +1,9 @@
+{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each Bundle Must Have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. identifier: Persistent identifier for the bundle
 2. identifier.system: The namespace for the identifier value
 3. identifier.value: The value that is unique

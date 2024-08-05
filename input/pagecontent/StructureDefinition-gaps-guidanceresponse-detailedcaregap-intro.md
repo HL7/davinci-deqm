@@ -1,8 +1,9 @@
+{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each GuidanceResponse Must Have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. module[x]: What guidance was requested
 2. status: success \| data-requested \| data-required \| in-progress \| failure \| entered-in-error
 3. dataRequirement.type: The type of the required data

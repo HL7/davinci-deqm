@@ -1,8 +1,9 @@
+{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each Composition Must Have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. status: preliminary \| final \| amended \| entered-in-error
 2. type: Kind of composition (LOINC if possible)
 3. subject: What individual the gaps in care report is for. All individual MeasureReports referenced must be for this same individual.
@@ -16,7 +17,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 11. section.focus: This references a DEQM individual MeasureReport
 12. section.entry: This references a gaps in care DetectedIssue
 
-**Each Composition Must Support:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. custodian: Identifies the organization who is responsible for ongoing maintenance of and accessing to this gaps in care report
 
 <!--End Generated Intro (DO NOT REMOVE)-->

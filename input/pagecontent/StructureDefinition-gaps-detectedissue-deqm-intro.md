@@ -1,8 +1,9 @@
+{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each DetectedIssue Must Have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. modifierExtension: Extension
 2. modifierExtension: Gap Status
 3. status: registered \| preliminary \| final \| amended +

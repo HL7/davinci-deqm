@@ -1,8 +1,9 @@
+{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each Group Must Have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. type: person \| animal \| practitioner \| device \| medication \| substance
 2. actual: Descriptive or actual
 3. characteristic.code: Kind of characteristic

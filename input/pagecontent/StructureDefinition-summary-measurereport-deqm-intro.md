@@ -1,8 +1,9 @@
+{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each MeasureReport Must Have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. extension.url: identifies the meaning of the extension
 2. extension.url: identifies the meaning of the extension
 3. extension.value[x]: Value of extension
@@ -23,7 +24,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 18. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
 19. group.stratifier.stratum.population.count: Size of the population
 
-**Each MeasureReport Must Support:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. MeasureReport.reportingProgram: Reporting program
 2. MeasureReport.inputParameters: What parameters
 3. MeasureReport.supplementalData: Supplemental Data
@@ -59,7 +60,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 <!--End Generated Intro (DO NOT REMOVE)-->
 
 
-{% assign id = {{include.id}} %}
+
 
 **Additional Profile specific implementation guidance:**
 

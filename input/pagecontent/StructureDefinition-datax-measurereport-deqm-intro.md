@@ -1,8 +1,9 @@
+{% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each MeasureReport Must Have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. extension: Extension
 2. MeasureReport.updatetype: Optional Extensions Element
 3. status: complete \| pending \| error
@@ -17,7 +18,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 12. group.stratifier.stratum.component.code: What stratifier component of the group
 13. group.stratifier.stratum.component.value: The stratum component value, e.g. male
 
-**Each MeasureReport Must Support:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. MeasureReport.software: Extension
 2. MeasureReport.vendor: Vendor information
 3. MeasureReport.message: Messages encountered while creating the report
@@ -28,7 +29,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 
-{% assign id = {{include.id}} %}
+
 
 **Additional Profile specific implementation guidance:**
 
