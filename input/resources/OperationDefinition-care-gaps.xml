@@ -5,7 +5,7 @@
     <url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/care-gaps"/>
     <name value="CareGaps"/>
     <title value="Care Gaps Operation"/>
-    <status value="draft"/>
+    <status value="active"/>
     <kind value="operation"/>
     <date value="2021-04-23"/>
     <publisher value="Da Vinci Project"/>
@@ -71,6 +71,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
+        <documentation value="Subject for which the gaps in care report will be created is provided as a Group resource."/>
         <type value="Group"/>
     </parameter>
     <parameter>
@@ -104,6 +105,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
+        <documentation value="Organization for which the gaps in care report will be created is provided as an Organization resource."/>
         <type value="Organization"/>
     </parameter>
     <parameter>
@@ -111,7 +113,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="*"/>
-        <documentation value="Indicates status of a care gap. For both [open and closed gaps](index.html#glossary), two seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
+        <documentation value="Indicates status of a care gap. For all [open, prospective, and closed gaps](index.html#glossary), three seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
         <binding>
           <strength value="extensible"/>
           <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
@@ -123,7 +125,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The id of a Measure resource that is on the server for which the gaps in care will be reported. E.g., the id of the Measure resource for Breast Cancer Screening measure."/>
+        <documentation value="The id of a Measure resource that is on the server for which the gaps in care report will be created. E.g., the id of the Measure resource for Breast Cancer Screening measure."/>
         <type value="id"/>
     </parameter>
     <parameter>
@@ -140,7 +142,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="This the the URL of a measure for which the gaps in care will be reported. A measure URL is specified in the [url](https://www.hl7.org/fhir/measure-definitions.html#Measure.url) element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
+        <documentation value="The URL of a measure for which the gaps in care report will be created. A measure URL is specified in the [url](https://www.hl7.org/fhir/measure-definitions.html#Measure.url) element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
         <type value="canonical"/>
     </parameter>
     <parameter>
@@ -148,7 +150,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The measure to be evaluated is provided as a Measure resource."/>
+        <documentation value="The measure for which the gaps in care report will be created is provided as a Measure resource."/>
         <type value="Measure"/>
     </parameter>
     <parameter>
@@ -156,7 +158,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The measure to evaluate. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance"/>
+        <documentation value="The measure for which the gaps in care report will be created. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance"/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
