@@ -30,6 +30,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Relaxed cardinality of measureReport param in build-submit-data operation to 1..* ([FHIR-46424](https://jira.hl7.org/browse/FHIR-46424))
    -  Added Prospective Gap code to care gaps value set and related narratives ([FHIR-46090](https://jira.hl7.org/browse/FHIR-46090))
    -  Replaced 'program' parameter with 'manifest' parameter in care gaps and measure/evaluate operations ([FHIR-46371](https://jira.hl7.org/browse/FHIR-46371))
+   -  Added IN parameters to defined Operations. Added new deqm.collect-data Operation.  Renamed 'deqm.evaluate-measure' Operation to 'evaluate'. ([FHIR-40032](https://jira.hl7.org/browse/FHIR-40032))
+   -  Added IN parameters to evaluate Operation ([FHIR-46287](https://jira.hl7.org/browse/FHIR-46287))
 
 ### Changes and Updates for Version 4.0.0 (STU4)
 

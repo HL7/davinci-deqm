@@ -132,8 +132,8 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/deqm.evaluate-measure",
-                            "name": "deqm.evaluate-measure"
+                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/evaluate",
+                            "name": "evaluate"
                         },
                         {
                             "extension": [
