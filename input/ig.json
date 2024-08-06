@@ -30,8 +30,8 @@
             ]
         }
     ],
-    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-4.0.0",
-    "version": "4.0.0",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
+    "version": "5.0.0-ballot",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
@@ -180,7 +180,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "STU4"
+                "value": "STU5 Ballot"
             },
             {
                 "code": "excludexml",
