@@ -79,13 +79,13 @@
             <key value="gic-1"/>
             <severity value="error"/>
             <human value="if 'entry:gaps-composition-deqm' is present, then Bundle.type is 'document'"/>
-            <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm').exists() implies Bundle.type='document'"/>
+            <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm').exists() implies %resource.type='document'"/>
           </constraint>
           <constraint>
             <key value="gic-2"/>
             <severity value="error"/>
             <human value="if 'entry:gaps-composition-deqm' is not present, then Bundle.type is 'collection'"/>
-            <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm').exists().not() implies Bundle.type='collection'"/>
+            <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm').exists().not() implies %resource.type='collection'"/>
           </constraint>
         </element>
         <element id="Bundle.entry:gaps-composition-deqm.resource">
