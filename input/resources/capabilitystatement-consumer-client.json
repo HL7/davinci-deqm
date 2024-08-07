@@ -113,7 +113,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm"
+                        "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"
                     ],
                     "type": "Measure"
                 },
