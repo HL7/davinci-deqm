@@ -61,7 +61,7 @@
         <key value="deqm-7"/>
         <severity value="error"/>
         <human value="stratifier.code or the stratifier.stratum.component.code is present, but not both"/>
-        <expression value="stratifier.code xor stratifier.stratrum.component.code exists"/>
+        <expression value="stratifier.code xor stratifier.stratum.component.code exists"/>
       </constraint>
       <mustSupport value="false"/>
     </element>
