@@ -116,7 +116,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -226,7 +226,7 @@
       <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
       <type>
         <code value="canonical"/>
-        <targetProfile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm"/>
+        <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -365,7 +365,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
