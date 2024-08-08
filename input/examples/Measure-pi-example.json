@@ -19,7 +19,7 @@
     }
   },
   {
-    "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem",
+    "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem",
     "valueReference" : {
       "reference" : "Device/deqm-software-system-example"
     }
@@ -50,7 +50,7 @@
     },
     "valueCodeableConcept" : {
       "coding" : [{
-        "system" : "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs",
+        "system" : "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs-example",
         "code" : "ep-ec"
       }],
       "text" : "eligible-provider"
