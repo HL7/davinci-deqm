@@ -400,7 +400,7 @@
         "method": "POST",
         "url": "Location"
       }
-    },
+    }
   ],
   "meta": {
     "source": "http://example.org/fhir/server"
