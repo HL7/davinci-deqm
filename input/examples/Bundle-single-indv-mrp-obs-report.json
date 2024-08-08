@@ -1,5 +1,12 @@
 {
     "id": "single-indv-mrp-obs-report",
+    "timestamp": "2019-12-06T06:28:44.902388Z",
+    "type": "transaction",
+    "resourceType": "Bundle",
+    "meta": {
+        "source": "http://example.org/fhir/server"
+    },
+
     "entry": [
         {
             "fullUrl": "urn:uuid:a8f9c686-17f1-11ea-a072-4ccc6a181ed3",
@@ -309,7 +316,7 @@
             "resource": {
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
@@ -612,6 +619,7 @@
                 "url": "Practitioner"
             },
             "resource": {
+                "resourceType": "Practitioner",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
@@ -634,7 +642,7 @@
                 "identifier": [
                     {
                         "system": "http://hl7.org/fhir/sid/us-npi",
-                        "value": "250"
+                        "value": "9020441793"
                     }
                 ],
                 "name": [
@@ -660,9 +668,8 @@
                         "use": "work",
                         "value": "Manuel446.Granados71@example.com"
                     }
-                ],
-                "resourceType": "Practitioner"
-            }
+                ]
+             }
         },
         {
             "fullUrl": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726",
@@ -671,6 +678,7 @@
                 "url": "Organization"
             },
             "resource": {
+                "resourceType": "Organization",
                 "meta": {
                     "profile": [
                         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
@@ -701,7 +709,7 @@
                             ]
                         },
                         "use": "official",
-                        "value": "9999999999"
+                        "value": "8375569216"
                     }
                 ],
                 "name": "NOBLE HOSPITAL",
@@ -722,9 +730,8 @@
                         ],
                         "text": "Healthcare Provider"
                     }
-                ],
-                "resourceType": "Organization"
-            }
+                ]
+             }
         },
         {
             "fullUrl": "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742",
@@ -774,11 +781,5 @@
                 "resourceType": "Location"
             }
         }
-    ],
-    "timestamp": "2019-12-06T06:28:44.902388Z",
-    "type": "transaction",
-    "resourceType": "Bundle",
-    "meta": {
-        "source": "http://example.org/fhir/server"
-    }
-}
+    ]
+ }
