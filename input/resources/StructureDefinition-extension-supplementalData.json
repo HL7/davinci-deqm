@@ -58,7 +58,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+              "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation",
               "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }

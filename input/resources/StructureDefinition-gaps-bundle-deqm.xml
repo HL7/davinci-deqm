@@ -36,20 +36,19 @@
             <path value="Bundle.identifier"/>
             <min value="1"/>
             <mustSupport value="true"/>
-        </element>   
+        </element>
         <element id="Bundle.identifier.system">
             <path value="Bundle.identifier.system"/>
             <min value="1"/>
             <mustSupport value="true"/>
-        </element>       
+        </element>
         <element id="Bundle.identifier.value">
             <path value="Bundle.identifier.value"/>
             <min value="1"/>
             <mustSupport value="true"/>
-        </element>          
+        </element>
         <element id="Bundle.type">
             <path value="Bundle.type"/>
-            <fixedCode value="document"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.timestamp">
@@ -73,9 +72,21 @@
           <path value="Bundle.entry"/>
           <sliceName value="gaps-composition-deqm"/>
           <short value="Contains a composition of gaps in care report for an individual for one or more measures"/>
-          <min value="1"/>
+          <min value="0"/>
           <max value="1"/>
           <mustSupport value="true"/>
+          <constraint>
+            <key value="gic-1"/>
+            <severity value="error"/>
+            <human value="if 'entry:gaps-composition-deqm' is present, then Bundle.type is 'document'"/>
+            <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm').exists() implies %resource.type='document'"/>
+          </constraint>
+          <constraint>
+            <key value="gic-2"/>
+            <severity value="error"/>
+            <human value="if 'entry:gaps-composition-deqm' is not present, then Bundle.type is 'collection'"/>
+            <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm').exists().not() implies %resource.type='collection'"/>
+          </constraint>
         </element>
         <element id="Bundle.entry:gaps-composition-deqm.resource">
           <path value="Bundle.entry.resource"/>

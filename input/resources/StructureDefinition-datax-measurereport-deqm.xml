@@ -16,7 +16,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="[MeasureReport](http://hl7.org/fhir/R4/measurereport.html)  is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.&#xA;When a data producer needs to send data to a data consumer, they use the **DEQM Data-Exchange MeasureReport Profile** defined here.  The `type` element in this profile is set to &quot;data-collection&quot;.  Along with the MeasureReport profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on.  When a data producer sends a MeasureReport and the associated data, they may not have all the data that is required to calculate the measure report.  Additional data may need to be collected later or there may be additional data used in the measure that the aggregator owns such as a continuous coverage period requirement."/>
+  <description value="[MeasureReport](http://hl7.org/fhir/R4/measurereport.html) is used as an organizer for both data exchange for measure and for measure reporting.  Three profiles on the MeasureReport resource are defined in this guide to delineate these different uses.&#xA;When a data producer needs to send data to a data consumer, they use the **DEQM Data-Exchange MeasureReport Profile** defined here.  The `type` element in this profile is set to &quot;data-collection&quot;.  Along with the MeasureReport profile, the data producer sends the reporter, subject, and any relevant resources for the measure they have produced data on.  When a data producer sends a MeasureReport and the associated data, they may not have all the data that is required to calculate the measure report.  Additional data may need to be collected later or there may be additional data used in the measure that the aggregator owns such as a continuous coverage period requirement."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -52,8 +52,8 @@
       <min value="0"/>
       <max value="*"/>
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+        <code value="Device"/>
+        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -90,6 +90,17 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.extension:inputParameters">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="inputParameters"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-inputParameters"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <mustSupport value="true"/>
@@ -111,17 +122,7 @@
       <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:inputParameters">
-      <path value="MeasureReport.extension"/>
-      <sliceName value="inputParameters"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-inputParameters"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
+    
     <element id="MeasureReport.subject">
       <path value="MeasureReport.subject"/>
       <min value="1"/>
@@ -195,16 +196,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group.measureScore"/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="MeasureReport.group.stratifier">
-      <path value="MeasureReport.group.stratifier"/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
     <element id="MeasureReport.group.population.extension:populationDescription">
       <path value="MeasureReport.group.population.extension"/>
       <sliceName value="description"/>
@@ -217,7 +208,17 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.evaluatedResource">
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element id="MeasureReport.group.stratifier">
+      <path value="MeasureReport.group.stratifier"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <mustSupport value="true"/>
     </element>

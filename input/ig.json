@@ -30,24 +30,24 @@
             ]
         }
     ],
-    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm-4.0.0",
-    "version": "4.0.0",
+    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
+    "version": "5.0.0-ballot",
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
-            "version": "5.0.0",
+            "version": "6.0.0",
             "id": "qicore",
             "packageId": "hl7.fhir.us.qicore",
             "uri": "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore"
         },
         {
-            "version": "5.0.1",
+            "version": "6.1.0",
             "id": "uscore",
             "packageId": "hl7.fhir.us.core",
             "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         },
         {
-            "version": "4.0.0",
+            "version": "5.0.0-ballot2",
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
@@ -180,7 +180,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "STU4"
+                "value": "STU5 Ballot"
             },
             {
                 "code": "excludexml",
@@ -266,11 +266,27 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Summ Attestation",
+                "reference": {
+                    "reference": "MeasureReport/summ-attestation"
+                },
+                "description": "DEQM Summ Attestation example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Datax Measurereport02",
                 "reference": {
                     "reference": "MeasureReport/datax-measurereport02"
                 },
                 "description": "DEQM Datax Measurereport02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Measurereport with contained data",
+                "reference": {
+                    "reference": "MeasureReport/summ-contained-supplemental"
+                },
+                "description": "Measurereport with contained supplemental data"
             },
             {
                 "exampleBoolean": true,
@@ -1158,6 +1174,24 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-calculatedDate"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-numeratorMembership"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-denominatorMembership"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/cqf-measurePopulationMembership"
                 }
             }
         ],

@@ -16,7 +16,7 @@
 [Clinical Decision Support (CDS)]: http://www.hl7.org/Special/committees/dss/index.cfm
 [Clinical Quality Framework]: http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework&oldid=158051
 [Clinical Quality Information (CQI)]: http://www.hl7.org/Special/committees/cqi/index.cfm
-[CMS 108v7]: https://ecqi.healthit.gov/ecqm/measures/cms108v7
+[ECQI Resource Center]: https://ecqi.healthit.gov
 [COL Collect Data Operation]: col.html#data-exchange-using-the-collect-data-operation
 [Colorectal Cancer Screening (COL)]: col.html
 [Conformance Requirements for Client]: CapabilityStatement-client.html "Conformance Requirements for Client Page"
@@ -84,6 +84,7 @@
 [QI Core DiagnosticReport]:{{site.data.fhir.qicore}}/StructureDefinition-qicore-diagnosticreport-lab.html
 [QI Core Encounter]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-encounter.html
 [QI Core Location]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-location.html
+[QI Core Negation]: {{site.data.fhir.qicore}}/negation.html
 [QI Core Observation]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-observation.html
 [QI Core Organization]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-organization.html
 [QI Core Patient]: {{site.data.fhir.qicore}}/StructureDefinition-qicore-patient.html
@@ -110,6 +111,7 @@
 [collection]: {{site.data.fhir.path}}bundle.html#collection
 [US Core]: {{site.data.fhir.uscore}}/index.html
 [Use cases]: usecases.html
+[Using CQL IG section on negation]: {{site.data.fhir.qicore}}/patterns.html#negation-in-fhir
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
@@ -167,6 +169,7 @@
 [Single Indv Vte Report Option 7]: Bundle-single-indv-vte-report-option7.html
 [Indv Measurreport Stratification Example]: MeasureReport-indv-measurreport-stratification-example.html
 [The Quality Improvement Ecosystem Diagram]: index.html#quality-improvement-ecosystem
+[CMS0108v12]: https://ecqi.healthit.gov/ecqm/eh/2024/cms0108v12
 [CMS130]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v8.html
 [closed gap]: index.html#glossary
 [closed gaps]: index.html#glossary

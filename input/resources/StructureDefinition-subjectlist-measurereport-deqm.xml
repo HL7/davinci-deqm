@@ -14,7 +14,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="Subject List MeasureReport is for data exchange and reporting on a list of patients, which also allows individual MeasureReports be provided for each of the patients in the population."/>
+  <description value="Subject List MeasureReport is for data exchange and reporting on a list of subjects, which also allows individual MeasureReports be provided for each of the subjects in the population."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -55,6 +55,12 @@
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;=1.0)"/>
       </constraint>
+      <constraint>
+        <key value="deqm-7"/>
+        <severity value="error"/>
+        <human value="stratifier.code or the stratifier.stratum.component.code is present, but not both"/>
+        <expression value="stratifier.code xor stratifier.stratrum.component.code exists"/>
+      </constraint>
       <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.extension:reportingProgram">
@@ -83,7 +89,7 @@
       <path value="MeasureReport.extension"/>
       <sliceName value="supplementalData"/>
       <min value="0"/>
-      <max value="1"/>
+      <max value="*"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData"/>
@@ -110,7 +116,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -220,7 +226,7 @@
       <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
       <type>
         <code value="canonical"/>
-        <targetProfile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm"/>
+        <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -359,7 +365,46 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:numeratorMembership">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="numeratorMembership"/>
+      <short value="Provides the number of subjects in the numerator population membership."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:denominatorMembership">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="denominatorMembership"/>
+      <short value="Provides the number of subjects in the denominator population membership."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:measurePopulationMembership">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="measurePopulationMembership"/>
+      <short value="Provides the number of subjects in the measure population membership."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -465,13 +510,13 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/extensions/StructureDefinition-measurereport-populationDescription"/>
+          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.code">
       <path value="MeasureReport.group.stratifier.code"/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>

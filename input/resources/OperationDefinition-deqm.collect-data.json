@@ -1,0 +1,158 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "deqm.collect-data",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 0
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/deqm.collect-data",
+  "version": "4.0.1",
+  "name": "DEQMCollectData",
+  "title": "DEQM Collect Data",
+  "status": "active",
+  "kind": "operation",
+  "date": "2024-07-24T10:53:32-05:00",
+  "publisher": "The MITRE Corporation",
+  "description": "The deqm.collect-data operation is used to collect the data-of-interest for the given measure.",
+  "code": "deqm-collect-data",
+  "resource": [
+    "Measure"
+  ],
+  "system": false,
+  "type": true,
+  "instance": true,
+  "parameter": [
+      {
+          "name": "periodStart",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "documentation": "The start of the measurement period. In keeping with the semantics of the date parameter used in the FHIR search operation, the period will start at the beginning of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period start to be 2014-01-01T00:00:00 inclusive",
+          "type": "date"
+      },
+      {
+          "name": "periodEnd",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "documentation": "The end of the measurement period. The period will end at the end of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period end to be 2014-12-31T23:59:59 inclusive",
+          "type": "date"
+      },
+      {
+          "name": "measureId",
+          "use": "in",
+          "min": 0,
+          "max": "*",
+          "documentation": "The id of a Measure resource that is on the server for which the data-of-interest will be collected. E.g., the id of the Measure resource for Breast Cancer Screening measure.",
+          "type": "id"
+      },
+      {
+          "name": "measureIdentifier",
+          "use": "in",
+          "min": 0,
+          "max": "*",
+          "documentation": "The business identifier of a measure for which the data-of-interest will be collected. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system. Note that the type of this parameter is a string with a search type of token, so the $care-gaps operation has only simple input parameters and may be invoked using GET.",
+          "type": "string",
+          "searchType": "token"
+      },
+{
+          "name": "measureUrl",
+          "use": "in",
+          "min": 0,
+          "max": "*",
+          "documentation": "This the the URL of a measure for which the data-of-interest will be collected. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers.",
+          "type": "canonical"
+      },
+      {
+          "name": "measureResource",
+          "use": "in",
+          "min": 0,
+          "max": "*",
+          "documentation": "The measure for which the data-of-interest will be collected is provided as a Measure resource.",
+          "type": "Measure"
+      },
+      {
+          "name": "measure",
+          "use": "in",
+          "min": 0,
+          "max": "*",
+          "documentation": "The measure for which the data-of-interest will be collected. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance",
+          "type": "string",
+          "searchType": "token"
+      },
+      {
+          "name": "subject",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Subject for which the data-of-interest for the measure will be collected. If not specified, measure data will be collected for all subjects that meet the requirements of the measure.  If specified, the measure will only be collected for the referenced subject(s).",
+          "type": "string",
+          "searchType": "reference"
+      },
+      {
+          "name": "subjectGroup",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Subject for which the data-of-interest for measure will be collected is provided as a Group resource.",
+          "type": "Group"
+      },
+      {
+          "name": "practitioner",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Practitioner (references [QICore Practitioner](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner)) for which the measure will be collected. If specified, the measure will be calculated only for subjects that have a primary relationship to the identified practitioner",
+          "type": "string",
+          "searchType": "reference"
+      },
+     {
+          "name": "lastReceivedOn",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "The date the results of this measure were last received. This parameter used to indicate when the last time data for this measure was collected. This information is used to support incremental data collection scenarios.",
+          "type": "dateTime"
+       },
+     {
+          "name": "organizationResource",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Organization resource for which data-of-interest for the given measure will be collected.",
+          "type": "Organization"
+       },
+     {
+          "name": "organization",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Organization (references [QICore Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization)) for which data-of-interest for the given measure will be collected.",
+          "type": "string",
+          "searchType": "reference"
+      },
+     {
+          "name": "validateResources",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Indicates whether data collected conform to the appropriate profiles as specified by the measure.",
+          "type": "boolean"
+       },
+     {
+          "name": "return",
+          "use": "out",
+          "min": 0,
+          "max": "*",
+          "documentation": "Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more bundles. The first entry of the bundle is either a [DEQM Individual MeasureReport](StructureDefinition-indv-measurereport-deqm.html) or a [DEQM Summary MeasureReport](StructureDefinition-summary-measurereport-deqm.html) and subsequent entries in the bundle are resources created and/or evaluated as part of the measure calculation. Note that the result of the $evaluate-measure operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*",
+          "type": "Bundle"
+      }
+
+  ]
+}

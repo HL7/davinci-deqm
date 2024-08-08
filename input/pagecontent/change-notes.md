@@ -4,6 +4,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
 1. Applied the following trackers:
+   - Negation Patterns for Quality Measures text change ([FHIR-46246](https://jira.hl7.org/browse/FHIR-46246))([Applied here](guidance.html#negation-patterns-for-quality-measures))
+   - Must Support guidance text change ([FHIR-43586](https://jira.hl7.org/browse/FHIR-43586))([Applied here](guidance.html#must-support))
    - Care gap STU note ([FHIR-44573](https://jira.hl7.org/browse/FHIR-44573))([Applied here](vte1.html#practitioner-references)) and ([here](mrp.html#practitioner_footnote))
    - Summary measure reporting typo ([FHIR-44570](https://jira.hl7.org/browse/FHIR-44570))([Applied here](summary-reporting.html#summary-measure-reporting))
    -  Removed unclear text from individual, subjectlist, and summary measure report profiles. ([FHIR-45291](https://jira.hl7.org/browse/FHIR-45291))
@@ -15,13 +17,25 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Added parameters to operations list for care-gaps and evaluate-measure operations page per this tracker's description. ([FHIR-31416](https://jira.hl7.org/browse/FHIR-31416))
    -  Added populationDescription extension definition, and inclusion in MeasureReport profiles. ([FHIR-43324](https://jira.hl7.org/browse/FHIR-43324))  
    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
+   - Updated the parameter descriptions for reportType, subject, and the return ([FHIR-46253](https://jira.hl7.org/browse/FHIR-46253))([Applied here](OperationDefinition-deqm.evaluate-measure.html))
+   - Updated example to make patient02 patient01 and datax-measurereport02 datax-measurereport01 ([FHIR-46162](https://jira.hl7.org/browse/FHIR-46162))([Applied here](Parameters-mrp-submit-obs.json.html))
+   - Added boolean as a possible value for alternateScore extension and added a summary measureReport using that scoring type ([FHIR-46232](https://jira.hl7.org/browse/FHIR-46232))
+   - Added a new operation to allow submission of multiple measures as a bundle ([FHIR-46373](https://jira.hl7.org/browse/FHIR-46373))([Applied here](OperationDefinition-deqm.submit-data.html))
+   - Added IN parameter to $care-gaps to specify whether a Gaps in Care Composition is returned in the Bundle and updated profile, and documentation to align ([FHIR-46027](https://jira.hl7.org/browse/FHIR-46027))
+   - Created 3 new extensions for numeratorMembership, denominatorMembership, and measurePopulationMembership and added to all 3 Measure Report profiles ([FHIR-44736](https://jira.hl7.org/browse/FHIR-44736))
+   - Added section about Duplicate Data to the Guidance page ([FHIR-40511](https://jira.hl7.org/browse/FHIR-40511))([Applied here](guidance.html#duplicate-data))
+   - Updated measure report introductions as specified ([FHIR-45140](https://jira.hl7.org/browse/FHIR-45140))
+   - Updated practitioner to provider for the IN parameter on deqm.evaluate-measure ([FHIR-46354](https://jira.hl7.org/browse/FHIR-46354))([Applied here](OperationDefinition-deqm.evaluate-measure.html))
+   -  Loosened cardinality for supplementalData extensions in meausre profiles ([FHIR-45205](https://jira.hl7.org/browse/FHIR-45205))
    -  Relaxed cardinality of measureReport param in build-submit-data operation to 1..* ([FHIR-46424](https://jira.hl7.org/browse/FHIR-46424))
    -  Added Prospective Gap code to care gaps value set and related narratives ([FHIR-46090](https://jira.hl7.org/browse/FHIR-46090))
    -  Replaced 'program' parameter with 'manifest' parameter in care gaps and measure/evaluate operations ([FHIR-46371](https://jira.hl7.org/browse/FHIR-46371))
+   -  Added IN parameters to defined Operations. Added new deqm.collect-data Operation.  Renamed 'deqm.evaluate-measure' Operation to 'evaluate'. ([FHIR-40032](https://jira.hl7.org/browse/FHIR-40032))
+   -  Added IN parameters to evaluate Operation ([FHIR-46287](https://jira.hl7.org/browse/FHIR-46287))
 
 ### Changes and Updates for Version 4.0.0 (STU4)
 
-1. Applied the following trackers: 
+1. Applied the following trackers:
     - The provider should be notified when data is missing. ([FHIR-26091](https://jira.hl7.org/browse/FHIR-26091))
     - Add a value to GIC Status to represent when Patient is not in the Initial Population for a Measure ([FHIR-32980](https://jira.hl7.org/browse/FHIR-32980))
     -  Add GET examples to cover entire $care-gaps api ([FHIR-33005](https://jira.hl7.org/browse/FHIR-33005))
@@ -91,10 +105,10 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for Version 3.1.0
 
-1. Updated the IG dependencies 
+1. Updated the IG dependencies
     - Update Dependencies. ([FHIR-37621](https://jira.hl7.org/browse/FHIR-37621))
-        - Updated from US Core 3.1.0 to US Core 3.1.1 
-        - Updated from QI Core 3.1.0 to QI-Core 4.1.1 
+        - Updated from US Core 3.1.0 to US Core 3.1.1
+        - Updated from QI Core 3.1.0 to QI-Core 4.1.1
         - Updated from Quality Measure IG 2.0.0 to Quality Measure IG 3.0.0
         - Updated examples and profiles where applicable due to dependency updates
     - Remove DEQM Organization Profile. ([FHIR-37898](https://jira.hl7.org/browse/FHIR-37898))
