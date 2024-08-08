@@ -52,8 +52,8 @@
       <min value="0"/>
       <max value="*"/>
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+        <code value="Device"/>
+        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -90,6 +90,17 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.extension:inputParameters">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="inputParameters"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-inputParameters"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <mustSupport value="true"/>
@@ -111,17 +122,7 @@
       <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:inputParameters">
-      <path value="MeasureReport.extension"/>
-      <sliceName value="inputParameters"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-inputParameters"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
+    
     <element id="MeasureReport.subject">
       <path value="MeasureReport.subject"/>
       <min value="1"/>
@@ -195,16 +196,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group.measureScore"/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="MeasureReport.group.stratifier">
-      <path value="MeasureReport.group.stratifier"/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
     <element id="MeasureReport.group.population.extension:populationDescription">
       <path value="MeasureReport.group.population.extension"/>
       <sliceName value="description"/>
@@ -217,7 +208,17 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.evaluatedResource">
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element id="MeasureReport.group.stratifier">
+      <path value="MeasureReport.group.stratifier"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <mustSupport value="true"/>
     </element>
