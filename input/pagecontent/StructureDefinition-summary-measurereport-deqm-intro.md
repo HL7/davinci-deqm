@@ -1,36 +1,66 @@
-
 {% assign id = {{include.id}} %}
-
+<!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
-
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each {{site.data.structuredefinitions.[id].type}} must have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
+1. extension.url: identifies the meaning of the extension
+2. extension.url: identifies the meaning of the extension
+3. extension.value[x]: Value of extension
+4. extension.value[x]: Value of extension
+5. status: complete \| pending \| error
+6. type: individual \| subject-list \| summary \| data-collection
+7. measure: What measure was calculated
+8. date: When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent.
+9. reporter: Organization that generated the MeasureReport
+10. period: What period the report covers
+11. period.start: Starting time with inclusive boundary
+12. period.end: End time with inclusive boundary, if not ongoing
+13. group: Measure results for each group
+14. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+15. group.stratifier.code: What stratifier of the group
+16. group.stratifier.stratum.component.code: What stratifier component of the group
+17. group.stratifier.stratum.component.value: The stratum component value, e.g. male
+18. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+19. group.stratifier.stratum.population.count: Size of the population
 
-1. A status
-1. A measure report type hardcoded to "summary"
-1. The reference to the [Measure]
-1. The date the report was generated
-1. The organization that reported the data
-1. The measurement period that the report covers
-1. The results of the measure calculation for each group
-1. The measure score calculated for each reported group
+**Each {{site.data.structuredefinitions.[id].type}} Must Support:**
+1. MeasureReport.reportingProgram: Reporting program
+2. MeasureReport.inputParameters: What parameters
+3. MeasureReport.supplementalData: Supplemental Data
+4. MeasureReport.criteriaReference.criteriaReference: Criteria reference
+5. MeasureReport.description.description: Description of the supplemental data
+6. MeasureReport.scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+7. MeasureReport.vendor: Vendor information
+8. MeasureReport.cehrt: CMS EHR Certifciation ID
+9. MeasureReport.software: Extension
+10. MeasureReport.message: Evaluation messages
+11. MeasureReport.reporter.group: Group of practitioners responsible for a report
+12. improvementNotation: increase \| decrease
+13. group.id: Unique id for inter-element referencing
+14. MeasureReport.group.scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+15. MeasureReport.group.calculatedDate: The date the score was calculated
+16. MeasureReport.group.groupImprovementNotation: increase \| decrease
+17. MeasureReport.group.description: Description of the group
+18. group.code: Meaning of the group
+19. group.population: The populations in the group
+20. MeasureReport.group.population.countQuantity: Count as a Quantity
+21. MeasureReport.group.population.description: Description of the population
+22. group.population.count: Size of the population
+23. group.measureScore: What score this group achieved
+24. MeasureReport.group.measureScore.altscoretype: Possible additional measureScore value types
+25. group.stratifier: Stratification results
+26. MeasureReport.group.stratifier.description: Description of the stratifier
+27. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
+28. group.stratifier.stratum.value: The stratum value, e.g. male
+29. group.stratifier.stratum.population: Population results in this stratum
+30. group.stratifier.stratum.measureScore: What score this stratum achieved
+31. MeasureReport.group.stratifier.stratum.measureScore.strataltscoretype: Possible additional measureScore value types
 
-Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
+<!--End Generated Intro (DO NOT REMOVE)-->
 
-1. Reference to the reporting program using the DEQM [Reporting Program](StructureDefinition-extension-reportingProgram.html) Extension
-1. Reference to the supplemental data using the DEQM [Supplemental Data](StructureDefinition-extension-supplementalData.html) Extension
-1. The scoring type defined by the referenced Measure using the DEQM [Measure Scoring] Extension
-1. Reference to a reporting vendor using the DEQM [Reporting Vendor] Extension
-1. A certification identifier using the DEQM [Certification Identifier] Extension
-1. Specify the software systems used by the reporting system using the CQFM [Software System]({{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html) Extension
-1. Indicate whether improvement in the measure is noted by an increase or decrease in the measure score
-1. The scoring type for the reported group using the DEQM [Measure Scoring] Extension
-1. Indicate whether improvement in the reported group is noted by an increase or decrease in the measure score
-1. A code that defines the meaning of the reported group
-1. The populations in the reported group
-1. Measure results for each group with separate subgroup calculations (stratifiers)
-1. Ability to use other types for measure score using the DEQM [Alternate Score Type] Extension
+
+
 
 **Additional Profile specific implementation guidance:**
 

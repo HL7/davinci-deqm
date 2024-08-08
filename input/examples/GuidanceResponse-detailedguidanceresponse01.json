@@ -38,7 +38,7 @@
         }
       ],
       "profile": [
-        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
       ],
       "mustSupport": [
         "code",
