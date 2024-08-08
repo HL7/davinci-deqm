@@ -49,12 +49,12 @@
           },
           {
             "code" : "canonical",
-            "targetProfile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/quality-program-cqfm"]
+            "targetProfile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-manifest-cqfm"]
           }
         ],
         "binding": {
           "strength": "example",
-          "valueSet": "http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs"
+          "valueSet": "http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs-example"
         }
       }
     ]
