@@ -1,24 +1,35 @@
 {% assign id = {{include.id}} %}
-
-
+<!--Begin Generated Intro Tag (DO NOT REMOVE)-->
+### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
-**Each {{site.data.structuredefinitions.[id].type}} must have:**
+**Each {{site.data.structuredefinitions.[id].type}} Must Have:**
+1. extension: Extension
+2. MeasureReport.updatetype: Optional Extensions Element
+3. status: complete \| pending \| error
+4. type: individual \| subject-list \| summary \| data-collection
+5. measure: What measure was calculated
+6. subject: What individual(s) the report is for
+7. date: When the report was generated
+8. reporter: The organization where the measure was completed
+9. period: What period the report covers
+10. period.start: Starting time with inclusive boundary
+11. period.end: End time with inclusive boundary, if not ongoing
+12. group.stratifier.stratum.component.code: What stratifier component of the group
+13. group.stratifier.stratum.component.value: The stratum component value, e.g. male
 
-1. Whether is a [snapshot] or [incremental] update*
-1. A status
-1. measure report type hardcoded to "data-collection"
-1. The reference to the [Measure]({{site.data.fhir.path}}measure.html)
-1. A link to the subject the report is about
-1. The date the report was generated
-1. The organization that reported the data
-1. The measurement period
+**Each {{site.data.structuredefinitions.[id].type}} Must Support:**
+1. MeasureReport.software: Extension
+2. MeasureReport.vendor: Vendor information
+3. MeasureReport.message: Messages encountered while creating the report
+4. MeasureReport.inputParameters: What parameters
+5. MeasureReport.reporter.group: Group of practitioners responsible for a report
+6. MeasureReport.group.population.description: Description of the population
+7. evaluatedResource: What data was used to calculate the measure score
 
-Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support]):
+<!--End Generated Intro (DO NOT REMOVE)-->
 
-1. References to other resources involved in producing the report
-1. Specify the software systems used by the reporting system using the CQFM [Software System]({{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html) Extension
-1. A reporter.group
+
 
 **Additional Profile specific implementation guidance:**
 
