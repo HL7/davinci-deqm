@@ -59,7 +59,7 @@
         <key value="deqm-7"/>
         <severity value="error"/>
         <human value="stratifier.code or the stratifier.stratum.component.code is present, but not both"/>
-        <expression value="stratifier.code xor stratifier.stratrum.component.code exists"/>
+        <expression value="group.stratifier.code.exists() xor group.stratifier.stratum.component.code.exists()"/>
       </constraint>
       <mustSupport value="false"/>
     </element>
@@ -188,7 +188,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"/>
+        <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -378,7 +378,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"/>
+          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-numeratorMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -391,7 +391,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
+          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-denominatorMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -404,7 +404,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"/>
+          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-measurePopulationMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
