@@ -2,7 +2,7 @@
   "resourceType": "Library",
   "id": "library-exm108-example",
   "meta": {
-    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm" ]
+    "profile": [ "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary" ]
   },
   "url": "http://hl7.org/fhir/us/davinci-deqm/Library/library-exm108-example",
   "identifier": [ {
