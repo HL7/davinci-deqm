@@ -2,7 +2,7 @@
   "resourceType": "Measure",
   "id": "measure-exm108-example",
   "meta": {
-    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm", "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm" ]
+    "profile": [ "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure", "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm" ]
   },
   "extension": [ {
     "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
@@ -35,7 +35,7 @@
     },
     "valueCodeableConcept": {
       "coding": [ {
-        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs",
+        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs-example",
         "code": "eh-cah",
         "display": "EH/CAH"
       } ]
