@@ -173,7 +173,7 @@
                 "id": "DNA-occultblood",
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
@@ -234,7 +234,7 @@
                             ]
                         },
                         "use": "official",
-                        "value": "456789123"
+                        "value": "1234567893"
                     }
                 ],
                 "name": [
@@ -291,7 +291,7 @@
                             ]
                         },
                         "use": "official",
-                        "value": "345678912"
+                        "value": "1234567893"
                     }
                 ],
                 "name": "DaVinciHospital03",
