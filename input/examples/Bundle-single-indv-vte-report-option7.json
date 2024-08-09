@@ -402,8 +402,9 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:b539747a-ca48-11ea-87d0-0242ac130003",
+      "fullUrl": "http://example.org/fhir/receiver/Practitioner/practitioner02",
       "resource": {
+        "id": "practitioner02",
         "resourceType": "Practitioner",
         "meta": {
           "source": "http://example.org/fhir/server",
@@ -476,9 +477,10 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc9",
+      "fullUrl": "http://example.org/fhir/receiver/MedicationRequest/medicationRequest01",
       "resource": {
         "resourceType": "MedicationRequest",
+        "id": "medicationRequest01",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-medicationnotrequested"
@@ -515,7 +517,7 @@
         },
         "authoredOn": "2019-12-05T06:10:27Z",
         "requester": {
-          "reference": "urn:uuid:b539747a-ca48-11ea-87d0-0242ac130003"
+          "reference": "Practitioner/practitioner02"
         }
       },
       "request": {
