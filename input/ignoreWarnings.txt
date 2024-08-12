@@ -145,7 +145,10 @@ INFORMATION: Measure/measure-pi-example: Measure.extension[1]: This element does
 
 # SECTION 2 - INFORMATION - The following examples are using valid codes in the CPT codesystem but THO doesn't define the codes. we are confident the CPT codes referenced here are correct
 The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
-None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://www.ama-assn.org/go/cpt#1111F)
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://www.ama-assn.org/go/cpt#1111F)
 
 # SECTION 2 - INFORMATION - VSAC issues - The following codes in the codesystem have been checked and the concepts are correct
-The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
+The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
+
+# SECTION 2 - INFORMATION - The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|1.0.0
