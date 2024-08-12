@@ -90,17 +90,6 @@
             },
             "stratifier": [
                 {
-                    "code": [
-                        {
-                            "coding": [
-                                {
-                                    "system": "http://example.org/CodeSystem/stratifier-classifications",
-                                    "code": "CoverageType",
-                                    "display": "Coverage Type"
-                                }
-                            ]
-                        }
-                    ],
                     "stratum": [
                         {
                             "value": {
@@ -154,17 +143,6 @@
                     ]
                 },
                 {
-                    "code": [
-                        {
-                            "coding": [
-                                {
-                                    "system": "http://example.org/CodeSystem/stratifier-classifications",
-                                    "code": "CoverageTypeAndClass",
-                                    "display": "Coverage Type and Class"
-                                }
-                            ]
-                        }
-                    ],
                     "stratum": [
                         {
                             "component": [
