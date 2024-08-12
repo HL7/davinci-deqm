@@ -4,6 +4,10 @@
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
 # SECTION 1 - WARNINGS: The validator is trying to resolve an "example.org" artifact which by convention does not exist
+A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.org/CodeSystem/SOP' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.org/CodeSystem/stratifier-classifications' could not be found, so the code cannot be validated
+
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
