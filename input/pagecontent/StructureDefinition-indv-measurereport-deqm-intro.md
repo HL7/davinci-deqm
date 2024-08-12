@@ -16,17 +16,17 @@ The following data-elements are mandatory (i.e data MUST be present).
 10. group.stratifier.stratum.component.value: The stratum component value, e.g. male
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
-1. MeasureReport.reportingProgram: Reporting program
-2. MeasureReport.inputParameters: What parameters
-3. MeasureReport.supplementalData: Supplemental Data
-4. MeasureReport.criteriaReference.criteriaReference: Criteria reference
-5. MeasureReport.description.description: Description of the supplemental data
-6. MeasureReport.scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
-7. MeasureReport.vendor: Vendor information
-8. MeasureReport.cehrt: CMS EHR Certifciation ID
-9. MeasureReport.software: Extension
-10. MeasureReport.message: Evaluation messages
-11. MeasureReport.evaluatedResource.popref: Criteria reference
+1. reportingProgram: Reporting program
+2. inputParameters: What parameters
+3. supplementalData: Supplemental Data
+4. criteriaReference: Criteria reference
+5. description: Description of the supplemental data
+6. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+7. vendor: Vendor information
+8. cehrt: CMS EHR Certifciation ID
+9. software: Extension
+10. message: Evaluation messages
+11. popref: Criteria reference
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 
