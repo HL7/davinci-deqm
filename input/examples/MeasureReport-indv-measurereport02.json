@@ -25,7 +25,7 @@
                 "coding": [
                     {
                         "code": "ep-ec",
-                        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs"
+                        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs-example"
                     }
                 ]
             }
