@@ -11,11 +11,11 @@
   "type": "summary",
   "measure": "http://example.org/fhir/Measure/exampleAttestationMeasure",
   "subject": {
-    "reference": "Organization/123"
+    "reference": "Organization/organization01"
   },
   "date": "2023-04-01",
   "reporter": {
-    "reference": "Practitioner/456"
+    "reference": "Practitioner/practitioner01"
   },
   "period": {
     "start": "2024-01-01",
