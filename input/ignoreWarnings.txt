@@ -90,40 +90,90 @@ INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[3].resource/*Tas
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[7].resource/*Task/task03*/.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[7].resource/*Task/task03*/.status: Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[9].resource/*Task/task02*/.status: Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[9].resource/*Task/task02*/.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[11].resource/*Organization/organization01*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[13].resource/*Organization/organization02*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[16].resource/*Organization/organization03*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/multiple-summ-report: Bundle.entry[1].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Bundle/sde-example-artifact-bundle: Bundle.entry[5].resource/*Measure/NHSNGlycemicControlHypoglycemicInitialPopulation*/.contained[0]/*Library/effective-data-requirements*/.extension[6].value.ofType(Coding): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
+INFORMATION: Bundle/sde-example-artifact-bundle: Bundle.entry[5].resource/*Measure/NHSNGlycemicControlHypoglycemicInitialPopulation*/.contained[0]/*Library/effective-data-requirements*/.extension[7].value.ofType(Coding): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: Bundle/sde-example-artifact-bundle: Bundle.entry[5].resource/*Measure/NHSNGlycemicControlHypoglycemicInitialPopulation*/.contained[0]/*Library/effective-data-requirements*/.extension[8].value.ofType(Coding): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/diagnosis-role|1.1.0
+INFORMATION: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].resource/*MedicationRequest/nhsn-iip-add101-10*/.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|1.0.0
+INFORMATION: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].resource/*MedicationRequest/nhsn-iip-add101-10*/.courseOfTherapyType: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy|1.0.0
+INFORMATION: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].resource/*MedicationRequest/nhsn-iip-add101-10*/.dosageInstruction[0].doseAndRate[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
+INFORMATION: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].resource/*MedicationRequest/nhsn-iip-add101-10*/.dosageInstruction[0].doseAndRate[1].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
 INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
 INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[6].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
 INFORMATION: Bundle/single-gaps-closed-indv-report02: Bundle.entry[6].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/single-gaps-open-indv-report01: Bundle.entry[7].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[1].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
-INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[4].resource/*Observation/null*/.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-category|1.0.0
+INFORMATION: Bundle/single-indv-col-obs-report: Bundle.entry[4].resource/*Observation/null*/.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[2].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[3].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[4].resource/*Observation/null*/.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 INFORMATION: Bundle/single-indv-mrp-obs-report: Bundle.entry[8].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[1].resource/*Task/null*/.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[1].resource/*Task/null*/.status: Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[3].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[4].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[8].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[1].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[4].resource/*Location/null*/.physicalType: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[1].resource/*Organization/null*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[4].resource/*Location/null*/.physicalType: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0
+INFORMATION: MeasureReport/indv-measurereport02: MeasureReport.group[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-improvement-notation|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[3]/*Observation/791eebdb-ee7d-464f-bd21-12fe2b4c0dd3*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[4]/*Observation/0ce0a9f1-f5a3-42ca-81a6-69c08ee9f79c*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[5]/*Observation/5d85b278-443a-4a0f-9778-bdac6223f8fd*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[6]/*Observation/57f8ba34-88c0-4152-8a8c-74aa2a508353*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[7]/*Observation/16f76e4f-86de-4ff1-b54c-19507069044b*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[8]/*Observation/a6d7e84c-7ae0-41e1-9ba3-bb86cf48c7c8*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[9]/*Observation/bd705f82-80d1-4a50-8dec-686f5f0a02bd*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
+INFORMATION: MeasureReport/sde-example: MeasureReport.contained[10]/*Observation/8c9e0819-2eb4-470b-abbb-ac4fa4b707b1*/.code: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-data-usage|1.0.0
 
-INFORMATION: Bundle/single-indv-mrp-task-report: Bundle.entry[1].resource/*Task/null*/.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
-INFORMATION: Bundle/single-indv-vte-report-option1: Bundle.entry[5].resource/*MedicationAdministration/null*/.status: Reference to draft item http://terminology.hl7.org/CodeSystem/medication-admin-status|4.0.1
-INFORMATION: Encounter/encounter01: Encounter.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
-INFORMATION: Encounter/encounter02: Encounter.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
-INFORMATION: Encounter/encounter03: Encounter.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
-INFORMATION: MedicationAdministration/medicationadministration01: MedicationAdministration.status: Reference to draft item http://terminology.hl7.org/CodeSystem/medication-admin-status|4.0.1
-INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[0].resource/*Encounter/encounter01*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
-INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[2].resource/*Task/Task01*/.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
-INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[0].resource/*Encounter/encounter01*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
-INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
-INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
-INFORMATION: Parameters/single-gaps-closed-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
-INFORMATION: Parameters/single-gaps-closed-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
-INFORMATION: Procedure/gaps-procedure01: Procedure.status: Reference to draft item http://hl7.org/fhir/event-status|4.0.1
-INFORMATION: Task/task01: Task.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
-INFORMATION: Task/task02: Task.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
-INFORMATION: Task/task03: Task.status: Reference to draft item http://hl7.org/fhir/task-status|4.0.1
-INFORMATION: Bundle/sde-example-patient-data-bundle: Bundle.entry[1].resource/*Encounter/encounter04*/.hospitalization.dischargeDisposition: Reference to draft item http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0
+INFORMATION: MedicationRequest/sde-nhsn-iip-add101-10: MedicationRequest.dosageInstruction[0].doseAndRate[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
+INFORMATION: MedicationRequest/sde-nhsn-iip-add101-10: MedicationRequest.dosageInstruction[0].doseAndRate[1].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
+
+INFORMATION: Observation/DNA-occultblood: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: Observation/observation01: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: Observation/observation02: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: Observation/observation03: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[2].resource/*Observation/DNA-occultblood*/.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: Parameters/col-submit-collect-obs: Parameters.parameter[0].resource/*MeasureReport/datax-measurereport03*/.subject.parameter[0].resource/*Patient/patient03*/.managingOrganization.parameter[0].resource/*Organization/organization03*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[2].resource/*Observation/observation01*/.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[0].resource/*MeasureReport/datax-measurereport01*/.subject.parameter[0].resource/*Patient/patient01*/.managingOrganization.parameter[0].resource/*Organization/organization01*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[8].resource/*Organization/organization02*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[5].resource/*Coverage/coverage01*/.payor[0].parameter[0].resource/*Organization/organization04*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[2].resource/*Task/Task01*/.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[2].resource/*Task/Task01*/.status: Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[0].resource/*MeasureReport/datax-measurereport01*/.subject.parameter[0].resource/*Patient/patient01*/.managingOrganization.parameter[0].resource/*Organization/organization01*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[8].resource/*Organization/organization02*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/mrp-submit-task: Parameters.parameter[5].resource/*Coverage/coverage01*/.payor[0].parameter[0].resource/*Organization/organization04*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[7].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+
+INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[6].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[6].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Parameters/multiple-gaps-indv-report02: Parameters.parameter[1].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[6].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/single-gaps-closed-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[4].resource/*Procedure/gaps-procedure01*/.status: Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Parameters/single-gaps-closed-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[6].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/single-gaps-closed-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[4].resource/*Procedure/gaps-procedure02*/.status: Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: Parameters/single-gaps-closed-indv-report02: Parameters.parameter[0].resource/*Bundle/single-gaps-closed-indv-report02*/.entry[6].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[7].resource/*Organization/gaps-organization-reportingvendor*/.type[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+INFORMATION: Procedure/gaps-procedure01: Procedure.status: Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
+INFORMATION: StructureDefinition/gaps-guidanceresponse-detailedcaregap: StructureDefinition.extension[1].value.ofType(code): Reference to draft CodeSystem http://hl7.org/fhir/resource-security-category|5.1.0
+INFORMATION: Task/task03: Task.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
+INFORMATION: Task/task01: Task.status: Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Task/task01: Task.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
+INFORMATION: Task/task02: Task.status: Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Task/task02: Task.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
+INFORMATION: Task/task03: Task.status: Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
+INFORMATION: Task/task03: Task.code: Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
+
+
 
 # SECTION 2 - INFORMATION - The following information messages are expected since the elements in the following examples do not match the slice in the gaps-bundle.entry
 INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|5.0.0-ballot
@@ -219,3 +269,16 @@ The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' do
 
 # SECTION 2 - INFORMATION - The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|1.0.0
+
+# These detailed race code errors are to be suppressed for now because the publisher tooling currently is unable to access these codes. The codes have been checked manually and the concepts are correct. See
+the Zulip thread where this specific issue is discussed: 
+https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Publisher.20reporting.20code.20not.20found/near/460123037:
+ERROR:	The code provided (urn:oid:2.16.840.1.113883.6.238#1586-7) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#1586-7 ('Shoshone')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'
+ERROR:	The code provided (urn:oid:2.16.840.1.113883.6.238#2036-2) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2036-2 ('Filipino')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'
+ERROR:	The code provided (urn:oid:2.16.840.1.113883.6.238#2184-0) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2184-0 ('Dominican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
+ERROR:	The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
+
+# This error is suppressed for this ballot publication only. The error will be resolved once the cqf-criteriaReference extension in the Extension Pack is updated to allow it to be used in a Reference. See tracker "https://jira.hl7.org/browse/FHIR-46625:
+ERROR:	The extension http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference is not allowed to be used at this point (allowed = e:Measure.group.population, e:Measure.group.stratifier, e:MeasureReport.supplementalData, e:MeasureReport.evaluatedResource; this element is [Extension.value, Extension.value.ofType(Reference), Extension.valueReference, MeasureReport.extension.value.ofType(Reference), Reference])
+
+
