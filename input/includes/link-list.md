@@ -23,7 +23,7 @@
 [Conformance Requirements for Server]: CapabilityStatement-server.html "Conformance Requirements for Server Page"
 [Consumer Server CapabilityStatement]: CapabilityStatement-consumer-server.json.html
 [CPG-on-FHIR]: http://www.hl7.org/fhir/uv/cpg/history.cfml
-[CQFM Library]: {{site.data.fhir.cqfm}}/StructureDefinition-library-cqfm.html
+[CRMI Sharable Library]:  http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary
 [CQFM Measure]: {{site.data.fhir.cqfm}}/StructureDefinition-measure-cqfm.html
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
 [Data Collection Type]: StructureDefinition-extension-dataCollectionType.html

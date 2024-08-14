@@ -20,7 +20,7 @@ In the case of colorectal cancer screening, two types of data are reported: 1) t
 |Coverage|QI Core Coverage Profile|[QI Core Coverage]|
 |DiagnosticReport|QI Core DiagnosticReport Profile|[QI Core DiagnosticReport]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter]|
-|Library|CQFM Library Profile|[CQFM Library]|
+|Library|CRMI Sharable Library|[CRMI Sharable Library]|
 |Location|QI Core Location Profile|[QI Core Location]|
 |Measure|CQFM Measure Profile|[CQFM Measure]|
 |MeasureReport|DEQM Data Exchange MeasureReport Profile|[DEQM Data Exchange MeasureReport Profile]|
