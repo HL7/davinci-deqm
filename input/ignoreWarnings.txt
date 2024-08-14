@@ -22,6 +22,53 @@ INFORMATION: Measure/measure-pi-example: Measure.extension[3]: This element does
 # SECTION 2 - INFORMATION: Information messages validated: Related to the ActCode#CAREGAP issue, example.org, Slicing is open so other slices are intentionally allowed, Confirmed profile validation messages
 None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 
+# SECTION 2 - INFORMATION: The following error message occur due to an issue with the publisher in which in-page anchor references are generated incorrectly in html pages. This issue will be fixed in the next publisher release.  (See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Hyperlink.20.2E.2E.2E.20does.20not.20resolve)
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.reporter.extension:group' at 'div/table/tr/td/a' for 'group' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.start' at 'div/table/tr/td/a' for 'start' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.end' at 'div/table/tr/td/a' for 'end' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:scoring' at 'div/table/tr/td/a' for 'scoring' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:calculatedDate' at 'div/table/tr/td/a' for 'calculatedDate' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:groupImprovementNotation' at 'div/table/tr/td/a' for 'groupImprovementNotation' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:description' at 'div/table/tr/td/a' for 'description' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:numeratorMembership' at 'div/table/tr/td/a' for 'numeratorMembership' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:denominatorMembership' at 'div/table/tr/td/a' for 'denominatorMembership' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:measurePopulationMembership' at 'div/table/tr/td/a' for 'measurePopulationMembership' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:countQuantity' at 'div/table/tr/td/a' for 'countQuantity' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:description' at 'div/table/tr/td/a' for 'description' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.measureScore.extension:altscoretype' at 'div/table/tr/td/a' for 'altscoretype' does not resolve
+Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.stratifier.extension:description' at 'div/table/tr/td/a' for 'description' does not resolve
+
+# SECTION 2 - INFORMATION: The following Build Errors occur due to an issue with the publisher in which in-page anchor references are generated incorrectly in html pages. This issue will be fixed in the next publisher release.  (See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Hyperlink.20.2E.2E.2E.20does.20not.20resolve)
+
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.reporter.extension:group' for "group" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.start' for "start" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.end' for "end" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:scoring' for "scoring" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:calculatedDate' for "calculatedDate" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:groupImprovementNotation' for "groupImprovementNotation" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:description' for "description" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:numeratorMembership' for "numeratorMembership" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:denominatorMembership' for "denominatorMembership" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:measurePopulationMembership' for "measurePopulationMembership" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:countQuantity' for "countQuantity" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:description' for "description" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.measureScore.extension:altscoretype' for "altscoretype" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.stratifier.extension:description' for "description" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.reporter.extension:group' for "group" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.start' for "start" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.end' for "end" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:scoring' for "scoring" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:calculatedDate' for "calculatedDate" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:groupImprovementNotation' for "groupImprovementNotation" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:description' for "description" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:numeratorMembership' for "numeratorMembership" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:denominatorMembership' for "denominatorMembership" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:measurePopulationMembership' for "measurePopulationMembership" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:countQuantity' for "countQuantity" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:description' for "description" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.measureScore.extension:altscoretype' for "altscoretype" cannot be resolved (valid targets: 206 targets)
+The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.stratifier.extension:description' for "description" cannot be resolved (valid targets: 206 targets)
+
 # SECTION 2 - Information: The following information messages are expected since the elements in the following examples do not match the slice in Practitioner.identifier
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[5].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[6].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|5.0.0
