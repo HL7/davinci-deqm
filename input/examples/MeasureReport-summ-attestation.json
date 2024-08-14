@@ -24,6 +24,9 @@
   "status": "complete",
   "type": "summary",
   "measure": "http://example.org/fhir/Measure/exampleAttestationMeasure",
+  "subject": {
+    "reference": "Organization/organization01"
+  },
   "date": "2023-04-01",
   "reporter": {
     "reference": "Organization/organization01"

@@ -17,7 +17,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Added parameters to operations list for care-gaps and evaluate-measure operations page per this tracker's description. ([FHIR-31416](https://jira.hl7.org/browse/FHIR-31416))
    -  Added populationDescription extension definition, and inclusion in MeasureReport profiles. ([FHIR-43324](https://jira.hl7.org/browse/FHIR-43324))  
    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
-   - Updated the parameter descriptions for reportType, subject, and the return ([FHIR-46253](https://jira.hl7.org/browse/FHIR-46253))([Applied here](OperationDefinition-deqm.evaluate-measure.html))
+   - Updated the parameter descriptions for reportType, subject, and the return ([FHIR-46253](https://jira.hl7.org/browse/FHIR-46253))([Applied here](OperationDefinition-evaluate.html))
    - Updated example to make patient02 patient01 and datax-measurereport02 datax-measurereport01 ([FHIR-46162](https://jira.hl7.org/browse/FHIR-46162))([Applied here](Parameters-mrp-submit-obs.json.html))
    - Added boolean as a possible value for alternateScore extension and added a summary measureReport using that scoring type ([FHIR-46232](https://jira.hl7.org/browse/FHIR-46232))
    - Added a new operation to allow submission of multiple measures as a bundle ([FHIR-46373](https://jira.hl7.org/browse/FHIR-46373))([Applied here](OperationDefinition-deqm.submit-data.html))
@@ -25,7 +25,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Created 3 new extensions for numeratorMembership, denominatorMembership, and measurePopulationMembership and added to all 3 Measure Report profiles ([FHIR-44736](https://jira.hl7.org/browse/FHIR-44736))
    - Added section about Duplicate Data to the Guidance page ([FHIR-40511](https://jira.hl7.org/browse/FHIR-40511))([Applied here](guidance.html#duplicate-data))
    - Updated measure report introductions as specified ([FHIR-45140](https://jira.hl7.org/browse/FHIR-45140))
-   - Updated practitioner to provider for the IN parameter on deqm.evaluate-measure ([FHIR-46354](https://jira.hl7.org/browse/FHIR-46354))([Applied here](OperationDefinition-deqm.evaluate-measure.html))
+   - Updated practitioner to provider for the IN parameter on deqm.evaluate-measure ([FHIR-46354](https://jira.hl7.org/browse/FHIR-46354))([Applied here](OperationDefinition-evaluate.html))
    -  Loosened cardinality for supplementalData extensions in meausre profiles ([FHIR-45205](https://jira.hl7.org/browse/FHIR-45205))
    -  Relaxed cardinality of measureReport param in build-submit-data operation to 1..* ([FHIR-46424](https://jira.hl7.org/browse/FHIR-46424))
    -  Added Prospective Gap code to care gaps value set and related narratives ([FHIR-46090](https://jira.hl7.org/browse/FHIR-46090))
@@ -96,11 +96,11 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Remove Coverage from Resource Diagram ([FHIR-41299](https://jira.hl7.org/browse/FHIR-41299))
     -  Add GuidanceResponse example to Examples page ([FHIR-41315](https://jira.hl7.org/browse/FHIR-41315))
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
-    -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-(qi-core)))
+    -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](index.html#quality-improvement-core-implementation-guide-qi-core))
     -  Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
     -  Criteria Reference Extension needs to be more generic and reusable across IGs ([FHIR-41242](https://jira.hl7.org/browse/FHIR-41242) Changes applied in json files
     -  In order for Individual MeasureReport to be the equivalent of QRDA Category 1, it needs to share the evaluatedResources ([FHIR-42812](https://jira.hl7.org/browse/FHIR-42812))([Applied here](indv-reporting.html#request-body))
-    -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](indv-reporting.html#qualityMeasurementStandardsLandscapeIndv)) and ([here](summary-reporting.html#qualityMeasurementStandardsLandscapeSummary)
+    -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](indv-reporting.html#relationship-between-qi-core-deqm-and-cqms)) and ([here](summary-reporting.html#qualityMeasurementStandardsLandscapeSummary)
     -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-extension-reportingProgram.html))
 
 ### Changes and Updates for Version 3.1.0
@@ -222,7 +222,7 @@ The first official published version of the DEQM IG for FHIR R4.
     - Clarify [stakeholders](datax.html) ([FHIR-26082](https://jira.hl7.org/browse/FHIR-26082))
     - Add [reference](index.html#introduction) to Da Vinci Guiding Principles ([FHIR-26078](https://jira.hl7.org/browse/FHIR-26078))
     - Add [implementer notes](StructureDefinition-indv-measurereport-deqm.html#mandatory-data-elements-and-terminology) to  DEQM Data-Exchange MeasureReport Profile  ([FHIR-26073](https://jira.hl7.org/browse/FHIR-26073))
-    - Add [Practitioner Profile](http://hl7.org/fhir/us/davinci-deqm/STU2/StructureDefinition-practitioner-deqm.html) to accommodate CMS Certification Number identifier(CCN) and add CCN to DEQM Organization Profile ([FHIR-25739](https://jira.hl7.org/browse/FHIR-25739)). Note that DEQM Organization Profile was removed in STU3.1.1, so the link to DEQM Organization Profile is no longer available from STU3.1.1.
+    - Add [Practitioner Profile](https://hl7.org/fhir/us/davinci-deqm/StructureDefinition-practitioner-deqm.html) to accommodate CMS Certification Number identifier(CCN) and add CCN to DEQM Organization Profile ([FHIR-25739](https://jira.hl7.org/browse/FHIR-25739)). Note that DEQM Organization Profile was removed in STU3.1.1, so the link to DEQM Organization Profile is no longer available from STU3.1.1.
     - Add [software name/version extension](StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.extension:vendor) to MeasureReport Profiles ([FHIR-25721](https://jira.hl7.org/browse/FHIR-25721))
     - Add required [`id`](StructureDefinition-summary-measurereport-deqm-definitions.html#MeasureReport.group.population.code) element to the MeasureReport profiles ([FHIR-25716](https://jira.hl7.org/browse/FHIR-25716))
     - [Document](datax.html#provenance) that $submit-data and $collect-data should support the use of the X-Provenance header ([FHIR-25624](https://jira.hl7.org/browse/FHIR-25624))
