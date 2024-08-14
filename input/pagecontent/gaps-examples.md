@@ -20,7 +20,7 @@ Later, the provider runs the same Gaps in Care Report again, both patients now s
 |Composition| DEQM Gaps In Care Composition Profile   | [DEQM Gaps In Care Composition Profile]   
 |DetectedIssue| DEQM Gaps In Care DetectedIssue Profile | [DEQM Gaps In Care DetectedIssue Profile] 
 |Encounter| QI Core Encounter Profile               | [QI Core Encounter]                       |
-|Library| CQFM Library Profile                    | [CQFM Library]                            |
+|Library| CRMI Sharable Library                    | [CRMI Sharable Library]                            |
 |Measure| CQFM Measure Profile                    | [CQFM Measure]                            |
 |MeasureReport| DEQM Individual MeasureReport Profile   | [DEQM Individual MeasureReport Profile]   |
 |Organization| QI Core Organization Profile            | [QI Core Organization]                    |
