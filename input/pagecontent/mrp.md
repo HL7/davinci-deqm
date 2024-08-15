@@ -24,7 +24,7 @@ Note that the exchange of the reconciled medication list, indication of conversa
 |Coverage| QI Core Coverage Profile                 | [QI Core Coverage]                         |
 |Encounter| QI Core Encounter Profile                | [QI Core Encounter]                        |
 |Location| QI Core Location Profile                 | [QI Core Location]                         |
-|Library| CQFM Library Profile                     | [CQFM Library]                             |
+|Library| CRMI Sharable Library                     | [CRMI Sharable Library]                             |
 |Measure| CQFM Measure Profile                     | [CQFM Measure]                             |
 |MeasureReport| DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile] |
 |MeasureReport| DEQM Individual MeasureReport Profile    | [DEQM Individual MeasureReport Profile]    |
