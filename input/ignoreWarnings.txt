@@ -183,6 +183,9 @@ INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does
 The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://www.ama-assn.org/go/cpt#1111F)
 
+# The following terminology artifacts are defined in the IG and have been discussed internally against a move to THO
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
 # SECTION 2 - INFORMATION - VSAC issues - The following codes in the codesystem have been checked and the concepts are correct
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
 
