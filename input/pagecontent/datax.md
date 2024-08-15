@@ -29,8 +29,8 @@ The following resources are used in all data exchange transactions:
 
 | Resource Type | Profile Name                             | Link to Profile                            |
 |---------------|------------------------------------------|--------------------------------------------|
-| Library       | CRMI Sharable Library                     | [CRMI Sharable Library]                             |
-| Measure       | CQFM Measure Profile                     | [CQFM Measure]                             |
+| Library       | CRMI Shareable Library                     | [CRMI Shareable Library]                             |
+| Measure       | CRMI Shareable Measure Profile           | [CRMI Shareable Measure]                             |
 | MeasureReport | DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile] |
 | Organization  | QI Core Organization Profile             | [QI Core Organization]                     |
 | Patient       | QI Core Patient Profile                  | [QI Core Patient]                          |

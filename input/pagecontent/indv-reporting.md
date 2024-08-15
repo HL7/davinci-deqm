@@ -90,7 +90,7 @@ The following resources are used in all individual reporting transactions.
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Measure|CQFM Measure Profile|[CQFM Measure]|
+|Measure|CRMI Shareable Measure Profile|[CRMI Shareable Measure]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|

@@ -18,9 +18,9 @@ The example presented is based on the QDM version of CMS108v7, which has been re
 |DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest]|
 |DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement]|
 |Encounter|QI Core Encounter Profile|[QI Core Encounter]|
-|Library|CRMI Sharable Library|[CRMI Sharable Library]|
+|Library|CRMI Shareable Library|[CRMI Shareable Library]|
 |Location|QI Core Location Profile|[QI Core Location]|
-|Measure|CQFM Measure Profile|[CQFM Measure]|
+|Measure|CRMI Shareable Measure Profile|[CRMI Shareable Measure]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
 |MedicationRequest|Qi Core Medication Not Requested|[QICoreMedicationNotRequested]|
