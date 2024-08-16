@@ -97,7 +97,7 @@
   } ],
   "status": "complete",
   "type": "summary",
-  "measure": "https://madie.cms.gov/Measure/AlaraCTFHIR|0.1.001",
+  "measure": "http://example.org/fhir/Measure/AlaraCTFHIRMeasure",
   "date": "2024-02-07T14:48:48+00:00",
   "reporter": {
     "reference": "Organization/organization01"
