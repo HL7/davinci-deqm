@@ -7,7 +7,11 @@ Rule dom-6: 'A resource should have narrative for robust management' Failed (def
 A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/SOP' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/stratifier-classifications' could not be found, so the code cannot be validated
-
+A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
+A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
+A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
+The Measure 'http://example.org/fhir/Measure/exampleAttestationMeasure' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
@@ -182,6 +186,9 @@ INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does
 # SECTION 2 - INFORMATION - The following examples are using valid codes in the CPT codesystem but THO doesn't define the codes. we are confident the CPT codes referenced here are correct
 The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://www.ama-assn.org/go/cpt#1111F)
+
+# The following terminology artifacts are defined in the IG and have been discussed internally against a move to THO
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # SECTION 2 - INFORMATION - VSAC issues - The following codes in the codesystem have been checked and the concepts are correct
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
