@@ -94,7 +94,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -375,7 +375,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-numeratorMembership"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -387,7 +387,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-denominatorMembership"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -399,7 +399,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-measurePopulationMembership"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>

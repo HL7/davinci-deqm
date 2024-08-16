@@ -2,10 +2,10 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="cqf-denominatorMembership"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-denominatorMembership"/>
+  <url value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
   <version value="1.0.0"/>
-  <name value="DEQMCalculatedDenominatorMembership"/>
-  <title value="DEQM Calculated Denominator Membership"/>
+  <name value="DenominatorMembership"/>
+  <title value="Denominator Membership"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2024-07-29T00:00:00-07:00"/>
@@ -47,7 +47,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-denominatorMembership"/>
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>
