@@ -7,7 +7,7 @@ The Individual reporting scenario is supported by the [DEQM Individual MeasureRe
 
 ### Supplemental Data Resources in MeasureReport
 
-The [supplementalData extension](http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
+The [supplementalData extension](StructureDefinition-extension-supplementalData.html) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
 
 #### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
@@ -18,7 +18,7 @@ The [Quality Reporting] Page in the R4 Release of the FHIR Specification provide
 {:.no_toc}
 {: qualityMeasurementStandardsLandscapeIndv}
 
-<span class="bg-success">As described in the [Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscapeIndex) section of this implementation guide, </span>the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
+<span class="bg-success">As described in the [Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscape) section of this implementation guide, </span>the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
 
 ### Constructing an Individual Report
 
