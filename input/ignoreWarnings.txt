@@ -7,10 +7,10 @@ Rule dom-6: 'A resource should have narrative for robust management' Failed (def
 A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/SOP' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/stratifier-classifications' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
-A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
+A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
+A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated
 The Measure 'http://example.org/fhir/Measure/exampleAttestationMeasure' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure

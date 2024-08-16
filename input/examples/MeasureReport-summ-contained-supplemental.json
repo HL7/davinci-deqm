@@ -55,8 +55,18 @@
         "code": "M"
       } ]
     },
+    "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+    "performer": [
+       {
+          "reference": "Practitioner/practitioner02"
+       }
+    ],
+    "subject": {
+       "reference": "Patient/patient03"
+    },
     "valueInteger": 4
-  }, {
+    }, 
+    {
     "resourceType": "Observation",
     "id": "7d622f95-a4b6-4ca7-a6e1-d473106ca276",
     "extension": [ {
@@ -73,6 +83,16 @@
         "code": "F"
       } ]
     },
+    "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+    "performer": [
+       {
+          "reference": "Practitioner/practitioner02"
+       }
+    ],
+    "subject": {
+       "reference": "Patient/patient03"
+    },
+
     "valueInteger": 16
   } ],
   "status": "complete",
