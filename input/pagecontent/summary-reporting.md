@@ -12,7 +12,7 @@ The Quality Reporting Page in the R4 Release of the FHIR Specification provides 
 
 ### Supplemental Data Resources in MeasureReport
 
-The [supplementalData extension](http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
+The [supplementalData extension](StructureDefinition-extension-supplementalData.html) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
 
 ### Relationship between QI Core, DEQM, and CQMs
 {: #qualityMeasurementStandardsLandscapeSummary}

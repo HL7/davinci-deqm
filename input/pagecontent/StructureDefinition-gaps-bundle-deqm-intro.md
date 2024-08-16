@@ -15,10 +15,6 @@ The following data-elements are mandatory (i.e data MUST be present).
 9. entry.request.method: GET \| HEAD \| POST \| PUT \| DELETE \| PATCH
 10. entry.request.url: URL for HTTP equivalent of this entry
 11. entry.response.status: Status response code (text optional)
-12. entry.resource: This Composition uses the DEQM Gaps In Care Composition Profile
-13. entry.request.method: GET \| HEAD \| POST \| PUT \| DELETE \| PATCH
-14. entry.request.url: URL for HTTP equivalent of this entry
-15. entry.response.status: Status response code (text optional)
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. entry: Contains a composition of gaps in care report for an individual for one or more measures

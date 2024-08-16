@@ -10,7 +10,7 @@
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
   "name": "DEQMCriteriaReferenceExtension",
   "title": "DEQM Criteria Reference Extension",
-  "status": "active",
+  "status": "retired",
   "experimental": false,
   "date": "2022-11-15",
   "publisher": "Da Vinci Project",

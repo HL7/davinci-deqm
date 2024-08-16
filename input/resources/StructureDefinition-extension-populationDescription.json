@@ -1,10 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "extension-populationDescription",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "deprecated"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription",
-  "name": "measurereport-populationDescription",
-  "title": "Measure Report Population Description",
-  "status": "active",
+  "name": "DEQMPopulationDescription",
+  "title": "DEQM Population Description",
+  "status": "retired",
   "experimental": false,
   "date": "2024-01-24",
   "publisher": "Da Vinci Project",
@@ -18,7 +24,7 @@
       ]
     }
   ],
-  "description": "The human readable description of this population criteria.",
+  "description": "DEPRECATED in favor of the measurereport-populationDescription extension: The human readable description of this population criteria.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -34,10 +40,6 @@
      {
       "type": "element",
       "expression": "MeasureReport.stratifier"
-    },
-     {
-      "type": "element",
-      "expression": "MeasureReport.supplementalDataExtension"
     }
   ],
   "type": "Extension",

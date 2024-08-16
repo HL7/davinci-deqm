@@ -94,7 +94,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-supplementalData"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -371,7 +371,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-numeratorMembership"/>
+          value="http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -384,7 +384,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-denominatorMembership"/>
+          value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -397,7 +397,7 @@
       <type>
         <code value="Extension"/>
         <profile
-          value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/cqf-measurePopulationMembership"/>
+          value="http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -408,6 +408,12 @@
     <element id="MeasureReport.group.population">
       <path value="MeasureReport.group.population"/>
       <condition value="deqm-5"/>
+      <constraint>
+        <key value="deqm-8"/>
+        <severity value="error"/>
+        <human value="The population must either have a count (integer) or a countQuantity (quantity), but not both."/>
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor count.exists()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.extension:countQuantity">
@@ -421,13 +427,7 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity"/>
       </type>
-      <condition value="popCountQuantity"/>
-      <constraint>
-        <key value="popCountQuantity"/>
-        <severity value="error"/>
-        <human value="The population must either have a count (integer) or a countQuantity (quantity), but not both."/>
-        <expression value="MeasureReport.group.population.extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor MeasureReport.group.population.count.exists()"/>
-      </constraint>
+      <condition value="deqm-8"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.extension:populationDescription">
@@ -450,15 +450,7 @@
     </element>
     <element id="MeasureReport.group.population.count">
       <path value="MeasureReport.group.population.count"/>
-      <condition value="popCount"/>
-      <constraint>
-        <key value="popCount"/>
-        <severity value="error"/>
-        <human value="The population must either have a count ."/>
-        <expression value="MeasureReport.group.population.exists() implies
-                 (MeasureReport.group.population.count.exists() xor
-                  MeasureReport.group.population.extension.exists())"/>
-      </constraint>
+      <condition value="deqm-8"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -525,22 +517,22 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population">
       <path value="MeasureReport.group.stratifier.stratum.population"/>
+      <constraint>
+        <key value="deqm-9"/>
+        <severity value="error"/>
+        <human value="The stratum population must either have a count (integer) or a countQuantity (quantity), but not both."/>
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor count.exists()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
-      <condition value="popCountQuantity"/>
-      <constraint>
-        <key value="popCountQuantity"/>
-        <severity value="error"/>
-        <human value="The population must either have a count (integer) or a countQuantity (decimal), but not both."/>
-        <expression value="MeasureReport.group.stratifier.stratum.population.extension:countQuantity.exists() xor MeasureReport.group.stratifier.stratum.population.count.exists()"/>
-      </constraint>
+      <condition value="deqm-9"/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/countQuantity"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -554,6 +546,7 @@
       <path value="MeasureReport.group.stratifier.stratum.population.count"/>
       <min value="1"/>
       <max value="1"/>
+      <condition value="deqm-9"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.evaluatedResource">
