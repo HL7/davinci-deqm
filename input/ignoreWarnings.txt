@@ -198,7 +198,7 @@ The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' do
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|1.0.0
 
 # These detailed race code errors are to be suppressed for now because the publisher tooling currently is unable to access these codes. The codes have been checked manually and the concepts are correct. See
-the Zulip thread where this specific issue is discussed: 
+the Zulip thread where this specific issue is discussed:
 https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Publisher.20reporting.20code.20not.20found/near/460123037:
 ERROR:	The code provided (urn:oid:2.16.840.1.113883.6.238#1586-7) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#1586-7 ('Shoshone')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'
 ERROR:	The code provided (urn:oid:2.16.840.1.113883.6.238#2036-2) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2036-2 ('Filipino')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'
@@ -208,4 +208,5 @@ ERROR:	The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found 
 # This error is suppressed for this ballot publication only. The error will be resolved once the cqf-criteriaReference extension in the Extension Pack is updated to allow it to be used in a Reference. See tracker "https://jira.hl7.org/browse/FHIR-46625:
 ERROR:	The extension http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference is not allowed to be used at this point (allowed = e:Measure.group.population, e:Measure.group.stratifier, e:MeasureReport.supplementalData, e:MeasureReport.evaluatedResource; this element is [Extension.value, Extension.value.ofType(Reference), Extension.valueReference, MeasureReport.extension.value.ofType(Reference), Reference])
 
-
+# This warning is because of a valid ICD code that the publisher doesn't have the complete code system.
+WARNING: Unknown Code 'V173' in the system 'http://hl7.org/fhir/sid/icd-9-cm' version '2015'
