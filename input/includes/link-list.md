@@ -153,7 +153,7 @@
 [Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
 [MeasurePopulationType]: http://hl7.org/fhir/R4/valueset-measure-population.html
 [$care-gaps]: OperationDefinition-care-gaps.html
-[gaps status value set]:http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status
+[gaps status value set]:ValueSet-gaps-status.html
 [FHIR specification for operation behavior]: {{site.data.fhir.path}}operations.html#response
 [Gaps In Care]: gaps-examples.html
 [Operations]: operations.html
