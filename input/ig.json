@@ -1,9 +1,11 @@
 {
     "status": "active",
-    "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-        "valueCode" : "cqi"
-    }],
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "cqi"
+        }
+    ],
     "publisher": "HL7 International / Clinical Quality Information",
     "license": "CC0-1.0",
     "name": "DEQM",
@@ -60,7 +62,19 @@
         "parameter": [
             {
                 "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/countQuantity"
+                "value": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"
+            },
+            {
+                "code": "special-url",
+                "value": "http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"
+            },
+            {
+                "code": "special-url",
+                "value": "http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"
+            },
+            {
+                "code": "special-url",
+                "value": "http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"
             },
             {
                 "code": "path-expansion-params",
@@ -197,6 +211,10 @@
             {
                 "code": "excludemap",
                 "value": "true"
+            },
+            {
+                "code": "auto-oid-root",
+                "value": "2.16.840.1.113883.4.642.40.23"
             }
         ],
         "resource": [
@@ -1158,7 +1176,7 @@
                     "reference": "CapabilityStatement/consumer-client"
                 }
             },
-             {
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-dataLocation"

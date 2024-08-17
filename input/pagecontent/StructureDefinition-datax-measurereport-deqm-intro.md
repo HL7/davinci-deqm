@@ -19,7 +19,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 13. group.stratifier.stratum.component.value: The stratum component value, e.g. male
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
-1. software: Item used in healthcare
+1. software: Extension
 2. vendor: Vendor information
 3. message: Messages encountered while creating the report
 4. inputParameters: What parameters

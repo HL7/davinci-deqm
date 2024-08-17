@@ -18,6 +18,24 @@
           }
         ]
       }
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData",
+      "valueReference": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+          "valueString": "sde-sex"
+        } ],
+        "reference": "#60e33dd8-9150-45d7-8429-9d7f1e3e2fd6"
+      }
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData",
+      "valueReference": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+          "valueString": "sde-sex"
+        } ],
+        "reference": "#7d622f95-a4b6-4ca7-a6e1-d473106ca276"
+      }
     }
   ],
   "contained": [ {
@@ -33,6 +51,7 @@
     "status": "final",
     "code": {
       "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
         "code": "M"
       } ]
     },
@@ -50,37 +69,19 @@
     "status": "final",
     "code": {
       "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
         "code": "F"
       } ]
     },
     "valueInteger": 16
   } ],
-  "extension": [ {
-    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-    "valueString": "This measure provides a standardized method for monitoring the performance of diagnostic CT to discourage unnecessarily high radiation doses, a risk factor for cancer, while preserving image quality. It is expressed as a percentage of CT exams that are out-of-range based on having either excessive radiation dose or inadequate image quality relative to evidence-based thresholds given the clinical indication for the exam. The higher the value the worse the performance. The clinical indication reflecting the underlying radiation dose and image quality required, is captured in a newly created variable CT Dose and Image Quality Category (LOINC Code 96914-7). All diagnostic CT exams performed in hospital settings (inpatient or outpatient) or ambulatory care settings are eligible for this eCQM based on physician level aggregation. A parallel eCQM includes only exams performed in hospital settings (inpatient or outpatient) that further aggregates into an inpatient or outpatient reporting level.\nAs a radiology measure, the measure derives standardized data elements from structured fields within both the electronic health record (EHR) and the radiology electronic clinical data systems, including the Radiology Information System (RIS) and the Picture Archiving and Communication System (PACS). Primary imaging data required by the measure include the Radiation Dose Structured Reports and image pixel data, both stored in the PACS in Digital Imaging and Communications in Medicine (DICOM) format, a universally adopted standard for medical imaging information. \n\nBecause of limitations in their specifications and format, eCQMs cannot currently access and consume these required data elements from these radiology sources in their original DICOM formats. Therefore this eCQM measure requires the use of additional software (translation software) to access the primary data elements that are required for measure computation and translate them into data elements that can be ingested by this eCQM. The purpose of this pre-processing software is to access and link the primary data elements with minimal site burden, assess each CT exam for eligibility based on initial population criteria, and generate three data elements mapped to a clinical terminology for eCQM consumption. \n\nThe translation software will create three variables required for measure computation including the CT Dose and Image Quality Category (LOINC Code 96914-7), the Calculated CT Global Noise (LOINC Code 96912-1) and the Calculated CT Size-Adjusted Dose (LOINC Code 96913-9). These transformed data elements can be stored in the EHR. The included population for this eCQM will include all CT scans with non-missing values of these three new variables where the defining of these variables, occurs in the translation software.\n\nThe measure will evaluate each included CT examination based on allowable thresholds that are specified by the CT dose and image quality category. An examination is considered out of range if either the Calculated CT Global Noise, or the Calculated CT Size-Adjusted Dose is out of range for the CT Dose and Image Quality Category. The following thresholds will be applied, shown with the following format: [CT Dose and Image Quality Category (longer name for category), threshold for the Calculated CT Global Noise in Hounsfield units, threshold for the calculated CT Size-Adjusted Dose in dose length product].\n[ABDOPEL LD (=Abdomen and Pelvis, Low Dose), 64, 598];\n[ABDOPEL RT (=Abdomen and Pelvis, Routine Dose), 29, 644];\n[ABDOPEL HD (=Abdomen and Pelvis, High Dose), 29, 1260];\n[CARDIAC LD (=Cardiac Low Dose), 55, 93];\n[CARDIAC RT (= Cardiac Routine Dose), 32, 576];\n[CHEST LD (=Chest Low Dose), 55, 377];\n[CHEST RT (=Chest Routine Dose), 49, 377];\n[CHEST-CARDIAC HD (=Chest High Dose or Cardiac High Dose), 49, 1282];\n[HEAD LD (=Head Low Dose), 115, 582];\n[HEAD RT (=Head Routine Dose), 115, 1025];\n[HEAD HD (=Head High Dose), 115, 1832];\n[EXTREMITIES (=Upper or Lower Extremity), 73, 320];\n[NECK-CSPINE (= Neck or Cervical Spine), 25, 1260];\n[TSPINE-LSPINE (=Thoracic or Lumbar Spine), 25, 1260];\n[CAP (=Combined Chest, Abdomen and Pelvis), 29, 1637];\n[TLSPINE (= Combined Thoracic and Lumbar Spine), 25, 2520];\n[HEADNECK RT (=Combined Head and Neck, Routine Dose), 25, 2285];\n[HEADNECK HD (=Combined Head and Neck, High Dose), 25, 3092]"
-  }, {
-    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalDataElement.reference",
-    "valueReference": {
-      "extension": [ {
-        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
-        "valueString": "sde-sex"
-      } ],
-      "reference": "#60e33dd8-9150-45d7-8429-9d7f1e3e2fd6"
-    }
-  }, {
-    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalDataElement.reference",
-    "valueReference": {
-      "extension": [ {
-        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-criteriaReference",
-        "valueString": "sde-sex"
-      } ],
-      "reference": "#7d622f95-a4b6-4ca7-a6e1-d473106ca276"
-    }
-  } ],
   "status": "complete",
   "type": "summary",
   "measure": "https://madie.cms.gov/Measure/AlaraCTFHIR|0.1.001",
   "date": "2024-02-07T14:48:48+00:00",
+  "reporter": {
+    "reference": "Organization/organization01"
+  },
   "period": {
     "start": "2025-01-01T00:00:00+00:00",
     "end": "2025-12-31T23:59:59+00:00"
@@ -90,8 +91,8 @@
     "population": [ {
       "id": "2D0D08DB-219D-4C41-AB53-DE21F006D602",
       "extension": [ {
-        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-        "valueString": "All diagnostic CT exams performed on adults (aged 18 years and older) during the measurement period that have a non-missing CT Dose and Image Quality Category, a Calculated CT Size-Adjusted Dose value, and a Calculated CT Global Noise value. CT exams with missing patient age, Calculated CT Size-Adjusted Dose, or Calculated CT Global Noise are technical exclusions from the initial population and will be calculated in the translation software. Technical exclusions will be flagged, corrected whenever possible, and tracked at the accountable entity level by the translation software."
+        "url": "http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription",
+        "valueMarkdown": "All diagnostic CT exams performed on adults (aged 18 years and older) during the measurement period that have a non-missing CT Dose and Image Quality Category, a Calculated CT Size-Adjusted Dose value, and a Calculated CT Global Noise value. CT exams with missing patient age, Calculated CT Size-Adjusted Dose, or Calculated CT Global Noise are technical exclusions from the initial population and will be calculated in the translation software. Technical exclusions will be flagged, corrected whenever possible, and tracked at the accountable entity level by the translation software."
       } ],
       "code": {
         "coding": [ {
@@ -100,12 +101,12 @@
           "display": "Initial Population"
         } ]
       },
-      "count": 0
+      "count": 50
     }, {
       "id": "BCE3902C-1D78-41A4-A6C6-7913CD71D5F3",
       "extension": [ {
-        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-        "valueString": "Equals Initial Population"
+        "url": "http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription",
+        "valueMarkdown": "Equals Initial Population"
       } ],
       "code": {
         "coding": [ {
@@ -114,12 +115,12 @@
           "display": "Denominator"
         } ]
       },
-      "count": 0
+      "count": 50
     }, {
       "id": "3C6FDFA9-8CE2-43E8-97C5-1E8D87F6CBC4",
       "extension": [ {
-        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-        "valueString": "CT exams that cannot be categorized by anatomical area or by clinical indication, either because they are simultaneous exams of multiple body regions outside of four commonly encountered multiple region groupings, or because there is insufficient data for their classification based on diagnosis and procedure codes, are assigned a CT Dose and Image Quality Category (LOINC 96914-7) value using the LOINC Answer list (LL5824-9) of Full body LA31771-1. This value identifies exams that are excluded from the calculation. These exams are included in the initial population because they have a non-missing CT Dose and Image Quality Category but are then excluded in the eCQM because the value is full body."
+        "url": "http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription",
+        "valueMarkdown": "CT exams that cannot be categorized by anatomical area or by clinical indication, either because they are simultaneous exams of multiple body regions outside of four commonly encountered multiple region groupings, or because there is insufficient data for their classification based on diagnosis and procedure codes, are assigned a CT Dose and Image Quality Category (LOINC 96914-7) value using the LOINC Answer list (LL5824-9) of Full body LA31771-1. This value identifies exams that are excluded from the calculation. These exams are included in the initial population because they have a non-missing CT Dose and Image Quality Category but are then excluded in the eCQM because the value is full body."
       } ],
       "code": {
         "coding": [ {
@@ -128,12 +129,12 @@
           "display": "Denominator Exclusion"
         } ]
       },
-      "count": 0
+      "count": 10
     }, {
       "id": "1F700B85-7AB2-4BEE-BC8C-6C08CEF5E660",
       "extension": [ {
-        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.population.description",
-        "valueString": "Calculated CT Size-Adjusted Dose greater than or equal to a threshold specific to the CT Dose and Image Quality Category, or Calculated CT Global Noise value greater than or equal to a threshold specific to the CT Dose and Image Quality Category."
+        "url": "http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription",
+        "valueMarkdown": "Calculated CT Size-Adjusted Dose greater than or equal to a threshold specific to the CT Dose and Image Quality Category, or Calculated CT Global Noise value greater than or equal to a threshold specific to the CT Dose and Image Quality Category."
       } ],
       "code": {
         "coding": [ {
@@ -142,7 +143,7 @@
           "display": "Numerator"
         } ]
       },
-      "count": 0
+      "count": 20
     }, {
       "id": "bdb43039-ae40-4daf-8390-eaac2880f6d6",
       "code": {
@@ -152,7 +153,7 @@
           "display": "Numerator Exclusion"
         } ]
       },
-      "count": 0
+      "count": 5
     }, {
       "id": "1032faf0-a5d2-44f3-b4fb-c52a0acd3f93",
       "code": {
