@@ -202,8 +202,8 @@ ERROR: MeasureReport/summ-contained-supplemental: MeasureReport.extension[2].val
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[4].resource/*ServiceRequest/nhsn-iip-sr-sde*/.reasonCode[0].coding[0].code: Unknown Code 'V173' in the system 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 # These links do resolve, it's not clear why they are being reported as bad links
-ERROR: C:\Users\Bryn\Documents\Src\HL7\Specifications\DEQM\output\downloads.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 406, column 2399: The link 'http://hl7.org/fhir/extensions/5.1.0-snapshot1' for "FHIR Extensions Pack" cannot be resolved
-ERROR: C:\Users\Bryn\Documents\Src\HL7\Specifications\DEQM\output\downloads.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 407, column 2749: The link 'http://terminology.hl7.org/5.3.0' for "HL7 Terminology (THO)" cannot be resolved
+ERROR: output\downloads.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 406, column 2399: The link 'http://hl7.org/fhir/extensions/5.1.0-snapshot1' for "FHIR Extensions Pack" cannot be resolved
+ERROR: output\downloads.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 407, column 2749: The link 'http://terminology.hl7.org/5.3.0' for "HL7 Terminology (THO)" cannot be resolved
 
 # Validated these counts are correct
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[0]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
