@@ -409,14 +409,6 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
                         "valueCode": "F"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
-                        "valueAddress": {
-                            "city": "Faro",
-                            "country": "PT",
-                            "state": "Algarve"
-                        }
                     }
                 ],
                 "address": [

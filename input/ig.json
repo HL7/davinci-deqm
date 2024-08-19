@@ -356,6 +356,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Single Indv Vte Report Option 1",
+                "reference": {
+                    "reference": "Bundle/single-indv-vte-report-option1"
+                },
+                "description": "DEQM Single Indv Vte Report example using MedicationAdministration"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Single Indv Vte Report Option 7",
                 "reference": {
                     "reference": "Bundle/single-indv-vte-report-option7"
