@@ -55,8 +55,18 @@
         "code": "M"
       } ]
     },
+    "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+    "performer": [
+       {
+          "reference": "Practitioner/practitioner02"
+       }
+    ],
+    "subject": {
+       "reference": "Patient/patient03"
+    },
     "valueInteger": 4
-  }, {
+    }, 
+    {
     "resourceType": "Observation",
     "id": "7d622f95-a4b6-4ca7-a6e1-d473106ca276",
     "extension": [ {
@@ -73,11 +83,21 @@
         "code": "F"
       } ]
     },
+    "effectiveDateTime": "2018-09-30T14:15:04.424Z",
+    "performer": [
+       {
+          "reference": "Practitioner/practitioner02"
+       }
+    ],
+    "subject": {
+       "reference": "Patient/patient03"
+    },
+
     "valueInteger": 16
   } ],
   "status": "complete",
   "type": "summary",
-  "measure": "https://madie.cms.gov/Measure/AlaraCTFHIR|0.1.001",
+  "measure": "http://example.org/fhir/Measure/AlaraCTFHIRMeasure",
   "date": "2024-02-07T14:48:48+00:00",
   "reporter": {
     "reference": "Organization/organization01"
