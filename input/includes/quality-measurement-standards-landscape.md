@@ -129,7 +129,7 @@ share standardized FHIR-based electronic Clinical Quality Measures (eCQMs).
 
 ##### Quality Improvement Core Implementation Guide (QI-Core)
 {:.no_toc #quality-improvement-core-implementation-guide-(qi-core)}
-<div class="new-content">
+
 The Quality Improvement Core Implementation Guide, or QI-Core, defines a set
 of FHIR profiles with extensions and bindings needed to create interoperable,
 quality-focused applications. Importantly, the scope of QI-Core includes both
@@ -137,7 +137,7 @@ quality measurement and decision support to ensure that knowledge expressed can
 be shared across both domains. QI-Core is derived from US Core, meaning that
 where possible, QI-Core profiles are based on US Core to ensure alignment with
 and support for quality improvement data within healthcare systems in the US
-Realm.</div>
+Realm.
 
 ##### Data Exchange for Quality Measures (DEQM)
 {:.no_toc #data-exchange-for-quality-measures-(deqm)}
