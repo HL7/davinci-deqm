@@ -1,6 +1,9 @@
 
 The Data Exchange For Quality Measures Implementation Guide was developed under the  [Davinci Project](#)
 
+### Changes and Updates for STU5 Publication (STU5).
+
+
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
 1. Applied the following trackers:
