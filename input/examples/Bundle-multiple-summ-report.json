@@ -417,7 +417,7 @@
             }
           ]
         },
-        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0-ballot",
         "period": {
           "end": "2019-09-01",
           "start": "2019-08-01"
@@ -521,7 +521,7 @@
             }
           ]
         },
-        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|4.0.0",
         "period": {
           "end": "2018-09-01",
           "start": "2018-08-01"
