@@ -142,7 +142,7 @@ Realm.
 ##### Data Exchange for Quality Measures (DEQM)
 {:.no_toc #data-exchange-for-quality-measures-(deqm)}
 
-The Data Exchange for Quality Measures Implementation Guide, or DEQM, (this ig)
+The Data Exchange for Quality Measures Implementation Guide, or DEQM, (this IG)
 provides a framework that defines conformance profiles and guidance to enable
 the exchange of quality information and quality measure reporting (e.g. for
 transferring quality information from a health care provider to a payer). The
