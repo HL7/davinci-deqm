@@ -3,6 +3,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for STU5 Publication (STU5).
 
+1. Applied the following trackers:
+   - typo needs correction ([FHIR-46862](https://jira.hl7.org/browse/FHIR-46862))([Applied here](index.html#data-exchange-for-quality-measures-deqm))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
