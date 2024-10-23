@@ -4,7 +4,7 @@
 
 The VTE-1 measure assesses the number of patients who received venous thromboembolism (VTE) prophylaxis or have documentation why no venous thromboembolism prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission. Note that the Individual Measure Reporting Interaction is the only interaction used for this measure.
 
-The example presented is based on the QDM version of CMS108v7, which has been represented using profiles derived from [QI Core]. Measure specifications are available on the [ECQI Resource Center], [CMS0108v12]. Additional information regarding the measure specification can be found in the [Quality Measure Implementation Guide].
+The example presented is based on the QDM version of CMS108v7, which has been represented using profiles derived from [QI-Core]. Measure specifications are available on the [ECQI Resource Center], [CMS0108v12]. Additional information regarding the measure specification can be found in the [Quality Measure Implementation Guide].
 
 ### FHIR Resource Overview
 
@@ -13,22 +13,22 @@ The example presented is based on the QDM version of CMS108v7, which has been re
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Condition|QI Core Condition Problems Health Concerns Profile|[QI Core Condition Problems Health Concerns]|
-|Coverage|QI Core Coverage Profile|[QI Core Coverage]|
-|DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest]|
-|DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement]|
-|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
+|Condition|QI-Core Condition Problems Health Concerns Profile|[QI-Core Condition Problems Health Concerns]|
+|Coverage|QI-Core Coverage Profile|[QI-Core Coverage]|
+|DeviceRequest|QI-Core DeviceRequest Profile|[QI-Core DeviceRequest]|
+|DeviceUseStatement|QI-Core DeviceUseStatement Profile|[QI-Core DeviceUseStatement]|
+|Encounter|QI-Core Encounter Profile|[QI-Core Encounter]|
 |Library|CRMI Shareable Library|[CRMI Shareable Library]|
-|Location|QI Core Location Profile|[QI Core Location]|
+|Location|QI-Core Location Profile|[QI-Core Location]|
 |Measure|CRMI Shareable Measure Profile|[CRMI Shareable Measure]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-|MedicationRequest|Qi Core Medication Not Requested|[QICoreMedicationNotRequested]|
-|Observation|QI Core Observation Profile|[QI Core Observation]|
-|Organization|QI Core Organization Profile|[QI Core Organization]|
-|Patient|QI Core Patient Profile|[QI Core Patient]|
-|Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
-|ServiceRequest|QI Core ServiceRequest Profile|[QI Core ServiceRequest]|
+|MedicationRequest|QI-Core Medication Not Requested|[QICoreMedicationNotRequested]|
+|Observation|QI-Core Observation Profile|[QI-Core Observation]|
+|Organization|QI-Core Organization Profile|[QI-Core Organization]|
+|Patient|QI-Core Patient Profile|[QI-Core Patient]|
+|Practitioner|QI-Core Practitioner Profile|[QI-Core Practitioner]|
+|ServiceRequest|QI-Core ServiceRequest Profile|[QI-Core ServiceRequest]|
 
 {: #practitioner-references}
 ### Graph of VTE-1 Resources

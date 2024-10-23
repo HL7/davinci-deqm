@@ -32,12 +32,12 @@ The following resources are used in all data exchange transactions:
 | Library       | CRMI Shareable Library                     | [CRMI Shareable Library]                             |
 | Measure       | CRMI Shareable Measure Profile           | [CRMI Shareable Measure]                             |
 | MeasureReport | DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile] |
-| Organization  | QI Core Organization Profile             | [QI Core Organization]                     |
-| Patient       | QI Core Patient Profile                  | [QI Core Patient]                          |
-| Practitioner  | QI Core Practitioner Profile             | [QI Core Practitioner]                     |
+| Organization  | QI-Core Organization Profile             | [QI-Core Organization]                     |
+| Patient       | QI-Core Patient Profile                  | [QI-Core Patient]                          |
+| Practitioner  | QI-Core Practitioner Profile             | [QI-Core Practitioner]                     |
 
 
-Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
+Depending on the specific Measure, various DEQM and QI-Core Profiles are also used in addition to the profiles listed above
 
 #### Graph of DEQM Resources
 {:.no_toc}
@@ -156,7 +156,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Submit Data operation: [$submit-data]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. Various DEQM and QI-Core Profiles depending on the specific Measure
 
 ###### Usage
 {:.no_toc}
@@ -202,7 +202,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Collect Data operation:[$collect-data]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. Various DEQM and QI-Core Profiles depending on the specific Measure
 
 
 ###### Usage
