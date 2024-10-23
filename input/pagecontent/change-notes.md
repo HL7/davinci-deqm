@@ -3,6 +3,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for STU5 Publication (STU5).
 
+1. Applied the following trackers:
+   - "value-based" with hyphen ([FHIR-48447](https://jira.hl7.org/browse/FHIR-48447))([Applied here](index.html#introduction))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
