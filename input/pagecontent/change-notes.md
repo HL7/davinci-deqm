@@ -3,6 +3,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for STU5 Publication (STU5).
 
+1. Applied the following trackers:
+   - link goes to deprecated extension ([FHIR-46864](https://jira.hl7.org/browse/FHIR-46864))([Applied here](indv-reporting.html#supplemental-data-resources-in-measurereport)), ([here](summary-reporting.html#supplemental-data-resources-in-measurereport)), and ([here](profiles.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
