@@ -3,6 +3,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for STU5 Publication (STU5).
 
+1. Applied the following trackers:
+   - Fix various typos ([FHIR-47450](https://jira.hl7.org/browse/FHIR-47450)) Applied to various .md, .html, and .xml files throughout
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
