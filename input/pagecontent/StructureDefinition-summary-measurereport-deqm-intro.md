@@ -25,7 +25,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 3. supplementalData: Supplemental Data
 4. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
 5. vendor: Vendor information
-6. cehrt: CMS EHR Certifciation ID
+6. cehrt: CMS EHR Certification ID
 7. software: Extension
 8. message: Evaluation messages
 9. group: Group of practitioners responsible for a report

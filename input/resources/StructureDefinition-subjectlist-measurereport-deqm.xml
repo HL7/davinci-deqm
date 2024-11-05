@@ -160,7 +160,7 @@
     <element id="MeasureReport.extension:cehrt">
       <path value="MeasureReport.extension"/>
       <sliceName value="cehrt"/>
-      <short value="CMS EHR Certifciation ID"/>
+      <short value="CMS EHR Certification ID"/>
       <min value="0"/>
       <max value="1"/>
       <type>
