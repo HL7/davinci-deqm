@@ -3,6 +3,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for STU5 Publication (STU5).
 
+1. Applied the following trackers:
+   - Removed references to (previously removed) Quality Program value set. ([FHIR-48462](https://jira.hl7.org/browse/FHIR-48462)) ([Applied here](StructureDefinition-extension-reportingProgram.html), [here](OperationDefinition-evaluate.html), [here](MeasureReport-indv-measurereport02.html), [here](Measure-measure-exm108-example.html), [here](Measure-measure-pi-example.html), [here](col.html), and [here](OperationDefinition-care-gaps.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
