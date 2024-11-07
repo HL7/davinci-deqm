@@ -41,7 +41,7 @@
     ],
     "status": "complete",
     "type": "individual",
-    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|1.1.1",
+    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
     "subject": {
         "reference": "Patient/patient01"
     },

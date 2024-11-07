@@ -29,7 +29,7 @@
         ],
         "status": "complete",
         "type": "individual",
-        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm108-example|8.2.000",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm108-example|5.0.0",
         "subject": {
           "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc6"
         },
