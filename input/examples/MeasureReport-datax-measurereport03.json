@@ -15,7 +15,7 @@
     ],
     "status": "complete",
     "type": "data-collection",
-    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example",
+    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0-ballot",
     "subject": {
         "reference": "Patient/patient03"
     },

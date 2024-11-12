@@ -149,7 +149,7 @@
               ],
               "status": "complete",
               "type": "individual",
-              "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example",
+              "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0-ballot",
               "subject": {
                 "reference": "Patient/gaps-patient01"
               },
@@ -623,7 +623,7 @@
               ],
               "status": "complete",
               "type": "individual",
-              "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example",
+              "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0-ballot",
               "subject": {
                 "reference": "Patient/gaps-patient02"
               },

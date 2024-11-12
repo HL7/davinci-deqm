@@ -119,10 +119,12 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
+      <short value="What measure and version was calculated"/>
+      <definition value="A reference to the Measure that was calculated to produce this report. When known, the version of the measure SHALL be included."/>
       <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
       <mustSupport value="true"/>
     </element>
-    
+
     <element id="MeasureReport.subject">
       <path value="MeasureReport.subject"/>
       <min value="1"/>
