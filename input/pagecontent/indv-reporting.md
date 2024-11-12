@@ -7,7 +7,7 @@ The Individual reporting scenario is supported by the [DEQM Individual MeasureRe
 
 ### Supplemental Data Resources in MeasureReport
 
-The [supplementalData extension](StructureDefinition-extension-supplementalData.html) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
+The supplementalData extension allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
 
 #### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
