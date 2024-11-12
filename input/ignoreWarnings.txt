@@ -14,6 +14,7 @@ The Measure 'http://example.org/fhir/Measure/example-stratification-measure' cou
 The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/AlaraCTFHIRMeasure' could not be resolved, so no validation can be performed against the Measure
+The Measure 'http://example.org/fhir/Measure/example-stratification-measure|5.0.0' could not be resolved, so no validation can be performed against the Measure
 
 # Information messages validated: Related to the ActCode#CAREGAP issue, example.org, Slicing is open so other slices are intentionally allowed, Confirmed profile validation messages
 None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
