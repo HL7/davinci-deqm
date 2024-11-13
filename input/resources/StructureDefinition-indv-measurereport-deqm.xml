@@ -237,7 +237,6 @@
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-device"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-relatedperson"/>
-        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"/>
        </type>
       <mustSupport value="true"/>
     </element>
