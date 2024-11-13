@@ -3,6 +3,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes and Updates for STU5 Publication (STU5).
 
+1. Applied the following trackers:
+   - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

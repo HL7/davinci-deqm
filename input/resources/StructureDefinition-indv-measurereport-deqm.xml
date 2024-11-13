@@ -65,6 +65,17 @@
       </constraint>
       <mustSupport value="false"/>
     </element>
+    <element id="MeasureReport.extension:message">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="message"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.extension:reportingProgram">
       <path value="MeasureReport.extension"/>
       <sliceName value="reportingProgram"/>
@@ -111,7 +122,7 @@
     </element>
     <element id="MeasureReport.extension:supplementalData.extension:populationDescription">
       <path value="MeasureReport.extension.extension"/>
-      <sliceName value="description"/>
+      <sliceName value="supplementalDataPopulationDescription"/>
       <short value="Description of the supplemental data"/>
       <min value="0"/>
       <max value="1"/>
@@ -226,7 +237,6 @@
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-device"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-relatedperson"/>
-        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"/>
        </type>
       <mustSupport value="true"/>
     </element>
@@ -351,7 +361,7 @@
     </element>
     <element id="MeasureReport.group.extension:populationDescription">
       <path value="MeasureReport.group.extension"/>
-      <sliceName value="description"/>
+      <sliceName value="groupPopulationDescription"/>
       <short value="Description of the group"/>
       <min value="0"/>
       <max value="1"/>
@@ -432,7 +442,7 @@
     </element>
     <element id="MeasureReport.group.population.extension:populationDescription">
       <path value="MeasureReport.group.population.extension"/>
-      <sliceName value="description"/>
+      <sliceName value="groupPopulationPopulationDescription"/>
       <short value="Description of the population"/>
       <min value="0"/>
       <max value="1"/>
@@ -482,7 +492,7 @@
     </element>
     <element id="MeasureReport.group.stratifier.extension:populationDescription">
       <path value="MeasureReport.group.stratifier.extension"/>
-      <sliceName value="description"/>
+      <sliceName value="stratifierPopulationDescription"/>
       <short value="Description of the stratifier"/>
       <min value="0"/>
       <max value="1"/>
@@ -527,6 +537,7 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
+      <sliceName value="stratumPopulationDescription"/>
       <condition value="deqm-9"/>
       <min value="0"/>
       <max value="1"/>
@@ -552,17 +563,6 @@
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <requirements value="To support the reporting of supplemental data elements."/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.extension:message">
-      <path value="MeasureReport.extension"/>
-      <sliceName value="message"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
-      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.evaluatedResource.extension:popref">
