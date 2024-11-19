@@ -93,9 +93,9 @@ HTTP/1.1 200 OK
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs",
-            "code": "ep-ec",
-            "display": "EP/EC"
+            "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/intended-venue-codes",
+            "code": "ec",
+            "display": "EC"
           }
         ]
       }

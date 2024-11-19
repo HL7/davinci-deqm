@@ -21,15 +21,8 @@
         },
         {
             "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram",
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "code": "ep-ec",
-                        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs-example"
-                    }
-                ]
-            }
-        },
+            "valueCanonical": "http://hl7.org/fhir/us/cqfmeasures/Library/Quality-Program-Example"
+         },
         {
             "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
             "valueIdentifier": {
