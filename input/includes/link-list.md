@@ -111,7 +111,7 @@
 [collection]: {{site.data.fhir.path}}bundle.html#collection
 [US Core]: {{site.data.fhir.uscore}}/index.html
 [Use cases]: usecases.html
-[Using CQL IG section on negation]: {{site.data.fhir.qicore}}/patterns.html#negation-in-fhir
+[Using CQL IG section on negation]:  https://hl7.org/fhir/uv/cql/patterns.html#negation-in-fhir
 [Venous Thromboembolism Prophylaxis (VTE-1)]: vte1.html
 [Colorectal Cancer Screening Recommendation Statement]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v6.html
 [Bundles]: {{site.data.fhir.path}}bundle.html
