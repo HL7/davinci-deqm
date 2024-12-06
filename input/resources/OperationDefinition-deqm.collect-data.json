@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationDefinition",
-  "id": "deqm.collect-data",
+  "id": "collect-data",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
@@ -11,16 +11,16 @@
       "valueCode": "trial-use"
     }
   ],
-  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/deqm.collect-data",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/collect-data",
   "version": "4.0.1",
-  "name": "DEQMCollectData",
-  "title": "DEQM Collect Data",
+  "name": "CollectData",
+  "title": "Collect Data",
   "status": "active",
   "kind": "operation",
   "date": "2024-07-24T10:53:32-05:00",
   "publisher": "The MITRE Corporation",
-  "description": "The deqm.collect-data operation is used to collect the data-of-interest for the given measure.",
-  "code": "deqm-collect-data",
+  "description": "The collect-data operation is used to collect the data-of-interest for the given measure.",
+  "code": "collect-data",
   "resource": [
     "Measure"
   ],
