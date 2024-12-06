@@ -150,7 +150,8 @@
           "use": "out",
           "min": 0,
           "max": "*",
-          "documentation": "Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more bundles. The first entry of the bundle is either a [DEQM Individual MeasureReport](StructureDefinition-indv-measurereport-deqm.html) or a [DEQM Summary MeasureReport](StructureDefinition-summary-measurereport-deqm.html) and subsequent entries in the bundle are resources created and/or evaluated as part of the measure calculation. Note that the result of the $evaluate-measure operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*",
+          "documentation": "Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more bundles. The first entry of the bundle is a [DEQM Data Exchange MeasureReport](StructureDefinition-datax-measurereport-deqm.html) and subsequent entries in the bundle are resources that make up data of interest for the measure. Note that the result of the $deqm-collect-data operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*.",
+
           "type": "Bundle"
       }
 
