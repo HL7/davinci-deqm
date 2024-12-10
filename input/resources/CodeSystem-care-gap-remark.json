@@ -1,0 +1,56 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CareGapRemark",
+  "id": "care-gap-remark",
+  "title": "Care Gap Remark Code System",
+  "version": "1.0.0",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-remark",
+  "experimental": false,
+  "description": "This is a code system for Care Gap Remark",
+  "caseSensitive": true,
+  "concept": [
+    {
+      "code": "order-placed",
+      "display": "Order placed",
+      "definition": "The order has been placed."
+    },
+    {
+      "code": "satisfied-in-EHR",
+      "display": "Satisfied in EHR",
+      "definition": "This gap was satisfied in EHR."
+    },
+    {
+      "code": "out-of-range",
+      "display": "Out of range",
+      "definition": "Gap is out of range."
+    },
+    {
+      "code": "patient-refused",
+      "display": "Patient refused",
+      "definition": "Gap is due to patient refusal."
+    },
+    {
+      "code": "rejected",
+      "display": "Rejected",
+      "definition": "Gap is due to rejection."
+    },
+    {
+      "code": "suppressed",
+      "display": "Suppressed",
+      "definition": ""
+    },
+    {
+      "code": "not-assessed",
+      "display": "Not assessed",
+      "definition": ""
+    },
+    {
+      "code": "not-ingested",
+      "display": "Not ingested",
+      "definition": ""
+    }
+  ],
+  "count": 8
+}
