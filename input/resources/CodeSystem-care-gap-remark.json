@@ -14,42 +14,42 @@
     {
       "code": "order-placed",
       "display": "Order placed",
-      "definition": "The order has been placed."
+      "definition": "An order has been placed to address and close the gap"
     },
     {
       "code": "satisfied-in-EHR",
       "display": "Satisfied in EHR",
-      "definition": "This gap was satisfied in EHR."
+      "definition": "Data already present in the EHR satisfies the open gap."
     },
     {
       "code": "out-of-range",
       "display": "Out of range",
-      "definition": "Gap is out of range."
+      "definition": "EHR reports patient condition is not within allowed threshold."
     },
     {
       "code": "patient-refused",
       "display": "Patient refused",
-      "definition": "Gap is due to patient refusal."
+      "definition": "Patient refused intervention to close the gap."
     },
     {
       "code": "rejected",
       "display": "Rejected",
-      "definition": "Gap is due to rejection."
+      "definition": "Action to address the gap was rejected by the provider."
     },
     {
       "code": "suppressed",
       "display": "Suppressed",
-      "definition": ""
+      "definition": "Presentation of the gap to the provider was suppressed."
     },
     {
       "code": "not-assessed",
       "display": "Not assessed",
-      "definition": ""
+      "definition": "Gap was shown to the provider but no action was taken to assess the gap."
     },
     {
       "code": "not-ingested",
       "display": "Not ingested",
-      "definition": ""
+      "definition": "System cannot process the gap that was received."
     }
   ],
   "count": 8

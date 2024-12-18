@@ -57,6 +57,25 @@
         ]
       },
       {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open",
+          "description": "Slices based on the url value."
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "Extension" }
+        ]
+      },
+      {
         "id": "Extension.extension:author",
         "path": "Extension.extension",
         "sliceName": "author",
