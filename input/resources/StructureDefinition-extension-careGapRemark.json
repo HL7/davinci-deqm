@@ -144,7 +144,6 @@
       {
         "id": "Extension.extension:authorOrganization.value{x}",
         "path": "Extension.extension.value[x]",
-        "sliceName": "authorOrganization",
         "min": 1,
         "max": "1",
         "type": [
@@ -211,7 +210,6 @@
       {
         "id": "Extension.extension:authorDatetime.url",
         "path": "Extension.extension.url",
-        "sliceName": "authorDatetime",
         "min": 1,
         "max": "1",
         "type": [
@@ -343,21 +341,6 @@
             "code": "Identifier"
           }
         ]
-      },
-      {
-        "id": "Extension.extension:code.condition.valueCodeableConcept",
-        "path": "Extension.extension.value[x]",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
-        }
       },
       {
         "id": "Extension.url",
