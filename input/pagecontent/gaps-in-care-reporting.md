@@ -150,6 +150,16 @@ Example Business Use Cases:
 
 By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefinition-gaps-guidanceresponse-detailedcaregap.html), healthcare organizations can receive tailored and actionable guidance on addressing specific care gaps. The inclusion of `reasonCode` and `dataRequirement` enables standardized categorization, context-specific recommendations, and ensures a more focused approach to quality improvement efforts.
 
+#### Add Remark to Gaps in Care Report
+{:.no_toc}
+
+Note to Balloters: We are actively seeking input on [remark codes](CodeSystem-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
+{:.note-to-balloters}
+
+When considering a Gaps in Care Report, a provider may add remarks using the [Care Gap Remark](StructureDefinition-extension-careGapRemark.html) extension.  The remark can be free-text or a remark code.
+
+See the Condition Category Remark section of the [Risk Adjustment IG](https://build.fhir.org/ig/HL7/davinci-ra/cc-remark.html) for related usage.
+
 #### Attribution
 {:.no_toc}
 

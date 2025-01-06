@@ -1,0 +1,363 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-careGapRemark",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark",
+  "name": "DEQMCareGapRemarkExtension",
+  "title": "DEQM Care Gap Remark Extension",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-12-03",
+  "publisher": "Da Vinci Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
+        }
+      ]
+    }
+  ],
+  "description": "This extension allows a coded and/or narrative remark be added to a Care Gap's Individual Measure Report that adds context from a Provider about the gap.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MeasureReport.Group"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "condition": ["cgr-1"],
+        "short": "Condition Category remark",
+        "definition": "Remark about a Condition Category.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "cgr-1",
+            "severity": "error",
+            "human": "A remark shall include an author, an authorOrganization, or an authorSoftware",
+            "expression": "extension.where(url = 'author').exists() or extension.where(url = 'authorOrganization').exists() or extension.where(url = 'authorSoftware').exists()"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open",
+          "description": "Slices based on the url value."
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "Extension" }
+        ]
+      },
+      {
+        "id": "Extension.extension:author",
+        "path": "Extension.extension",
+        "sliceName": "author",
+        "short": "Identifier of the person who added the remark such as NPI",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:author.url",
+        "path": "Extension.extension.url",
+        "short": "Identifier of the person who added the remark such as NPI",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "author"
+      },
+      {
+        "id": "Extension.extension:author.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Identifier of the person who added the remark such as NPI",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          },
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:authorOrganization",
+        "path": "Extension.extension",
+        "sliceName": "authorOrganization",
+        "short": "Identifier of the organization that added the remark such as TIN, NPI.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:authorOrganization.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "authorOrganization"
+      },
+      {
+        "id": "Extension.extension:authorOrganization.value{x}",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          },
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:authorSoftware",
+        "path": "Extension.extension",
+        "sliceName": "authorSoftware",
+        "short": "Identifier of the software that added the remark.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:authorSoftware.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "authorSoftware"
+      },
+      {
+        "id": "Extension.extension:authorSoftware.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          },
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:authorDatetime",
+        "path": "Extension.extension",
+        "sliceName": "authorDatetime",
+        "short": "When the remark was added",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:authorDatetime.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "authorDatetime"
+      },
+      {
+        "id": "Extension.extension:authorDatetime.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:text",
+        "path": "Extension.extension",
+        "sliceName": "text",
+        "short": "Free text remark",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:text.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "text"
+      },
+      {
+        "id": "Extension.extension:text.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:code",
+        "path": "Extension.extension",
+        "sliceName": "code",
+        "short": "Coded remark",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:code.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "code"
+      },
+      {
+        "id": "Extension.extension:code.valueCodeableConcept",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/care-gap-remark"
+        }
+      },
+      {
+        "id": "Extension.extension:relatedDataIdentifier",
+        "path": "Extension.extension",
+        "sliceName": "relatedDataIdentifier",
+        "short": "Related data identifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:relatedDataIdentifier.url",
+        "path": "Extension.extension.url",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "relatedDataIdentifier"
+      },
+      {
+        "id": "Extension.extension:relatedDataIdentifier.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "0"
+      }
+    ]
+  }
+}
