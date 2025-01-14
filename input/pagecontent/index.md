@@ -28,7 +28,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
 
 
-- [Use cases]\: Three* example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
+- [Use cases]\: Three example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
 
     - [Medication Reconciliation (MRP)]\: This example shows how to implement a data exchange, and individual and summary measure reporting for the medication reconciliation post-discharge measure.
 
