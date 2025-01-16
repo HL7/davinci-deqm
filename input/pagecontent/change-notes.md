@@ -5,6 +5,10 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 1. Applied the following trackers:
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
+   - change patient-list to subject-list([FHIR-48451](https://jira.hl7.org/browse/FHIR-48451))([Applied here](index.html))
+
+
+FHIR-48451
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
