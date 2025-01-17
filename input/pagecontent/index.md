@@ -59,7 +59,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 {: #background}
 
 <!-- Quality Improvement Ecosystem -->
+
 {% include quality-improvement-ecosystem.md %}
+{: #quality-improvement-ecosystem}
 
 <!-- Quality Measurement Standards Landscape -->
 {: #quality-measurement-standards-landscapeIndex}
