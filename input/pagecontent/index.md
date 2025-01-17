@@ -59,7 +59,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 {: #background}
 
 <!-- Quality Improvement Ecosystem -->
+
 {% include quality-improvement-ecosystem.md %}
+{: #quality-improvement-ecosystem}
 
 <!-- Quality Measurement Standards Landscape -->
 {: #quality-measurement-standards-landscapeIndex}
@@ -89,7 +91,7 @@ For these scenarios, the actors are Producers and Consumers, used in the same se
 
 #### Reporting Scenarios
 
-Reporting scenarios are used to report the results of quality measures on patients or populations at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement program or initiative by a payer or other quality improvement stakeholder such as Public Health with use cases that are typically more focused on the reporting scenarios.
+Reporting scenarios are used to report the results of quality measures on patients or populations at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement program or initiative by a payer or other quality improvement stakeholder such as public health agencies with use cases that are typically more focused on the reporting scenarios.
 
 The reporting scenarios are:
 
