@@ -12,6 +12,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - typo needs correction ([FHIR-46863](https://jira.hl7.org/browse/FHIR-46863))([Applied here](guidance.html#data-exchange))
    - "value-based" with hyphen ([FHIR-48447](https://jira.hl7.org/browse/FHIR-48447))([Applied here](index.html#introduction))
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
+   - Consider adding Annotation capability from Risk Adjustment to the Individual MeasureReport([FHIR-40675](https://jira.hl7.org/browse/FHIR-40675)) Applied ([here](StructureDefinition-extension-careGapRemark.html)), ([here](CodeSystem-care-gap-remark.html)), ([here](ValueSet-care-gap-remark.html)), ([here](CodeSystem-remark-reason.html)), ([here](ValueSet-remark-reason.html)), ([here](ig.json)), ([here](gaps-in-care-reporting.html)), and ([here](StructureDefinition-indv-measurereport-deqm.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
