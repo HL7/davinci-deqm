@@ -13,7 +13,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 7. attester.mode: personal \| professional \| legal \| official
 8. relatesTo.code: replaces \| transforms \| signs \| appends
 9. relatesTo.target[x]: Target of the relationship
-10. section: Must contain at least one section, each section corresponds to an indivdiual MeasureReport for a specific measure
+10. section: Must contain at least one section, each section corresponds to an individual MeasureReport for a specific measure
 11. section.focus: This references a DEQM individual MeasureReport
 12. section.entry: This references a gaps in care DetectedIssue
 
