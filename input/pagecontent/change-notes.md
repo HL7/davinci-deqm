@@ -10,6 +10,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - typo needs correction ([FHIR-46863](https://jira.hl7.org/browse/FHIR-46863))([Applied here](guidance.html#data-exchange))
    - "value-based" with hyphen ([FHIR-48447](https://jira.hl7.org/browse/FHIR-48447))([Applied here](index.html#introduction))
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
+   - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
