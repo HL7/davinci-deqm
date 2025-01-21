@@ -33,7 +33,7 @@
       "use": "in",
       "min": 1,
       "max": "*",
-      "documentation": "The Bundles that contain one or more MeasureReports and data of interest. See ([Section 2.1.4](guidance.html#deqm-operation-bundles-organized-by-subject)) for discussion about the Bundles.",
+      "documentation": "These Bundles SHALL contain 1..* DEQM Data Exchange MeasureReports with data-of-interest and SHOULD be for a single subject. See the [guidance on Bundle structure](guidance.html#deqm-operation-bundles-organized-by-subject) for discussion about the Bundle content and organization.",
       "type": "Bundle"
     }
   ]
