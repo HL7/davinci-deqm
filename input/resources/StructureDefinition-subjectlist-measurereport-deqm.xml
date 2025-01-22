@@ -40,8 +40,8 @@
       <constraint>
         <key value="deqm-3"/>
         <severity value="error"/>
-        <human value="ensures scoring is either specified only at the root, or on all groups"/>
-        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() xor (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count() = group.count())"/>
+        <human value="Measure scoring is required. It must be specified on the root only, or on every group, and it cannot be on both."/>
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty()) xor (extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty() and group.all(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists()))"/>
       </constraint>
       <constraint>
         <key value="deqm-5"/>
