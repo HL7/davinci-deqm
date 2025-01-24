@@ -308,11 +308,11 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
-      <slicename value="measureReportGroup"/>
+      <sliceName value="measureReportGroup"/>
       <slicing>
         <discriminator>
           <type value="type"/>
-          <path value="resource"/>
+          <path value="$this"/>
         </discriminator>
         <rules value="open"/>
       </slicing>
@@ -476,9 +476,9 @@
     </element>
     <element id="MeasureReport.group.population.count">
       <path value="MeasureReport.group.population.count"/>
-      <condition value="deqm-8"/>
       <min value="0"/>
       <max value="1"/>
+      <condition value="deqm-8"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.subjectResults">
@@ -546,13 +546,13 @@
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
       <sliceName value="stratumPopulationDescription"/>
-      <condition value="deqm-9"/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity"/>
       </type>
+      <condition value="deqm-9"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.code">

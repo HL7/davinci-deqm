@@ -305,11 +305,11 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
-      <slicename value="measureReportGroup"/>
+      <sliceName value="measureReportGroup"/>
       <slicing>
         <discriminator>
           <type value="type"/>
-          <path value="resource"/>
+          <path value="$this"/>
         </discriminator>
         <rules value="open"/>
       </slicing>
