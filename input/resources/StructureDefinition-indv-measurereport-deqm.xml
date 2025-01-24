@@ -308,6 +308,14 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
+      <slicename value="measureReportGroup"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="resource"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <min value="0"/>
       <max value="*"/>
       <constraint>
@@ -316,6 +324,14 @@
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio', or 'continuous-variable' then the groupImprovementNotation element is required."/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
       </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group"/>
+      <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -470,14 +486,6 @@
       <min value="0"/>
       <max value="0"/>
       <mustSupport value="false"/>
-    </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group.measureScore"/>
-      <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <condition value="deqm-6"/>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.measureScore.extension:altscoretype">
       <path value="MeasureReport.group.measureScore.extension"/>

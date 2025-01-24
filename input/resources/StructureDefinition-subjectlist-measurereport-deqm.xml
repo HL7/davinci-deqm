@@ -305,8 +305,23 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
+      <slicename value="measureReportGroup"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="resource"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <min value="1"/>
       <max value="*"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -469,13 +484,6 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
       </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group.measureScore"/>
-      <min value="0"/>
-      <max value="1"/>
-      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.measureScore.extension:altscoretype">
