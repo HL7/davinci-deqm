@@ -134,7 +134,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
   - For incremental data exchange, stable logical (resource) ids and meta.source elements are required for *ALL* transacted resources across *ALL* transactions.
 
-    - For example  `MeasureReport.id` + `MeasureReport.meta.source`, `Patient.id` + `Patient.meta.souce`, etc ... must be the same for all data exchange interactions for a patient and measure during the submission period.
+    - For example  `MeasureReport.id` + `MeasureReport.meta.source`, `Patient.id` + `Patient.meta.source`, etc ... must be the same for all data exchange interactions for a patient and measure during the submission period.
 
   - Note that resource versions can be accessed using the FHIR RESTful history transaction
 
