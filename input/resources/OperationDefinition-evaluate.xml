@@ -108,8 +108,9 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Mutually exclusive use with programUrl - it is an error to pass in both programIdentifier and programUrl parameters."/>
+        <documentation value="Mutually exclusive use with programIdentifier - it is an error to pass in both programIdentifier and programUrl parameters."/>
         <type value="canonical"/>
+        <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary" />
     </parameter>
     <parameter>
         <name value="reportType"/>
