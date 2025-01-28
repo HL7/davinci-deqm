@@ -2,7 +2,7 @@
 
 ###  Introduction
 
-The purpose of this implementation guide is to support value based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
+The purpose of this implementation guide is to support value-based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
 
 Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models. To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common information models and data exchange standards. The intent of the framework defined in this guide is to enable automatic data collection and submission limiting the need for manual processing and intervention.  Ultimately, a national standard based on FHIR for data structure and exchange will reduce the burden on clinicians of transforming data between systems.
 
@@ -28,7 +28,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
 
 
-- [Use cases]\: Three* exemplar use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
+- [Use cases]\: Three example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
 
     - [Medication Reconciliation (MRP)]\: This example shows how to implement a data exchange, and individual and summary measure reporting for the medication reconciliation post-discharge measure.
 
@@ -95,7 +95,7 @@ The reporting scenarios are:
 
 1. **Individual** - Used to report the results of a quality measure for a particular patient along with the complete set of data of interest to a quality reporting receiver
 1. **Summary** - Used to report the results of a quality measure for the applicable population to a quality reporting receiver
-1. **Subject-List** - A patient list report that includes a listing of patients that satisfied each population criteria in the measure
+1. **Subject-List** - A subject list report that includes a listing of subjects that satisfied each population criteria in the measure
 
 For the reporting scenarios, the actors are Reporters and Receivers:
 
