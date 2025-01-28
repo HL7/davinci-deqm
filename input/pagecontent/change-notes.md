@@ -4,7 +4,18 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 ### Changes and Updates for STU5 Publication (STU5).
 
 1. Applied the following trackers:
+   - Fixed display of 'reporter' snapshot and key elements rendering in individual measure report profiles.([FHIR-48696](https://jira.hl7.org/browse/FHIR-48696))([Applied here](StructureDefinition-indv-measurereport-deqm.html), [here](StructureDefinition-datax-measurereport-deqm.html), [here](StructureDefinition-summary-measurereport-deqm.html), and [here](StructureDefinition-subjectlist-measurereport-deqm.html))
+   - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))
+   - Fix various typos ([FHIR-47450](https://jira.hl7.org/browse/FHIR-47450)) Applied to various .md, .html, and .xml files throughout
+   - typo needs correction ([FHIR-46860](https://jira.hl7.org/browse/FHIR-46860))([Applied here](index.html#how-to-read-this-guide))
+   - typo needs correction ([FHIR-46862](https://jira.hl7.org/browse/FHIR-46862))([Applied here](index.html#data-exchange-for-quality-measures-deqm))
+   - typo needs correction ([FHIR-46863](https://jira.hl7.org/browse/FHIR-46863))([Applied here](guidance.html#data-exchange))
+   - "value-based" with hyphen ([FHIR-48447](https://jira.hl7.org/browse/FHIR-48447))([Applied here](index.html#introduction))
+   - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
+   - change patient-list to subject-list([FHIR-48451](https://jira.hl7.org/browse/FHIR-48451))([Applied here](index.html))
+   - Change GIC text to reflect optional Composition ([FHIR-48730](https://jira.hl7.org/browse/FHIR-48730))Applied ([here](gaps-in-care-reporting.html#how-to-construct-a-gaps-in-care-report))
    - change "QI Core" to "QI-Core" ([FHIR-48457](https://jira.hl7.org/browse/FHIR-48457))([Applied here](guidance.html)) and throughout.
+
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
