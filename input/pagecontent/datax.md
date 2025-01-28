@@ -27,14 +27,14 @@ Note that FHIR operations allow the implementation to be viewed as a 'black box'
 The following resources are used in all data exchange transactions:
 
 
-| Resource Type | Profile Name                             | Link to Profile                            |
-|---------------|------------------------------------------|--------------------------------------------|
-| Library       | CRMI Shareable Library                     | [CRMI Shareable Library]                             |
-| Measure       | CRMI Shareable Measure Profile           | [CRMI Shareable Measure]                             |
+| Resource Type | Profile Name                          | Link to Profile                         |
+|---------------|---------------------------------------|-----------------------------------------|
+| Library       | CRMI Shareable Library                  | [CRMI Shareable Library]                          |
+| Measure       | CRMI Shareable Measure Profile        | [CRMI Shareable Measure]                          |
 | MeasureReport | DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile] |
-| Organization  | QI-Core Organization Profile             | [QI-Core Organization]                     |
-| Patient       | QI-Core Patient Profile                  | [QI-Core Patient]                          |
-| Practitioner  | QI-Core Practitioner Profile             | [QI-Core Practitioner]                     |
+| Organization  | QICore Organization Profile           | [QICore Organization]                   |
+| Patient       | QICore Patient Profile                | [QICore Patient]                        |
+| Practitioner  | QICore Practitioner Profile           | [QICore Practitioner]                   |
 
 
 Depending on the specific Measure, various DEQM and QI-Core Profiles are also used in addition to the profiles listed above

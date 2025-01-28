@@ -24,7 +24,7 @@ The following resources are used in the summary reporting scenario:
 |---|------------------------------------|---|
 |Measure| CRMI Shareable Measure Profile               |[CRMI Shareable Measure]|
 |Summary MeasureReport| DEQM Summary MeasureReport Profile |[DEQM Summary MeasureReport Profile]|
-|Organization| QICore Organization Profile        |[QI-Core Organization] |
+|Organization| QICore Organization Profile        |[QICore Organization] |
 
 ### Summary Measure Reporting
 {: #summary-measure-reporting}
