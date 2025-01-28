@@ -19,21 +19,21 @@ Note that the exchange of the reconciled medication list, indication of conversa
 #### Resources supported for this Use Case
 {:.no_toc}
 
-|Resource Type| Profile Name                          | Link to Profile                         |
-|---|---------------------------------------|-----------------------------------------|
-|Coverage| QICore Coverage Profile               | [QICore Coverage]                       |
-|Encounter| QICore Encounter Profile              | [QICore Encounter]                      |
-|Location| QICore Location Profile               | [QICore Location]                       |
-|Library| CRMI Shareable Library                  | [CRMI Shareable Library]                          |
-|Measure| CRMI Shareable Measure Profile                  | [CRMI Shareable Measure]                          |
+|Resource Type| Profile Name                     | Link to Profile                    |
+|---|----------------------------------|------------------------------------|
+|Coverage| QICore Coverage Profile          | [QICore Coverage]                  |
+|Encounter| QICore Encounter Profile         | [QICore Encounter]                 |
+|Location| QICore Location Profile          | [QICore Location]                  |
+|Library| CRMI Shareable Library             | [CRMI Shareable Library]                     |
+|Measure| CRMI Shareable Measure Profile             | [CRMI Shareable Measure]                     |
 |MeasureReport| DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile] |
 |MeasureReport| DEQM Individual MeasureReport Profile | [DEQM Individual MeasureReport Profile] |
-|MeasureReport| DEQM Summary MeasureReport Profile    | [DEQM Summary MeasureReport Profile]    |
-|Observation| QI-Core Observation Profile           | [QI-Core Observation]                   |
-|Organization| QI-Core Organization Profile          | [QI-Core Organization]                  |
-|Patient| QI-Core Patient Profile               | [QI-Core Patient]                       |
-|Practitioner| QI-Core Practitioner Profile          | [QI-Core Practitioner]                  |
-|Task| QI-Core Task Profile                  | [QI-Core Task]                          |
+|MeasureReport| DEQM Summary MeasureReport Profile | [DEQM Summary MeasureReport Profile] |
+|Observation| QICore Observation Profile       | [QICore Observation]               |
+|Organization| QICore Organization Profile      | [QICore Organization]              |
+|Patient| QICore Patient Profile           | [QICore Patient]                   |
+|Practitioner| QICore Practitioner Profile      | [QICore Practitioner]              |
+|Task| QICore Task Profile              | [QICore Task]                      |
 {: #practitioner_footnote}
 ### Graph of MRP Resources
 
