@@ -89,7 +89,7 @@
                             "valueCode": "SHALL"
                         }
                     ],
-                    "documentation": "The DaVinci DEQM Receiver Server **SHALL** be capable of supporting the DEQM Summary MeasureReport Profile and  DEQM Individual MeasureReport Profile and all the DEQM and QI Core Profiles they reference.",
+                    "documentation": "The DaVinci DEQM Receiver Server **SHALL** be capable of supporting the DEQM Summary MeasureReport Profile, the DEQM SubjectList MeasureReport Profile, and DEQM Individual MeasureReport Profile and all the DEQM and QI Core Profiles they reference.",
                     "interaction": [
                         {
                             "extension": [
@@ -121,7 +121,8 @@
                     ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm",
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm",
+                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subjectlist-measurereport-deqm"
                     ],
                     "type": "MeasureReport"
                 }
