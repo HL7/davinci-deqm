@@ -73,7 +73,7 @@ The [DEQM Summary MeasureReport Profile] is used when a measure is reported   fo
 
 #### Data Quality
 
-Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated metadata. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
+Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated metadata. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI-Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
 
 #### Gaps in Care Reporting
 
@@ -89,15 +89,15 @@ The Bundles used in the DEQM operations enable the evaluation and exchange of da
 
 ### Default Profiles Used in the Evaluation of a Measure
 
- Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI Core profiles and are used as the default instead of the corresponding QI Core profile.  Refer to the [QI Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
+ Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI-Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI-Core profiles and are used as the default instead of the corresponding QI-Core profile.  Refer to the [QI-Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
 <div class="new-content" markdown="1">
-[QI Core Practitioner], [QI Core Organization], and [QI Core Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
+[QICore Practitioner], [QICore Organization], and [QICore Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
 
 
 ### Negation Patterns for Quality Measures
 
-When DEQM is used to report CQFM Measures that use CQL and the QI-Core data model, negation patterns allow identifying when events are not present or when events are documented as not occurring for a reason.  They may appear throughout a measure in any of the population criteria. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. The negation pattern for the MedicationRequest (MedicationNotRequested) resource is demonstrated in the [Single Indv Vte Report Option 7] example. For more information refer to the [Using CQL IG section on negation] and the [QI Core Negation] page.
+When DEQM is used to report CQFM Measures that use CQL and the QI-Core data model, negation patterns allow identifying when events are not present or when events are documented as not occurring for a reason.  They may appear throughout a measure in any of the population criteria. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. The negation pattern for the MedicationRequest (MedicationNotRequested) resource is demonstrated in the [Single Indv Vte Report Option 7] example. For more information refer to the [Using CQL IG section on negation] and the [QI-Core Negation] page.
 
 
 ### Using Contained Resources in the Response Transaction
