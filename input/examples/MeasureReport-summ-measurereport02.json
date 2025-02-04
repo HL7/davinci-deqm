@@ -22,7 +22,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0-ballot",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0",
   "date": "2019-09-05T16:59:52.404Z",
   "reporter": {
     "reference": "Organization/organization01"
