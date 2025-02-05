@@ -23,7 +23,7 @@
 
   "status": "complete",
   "type": "summary",
-  "measure": "http://example.org/fhir/Measure/exampleAttestationMeasure",
+  "measure": "http://example.org/fhir/Measure/exampleAttestationMeasure|5.0.0",
   "date": "2023-04-01",
   "reporter": {
     "reference": "Organization/organization01"

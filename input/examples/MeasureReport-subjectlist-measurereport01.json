@@ -46,7 +46,7 @@
   ],
   "status" : "complete",
   "type" : "subject-list",
-  "measure" : "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+  "measure" : "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
   "date": "2023-05-31",
   "reporter" : {
     "reference" : "Organization/organization01"

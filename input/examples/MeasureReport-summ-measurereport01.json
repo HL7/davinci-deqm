@@ -22,7 +22,7 @@
     ],
     "status": "complete",
     "type": "summary",
-    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
     "date": "2018-09-05T16:59:52.404Z",
     "period": {
         "start": "2018-08-01",

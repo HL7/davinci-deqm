@@ -65,7 +65,7 @@
        "reference": "Patient/patient03"
     },
     "valueInteger": 4
-    }, 
+    },
     {
     "resourceType": "Observation",
     "id": "7d622f95-a4b6-4ca7-a6e1-d473106ca276",
@@ -97,7 +97,7 @@
   } ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://example.org/fhir/Measure/AlaraCTFHIRMeasure",
+  "measure": "http://example.org/fhir/Measure/AlaraCTFHIRMeasure|1.0.0",
   "date": "2024-02-07T14:48:48+00:00",
   "reporter": {
     "reference": "Organization/organization01"

@@ -22,7 +22,7 @@
     ],
     "status": "complete",
     "type": "summary",
-    "measure": "http://example.org/fhir/Measure/measure-medicare-stratification-example",
+    "measure": "http://example.org/fhir/Measure/measure-medicare-stratification-example|5.0.0",
     "date": "2018-09-05T16:59:52.404Z",
     "period": {
         "start": "2018-01-01",
