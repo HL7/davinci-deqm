@@ -11,7 +11,7 @@ A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' co
 A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated
 The Measure 'http://example.org/fhir/Measure/exampleAttestationMeasure|5.0.0' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure' could not be resolved, so no validation can be performed against the Measure
-The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example|1.0.0' could not be resolved, so no validation can be performed against the Measure
+The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-example|5.0.0' could not be resolved, so no validation can be performed against the Measure
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/AlaraCTFHIRMeasure|1.0.0' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure|5.0.0' could not be resolved, so no validation can be performed against the Measure
