@@ -30,8 +30,12 @@ Payer Z acting in the role of the Consumer collect Patient Z's MRP data from Pro
       {
          "name":"periodStart",
          "valueDate":"Practitioner/2018-06-19"
-       }
-    ]
+       },
+	   {
+         "name":"periodEnd",
+         "valueDate":"Practitioner/2018-12-31"
+       }    
+		]
  }
 ~~~
 
@@ -47,48 +51,43 @@ HTTP/1.1 200 OK
 ~~~
 {
    "resourceType":"Parameters",
-   "parameter":[
-      {
-         "name":"measurereport",
-         "resource":"{"resourceType": "MeasureReport",
-         ...}
-      },
-      {
-        "name":"resource",
-        "resource":"{"resourceType": "Task",
-        ...}
-      },
-      {
-        "name":"resource",
-        "resource":"{"resourceType": "Patient",
-        ...}
-      },
-      {
-        "name":"resource",
-        "resource":"{"resourceType": "Location",
-          ...}
-      },
-      {
-        "name":"resource",
-        "resource":"{"resourceType": "Practitioner",
-        ...}
-      },
-      {
-        "name":"resource",
-        "resource":"{"resourceType": "Organization",
-        ...}
-      },
-      {
-        "name":"resource",
-        "resource":"{"resourceType": "Encounter",
-        ...}
-      },
-      {
-        "name":"resource",
-        "resource":"{"resourceType": "Coverage",
-        ...}
-      },
-
-    ]
- }
+    "parameter":[
+		{
+          "name":"bundle",
+          "resource":
+             {"resourceType": "Bundle",
+              "entry":[
+               {
+                 "resource":"{"resourceType": "MeasureReport",
+                 ...}
+               },
+               {
+                 "resource":"{"resourceType": "Patient",
+                 ...}
+               },
+               {
+                 "resource":"{"resourceType": "Location",
+                   ...}
+               },
+               {
+                 "resource":"{"resourceType": "Practitioner",
+                 ...}
+               },
+               {
+                 "resource":"{"resourceType": "Organization",
+                 ...}
+               },
+                             {
+                 "resource":"{"resourceType": "Encounter",
+                 ...}
+               },
+               {
+                 "resource":"{"resourceType": "Coverage",
+                 ...}
+               }
+              ]
+             }
+       }
+	]
+}
 ~~~
