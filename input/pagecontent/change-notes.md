@@ -49,6 +49,9 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Replaced 'program' parameter with 'manifest' parameter in care gaps and measure/evaluate operations ([FHIR-46371](https://jira.hl7.org/browse/FHIR-46371))
    -  Added IN parameters to defined Operations. Added new deqm.collect-data Operation.  Renamed 'deqm.evaluate-measure' Operation to 'evaluate'. ([FHIR-40032](https://jira.hl7.org/browse/FHIR-40032))
    -  Added IN parameters to evaluate Operation ([FHIR-46287](https://jira.hl7.org/browse/FHIR-46287))
+   -  Change $deqm.submit-data to $submit-data, and $deqm.collect-data to $collect-data ([FHIR-48465](https://jira.hl7.org/browse/FHIR-48465))
+   -  Update the input/includes/link-list.md file entries for [$submit-data] and [$collect-data] to point to the new DEQM versions of those operations ([FHIR-48463](https://jira.hl7.org/browse/FHIR-48463))
+
 
 ### Changes and Updates for Version 4.0.0 (STU4)
 
