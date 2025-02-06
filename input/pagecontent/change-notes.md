@@ -16,6 +16,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Change GIC text to reflect optional Composition ([FHIR-48730](https://jira.hl7.org/browse/FHIR-48730))Applied ([here](gaps-in-care-reporting.html#how-to-construct-a-gaps-in-care-report))
    - change "QI Core" to "QI-Core" ([FHIR-48457](https://jira.hl7.org/browse/FHIR-48457))([Applied here](guidance.html)) and throughout.
    - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))([Applied here](index.html#quality-reporting-scenarios))
+   - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
 
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
