@@ -14,6 +14,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
    - change patient-list to subject-list([FHIR-48451](https://jira.hl7.org/browse/FHIR-48451))([Applied here](index.html))
    - Change GIC text to reflect optional Composition ([FHIR-48730](https://jira.hl7.org/browse/FHIR-48730))Applied ([here](gaps-in-care-reporting.html#how-to-construct-a-gaps-in-care-report))
+   - Added measurereport-category extension to all MeasureReport profiles ([FHIR-46195](https://jira.hl7.org/browse/FHIR-46195))([Applied here](StructureDefinition-indv-measurereport-deqm.html), [here](StructureDefinition-datax-measurereport-deqm.html), [here](StructureDefinition-summary-measurereport-deqm.html), and [here](StructureDefinition-subjectlist-measurereport-deqm.html))
 
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
