@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationDefinition",
-  "id": "deqm.submit-data",
+  "id": "submit-data",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
@@ -11,16 +11,16 @@
       "valueCode": "trial-use"
     }
   ],
-  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/deqm.submit-data",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/submit-data",
   "version": "4.0.1",
-  "name": "DEQMSubmitData",
-  "title": "DEQM Submit Data",
+  "name": "SubmitData",
+  "title": "Submit Data",
   "status": "active",
   "kind": "operation",
   "date": "2024-07-24T10:53:32-05:00",
   "publisher": "The MITRE Corporation",
-  "description": "The deqm-submit-data operation is used to submit MeasureReports and any data of interest for one or more measures for one or more subjects. Each submitted Bundle SHOULD contain resources for a single subject and SHOULD contain all of the MeasureReport and data of interest related to that subject.",
-  "code": "deqm-submit-data",
+  "description": "The submit-data operation is used to submit MeasureReports and any data of interest for one or more measures for one or more subjects. Each submitted Bundle SHOULD contain resources for a single subject and SHOULD contain all of the MeasureReport and data of interest related to that subject.",
+  "code": "submit-data",
   "resource": [
     "Measure"
   ],
