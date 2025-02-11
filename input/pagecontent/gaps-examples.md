@@ -14,19 +14,19 @@ Later, the provider runs the same Gaps in Care Report again, both patients now s
 #### Resources Supported for this Use Case
 {:.no_toc}
 
-|Resource Type| Profile Name                            | Link to Profile                           |
-|---|-----------------------------------------|-------------------------------------------|
-|Bundle| DEQM Gaps In Care Bundle Profile        | [DEQM Gaps In Care Bundle Profile]        
-|Composition| DEQM Gaps In Care Composition Profile   | [DEQM Gaps In Care Composition Profile]   
+|Resource Type| Profile Name                       | Link to Profile                      |
+|---|------------------------------------|--------------------------------------|
+|Bundle| DEQM Gaps In Care Bundle Profile   | [DEQM Gaps In Care Bundle Profile]   
+|Composition| DEQM Gaps In Care Composition Profile | [DEQM Gaps In Care Composition Profile] 
 |DetectedIssue| DEQM Gaps In Care DetectedIssue Profile | [DEQM Gaps In Care DetectedIssue Profile] 
-|Encounter| QI Core Encounter Profile               | [QI Core Encounter]                       |
-|Library| CRMI Shareable Library                    | [CRMI Shareable Library]                            |
-|Measure| CRMI Shareable Measure Profile                    | [CRMI Shareable Measure]                            |
-|MeasureReport| DEQM Individual MeasureReport Profile   | [DEQM Individual MeasureReport Profile]   |
-|Organization| QI Core Organization Profile            | [QI Core Organization]                    |
-|Patient| QI Core Patient Profile                 | [QI Core Patient]                         |
-|Practitioner| QICore Practitioner Profile             | [QI Core Practitioner]                    |
-|Procedure| QI Core Procedure Profile               | [QI Core Procedure]                       |
+|Encounter| QICore Encounter Profile           | [QICore Encounter]                   |
+|Library| CRMI Shareable Library             | [CRMI Shareable Library]                       |
+|Measure| CRMI Shareable Measure Profile     | [CRMI Shareable Measure]                       |
+|MeasureReport| DEQM Individual MeasureReport Profile | [DEQM Individual MeasureReport Profile] |
+|Organization| QICore Organization Profile        | [QICore Organization]                |
+|Patient| QICore Patient Profile             | [QICore Patient]                     |
+|Practitioner| QICore Practitioner Profile        | [QICore Practitioner]                |
+|Procedure| QICore Procedure Profile           | [QICore Procedure]                   |
 
 ### Care Gaps Operation
 {:.no_toc}

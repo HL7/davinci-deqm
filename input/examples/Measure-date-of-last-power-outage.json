@@ -8,6 +8,7 @@
             "valueCode": "Location"
         }
     ],
+    "version": "1.0.0",
     "name": "DateOfLastPowerOutage",
     "title": "Date Of Last Power Outage",
     "status": "active",

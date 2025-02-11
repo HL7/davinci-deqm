@@ -28,19 +28,20 @@
     } ]
   } ],
   "description": "This measure assesses the number of patients who received VTE prophylaxis or have documentation why no VTE prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day of or the day after hospital admission",
-  "useContext": [ {
-    "code": {
-      "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
-      "code": "program"
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "venue",
+      "display": "Venue"
     },
-    "valueCodeableConcept": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs-example",
-        "code": "eh-cah",
-        "display": "EH/CAH"
-      } ]
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/intended-venue-codes",
+        "code" : "ec",
+        "display": "EC"
+      }]
     }
-  } ],
+  }],
   "jurisdiction": [ {
     "coding": [ {
       "system": "urn:iso:std:iso:3166",

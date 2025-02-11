@@ -53,18 +53,6 @@
         <type value="canonical"/>
     </parameter>
     <parameter>
-      <name value="programCode"/> 
-      <use value="in"/> 
-      <min value="0"/> 
-      <max value="1"/> 
-      <documentation value="The quality program being reported via code from the [Reporting Program value set](http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs-example) indicating which quality program is being reported."/> 
-      <type value="CodeableConcept"/>
-      <binding>
-        <strength value="extensible"/>
-        <valueSet value="http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs-example"/>
-      </binding> 
-    </parameter>
-    <parameter>
         <name value="measureId"/>
         <use value="in"/>
         <min value="0"/>
@@ -105,6 +93,24 @@
         <max value="*"/>
         <documentation value="The measure to be evaluated is provided as a Measure resource."/>
         <type value="Measure"/>
+    </parameter>
+    <parameter>
+        <name value="programIdentifier"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="The business identifier of the reporting program, for which measures are being evaluated. For example, downstream IGs could specify program identifiers. Mutually exclusive use with programUrl - it is an error to pass in both programIdentifier and programUrl parameters."/>
+        <type value="string"/>
+        <searchType value="token"/>
+    </parameter>
+    <parameter>
+        <name value="programUrl"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Mutually exclusive use with programIdentifier - it is an error to pass in both programIdentifier and programUrl parameters."/>
+        <type value="canonical"/>
+        <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary" />
     </parameter>
     <parameter>
         <name value="reportType"/>
@@ -172,7 +178,7 @@
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more bundles. The first entry of the bundle is either a [DEQM Individual MeasureReport](StructureDefinition-indv-measurereport-deqm.html), a [DEQM Summary MeasureReport](StructureDefinition-summary-measurereport-deqm.html), or a [DEQM Subject List MeasureReport](StructureDefinition-subjectlist-measurereport-deqm.html) and subsequent entries in the bundle are resources created and/or evaluated as part of the measure calculation. Note that the result of the $evaluate operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*"/>
+        <documentation value="Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more Bundles. These Bundles SHALL contain 1..* DEQM Individual MeasureReport, or DEQM Summary MeasureReport, or DEQM Subject List MeasureReport, and subsequent entries in the bundle are data-of-interest. Note that the result of the $evaluate operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>

@@ -27,17 +27,17 @@ Note that FHIR operations allow the implementation to be viewed as a 'black box'
 The following resources are used in all data exchange transactions:
 
 
-| Resource Type | Profile Name                             | Link to Profile                            |
-|---------------|------------------------------------------|--------------------------------------------|
-| Library       | CRMI Shareable Library                     | [CRMI Shareable Library]                             |
-| Measure       | CRMI Shareable Measure Profile           | [CRMI Shareable Measure]                             |
+| Resource Type | Profile Name                          | Link to Profile                         |
+|---------------|---------------------------------------|-----------------------------------------|
+| Library       | CRMI Shareable Library                  | [CRMI Shareable Library]                          |
+| Measure       | CRMI Shareable Measure Profile        | [CRMI Shareable Measure]                          |
 | MeasureReport | DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile] |
-| Organization  | QI Core Organization Profile             | [QI Core Organization]                     |
-| Patient       | QI Core Patient Profile                  | [QI Core Patient]                          |
-| Practitioner  | QI Core Practitioner Profile             | [QI Core Practitioner]                     |
+| Organization  | QICore Organization Profile           | [QICore Organization]                   |
+| Patient       | QICore Patient Profile                | [QICore Patient]                        |
+| Practitioner  | QICore Practitioner Profile           | [QICore Practitioner]                   |
 
 
-Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
+Depending on the specific Measure, various DEQM and QI-Core Profiles are also used in addition to the profiles listed above
 
 #### Graph of DEQM Resources
 {:.no_toc}
@@ -134,7 +134,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
   - For incremental data exchange, stable logical (resource) ids and meta.source elements are required for *ALL* transacted resources across *ALL* transactions.
 
-    - For example  `MeasureReport.id` + `MeasureReport.meta.source`, `Patient.id` + `Patient.meta.souce`, etc ... must be the same for all data exchange interactions for a patient and measure during the submission period.
+    - For example  `MeasureReport.id` + `MeasureReport.meta.source`, `Patient.id` + `Patient.meta.source`, etc ... must be the same for all data exchange interactions for a patient and measure during the submission period.
 
   - Note that resource versions can be accessed using the FHIR RESTful history transaction
 
@@ -156,7 +156,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Submit Data operation: [$submit-data]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. Various DEQM and QI-Core Profiles depending on the specific Measure
 
 ###### Usage
 {:.no_toc}
@@ -202,7 +202,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
 1. Collect Data operation:[$collect-data]
-1. Various DEQM and QI Core Profiles depending on the specific Measure
+1. Various DEQM and QI-Core Profiles depending on the specific Measure
 
 
 ###### Usage
@@ -273,6 +273,9 @@ POST|[base]
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
+#### DEQM Data Exchange Operations Naming
+
+The two DEQM data exchange operations, [$submit-data] and [$collect-data], have the same names as two of the base FHIR operations. They serve very similar functions, but the DEQM versions have more flexibility when referencing measures, subjects, and organizations, and they support multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR $submit-data and $collect-data operations.
 
 #### Provenance
 
