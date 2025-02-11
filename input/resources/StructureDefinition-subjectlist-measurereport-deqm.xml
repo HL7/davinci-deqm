@@ -223,11 +223,20 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
+      <short value="What measure and version was calculated"/>
+      <definition value="A reference to the Measure that was calculated to produce this report."/>
       <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
       <type>
         <code value="canonical"/>
         <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"/>
       </type>
+      <condition value="deqm-0"/>
+      <constraint>
+        <key value="deqm-0"/>
+        <severity value="error"/>
+        <human value="Canonical URL SHALL contain a version."/>
+        <expression value="%resource.measure.toString().contains('|') and %resource.measure.substring(%resource.measure.toString().indexOf('|') + 1).length() &gt; 0"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.subject">
