@@ -18,8 +18,10 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Subject List Reporting page needs an update([CQF-2428](https://jira.hl7.org/browse/FHIR-48456))([Applied here](subjectlist-reporting.html))
    - change patient-list to subject-list([FHIR-48451](https://jira.hl7.org/browse/FHIR-48451))([Applied here](index.html))
    - Change GIC text to reflect optional Composition ([FHIR-48730](https://jira.hl7.org/browse/FHIR-48730))Applied ([here](gaps-in-care-reporting.html#how-to-construct-a-gaps-in-care-report))
+   - The expression for the SubjectList Measure Report deqm-3 seems to be incorrectly written ([FHIR-47452](https://jira.hl7.org/browse/FHIR-47452))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - change "QI Core" to "QI-Core" ([FHIR-48457](https://jira.hl7.org/browse/FHIR-48457))([Applied here](guidance.html)) and throughout.
    - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))([Applied here](index.html#quality-reporting-scenarios))
+
 
 
 Public Health as a Stakeholder is confusing
