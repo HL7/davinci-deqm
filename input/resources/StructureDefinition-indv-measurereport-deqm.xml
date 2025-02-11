@@ -42,8 +42,8 @@
       <constraint>
         <key value="deqm-3"/>
         <severity value="error"/>
-        <human value="ensures scoring is either specified only at the root, or on all groups"/>
-        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() xor (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count() = group.count())"/>
+        <human value="Measure scoring is required. It must be specified on the root only, or on every group, and it cannot be on both."/>
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty()) xor (extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty() and group.all(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists()))"/>
       </constraint>
       <constraint>
         <key value="deqm-5"/>
@@ -122,7 +122,7 @@
     </element>
     <element id="MeasureReport.extension:supplementalData.extension:populationDescription">
       <path value="MeasureReport.extension.extension"/>
-      <sliceName value="supplementalDataPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the supplemental data"/>
       <min value="0"/>
       <max value="1"/>
@@ -218,11 +218,18 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
-      <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
+      <requirements value="This will indicate the measure and version being reported on. For example, the cannonical uri location for the MRP measure."/>
       <type>
         <code value="canonical"/>
         <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"/>
       </type>
+      <condition value="deqm-0"/>
+      <constraint>
+        <key value="deqm-0"/>
+        <severity value="error"/>
+        <human value="Canonical URL SHALL contain a version."/>
+        <expression value="%resource.measure.toString().contains('|') and %resource.measure.substring(%resource.measure.toString().indexOf('|') + 1).length() &gt; 0"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.subject">
@@ -308,14 +315,6 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
-      <sliceName value="measureReportGroup"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
       <min value="0"/>
       <max value="*"/>
       <constraint>
@@ -324,14 +323,6 @@
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio', or 'continuous-variable' then the groupImprovementNotation element is required."/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
       </constraint>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group"/>
-      <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -377,7 +368,7 @@
     </element>
     <element id="MeasureReport.group.extension:populationDescription">
       <path value="MeasureReport.group.extension"/>
-      <sliceName value="groupPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the group"/>
       <min value="0"/>
       <max value="1"/>
@@ -458,7 +449,7 @@
     </element>
     <element id="MeasureReport.group.population.extension:populationDescription">
       <path value="MeasureReport.group.population.extension"/>
-      <sliceName value="groupPopulationPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the population"/>
       <min value="0"/>
       <max value="1"/>
@@ -487,6 +478,14 @@
       <max value="0"/>
       <mustSupport value="false"/>
     </element>
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="deqm-6"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.measureScore.extension:altscoretype">
       <path value="MeasureReport.group.measureScore.extension"/>
       <sliceName value="altscoretype"/>
@@ -500,7 +499,7 @@
     </element>
     <element id="MeasureReport.group.stratifier.extension:populationDescription">
       <path value="MeasureReport.group.stratifier.extension"/>
-      <sliceName value="stratifierPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the stratifier"/>
       <min value="0"/>
       <max value="1"/>
@@ -545,7 +544,6 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
-      <sliceName value="stratumPopulationDescription"/>
       <min value="0"/>
       <max value="1"/>
       <type>
