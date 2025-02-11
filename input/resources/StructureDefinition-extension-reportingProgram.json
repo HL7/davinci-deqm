@@ -8,7 +8,7 @@
   "experimental": false,
   "date": "2022-11-21",
   "publisher": "Da Vinci Project",
-  "description": "Extension that supports the reporting program as a reference to a Library conforming to the Quality Program profile, as well as a CodeableConcept bound to the Quality Program value set.",
+  "description": "Extension that supports the reporting program as a reference to the CRMI Manifest Library, as well as an identifier of the reporting program, for which measures are being evaluated",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -45,17 +45,14 @@
         "path" : "Extension.value[x]",
         "type" : [
           {
-            "code" : "CodeableConcept"
+            "code" : "Identifier"
           },
           {
             "code" : "canonical",
-            "targetProfile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-manifest-cqfm"]
+            "targetProfile": ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary"]
           }
-        ],
-        "binding": {
-          "strength": "example",
-          "valueSet": "http://hl7.org/fhir/us/cqfmeasures/ValueSet/quality-programs-example"
-        }
+           
+        ]
       }
     ]
   }
