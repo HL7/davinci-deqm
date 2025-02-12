@@ -4,6 +4,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 ### Changes and Updates for STU5 Publication (STU5).
 
 1. Applied the following trackers:
+   - Removed references to (previously removed) Quality Program value set. ([FHIR-48462](https://jira.hl7.org/browse/FHIR-48462)) ([Applied here](StructureDefinition-extension-reportingProgram.html), [here](OperationDefinition-evaluate.html), [here](MeasureReport-indv-measurereport02.html), [here](Measure-measure-exm108-example.html), [here](Measure-measure-pi-example.html), [here](col.html), and [here](OperationDefinition-care-gaps.html))
+   - Fix link to Adapting Guidelines for the Digital Age ([FHIR-46861](https://jira.hl7.org/browse/FHIR-46861))([Applied here](index.html#quality-improvement-ecosystem))
    - Fixed display of 'reporter' snapshot and key elements rendering in individual measure report profiles.([FHIR-48696](https://jira.hl7.org/browse/FHIR-48696))([Applied here](StructureDefinition-indv-measurereport-deqm.html), [here](StructureDefinition-datax-measurereport-deqm.html), [here](StructureDefinition-summary-measurereport-deqm.html), and [here](StructureDefinition-subjectlist-measurereport-deqm.html))
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))
    - Fix various typos ([FHIR-47450](https://jira.hl7.org/browse/FHIR-47450)) Applied to various .md, .html, and .xml files throughout
@@ -12,9 +14,19 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - typo needs correction ([FHIR-46863](https://jira.hl7.org/browse/FHIR-46863))([Applied here](guidance.html#data-exchange))
    - "value-based" with hyphen ([FHIR-48447](https://jira.hl7.org/browse/FHIR-48447))([Applied here](index.html#introduction))
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
+   - Public Health as a Stakeholder is confusing([FHIR-48453](https://jira.hl7.org/browse/FHIR-48453))([Applied here](guidance.html)), ([here](index.html#quality-improvement-ecosystem)), ([here](index.html#quality-measurement-standards-landscape)), and ([here](Capabilitystatement-receiver-server.html))
+   - Subject List Reporting page needs an update([CQF-2428](https://jira.hl7.org/browse/FHIR-48456))([Applied here](subjectlist-reporting.html))
    - change patient-list to subject-list([FHIR-48451](https://jira.hl7.org/browse/FHIR-48451))([Applied here](index.html))
    - Change GIC text to reflect optional Composition ([FHIR-48730](https://jira.hl7.org/browse/FHIR-48730))Applied ([here](gaps-in-care-reporting.html#how-to-construct-a-gaps-in-care-report))
+   - Added SubjectList MeasureReport to the Receiver Server and Reporter Client Capability statements ([FHIR-46482](https://jira.hl7.org/browse/FHIR-46482))([Applied Here](CapabilityStatement-receiver-server.html), [here](CapabilityStatement-reporter-client.html))
+   - Guidance to avoid confusion with same DEQM and base FHIR operation names ([FHIR-49369](https://jira.hl7.org/browse/FHIR-49369))([Applied here](datax.html#deqm-data-exchange-operations-naming))
+   - The expression for the SubjectList Measure Report deqm-3 seems to be incorrectly written ([FHIR-47452](https://jira.hl7.org/browse/FHIR-47452))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
+   - change "QI Core" to "QI-Core" ([FHIR-48457](https://jira.hl7.org/browse/FHIR-48457))([Applied here](guidance.html)) and throughout.
+   - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))([Applied here](index.html#quality-reporting-scenarios))
+   - Versions needed in URLs for MeasureReport.measure ([FHIR-47535](https://jira.hl7.org/browse/FHIR-47535)) Applied([here](StructureDefinition-datax-measurereport-deqm.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)),([here](StructureDefinition-subjectlist-measurereport-deqm.html)),([here](StructureDefinition-summary-measurereport-deqm.html)), and numerous examples.
+   - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
    - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
+
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
