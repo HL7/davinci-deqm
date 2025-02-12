@@ -273,6 +273,9 @@ POST|[base]
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
+#### DEQM Data Exchange Operations Naming
+
+The two DEQM data exchange operations, [$submit-data] and [$collect-data], have the same names as two of the base FHIR operations. They serve very similar functions, but the DEQM versions have more flexibility when referencing measures, subjects, and organizations, and they support multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR $submit-data and $collect-data operations.
 
 ### Provenance
 
