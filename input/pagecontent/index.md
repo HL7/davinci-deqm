@@ -108,7 +108,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 #### Gaps in Care Reporting Scenarios
 Gaps in Care Reporting is a reporting scenario supported in this implementation guide. Similar to the quality reporting scenarios, a Gaps in Care Report is used to report the results of quality measures on patients or population, but for a [gaps through period] that is of interest for a Client.
 
-1. **Gaps in Care** - Used to report the results of [open and/or closed gaps] of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open and/or closed gaps.
+1. **Gaps in Care** - Used to report the results of [open, closed, and/or prospective gaps] of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open, closed, and/or prospective gaps.
 
 The process below can be run as many times as useful during the reporting period to assure that all [open gaps] are closed.
 
