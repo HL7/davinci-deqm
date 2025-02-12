@@ -307,6 +307,12 @@
       <path value="MeasureReport.group"/>
       <min value="1"/>
       <max value="*"/>
+      <constraint>
+        <key value="deqm-4"/>
+        <severity value="error"/>
+        <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio' or 'continuous-variable' then the groupImprovementNotation element is required."/>
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -348,12 +354,6 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation"/>
       </type>
       <condition value="deqm-4"/>
-      <constraint>
-        <key value="deqm-4"/>
-        <severity value="error"/>
-        <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio' or 'continuous-variable' then the groupImprovementNotation element is required."/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.extension:populationDescription">
