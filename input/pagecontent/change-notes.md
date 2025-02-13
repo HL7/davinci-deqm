@@ -23,7 +23,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))([Applied here](index.html#quality-reporting-scenarios))
    - Versions needed in URLs for MeasureReport.measure ([FHIR-47535](https://jira.hl7.org/browse/FHIR-47535)) Applied([here](StructureDefinition-datax-measurereport-deqm.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)),([here](StructureDefinition-subjectlist-measurereport-deqm.html)),([here](StructureDefinition-summary-measurereport-deqm.html)), and numerous examples.
    - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
-   - The expression for the SubjectList Measure Report deqm-6 seems to be incorrectly written ([FHIR-47453](https://jira.hl7.org/browse/FHIR-47453))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
+   - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
+
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
@@ -50,7 +51,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Added section about Duplicate Data to the Guidance page ([FHIR-40511](https://jira.hl7.org/browse/FHIR-40511))([Applied here](guidance.html#duplicate-data))
    - Updated measure report introductions as specified ([FHIR-45140](https://jira.hl7.org/browse/FHIR-45140))
    - Updated practitioner to provider for the IN parameter on deqm.evaluate-measure ([FHIR-46354](https://jira.hl7.org/browse/FHIR-46354))([Applied here](OperationDefinition-evaluate.html))
-   -  Loosened cardinality for supplementalData extensions in meausre profiles ([FHIR-45205](https://jira.hl7.org/browse/FHIR-45205))
+   -  Loosened cardinality for supplementalData extensions in measure profiles ([FHIR-45205](https://jira.hl7.org/browse/FHIR-45205))
    -  Relaxed cardinality of measureReport param in build-submit-data operation to 1..* ([FHIR-46424](https://jira.hl7.org/browse/FHIR-46424))
    -  Added Prospective Gap code to care gaps value set and related narratives ([FHIR-46090](https://jira.hl7.org/browse/FHIR-46090))
    -  Replaced 'program' parameter with 'manifest' parameter in care gaps and measure/evaluate operations ([FHIR-46371](https://jira.hl7.org/browse/FHIR-46371))
@@ -157,9 +158,9 @@ The second official published version of the DEQM IG for FHIR R4.
     - Defined "smoking gun" (historical term) and revised with similar clarification text. ([FHIR-28980](https://jira.hl7.org/browse/FHIR-28980))
     - Added link to CMS Measure used in Gaps in Care Reporting documentation. ([FHIR-28995](https://jira.hl7.org/browse/FHIR-28995))
     - Clarified why the payer did not have the colonoscopy in their files. ([FHIR-28996](https://jira.hl7.org/browse/FHIR-28996))
-    - Explained that a claim would close the gap but the provider could choose to send the colonscopy report to close the gap as well. ([FHIR-28997](https://jira.hl7.org/browse/FHIR-28997))
+    - Explained that a claim would close the gap but the provider could choose to send the colonoscopy report to close the gap as well. ([FHIR-28997](https://jira.hl7.org/browse/FHIR-28997))
     - Fixed a broken hyperlink on the usecases.html page. ([FHIR-29000](https://jira.hl7.org/browse/FHIR-29000))
-    - Added Figure 2-15 to represent Retrospectice and Prospective reporting periods. ([FHIR-29008](https://jira.hl7.org/browse/FHIR-29008))
+    - Added Figure 2-15 to represent Retrospective and Prospective reporting periods. ([FHIR-29008](https://jira.hl7.org/browse/FHIR-29008))
     - Clarified Payer and Measure Analytic Systems in Figures 2-13 and 2-14. ([FHIR-29013](https://jira.hl7.org/browse/FHIR-29013))
     - Clarified that any of the Serialized Formats for bulk can be used.  Also corrected FHIR JSON to FHIR+NDJSON. ([FHIR-29016](https://jira.hl7.org/browse/FHIR-29016))
     - Clarified the `MeasureReport.date` to be the date the report was calculated. ([FHIR-29018](https://jira.hl7.org/browse/FHIR-29018))
