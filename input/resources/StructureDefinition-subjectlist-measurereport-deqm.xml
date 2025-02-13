@@ -72,6 +72,17 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.extension:measurereport-category">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="measurereport-category"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-category"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.extension:inputParameters">
       <path value="MeasureReport.extension"/>
       <sliceName value="inputParameters"/>
