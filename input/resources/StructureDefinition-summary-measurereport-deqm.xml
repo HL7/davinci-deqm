@@ -55,7 +55,7 @@
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;=1.0)"/>
+        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
       </constraint>
       <constraint>
         <key value="deqm-7"/>
@@ -313,6 +313,14 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
+      <sliceName value="measureReportGroup"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <min value="1"/>
       <max value="*"/>
       <constraint>
@@ -321,6 +329,13 @@
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio' or 'continuous-variable' then the groupImprovementNotation element is required."/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
       </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -471,13 +486,6 @@
       <min value="0"/>
       <max value="0"/>
       <mustSupport value="false"/>
-    </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group.measureScore"/>
-      <min value="0"/>
-      <max value="1"/>
-      <condition value="deqm-6"/>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.measureScore.extension:altscoretype">
       <path value="MeasureReport.group.measureScore.extension"/>

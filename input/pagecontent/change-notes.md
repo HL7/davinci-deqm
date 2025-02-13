@@ -4,8 +4,6 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 ### Changes and Updates for STU5 Publication (STU5).
 
 1. Applied the following trackers:
-   - Removed references to (previously removed) Quality Program value set. ([FHIR-48462](https://jira.hl7.org/browse/FHIR-48462)) ([Applied here](StructureDefinition-extension-reportingProgram.html), [here](OperationDefinition-evaluate.html), [here](MeasureReport-indv-measurereport02.html), [here](Measure-measure-exm108-example.html), [here](Measure-measure-pi-example.html), [here](col.html), and [here](OperationDefinition-care-gaps.html))
-   - Fix link to Adapting Guidelines for the Digital Age ([FHIR-46861](https://jira.hl7.org/browse/FHIR-46861))([Applied here](index.html#quality-improvement-ecosystem))
    - Fixed display of 'reporter' snapshot and key elements rendering in individual measure report profiles.([FHIR-48696](https://jira.hl7.org/browse/FHIR-48696))([Applied here](StructureDefinition-indv-measurereport-deqm.html), [here](StructureDefinition-datax-measurereport-deqm.html), [here](StructureDefinition-summary-measurereport-deqm.html), and [here](StructureDefinition-subjectlist-measurereport-deqm.html))
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))
    - Fix various typos ([FHIR-47450](https://jira.hl7.org/browse/FHIR-47450)) Applied to various .md, .html, and .xml files throughout
@@ -59,6 +57,9 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Replaced 'program' parameter with 'manifest' parameter in care gaps and measure/evaluate operations ([FHIR-46371](https://jira.hl7.org/browse/FHIR-46371))
    -  Added IN parameters to defined Operations. Added new deqm.collect-data Operation.  Renamed 'deqm.evaluate-measure' Operation to 'evaluate'. ([FHIR-40032](https://jira.hl7.org/browse/FHIR-40032))
    -  Added IN parameters to evaluate Operation ([FHIR-46287](https://jira.hl7.org/browse/FHIR-46287))
+   -  Change $deqm.submit-data to $submit-data, and $deqm.collect-data to $collect-data ([FHIR-48465](https://jira.hl7.org/browse/FHIR-48465))
+   -  Update the input/includes/link-list.md file entries for [$submit-data] and [$collect-data] to point to the new DEQM versions of those operations ([FHIR-48463](https://jira.hl7.org/browse/FHIR-48463))
+
 
 ### Changes and Updates for Version 4.0.0 (STU4)
 
