@@ -37,13 +37,13 @@
         <key value="deqm-2"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required"/>
-        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('proportion' | 'ratio' | 'continuous-variable') implies improvementNotation.exists()"/>
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies improvementNotation.exists()"/>
       </constraint>
       <constraint>
         <key value="deqm-3"/>
         <severity value="error"/>
-        <human value="ensures scoring is either specified only at the root, or on all groups"/>
-        <expression value="extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() xor (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').count() = group.count())"/>
+        <human value="Measure scoring is required. It must be specified on the root only, or on every group, and it cannot be on both."/>
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty()) xor (extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty() and group.all(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists()))"/>
       </constraint>
       <constraint>
         <key value="deqm-5"/>
@@ -55,7 +55,7 @@
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;=1.0)"/>
+        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
       </constraint>
       <constraint>
         <key value="deqm-7"/>
@@ -133,7 +133,7 @@
     </element>
     <element id="MeasureReport.extension:supplementalData.extension:populationDescription">
       <path value="MeasureReport.extension.extension"/>
-      <sliceName value="supplementalDataPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the supplemental data"/>
       <min value="0"/>
       <max value="1"/>
@@ -229,11 +229,18 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
-      <requirements value="This will indicate the measure being reported on. For example, the cannonical uri location for the MRP measure."/>
+      <requirements value="This will indicate the measure and version being reported on. For example, the cannonical uri location for the MRP measure."/>
       <type>
         <code value="canonical"/>
         <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"/>
       </type>
+      <condition value="deqm-0"/>
+      <constraint>
+        <key value="deqm-0"/>
+        <severity value="error"/>
+        <human value="Canonical URL SHALL contain a version."/>
+        <expression value="%resource.measure.toString().contains('|') and %resource.measure.substring(%resource.measure.toString().indexOf('|') + 1).length() &gt; 0"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.subject">
@@ -325,7 +332,7 @@
         <key value="deqm-4"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio', or 'continuous-variable' then the groupImprovementNotation element is required."/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -372,7 +379,7 @@
     </element>
     <element id="MeasureReport.group.extension:populationDescription">
       <path value="MeasureReport.group.extension"/>
-      <sliceName value="groupPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the group"/>
       <min value="0"/>
       <max value="1"/>
@@ -453,7 +460,7 @@
     </element>
     <element id="MeasureReport.group.population.extension:populationDescription">
       <path value="MeasureReport.group.population.extension"/>
-      <sliceName value="groupPopulationPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the population"/>
       <min value="0"/>
       <max value="1"/>
@@ -471,9 +478,9 @@
     </element>
     <element id="MeasureReport.group.population.count">
       <path value="MeasureReport.group.population.count"/>
-      <condition value="deqm-8"/>
       <min value="0"/>
       <max value="1"/>
+      <condition value="deqm-8"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.subjectResults">
@@ -503,7 +510,7 @@
     </element>
     <element id="MeasureReport.group.stratifier.extension:populationDescription">
       <path value="MeasureReport.group.stratifier.extension"/>
-      <sliceName value="stratifierPopulationDescription"/>
+      <sliceName value="description"/>
       <short value="Description of the stratifier"/>
       <min value="0"/>
       <max value="1"/>
@@ -548,14 +555,13 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
-      <sliceName value="stratumPopulationDescription"/>
-      <condition value="deqm-9"/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity"/>
       </type>
+      <condition value="deqm-9"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.code">
