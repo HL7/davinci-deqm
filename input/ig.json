@@ -1107,6 +1107,13 @@
                 }
             },
             {
+              "exampleBoolean": false,
+              "name": "Measure Report Category Search Parameter",
+              "reference": {
+                  "reference": "SearchParameter/measurereport-category"
+              }
+            },
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "CapabilityStatement/receiver-server"

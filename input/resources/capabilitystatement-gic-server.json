@@ -131,7 +131,23 @@
                                 }
                             ],
                             "code": "create"
+                        },
+                        {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                  "valueCode": "SHALL"
+                              }
+                          ],
+                          "code": "search-type"
                         }
+                    ],
+                    "searchParam": [
+                      {
+                        "name": "measurereport-category",
+                        "definition": "http://hl7.org/fhir/us/davinci-deqm/SearchParameter/measurereport-category",
+                        "type": "token"
+                      }
                     ],
                     "supportedProfile": [
                         "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
