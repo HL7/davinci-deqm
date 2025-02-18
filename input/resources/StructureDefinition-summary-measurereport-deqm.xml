@@ -74,7 +74,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:measurereport-category">
       <path value="MeasureReport.extension"/>
@@ -96,7 +95,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-inputParameters"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:supplementalData">
       <path value="MeasureReport.extension"/>
@@ -157,7 +155,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:location">
       <path value="MeasureReport.extension"/>
@@ -179,7 +176,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:cehrt.valueIdentifier">
       <path value="MeasureReport.extension.valueIdentifier"/>
@@ -191,7 +187,6 @@
       <patternIdentifier>
         <system value="urn:oid:2.16.840.1.113883.3.2074.1"/>
       </patternIdentifier>
-      <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.extension:software">
       <path value="MeasureReport.extension"/>
@@ -202,7 +197,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:message">
       <path value="MeasureReport.extension"/>
@@ -285,7 +279,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.period">
       <path value="MeasureReport.period"/>
