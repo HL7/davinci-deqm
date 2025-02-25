@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CareGapRemark",
+  "id": "care-gap-remark",
+  "title": "Care Gap Remark Value Set",
+  "version": "3.0.0",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/care-gap-remark",
+  "experimental": false,
+  "description": "This is a ValueSet for Care Gap Remark",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-remark"
+      }
+    ]
+  }
+}
