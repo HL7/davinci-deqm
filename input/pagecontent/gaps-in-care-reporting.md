@@ -156,9 +156,9 @@ By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefi
 Note to Balloters: We are actively seeking input on [remark codes](CodeSystem-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
 {:.note-to-balloters}
 
-When considering a Gaps in Care Report, a provider may add remarks using the [Care Gap Remark](StructureDefinition-extension-careGapRemark.html) extension.  The remark can be free-text or a remark code.
+When considering a Gaps in Care Report, a remark(s) may be added using the [Care Gap Remark](StructureDefinition-extension-careGapRemark.html) extension.
 
-See the Condition Category Remark section of the [Risk Adjustment IG](https://build.fhir.org/ig/HL7/davinci-ra/cc-remark.html) for related usage.
+This care gap remark can be used in a similar way to how the condition category remark is used in the [Da Vinci Risk Adjustment IG](https://hl7.org/fhir/us/davinci-ra/cc-remark.html).
 
 #### Attribution
 {:.no_toc}
