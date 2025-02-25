@@ -34,7 +34,7 @@
     {
       "code": "rejected",
       "display": "Rejected",
-      "definition": "Action to address the gap was rejected by the provider."
+      "definition": "Action to address the gap was rejected by the provider, such as a measure is not applicable to the patient at this time." 
     },
     {
       "code": "suppressed",
