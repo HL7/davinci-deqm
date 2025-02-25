@@ -27,7 +27,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Versions needed in URLs for MeasureReport.measure ([FHIR-47535](https://jira.hl7.org/browse/FHIR-47535)) Applied([here](StructureDefinition-datax-measurereport-deqm.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)),([here](StructureDefinition-subjectlist-measurereport-deqm.html)),([here](StructureDefinition-summary-measurereport-deqm.html)), and numerous examples.
    - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
    - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
-
+   - Care Gap assessment causing busy work for provider ([FHIR-48454](https://jira.hl7.org/browse/FHIR-48454))([Applied here](gaps-examples.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
