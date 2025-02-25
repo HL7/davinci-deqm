@@ -69,7 +69,7 @@
       <path value="MeasureReport.extension"/>
       <sliceName value="careGapRemark"/>
       <min value="0"/>
-      <max value="1"/>
+      <max value="*"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark"/>
