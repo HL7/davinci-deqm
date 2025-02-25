@@ -622,6 +622,9 @@ definition:
         reference: StructureDefinition/extension-reportingProgramReference
     - exampleBoolean: false
       reference:
+        reference: SearchParameter/measurereport-category
+    - exampleBoolean: false
+      reference:
         reference: CapabilityStatement/reporter-client
     - exampleBoolean: false
       reference:

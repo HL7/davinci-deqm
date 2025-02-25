@@ -43,5 +43,5 @@ quality improvement at the point of care. Every effort should be made to
 establish a capable distributed rule processing environment in FHIR. For
 additional information about idealized processes for moving evidence and
 information from guidelines to CDS and measurement, refer to an effort by the
-Centers for Disease Control and Prevention (CDC) called
-[Adapting Clinical Guidelines for the Digital Age](https://www.cdc.gov/csels/phio/clinical-guidelines/index.html).
+Centers for Disease Control and Prevention (CDC) called 
+[Adapting Clinical Guidelines for the Digital Age](https://journals.lww.com/ajmqonline/fulltext/2023/09002/adapting_clinical_guidelines_for_the_digital_age_.2.aspx).
