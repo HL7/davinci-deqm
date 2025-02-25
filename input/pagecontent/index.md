@@ -24,9 +24,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
+  - [Subject List Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the subject-list reports for a measure.
+
 
   -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
-
 
 - [Use cases]\: Three example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
 
@@ -38,6 +39,16 @@ This Guide is divided into several pages which are listed at the top of each pag
    Preventative Care Meaningful Measure Area.
 
    -  [Gaps in Care]\: This page lists example use cases for Gaps in Care Reporting.
+
+   - [FHIR Artifacts]\: List of all DEQM FHIR artifacts.
+
+  - [Profiles and Extensions]\: A list of all DEQM FHIR profiles and extensions.
+
+  - [Operations]\: A list of all DEQM operations.
+
+  - [Terminology]\: A list of all DEQM terminology code systems and value sets.
+
+  - [Capability statements]\: A list of all DEQM capability statements for the various DEQM roles.
 
 *Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
 {:.stu-note}
