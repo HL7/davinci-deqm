@@ -21,15 +21,8 @@
         },
         {
             "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram",
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "code": "ep-ec",
-                        "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/quality-programs-example"
-                    }
-                ]
-            }
-        },
+            "valueCanonical": "http://hl7.org/fhir/us/cqfmeasures/Library/Quality-Program-Example"
+         },
         {
             "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
             "valueIdentifier": {
@@ -46,7 +39,7 @@
     ],
     "status": "complete",
     "type": "individual",
-    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
     "subject": {
         "reference": "Patient/patient01"
     },

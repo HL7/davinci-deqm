@@ -1107,6 +1107,13 @@
                 }
             },
             {
+              "exampleBoolean": false,
+              "name": "Measure Report Category Search Parameter",
+              "reference": {
+                  "reference": "SearchParameter/measurereport-category"
+              }
+            },
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "CapabilityStatement/receiver-server"
@@ -1134,6 +1141,12 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "ValueSet/update-type"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
+                    "reference": "StructureDefinition/extension-careGapRemark"
                 }
             },
             {
