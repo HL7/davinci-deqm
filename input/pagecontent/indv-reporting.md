@@ -14,11 +14,11 @@ The [supplementalData extension](StructureDefinition-extension-supplementalData.
 
 The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation, as well as how to use the $evaluate-measure operation to generate an individual MeasureReport from a Measure.
 
-#### Relationship between QI Core, DEQM, and CQMs
+#### Relationship between QI-Core, DEQM, and CQMs
 {:.no_toc}
 {: qualityMeasurementStandardsLandscapeIndv}
 
-<span class="bg-success">As described in the [Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscape) section of this implementation guide, </span>the QI Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
+<span class="bg-success">As described in the [Quality Measurement Standards Landscape](index.html#quality-measurement-standards-landscape) section of this implementation guide, </span>the QI-Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI-Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI-Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
 
 ### Constructing an Individual Report
 
@@ -92,18 +92,18 @@ The following resources are used in all individual reporting transactions.
 |---|---|---|
 |Measure|CRMI Shareable Measure Profile|[CRMI Shareable Measure]|
 |Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
-|Organization|QI Core Organization Profile|[QI Core Organization]|
-|Patient|QI Core Patient Profile|[QI Core Patient]|
+|Organization|QICore Organization Profile|[QICore Organization]|
+|Patient|QICore Patient Profile|[QICore Patient]|
 
-Depending on the specific Measure and Interaction, various DEQM and QI Core Profiles are used in addition to the profiles listed above.
+Depending on the specific Measure and Interaction, various DEQM and QI-Core Profiles are used in addition to the profiles listed above.
 
 ### Individual Measure Reporting
 
 When the results of a CQM are completed they are POSTed to the quality measure Receiver's FHIR Server. The Individual MeasureReport(s) and all the referenced resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API.
 
-Posting Individual Measure Reports is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios **SHALL** contain only the new and updated DEQM and QI Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
+Posting Individual Measure Reports is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
 
-Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced multiple time within the Bundle, the reporting overhead for the Reporter may be reduced when compared to reporting each individual report separately. (See the FHIR specification for more information about using [Bundles] and resolving references in Bundles)
+Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced multiple times within the Bundle, the reporting overhead for the Reporter may be reduced when compared to reporting each individual report separately. (See the FHIR specification for more information about using [Bundles] and resolving references in Bundles)
 
 {% include img-narrow.html  img="indv_report_post.jpg" caption="Figure 2-10 POST Individual Report" %}
 
