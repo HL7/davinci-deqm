@@ -116,7 +116,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -579,7 +579,6 @@
     </element>
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
-      <requirements value="To support the reporting of supplemental data elements."/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.evaluatedResource.extension:popref">
@@ -590,23 +589,6 @@
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.supplementalData">
-      <extension>
-        <url value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="MeasureReport.supplementalData"/>
-      <sliceName value="supplementalData"/>
-      <short value="Supplemental data provided in the report"/>
-      <definition value="The results of the calculated measure's supplemental data."/>
-      <min value="0"/>
-      <max value="*"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData"/>
       </type>
       <mustSupport value="true"/>
     </element>
