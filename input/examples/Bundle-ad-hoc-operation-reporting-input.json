@@ -1,0 +1,681 @@
+{
+    "id": "ad-hoc-operation-reporting-input",
+    "type": "transaction",
+    "resourceType": "Bundle",
+    "entry": [
+        {
+            "fullUrl": "http://example.org/fhir/receiver/PractitionerRole/kelly-smith-1",
+            "request": {
+                "method": "POST",
+                "url": "PractitionerRole"
+            },
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "kelly-smith-1",
+                "meta": {"profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"]},
+                "identifier": [{
+                    "use": "temp",
+                    "system": "http://www.acme.org/practitionerroles",
+                    "value": "kelly-smith-1"
+                }],
+                "active": true,
+                "period": {"start": "1995"},
+                "practitioner": {
+                    "reference": "Practitioner/kelly-smith-1",
+                    "display": "Dr Kelly Smith"
+                }, 
+                "organization": {"reference": "Organization/organization-B"},
+                 "telecom": [
+                    {
+                       "rank": 1,
+                       "system": "phone",
+                       "use": "work",
+                       "value": "8605555555"
+                    }
+                ]
+            }
+         },
+        {
+            "fullUrl": "http://example.org/fhir/receiver/PractitionerRole/john-smith-2",
+            "request": {
+                "method": "POST",
+                "url": "PractitionerRole"
+            },
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "john-smith-2",
+                "meta": {"profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"]},
+                "identifier": [
+                    {
+                        "use": "temp",
+                        "system": "http://www.acme.org/practitionerroles",
+                        "value": "john-smith-2"
+                    },
+                    {
+                        "use": "usual",
+                        "type": {"text": "EIN"},
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
+                        "value": "00ZZZ"
+                    }
+                ],
+                "active": true,
+                "period": {"start": "1995"},
+                "practitioner": {
+                    "reference": "Practitioner/john-smith-2",
+                    "display": "Dr John Smith"
+                },
+                "organization": {"reference": "Organization/organization-B"},
+                "telecom": [
+                    {
+                       "rank": 1,
+                       "system": "phone",
+                       "use": "work",
+                       "value": "8606666666"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/receiver/PractitionerRole/john-smith-1",
+            "request": {
+                "method": "POST",
+                "url": "PractitionerRole"
+            },
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "john-smith-1",
+                "meta": {"profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"]},
+                "identifier": [
+                    {
+                        "use": "temp",
+                        "system": "http://www.acme.org/practitionerroles",
+                        "value": "john-smith-1"
+                    },
+                    {
+                        "use": "usual",
+                        "type": {"text": "EIN"},
+                        "system": "urn:oid:2.16.840.1.113883.4.4",
+                        "value": "00XXX"
+                    }
+                ],
+                "active": true,
+                "period": {"start": "1995"},
+                "practitioner": {
+                    "reference": "Practitioner/john-smith-1",
+                    "display": "Dr John Smith"
+                },
+                "organization": {"reference": "Organization/organization-A"},
+                "telecom": [
+                    {
+                       "rank": 1,
+                       "system": "phone",
+                       "use": "work",
+                       "value": "8607777777"
+                    }
+                ]
+            }
+        },
+        {"fullUrl": "http://example.org/fhir/receiver/PractitionerRole/jane-smith-1",
+         "request": {
+                "method": "POST",
+                "url": "PractitionerRole"
+            },
+         "resource": {
+            "resourceType": "PractitionerRole",
+            "id": "jane-smith-1",
+            "meta": {"profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"]},
+            "identifier": [{
+                "use": "temp",
+                "system": "http://www.acme.org/practitionerroles",
+                "value": "jane-smith-1"
+            }],
+            "active": true,
+            "period": {"start": "1995"},
+            "practitioner": {
+                "reference": "Practitioner/jane-smith-1",
+                "display": "Dr Jane Smith"
+            },
+            "organization": {"reference": "Organization/organization-A"},
+            "telecom": [
+                    {
+                       "rank": 1,
+                       "system": "phone",
+                       "use": "work",
+                       "value": "8608888888"
+                    }
+                ]
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Practitioner/kelly-smith-1",
+         "request": {
+                "method": "POST",
+                "url": "Practitioner"
+            },
+            "resource": {
+            "resourceType": "Practitioner",
+            "id": "kelly-smith-1",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
+            ]},
+            "identifier": [{
+                "use": "usual",
+                "type": {"text": "EIN"},
+                "system": "urn:oid:2.16.840.1.113883.4.4",
+                "value": "00YYZ"
+            }],
+            "name": [{
+                "family": "Smith",
+                "given": ["Kelly"],
+                "prefix": ["Dr"]
+            }]
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Practitioner/john-smith-1",
+         "request": {
+                "method": "POST",
+                "url": "Practitioner"
+            },
+            "resource": {
+            "resourceType": "Practitioner",
+            "id": "john-smith-1",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
+            ]},
+            "identifier": [
+                {
+                    "use": "usual",
+                    "type": {"text": "EIN"},
+                    "system": "urn:oid:2.16.840.1.113883.4.4",
+                    "value": "00XXX"
+                }
+            ],
+            "name": [{
+                "family": "Smith",
+                "given": ["John"],
+                "prefix": ["Dr"]
+            }]
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Practitioner/jane-smith-1",
+         "request": {
+                "method": "POST",
+                "url": "Practitioner"
+            },
+            "resource": {
+            "resourceType": "Practitioner",
+            "id": "jane-smith-1",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
+            ]},
+            "identifier": [{
+                "use": "usual",
+                "type": {"text": "EIN"},
+                "system": "urn:oid:2.16.840.1.113883.4.4",
+                "value": "00YYY"
+            }],
+            "name": [{
+                "family": "Smith",
+                "given": ["Jane"],
+                "prefix": ["Dr"]
+            }]
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Practitioner/john-smith-2",
+         "request": {
+                "method": "POST",
+                "url": "Practitioner"
+            },
+            "resource": {
+            "resourceType": "Practitioner",
+            "id": "john-smith-2",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
+            ]},
+            "identifier": [{
+                "use": "usual",
+                "type": {"text": "EIN"},
+                "system": "urn:oid:2.16.840.1.113883.4.4",
+                "value": "00ZZZ"
+            }],
+            "name": [{
+                "family": "Smith",
+                "given": ["John"],
+                "prefix": ["Dr"]
+            }]
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Patient/MultiProviderPatient",
+         "request": {
+                "method": "POST",
+                "url": "Patient"
+            },
+            "resource": {
+            "resourceType": "Patient",
+            "id": "MultiProviderPatient",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+            ]},
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+                    "extension": [
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2106-3",
+                                "display": "White"
+                            }
+                        },
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "1002-5",
+                                "display": "American Indian or Alaska Native"
+                            }
+                        },
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2028-9",
+                                "display": "Asian"
+                            }
+                        },
+                        {
+                         "url" : "text",
+                         "valueString" : "Mixed"
+                       }
+                    ]
+                },
+                {
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+                    "extension": [
+                        {
+                            "url": "ombCategory",
+                            "valueCoding": {
+                                "system": "urn:oid:2.16.840.1.113883.6.238",
+                                "code": "2135-2",
+                                "display": "Hispanic or Latino"
+                            }
+                        },
+                        {
+                            "url": "text",
+                            "valueString": "Hispanic or Latino"
+                        }
+                    ]
+                }
+            ],
+            "identifier": [{
+                "use": "usual",
+                "system": "http://myprovider.org",
+                "value": "00001"
+            }],
+            "name": [{
+                "use": "usual",
+                "family": "Doe",
+                "given": ["Jane"]
+            }],
+            "gender": "female",
+            "birthDate": "2009-02-02"
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Organization/organization-B",
+         "request": {
+                "method": "POST",
+                "url": "Organization"
+            },
+            "resource": {
+            "resourceType": "Organization",
+            "id": "organization-B",
+            "meta": {"profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"]},
+            "identifier": [
+                {
+                    "use": "temp",
+                    "system": "urn:oid:2.16.840.1.113883.4.336",
+                    "value": "CCN-999"
+                },
+                {
+                    "use": "usual",
+                    "type": {"text": "EIN"},
+                    "system": "urn:oid:2.16.840.1.113883.4.4",
+                    "value": "00999"
+                }
+            ],
+            "active": true,
+            "type": [{"coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "team",
+                "display": "Organizational team"
+            }]}],
+            "name": "Organization B"
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Organization/organization-A",
+         "request": {
+                "method": "POST",
+                "url": "Organization"
+            },
+            "resource": {
+            "resourceType": "Organization",
+            "id": "organization-A",
+            "meta": {"profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"]},
+            "identifier": [
+                {
+                    "use": "temp",
+                    "system": "urn:oid:2.16.840.1.113883.4.336",
+                    "value": "CCN-123"
+                },
+                {
+                    "use": "usual",
+                    "type": {"text": "EIN"},
+                    "system": "urn:oid:2.16.840.1.113883.4.4",
+                    "value": "00123"
+                }
+            ],
+            "active": true,
+            "type": [{"coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "team",
+                "display": "Organizational team"
+            }]}],
+            "name": "Organization A"
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-9",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-9",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/kelly-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-09-01T01:00:00-04:00",
+                "end":   "2019-09-02T01:00:00-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-8",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-8",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/kelly-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-08-01T01:00:00.0-04:00",
+                "end": "2019-08-02T01:00:00.0-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-7",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-7",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                 "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/kelly-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-07-01T01:00:00.0-04:00",
+                "end": "2019-07-02T01:00:00.0-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-6",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-6",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/kelly-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-06-01T01:00:00.0-04:00",
+                "end": "2019-06-02T01:00:00.0-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-5",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-5",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                 "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/kelly-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-05-01T01:00:00.0-04:00",
+                "end": "2019-05-02T01:00:00.0-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-4",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-4",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/jane-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-04-01T01:00:00.0-04:00",
+                "end": "2019-04-02T01:00:00.0-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-3",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-3",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+               "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                 "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/jane-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-03-01T01:00:00.0-04:00",
+                "end": "2019-03-02T01:00:00.0-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-2",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-2",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                 "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+            }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/jane-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-02-01T01:00:00.0-04:00",
+                "end": "2019-02-02T01:00:00.0-04:00"
+            }
+        }},
+        {"fullUrl": "http://example.org/fhir/receiver/Encounter/Encounter-1",
+         "request": {
+                "method": "POST",
+                "url": "Encounter"
+            },
+            "resource": {
+            "resourceType": "Encounter",
+            "id": "Encounter-1",
+            "meta": {"profile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+                "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+            ]},
+            "status": "finished",
+            "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+            },
+            "type": [{"coding": [{
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99202",
+                 "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+           }]}],
+            "subject": {"reference": "Patient/MultiProviderPatient"},
+            "participant": [
+                {"individual": {"reference": "Practitioner/john-smith-1"}},
+                {"individual": {"reference": "Practitioner/jane-smith-1"}}
+            ],
+            "period": {
+                "start": "2019-01-01T01:00:00.0-04:00",
+                "end": "2019-01-02T01:00:00.0-04:00"
+            }
+        }}
+    ]
+}
