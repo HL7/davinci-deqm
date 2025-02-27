@@ -439,6 +439,11 @@ definition:
         reference: Organization/gaps-organization-reportingvendor
       description: GIC Reporting Vendor Organization example
     - exampleBoolean: true
+      name: Ad Hoc Operation Reporting input
+      reference:
+        reference: Bundle/ad-hoc-operation-reporting-input
+      description: Ad Hoc Operation Reporting input example
+    - exampleBoolean: true
       name: Gaps Composition01
       reference:
         reference: Composition/gaps-composition01
