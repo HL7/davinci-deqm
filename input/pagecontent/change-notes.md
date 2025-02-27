@@ -29,6 +29,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - Care Gap assessment causing busy work for provider ([FHIR-48454](https://jira.hl7.org/browse/FHIR-48454))([Applied here](gaps-examples.html))
    - Fix Figure 2-18, swap section.entry and section.focus from Composition ([FHIR-48731](https://jira.hl7.org/browse/FHIR-48731)) Applied ([here](gaps-in-care-reporting.html))
+   - incorrect element used in explanation ([FHIR-49850](https://jira.hl7.org/browse/FHIR-49850)) Applied ([here](gaps-in-care-reporting.html)) and ([here](report-sd-imp-guidance.html))
+     
 
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
