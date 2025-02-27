@@ -12,6 +12,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - typo needs correction ([FHIR-46863](https://jira.hl7.org/browse/FHIR-46863))([Applied here](guidance.html#data-exchange))
    - "value-based" with hyphen ([FHIR-48447](https://jira.hl7.org/browse/FHIR-48447))([Applied here](index.html#introduction))
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
+   - Consider adding Annotation capability from Risk Adjustment to the Individual MeasureReport([FHIR-40675](https://jira.hl7.org/browse/FHIR-40675)) Applied ([here](StructureDefinition-extension-careGapRemark.html)), ([here](CodeSystem-care-gap-remark.html)), ([here](ValueSet-care-gap-remark.html)), ([here](CodeSystem-remark-reason.html)), ([here](ValueSet-remark-reason.html)), ([here](ig.json)), ([here](gaps-in-care-reporting.html)), and ([here](StructureDefinition-indv-measurereport-deqm.html))
    - Public Health as a Stakeholder is confusing([FHIR-48453](https://jira.hl7.org/browse/FHIR-48453))([Applied here](guidance.html)), ([here](index.html#quality-improvement-ecosystem)), ([here](index.html#quality-measurement-standards-landscape)), and ([here](Capabilitystatement-receiver-server.html))
    - Subject List Reporting page needs an update([CQF-2428](https://jira.hl7.org/browse/FHIR-48456))([Applied here](subjectlist-reporting.html))
    - change patient-list to subject-list([FHIR-48451](https://jira.hl7.org/browse/FHIR-48451))([Applied here](index.html))
@@ -27,6 +28,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
    - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - Added Ad Hoc Operation Reporting input example and guidance ([FHIR-40722](https://jira.hl7.org/browse/FHIR-40722))([Applied here](Bundle-ad-hoc-operation-reporting-input.html)), ([here](all-examples.html#bundle)) and ([here](guidance.html#ad-hoc-organizations-for-deqm-operations))
+   - Care Gap assessment causing busy work for provider ([FHIR-48454](https://jira.hl7.org/browse/FHIR-48454))([Applied here](gaps-examples.html))
+   - Fix Figure 2-18, swap section.entry and section.focus from Composition ([FHIR-48731](https://jira.hl7.org/browse/FHIR-48731)) Applied ([here](gaps-in-care-reporting.html))
 
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.

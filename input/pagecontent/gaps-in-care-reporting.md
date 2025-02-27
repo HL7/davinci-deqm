@@ -125,7 +125,7 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 - In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
-{% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
+{% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
 
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
@@ -149,6 +149,16 @@ Example Business Use Cases:
 
 
 By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefinition-gaps-guidanceresponse-detailedcaregap.html), healthcare organizations can receive tailored and actionable guidance on addressing specific care gaps. The inclusion of `reasonCode` and `dataRequirement` enables standardized categorization, context-specific recommendations, and ensures a more focused approach to quality improvement efforts.
+
+#### Add Remark to Gaps in Care Report
+{:.no_toc}
+
+Note to Balloters: We are actively seeking input on [remark codes](CodeSystem-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
+{:.note-to-balloters}
+
+When considering a Gaps in Care Report, a remark(s) may be added using the [Care Gap Remark](StructureDefinition-extension-careGapRemark.html) extension.
+
+This care gap remark can be used in a similar way to how the condition category remark is used in the [Da Vinci Risk Adjustment IG](https://hl7.org/fhir/us/davinci-ra/cc-remark.html).
 
 #### Attribution
 {:.no_toc}
