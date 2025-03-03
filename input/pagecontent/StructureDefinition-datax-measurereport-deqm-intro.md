@@ -4,16 +4,16 @@
 The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
-1. status: complete \| pending \| error
-2. type: individual \| subject-list \| summary \| data-collection
-3. measure: What measure and version was calculated
-4. subject: What individual(s) the report is for
-5. date: When the report was generated
-6. reporter: The organization where the measure was completed
-7. period: What period the report covers
-8. updatetype: Optional Extensions Element
-9. period.start: Starting time with inclusive boundary
-10. period.end: End time with inclusive boundary, if not ongoing
+1. period.start: Starting time with inclusive boundary
+2. subject: What individual(s) the report is for
+3. status: complete \| pending \| error
+4. type: individual \| subject-list \| summary \| data-collection
+5. reporter: The organization where the measure was completed
+6. period.end: End time with inclusive boundary, if not ongoing
+7. updatetype: Optional Extensions Element
+8. date: When the report was generated
+9. period: What period the report covers
+10. measure: What measure and version was calculated
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. evaluatedResource: What data was used to calculate the measure score

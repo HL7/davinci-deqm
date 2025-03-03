@@ -6,7 +6,6 @@ The following data-elements are mandatory (i.e data MUST be present).
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. url: identifies the meaning of the extension
 2. value[x]: Value of extension
-3. value[x]: Value of extension
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 
