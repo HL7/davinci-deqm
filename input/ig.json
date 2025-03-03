@@ -62,10 +62,6 @@
         "parameter": [
             {
                 "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"
-            },
-            {
-                "code": "special-url",
                 "value": "http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"
             },
             {
@@ -1085,12 +1081,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-supplementalData"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -1147,12 +1137,6 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-certificationIdentifier"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-populationReference"
                 }
             },
             {

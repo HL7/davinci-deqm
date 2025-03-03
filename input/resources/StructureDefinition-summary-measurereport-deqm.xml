@@ -105,15 +105,13 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData"/>
       </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:supplementalData.extension:criteriaReference">
       <path value="MeasureReport.extension.extension"/>
       <sliceName value="criteriaReference"/>
-      <min value="0"/>
-      <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
@@ -124,8 +122,6 @@
       <path value="MeasureReport.extension.extension"/>
       <sliceName value="description"/>
       <short value="Description of the supplemental data"/>
-      <min value="0"/>
-      <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
