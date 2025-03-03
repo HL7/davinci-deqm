@@ -11,7 +11,6 @@ The following data-elements are mandatory (i.e data MUST be present).
 5. patient: Associated patient
 6. evidence: Supporting evidence
 7. evidence.detail: This references either a DEQM Individual MeasureReport or a GuidanceResponse resource. Note that referencing the GuidanceResponse resource allows potential profiling on GuidanceResponse in the future without breaking backward compatibility.
-8. mitigation.action: What mitigation?
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 
