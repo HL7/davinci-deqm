@@ -7,20 +7,28 @@ The following data-elements are mandatory (i.e data MUST be present).
 1. status: complete \| pending \| error
 2. type: individual \| subject-list \| summary \| data-collection
 3. measure: What measure was calculated
-4. period: What period the report covers
-5. group.stratifier.stratum.component.code: What stratifier component of the group
-6. group.stratifier.stratum.component.value: The stratum component value, e.g. male
+4. subject: What individual(s) the report is for
+5. date: When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent.
+6. reporter: Organization that generated the MeasureReport
+7. period: The period for which the report was calculated. For the gaps in care use case, this is referred to as the gaps through period.
+8. period.start: Starting time with inclusive boundary
+9. period.end: End time with inclusive boundary, if not ongoing
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
-1. reportingProgram: Reporting program
-2. inputParameters: What parameters
-3. supplementalData: Supplemental Data
-4. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
-5. vendor: Vendor information
-6. cehrt: CMS EHR Certification ID
-7. software: Extension
-8. message: Evaluation messages
-9. popref: Criteria reference
+1. improvementNotation: increase \| decrease
+2. group: Measure results for each group
+3. evaluatedResource: What data was used to calculate the measure score
+4. group.id: Unique id for inter-element referencing
+5. group.code: Meaning of the group
+6. group.population: The populations in the group
+7. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+8. group.population.count: Size of the population
+9. group.measureScore: What score this group achieved
+10. group.stratifier.code: What stratifier of the group
+11. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
+12. group.stratifier.stratum.population: Population results in this stratum
+13. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+14. group.stratifier.stratum.population.count: Size of the population
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 
