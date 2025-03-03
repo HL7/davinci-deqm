@@ -10,12 +10,9 @@ The following data-elements are mandatory (i.e data MUST be present).
 4. date: The datetime the gaps in care report was created
 5. author: Who and/or what authored the composition
 6. title: The title of the gaps in care report
-7. attester.mode: personal \| professional \| legal \| official
-8. relatesTo.code: replaces \| transforms \| signs \| appends
-9. relatesTo.target[x]: Target of the relationship
-10. section: Must contain at least one section, each section corresponds to an individual MeasureReport for a specific measure
-11. section.focus: This references a DEQM individual MeasureReport
-12. section.entry: This references a gaps in care DetectedIssue
+7. section: Must contain at least one section, each section corresponds to an individual MeasureReport for a specific measure
+8. section.focus: This references a DEQM individual MeasureReport
+9. section.entry: This references a gaps in care DetectedIssue
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. custodian: Identifies the organization who is responsible for ongoing maintenance of and accessing to this gaps in care report
