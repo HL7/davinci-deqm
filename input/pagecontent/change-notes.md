@@ -30,7 +30,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Care Gap assessment causing busy work for provider ([FHIR-48454](https://jira.hl7.org/browse/FHIR-48454))([Applied here](gaps-examples.html))
    - Fix Figure 2-18, swap section.entry and section.focus from Composition ([FHIR-48731](https://jira.hl7.org/browse/FHIR-48731)) Applied ([here](gaps-in-care-reporting.html))
    - DEQM STU5 Final Publication: Address deqm-6 issue on SubjectList ([CQF-2611](https://icf.atlassian.net/browse/CQF-2611)) Applied ([here](StructureDefinition-subjectlist-measurereport-deqm.html))
-
+   - detectedIssue.evidence.detail description correction ([FHIR-49844](https://jira.hl7.org/browse/FHIR-49844)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
+     
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
