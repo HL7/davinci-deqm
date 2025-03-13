@@ -1,0 +1,56 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CareGapRemark",
+  "id": "care-gap-remark",
+  "title": "Care Gap Remark Code System",
+  "version": "1.0.0",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-remark",
+  "experimental": false,
+  "description": "This is a code system for Care Gap Remark",
+  "caseSensitive": true,
+  "concept": [
+    {
+      "code": "order-placed",
+      "display": "Order placed",
+      "definition": "An order has been placed to address and close the gap"
+    },
+    {
+      "code": "satisfied-in-EHR",
+      "display": "Satisfied in EHR",
+      "definition": "Data already present in the EHR satisfies the open gap."
+    },
+    {
+      "code": "out-of-range",
+      "display": "Out of range",
+      "definition": "EHR reports patient condition is not within allowed threshold."
+    },
+    {
+      "code": "patient-refused",
+      "display": "Patient refused",
+      "definition": "Patient refused intervention to close the gap."
+    },
+    {
+      "code": "rejected",
+      "display": "Rejected",
+      "definition": "Action to address the gap was rejected by the provider, such as a measure is not applicable to the patient at this time." 
+    },
+    {
+      "code": "suppressed",
+      "display": "Suppressed",
+      "definition": "Presentation of the gap to the provider was suppressed."
+    },
+    {
+      "code": "not-assessed",
+      "display": "Not assessed",
+      "definition": "Gap was shown to the provider but no action was taken to assess the gap."
+    },
+    {
+      "code": "not-ingested",
+      "display": "Not ingested",
+      "definition": "System cannot process the gap that was received."
+    }
+  ],
+  "count": 8
+}
