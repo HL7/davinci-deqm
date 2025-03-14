@@ -1,0 +1,266 @@
+{
+  "resourceType": "Bundle",
+  "id": "non-document-gaps-in-care",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"
+    ]
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:f119bdf2-eeb9-47b2-8dc1-e2068cc3c4ae"
+  },
+  "type": "collection",
+  "timestamp": "2020-06-30T13:08:53+00:00",
+  "entry": [{
+      "fullUrl": "http://example.org/fhir/gaps/DetectedIssue/gaps-detectedissue03",
+      "resource": {
+        "resourceType": "DetectedIssue",
+        "id": "gaps-detectedissue03",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DetectedIssue_gaps-detectedissue03\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DetectedIssue gaps-detectedissue03</b></p><a name=\"gaps-detectedissue03\"> </a><a name=\"hcgaps-detectedissue03\"> </a><a name=\"gaps-detectedissue03-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-gaps-detectedissue-deqm.html\">DEQM Gaps In Care Detected Issue Profile</a></p></div><p><b>DEQM Gap Status Modifier Extension</b>: <span title=\"Codes:{http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status open-gap}\">Open Gap</span></p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode CAREGAP}\">Caregap</span></p><p><b>patient</b>: <a href=\"Patient-gaps-patient02.html\">Thomas Ludwich  Male, DoB: 1957-01-01 ( Medical Record Number: 999996992 (use: usual, ))</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"MeasureReport-gaps-indv-measurereport03.html\">MeasureReport: extension = Proportion,urn:oid:2.16.840.1.113883.3.2074.1#0015HQN9BD3304E,-&gt;Organization GapsReportingVendor01; status = complete; type = individual; measure = http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0; date = 2020-06-30 13:08:52+0000; period = 2020-01-01 --&gt; 2020-12-31; improvementNotation = Increased score indicates improvement</a></td></tr></table></div>"
+        },
+        "modifierExtension": [{
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus",
+            "valueCodeableConcept": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+                  "code": "open-gap"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [{
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "CAREGAP",
+              "display": "Caregap"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/gaps-patient02"
+        },
+        "evidence": [{
+            "detail": [{
+                "reference": "MeasureReport/gaps-indv-measurereport03"
+              }
+            ]
+          }
+        ]
+      }
+    }, {
+      "fullUrl": "http://example.org/fhir/gaps/MeasureReport/gaps-indv-measurereport03",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "gaps-indv-measurereport03",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MeasureReport_gaps-indv-measurereport03\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MeasureReport gaps-indv-measurereport03</b></p><a name=\"gaps-indv-measurereport03\"> </a><a name=\"hcgaps-indv-measurereport03\"> </a><a name=\"gaps-indv-measurereport03-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-indv-measurereport-deqm.html\">DEQM Individual MeasureReport Profile</a></p></div><p><b>DEQM Measure Scoring Extension</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-scoring proportion}\">Proportion</span></p><p><b>DEQM Certification Identifier Extension</b>: <code>urn:oid:2.16.840.1.113883.3.2074.1</code>/0015HQN9BD3304E</p><p><b>DEQM Reporting Vendor Extension</b>: <a href=\"Organization-gaps-organization-reportingvendor.html\">Organization GapsReportingVendor01</a></p><p><b>status</b>: Complete</p><p><b>type</b>: Individual</p><p><b>measure</b>: <a href=\"Measure-measure-exm130-example.html\">Colorectal Cancer Screening Measureversion: null5.0.0)</a></p><p><b>subject</b>: <a href=\"Patient-gaps-patient02.html\">Thomas Ludwich  Male, DoB: 1957-01-01 ( Medical Record Number: 999996992 (use: usual, ))</a></p><p><b>date</b>: 2020-06-30 13:08:52+0000</p><p><b>reporter</b>: <a href=\"Organization-gaps-organization-reportingvendor.html\">Organization GapsReportingVendor01</a></p><p><b>period</b>: 2020-01-01 --&gt; 2020-12-31</p><p><b>improvementNotation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-improvement-notation increase}\">Increased score indicates improvement</span></p><blockquote><p><b>group</b></p><blockquote><p><b>id</b></p>group-exm130</blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population initial-population}\">Initial Population</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population numerator}\">Numerator</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population denominator}\">Denominator</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/measure-population denominator-exclusion}\">Denominator Exclusion</span></p><p><b>count</b>: 0</p></blockquote><p><b>measureScore</b>: 1.0</p></blockquote><p><b>evaluatedResource</b>: </p><ul><li><a href=\"Encounter-gaps-encounter02.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter.; period = 2020-03-05 07:00:00+0000 --&gt; 2020-03-05 10:00:00+0000</a></li><li><a href=\"Patient-gaps-patient02.html\">Thomas Ludwich  Male, DoB: 1957-01-01 ( Medical Record Number: 999996992 (use: usual, ))</a></li><li><a href=\"Procedure-gaps-procedure01.html\">Procedure Colonoscopy, flexible; with removal of tumor(s), polyp(s), or other lesion(s) by hot biopsy forceps</a></li></ul></div>"
+        },
+        "extension": [{
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+            "valueCodeableConcept": {
+              "coding": [{
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                  "code": "proportion"
+                }
+              ]
+            }
+          }, {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+            "valueIdentifier": {
+              "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+              "value": "0015HQN9BD3304E"
+            }
+          }, {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+            "valueReference": {
+              "reference": "Organization/gaps-organization-reportingvendor"
+            }
+          }
+        ],
+        "status": "complete",
+        "type": "individual",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0",
+        "subject": {
+          "reference": "Patient/gaps-patient02"
+        },
+        "date": "2020-06-30T13:08:52+00:00",
+        "reporter": {
+          "reference": "Organization/gaps-organization-reportingvendor"
+        },
+        "period": {
+          "start": "2020-01-01",
+          "end": "2020-12-31"
+        },
+        "improvementNotation": {
+          "coding": [{
+              "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+              "code": "increase"
+            }
+          ]
+        },
+        "group": [{
+            "id": "group-exm130",
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population",
+                      "display": "Initial Population"
+                    }
+                  ]
+                },
+                "count": 1
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator",
+                      "display": "Numerator"
+                    }
+                  ]
+                },
+                "count": 1
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator",
+                      "display": "Denominator"
+                    }
+                  ]
+                },
+                "count": 1
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator-exclusion",
+                      "display": "Denominator Exclusion"
+                    }
+                  ]
+                },
+                "count": 0
+              }
+            ],
+            "measureScore": {
+              "value": 1.0
+            }
+          }
+        ],
+        "evaluatedResource": [{
+            "extension": [{
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                "valueString": "initial-population"
+              }, {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                "valueString": "denominator"
+              }
+            ],
+            "reference": "Encounter/gaps-encounter02"
+          }, {
+            "extension": [{
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                "valueString": "initial-population"
+              }, {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                "valueString": "denominator"
+              }
+            ],
+            "reference": "Patient/gaps-patient02"
+          }, {
+            "extension": [{
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                "valueString": "numerator"
+              }
+            ],
+            "reference": "Procedure/gaps-procedure01"
+          }
+        ]
+      }
+    }, {
+      "fullUrl": "http://example.org/fhir/gaps/Patient/gaps-patient02",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "gaps-patient02",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_gaps-patient02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient gaps-patient02</b></p><a name=\"gaps-patient02\"> </a><a name=\"hcgaps-patient02\"> </a><a name=\"gaps-patient02-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/qicore/STU6/StructureDefinition-qicore-patient.html\">QICore Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Thomas Ludwich  Male, DoB: 1957-01-01 ( Medical Record Number: 999996992 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.\">US Core Ethnicity Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-CDCREC.html#CDCREC-2135-2\">CDC Race and Ethnicity 2135-2</a>: Hispanic or Latino</li><li>text: Hispanic or Latino</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.\">US Core Race Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-CDCREC.html#CDCREC-2028-9\">CDC Race and Ethnicity 2028-9</a>: Asian</li><li>text: Asian</li></ul></td></tr></table></div>"
+        },
+        "extension": [{
+            "extension": [{
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2028-9",
+                  "display": "Asian"
+                }
+              }, {
+                "url": "text",
+                "valueString": "Asian"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          }, {
+            "extension": [{
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              }, {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          }
+        ],
+        "identifier": [{
+            "use": "usual",
+            "type": {
+              "coding": [{
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "999996992"
+          }
+        ],
+        "name": [{
+            "family": "Ludwich",
+            "given": [
+              "Thomas"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1957-01-01"
+      }
+    },
+  ]
+}
