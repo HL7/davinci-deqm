@@ -22,15 +22,17 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Guidance to avoid confusion with same DEQM and base FHIR operation names ([FHIR-49369](https://jira.hl7.org/browse/FHIR-49369))([Applied here](datax.html#deqm-data-exchange-operations-naming))
    - The expression for the SubjectList Measure Report deqm-3 seems to be incorrectly written ([FHIR-47452](https://jira.hl7.org/browse/FHIR-47452))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - change "QI Core" to "QI-Core" ([FHIR-48457](https://jira.hl7.org/browse/FHIR-48457))([Applied here](guidance.html)) and throughout.
-   - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))--([Applied here](index.html#quality-reporting-scenarios))
+   - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))([Applied here](index.html#quality-reporting-scenarios))
+   - Changes to MeasureReport for Attestation example to point to QM Measure PI example. Added guidance around the change.  ([FHIR-48461](https://jira.hl7.org/browse/FHIR-48461))([Applied here](StructureDefinition-indv-measurereport-deqm.html), [here](StructureDefinition-summary-measurereport-deqm.html), [here](StructureDefinition-subjectlist-measurereport-deqm.html), [here] (MeasureReport-summ-attestation.html), and [here](guidance.html#measures-groups-and-populations-in-measurereport))
    - Reapply isDocument to $care-gaps ([FHIR-49659](https://jira.hl7.org/browse/FHIR-49659))
    - Versions needed in URLs for MeasureReport.measure ([FHIR-47535](https://jira.hl7.org/browse/FHIR-47535)) Applied([here](StructureDefinition-datax-measurereport-deqm.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)),([here](StructureDefinition-subjectlist-measurereport-deqm.html)),([here](StructureDefinition-summary-measurereport-deqm.html)), and numerous examples.
    - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
    - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - Added Ad Hoc Operation Reporting input example and guidance ([FHIR-40722](https://jira.hl7.org/browse/FHIR-40722))([Applied here](Bundle-ad-hoc-operation-reporting-input.html)), ([here](all-examples.html#bundle)) and ([here](guidance.html#ad-hoc-organizations-for-deqm-operations))
+   - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48448](https://jira.hl7.org/browse/FHIR-48448))([Applied here](index.html))
    - Care Gap assessment causing busy work for provider ([FHIR-48454](https://jira.hl7.org/browse/FHIR-48454))([Applied here](gaps-examples.html))
    - Fix Figure 2-18, swap section.entry and section.focus from Composition ([FHIR-48731](https://jira.hl7.org/browse/FHIR-48731)) Applied ([here](gaps-in-care-reporting.html))
-
+   - DEQM STU5 Final Publication: Address deqm-6 issue on SubjectList ([CQF-2611](https://icf.atlassian.net/browse/CQF-2611)) Applied ([here](StructureDefinition-subjectlist-measurereport-deqm.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

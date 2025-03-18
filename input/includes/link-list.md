@@ -44,6 +44,7 @@
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
+[FHIR Artifacts]: artifacts.html
 [FHIR operations]: {{site.data.fhir.path}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Framework]: framework.html
@@ -175,10 +176,11 @@
 [closed gaps]: index.html#glossary
 [open gap]: index.html#glossary
 [open gaps]: index.html#glossary
-[open and closed gaps]: index.html#glossary
-[open and/or closed gaps]: index.html#glossary
-[open or closed gaps]: index.html#glossary
+[open, closed, and prospective gaps]: index.html#glossary
+[open, closed, and/or prospective gaps]: index.html#glossary
+[open, closed, or prospective gaps]: index.html#glossary
 [prospective gap]: index.html#glossary
+[prospective gaps]: index.html#glossary
 [gaps through period]: index.html#glossary
 [Gaps through period]:  index.html#glossary
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html
