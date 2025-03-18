@@ -48,7 +48,7 @@ Figure 3-23 shows the patient, *Gaps Patient01*, has an [open gap] because there
 
 Figure 3-24 shows the second patient, *Gaps Patient02*, that has a [closed gap]. The `evaluatedResource` points to a colonoscopy procedure done in 2018 that had met the numerator criteria and resulted as a [closed gap]. Notice that the DetectedIssue resource's gap status code is "closed-gap", which indicates that *Gaps Patient02* does not have an [open gap] or a [prospective gap].
 
-Figure 3-25 shows the third patient, *Gaps Patient03*, that has a [prospective gap]. The `evaluatedResource` points to a colonoscopy procedure done in 2011 that will be older than 10 years at the [gaps through period]. Because 10 years is the cutoff for a colonoscopy in the measure, the DetectedIssue resource's gap status code is "prospective-gap", which that a discrepancy will exist in the future between recommended best practices and the services that are actually provided and documented unless actions are taken.  
+Figure 3-25 shows the third patient, *Gaps Patient03*, that has a [prospective gap]. The `evaluatedResource` points to a colonoscopy procedure done in 2010 that will be older than 10 years at the [gaps through period]. Because 10 years is the cutoff for a colonoscopy in the measure, the DetectedIssue resource's gap status code is "prospective-gap", which that a discrepancy will exist in the future between recommended best practices and the services that are actually provided and documented unless actions are taken.  
 
 {% include img-portrait.html img="gic-colonoscopy-example-pt1-step1-open-gap.png" caption = "Figure 3-23 Gaps in Care Resources Colonoscopy Gaps Patient01 Example: Step 1 - Open Gap" %}
 
