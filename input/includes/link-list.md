@@ -44,6 +44,7 @@
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
+[FHIR Artifacts]: artifacts.html
 [FHIR operations]: {{site.data.fhir.path}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Framework]: framework.html
