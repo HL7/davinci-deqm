@@ -176,10 +176,11 @@
 [closed gaps]: index.html#glossary
 [open gap]: index.html#glossary
 [open gaps]: index.html#glossary
-[open and closed gaps]: index.html#glossary
-[open and/or closed gaps]: index.html#glossary
-[open or closed gaps]: index.html#glossary
+[open, closed, and prospective gaps]: index.html#glossary
+[open, closed, and/or prospective gaps]: index.html#glossary
+[open, closed, or prospective gaps]: index.html#glossary
 [prospective gap]: index.html#glossary
+[prospective gaps]: index.html#glossary
 [gaps through period]: index.html#glossary
 [Gaps through period]:  index.html#glossary
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html

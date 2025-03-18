@@ -55,7 +55,7 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 #### Gaps Through Period (Retrospective vs. Prospective)
 {:.no_toc}
 
-[Gaps through period] is the time period defined by a Client for running the Gaps in Care Report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated [open gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure. In the example below, Colorectal Cancer Screening ([CMS130]) with measureId EXM130-7.3.000 is used as an example measure.
+[Gaps through period] is the time period defined by a Client for running the Gaps in Care Report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess [prospective gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure. In the example below, Colorectal Cancer Screening ([CMS130]) with measureId EXM130-7.3.000 is used as an example measure.
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
@@ -83,7 +83,7 @@ The updated operation, [care-gaps](OperationDefinition-care-gaps.html), makes th
 Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) operation defined in this guide:
 - **practitioner** references a practitioner for which the Gaps in Care Report will be created.
 - **organization** references an organization for which the Gaps in Care Report will be created.
--	**status** is required, it SHALL be a code from the [gaps status value set], which indicates an open-gap or a closed-gap. For the Gaps in Care Report to return both the [open and closed gaps], status equals to open-gap and closed-gap both need to be provided.
+-	**status** is required, it SHALL be a code from the [gaps status value set], which indicates an open, closed, or prospective gap. For the Gaps in Care Report to return [open, closed, and prospective gaps], the status must indicate all three.
 -	**measureId** is the id of a Measure resource that is on the server for which the gaps in care will be reported. The Client will need to check with the Server to know the identifiers used by the Server to uniquely identify measures. This parameter is one of the three options provided by this operation to specify one or more measures for which the Gaps in Care Report will be created.
 - **measureIdentifier** is the business identifier for a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
 - **measureUrl** is the url of a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
@@ -125,7 +125,7 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 - In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
-{% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
+{% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
 
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
