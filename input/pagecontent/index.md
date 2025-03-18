@@ -40,7 +40,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
    -  [Gaps in Care]\: This page lists example use cases for Gaps in Care Reporting.
 
-   - [FHIR Artifacts]\: List of all DEQM FHIR artifacts.
+- [FHIR Artifacts]\: List of all DEQM FHIR artifacts.
 
   - [Profiles and Extensions]\: A list of all DEQM FHIR profiles and extensions.
 
@@ -53,18 +53,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 *Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
 {:.stu-note}
 
-- [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data.
-
-- [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
-
 - [Examples]\: List of all the examples used in this guide.
 
 - [Downloads]\: This page provides links to downloadable artifacts.
-
-
-- [Terminology]\: This page lists code systems and value sets defined in this guide.
-
-- [Operations]\: This page lists the Operation that is defined in this guide to exchange Gaps in Care Report.
 
 ### Background
 {: #background}
