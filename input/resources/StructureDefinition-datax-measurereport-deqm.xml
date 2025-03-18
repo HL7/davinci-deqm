@@ -46,6 +46,17 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.extension:measurereport-category">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="measurereport-category"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-category"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.extension:software">
       <path value="MeasureReport.extension"/>
       <sliceName value="software"/>
@@ -55,7 +66,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:vendor">
       <path value="MeasureReport.extension"/>
@@ -66,7 +76,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:location">
       <path value="MeasureReport.extension"/>
@@ -88,7 +97,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:inputParameters">
       <path value="MeasureReport.extension"/>
@@ -99,7 +107,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-inputParameters"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
@@ -119,10 +126,12 @@
     </element>
     <element id="MeasureReport.measure">
       <path value="MeasureReport.measure"/>
+      <short value="What measure and version was calculated"/>
+      <definition value="A reference to the Measure that was calculated to produce this report. When known, the version of the measure SHALL be included."/>
       <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
       <mustSupport value="true"/>
     </element>
-    
+
     <element id="MeasureReport.subject">
       <path value="MeasureReport.subject"/>
       <min value="1"/>
@@ -166,7 +175,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.period">
       <path value="MeasureReport.period"/>

@@ -9,24 +9,27 @@ The first patient with the [open gap] had a colonoscopy done recently and the AB
 
 Later, the provider runs the same Gaps in Care Report again, both patients now showing as having their Colorectal Cancer Screening Measure gaps closed.
 
+### Assumptions of Data Completeness
+When patients change providers or healthcare payers, health data can become fragmented and isolated. One assumption of generating a Gaps in Care Report is that all relevant data to compute the gap has been collected, whether from previous payers or elsewhere. A payer-to-payer data exchange API, such as that specified in the [Da Vinci Payer Data Exchange (PDex) IG](https://www.hl7.org/fhir/us/davinci-pdex/index.html), provides great utility when calculating gaps in care. The ability to add a [Care Gap Remark](gaps-in-care-reporting.html#add-remark-to-gaps-in-care-report), which can indicate that some sort of evidence exists to close a gap in care, could be utilized as a trigger to employ a payer-to-payer API as needed.
+
 ### FHIR Resource Overview
 
 #### Resources Supported for this Use Case
 {:.no_toc}
 
-|Resource Type| Profile Name                            | Link to Profile                           |
-|---|-----------------------------------------|-------------------------------------------|
-|Bundle| DEQM Gaps In Care Bundle Profile        | [DEQM Gaps In Care Bundle Profile]        
-|Composition| DEQM Gaps In Care Composition Profile   | [DEQM Gaps In Care Composition Profile]   
+|Resource Type| Profile Name                       | Link to Profile                      |
+|---|------------------------------------|--------------------------------------|
+|Bundle| DEQM Gaps In Care Bundle Profile   | [DEQM Gaps In Care Bundle Profile]   
+|Composition| DEQM Gaps In Care Composition Profile | [DEQM Gaps In Care Composition Profile] 
 |DetectedIssue| DEQM Gaps In Care DetectedIssue Profile | [DEQM Gaps In Care DetectedIssue Profile] 
-|Encounter| QI Core Encounter Profile               | [QI Core Encounter]                       |
-|Library| CRMI Shareable Library                    | [CRMI Shareable Library]                            |
-|Measure| CRMI Shareable Measure Profile                    | [CRMI Shareable Measure]                            |
-|MeasureReport| DEQM Individual MeasureReport Profile   | [DEQM Individual MeasureReport Profile]   |
-|Organization| QI Core Organization Profile            | [QI Core Organization]                    |
-|Patient| QI Core Patient Profile                 | [QI Core Patient]                         |
-|Practitioner| QICore Practitioner Profile             | [QI Core Practitioner]                    |
-|Procedure| QI Core Procedure Profile               | [QI Core Procedure]                       |
+|Encounter| QICore Encounter Profile           | [QICore Encounter]                   |
+|Library| CRMI Shareable Library             | [CRMI Shareable Library]                       |
+|Measure| CRMI Shareable Measure Profile     | [CRMI Shareable Measure]                       |
+|MeasureReport| DEQM Individual MeasureReport Profile | [DEQM Individual MeasureReport Profile] |
+|Organization| QICore Organization Profile        | [QICore Organization]                |
+|Patient| QICore Patient Profile             | [QICore Patient]                     |
+|Practitioner| QICore Practitioner Profile        | [QICore Practitioner]                |
+|Procedure| QICore Procedure Profile           | [QICore Procedure]                   |
 
 ### Care Gaps Operation
 {:.no_toc}

@@ -104,7 +104,7 @@ This section describes the profiles used for Gaps in Care Reporting and how they
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation returns a [Parameters](https://www.hl7.org/fhir/parameters.html) resource that contains zero or more `parameter` with document bundle for each patient for which a Gaps in Care report is calculated. The bundle SHALL conform to the [DEQM Gaps In Care Bundle Profile]. A Gaps In Care Bundle can optionally contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile],  to define a document composition consisting of one or more MeasureReports.
 
-The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient], the Gaps in Care Report is for. The Gaps In Care Composition SHALL contain one to many section(s). Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced SHALL be for the same patient specified in the Composition `subject`. Each `section` SHALL also contain one or more `entry` of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
+The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QICore Patient], the Gaps in Care Report is for. The Gaps In Care Composition SHALL contain one to many section(s). Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced SHALL be for the same patient specified in the Composition `subject`. Each `section` SHALL also contain one or more `entry` of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
 
 - The Individual MeasureReport SHALL conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [DEQM Population Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.population.group.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
 
@@ -125,7 +125,7 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 - In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
-{% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
+{% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
 
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
@@ -149,6 +149,16 @@ Example Business Use Cases:
 
 
 By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefinition-gaps-guidanceresponse-detailedcaregap.html), healthcare organizations can receive tailored and actionable guidance on addressing specific care gaps. The inclusion of `reasonCode` and `dataRequirement` enables standardized categorization, context-specific recommendations, and ensures a more focused approach to quality improvement efforts.
+
+#### Add Remark to Gaps in Care Report
+{:.no_toc}
+
+Note to Balloters: We are actively seeking input on [remark codes](CodeSystem-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
+{:.note-to-balloters}
+
+When considering a Gaps in Care Report, a remark(s) may be added using the [Care Gap Remark](StructureDefinition-extension-careGapRemark.html) extension.
+
+This care gap remark can be used in a similar way to how the condition category remark is used in the [Da Vinci Risk Adjustment IG](https://hl7.org/fhir/us/davinci-ra/cc-remark.html).
 
 #### Attribution
 {:.no_toc}

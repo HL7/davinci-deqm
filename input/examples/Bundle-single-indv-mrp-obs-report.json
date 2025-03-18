@@ -51,7 +51,7 @@
                 ],
                 "status": "complete",
                 "type": "individual",
-                "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+                "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
                 "subject": {
                     "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
                 },
