@@ -1136,6 +1136,12 @@
             {
                 "exampleBoolean": false,
                 "reference": {
+                    "reference": "StructureDefinition/extension-careGapRemark"
+                }
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {
                     "reference": "StructureDefinition/extension-certificationIdentifier"
                 }
             },
