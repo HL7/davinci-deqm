@@ -12,6 +12,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - typo needs correction ([FHIR-46863](https://jira.hl7.org/browse/FHIR-46863))([Applied here](guidance.html#data-exchange))
    - "value-based" with hyphen ([FHIR-48447](https://jira.hl7.org/browse/FHIR-48447))([Applied here](index.html#introduction))
    - DEQM STU5 Final Publication: Build QA #1 (individual measure report errors)([CQF-2428](https://icf.atlassian.net/browse/CQF-2428))([Applied here](StructureDefinition-indv-measurereport-deqm.html))
+   - Consider adding Annotation capability from Risk Adjustment to the Individual MeasureReport([FHIR-40675](https://jira.hl7.org/browse/FHIR-40675)) Applied ([here](StructureDefinition-extension-careGapRemark.html)), ([here](CodeSystem-care-gap-remark.html)), ([here](ValueSet-care-gap-remark.html)), ([here](CodeSystem-remark-reason.html)), ([here](ValueSet-remark-reason.html)), ([here](ig.json)), ([here](gaps-in-care-reporting.html)), and ([here](StructureDefinition-indv-measurereport-deqm.html))
    - Public Health as a Stakeholder is confusing([FHIR-48453](https://jira.hl7.org/browse/FHIR-48453))([Applied here](guidance.html)), ([here](index.html#quality-improvement-ecosystem)), ([here](index.html#quality-measurement-standards-landscape)), and ([here](Capabilitystatement-receiver-server.html))
    - Subject List Reporting page needs an update([CQF-2428](https://jira.hl7.org/browse/FHIR-48456))([Applied here](subjectlist-reporting.html))
    - change patient-list to subject-list([FHIR-48451](https://jira.hl7.org/browse/FHIR-48451))([Applied here](index.html))
@@ -23,9 +24,13 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - change "QI Core" to "QI-Core" ([FHIR-48457](https://jira.hl7.org/browse/FHIR-48457))([Applied here](guidance.html)) and throughout.
    - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))([Applied here](index.html#quality-reporting-scenarios))
    - Changes to MeasureReport for Attestation example to point to QM Measure PI example. Added guidance around the change.  ([FHIR-48461](https://jira.hl7.org/browse/FHIR-48461))([Applied here](StructureDefinition-indv-measurereport-deqm.html), [here](StructureDefinition-summary-measurereport-deqm.html), [here](StructureDefinition-subjectlist-measurereport-deqm.html), [here] (MeasureReport-summ-attestation.html), and [here](guidance.html#measures-groups-and-populations-in-measurereport))
+   - Reapply isDocument to $care-gaps ([FHIR-49659](https://jira.hl7.org/browse/FHIR-49659))
    - Versions needed in URLs for MeasureReport.measure ([FHIR-47535](https://jira.hl7.org/browse/FHIR-47535)) Applied([here](StructureDefinition-datax-measurereport-deqm.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)),([here](StructureDefinition-subjectlist-measurereport-deqm.html)),([here](StructureDefinition-summary-measurereport-deqm.html)), and numerous examples.
    - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
    - The expression for the SubjectList Measure Report deqm-2 seems to be incorrectly written ([FHIR-47451](https://jira.hl7.org/browse/FHIR-47451))Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
+   - Care Gap assessment causing busy work for provider ([FHIR-48454](https://jira.hl7.org/browse/FHIR-48454))([Applied here](gaps-examples.html))
+   - Fix Figure 2-18, swap section.entry and section.focus from Composition ([FHIR-48731](https://jira.hl7.org/browse/FHIR-48731)) Applied ([here](gaps-in-care-reporting.html))
+   - DEQM STU5 Final Publication: Address deqm-6 issue on SubjectList ([CQF-2611](https://icf.atlassian.net/browse/CQF-2611)) Applied ([here](StructureDefinition-subjectlist-measurereport-deqm.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

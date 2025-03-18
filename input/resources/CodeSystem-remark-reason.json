@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "remark-reason",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/remark-reason",
+  "name": "RemarkReason",
+  "title": "Remark Reason CodeSystem",
+  "status": "active",
+  "experimental": false,
+  "description": "Reason codes for remark",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/remark-reason",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "inapplicable-gap",
+      "display": "Inapplicable gap",
+      "definition": "Reason for the remark is because the gap is not applicable to the patient."
+    }
+  ],
+  "count": 1
+}
