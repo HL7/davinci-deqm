@@ -46,12 +46,6 @@
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty()) xor (extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty() and group.all(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists()))"/>
       </constraint>
       <constraint>
-        <key value="deqm-5"/>
-        <severity value="error"/>
-        <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not() implies group.population.count()>=1"/>
-      </constraint>
-      <constraint>
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
@@ -440,7 +434,6 @@
     </element>
     <element id="MeasureReport.group.population">
       <path value="MeasureReport.group.population"/>
-      <condition value="deqm-5"/>
       <constraint>
         <key value="deqm-8"/>
         <severity value="error"/>

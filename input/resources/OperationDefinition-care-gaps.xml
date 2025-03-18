@@ -113,7 +113,7 @@
         <use value="in"/>
         <min value="1"/>
         <max value="*"/>
-        <documentation value="Indicates status of a care gap. For all [open, prospective, and closed gaps](index.html#glossary), three seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
+        <documentation value="Indicates status of a care gap. For all [open, closed, and prospective gaps], three seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
         <binding>
             <strength value="extensible"/>
             <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
