@@ -83,9 +83,15 @@ When the [care-gaps](OperationDefinition-care-gaps.html) operation is run on the
 
 The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps] or [prospective gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with any combination of [open, closed, and prospective gaps]. The [DEQM Population Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [DEQM Population Reference Extension], the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
 
-#### Measure's Groups and Populations in MeasureReport
+#### Group, Stratifier, and Population Codes and Ids
 
-The measure report SHALL have a group for each group in the referenced measure. The measure report's group.id and group.code SHALL match the same elements in the referenced measure. Similarly, for each population within each group, the measure report's group.population SHALL match the measure's group.population with matching id and code. Note that in the measure, the code is optional on both group and group.population, but if it is present then it is required in the measure report.
+A measure defines one or more populations in one or more groups, with zero or more stratifiers. For each of these, a population count is calculated during measure evaluation with $evaluate. Each of these population counts SHALL be reported in the measure report, and the measure report's groups and populations SHALL be organized and identified in the same manner as in the evaluated measure – the group.id, group.code, stratifier.id, stratifier.code, population.id, and population.code, including any populations within in stratum elements, must match between the measure report and the measure. If the measure does not contain all of these elements, then they would not be reflected in the measure report.
+
+For example, the below measure population criteria and stratifier would result in the following measure report snippet.
+
+{% include examplebutton.html example="population_criteria" b_title = "Click Here To See Example Measure Population Criteria" %}
+
+{% include examplebutton.html example="measure_report" b_title = "Click Here To See Example Resulting Measure Report Group and Stratification" %}
 
 ### DEQM Operation Bundles Organized by Subject
 
