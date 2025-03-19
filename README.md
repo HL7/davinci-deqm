@@ -20,7 +20,6 @@ Robert Dieterle, EnableCare
 Robert Samples, ESAC
 Viet Nguyen, Stratametrics
 Yan Heras, Optimum eHealth LLC
-
 -----
 
 GitHub will automatically trigger a new build whenever you commit changes.
