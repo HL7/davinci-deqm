@@ -235,7 +235,7 @@
             }
           ]
         },
-        "measure": "http://example.org/fhir/Measure/measure-medicare-stratification-example|5.0.0",
+        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/stratification-measure-example|5.0.0",
         "period": {
           "end": "2018-12-31",
           "start": "2018-01-01"
