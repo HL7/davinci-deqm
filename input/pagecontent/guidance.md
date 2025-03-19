@@ -97,6 +97,12 @@ For example, the below measure population criteria and stratifier would result i
 
 The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles. 
 
+### Ad-hoc Organizations for DEQM Operations
+
+Data producers and consumers may often want to gather data from different locations and providers within a large organization that is comprised of multiple sub-organizations. In such cases, it can be desirable to model portions of the organization from which data should be gathered as a way to target data requests. The $care-gaps and $collect-data operations allow an Organization resource to be either referenced or passed in as part of the request body. If it is passed in, it can be an ad-hoc Organization created only as part of that request. PractitionerRole and Practitioner resources can be linked to the Organization to model the set of participating practitioners.
+
+The example <link to the example> illustrates two Organizations, three Practitioners, and four PractitionerRoles. It also contains a set of Encounters that each reference two of the Practitioners and a singular Patient.
+
 ### Default Profiles Used in the Evaluation of a Measure
 
  Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI-Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI-Core profiles and are used as the default instead of the corresponding QI-Core profile.  Refer to the [QI-Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
