@@ -20,8 +20,8 @@
 ### Scoring Type MeasureReports
 * [Ratio Scoring MeasureReport](MeasureReport-ratio-measurereport01.html)
 * [Continuous-Variable Scoring MeasureReport](MeasureReport-date-of-last-power-outage.html)
-* [Attestation Scoring MeasureReport](MeasureReport-summ-attestation.html)
-* [Attestation Promoting Interoperability MeasureReport](MeasureReport-MeasureReport-PI-example.html)
+* [Attestation Boolean Improvement Activities MeasureReport](MeasureReport-summ-attestation.html)
+* [Attestation Proportion Promoting Interoperability MeasureReport](MeasureReport-MeasureReport-PI-example.html)
 * [Multiple Rate Scoring MeasureReport](MeasureReport-summary-multirate-measurereport.html)
 
 ## Bundles
