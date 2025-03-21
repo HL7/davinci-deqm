@@ -42,6 +42,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - remove MS from DEQM profiles ([FHIR-50052](https://jira.hl7.org/browse/FHIR-50052)) Applied ([here](StructureDefinition-summary-measurereport-deqm.html)) and ([here](StructureDefinition-indv-measurereport-deqm.html))
    - Care Gaps Support for MultiRate Measures (revised) ([FHIR-48758](https://jira.hl7.org/browse/FHIR-48758)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
    - Code Systems should be in THO or be granted an exemption ([FHIR-48082](https://jira.hl7.org/browse/FHIR-48082)) Applied to ignoreWarnings.txt
+   - Added prospective-gap to Gap in Care Example ([FHIR-48455](https://jira.hl7.org/browse/FHIR-48455))([Applied here](gaps-examples.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

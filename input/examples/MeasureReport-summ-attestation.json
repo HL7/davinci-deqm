@@ -2,28 +2,24 @@
   "resourceType": "MeasureReport",
   "id": "summ-attestation",
   "meta": {
-      "profile": [
-          "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
-      ],
-      "source": "http://example.org/fhir/server"
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+    ]
   },
-     "extension": [
-        {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "code": "attestation",
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                    }
-                ]
-            }
-        }
-    ],
-
+  "extension": [{
+      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "valueCodeableConcept": {
+        "coding": [{
+            "code": "attestation",
+            "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+          }
+        ]
+      }
+    }
+  ],
   "status": "complete",
   "type": "summary",
-  "measure": "https://hl7.org/fhir/us/cqfmeasures/STU5/Measure-measure-pi-exm.html",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-ia-boolean-example|1.0.0",
   "date": "2023-04-01",
   "reporter": {
     "reference": "Organization/organization01"
@@ -32,42 +28,24 @@
     "start": "2024-01-01",
     "end": "2024-12-31"
   },
-  "group": [
-        {
-      "id" : "group-1",
-      "population" : [
-        {
-          "id" : "numerator",
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/measure-population",
-                "code" : "numerator",
-                "display" : "Numerator"
+  "group": [{
+	  "id": "group-1",
+      "population": [{
+          "code": {
+            "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
               }
             ]
           },
-          "count": 1
-        },
-        {
-          "id" : "denominator",
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/measure-population",
-                "code" : "denominator",
-                "display" : "Denominator"
-              }
-            ]
-          },
-          "count": 1
+          "count": 15
         }
        ],
       "measureScore": {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType",
-            "valueBoolean" : true
+        "extension": [{
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType",
+            "valueBoolean": true
           }
         ]
       }

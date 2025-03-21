@@ -109,6 +109,16 @@ definition:
       value: 'true'
   resource:
     - exampleBoolean: true
+      name: Measure IA Boolean Attestation
+      reference:
+        reference: Measure/measure-ia-boolean-example
+      description: Measure IA Boolean Attestation
+    - exampleBoolean: true
+      name: Bundle NonDocument
+      reference:
+        reference: Bundle/non-document-gaps-in-care
+      description: Non-document Gaps in Care bundle
+    - exampleBoolean: true
       name: Organization02
       reference:
         reference: Organization/organization02

@@ -83,12 +83,14 @@
 <artifact id="StructureDefinition/gaps-guidanceresponse-detailedcaregap" key="StructureDefinition-gaps-guidanceresponse-detailedcaregap" name="Detailed Care Gap Guidance Response"/>
 <artifact id="GuidanceResponse/detailedguidanceresponse01" key="GuidanceResponse-detailedguidanceresponse01" name="DetailedGuidanceResponse01"/>
 <artifact id="GuidanceResponse/detailedguidanceresponse02" key="GuidanceResponse-detailedguidanceresponse02" name="DetailedGuidanceResponse02"/>
+<artifact id="Measure/measure-ia-boolean-example" key="Measure-measure-ia-boolean-example" name="EXM Improvement Activity Measure"/>
 <artifact id="Measure/measure-pi-example" key="Measure-measure-pi-example" name="EXMPromotingInteroperabilityMeasure"/>
 <artifact id="Encounter/nhsn-iip-en101" key="Encounter-nhsn-iip-en101" name="Encounter nhsn-iip-en101"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
 <artifact id="OperationDefinition/evaluate" key="OperationDefinition-evaluate" name="Evaluate Operation"/>
+<artifact id="MeasureReport/summary-multirate-measurereport" key="MeasureReport-summary-multirate-measurereport" name="Example MeasureReport - summary-multirate-measurereport"/>
 <artifact deprecated="true" key="ExampleScenario" name="ExampleScenario"/>
 <artifact id="Bundle/single-gaps-closed-indv-report01" key="Bundle-single-gaps-closed-indv-report01" name="Gaps Bundle Closed Individual MeasureReport01"/>
 <artifact id="Bundle/single-gaps-closed-indv-report02" key="Bundle-single-gaps-closed-indv-report02" name="Gaps Bundle Closed Individual MeasureReport02"/>
@@ -196,6 +198,7 @@
 <artifact id="Task/task02" key="Task-task02" name="Task02"/>
 <artifact id="Task/task03" key="Task-task03" name="Task03"/>
 <artifact id="List/list2" key="List-list2" name="list2"/>
+<artifact id="Bundle/non-document-gaps-in-care" key="Bundle-non-document-gaps-in-care" name="null (Bundle)"/>
 <artifact deprecated="true" id="MeasureReport/summ-PI" key="MeasureReport-summ-PI" name="summ-PI"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
