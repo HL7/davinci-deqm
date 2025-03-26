@@ -97,6 +97,17 @@ Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefin
 Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
 {% include img-narrow.html img="gic-care-gaps-operation-group.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
 
+#### Measure Evaluation for a Gap in Care
+{:.no_toc}
+
+As shown in Figure 2-16 and 2-17 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQFMComputableMeaure profile, depending on the server implementation).
+
+This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its gapStatus element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable.
+
+Patient-based measures lend themselves most readily to gaps in care calculations because they are evaluated over a long time period. Other measure bases, such as an encounter-based measure, typically happen over shorter time spans. The types of population bases to support is at the server’s discretion. Servers SHOULD support patient-based measures, and MAY support any other base.
+
+Measures with multiple groups (a multiple rate measure) have the potential to create multiple gaps in care for a single patient. The extension [DEQM Criteria Reference Extension] allows the detected issue to reference which group or population from the measure report led to the creation of the detected issue.
+
 #### How to Construct a Gaps in Care Report
 {:.no_toc}
 
