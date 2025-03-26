@@ -35,6 +35,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - DEQM STU5 Final Publication: Address deqm-6 issue on SubjectList ([CQF-2611](https://icf.atlassian.net/browse/CQF-2611)) Applied ([here](StructureDefinition-subjectlist-measurereport-deqm.html))
    - detectedIssue.evidence.detail description correction ([FHIR-49844](https://jira.hl7.org/browse/FHIR-49844)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
    - incorrect element used in explanation ([FHIR-49850](https://jira.hl7.org/browse/FHIR-49850)) Applied ([here](gaps-in-care-reporting.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
+   - Since the "Remark" equivalent extension will be added to the Individual MeasureReport, the Patch Operation should be allowed ([FHIR-46205](https://jira.hl7.org/browse/FHIR-46205)) Applied ([here](StructureDefinition-parameters-careGap-Remark-Patch.html)), ([here](gaps-examples.html)), ([here](gaps-in-care-reporting.html)), ([here](Parameters-measurereport01-patch.html)), and ([here](Parameters-measurereport01-patch-mult.html))
+     
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
