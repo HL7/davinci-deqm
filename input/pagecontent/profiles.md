@@ -27,7 +27,7 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Certification Identifier Extension](StructureDefinition-extension-certificationIdentifier.html) |
 | [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)     |
 | [DEQM Criteria Reference Extension](StructureDefinition-extension-criteriaReference.html)             |
-| [~~DEQM Population Reference Extension~~ (Deprecated)](StructureDefinition-extension-populationReference.html)         |
+| [~~CQF Criteria Reference Extension~~ (Deprecated)](StructureDefinition-extension-populationReference.html)         |
 | [DEQM Gap Status Extension (Modifier)](StructureDefinition-extension-gapStatus.html)                  |
 | [DEQM Data Location Extension](StructureDefinition-extension-dataLocation.html)                  |
 | [DEQM Group Improvement Notation Extension](StructureDefinition-extension-groupImprovementNotation.html)                  |
