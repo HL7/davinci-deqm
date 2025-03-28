@@ -665,7 +665,7 @@
                     "reference": "Organization/organization01"
                 },
                 "description": "DEQM Organization01 example"
-            }, 
+            },
            {
                 "exampleBoolean": true,
                 "name": "Subject List MeasureReport01",
@@ -1065,6 +1065,22 @@
                     "reference": "Measure/measure-pi-example"
                 },
                 "description": "DEQM Promoting Interoperability (PI) Measure example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "MeasureReport 01 Patch Mult",
+                "reference": {
+                    "reference": "Parameters/measurereport01-patch-mult"
+                },
+                "description": "Parameters: PATCH example for sending Condition Category Remark with multiple value."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "MeasureReport 01 Patch",
+                "reference": {
+                    "reference": "Parameters/measurereport01-patch"
+                },
+                "description": "Parameters: PATCH example for sending Condition Category Remark."
             },
             {
                 "exampleBoolean": false,
