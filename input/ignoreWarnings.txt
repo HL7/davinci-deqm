@@ -3,6 +3,9 @@
 # The publisher is having issues in auto-generating a narrative for the parameter examples, discussed here (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.20example.20narratives.20not.20being.20generated)
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
+# The code systems "Care Gap Reasons Code System" and "DEQM Gaps In Care Gap Status Code System" have recieved an exemption from TSMG.
+https://confluence.hl7.org/spaces/TSMG/pages/217352342/IG+Code+System+Exemptions
+
 # The validator is trying to resolve an "example.org" artifact which by convention does not exist
 A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/SOP' could not be found, so the code cannot be validated
