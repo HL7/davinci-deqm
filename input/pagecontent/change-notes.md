@@ -36,6 +36,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - detectedIssue.evidence.detail description correction ([FHIR-49844](https://jira.hl7.org/browse/FHIR-49844)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
    - incorrect element used in explanation ([FHIR-49850](https://jira.hl7.org/browse/FHIR-49850)) Applied ([here](gaps-in-care-reporting.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - Care Gaps Supported Measure Scoring ([FHIR-48752](https://jira.hl7.org/browse/FHIR-48752)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html)), ([here](gaps-in-care-reporting.html)) and ([here](guidance.html))
+   - Code Systems should be in THO or be granted an exemption ([FHIR-48082](https://jira.hl7.org/browse/FHIR-48082)) Applied to ignoreWarnings.txt
+     
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
