@@ -83,5 +83,16 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
+        <element id="DetectedIssue.evidence.detail.extension:criteriaReference">
+            <path value="DetectedIssue.evidence.detail.extension"/>
+            <sliceName value="criteriaReference"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference|5.2.0"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
     </differential>
 </StructureDefinition>
