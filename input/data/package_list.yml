@@ -72,3 +72,5 @@ list:
       1. **Applied**: Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-extension-measureScoring.html))
       1. **Applied**: Added Ad Hoc Operation Reporting input example and guidance ([FHIR-40722](https://jira.hl7.org/browse/FHIR-40722))([Applied here](Bundle-ad-hoc-operation-reporting-input.html)), ([here](all-examples.html#bundle)) and ([here](guidance.html#ad-hoc-organizations-for-deqm-operations))
       1. **Applied**: Added Location Aware example bundle and verbiage to guidance page.  ([FHIR-40184](https://jira.hl7.org/browse/FHIR-40184)) Applied ([here](guidance.html#location-awareness-in-measure-reports)), ([here](all-examples.html#bundle)) and ([here](Bundle-Location-Aware-example.html))
+      1. **Applied**: Changed 'DEQM Population Reference Extension' references to  'CQF Criteria Reference Extension' and updated associated url ([FHIR-49920](https://jira.hl7.org/browse/FHIR-49920)) Applied ([here](guidance.html)) and ([here](gaps-in-care-reporting.html))
+

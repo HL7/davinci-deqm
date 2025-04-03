@@ -37,6 +37,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - incorrect element used in explanation ([FHIR-49850](https://jira.hl7.org/browse/FHIR-49850)) Applied ([here](gaps-in-care-reporting.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - Care Gaps Supported Measure Scoring ([FHIR-48752](https://jira.hl7.org/browse/FHIR-48752)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html)), ([here](gaps-in-care-reporting.html)) and ([here](guidance.html))
    - Added Location Aware example bundle and verbiage to guidance page.  ([FHIR-40184](https://jira.hl7.org/browse/FHIR-40184)) Applied ([here](guidance.html#location-awareness-in-measure-reports)), ([here](all-examples.html#bundle)) and ([here](Bundle-Location-Aware-example.html))
+   - Changed 'DEQM Population Reference Extension' references to  'CQF Criteria Reference Extension' and updated associated url  ([FHIR-49920](https://jira.hl7.org/browse/FHIR-49920)) Applied ([here](guidance.html)) and ([here](gaps-in-care-reporting.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
