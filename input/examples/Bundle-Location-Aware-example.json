@@ -1,0 +1,1636 @@
+{
+  "resourceType": "Bundle",
+  "id": "Location-Aware-example",
+  "type": "transaction",
+  "entry": [{
+      "fullUrl": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f01",
+      "request": {
+                "method": "POST",
+                "url": "Location"
+            },
+      "resource": {
+        "resourceType": "Location",
+        "id": "Loc-X140008",
+        "meta": {
+          "security": [{
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST"
+            }
+          ]
+        },
+        "status": "active",
+        "name": "CLARKE MEMORIAL HOSPITAL Building",
+        "mode": "instance",
+        "type": [{
+            "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "HOSP"
+              }
+            ]
+          }
+        ],
+        "address": {
+          "use": "work",
+          "type": "both",
+          "line": ["701 W NORTH AVE"],
+          "city": "MELROSE PARK",
+          "district": "COOK",
+          "state": "IL",
+          "postalCode": "60160",
+          "country": "USA"
+        },
+        "physicalType": {
+          "coding": [{
+              "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+              "code": "si"
+            }
+          ]
+        },
+        "position": {
+          "longitude": -87.841101,
+          "latitude": 41.908342
+        },
+        "managingOrganization": {
+          "reference": "Organization/X140008"
+        }
+      }
+    }, {
+      "fullUrl": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f02",
+      "request": {
+                "method": "POST",
+                "url": "Measure"
+            },
+      "resource": {
+        "resourceType": "Measure",
+        "id": "CDCPatientImpactAndHospitalCapacity",
+        "extension": [{
+            "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/ReportingPeriod",
+            "valueTiming": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity",
+        "identifier": [{
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.16.840.1.113883.4.642.40.42.29.3"
+          }
+        ],
+        "version": "1.0.1",
+        "name": "CDCPatientImpactAndHospitalCapacity",
+        "title": "Patient Impact and Hospital Capacity",
+        "status": "draft",
+        "experimental": true,
+        "date": "2024-05-18T21:25:01+00:00",
+        "publisher": "HL7 International / Public Health",
+        "contact": [{
+            "telecom": [{
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/pher"
+              }
+            ]
+          }, {
+            "telecom": [{
+                "system": "email",
+                "value": "pher@lists.hl7.org"
+              }
+            ]
+          }, {
+            "name": "Keith W. Boone",
+            "telecom": [{
+                "system": "email",
+                "value": "mailto:kboone@ainq.com"
+              }
+            ]
+          }
+        ],
+        "description": "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.",
+        "useContext": [{
+            "code": {
+              "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+              "code": "focus"
+            },
+            "valueCodeableConcept": {
+              "coding": [{
+                  "system": "http://snomed.info/sct",
+                  "code": "840539006",
+                  "display": "COVID-19"
+                }
+              ]
+            }
+          }
+        ],
+        "jurisdiction": [{
+            "coding": [{
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "author": [{
+            "name": "Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)",
+            "telecom": [{
+                "system": "email",
+                "value": "mailto:nhsn@cdc.gov"
+              }
+            ]
+          }
+        ],
+        "relatedArtifact": [{
+            "type": "documentation",
+            "label": "NHSN COVID-19 Reporting",
+            "display": "CDC/NHSN COVID-19 Patient Impact & Hospital Capacity Module Home Page",
+            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/",
+            "document": {
+              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"
+            }
+          }, {
+            "type": "documentation",
+            "label": "How to import COVID-19 Summary Data",
+            "display": "Importing COVID-19 Patient Module Denominator data for Patient Safety Component",
+            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf",
+            "document": {
+              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"
+            }
+          }, {
+            "type": "documentation",
+            "label": "Table of Instructions",
+            "display": "Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)",
+            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf",
+            "document": {
+              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf"
+            }
+          }, {
+            "type": "documentation",
+            "label": "CSV File Template",
+            "display": "CDC/NHSN COVID-19 Reporting CSV File Template",
+            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv",
+            "document": {
+              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv"
+            }
+          }
+        ],
+        "library": ["http://hl7.org/fhir/uv/saner/StructureDefinition/NHSNMeasureLibrary"],
+        "definition": ["Ventilator\n: Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive\npressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.\nNote: Ventilation and lung expansion devices that deliver positive pressure to the airway (for example: CPAP, BiPAP, bi-level, IPPB and\nPEEP) via non-invasive means (for example: nasal prongs, nasal mask, full face mask, total mask, etc.) are not considered ventilators\nunless positive pressure is delivered via an artificial airway (oral/nasal endotracheal or tracheostomy tube).\n\nBeds\n: Baby beds in mom's room count as 1 bed, even if there are multiple baby beds\nFollow-up in progress if staffed is less than licensed.\nTotal includes all beds, even if with surge beds it exceeds licensed beds.\n\nICU beds\n: Include NICU (from CDC Webinar 31-Mar-2020) (outstanding question on burn unit)"],
+        "scoring" : {
+            "coding" : [{
+              "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+              "code" : "continuous-variable"
+            }]
+          },
+        "group": [{
+            "extension": [{
+                "extension": [{
+                    "url": "scoring",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                          "code": "continuous-variable"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "subject",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://hl7.org/fhir/resource-types",
+                          "code": "Location"
+                        }, {
+                          "system": "http://snomed.info/sct",
+                          "code": "91537007",
+                          "display": "Hospital bed, device (physical object)"
+                        }
+                      ],
+                      "text": "Hospital Beds"
+                    }
+                  }, {
+                    "url": "type",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                          "code": "structure"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "improvementNotation",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                          "code": "increase"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "rateAggregation",
+                    "valueString": "count"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+              }
+            ],
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "Beds",
+                  "display": "Beds"
+                }
+              ],
+              "text": "Hospital Bed Reporting"
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numTotBeds",
+                      "display": "All Hospital Beds"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ],
+                  "text": "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
+                },
+                "description": "Enter the total number of all hospital beds, including inpatient and outpatient beds. All staffed, licensed,\nand overflow and surge/expansion beds used for inpatients or outpatients. This includes ICU beds.",
+                "criteria": {
+                  "description": "A bed in any location",
+                  "name": "numTotBeds",
+                  "language": "text/fhirpath",
+                  "expression": "Device.where(type in %ValueSet-BedDeviceTypes and location.physicalType in %ValueSet-BedLocationTypes)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numbeds",
+                      "display": "Hospital Inpatient Beds"
+                    }
+                  ],
+                  "text": "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
+                },
+                "description": "Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds.",
+                "criteria": {
+                  "description": "A Bed where the location is an inpatient location.",
+                  "name": "numbeds",
+                  "language": "text/fhirpath",
+                  "expression": "%numTotBeds.where(location.type in %ValueSet-InpatientLocations)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numBedsOcc",
+                      "display": "Hospital Inpatient Bed Occupancy"
+                    }
+                  ],
+                  "text": "Total number of staffed inpatient beds that are occupied"
+                },
+                "description": "Enter the total number of staffed inpatient beds occupied by patients at the time the data is collected, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes ICU beds.\n\nCDC Webinar 31-Mar-2020:\nBaby beds in mom's room count as 1 bed, even if there are multiple baby beds\nFollow-up in progress if staffed is less than licensed.\nTotal includes all beds, even if with surge beds it exceeds licensed beds.",
+                "criteria": {
+                  "description": "An Inpatient Bed where the Bed is occupied.",
+                  "name": "numBedsOcc",
+                  "language": "text/fhirpath",
+                  "expression": "%numbeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numICUBeds",
+                      "display": "ICU Beds"
+                    }
+                  ],
+                  "text": "ICU Bed Occupancy"
+                },
+                "description": "Enter the total number of staffed Intensive Care Unit (ICU) beds.\n\nCDC Webinar 31-Mar-2020:\nICU beds include NICU",
+                "criteria": {
+                  "description": "A Bed where the location is an inpatient ICU location.",
+                  "name": "numICUBeds",
+                  "language": "text/fhirpath",
+                  "expression": "%numbeds.where(location.type in %ValueSet-ICULocations)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numICUBedsOcc",
+                      "display": "ICU Bed Occupancy"
+                    }
+                  ],
+                  "text": "Total number of staffed inpatient intensive care unit (ICU) beds"
+                },
+                "description": "Enter the total number of staffed ICU beds occupied by patients at the time the data is collected.\n\nCDC Webinar 31-Mar-2020:\nICU beds include NICU",
+                "criteria": {
+                  "description": "An ICU Bed that is occupied.",
+                  "name": "numICUBedsOcc",
+                  "language": "text/fhirpath",
+                  "expression": "%numICUBeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
+                }
+              }
+            ]
+          }, {
+            "extension": [{
+                "extension": [{
+                    "url": "scoring",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                          "code": "continuous-variable"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "subject",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://hl7.org/fhir/resource-types",
+                          "code": "Device"
+                        }, {
+                          "system": "http://snomed.info/sct",
+                          "code": "706172005",
+                          "display": "Ventilator (physical object)"
+                        }
+                      ],
+                      "text": "Ventilator"
+                    }
+                  }, {
+                    "url": "type",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                          "code": "structure"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "improvementNotation",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                          "code": "decrease"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "rateAggregation",
+                    "valueString": "count"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+              }
+            ],
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "Ventilators",
+                  "display": "Ventilators"
+                }
+              ],
+              "text": "Hospital Ventilators Reporting"
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numVent",
+                      "display": "Mechanical Ventilators"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ],
+                  "text": "Total number of ventilators available"
+                },
+                "description": "Enter the total number of mechanical ventilators, including anesthesia machines and\nportable/transport ventilators available in the facility.\nInclude BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways.",
+                "criteria": {
+                  "description": "A Device that is used for ventilation and could be used (e.g., not broken, transferred, etc)",
+                  "name": "numVent",
+                  "language": "text/fhirpath",
+                  "expression": "Device.where(type in %ValueSet-VentilatorDevices and status = active)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numVentUse",
+                      "display": "Mechanical Ventilators in Use"
+                    }
+                  ],
+                  "text": "Total number of ventilators in use"
+                },
+                "description": "Enter the total number of mechanical ventilators use at the time the data is collected, including anesthesia\nmachines and portable/transport ventilators. Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways.",
+                "criteria": {
+                  "description": "A ventilator that is attached to a patient.",
+                  "name": "numVentUse",
+                  "language": "text/fhirpath",
+                  "expression": "%numVent.where(patient!={})"
+                }
+              }
+            ]
+          }, {
+            "extension": [{
+                "extension": [{
+                    "url": "scoring",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                          "code": "continuous-variable"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "subject",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://hl7.org/fhir/resource-types",
+                          "code": "Encounter"
+                        }, {
+                          "system": "http://snomed.info/sct",
+                          "code": "308335008",
+                          "display": "Patient encounter procedure (procedure)"
+                        }
+                      ],
+                      "text": "Encounter"
+                    }
+                  }, {
+                    "url": "type",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                          "code": "structure"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "improvementNotation",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                          "code": "decrease"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "rateAggregation",
+                    "valueString": "count"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+              }
+            ],
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "Encounters",
+                  "display": "Encounters"
+                }
+              ],
+              "text": "Hospital COVID-19 Encounters Reporting"
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19HospPats",
+                      "display": "Hospitalized COVID-19 Patients"
+                    }
+                  ],
+                  "text": "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
+                },
+                "description": "Enter the number of patients hospitalized in an inpatient bed at the time the data is collected\n who have suspected or confirmed COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.\nConfirmed: A patient with a laboratory confirmed COVID-19 diagnosis\nSuspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance\nfor Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed\nCOVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue).",
+                "criteria": {
+                  "description": "An COVID-19 encounter where the active location is an inpatient location",
+                  "name": "numC19HospPats",
+                  "language": "text/fhirpath",
+                  "expression": "%numC19Pats.where(location.where(status='active' and type in %ValueSet-InpatientLocations))"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19MechVentPats",
+                      "display": "Hospitalized and Ventilated COVID-19 Patients"
+                    }
+                  ],
+                  "text": "Patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 and are on a mechanical ventilator"
+                },
+                "description": "Enter the number of patients hospitalized in an inpatient bed who have\nsuspected or confirmed COVID-19 and are currently on a mechanical ventilator* at the time the data is collected . This includes the\npatients with laboratory-confirmed or clinically diagnosed COVID-19.",
+                "criteria": {
+                  "description": "An COVID-19 encounter in an inpatient setting on a ventilator",
+                  "name": "numC19OFMechVentPats",
+                  "language": "text/fhirpath",
+                  "expression": "%numC19HospPats.intersect(%numC19VentPats)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19HOPats",
+                      "display": "Hospital Onset COVID-19 Patients"
+                    }
+                  ],
+                  "text": "Patients currently hospitalized in an inpatient bed with onset of suspected or\nconfirmed COVID-19 fourteen or more days after hospital admission due to a condition other than COVID-19"
+                },
+                "description": "Enter the number of patients hospitalized in an inpatient bed at the time the data is\ncollected with onset of suspected or confirmed COVID-19 fourteen or more days after hospitalization (admission date = hospital\nday 1). This includes laboratory-confirmed or clinically diagnosed COVID-19 cases.",
+                "criteria": {
+                  "description": "Encounters associated with suspected or confirmed COVID-19 with onset > 14 days after start",
+                  "name": "numC19HOPats",
+                  "language": "text/fhirpath",
+                  "expression": "Condition.where(\n   code in %ValueSet-SuspectedOrDiagnosedCOVID19\n   and encounter in %numC19HospPats\n   and onset + 14 days > encounter.period.start).encounter"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19OverflowPats",
+                      "display": "ED/Overflow COVID-19 Patients"
+                    }
+                  ],
+                  "text": "Patients with suspected or confirmed COVID-19 who are currently in the Emergency Department (ED) or any overflow location awaiting an inpatient bed"
+                },
+                "description": "Enter the number of patients with suspected or confirmed COVID-19 who are in the\nEmergency Department(ED) or any overflow/expansion location awaiting placement in an inpatient bed at the time the data\nis collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Overflow locations include any physical\nlocations created to accommodate patients include but not limited to 24-hour observation units, hallways, parking lots, or tents.",
+                "criteria": {
+                  "description": "An COVID-19 encounter where the active location is an ED or Overflow location",
+                  "name": "numC19OverflowPats",
+                  "language": "text/fhirpath",
+                  "expression": "%numC19Pats.where(location.where(status='active' and type in %ValueSet-EDorOverflowLocations))"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19OFMechVentPats",
+                      "display": "ED/Overflow and Ventilated COVID-19 Patients"
+                    }
+                  ],
+                  "text": "Patients with suspected or confirmed COVID-19 who currently are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"
+                },
+                "description": "Enter the number of patients with suspected or confirmed COVID-19 who are in the ED or any overflow/expansion location on a\nmechanical ventilator* at the time the data is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19.",
+                "criteria": {
+                  "description": "An COVID-19 encounter where the active location is an ED or Overflow location",
+                  "name": "numC19OFMechVentPats",
+                  "language": "text/fhirpath",
+                  "expression": "%numC19OverflowPats.intersect(%numC19VentPats)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19Died",
+                      "display": "COVID-19 Patient Deaths"
+                    }
+                  ],
+                  "text": "Patients with suspected or confirmed COVID-19 who died in the hospital, ED or any overflow location on the date for which you are reporting."
+                },
+                "description": "Enter the number of patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. This\nincludes patients with laboratory-confirmed or clinically diagnosed COVID-19. Please enter the count of deaths newly occurred, at the time\nthe data is collected instead of the cumulated number of deaths.",
+                "criteria": {
+                  "description": "All C19 Patients who have died in an encounter during the reporting period.",
+                  "name": "numC19Died",
+                  "language": "text/fhirpath",
+                  "expression": "%numC19Pats.hospitalization.dispostion in %ValueSet-PatientDied"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19Pats",
+                      "display": "All COVID-19 Confirmed or Suspected Patients"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ],
+                  "text": "Patients with suspected or confirmed COVID-19 in any location."
+                },
+                "description": "Enter the number of patients in any location at the time the data is collected who have suspected or confirmed\nCOVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.\nConfirmed: A patient with a laboratory confirmed COVID-19 diagnosis\nSuspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance\nfor Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed\nCOVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue).",
+                "criteria": {
+                  "description": "Active encounters where the encounter diagnosis is suspected or confirmed COVID-19,\n or a Condition of suspected or confirmed COVID-19 was created during that encounter.",
+                  "name": "numC19Pats",
+                  "language": "text/fhirpath",
+                  "expression": "Encounter.where(clinicalStatus = 'active' and diagnosis.condition.ofType(Condition).code in %ValueSet-SuspectedOrDiagnosedCOVID19)\n | Encounter.where(clinicalStatus = \"active\" and Condition.where(code in %ValueSet-SuspectedOrDiagnosedCOVID19).encounter = $this)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19VentPats",
+                      "display": "Ventilated COVID-19 Patients"
+                    }
+                  ],
+                  "text": "Patients in any location who have suspected or confirmed COVID-19 and are currently on a ventilator."
+                },
+                "description": "Enter the number of patients in any location who have suspected or confirmed COVID-19 and are\ncurrently on a mechanical ventilator* at the time the data is collected. This includes the patients with laboratory-confirmed or clinically\ndiagnosed COVID-19.",
+                "criteria": {
+                  "description": "A COVID-19 encounter where the patient is ventilated",
+                  "name": "numC19VentPats",
+                  "language": "text/fhirpath",
+                  "expression": "%numC19Pats.where(Device.where(type in %ValueSet-VentilatorDevices and status = active).patient = $this.patient)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }, {
+      "fullUrl": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f03",
+      "request": {
+                "method": "POST",
+                "url": "Organization"
+            },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "X140008",
+        "identifier": [{
+            "system": "http://sanerproject.org/connectathon/hospitals",
+            "value": "X140008"
+          }
+        ],
+        "active": true,
+        "type": [{
+            "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov"
+              }
+            ]
+          }
+        ],
+        "name": "CLARKE MEMORIAL HOSPITAL",
+        "address": [{
+            "use": "work",
+            "type": "both",
+            "line": ["701 W NORTH AVE"],
+            "city": "MELROSE PARK",
+            "district": "COOK",
+            "state": "IL",
+            "postalCode": "60160",
+            "country": "USA"
+          }
+        ]
+      }
+    }, {
+      "fullUrl": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f04",
+      "request": {
+                "method": "POST",
+                "url": "Organization"
+            },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "NJ-DPH",
+        "name": "New Jersey Department of Public Health"
+      }
+    }, {
+      "fullUrl": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f05",
+      "request": {
+                "method": "POST",
+                "url": "MeasureReport"
+            },
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting",
+        "identifier": [{
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:375c3957-9219-11ea-1863-09173f13e4c5"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://hl7.org/fhir/uv/saner/Measure/FEMADailyHospitalCOVID19Reporting",
+        "date": "2020-04-04T00:00:00-05:00",
+        "reporter": {
+          "reference": "Organization/NJ-DPH",
+          "display": "New Jersey Department of Public Health"
+        },
+        "period": {
+          "start": "2020-04-04T00:00:00-05:00",
+          "end": "2020-04-04T00:00:00-05:00"
+        },
+        "group": [{
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "positiveIncreasePercent"
+                }
+              ]
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalOrdersIncrease"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalTestResultsIncrease"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "count": 7853
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "positiveIncrease"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "count": 4229
+              }
+            ],
+            "measureScore": {
+              "value": 53.85,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            }
+          }, {
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "positivePercent"
+                }
+              ]
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalOrders"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "rejected"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator-exclusion"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalTestResults"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ]
+                },
+                "count": 75356
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "positive"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ]
+                },
+                "count": 34124
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "allReports"
+                    }
+                  ],
+                  "text": "All Laboratory Reports for any Order"
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "latestReports"
+                    }
+                  ],
+                  "text": "Most Recent Laboratory Reports for any Order"
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }
+            ],
+            "measureScore": {
+              "value": 45.28,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            }
+          }
+        ]
+      }
+    }, {
+      "fullUrl": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f06",
+      "request": {
+                "method": "POST",
+                "url": "MeasureReport"
+            },
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity",
+        "identifier": [{
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:f87d8777-876e-11ea-1639-09173f13e4c5"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity",
+         "date": "2020-04-04T00:00:00-05:00",
+        "reporter": {
+          "reference": "Organization/NJ-DPH",
+          "display": "New Jersey Department of Public Health"
+        },
+         "period": {
+          "start": "2020-04-04T00:00:00-05:00",
+          "end": "2020-04-04T00:00:00-05:00"
+        },
+        "group": [{
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "Beds"
+                }
+              ]
+            },
+            "measureScore": {
+                "value": 34
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numTotBeds"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 20000
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numbeds"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 15000
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numBedsOcc"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numICUBeds"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 2500
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numICUBedsOcc"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }
+            ]
+          }, {
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "Ventilators"
+                }
+              ]
+            },
+            "measureScore": {
+                "value": 11
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numVent"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 2250
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numVentUse"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }
+            ]
+          }, {
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "Encounters"
+                }
+              ]
+            },
+            "measureScore": {
+                "value": 233
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19HospPats"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 4000
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19MechVentPats"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19HOPats"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19OverflowPats"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19OFMechVentPats"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19Died"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19Pats"
+                    }
+                  ],
+                  "text": "Patients with suspected or confirmed COVID-19 in any location."
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "numC19VentPats"
+                    }
+                  ],
+                  "text": "Ventilated COVID-19 Patients"
+                },
+                "_count": {
+                  "extension": [{
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unsupported"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }, {
+      "fullUrl": "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f07",
+      "request": {
+                "method": "POST",
+                "url": "Meaaure"
+            },
+      "resource": {
+        "resourceType": "Measure",
+        "id": "FEMADailyHospitalCOVID19Reporting",
+        "extension": [{
+            "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/ReportingPeriod",
+            "valueTiming": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/saner/Measure/FEMADailyHospitalCOVID19Reporting",
+        "identifier": [{
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.16.840.1.113883.4.642.40.42.29.5"
+          }
+        ],
+        "version": "1.0.1",
+        "name": "FEMADailyHospitalCOVID19Reporting",
+        "title": "FEMA Laboratory Orders and Results Daily Increase Reporting",
+        "status": "draft",
+        "experimental": true,
+        "date": "2024-05-18T21:25:01+00:00",
+        "publisher": "HL7 International / Public Health",
+        "contact": [{
+            "telecom": [{
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/pher"
+              }
+            ]
+          }, {
+            "telecom": [{
+                "system": "email",
+                "value": "pher@lists.hl7.org"
+              }
+            ]
+          }, {
+            "name": "Keith W. Boone",
+            "telecom": [{
+                "system": "email",
+                "value": "mailto:kboone@ainq.com"
+              }
+            ]
+          }
+        ],
+        "description": "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts.",
+        "useContext": [{
+            "code": {
+              "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+              "code": "focus"
+            },
+            "valueCodeableConcept": {
+              "coding": [{
+                  "system": "http://snomed.info/sct",
+                  "code": "840539006",
+                  "display": "COVID-19"
+                }
+              ]
+            }
+          }
+        ],
+        "jurisdiction": [{
+            "coding": [{
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "topic": [{
+            "coding": [{
+                "system": "http://snomed.info/sct",
+                "code": "252318005",
+                "display": "Immunology laboratory test (procedure)"
+              }
+            ]
+          }
+        ],
+        "author": [{
+            "name": "HL7 Public Health Workgroup",
+            "telecom": [{
+                "system": "email",
+                "value": "mailto:pher@lists.hl7.org"
+              }
+            ]
+          }
+        ],
+        "relatedArtifact": [{
+            "type": "documentation",
+            "label": "CMS Press Release",
+            "display": "Trump Administration Engages America’s Hospitals in Unprecedented Data Sharing",
+            "url": "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing",
+            "document": {
+              "url": "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing"
+            }
+          }, {
+            "type": "documentation",
+            "label": "Vice President Pence Letter to Hospital Administrators",
+            "display": "Text of a Letter from the Vice President to Hospital Administrators",
+            "url": "https://www.whitehouse.gov/briefings-statements/text-letter-vice-president-hospital-administrators/",
+            "document": {
+              "url": "https://www.whitehouse.gov/briefings-statements/text-letter-vice-president-hospital-administrators/"
+            }
+          }, {
+            "type": "documentation",
+            "label": "AHA Advisory on COVID-19 Reporting",
+            "display": "Administration Requests Hospitals Report Daily on COVID-19 Testing Results, Bed and Ventilator",
+            "url": "https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19",
+            "document": {
+              "url": "https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19"
+            }
+          }, {
+            "type": "documentation",
+            "label": "Excel Spreadsheet template for reporting to FEMA",
+            "display": "Template for Daily Hospital COVID-19 Reporting.xlsx",
+            "url": "https://images.magnetmail.net/images/clients/AHA_MCHF/attach/2020/March/0330/Template_for_Daily_Hospital_COVID19_Reporting.xlsx",
+            "document": {
+              "url": "https://images.magnetmail.net/images/clients/AHA_MCHF/attach/2020/March/0330/Template_for_Daily_Hospital_COVID19_Reporting.xlsx"
+            }
+          }
+        ],
+        "library": ["http://hl7.org/fhir/uv/saner/StructureDefinition/FEMAMeasureLibrary"],
+        "type": [{
+            "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                "code": "outcome"
+              }
+            ]
+          }
+        ],
+         "rateAggregation": "count",
+         "scoring" : {
+            "coding" : [{
+              "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+              "code" : "continuous-variable"
+            }]
+          },
+        "group": [{
+            "extension": [{
+                "extension": [{
+                    "url": "scoring",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                          "code": "continuous-variable"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "subject",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://hl7.org/fhir/resource-types",
+                          "code": "ServiceRequest"
+                        }, {
+                          "system": "http://snomed.info/sct",
+                          "code": "252318005",
+                          "display": "Immunology laboratory test (procedure)"
+                        }
+                      ],
+                      "text": "COVID-19 Diagnostic Testing"
+                    }
+                  }, {
+                    "url": "type",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                          "code": "outcome"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "improvementNotation",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                          "code": "decrease"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "rateAggregation",
+                    "valueString": "cumulative"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+              }
+            ],
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "positiveIncreasePercent",
+                  "display": "Percent Positive among Newly Resulted Tests"
+                }
+              ],
+              "text": "# of new positive test results released / # of total new tests released for previous date queried"
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalOrdersIncrease",
+                      "display": "New Diagnostic Tests Ordered/Received"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ],
+                  "text": "Midnight to midnight cutoff, tests ordered on previous date queried"
+                },
+                "description": "Enter the number of new Diagnostic Tests Ordered/Received during the reporting period.",
+                "criteria": {
+                  "description": "Orders initiated during %reportingPeriod",
+                  "name": "totalOrdersIncrease",
+                  "language": "text/fhirpath",
+                  "expression": "ServiceRequest.where(\n    authoredOn.toDate() = %reportingPeriod /* May need to change logic to support ranges for reportingPeriod */\n    and status in ('active', 'completed')\n    and intent in ('order', 'orginal-order', 'reflex-order', 'filler-order', 'instance-order')\n)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalTestResultsIncrease",
+                      "display": "New Tests Resulted"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ],
+                  "text": "Midnight to midnight cutoff, test results released on previous date queried"
+                },
+                "description": "Enter the number of results recieved/generated during the reporting period.\n Do not include results where the test could not be completed because the specimen\n was rejected or a positive/negative result could not be established",
+                "criteria": {
+                  "description": "Results recieved during reporting period",
+                  "name": "totalTestResultsIncrease",
+                  "language": "text/fhirpath",
+                  "expression": "DiagnosticReport.where(\n    issued.toDate() = %reportingPeriod /* May need to change logic to support ranges for reportingPeriod */\n    and status in ('final, 'amended', 'corrected', 'appended')\n)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "positiveIncrease",
+                      "display": "New Positive COVID-19 Tests"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ],
+                  "text": "Midnight to midnight cutoff, positive test results released on previous date queried"
+                },
+                "description": "Enter the number of positive test results released during the reporting period.",
+                "criteria": {
+                  "description": "Result is positive with respect to COVID-19",
+                  "name": "positiveIncrease",
+                  "language": "text/fhirpath",
+                  "expression": "DiagnosticReport.where($this in %totalTestResultsIncrease and conclusionCode in %ValueSet-ConfirmedCOVID19Diagnosis)"
+                }
+              }
+            ]
+          }, {
+            "extension": [{
+                "extension": [{
+                    "url": "scoring",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                          "code": "continuous-variable"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "subject",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://hl7.org/fhir/resource-types",
+                          "code": "ServiceRequest"
+                        }, {
+                          "system": "http://snomed.info/sct",
+                          "code": "252318005",
+                          "display": "Immunology laboratory test (procedure)"
+                        }
+                      ],
+                      "text": "COVID-19 Cumulative Diagnostic Testing"
+                    }
+                  }, {
+                    "url": "type",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                          "code": "outcome"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "improvementNotation",
+                    "valueCodeableConcept": {
+                      "coding": [{
+                          "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                          "code": "decrease"
+                        }
+                      ]
+                    }
+                  }, {
+                    "url": "rateAggregation",
+                    "valueString": "cumulative"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+              }
+            ],
+            "code": {
+              "coding": [{
+                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "code": "positivePercent",
+                  "display": "Cumulative Percent Positive among Resulted Tests"
+                }
+              ],
+              "text": "# of total positive results to released date / # of total tests results released to date"
+            },
+            "population": [{
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalOrders",
+                      "display": "Cumulative Diagnostic Tests Ordered/Received"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ],
+                  "text": "All tests ordered to date."
+                },
+                "description": "Enter the cumulative number of tests ordered to date.",
+                "criteria": {
+                  "description": "Report all active or completed test orders for a COVID-19 test authored during the reporting period",
+                  "name": "totalOrders",
+                  "language": "text/fhirpath",
+                  "expression": "ServiceRequest.where(\n    authoredOn.toDate() <= %reportingPeriod /* May need to change logic to support ranges for reportingPeriod */\n    and status in ('active', 'completed')\n    and code in %ValueSet-COVID19DiagnosticTest\n    and intent in ('order', 'orginal-order', 'reflex-order', 'filler-order', 'instance-order')\n)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "rejected",
+                      "display": "Cumulative Specimens Rejected"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator-exclusion"
+                    }
+                  ],
+                  "text": "All specimens rejected for testing to date"
+                },
+                "description": "Enter the cumulative number of specimens rejected for testing to date.",
+                "criteria": {
+                  "description": "DiagnosticReport for COVID-19 where the report is unavailable because the measurement was not started or not completed.",
+                  "name": "rejected",
+                  "language": "text/fhirpath",
+                  "expression": "DiagnosticReport.where(status = 'cancelled' and code in %ValueSet-COVID19DiagnosticTest)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "totalTestResults",
+                      "display": "Cumulative Tests Performed"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "denominator"
+                    }
+                  ],
+                  "text": "All tests with results released to date"
+                },
+                "description": "Enter the total number tests with results released to date. Do not include tests where a\n positive/negative result could not be determined (e.g., because the specimen was inadequate).",
+                "criteria": {
+                  "description": "Report all active or completed test orders for a COVID-19 test authored during or prior to the end of the reporting period that have had results released.",
+                  "name": "totalTestResults",
+                  "language": "text/fhirpath",
+                  "expression": "ServiceRequest.where(\n    status in ('active', 'completed')\n    and intent in ('order', 'orginal-order', 'reflex-order', 'filler-order', 'instance-order')\n)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "positive",
+                      "display": "Cumulative Positive COVID-19 Tests"
+                    }, {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "numerator"
+                    }
+                  ],
+                  "text": "All positive test results released to date"
+                },
+                "description": "Enter the total number of positive test results release to date.",
+                "criteria": {
+                  "description": "The result is positive for COVID-19",
+                  "name": "positive",
+                  "language": "text/fhirpath",
+                  "expression": "DiagnosticReport.where($this in %totalTestResults and conclusionCode in %ValueSet-ConfirmedCOVID19Diagnosis)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "allReports",
+                      "display": "All Laboratory Reports for any Order"
+                    }
+                  ],
+                  "text": "Reports to date including corrected, amended and canceled reports"
+                },
+                "description": "This is in intermediate population used to simplify calculations",
+                "criteria": {
+                  "description": "Diagnostic Reports provided in response to totalOrders",
+                  "name": "allReports",
+                  "language": "text/fhirpath",
+                  "expression": "DiagnosticReport.where(basedOn in %totalOrders)"
+                }
+              }, {
+                "code": {
+                  "coding": [{
+                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "code": "latestReports",
+                      "display": "Most Recent Laboratory Reports for any Order"
+                    }
+                  ],
+                  "text": "Latest Reports to date for each order"
+                },
+                "description": "This is in intermediate population used to simplify calculations",
+                "criteria": {
+                  "description": "Most recent diagnostic reports provided in response to totalOrders",
+                  "name": "latestReports",
+                  "language": "text/fhirpath",
+                  "expression": "TBD"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
