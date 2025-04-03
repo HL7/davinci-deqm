@@ -157,4 +157,8 @@ Must Support guidance here requires additional clarifications, we are seeking im
 
 <br />
 
+### Location Awareness In Measure Reports
+
+Healthcare is very often geographical in nature and, in particular, it's local. Reporting in the public health domain often benefits from geographical analysis as causal relations are often geographic in nature. Epidemiologic spread of disease is proximity based; climate refugees follow the paths of storms or wildfires; hospitals report increased numbers of some conditions (i.e. heatstroke) based on seasonality and location. To this extent, MeasureReports benefit from being location aware. Important approaches include ZIP (postal routes), FIP (county taxation), HSA (ambulance dispatch zones, approximately), and GPS (point location). In some instances, _geography_ parameters for outlining the boundary of a location in GEOJSON format are also useful. The [Examples] include a Location-Aware Bundle as an illustration.
+
 {% include link-list.md %}

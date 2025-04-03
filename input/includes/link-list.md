@@ -151,6 +151,7 @@
 [DEQM Gap Status Extension]: StructureDefinition-extension-gapStatus.html
 [DEQM Care Gap Guidance Response]: StructureDefinition-gaps-guidanceresponse-detailedcaregap.html
 
+
 [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/
 [Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
 [MeasurePopulationType]: http://hl7.org/fhir/R4/valueset-measure-population.html
