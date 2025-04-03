@@ -372,14 +372,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Ad Hoc Operation Reporting input",
-                "reference": {
-                    "reference": "Bundle/ad-hoc-operation-reporting-input"
-                },
-                "description": "Ad Hoc Operation Reporting input example"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Col Submit Collect Obs",
                 "reference": {
                     "reference": "Parameters/col-submit-collect-obs"
@@ -665,7 +657,7 @@
                     "reference": "Organization/organization01"
                 },
                 "description": "DEQM Organization01 example"
-            }, 
+            },
            {
                 "exampleBoolean": true,
                 "name": "Subject List MeasureReport01",

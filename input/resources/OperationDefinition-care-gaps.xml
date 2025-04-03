@@ -96,7 +96,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Reference to an organization [QI Core Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization) for which the gaps in care report will be created. For a provider organization focused gaps in care report, this is a required In Parameter."/>
+        <documentation value="Reference to an organization [QI Core Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization) for which the gaps in care report will be created. For a provider organization focused gaps in care report, this is a required In Parameter. Either 'organization' or 'organizationResource' SHALL be provided, but not both"/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
@@ -105,7 +105,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Organization for which the gaps in care report will be created is provided as an Organization resource."/>
+        <documentation value="Organization for which the gaps in care report will be created is provided as an Organization resource. Either 'organization' or 'organizationResource' SHALL be provided, but not both."/>
         <type value="Organization"/>
     </parameter>
     <parameter>
@@ -114,11 +114,11 @@
         <min value="1"/>
         <max value="*"/>
         <documentation value="Indicates status of a care gap. For all [open, closed, and prospective gaps], three seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
+        <type value="code"/>
         <binding>
             <strength value="extensible"/>
             <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
         </binding>
-        <type value="code"/>
     </parameter>
     <parameter>
         <name value="measureId"/>
