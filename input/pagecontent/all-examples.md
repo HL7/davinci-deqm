@@ -1,5 +1,5 @@
 
-## All examples can be downloaded as a zip on the [Downloads page](downloads.html#examples)
+## All DEQM examples can be downloaded as a zip on the [Downloads page](downloads.html#examples)
 
 ## MeasureReports
 
@@ -20,7 +20,7 @@
 ### Scoring Type MeasureReports
 * [Ratio Scoring MeasureReport](MeasureReport-ratio-measurereport01.html)
 * [Continuous-Variable Scoring MeasureReport](MeasureReport-date-of-last-power-outage.html)
-* [Attestation Boolean Improvement Activities MeasureReport](MeasureReport-attestation-boolean.html)
+* [Attestation Boolean Improvement Activities MeasureReport](MeasureReport-attestation-boolean-example.html)
 * [Attestation Proportion Promoting Interoperability MeasureReport](MeasureReport-MeasureReport-PI-example.html)
 * [Multiple Rate Scoring MeasureReport](MeasureReport-summary-multirate-measurereport.html)
 
@@ -42,7 +42,7 @@ Below are examples of Bundle resources.
 
 ## Measures
 Below are the Measures used by the MeasureReports above that are defined in this IG.
-* [Attestation Boolean](Measure-attestation-boolean.html)
+* [Attestation Boolean](Measure-attestation-boolean-example.html)
 * [Cervical Cancer Screening EXM124](Measure-measure-exm124-example.html)
 * [COL Colorectal Cancer Screening EXM130](Measure-measure-exm130-example.html)
 * [Date of Last Power Outage](Measure-date-of-last-power-outage.html)
@@ -51,7 +51,12 @@ Below are the Measures used by the MeasureReports above that are defined in this
 * [PI Promoting Interoperability](Measure-measure-pi-example.html)
 * [VTE Venous Thromboembolism Prophylaxis EXM108](Measure-measure-exm108-example.html)
 
-## Other Support resources
+### Da Vinci VBPR Examples
+The Da Vinci Value-Based Performance Reporting IG uses DEQM as a dependency. In addition to the above DEQM examples, 
+the [Value-Based Performance Reporting Examples](https://build.fhir.org/ig/HL7/davinci-vbpr/examples.html) provides additional 
+measure report examples based on the [DEQM Summary MeasureReport Profile](StructureDefinition-summary-measurereport-deqm.html).
+
+## Other Support Resources
 Below are the resources that are referenced by the examples above.
 ### Composition
 * [Gaps Composition01](Composition-gaps-composition01.html)

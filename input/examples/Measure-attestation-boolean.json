@@ -1,6 +1,6 @@
 {
   "resourceType": "Measure",
-  "id": "measure-attestation-boolean-example",
+  "id": "attestation-boolean-example",
   "meta": {
     "profile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/attestation-measure-cqfm|4.0.0",
       "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"]
