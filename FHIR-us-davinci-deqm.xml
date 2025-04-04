@@ -82,7 +82,6 @@
 <artifact id="StructureDefinition/gaps-guidanceresponse-detailedcaregap" key="StructureDefinition-gaps-guidanceresponse-detailedcaregap" name="Detailed Care Gap Guidance Response"/>
 <artifact id="GuidanceResponse/detailedguidanceresponse01" key="GuidanceResponse-detailedguidanceresponse01" name="DetailedGuidanceResponse01"/>
 <artifact id="GuidanceResponse/detailedguidanceresponse02" key="GuidanceResponse-detailedguidanceresponse02" name="DetailedGuidanceResponse02"/>
-<artifact id="Measure/measure-ia-boolean-example" key="Measure-measure-ia-boolean-example" name="EXM Improvement Activity Measure"/>
 <artifact id="Measure/measure-pi-example" key="Measure-measure-pi-example" name="EXMPromotingInteroperabilityMeasure"/>
 <artifact id="Encounter/nhsn-iip-en101" key="Encounter-nhsn-iip-en101" name="Encounter nhsn-iip-en101"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
@@ -125,6 +124,7 @@
 <artifact id="Organization/gaps-organization-reportingvendor" key="Organization-gaps-organization-reportingvendor" name="Gaps Reporting Vendor Organization"/>
 <artifact id="Group/group01" key="Group-group01" name="Group01"/>
 <artifact id="GuidanceResponse/guidanceresponse01" key="GuidanceResponse-guidanceresponse01" name="Guidance Response Example"/>
+<artifact id="Measure/attestation-boolean-example" key="Measure-attestation-boolean-example" name="Immunization Registry Reporting"/>
 <artifact id="MeasureReport/indv-measurereport01" key="MeasureReport-indv-measurereport01" name="Indv Measurereport01"/>
 <artifact id="MeasureReport/indv-measurereport02" key="MeasureReport-indv-measurereport02" name="Indv Measurereport02"/>
 <artifact id="MeasureReport/indv-measurereport03" key="MeasureReport-indv-measurereport03" name="Indv Measurereport03"/>
@@ -145,6 +145,7 @@
 <artifact id="SearchParameter/measurereport-category" key="SearchParameter-measurereport-category" name="Measure Report Category Search Parameter"/>
 <artifact id="Measure/measure-exm108-example" key="Measure-measure-exm108-example" name="Measure Venous Thromboembolism Prophylaxis (EXM108)"/>
 <artifact deprecated="true" key="MeasureReport" name="MeasureReport"/>
+<artifact id="MeasureReport/attestation-boolean-example" key="MeasureReport-attestation-boolean-example" name="MeasureReport Attestation Boolean"/>
 <artifact id="MeasureReport/MeasureReport-PI-example" key="MeasureReport-MeasureReport-PI-example" name="MeasureReport-PI-example"/>
 <artifact id="MeasureReport/summ-contained-supplemental" key="MeasureReport-summ-contained-supplemental" name="Measurereport with contained data"/>
 <artifact id="MedicationRequest/nhsn-iip-add101" key="MedicationRequest-nhsn-iip-add101" name="MedicationRequest nhsn-iip-add101"/>
@@ -186,7 +187,7 @@
 <artifact id="Measure/stratification-measure-example" key="Measure-stratification-measure-example" name="Stratification Measure Example"/>
 <artifact id="MeasureReport/subjectlist-measurereport01" key="MeasureReport-subjectlist-measurereport01" name="Subject List MeasureReport01"/>
 <artifact id="OperationDefinition/submit-data" key="OperationDefinition-submit-data" name="Submit Data"/>
-<artifact id="MeasureReport/summ-attestation" key="MeasureReport-summ-attestation" name="Summ Attestation"/>
+<artifact deprecated="true" id="MeasureReport/summ-attestation" key="MeasureReport-summ-attestation" name="Summ Attestation"/>
 <artifact id="MeasureReport/summ-measurereport01" key="MeasureReport-summ-measurereport01" name="Summ Measurereport01"/>
 <artifact id="MeasureReport/summ-measurereport02" key="MeasureReport-summ-measurereport02" name="Summ Measurereport02"/>
 <artifact id="MeasureReport/summ-medicare-stratification-example" key="MeasureReport-summ-medicare-stratification-example" name="Summ Medicare Stratification Example"/>
