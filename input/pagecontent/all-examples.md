@@ -20,7 +20,7 @@
 ### Scoring Type MeasureReports
 * [Ratio Scoring MeasureReport](MeasureReport-ratio-measurereport01.html)
 * [Continuous-Variable Scoring MeasureReport](MeasureReport-date-of-last-power-outage.html)
-* [Attestation Boolean Improvement Activities MeasureReport](MeasureReport-summ-attestation.html)
+* [Attestation Boolean Improvement Activities MeasureReport](MeasureReport-attestation-boolean.html)
 * [Attestation Proportion Promoting Interoperability MeasureReport](MeasureReport-MeasureReport-PI-example.html)
 * [Multiple Rate Scoring MeasureReport](MeasureReport-summary-multirate-measurereport.html)
 
@@ -42,6 +42,7 @@ Below are examples of Bundle resources.
 
 ## Measures
 Below are the Measures used by the MeasureReports above that are defined in this IG.
+* [Attestation Boolean](Measure-attestation-boolean.html)
 * [Cervical Cancer Screening EXM124](Measure-measure-exm124-example.html)
 * [COL Colorectal Cancer Screening EXM130](Measure-measure-exm130-example.html)
 * [Date of Last Power Outage](Measure-date-of-last-power-outage.html)
