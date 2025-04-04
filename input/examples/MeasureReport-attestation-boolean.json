@@ -1,6 +1,6 @@
 {
   "resourceType": "MeasureReport",
-  "id": "summ-attestation",
+  "id": "measurereport-boolean-attestation-example",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
@@ -19,7 +19,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-ia-boolean-example|1.0.0",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-attestation-boolean-example|1.0.0",
   "date": "2023-04-01",
   "reporter": {
     "reference": "Organization/organization01"
@@ -29,19 +29,7 @@
     "end": "2024-12-31"
   },
   "group": [{
-	  "id": "group-1",
-      "population": [{
-          "code": {
-            "coding": [{
-                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                "code": "initial-population",
-                "display": "Initial Population"
-              }
-            ]
-          },
-          "count": 15
-        }
-      ],
+	  "id": "attestation_response",
       "measureScore": {
         "extension": [{
             "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType",
