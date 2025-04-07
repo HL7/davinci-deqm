@@ -107,6 +107,7 @@
         <max value="1"/>
         <documentation value="Organization for which the gaps in care report will be created is provided as an Organization resource. Either 'organization' or 'organizationResource' SHALL be provided, but not both."/>
         <type value="Organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
     </parameter>
     <parameter>
         <name value="status"/>
