@@ -11,7 +11,7 @@ This Implementation Guide was made possible by the thoughtful contributions of t
 
 The twenty-two founding Da Vinci Project member organizations.
 
-Bryn Rhodes, Bryn Rhodes, Dynamic Content Group
+Bryn Rhodes, Dynamic Content Group
 Floyd Eisenberg, iParsimony LLC
 Jocelyn Keegan, Point of Care Partners
 Linda Michaelsen, Optum
@@ -48,35 +48,7 @@ To initially build locally, clone the repository and run the following commands 
 
   2. **_genonce[.bat | .sh]** - <i>This initiates the publication process. Launching the .bat file (Windows) or .sh file (Unix/Mac) will launch HL7's IGPublisher program and build/publish the IG one time.</i>
 
+For more information on using the FHIR Implementation Guide publisher, see:
 
-## Dependencies
-
-Before the instructions in the above "Local Build" section will work, you
-need to install several primary dependencies.
-
-### Java
-
-Go to [http://www.oracle.com/technetwork/java/javase/downloads/](
-http://www.oracle.com/technetwork/java/javase/downloads/) and download the
-latest (version 8 or higher) JDK for your platform, and install it.
-
-### Ruby
-
-Jekyll requires Ruby version 2.1 or greater.  Depending on your operating
-system, you may already have Ruby bundled with it.  Otherwise, or if you
-need a newer version, go to [https://www.ruby-lang.org/en/downloads/](
-https://www.ruby-lang.org/en/downloads/) for directions.
-
-### Jekyll
-
-Go to [https://jekyllrb.com](https://jekyllrb.com) and follow the
-instructions there, for example `gem install jekyll bundler`.  The end
-result of this should be that the binary "jekyll" is now in your path.
-
-
-## References  
-
-- [HL7 Confluence Workgroup - Data Exchange For Quality Measures ](https://confluence.hl7.org/pages/viewpage.action?pageId=21857600)  
-- [Electronic Clinical Quality Improvement (eCQI) Resource Center](https://ecqi.healthit.gov/)  
-
+https://confluence.hl7.org/spaces/FHIR/pages/35718627/IG+Publisher+Documentation
 
