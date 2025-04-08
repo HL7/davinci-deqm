@@ -372,6 +372,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Ad Hoc Operation Input Example",
+                "reference": {
+                    "reference": "Organization/ad-hoc-organization"
+                },
+                "description": "Ad Hoc Operation Input Example"
+            },
+            {
+                "exampleBoolean": true,
                 "name": "Col Submit Collect Obs",
                 "reference": {
                     "reference": "Parameters/col-submit-collect-obs"
