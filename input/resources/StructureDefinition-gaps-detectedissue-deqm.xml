@@ -90,7 +90,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference|5.2.0"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
             </type>
             <mustSupport value="true"/>
         </element>
