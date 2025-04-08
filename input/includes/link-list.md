@@ -44,6 +44,7 @@
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
+[FHIR Artifacts]: artifacts.html
 [FHIR operations]: {{site.data.fhir.path}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Framework]: framework.html
@@ -146,6 +147,7 @@
 [DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
 [DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
 [DEQM Gaps In Care Group Profile]: StructureDefinition-gaps-group-deqm.html
+[DEQM Gaps In Care Gap Status Value Set]: ValueSet-gaps-status.html
 [DEQM Gap Status Extension]: StructureDefinition-extension-gapStatus.html
 [DEQM Care Gap Guidance Response]: StructureDefinition-gaps-guidanceresponse-detailedcaregap.html
 
@@ -158,7 +160,7 @@
 [Gaps In Care]: gaps-examples.html
 [Operations]: operations.html
 [Terminology]: terminology.html
-[DEQM Population Reference Extension]: StructureDefinition-extension-populationReference.html
+[CQF Criteria Reference Extension]:  http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference 
 [DEQM Criteria Reference Extension]: StructureDefinition-extension-criteriaReference.html
 [base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html
 [Datax Measurereport01]: MeasureReport-datax-measurereport01.html
@@ -175,10 +177,11 @@
 [closed gaps]: index.html#glossary
 [open gap]: index.html#glossary
 [open gaps]: index.html#glossary
-[open and closed gaps]: index.html#glossary
-[open and/or closed gaps]: index.html#glossary
-[open or closed gaps]: index.html#glossary
+[open, closed, and prospective gaps]: index.html#glossary
+[open, closed, and/or prospective gaps]: index.html#glossary
+[open, closed, or prospective gaps]: index.html#glossary
 [prospective gap]: index.html#glossary
+[prospective gaps]: index.html#glossary
 [gaps through period]: index.html#glossary
 [Gaps through period]:  index.html#glossary
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html

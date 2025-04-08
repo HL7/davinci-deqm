@@ -46,7 +46,7 @@ The following resources are used in the Gaps in Care Reporting Scenario:
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 {: .grid}
 
-Figure 2-14 provides a graphical view of how these resources are related. A Composition is created for each Patient (linked via `subject` element) and is contained in a Bundle. The Composition resource references one or more DEQM Individual MeasureReport resources. One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under `evaluatedResource` element. The [DEQM Population Reference Extension] on the `evaluatedResource` documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
+Figure 2-14 provides a graphical view of how these resources are related. A Composition is created for each Patient (linked via `subject` element) and is contained in a Bundle. The Composition resource references one or more DEQM Individual MeasureReport resources. One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under `evaluatedResource` element. The [CQF Criteria Reference Extension] on the `evaluatedResource` documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
 
 {% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
 
@@ -55,7 +55,7 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 #### Gaps Through Period (Retrospective vs. Prospective)
 {:.no_toc}
 
-[Gaps through period] is the time period defined by a Client for running the Gaps in Care Report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess anticipated [open gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure. In the example below, Colorectal Cancer Screening ([CMS130]) with measureId EXM130-7.3.000 is used as an example measure.
+[Gaps through period] is the time period defined by a Client for running the Gaps in Care Report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess [prospective gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure. In the example below, Colorectal Cancer Screening ([CMS130]) with measureId EXM130-7.3.000 is used as an example measure.
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
 |---|---|---|---|---|---|
@@ -83,7 +83,7 @@ The updated operation, [care-gaps](OperationDefinition-care-gaps.html), makes th
 Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) operation defined in this guide:
 - **practitioner** references a practitioner for which the Gaps in Care Report will be created.
 - **organization** references an organization for which the Gaps in Care Report will be created.
--	**status** is required, it SHALL be a code from the [gaps status value set], which indicates an open-gap or a closed-gap. For the Gaps in Care Report to return both the [open and closed gaps], status equals to open-gap and closed-gap both need to be provided.
+-	**status** is required, it SHALL be a code from the [gaps status value set], which indicates an open, closed, or prospective gap. For the Gaps in Care Report to return [open, closed, and prospective gaps], the status must indicate all three.
 -	**measureId** is the id of a Measure resource that is on the server for which the gaps in care will be reported. The Client will need to check with the Server to know the identifiers used by the Server to uniquely identify measures. This parameter is one of the three options provided by this operation to specify one or more measures for which the Gaps in Care Report will be created.
 - **measureIdentifier** is the business identifier for a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
 - **measureUrl** is the url of a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
@@ -97,6 +97,17 @@ Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefin
 Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
 {% include img-narrow.html img="gic-care-gaps-operation-group.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
 
+#### Measure Evaluation for a Gap in Care
+{:.no_toc}
+
+As shown in Figure 2-16 and 2-17 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQFMComputableMeaure profile, depending on the server implementation).
+
+This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its gapStatus element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable.
+
+Patient-based measures lend themselves most readily to gaps in care calculations because they are evaluated over a long time period. Other measure bases, such as an encounter-based measure, typically happen over shorter time spans. The types of population bases to support is at the server’s discretion. Servers SHOULD support patient-based measures, and MAY support any other base.
+
+Measures with multiple groups (a multiple rate measure) have the potential to create multiple gaps in care for a single patient. The extension [DEQM Criteria Reference Extension] allows the detected issue to reference which group or population from the measure report led to the creation of the detected issue.
+
 #### How to Construct a Gaps in Care Report
 {:.no_toc}
 
@@ -106,7 +117,7 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation returns a [Paramet
 
 The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QICore Patient], the Gaps in Care Report is for. The Gaps In Care Composition SHALL contain one to many section(s). Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced SHALL be for the same patient specified in the Composition `subject`. Each `section` SHALL also contain one or more `entry` of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
 
-- The Individual MeasureReport SHALL conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [DEQM Population Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.population.group.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
+- The Individual MeasureReport SHALL conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [CQF Criteria Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.group.population.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
 
 - The DEQM Gaps In Care DetectedIssue Profile has a fixed code CAREGAP indicating the detected issue is in the Care Gaps detected issue category. Each DetectedIssue SHALL contain at least one `evidence` element that each evidence SHALL provide a detail that references either a DEQM Individual MeasureReport of the measure or a GuidanceResponse.  
 

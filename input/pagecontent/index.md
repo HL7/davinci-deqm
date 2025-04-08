@@ -24,9 +24,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
+  - [Subject List Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the subject-list reports for a measure.
+
 
   -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
-
 
 - [Use cases]\: Three example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
 
@@ -39,21 +40,22 @@ This Guide is divided into several pages which are listed at the top of each pag
 
    -  [Gaps in Care]\: This page lists example use cases for Gaps in Care Reporting.
 
+- [FHIR Artifacts]\: List of all DEQM FHIR artifacts.
+
+  - [Profiles and Extensions]\: A list of all DEQM FHIR profiles and extensions.
+
+  - [Operations]\: A list of all DEQM operations.
+
+  - [Terminology]\: A list of all DEQM terminology code systems and value sets.
+
+  - [Capability statements]\: A list of all DEQM capability statements for the various DEQM roles.
+
 *Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
 {:.stu-note}
-
-- [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data.
-
-- [Capability statements]\: This set of pages describes the expected FHIR capabilities of the various DEQM actors.
 
 - [Examples]\: List of all the examples used in this guide.
 
 - [Downloads]\: This page provides links to downloadable artifacts.
-
-
-- [Terminology]\: This page lists code systems and value sets defined in this guide.
-
-- [Operations]\: This page lists the Operation that is defined in this guide to exchange Gaps in Care Report.
 
 ### Background
 {: #background}
@@ -108,7 +110,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 #### Gaps in Care Reporting Scenarios
 Gaps in Care Reporting is a reporting scenario supported in this implementation guide. Similar to the quality reporting scenarios, a Gaps in Care Report is used to report the results of quality measures on patients or population, but for a [gaps through period] that is of interest for a Client.
 
-1. **Gaps in Care** - Used to report the results of [open and/or closed gaps] of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open and/or closed gaps.
+1. **Gaps in Care** - Used to report the results of [open, closed, and/or prospective gaps] of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open, closed, and/or prospective gaps.
 
 The process below can be run as many times as useful during the reporting period to assure that all [open gaps] are closed.
 
