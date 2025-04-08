@@ -468,6 +468,14 @@
             },
             {
                 "exampleBoolean": true,
+                "name": "Location Aware example",
+                "reference": {
+                    "reference": "Bundle/Location-Aware-example"
+                },
+                "description": "Bundle with location aware information"
+            },
+             {
+                "exampleBoolean": true,
                 "name": "DEQM Software System Example",
                 "reference": {
                     "reference": "Device/deqm-software-system-example"
