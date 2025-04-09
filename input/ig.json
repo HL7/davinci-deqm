@@ -1256,6 +1256,11 @@
             "page": [
                 {
                     "generation": "markdown",
+                    "nameUrl": "background.html",
+                    "title": "Background"
+                },
+                {
+                    "generation": "markdown",
                     "nameUrl": "framework.html",
                     "page": [
                         {
@@ -1352,6 +1357,11 @@
                     "generation": "markdown",
                     "nameUrl": "change-notes.html",
                     "title": "Change Notes"
+                },
+                {
+                    "generation": "markdown",
+                    "nameUrl": "glossary.html",
+                    "title": "Glossary"
                 }
             ],
             "title": "Home"

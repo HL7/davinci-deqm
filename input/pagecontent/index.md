@@ -12,7 +12,11 @@ This Implementation Guide is supported by the [Da Vinci] initiative which is a p
 
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
-- [Home]\: The home page provides the introduction and background for the Clinical Quality Measures Ecosystem and The Data Exchange For Quality Measures.
+- [Home]\: The home page provides the introduction for The Data Exchange For Quality Measures (DEQM) implementation guide.
+
+- [Scenarios]\: This topic provides an overview of the scenarios supported by the DEQM framework.
+
+- [Background]\: This page provides background for the Clinical Quality Measures Ecosystem and Quality Reporting use cases.
 
 - [Framework]\: These pages provide guidance on the set of FHIR transactions that provide a general framework to enable the exchange of measure data.
 
@@ -25,7 +29,6 @@ This Guide is divided into several pages which are listed at the top of each pag
   -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
 
   - [Subject List Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the subject-list reports for a measure.
-
 
   -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
 
@@ -57,27 +60,78 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Downloads]\: This page provides links to downloadable artifacts.
 
-### Background
-{: #background}
+### Scenarios
 
-<!-- Quality Improvement Ecosystem -->
+This implementation guide defines a framework to support quality measurement, reporting, and related use cases by enabling both the exchange of the [_data of interest_](glossary.html#data-of-interest) for a measure or set of measures, as well as the reporting of quality measurement results, with or without the data involved in calculating those results. The following scenarios illustrate the various ways that this framework can be used, providing an overview of and index into the more detailed use cases and specification documentation in the implementation guide.
 
-{% include quality-improvement-ecosystem.md %}
-{: #quality-improvement-ecosystem}
+Broadly, these scenarios fall into three categories: 1) *Reporting Scenarios*, focused on communicating the results of a quality measure calculation at the end of a [_measurement period_](glossary.html#measurement-period) as part of a quality improvement initiative, 2) *Exchange Scenarios*, focused on echanging the data of interest for a measure or set of measures throughout the measurement period, and 3) Gaps in care scenarios.
 
-<!-- Quality Measurement Standards Landscape -->
-{: #quality-measurement-standards-landscapeIndex}
-{% include quality-measurement-standards-landscape.md %}
+As a precondition, systems in these scenarios have already obtained the relevant measure specifications being reported from a measure repository as described in the [Quality Measure IG Measure Repository]({{site.data.fhir.ver.cqfm}}/measure-repository-service.html).
 
-<!-- Data Model Standards Landscape -->
-{% include data-model-standards-landscape.md %}
+#### Reporting Scenarios
 
+Reporting scenarios are used to report the results of quality measures on patient populations at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement program or initiative by a payer or other quality improvement stakeholder such as public health agencies with use cases that are typically more focused on the reporting scenarios.
 
-### Quality Reporting Scenarios
+For the reporting scenarios, the actors are Reporters and Receivers:
 
-This implementation guide describes two groups of quality reporting scenarios as shown in Figure 1-4 below. The first group are *Exchange Scenarios* which focus on exchanging subsets of the [data of interest](#data-of-interest) for a particular measure or set of measures throughout the [measurement period](#measurement-period).  Note that there are use cases for sharing data from a consumer to a producer as well (for example, payers may share screening information with providers). The Second group are *Reporting Scenarios* which focus on communicating the results of a quality measure at the end of a measurement period as part of a quality improvement initiative.
+**Reporters** are the actors submitting the results of a quality measure. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers. In general, a _reporter_ will consist of at least a **Clinical Data Repository**, the clinical system or systems containing information generated by or derived from the delivery of healthcare, and a **Measure Evaluation Service**, the system responsible for calculation of measure results.
 
-{% include img-portrait.html  caption = "Figure 1-4 Quality Reporting Scenarios" img="quality-reporting-scenarios.png" %}
+**Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
+
+In each of these scenarios, the patients to be considered are determined by _attribution_. Since different quality programs and initiatives may use the same measures with different attribution models, attribution is typically not specified as part of the measure specifications. The [DaVinci Member Attribution List](https://hl7.org/fhir/us/davinci-atr/) implementation guide supports the definition and exchange of member attribution lists as a potential approach to identifying patients to be considered for reporting.
+
+##### Population Reporting Without Supporting Data
+
+In this scenario, a _reporter_ such as a clinic submits a summary level quality measure report for a specific measure, attributed patients, and measurement period:
+
+{% include img.html img="population-reporting-no-supporting-data.png" %}
+
+1. The _measure evaluation service_ gathers the _data of interest_ from the _clinical data repository_ using the FHIR API
+2. The _measure evaluation service_ calculates the measure, producing the MeasureReport
+3. The _measure evaluation service_ then POSTs the MeasureReport to the _receiver_
+
+In this scenario, the resulting MeasureReport is a _summary_ level measure report which includes only the population counts and calculated measure score. This scenario does not result in any patient-level data being communicated to the receiving system.
+
+For more details on this scenario, see the [Summary Reporting](summary-reporting.html) framework topic.
+
+##### Population Reporting With Supporting Data
+
+In this scenario, a _reporter_ such as a hospital submits individual level quality measure reports for a specific measure and measurement period, for each attributed patient:
+
+{% include img.html img="population-reporting-supporting-data.png" %}
+
+1. The _measure evaluation service_ gathers the _data of interest_ from the _clinical data repository_ using the FHIR API
+2. The _measure evaluation service_ calculates the measure, producing a MeasureReport for each attributed patient
+3. The _measure evaluation service_ assembles a Bundle for each patient, consisting of the calculated MeasureReport and any data referenced during the calculation
+4. The _measure evaluation service_ POSTs the measure report Bundles to the _receiver_
+
+In this scenario, there is a Bundle of individual-level patient data for each attributed Patient. Determining the overall measure score then requires the additional step of aggregating the individual MeasureReport resources. Alternatively, a subject-list report can be included that references all the individual-level MeasureReports and provides the summary level measure score.
+
+For more details on this scenario, see the [Individual Reporting](individual-reporting.html) and [Subject-list Reporting](subjectlist-reporting.html) framework topics.
+
+##### Bulk Data
+
+In each of the scenarios described above, the FHIR API is used directly to access the data of interest for the measure being reported. To support large volumes of data, [Bulk Data](https://hl7.org/fhir/uv/bulkdata/) may be used to transfer the data of interest between the clinical data repository and the measure evaluation service. As of the time of this publication, the Bulk Data specification is being updated to include important capabilities that will improve the performance of bulk data for the quality reporting use case, in particular the ability to organize bulk data feeds by patient. A future version of this publication will provide more detail on how this capability can be used directly once the updated Bulk Data specification is published.
+
+##### Aggregated Reporting
+
+In aggregated reporting, the _measure calculation service_ gathers _data of interest_ from multiple _clinical data repositories_, allowing for reporting in a variety of ways, including multiple facilities for a single provider, as well as multi-provider organizations:
+
+Because data from multiple facilities and organizations can be aggregated in many ways; this specification is not prescriptive about how that aggregation is performed.
+
+##### Multiple Measures and Data Requirements
+
+For simplicity, each of the above reporting scenarios is specified in terms of a single measure. However, all the framework operations and scenarios support specifying any number of measures to be reported. Reporting on multiple measures impacts:
+
+1. _data requirements_: For reporting on multiple measures, data requirements can be combined across measures to determine overall reporting requirements
+2. _data of interest_: Exchanging data of interest for multiple measures prevents data elements that are used by multiple measures from being communicated more than once
+3. _submitted data_: In submitted measure report bundles, multiple MeasureReports may be included, allowing each measure report to reference only data used by that measure
+
+In the simplest case, this approach identifies all the data required for calculation of any measure used in the quality program.
+
+However, the approach also allows for submitting systems to choose which measures they are reporting, and determine only the data required for those measures.
+
+For more details on data requirements, see the [Data Requirements](datax.html#gather-data-requirements-from-consumer) framework topic.
 
 #### Exchange Scenarios
 
@@ -91,23 +145,8 @@ Exchange scenarios are used to exchange subsets of the data of interest for a me
 
 For these scenarios, the actors are Producers and Consumers, used in the same sense as the Producers and Consumers stakeholders in the Quality Measurement Standards Landscape diagram. Note that within any particular use case, different stakeholders will play the same roles. For example, a Provider may be playing the role of Producer in a particular exchange, while the Payer may be playing the role of Consumer.
 
-#### Reporting Scenarios
-
-Reporting scenarios are used to report the results of quality measures on patients or populations at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement program or initiative by a payer or other quality improvement stakeholder such as public health agencies with use cases that are typically more focused on the reporting scenarios.
-
-The reporting scenarios are:
-
-1. **Individual** - Used to report the results of a quality measure for a particular patient along with the complete set of data of interest to a quality reporting receiver
-1. **Summary** - Used to report the results of a quality measure for the applicable population to a quality reporting receiver
-1. **Subject-List** - A subject list report that includes a listing of subjects that satisfied each population criteria in the measure
-
-For the reporting scenarios, the actors are Reporters and Receivers:
-
-**Reporters** are the actors submitting the results of a quality measure. Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the reporter may be different stakeholders such as providers, provider organizations, aggregators, or payers.
-
-**Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
-
 #### Gaps in Care Reporting Scenarios
+
 Gaps in Care Reporting is a reporting scenario supported in this implementation guide. Similar to the quality reporting scenarios, a Gaps in Care Report is used to report the results of quality measures on patients or population, but for a [gaps through period] that is of interest for a Client.
 
 1. **Gaps in Care** - Used to report the results of [open, closed, and/or prospective gaps] of a quality measure or quality measures for a patient or a group of patients to a Client. Optionally, it is also used to provide details to the open, closed, and/or prospective gaps.
@@ -122,73 +161,7 @@ For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 
 **Servers** are the actors receiving the request for the Gaps in Care Report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system serves as the server. If a payer requests a report from their own system, the payer's system serves as the server.
 
-### Glossary
-
-
-{: #closed-gap}Closed Gap
-  : No discrepancy exists between recommended best practices and the services that are actually provided and documented. A previously identified open gap may become closed, if actions were taken to close the open gaps.
-
-{: #data-of-interest}Data of Interest
-  : The data elements that are required to determine whether a case (for example, patient) is in the population as defined by the clinical quality measure. In FHIR these data elements are satisfied by the combination of FHIR resources covering clinical events and requests such as Procedures, Observations, or ServiceRequests. For example, for a particular measure the data of interest could be the set of Conditions, Procedures, and Observations related to determining whether a patient is in the initial population and included or excluded from the denominator.
-
-{: #gaps-in-care}Gaps In Care
-  : Gaps in care are defined as discrepancies between recommended best practices and the services that are actually provided and documented. The terms gaps in care and care gaps may be used interchangeably.
-
-{: #gaps-through-period}Gaps Through Period
-  : The period of time defined by a Client for running the Gaps in Care Report. When the end period date of the gaps is specified as a date in the future, it indicates the Gaps in Care Report will be run prospectively, which provides opportunity for actions to be taken to close the identified gaps. When the end period date of the gaps is specified as a date in the past, it indicates the Gaps in Care Report will be run retrospectively.
-
-{: #incremental-update}Incremental Update
-  : In contrast to the Snapshot Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains only the new and updated DEQM and QI-Core Profiles since the last transaction. If the Consumer supports incremental updates, the contents of the updated payload updates the previous payload data.
-
-{: #inverse-measure}Inverse Measure
-  : A lower calculated performance rate for this measure indicates better clinical care or control. The Diabetes: Hemoglobin A1c (HbA1c) Poor Control (>9%) measure is an example of inverse measure.
-
-{: #measurement-period}Measurement Period
-  : The period of time which a measure will be calculated.  It is defined by the measure (In FHIR represented by the element `Measure.effectivePeriod`).
-
-{: #open-gap}Open Gap
-  : A discrepancy exists between recommended best practices and the services that are actually provided and documented. For example, individuals missing colonoscopy or other screening tests as specified in the Colorectal Cancer Screening measure based on their age groups. For a positive measure, open gaps are identified if an individual is not in the numerator population as specified by the measure. For an inverse measure, open gaps are identified if an individual is in the numerator population as specified by the measure.
-
-{: #positive-measure}Positive Measure
-  : A higher calculated performance rate for this measure indicates better clinical care or control. The Colorectal Cancer Screening measure is an example of positive measure.
-
-{: #prospective-gap}Prospective Gap
-  : A discrepancy will exist in the future between recommended best practices and the services that are actually provided and documented unless actions are taken to provide recommended best practices and document before it becomes an open gap.  A previously identified prospective gap may become closed if actions were taken to close the prospective gap, or it may become open if actions are not taken to close it.
-
-{: #reporting-period}Reporting Period
-  : The period of time defined by the reporting program for a set of data to be submitted.  This term is not used in this implementation guide to avoid confusion with program specific definitions. This can be equal to or a subset of the Measurement Period.
-
-{: #snapshot-update}Snapshot Update
-  : In contrast to the Incremental Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains all the DEQM and QI-Core Profiles for each transaction.  If the Consumer supports snapshot updates, the contents of the updated payload entirely replaces the previous payload.
-
-{: #submission-period}Submission period
-  : For this Implementation guide, submission period is the period of time in which data can exchanged when describing the FHIR transactions for data exchange, and measure reporting. The submission period typically overlaps with the measurement period and reporting period.
-
-For additional definitions see the [eCQI Resource Center Glossary]
-
-
-### Table of Acronyms
-
-|Acronym|Definition|
-|---|---|
-|API|Application Program Interface|
-|CDS|Clinical Decision Support|
-|CMS |Centers for Medicare and Medicaid Services |
-|COL |Colorectal Cancer Screening Measure|
-|CQFM|Clinical Quality Framework Measures|
-|CQL |Clinical Quality Language|
-|CQM |Clinical Quality Measures|
-|DEQM|Data Exchange For Quality Measures|
-|eCQM|electronic Clinical Quality Measures|
-|EHR|Electronic Health Record|
-|FHIR|Fast Healthcare Interoperability Resources|
-|GIC|Gaps In Care|
-|MRP|Medication Reconciliation Post-discharge Measure|
-|QDM|Quality Data Model|
-|R4|FHIR Release 4|
-|REST|Representational State Transfer|
-|STU3|FHIR Release 3 (STU)|
-|VTE-1|Venous Thromboembolism Prophylaxis Measure|
+### Acknowledgements
 
 ---
 
