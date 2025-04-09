@@ -2,11 +2,16 @@
 
 ###  Introduction
 
-The purpose of this implementation guide is to support value-based care data exchange in the US Realm.  However, this Implementation Guide can be usable for multiple use cases across domains, and much of the content is likely to be usable outside the US Realm.
+This implementation guide defines a framework to support quality measurement, reporting, and related use cases by enabling the following capabilities:
+
+1. The reporting of quality measurement results, with or without the data involved in calculating those results
+2. The definition and exchange of the [_data of interest_](glossary.html#data-of-interest) for a measure or set of measures
 
 Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models. To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common information models and data exchange standards. The intent of the framework defined in this guide is to enable automatic data collection and submission limiting the need for manual processing and intervention.  Ultimately, a national standard based on FHIR for data structure and exchange will reduce the burden on clinicians of transforming data between systems.
 
-This Implementation Guide is supported by the [Da Vinci] initiative which is a private effort to accelerate the adoption of Health Level Seven International Fast Healthcare Interoperability Resources (HL7® FHIR®) as the standard to support and integrate value-based care (VBC) data exchange across communities. Like all Da Vinci Implementation Guides, it follows the [HL7 Da Vinci Guiding Principles] for exchange of patient health information.  The guide is based upon the prior work from the [US Core], [QI-Core], and [HEDIS] Implementation Guides and the [QRDA] Category I and III reporting specifications. Changes to this specification are managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard HL7 balloting process.
+Although this implementation guide is US Realm, the framework is not realm-specific and much of the content is usable in other realms.
+
+The guide is based upon prior work from the [US Core] and [QI-Core] Implementation Guides and the [QRDA] Category I and III reporting specifications. Changes to this specification are managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard HL7 balloting process.
 
 ### How to read this Guide
 
@@ -36,12 +41,9 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [**Examples**](examples.html): List of all the examples used in this guide.
 - [**Downloads**](downloads.html): This page provides links to downloadable artifacts.
 
-> NOTE: Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
-{:.stu-note}
-
 ### Scenarios
 
-This implementation guide defines a framework to support quality measurement, reporting, and related use cases by enabling both the exchange of the [_data of interest_](glossary.html#data-of-interest) for a measure or set of measures, as well as the reporting of quality measurement results, with or without the data involved in calculating those results. The following scenarios illustrate the various ways that this framework can be used, providing an overview of and index into the more detailed use cases and specification documentation in the implementation guide.
+The following scenarios illustrate the various ways that the DEQM framework can be used, providing an overview of and index into the more detailed use cases and specification documentation in the implementation guide.
 
 Broadly, these scenarios fall into three categories: 1) *Reporting Scenarios*, focused on communicating the results of a quality measure calculation at the end of a [_measurement period_](glossary.html#measurement-period) as part of a quality improvement initiative, 2) *Exchange Scenarios*, focused on echanging the data of interest for a measure or set of measures throughout the measurement period, and 3) Gaps in care scenarios.
 
