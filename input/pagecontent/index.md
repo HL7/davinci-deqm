@@ -11,7 +11,7 @@ Interoperability challenges have limited many stakeholders in the healthcare com
 
 Although this implementation guide is US Realm, the framework is not realm-specific and much of the content is usable in other realms.
 
-The guide is based upon prior work from the [US Core] and [QI-Core] Implementation Guides and the [QRDA] Category I and III reporting specifications. Changes to this specification are managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard HL7 balloting process.
+The guide is based upon prior work from the [US Core] and [QI-Core] Implementation Guides and the [QRDA] Category I and III reporting specifications. Initially supported by the [Da Vinci] initiative, development and ongoing maintenance of this specification is managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups and are incorporated as part of the standard HL7 balloting process.
 
 ### How to read this Guide
 
