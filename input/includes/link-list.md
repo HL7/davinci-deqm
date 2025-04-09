@@ -174,16 +174,16 @@
 [The Quality Improvement Ecosystem Diagram]: index.html#quality-improvement-ecosystem
 [CMS0108v12]: https://ecqi.healthit.gov/ecqm/eh/2024/cms0108v12
 [CMS130]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v8.html
-[closed gap]: index.html#glossary
-[closed gaps]: index.html#glossary
-[open gap]: index.html#glossary
-[open gaps]: index.html#glossary
-[open, closed, and prospective gaps]: index.html#glossary
-[open, closed, and/or prospective gaps]: index.html#glossary
-[open, closed, or prospective gaps]: index.html#glossary
-[prospective gap]: index.html#glossary
-[prospective gaps]: index.html#glossary
-[gaps through period]: index.html#glossary
-[Gaps through period]:  index.html#glossary
+[closed gap]: glossary.html
+[closed gaps]: glossary.html
+[open gap]: glossary.html
+[open gaps]: glossary.html
+[open, closed, and prospective gaps]: glossary.html
+[open, closed, and/or prospective gaps]: glossary.html
+[open, closed, or prospective gaps]: glossary.html
+[prospective gap]: glossary.html
+[prospective gaps]: glossary.html
+[gaps through period]: glossary.html
+[Gaps through period]:  glossary.html
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html
 [Reporting Population Data]: http://hl7.org/fhir/clinicalreasoning-quality-reporting.html#reporting-population-data
