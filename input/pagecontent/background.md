@@ -1,5 +1,3 @@
-### Background
-{: #background}
 
 <!-- Quality Improvement Ecosystem -->
 

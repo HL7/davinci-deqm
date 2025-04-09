@@ -14,7 +14,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction for The Data Exchange For Quality Measures (DEQM) implementation guide.
 
-- [Scenarios]\: This topic provides an overview of the scenarios supported by the DEQM framework.
+- [Scenarios](#scenarios)\: This topic provides an overview of the scenarios supported by the DEQM framework.
 
 - [Background]\: This page provides background for the Clinical Quality Measures Ecosystem and Quality Reporting use cases.
 
