@@ -12,53 +12,32 @@ This Implementation Guide is supported by the [Da Vinci] initiative which is a p
 
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
-- [Home]\: The home page provides the introduction for The Data Exchange For Quality Measures (DEQM) implementation guide.
-
-- [Scenarios](#scenarios)\: This topic provides an overview of the scenarios supported by the DEQM framework.
-
-- [Background]\: This page provides background for the Clinical Quality Measures Ecosystem and Quality Reporting use cases.
-
-- [Framework]\: These pages provide guidance on the set of FHIR transactions that provide a general framework to enable the exchange of measure data.
-
-  -  [General Guidance] gives overall guidance including preconditions, assumptions and an overview of the FHIR artifacts used in the different  reporting scenarios.
-
-  -  [Data Exchange] gives guidance on the interactions between Consumers and Producers to exchange the data of interest for a measure.
-
-  -  [Individual Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the individual reports for a measure.
-
-  -  [Summary Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
-
-  - [Subject List Reporting] gives guidance on the interactions between Reporters and Receivers to exchange the subject-list reports for a measure.
-
-  -  [Gaps in Care Reporting] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
-
-- [Use cases]\: Three example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
-
-    - [Medication Reconciliation (MRP)]\: This example shows how to implement a data exchange, and individual and summary measure reporting for the medication reconciliation post-discharge measure.
-
-    - [Colorectal Cancer Screening (COL)]\: The colonoscopy measure is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening for all patients in the population receiving care during the measurement period.
-
-    - [Venous Thromboembolism Prophylaxis (VTE-1)]\: This example is based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the
+- [**Home**]\: The home page provides the introduction for The Data Exchange For Quality Measures (DEQM) implementation guide.
+- [**Scenarios**](#scenarios)\: This topic provides an overview of the scenarios supported by the DEQM framework.
+- [**Background**]\: This page provides background for the Clinical Quality Measures Ecosystem and Quality Reporting use cases.
+- [**Framework**]\: These pages provide guidance on the set of FHIR transactions that provide a general framework to enable the exchange of measure data.
+  - [**General Guidance**] gives overall guidance including preconditions, assumptions and an overview of the FHIR artifacts used in the different  reporting scenarios.
+  - [**Data Exchange**] gives guidance on the interactions between Consumers and Producers to exchange the data of interest for a measure.
+  - [**Individual Reporting**] gives guidance on the interactions between Reporters and Receivers to exchange the individual reports for a measure.
+  - [**Summary Reporting**] gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
+  - [**Subject List Reporting**] gives guidance on the interactions between Reporters and Receivers to exchange the subject-list reports for a measure.
+  - [**Gaps in Care Reporting**] gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure. Note that Clients and Servers are defined in section 1.7.3. Gaps in Care Reporting Scenarios.
+- [**Use cases**]\: Three example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
+    - [**Medication Reconciliation (MRP)**]\: This example shows how to implement a data exchange, and individual and summary measure reporting for the medication reconciliation post-discharge measure.
+    - [**Colorectal Cancer Screening (COL)**]\: The colonoscopy measure is an example of a process measure evaluating screenings for preventive health services.  Screening measures assess the number of eligible persons receiving clinical guideline recommended screening for all patients in the population receiving care during the measurement period.
+    - [**Venous Thromboembolism Prophylaxis (VTE-1)**]\: This example is based on an existing CMS Eligible Hospital program measure (CMS108v7).  It is an example of a process measure, using proportion scoring and is within the
    Preventative Care Meaningful Measure Area.
+   -  [**Gaps in Care**]\: This page lists example use cases for Gaps in Care Reporting.
+- [**FHIR Artifacts**]\: List of all DEQM FHIR artifacts.
+  - [**Profiles and Extensions**]\: A list of all DEQM FHIR profiles and extensions.
+  - [**Operations**]\: A list of all DEQM operations.
+  - [**Terminology**]\: A list of all DEQM terminology code systems and value sets.
+  - [**Capability statements**]\: A list of all DEQM capability statements for the various DEQM roles.
+- [**Examples**]\: List of all the examples used in this guide.
+- [**Downloads**]\: This page provides links to downloadable artifacts.
 
-   -  [Gaps in Care]\: This page lists example use cases for Gaps in Care Reporting.
-
-- [FHIR Artifacts]\: List of all DEQM FHIR artifacts.
-
-  - [Profiles and Extensions]\: A list of all DEQM FHIR profiles and extensions.
-
-  - [Operations]\: A list of all DEQM operations.
-
-  - [Terminology]\: A list of all DEQM terminology code systems and value sets.
-
-  - [Capability statements]\: A list of all DEQM capability statements for the various DEQM roles.
-
-*Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
+> NOTE: Additional use cases and examples will be developed and made available [here](https://confluence.hl7.org/display/DVP/DEQM+with+Gaps+in+Care+Supplemental+Guide) outside this implementation guide .
 {:.stu-note}
-
-- [Examples]\: List of all the examples used in this guide.
-
-- [Downloads]\: This page provides links to downloadable artifacts.
 
 ### Scenarios
 
@@ -70,7 +49,7 @@ As a precondition, systems in these scenarios have already obtained the relevant
 
 #### Reporting Scenarios
 
-Reporting scenarios are used to report the results of quality measures on patient populations at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement program or initiative by a payer or other quality improvement stakeholder such as public health agencies with use cases that are typically more focused on the reporting scenarios.
+Reporting scenarios are used to report the results of quality measures on patient populations at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement initiative by a payer or other quality improvement stakeholder such as public health agencies with use cases that are typically more focused on the reporting scenarios.
 
 For the reporting scenarios, the actors are Reporters and Receivers:
 
@@ -78,7 +57,7 @@ For the reporting scenarios, the actors are Reporters and Receivers:
 
 **Receivers** are the actors receiving the results of quality measures. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations.
 
-In each of these scenarios, the patients to be considered are determined by _attribution_. Since different quality programs and initiatives may use the same measures with different attribution models, attribution is typically not specified as part of the measure specifications. The [DaVinci Member Attribution List](https://hl7.org/fhir/us/davinci-atr/) implementation guide supports the definition and exchange of member attribution lists as a potential approach to identifying patients to be considered for reporting.
+In each of these scenarios, the patients to be considered are determined by _attribution_. Since different quality initiatives may use the same measures with different attribution models, attribution is typically not specified as part of the measure specifications. The [DaVinci Member Attribution List](https://hl7.org/fhir/us/davinci-atr/) implementation guide supports the definition and exchange of member attribution lists as a potential approach to identifying patients to be considered for reporting.
 
 ##### Population Reporting Without Supporting Data
 
@@ -102,7 +81,7 @@ In this scenario, a _reporter_ such as a hospital submits individual level quali
 
 1. The _measure evaluation service_ gathers the _data of interest_ from the _clinical data repository_ using the FHIR API
 2. The _measure evaluation service_ calculates the measure, producing a MeasureReport for each attributed patient
-3. The _measure evaluation service_ assembles a Bundle for each patient, consisting of the calculated MeasureReport and any data referenced during the calculation
+3. The _measure evaluation service_ assembles a Bundle for each patient, consisting of the calculated MeasureReport and any data referenced during the calculation (i.e. evaluatedResource)
 4. The _measure evaluation service_ POSTs the measure report Bundles to the _receiver_
 
 In this scenario, there is a Bundle of individual-level patient data for each attributed Patient. Determining the overall measure score then requires the additional step of aggregating the individual MeasureReport resources. Alternatively, a subject-list report can be included that references all the individual-level MeasureReports and provides the summary level measure score.
@@ -127,7 +106,7 @@ For simplicity, each of the above reporting scenarios is specified in terms of a
 2. _data of interest_: Exchanging data of interest for multiple measures prevents data elements that are used by multiple measures from being communicated more than once
 3. _submitted data_: In submitted measure report bundles, multiple MeasureReports may be included, allowing each measure report to reference only data used by that measure
 
-In the simplest case, this approach identifies all the data required for calculation of any measure used in the quality program.
+In the simplest case, this approach identifies all the data required for calculation of any measure used in the quality initiative.
 
 However, the approach also allows for submitting systems to choose which measures they are reporting, and determine only the data required for those measures.
 
