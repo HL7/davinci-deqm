@@ -101,29 +101,6 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:supplementalData.extension:criteriaReference">
-      <path value="MeasureReport.extension.extension"/>
-      <sliceName value="criteriaReference"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.extension:supplementalData.extension:description">
-      <path value="MeasureReport.extension.extension"/>
-      <sliceName value="description"/>
-      <short value="Description of the supplemental data"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="MeasureReport.extension:scoring">
       <path value="MeasureReport.extension"/>
       <sliceName value="scoring"/>
@@ -137,6 +114,32 @@
       <condition value="deqm-2"/>
       <condition value="deqm-3"/>
       <condition value="deqm-6"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:supplementalData.value[x]">
+      <path value="MeasureReport.extension.value[x]"/>
+    </element>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:criteriaReference">
+      <path value="MeasureReport.extension.value[x].extension"/>
+      <sliceName value="criteriaReference"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:description">
+      <path value="MeasureReport.extension.value[x].extension"/>
+      <sliceName value="description"/>
+      <short value="Description of the supplemental data"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:vendor">

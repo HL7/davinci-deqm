@@ -122,8 +122,8 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:supplementalData.extension:criteriaReference">
-      <path value="MeasureReport.extension.extension"/>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:criteriaReference">
+      <path value="MeasureReport.extension.value[x].extension"/>
       <sliceName value="criteriaReference"/>
       <min value="0"/>
       <max value="1"/>
@@ -133,16 +133,15 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:supplementalData.extension:populationDescription">
-      <path value="MeasureReport.extension.extension"/>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:description">
+      <path value="MeasureReport.extension.value[x].extension"/>
       <sliceName value="description"/>
       <short value="Description of the supplemental data"/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile
-          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
