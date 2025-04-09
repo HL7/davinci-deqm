@@ -116,6 +116,10 @@ For more details on data requirements, see the [Data Requirements](datax.html#ga
 
 #### Exchange Scenarios
 
+In addition to the reporting scenarios, Figure 1-4 illustrates *Exchange Scenarios* and their relationship to the *Reporting Scenarios*.
+
+{% include img-portrait.html caption = "Figure 1-4 Quality Reporting Scenarios" img="quality-reporting-scenarios.png" %}
+
 Exchange scenarios are used to exchange subsets of the data of interest for a measure or set of measures throughout the measurement period. These scenarios enable providers and quality stakeholders such as payers, accountable care organizations, and other secondary use partners to keep better track of how patients are performing with respect to a particular quality measure during the measurement period.
 
 <p>The three exchange scenarios are:</p>
@@ -141,15 +145,6 @@ For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 **Clients** are the actors requesting gaps in care results of quality measure(s). Depending on the reporting requirements for a particular scenario as well as the technical capabilities of the systems involved, the clients may be different stakeholders such as providers, provider organizations, aggregators, or payers. For example, if a provider requests a report from the payer's system, then the provider serves as the client. If a payer requests a report from their own system, they are the client.
 
 **Servers** are the actors receiving the request for the Gaps in Care Report and producing it based on the information they have in their system. Again, depending on the reporting requirements and technical capabilities, receivers may be different stakeholders, but are typically aggregate-level stakeholders such as healthcare agencies, payers, and quality improvement organizations. For example, if a provider requests a report from the payer's system, then the payer's system serves as the server. If a payer requests a report from their own system, the payer's system serves as the server.
-
-In addition to _what_ data is reported, use cases frequently require the
-communication of _when_, _where_ and _how_ to report. See the
-[Electronic Case Reporting (eCR) implementation guide](http://hl7.org/fhir/us/ecr/2018Sep/design-considerations.html#fhir-design-considerations)
-for a more complete discussion of these design considerations. We are actively
-seeking feedback from implementers how this type of information is currently
-communicated in quality reporting scenarios and when it would be useful to do
-so electronically.
-{: .stu-note}
 
 ### Acknowledgements
 
