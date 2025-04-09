@@ -244,6 +244,11 @@ definition:
         reference: Bundle/multiple-summ-report
       description: DEQM Multiple Summ Report example
     - exampleBoolean: true
+      name: Location Aware example
+      reference: 
+        reference: Bundle/Location-Aware-example
+      description: Bundle with location aware information
+    - exampleBoolean: true
       name: DEQM Software System Example
       reference:
         reference: Device/deqm-software-system-example
@@ -438,6 +443,11 @@ definition:
       reference:
         reference: Organization/gaps-organization-reportingvendor
       description: GIC Reporting Vendor Organization example
+    - exampleBoolean: true
+      name: Ad Hoc Operation Reporting input
+      reference:
+        reference: Bundle/ad-hoc-operation-reporting-input
+      description: Ad Hoc Operation Reporting input example
     - exampleBoolean: true
       name: Gaps Composition01
       reference:

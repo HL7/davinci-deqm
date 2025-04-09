@@ -72,7 +72,7 @@
         </element>
         <element id="DetectedIssue.evidence.detail">
             <path value="DetectedIssue.evidence.detail"/>
-            <short value="This references either a DEQM Individual MeasureReport or a GuidanceResponse resource. Note that referencing the GuidanceResponse resource allows potential profiling on GuidanceResponse in the future without breaking backward compatibility."/>
+            <short value="This references either a DEQM Individual MeasureReport or a Detailed Care Gap Guidance Response resource."/>
             <comment value="The reason that this supports a reference to a DEQM Individual MeasureReport is because a DEQM Gaps In Care DetectedIssue may be used stand alone and not be part of the DEQM Gaps In Care Composition."/>
             <type>
                 <code value="Reference"/>
@@ -81,6 +81,17 @@
             </type>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="DetectedIssue.evidence.detail.extension:criteriaReference">
+            <path value="DetectedIssue.evidence.detail.extension"/>
+            <sliceName value="criteriaReference"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
+            </type>
             <mustSupport value="true"/>
         </element>
     </differential>

@@ -196,7 +196,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>

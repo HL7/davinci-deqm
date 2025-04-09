@@ -147,8 +147,10 @@
 [DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
 [DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
 [DEQM Gaps In Care Group Profile]: StructureDefinition-gaps-group-deqm.html
+[DEQM Gaps In Care Gap Status Value Set]: ValueSet-gaps-status.html
 [DEQM Gap Status Extension]: StructureDefinition-extension-gapStatus.html
 [DEQM Care Gap Guidance Response]: StructureDefinition-gaps-guidanceresponse-detailedcaregap.html
+
 
 [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/
 [Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
@@ -159,7 +161,7 @@
 [Gaps In Care]: gaps-examples.html
 [Operations]: operations.html
 [Terminology]: terminology.html
-[DEQM Population Reference Extension]: StructureDefinition-extension-populationReference.html
+[CQF Criteria Reference Extension]:  http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference 
 [DEQM Criteria Reference Extension]: StructureDefinition-extension-criteriaReference.html
 [base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html
 [Datax Measurereport01]: MeasureReport-datax-measurereport01.html

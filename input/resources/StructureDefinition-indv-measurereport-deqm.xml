@@ -79,7 +79,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:measurereport-category">
       <path value="MeasureReport.extension"/>
@@ -281,7 +280,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.period">
       <path value="MeasureReport.period"/>
