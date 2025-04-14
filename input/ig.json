@@ -65,18 +65,6 @@
                 "value": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"
             },
             {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"
-            },
-            {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"
-            },
-            {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"
-            },
-            {
                 "code": "path-expansion-params",
                 "value": "../input/exp-params.json"
             },
@@ -1229,24 +1217,6 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-calculatedDate"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-numeratorMembership"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-denominatorMembership"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-measurePopulationMembership"
                 }
             }
         ],

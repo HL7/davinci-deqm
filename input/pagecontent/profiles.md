@@ -35,8 +35,5 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Supplemental Data Extension](StructureDefinition-extension-supplementalData.html)                  |
 | [DEQM Calculated Date Extension](StructureDefinition-extension-calculatedDate.html)                  |  
 | [DEQM Measure Report Population Description Extension](StructureDefinition-extension-populationDescription.html) |
-| [DEQM Numerator Membership Extension](StructureDefinition-cqf-numeratorMembership.html) |
-| [DEQM Denominator Membership Extension](StructureDefinition-cqf-denominatorMembership.html) |
-| [DEQM Measure Population Membership Extension](StructureDefinition-cqf-measurePopulationMembership.html) |
 
 {% include link-list.md %}
