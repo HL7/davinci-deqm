@@ -36,6 +36,12 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - detectedIssue.evidence.detail description correction ([FHIR-49844](https://jira.hl7.org/browse/FHIR-49844)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
    - incorrect element used in explanation ([FHIR-49850](https://jira.hl7.org/browse/FHIR-49850)) Applied ([here](gaps-in-care-reporting.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - Care Gaps Supported Measure Scoring ([FHIR-48752](https://jira.hl7.org/browse/FHIR-48752)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html)), ([here](gaps-in-care-reporting.html)) and ([here](guidance.html))
+   - Added Location Aware example bundle and verbiage to guidance page.  ([FHIR-40184](https://jira.hl7.org/browse/FHIR-40184)) Applied ([here](guidance.html#location-awareness-in-measure-reports)), ([here](all-examples.html#bundle)) and ([here](Bundle-Location-Aware-example.html))
+   - Changed 'DEQM Population Reference Extension' references to  'CQF Criteria Reference Extension' and updated associated url  ([FHIR-49920](https://jira.hl7.org/browse/FHIR-49920)) Applied ([here](guidance.html)) and ([here](gaps-in-care-reporting.html))
+   - update CQFM dependency to 5.0.0 ([FHIR-49861](https://jira.hl7.org/browse/FHIR-49861)) Applied to ig.json
+   - remove MS from DEQM profiles ([FHIR-50052](https://jira.hl7.org/browse/FHIR-50052)) Applied ([here](StructureDefinition-summary-measurereport-deqm.html)) and ([here](StructureDefinition-indv-measurereport-deqm.html))
+   - Care Gaps Support for MultiRate Measures (revised) ([FHIR-48758](https://jira.hl7.org/browse/FHIR-48758)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
+   - Code Systems should be in THO or be granted an exemption ([FHIR-48082](https://jira.hl7.org/browse/FHIR-48082)) Applied to ignoreWarnings.txt
    - Since the "Remark" equivalent extension will be added to the Individual MeasureReport, the Patch Operation should be allowed ([FHIR-46205](https://jira.hl7.org/browse/FHIR-46205)) Applied ([here](StructureDefinition-parameters-careGap-Remark-Patch.html)), ([here](gaps-examples.html)), ([here](gaps-in-care-reporting.html)), ([here](Parameters-measurereport01-patch.html)), ([here](Parameters-measurereport01-patch-mult.html)), and ([here](CapabilityStatement-gic-server.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
