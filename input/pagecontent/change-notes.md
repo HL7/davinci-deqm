@@ -36,7 +36,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - detectedIssue.evidence.detail description correction ([FHIR-49844](https://jira.hl7.org/browse/FHIR-49844)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
    - incorrect element used in explanation ([FHIR-49850](https://jira.hl7.org/browse/FHIR-49850)) Applied ([here](gaps-in-care-reporting.html)), ([here](StructureDefinition-indv-measurereport-deqm.html)) and ([here](StructureDefinition-summary-measurereport-deqm.html))
    - Care Gaps Supported Measure Scoring ([FHIR-48752](https://jira.hl7.org/browse/FHIR-48752)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html)), ([here](gaps-in-care-reporting.html)) and ([here](guidance.html))
-   - Since the "Remark" equivalent extension will be added to the Individual MeasureReport, the Patch Operation should be allowed ([FHIR-46205](https://jira.hl7.org/browse/FHIR-46205)) Applied ([here](StructureDefinition-parameters-careGap-Remark-Patch.html)), ([here](gaps-examples.html)), ([here](gaps-in-care-reporting.html)), ([here](Parameters-measurereport01-patch.html)), and ([here](Parameters-measurereport01-patch-mult.html))
+   - Since the "Remark" equivalent extension will be added to the Individual MeasureReport, the Patch Operation should be allowed ([FHIR-46205](https://jira.hl7.org/browse/FHIR-46205)) Applied ([here](StructureDefinition-parameters-careGap-Remark-Patch.html)), ([here](gaps-examples.html)), ([here](gaps-in-care-reporting.html)), ([here](Parameters-measurereport01-patch.html)), ([here](Parameters-measurereport01-patch-mult.html)), and ([here](CapabilityStatement-gic-server.html))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
