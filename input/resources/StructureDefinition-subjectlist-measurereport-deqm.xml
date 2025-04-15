@@ -99,23 +99,26 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:supplementalData.extension:criteriaReference">
-      <path value="MeasureReport.extension.extension"/>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:criteriaReference">
+      <path value="MeasureReport.extension.value[x].extension"/>
       <sliceName value="criteriaReference"/>
+      <min value="0"/>
+      <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:supplementalData.extension:description">
-      <path value="MeasureReport.extension.extension"/>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:description">
+      <path value="MeasureReport.extension.value[x].extension"/>
       <sliceName value="description"/>
       <short value="Description of the supplemental data"/>
+      <min value="0"/>
+      <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile
-          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -430,13 +433,13 @@
     </element>
     <element id="MeasureReport.group.population">
       <path value="MeasureReport.group.population"/>
-      <mustSupport value="true"/>
       <constraint>
         <key value="deqm-8"/>
         <severity value="error"/>
         <human value="The population must either have a count (integer) or a countQuantity (quantity), but not both."/>
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor count.exists()"/>
       </constraint>
+      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.extension:countQuantity">
       <path value="MeasureReport.group.population.extension"/>
@@ -530,8 +533,8 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population">
       <path value="MeasureReport.group.stratifier.stratum.population"/>
-      <mustSupport value="true"/>
       <condition value="popCountQuantity"/>
+      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>

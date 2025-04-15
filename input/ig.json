@@ -62,6 +62,10 @@
         "parameter": [
             {
                 "code": "special-url",
+                "value": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"
+            },
+            {
+                "code": "special-url",
                 "value": "http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"
             },
             {
