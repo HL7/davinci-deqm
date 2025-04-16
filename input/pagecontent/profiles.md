@@ -38,5 +38,6 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Numerator Membership Extension](StructureDefinition-cqf-numeratorMembership.html) |
 | [DEQM Denominator Membership Extension](StructureDefinition-cqf-denominatorMembership.html) |
 | [DEQM Measure Population Membership Extension](StructureDefinition-cqf-measurePopulationMembership.html) |
+| [DEQM Care Gap Remark Extension](StructureDefinition-extension-careGapRemark.html) |
 
 {% include link-list.md %}
