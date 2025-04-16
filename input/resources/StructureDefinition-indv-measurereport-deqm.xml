@@ -325,7 +325,7 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
-      <sliceName value="measureReportGroup"/>
+
       <slicing>
         <discriminator>
           <type value="type"/>
