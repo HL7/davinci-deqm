@@ -1,5 +1,7 @@
 {% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
+Scoring type is determined by the measure's <a href="https://hl7.org/fhir/us/cqfmeasures/measure-conformance.html#population-criteria">population criteria.</a>
+
 ### Mandatory Data Elements and Terminology
 The following data-elements are mandatory (i.e data MUST be present).
 
