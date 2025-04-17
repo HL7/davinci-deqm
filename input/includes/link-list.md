@@ -44,6 +44,7 @@
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
+[FHIR Artifacts]: artifacts.html
 [FHIR operations]: {{site.data.fhir.path}}operations.html "Extended Operations on the RESTful API"
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [Framework]: framework.html
@@ -146,8 +147,10 @@
 [DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
 [DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
 [DEQM Gaps In Care Group Profile]: StructureDefinition-gaps-group-deqm.html
+[DEQM Gaps In Care Gap Status Value Set]: ValueSet-gaps-status.html
 [DEQM Gap Status Extension]: StructureDefinition-extension-gapStatus.html
 [DEQM Care Gap Guidance Response]: StructureDefinition-gaps-guidanceresponse-detailedcaregap.html
+
 
 [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/
 [Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
@@ -158,7 +161,7 @@
 [Gaps In Care]: gaps-examples.html
 [Operations]: operations.html
 [Terminology]: terminology.html
-[DEQM Population Reference Extension]: StructureDefinition-extension-populationReference.html
+[CQF Criteria Reference Extension]:  http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference 
 [DEQM Criteria Reference Extension]: StructureDefinition-extension-criteriaReference.html
 [base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html
 [Datax Measurereport01]: MeasureReport-datax-measurereport01.html
@@ -171,15 +174,16 @@
 [The Quality Improvement Ecosystem Diagram]: index.html#quality-improvement-ecosystem
 [CMS0108v12]: https://ecqi.healthit.gov/ecqm/eh/2024/cms0108v12
 [CMS130]: https://ecqi.healthit.gov/sites/default/files/ecqm/measures/CMS130v8.html
-[closed gap]: index.html#glossary
-[closed gaps]: index.html#glossary
-[open gap]: index.html#glossary
-[open gaps]: index.html#glossary
-[open and closed gaps]: index.html#glossary
-[open and/or closed gaps]: index.html#glossary
-[open or closed gaps]: index.html#glossary
-[prospective gap]: index.html#glossary
-[gaps through period]: index.html#glossary
-[Gaps through period]:  index.html#glossary
+[closed gap]: glossary.html
+[closed gaps]: glossary.html
+[open gap]: glossary.html
+[open gaps]: glossary.html
+[open, closed, and prospective gaps]: glossary.html
+[open, closed, and/or prospective gaps]: glossary.html
+[open, closed, or prospective gaps]: glossary.html
+[prospective gap]: glossary.html
+[prospective gaps]: glossary.html
+[gaps through period]: glossary.html
+[Gaps through period]:  glossary.html
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html
 [Reporting Population Data]: http://hl7.org/fhir/clinicalreasoning-quality-reporting.html#reporting-population-data

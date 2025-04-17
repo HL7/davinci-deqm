@@ -52,6 +52,12 @@
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not() implies group.population.count()&gt;=1"/>
       </constraint>
       <constraint>
+        <key value="deqm-6"/>
+        <severity value="error"/>
+        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
+        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
+      </constraint>
+      <constraint>
         <key value="deqm-7"/>
         <severity value="error"/>
         <human value="If group.stratifier exists,  then group.stratifier.code or the group.stratifier.stratum.component.code is present, but not both"/>
@@ -97,12 +103,12 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData"/>
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:supplementalData.extension:criteriaReference">
-      <path value="MeasureReport.extension.extension"/>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:criteriaReference">
+      <path value="MeasureReport.extension.value[x].extension"/>
       <sliceName value="criteriaReference"/>
       <min value="0"/>
       <max value="1"/>
@@ -112,8 +118,8 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.extension:supplementalData.extension:description">
-      <path value="MeasureReport.extension.extension"/>
+    <element id="MeasureReport.extension:supplementalData.value[x].extension:description">
+      <path value="MeasureReport.extension.value[x].extension"/>
       <sliceName value="description"/>
       <short value="Description of the supplemental data"/>
       <min value="0"/>
@@ -136,7 +142,6 @@
       </type>
       <condition value="deqm-2"/>
       <condition value="deqm-3"/>
-      <condition value="deqm-5"/>
       <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
@@ -201,7 +206,6 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
@@ -395,49 +399,12 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.extension:numeratorMembership">
-      <path value="MeasureReport.group.extension"/>
-      <sliceName value="numeratorMembership"/>
-      <short value="Provides the number of subjects in the numerator population membership."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.group.extension:denominatorMembership">
-      <path value="MeasureReport.group.extension"/>
-      <sliceName value="denominatorMembership"/>
-      <short value="Provides the number of subjects in the denominator population membership."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.group.extension:measurePopulationMembership">
-      <path value="MeasureReport.group.extension"/>
-      <sliceName value="measurePopulationMembership"/>
-      <short value="Provides the number of subjects in the measure population membership."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="MeasureReport.group.code">
       <path value="MeasureReport.group.code"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population">
       <path value="MeasureReport.group.population"/>
-      <condition value="deqm-5"/>
       <constraint>
         <key value="deqm-8"/>
         <severity value="error"/>
