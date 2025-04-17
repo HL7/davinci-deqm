@@ -16,7 +16,7 @@
       <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
     </telecom>
   </contact>
-  <description value="Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/R4/datatypes.html#Quantity) type. The alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod) extension used on the Measure.   The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation. This extension corresponds to the measureScore types in the FHIR R5 version of MeasureReport."/>
+  <description value="Possible value types for the measureScore elements *in addition to* the standard [Quantity](http://hl7.org/fhir/R4/datatypes.html#Quantity) type. For continuous variable measures, the alternate type is determined by the Quality Measure [Aggregate Method](http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod) extension used on the Measure. The reported type of the measureScore for continuous variable measures is determined by the result type of the aggregate method operation. This extension corresponds to the measureScore types in the FHIR R5 version of MeasureReport."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -73,6 +73,9 @@
       </type>
       <type>
         <code value="boolean"/>
+      </type>
+      <type>
+        <code value="Ratio"/>
       </type>
     </element>
   </differential>

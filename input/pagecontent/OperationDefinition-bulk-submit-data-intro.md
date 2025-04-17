@@ -1,5 +1,8 @@
 ## Operation Request Body
 
+> NOTE: Generalized bulk data operations in FHIR are in the process of being updated based on implementer feedback and as part of industry initiatives. As of the time of this publication, those specification updates are still in progress. Implementers should be aware that the $bulk-submit-data operation proposed by this specification will be updated (up to and included simply removed in favor of referencing updated operations) when newer versions of the bulkdata import and export specifications are published.
+{:.stu-note}
+
 The request body for this operation is a [FHIR Parameters Resource](https://www.hl7.org/fhir/parameters.html). The body SHALL include a FHIR MeasureReport Resource of type `data-collection` that references a measure by canonical URL. Additionally, the FHIR Parameters resource SHALL include the URL of a Data Provider, as defined in the [Bulk Data Import Ping and Pull Approach](https://github.com/smart-on-fhir/bulk-import/blob/master/import-pnp.md#bulk-data-import-kick-off-request-ping-from-data-provider-to-data-consumer). The Data Provider SHALL support `$export`. It is assumed that the data-of-interest for the measure referenced in the MeasureReport lives on the Data Provider server.
 
 ### Request Flow

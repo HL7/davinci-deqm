@@ -43,14 +43,6 @@
     "group": [
         {
             "id": "location-datetime",
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership",
-                    "valueQuantity": {
-                        "value": 1
-                    }
-                }
-            ],
             "population": [
                 {
                     "code": {

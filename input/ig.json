@@ -49,7 +49,7 @@
             "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
         },
         {
-            "version": "5.0.0-ballot2",
+            "version": "5.0.0",
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
@@ -63,18 +63,6 @@
             {
                 "code": "special-url",
                 "value": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"
-            },
-            {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"
-            },
-            {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"
-            },
-            {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"
             },
             {
                 "code": "path-expansion-params",
@@ -284,11 +272,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Summ Attestation",
+                "name": "MeasureReport Attestation Boolean",
                 "reference": {
-                    "reference": "MeasureReport/summ-attestation"
+                    "reference": "MeasureReport/attestation-boolean-example"
                 },
-                "description": "DEQM Summ Attestation example"
+                "description": "DEQM Attestation Boolean example"
             },
             {
                 "exampleBoolean": true,
@@ -372,11 +360,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Ad Hoc Operation Reporting input",
+                "name": "Ad Hoc Operation Input Example",
                 "reference": {
-                    "reference": "Bundle/ad-hoc-operation-reporting-input"
+                    "reference": "Organization/ad-hoc-organization"
                 },
-                "description": "Ad Hoc Operation Reporting input example"
+                "description": "Ad Hoc Operation Input Example"
             },
             {
                 "exampleBoolean": true,
@@ -467,6 +455,14 @@
                 "description": "DEQM Multiple Summ Report example"
             },
             {
+                "exampleBoolean": true,
+                "name": "Location Aware example",
+                "reference": {
+                    "reference": "Bundle/Location-Aware-example"
+                },
+                "description": "Bundle with location aware information"
+            },
+             {
                 "exampleBoolean": true,
                 "name": "DEQM Software System Example",
                 "reference": {
@@ -1109,12 +1105,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-supplementalData"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -1182,12 +1172,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-populationReference"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "StructureDefinition/extension-criteriaReference"
                 }
             },
@@ -1238,30 +1222,17 @@
                 "reference": {
                     "reference": "StructureDefinition/extension-calculatedDate"
                 }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-numeratorMembership"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-denominatorMembership"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-measurePopulationMembership"
-                }
             }
         ],
         "page": {
             "generation": "markdown",
             "nameUrl": "index.html",
             "page": [
+                {
+                    "generation": "markdown",
+                    "nameUrl": "background.html",
+                    "title": "Background"
+                },
                 {
                     "generation": "markdown",
                     "nameUrl": "framework.html",
@@ -1360,6 +1331,11 @@
                     "generation": "markdown",
                     "nameUrl": "change-notes.html",
                     "title": "Change Notes"
+                },
+                {
+                    "generation": "markdown",
+                    "nameUrl": "glossary.html",
+                    "title": "Glossary"
                 }
             ],
             "title": "Home"

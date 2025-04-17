@@ -65,11 +65,15 @@ Receiving systems need to consider the possibility that some duplicate data may 
 
 #### Measure Reporting
 
-Measure Reporting is done by a Reporter who has all of the data that is required to generate a report(s). Two profiles for measure reporting have been defined in this guide.
+Measure Reporting is done by a Reporter who has all of the data that is required to generate a report(s). Three profiles for measure reporting have been defined in this guide.
 
-The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
+The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome. The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
 
-The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure measurement period. It  includes the measure outcome data and is similar to a QRDA Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
+The [DEQM Subject List MeasureReport Profile] is used when a measure is reported for a list of subjects, and it also allows Individual MeasureReports be provided for each of the subjects in the population.
+
+The [DEQM Summary MeasureReport Profile] is used when a measure is reported for a group of patients at the conclusion of a measure measurement period. It includes the measure outcome data. Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.
+
+Measure population determination SHALL be done as specified in the Quality Measure IG's section [Population Criteria](https://hl7.org/fhir/us/cqfmeasures/measure-conformance.html#population-criteria). This section describes how the appropriate population is determined for each subject when evaluating a measure. These populations are reported in the measure reports.
 
 #### Data Quality
 
@@ -81,7 +85,7 @@ Gaps in Care Reporting can be requested by a Client to a Server system that has 
 
 When the [care-gaps](OperationDefinition-care-gaps.html) operation is run on the Server, it returns a FHIR Bundle for each patient. The bundle conforms to the [DEQM Gaps In Care Bundle Profile], which must contain a Composition that uses the [DEQM Gaps In Care Composition Profile]. The DEQM Gaps In Care Composition references one to many MeasureReport resource; each MeasureReport is for a single measure and conforms to the [DEQM Individual MeasureReport Profile]. Optionally, the actual individual MeasureReport resources referenced are also packaged in the same DEQM Gaps In Care Bundle, along with Patient, Organization, and other resources that were used to calculate this measure. A DetectedIssue resource defined using the [DEQM Gaps In Care DetectedIssue Profile] must be included to indicate gap status of that measure via the [DEQM Gap Status Extension], a modifier extension.
 
-The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps] or [prospective gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with any combination of [open, closed, and prospective gaps]. The [DEQM Population Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [DEQM Population Reference Extension], the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
+The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps] or [prospective gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with any combination of [open, closed, and prospective gaps]. The [CQF Criteria Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [DEQCQF Criteria Reference Extension]the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
 
 #### Group, Stratifier, and Population Codes and Ids
 
@@ -95,13 +99,15 @@ For example, the below measure population criteria and stratifier would result i
 
 ### DEQM Operation Bundles Organized by Subject
 
-The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles. 
+The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles.
 
 ### Ad-hoc Organizations for DEQM Operations
 
-Data producers and consumers may often want to gather data from different locations and providers within a large organization that is comprised of multiple sub-organizations. In such cases, it can be desirable to model portions of the organization from which data should be gathered as a way to target data requests. The $care-gaps and $collect-data operations allow an Organization resource to be either referenced or passed in as part of the request body. If it is passed in, it can be an ad-hoc Organization created only as part of that request. PractitionerRole and Practitioner resources can be linked to the Organization to model the set of participating practitioners.
+Data producers and consumers may want to gather data from different locations and providers within a large organization that is comprised of multiple sub-organizations. In such cases, it can be desirable to model portions of the organization from which data should be gathered as a way to target data requests. The $care-gaps and $collect-data operations allow an Organization resource to be either referenced or passed in as part of the request body. If it is passed in, it can be an ad-hoc Organization created only as part of that request. PractitionerRole resources can be used to link Practitioner resources to the Organization to model the set of participating practitioners.
 
-The example <link to the example> illustrates two Organizations, three Practitioners, and four PractitionerRoles. It also contains a set of Encounters that each reference two of the Practitioners and a singular Patient.
+The ad-hoc organization example <link to the example> illustrates an Organization resource with two contained PractitionerRole resources. It assumes a simple attribution model for the patient-provider interactions. In practice, attribution of patient encounters to providers will be more sophisticated and include factors such as coverage, ACOs, etc.
+
+The organization provided in $care-gaps or $collect-data, whether in the "organization" parameter or the "organizationResource" parameter, SHALL be the reporter in the resulting measure report(s) and SHALL be included as a contained resource if necessary. When included as a contained resource in the measure report, the structure must be flattened so that the Organization does not have any contained resources because contained resources cannot themselves have contained resources. References among the contained resources SHALL be maintained. See the organizationResource example and the resulting MeasureReport example.
 
 ### Default Profiles Used in the Evaluation of a Measure
 
@@ -156,5 +162,9 @@ Must Support guidance here requires additional clarifications, we are seeking im
 {:.stu-note}
 
 <br />
+
+### Location Awareness In Measure Reports
+
+Healthcare is very often geographical in nature and, in particular, it's local. Reporting in the public health domain often benefits from geographical analysis as causal relations are often geographic in nature. Epidemiologic spread of disease is proximity based; climate refugees follow the paths of storms or wildfires; hospitals report increased numbers of some conditions (i.e. heatstroke) based on seasonality and location. To this extent, MeasureReports benefit from being location aware. Important approaches include ZIP (postal routes), FIP (county taxation), HSA (ambulance dispatch zones, approximately), and GPS (point location). In some instances, _geography_ parameters for outlining the boundary of a location in GEOJSON format are also useful. The [Examples] include a Location-Aware Bundle as an illustration.
 
 {% include link-list.md %}
