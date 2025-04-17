@@ -65,11 +65,15 @@ Receiving systems need to consider the possibility that some duplicate data may 
 
 #### Measure Reporting
 
-Measure Reporting is done by a Reporter who has all of the data that is required to generate a report(s). Two profiles for measure reporting have been defined in this guide.
+Measure Reporting is done by a Reporter who has all of the data that is required to generate a report(s). Three profiles for measure reporting have been defined in this guide.
 
-The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome and is similar to a QRDA Category 1 report.  The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
+The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome. The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
 
-The [DEQM Summary MeasureReport Profile] is used when a measure is reported   for a group of patients at the conclusion of a measure measurement period. It  includes the measure outcome data and is similar to a QRDA Category 3 report.  Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.  Although several Summary reports may be transacted together as Bundle.
+The [DEQM Subject List MeasureReport Profile] is used when a measure is reported for a list of subjects, and it also allows Individual MeasureReports be provided for each of the subjects in the population.
+
+The [DEQM Summary MeasureReport Profile] is used when a measure is reported for a group of patients at the conclusion of a measure measurement period. It includes the measure outcome data. Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.
+
+Measure population determination SHALL be done as specified in the Quality Measure IG's section [Population Criteria](https://hl7.org/fhir/us/cqfmeasures/measure-conformance.html#population-criteria). This section describes how the appropriate population is determined for each subject when evaluating a measure. These populations are reported in the measure reports.
 
 #### Data Quality
 
@@ -95,7 +99,7 @@ For example, the below measure population criteria and stratifier would result i
 
 ### DEQM Operation Bundles Organized by Subject
 
-The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles. 
+The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles.
 
 ### Ad-hoc Organizations for DEQM Operations
 

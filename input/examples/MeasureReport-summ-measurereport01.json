@@ -50,20 +50,6 @@
     },
     "group": [
         {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership",
-                    "valueQuantity": {
-                        "value": 100
-                    }
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership",
-                    "valueQuantity": {
-                        "value": 80
-                    }
-                }
-            ],
             "code": {
                 "coding": [
                     {
