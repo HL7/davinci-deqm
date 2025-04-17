@@ -372,11 +372,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Ad Hoc Operation Reporting input",
+                "name": "Ad Hoc Operation Input Example",
                 "reference": {
-                    "reference": "Bundle/ad-hoc-operation-reporting-input"
+                    "reference": "Organization/ad-hoc-organization"
                 },
-                "description": "Ad Hoc Operation Reporting input example"
+                "description": "Ad Hoc Operation Input Example"
             },
             {
                 "exampleBoolean": true,
@@ -1101,12 +1101,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-supplementalData"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -1169,12 +1163,6 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-certificationIdentifier"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-populationReference"
                 }
             },
             {

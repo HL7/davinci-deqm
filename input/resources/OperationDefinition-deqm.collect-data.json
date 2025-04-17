@@ -125,15 +125,16 @@
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "Organization resource for which data-of-interest for the given measure will be collected.",
-          "type": "Organization"
+          "documentation": "Organization resource for which data-of-interest for the given measure will be collected. Either 'organization' or 'organizationResource' SHALL be provided, but not both.",
+          "type": "Organization",
+          "targetProfile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"]
        },
      {
           "name": "organization",
           "use": "in",
           "min": 0,
           "max": "1",
-          "documentation": "Organization (references [QICore Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization)) for which data-of-interest for the given measure will be collected.",
+          "documentation": "Organization (references [QICore Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization)) for which data-of-interest for the given measure will be collected. Either 'organization' or 'organizationResource' SHALL be provided, but not both.",
           "type": "string",
           "searchType": "reference"
       },
