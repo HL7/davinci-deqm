@@ -1,4 +1,4 @@
-#### Quality Measurement Standards Landscape
+### Quality Measurement Standards Landscape
 
 This implementation guide is part of a larger FHIR-based quality improvement
 and quality measurement standards landscape, depicted in the following
@@ -81,7 +81,7 @@ The shaded areas underlying the stakeholders depict the various standards
 involved (see [Clinical Quality Framework](https://confluence.hl7.org/display/CQIWC/Clinical+Quality+Framework)
 for more information).
 
-##### Fast Healthcare Interoperability Resources (FHIR)
+#### Fast Healthcare Interoperability Resources (FHIR)
 {:.no_toc #fast-healthcare-interoperability-resources-(fhir)}
 
 [Fast Healthcare Interoperability Resources](http://hl7.org/fhir),
@@ -102,7 +102,7 @@ profiles; the administrative and process layers to represent the data of
 interest for quality measurement; and the clinical reasoning layer to specify
 and support evaluation and reporting of quality measures.
 
-##### Clinical Quality Language (CQL)
+#### Clinical Quality Language (CQL)
 {:.no_toc #clinical-quality-language-(cql)}
 
 [Clinical Quality Language](https://cql.hl7.org), or CQL, is an HL7 cross-paradigm specification
@@ -117,7 +117,7 @@ as well as an intermediate-level, platform-independent machine-readable form
 makes CQL an ideal mechanism for specifying the criteria involved in quality
 measures.
 
-##### FHIR Quality Measure Implementation Guide
+#### FHIR Quality Measure Implementation Guide
 {:.no_toc #fhir-quality-measure-implementation-guide}
 
 The FHIR Quality Measure Implementation Guide defines conformance
@@ -127,7 +127,7 @@ any particular measure, rather it defines the standard approach to the
 representation of that content so that quality measure specifiers can define and
 share standardized FHIR-based electronic Clinical Quality Measures (eCQMs).
 
-##### Quality Improvement Core Implementation Guide (QI-Core)
+#### Quality Improvement Core Implementation Guide (QI-Core)
 {:.no_toc #quality-improvement-core-implementation-guide-(qi-core)}
 
 The Quality Improvement Core Implementation Guide, or QI-Core, defines a set
@@ -139,7 +139,7 @@ where possible, QI-Core profiles are based on US Core to ensure alignment with
 and support for quality improvement data within healthcare systems in the US
 Realm.
 
-##### Data Exchange for Quality Measures (DEQM)
+#### Data Exchange for Quality Measures (DEQM)
 {:.no_toc #data-exchange-for-quality-measures-(deqm)}
 
 The Data Exchange for Quality Measures Implementation Guide, or DEQM, (this IG)

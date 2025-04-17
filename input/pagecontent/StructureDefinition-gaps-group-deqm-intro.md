@@ -4,13 +4,10 @@
 The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
-1. type: person \| animal \| practitioner \| device \| medication \| substance
-2. actual: Descriptive or actual
-3. characteristic.code: Kind of characteristic
-4. characteristic.value[x]: Value held by characteristic
-5. characteristic.exclude: Group includes or excludes
-6. member: Who is in group
-7. member.entity: Reference to the patient that is in group
+1. member: Who is in group
+2. type: person \| animal \| practitioner \| device \| medication \| substance
+3. member.entity: Reference to the patient that is in group
+4. actual: Descriptive or actual
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 

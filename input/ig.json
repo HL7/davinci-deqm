@@ -1101,12 +1101,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-supplementalData"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -1169,12 +1163,6 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-certificationIdentifier"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-populationReference"
                 }
             },
             {
@@ -1254,6 +1242,11 @@
             "generation": "markdown",
             "nameUrl": "index.html",
             "page": [
+                {
+                    "generation": "markdown",
+                    "nameUrl": "background.html",
+                    "title": "Background"
+                },
                 {
                     "generation": "markdown",
                     "nameUrl": "framework.html",
@@ -1352,6 +1345,11 @@
                     "generation": "markdown",
                     "nameUrl": "change-notes.html",
                     "title": "Change Notes"
+                },
+                {
+                    "generation": "markdown",
+                    "nameUrl": "glossary.html",
+                    "title": "Glossary"
                 }
             ],
             "title": "Home"

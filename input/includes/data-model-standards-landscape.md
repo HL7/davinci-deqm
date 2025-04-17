@@ -1,5 +1,5 @@
 
-#### Data Model Standards Landscape
+### Data Model Standards Landscape
 {: #data-model-standards-landscape}
 
 The quality improvement ecosystem covers every aspect of the healthcare
@@ -66,26 +66,3 @@ measures and decision support artifacts.
 4.  **Promote data-related profiles.** When it becomes necessary to define a data-related profile at the
 measurement-specific level (in DEQM or HEDIS for example), steps should be taken
 to promote that profile to the broadest consensus group possible.
-
-##### FHIR Version Support
-{:.no_toc #fhir-version-support}
-
-There are three broadly used and fully published versions of the FHIR
-specification:
-
--  **FHIR DSTU2** - This version has broad support among US-based
-vendors as it is the basis for the Argonaut profiles. Most major vendors today
-support some subset of this version of FHIR
--    **FHIR STU3** - This is
-the version that US Core, QI Core, and many other implementation guides were originally based on. There is broad vendor support for this version.
--  **FHIR R4** - This is the version that this IG, and most recent versions US Core, QI Core and CQFM are based on.  This is the first normative release of FHIR, including several of the
-foundational, conformance, and administrative resources going normative.
-
-In addition to _what_ data is reported, use cases frequently require the
-communication of _when_, _where_ and _how_ to report. See the
-[Electronic Case Reporting (eCR) implementation guide](http://hl7.org/fhir/us/ecr/2018Sep/design-considerations.html#fhir-design-considerations)
-for a more complete discussion of these design considerations. We are actively
-seeking feedback from implementers how this type of information is currently
-communicated in quality reporting scenarios and when it would be useful to do
-so electronically.
-{: .stu-note}
