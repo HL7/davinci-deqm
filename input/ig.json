@@ -272,11 +272,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Summ Attestation",
+                "name": "MeasureReport Attestation Boolean",
                 "reference": {
-                    "reference": "MeasureReport/summ-attestation"
+                    "reference": "MeasureReport/attestation-boolean-example"
                 },
-                "description": "DEQM Summ Attestation example"
+                "description": "DEQM Attestation Boolean example"
             },
             {
                 "exampleBoolean": true,

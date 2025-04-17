@@ -378,7 +378,7 @@
               "coding": [
                 {
                   "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
-                  "code": "closed-gap"
+                  "code": "open-gap"
                 }
               ]
             }
@@ -425,7 +425,7 @@
               "coding": [
                 {
                   "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
-                  "code": "closed-gap"
+                  "code": "open-gap"
                 }
               ]
             }

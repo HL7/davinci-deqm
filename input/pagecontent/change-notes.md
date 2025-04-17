@@ -42,6 +42,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - remove MS from DEQM profiles ([FHIR-50052](https://jira.hl7.org/browse/FHIR-50052)) Applied ([here](StructureDefinition-summary-measurereport-deqm.html)) and ([here](StructureDefinition-indv-measurereport-deqm.html))
    - Care Gaps Support for MultiRate Measures (revised) ([FHIR-48758](https://jira.hl7.org/browse/FHIR-48758)) Applied ([here](StructureDefinition-gaps-detectedissue-deqm.html))
    - Code Systems should be in THO or be granted an exemption ([FHIR-48082](https://jira.hl7.org/browse/FHIR-48082)) Applied to ignoreWarnings.txt
+   - Added prospective-gap to Gap in Care Example ([FHIR-48455](https://jira.hl7.org/browse/FHIR-48455))([Applied here](gaps-examples.html))
    - Removed DEQMNumeratorMembership, DEQMDenominatorMembership, and DEQMMeasurePopulationMembership extensions ([FHIR-49692](https://jira.hl7.org/browse/FHIR-49692)) Applied ([here](profiles.html))
    - Allow Ratio as an alternateScoreType ([FHIR-50173](https://jira.hl7.org/browse/FHIR-50173)) Applied ([here](StructureDefinition-extension-alternateScoreType.html))
    - rework the ad-hoc Organization for $care-gaps and $collect-data ([FHIR-50053](https://jira.hl7.org/browse/FHIR-50053)) Applied ([here](OperationDefinition-care-gaps.html)), ([here](OperationDefinition-deqm.collect-data.html)), ([here](guidance.html)), and ([here](Organization-ad-hoc-organization.html))

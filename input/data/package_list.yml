@@ -73,4 +73,5 @@ list:
       1. **Applied**: Added Ad Hoc Operation Reporting input example and guidance ([FHIR-40722](https://jira.hl7.org/browse/FHIR-40722))([Applied here](Bundle-ad-hoc-operation-reporting-input.html)), ([here](all-examples.html#bundle)) and ([here](guidance.html#ad-hoc-organizations-for-deqm-operations))
       1. **Applied**: Added Location Aware example bundle and verbiage to guidance page.  ([FHIR-40184](https://jira.hl7.org/browse/FHIR-40184)) Applied ([here](guidance.html#location-awareness-in-measure-reports)), ([here](all-examples.html#bundle)) and ([here](Bundle-Location-Aware-example.html))
       1. **Applied**: Changed 'DEQM Population Reference Extension' references to  'CQF Criteria Reference Extension' and updated associated url ([FHIR-49920](https://jira.hl7.org/browse/FHIR-49920)) Applied ([here](guidance.html)) and ([here](gaps-in-care-reporting.html))
-
+      1. **Applied**: Added prospective-gap to Gap in Care Example ([FHIR-48455](https://jira.hl7.org/browse/FHIR-48455))   ([Applied here](gaps-examples.html))
+      1. **Applied**: Updated and organized examples ([FHIR-43012](https://jira.hl7.org/browse/FHIR-43012))

@@ -574,7 +574,9 @@
           {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
             "valueString": "sde-condition-during-encounter"
-          }
+          },
+		  {"url": "http://hl7.org/fhir/StructureDefinition/description",
+		  "valueString": "sde-condition-during-encounter"}
         ],
         "reference": "Condition/nhsn-iip-con101"
       }

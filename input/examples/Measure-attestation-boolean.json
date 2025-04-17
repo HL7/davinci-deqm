@@ -1,0 +1,27 @@
+{
+  "resourceType": "Measure",
+  "id": "attestation-boolean-example",
+  "meta": {
+    "profile": ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/attestation-measure-cqfm|4.0.0",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure"]
+  },
+  "name": "EXMImmunizationRegistryReporting",
+  "title": "Immunization Registry Reporting",
+  "status": "active",
+  "experimental": true,
+  "description": "Measure: Immunization Registry Reporting: The eligible hospital or CAH is in active engagement with a public health agency (PHA) to submit immunization data and receive immunization forecasts and histories from the public health immunization registry/immunization information system (IIS). Exclusion: Any eligible hospital or CAH meeting one or more of the following criteria may be excluded from the immunization registry reporting measure if the eligible hospital or CAH: i. Does not administer any immunizations to any of the populations for which data is collected by their jurisdiction’s immunization registry or IIS during the electronic health record (EHR) reporting period; ii. Operates in a jurisdiction for which no immunization registry or IIS is capable of accepting the specific standards required to meet the certified electronic health record technology (CEHRT) definition at the start of the EHR reporting period; or iii. Operates in a jurisdiction where no immunization registry or IIS has declared readiness to receive immunization data as of six",
+  "url": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-attestation-boolean-example",
+  "version": "1.0.0",
+  "scoring": {
+    "coding": [{
+        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+        "code": "attestation"
+      }
+    ]
+  },
+  "group": [{
+      "id": "attestation_response",
+      "description": "YES/NO Attestation - The eligible hospital or CAH must attest YES to being in active engagement with a PHA to submit immunization data and receive immunization forecasts and histories from the public health immunization registry/IIS."
+    }
+  ]
+}
