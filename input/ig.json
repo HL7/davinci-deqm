@@ -65,18 +65,6 @@
                 "value": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData"
             },
             {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-denominatorMembership"
-            },
-            {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-numeratorMembership"
-            },
-            {
-                "code": "special-url",
-                "value": "http://hl7.org/fhir/StructureDefinition/cqf-measurePopulationMembership"
-            },
-            {
                 "code": "path-expansion-params",
                 "value": "../input/exp-params.json"
             },
@@ -372,11 +360,11 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Ad Hoc Operation Reporting input",
+                "name": "Ad Hoc Operation Input Example",
                 "reference": {
-                    "reference": "Bundle/ad-hoc-operation-reporting-input"
+                    "reference": "Organization/ad-hoc-organization"
                 },
-                "description": "Ad Hoc Operation Reporting input example"
+                "description": "Ad Hoc Operation Input Example"
             },
             {
                 "exampleBoolean": true,
@@ -1101,12 +1089,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-supplementalData"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "CapabilityStatement/consumer-server"
                 }
             },
@@ -1174,12 +1156,6 @@
             {
                 "exampleBoolean": false,
                 "reference": {
-                    "reference": "StructureDefinition/extension-populationReference"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
                     "reference": "StructureDefinition/extension-criteriaReference"
                 }
             },
@@ -1229,24 +1205,6 @@
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-calculatedDate"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-numeratorMembership"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-denominatorMembership"
-                }
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/cqf-measurePopulationMembership"
                 }
             }
         ],

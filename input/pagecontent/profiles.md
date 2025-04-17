@@ -18,25 +18,21 @@ Payers and providers need common data specification, measure specification, repo
 
 ### Extensions
 
-| Link to Profile                                                                                       |
-|-------------------------------------------------------------------------------------------------------|
-| [DEQM Measure Scoring Extension](StructureDefinition-extension-measureScoring.html)                   |
-| [DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html)          |
-| [DEQM Reporter Group Extension Extension](StructureDefinition-extension-reporterGroup.html)           |
-| [DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)                 |
+| Link to Profile                                                                                     |
+|-----------------------------------------------------------------------------------------------------|
+| [DEQM Measure Scoring Extension](StructureDefinition-extension-measureScoring.html)                 |
+| [DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html)        |
+| [DEQM Reporter Group Extension Extension](StructureDefinition-extension-reporterGroup.html)         |
+| [DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)               |
 | [DEQM Certification Identifier Extension](StructureDefinition-extension-certificationIdentifier.html) |
-| [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)     |
-| [DEQM Criteria Reference Extension](StructureDefinition-extension-criteriaReference.html)             |
-| [~~CQF Criteria Reference Extension~~ (Deprecated)](StructureDefinition-extension-populationReference.html)         |
-| [DEQM Gap Status Extension (Modifier)](StructureDefinition-extension-gapStatus.html)                  |
-| [DEQM Data Location Extension](StructureDefinition-extension-dataLocation.html)                  |
-| [DEQM Group Improvement Notation Extension](StructureDefinition-extension-groupImprovementNotation.html)                  |
-|   [DEQM Reporting Program Extension](StructureDefinition-extension-reportingProgram.html) |
-| [DEQM Supplemental Data Extension](StructureDefinition-extension-supplementalData.html)                  |
-| [DEQM Calculated Date Extension](StructureDefinition-extension-calculatedDate.html)                  |  
+| [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)   |
+| [DEQM Criteria Reference Extension](StructureDefinition-extension-criteriaReference.html)           |
+| [DEQM Gap Status Extension (Modifier)](StructureDefinition-extension-gapStatus.html)                |
+| [DEQM Data Location Extension](StructureDefinition-extension-dataLocation.html)                |
+| [DEQM Group Improvement Notation Extension](StructureDefinition-extension-groupImprovementNotation.html)                |
+| [DEQM Reporting Program Extension](StructureDefinition-extension-reportingProgram.html) |
+| [DEQM Calculated Date Extension](StructureDefinition-extension-calculatedDate.html)                |  
 | [DEQM Measure Report Population Description Extension](StructureDefinition-extension-populationDescription.html) |
-| [DEQM Numerator Membership Extension](StructureDefinition-cqf-numeratorMembership.html) |
-| [DEQM Denominator Membership Extension](StructureDefinition-cqf-denominatorMembership.html) |
-| [DEQM Measure Population Membership Extension](StructureDefinition-cqf-measurePopulationMembership.html) |
+| [DEQM Care Gap Remark Extension](StructureDefinition-extension-careGapRemark.html) |
 
 {% include link-list.md %}

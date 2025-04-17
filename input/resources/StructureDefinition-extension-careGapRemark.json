@@ -152,6 +152,10 @@
           },
           {
             "code": "string"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"]
           }
         ]
       },
@@ -307,10 +311,10 @@
         }
       },
       {
-        "id": "Extension.extension:relatedDataIdentifier",
+        "id": "Extension.extension:relatedData",
         "path": "Extension.extension",
-        "sliceName": "relatedDataIdentifier",
-        "short": "Related data identifier",
+        "sliceName": "relatedData",
+        "short": "Related data",
         "min": 0,
         "max": "*",
         "type": [
@@ -320,7 +324,7 @@
         ]
       },
       {
-        "id": "Extension.extension:relatedDataIdentifier.url",
+        "id": "Extension.extension:relatedData.url",
         "path": "Extension.extension.url",
         "min": 1,
         "max": "1",
@@ -329,16 +333,19 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "relatedDataIdentifier"
+        "fixedUri": "relatedData"
       },
       {
-        "id": "Extension.extension:relatedDataIdentifier.value[x]",
+        "id": "Extension.extension:relatedData.value[x]",
         "path": "Extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Identifier"
+          },
+          {
+            "code": "Reference"
           }
         ]
       },

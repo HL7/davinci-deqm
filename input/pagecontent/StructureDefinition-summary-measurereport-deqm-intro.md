@@ -21,32 +21,29 @@ The following data-elements are mandatory (i.e data MUST be present).
 2. countQuantity: Count as a Quantity
 3. supplementalData: Supplemental Data
 4. group.population: The populations in the group
-5. numeratorMembership: Provides the number of subjects in the numerator population membership.
-6. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
-7. group.population.count: Size of the population
-8. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
-9. group.stratifier.stratum.population.count: Size of the population
-10. group: Measure results for each group
-11. measurePopulationMembership: Provides the number of subjects in the measure population membership.
-12. message: Evaluation messages
-13. group.stratifier.stratum.value: The stratum value, e.g. male
-14. denominatorMembership: Provides the number of subjects in the denominator population membership.
-15. group.code: Meaning of the group
-16. strataltscoretype: Possible additional measureScore value types
-17. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
-18. group.id: Unique id for inter-element referencing
-19. group.stratifier.code: What stratifier of the group
-20. description: Description of the stratifier
-21. altscoretype: Possible additional measureScore value types
-22. measurereport-category: What category is this measure report
-23. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
-24. improvementNotation: increase \| decrease
-25. calculatedDate: The date the score was calculated
-26. groupImprovementNotation: increase \| decrease
-27. description: Description of the group
-28. group.stratifier: Stratification results
-29. group.stratifier.stratum.population: Population results in this stratum
-30. group.stratifier.stratum.measureScore: What score this stratum achieved
+5. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+6. group.population.count: Size of the population
+7. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+8. group.stratifier.stratum.population.count: Size of the population
+9. group: Measure results for each group
+10. message: Evaluation messages
+11. group.stratifier.stratum.value: The stratum value, e.g. male
+12. group.code: Meaning of the group
+13. strataltscoretype: Possible additional measureScore value types
+14. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+15. group.id: Unique id for inter-element referencing
+16. group.stratifier.code: What stratifier of the group
+17. description: Description of the stratifier
+18. altscoretype: Possible additional measureScore value types
+19. measurereport-category: What category is this measure report
+20. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
+21. improvementNotation: increase \| decrease
+22. calculatedDate: The date the score was calculated
+23. groupImprovementNotation: increase \| decrease
+24. description: Description of the group
+25. group.stratifier: Stratification results
+26. group.stratifier.stratum.population: Population results in this stratum
+27. group.stratifier.stratum.measureScore: What score this stratum achieved
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 
