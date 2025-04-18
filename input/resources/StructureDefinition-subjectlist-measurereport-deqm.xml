@@ -61,9 +61,9 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"/>
       </type>
     </element>
-    <element id="MeasureReport.extension:measurereport-category">
+    <element id="MeasureReport.extension:category">
       <path value="MeasureReport.extension"/>
-      <sliceName value="measurereport-category"/>
+      <sliceName value="category"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -303,14 +303,6 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
-      <sliceName value="measureReportGroup"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
       <min value="1"/>
       <max value="*"/>
       <constraint>
@@ -319,13 +311,6 @@
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio' or 'continuous-variable' then the groupImprovementNotation element is required."/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
       </constraint>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group"/>
-      <min value="0"/>
-      <max value="1"/>
-      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -356,9 +341,9 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.extension:groupImprovementNotation">
+    <element id="MeasureReport.group.extension:improvementNotation">
       <path value="MeasureReport.group.extension"/>
-      <sliceName value="groupImprovementNotation"/>
+      <sliceName value="improvementNotation"/>
       <short value="increase | decrease"/>
       <min value="0"/>
       <max value="1"/>
@@ -369,7 +354,7 @@
       <condition value="deqm-4"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.extension:populationDescription">
+    <element id="MeasureReport.group.extension:description">
       <path value="MeasureReport.group.extension"/>
       <sliceName value="description"/>
       <short value="Description of the group"/>
@@ -410,7 +395,7 @@
       <condition value="deqm-8"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.population.extension:populationDescription">
+    <element id="MeasureReport.group.population.extension:description">
       <path value="MeasureReport.group.population.extension"/>
       <sliceName value="description"/>
       <short value="Description of the population"/>
@@ -444,9 +429,16 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.measureScore.extension:altscoretype">
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="deqm-6"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.measureScore.extension:alternateScoreType">
       <path value="MeasureReport.group.measureScore.extension"/>
-      <sliceName value="altscoretype"/>
+      <sliceName value="alternateScoreType"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -465,7 +457,7 @@
       </constraint>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.stratifier.extension:populationDescription">
+    <element id="MeasureReport.group.stratifier.extension:description">
       <path value="MeasureReport.group.stratifier.extension"/>
       <sliceName value="description"/>
       <short value="Description of the stratifier"/>
@@ -494,11 +486,17 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population">
       <path value="MeasureReport.group.stratifier.stratum.population"/>
-      <condition value="popCountQuantity"/>
+      <constraint>
+        <key value="deqm-9"/>
+        <severity value="error"/>
+        <human value="The stratum population must either have a count (integer) or a countQuantity (quantity), but not both."/>
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor count.exists()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
+      <sliceName value="countQuantity"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -517,7 +515,7 @@
       <path value="MeasureReport.group.stratifier.stratum.population.count"/>
       <min value="1"/>
       <max value="1"/>
-      <condition value="popCount"/>
+      <condition value="deqm-9"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.subjectResults">
@@ -534,9 +532,9 @@
       <path value="MeasureReport.group.stratifier.stratum.measureScore"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.stratifier.stratum.measureScore.extension:strataltscoretype">
+    <element id="MeasureReport.group.stratifier.stratum.measureScore.extension:alternateScoreType">
       <path value="MeasureReport.group.stratifier.stratum.measureScore.extension"/>
-      <sliceName value="strataltscoretype"/>
+      <sliceName value="alternateScoreType"/>
       <min value="0"/>
       <max value="1"/>
       <type>
