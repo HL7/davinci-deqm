@@ -63,9 +63,9 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"/>
       </type>
     </element>
-    <element id="MeasureReport.extension:measurereport-category">
+    <element id="MeasureReport.extension:category">
       <path value="MeasureReport.extension"/>
-      <sliceName value="measurereport-category"/>
+      <sliceName value="category"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -303,6 +303,9 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
+      <min value="1"/>
+      <max value="*"/>
+      <condition value="deqm-6"/>
       <constraint>
         <key value="deqm-4"/>
         <severity value="error"/>
@@ -345,9 +348,9 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.extension:groupImprovementNotation">
+    <element id="MeasureReport.group.extension:improvementNotation">
       <path value="MeasureReport.group.extension"/>
-      <sliceName value="groupImprovementNotation"/>
+      <sliceName value="improvementNotation"/>
       <short value="increase | decrease"/>
       <min value="0"/>
       <max value="1"/>
@@ -430,15 +433,15 @@
       <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group"/>
+      <path value="MeasureReport.group.measureScore"/>
       <min value="0"/>
       <max value="1"/>
       <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.measureScore.extension:altscoretype">
+    <element id="MeasureReport.group.measureScore.extension:alternateScoreType">
       <path value="MeasureReport.group.measureScore.extension"/>
-      <sliceName value="altscoretype"/>
+      <sliceName value="alternateScoreType"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -485,6 +488,24 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population">
       <path value="MeasureReport.group.stratifier.stratum.population"/>
+      <constraint>
+        <key value="deqm-9"/>
+        <severity value="error"/>
+        <human value="The stratum population must either have a count (integer) or a countQuantity (quantity), but not both."/>
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor count.exists()"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
+      <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
+      <sliceName value="countQuantity"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity"/>
+      </type>
+      <condition value="deqm-9"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.code">
@@ -497,6 +518,7 @@
       <path value="MeasureReport.group.stratifier.stratum.population.count"/>
       <min value="1"/>
       <max value="1"/>
+      <condition value="deqm-9"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.subjectResults">
@@ -509,9 +531,9 @@
       <path value="MeasureReport.group.stratifier.stratum.measureScore"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.stratifier.stratum.measureScore.extension:strataltscoretype">
+    <element id="MeasureReport.group.stratifier.stratum.measureScore.extension:alternateScoreType">
       <path value="MeasureReport.group.stratifier.stratum.measureScore.extension"/>
-      <sliceName value="strataltscoretype"/>
+      <sliceName value="alternateScoreType"/>
       <min value="0"/>
       <max value="1"/>
       <type>

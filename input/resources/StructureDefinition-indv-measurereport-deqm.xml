@@ -74,9 +74,9 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/cqf-messages"/>
       </type>
     </element>
-    <element id="MeasureReport.extension:measurereport-category">
+    <element id="MeasureReport.extension:category">
       <path value="MeasureReport.extension"/>
-      <sliceName value="measurereport-category"/>
+      <sliceName value="category"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -151,6 +151,7 @@
       </type>
       <condition value="deqm-2"/>
       <condition value="deqm-3"/>
+      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.extension:vendor">
@@ -358,9 +359,9 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.extension:groupImprovementNotation">
+    <element id="MeasureReport.group.extension:improvementNotation">
       <path value="MeasureReport.group.extension"/>
-      <sliceName value="groupImprovementNotation"/>
+      <sliceName value="improvementNotation"/>
       <short value="increase | decrease"/>
       <min value="0"/>
       <max value="1"/>
@@ -371,7 +372,7 @@
       <condition value="deqm-4"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.extension:populationDescription">
+    <element id="MeasureReport.group.extension:description">
       <path value="MeasureReport.group.extension"/>
       <sliceName value="description"/>
       <short value="Description of the group"/>
@@ -412,7 +413,7 @@
       <condition value="deqm-8"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.population.extension:populationDescription">
+    <element id="MeasureReport.group.population.extension:description">
       <path value="MeasureReport.group.population.extension"/>
       <sliceName value="description"/>
       <short value="Description of the population"/>
@@ -445,14 +446,15 @@
     </element>
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
+      <comment value="For individual reporting, the measure score is calculated for the individual. For a proportion measure, it would be 0.0 or 1.0 (indicating 0% or 100%)."/>
       <min value="0"/>
       <max value="1"/>
       <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.group.measureScore.extension:altscoretype">
+    <element id="MeasureReport.group.measureScore.extension:alternateScoreType">
       <path value="MeasureReport.group.measureScore.extension"/>
-      <sliceName value="altscoretype"/>
+      <sliceName value="alternateScoreType"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -486,8 +488,6 @@
     </element>
     <element id="MeasureReport.group.stratifier.code">
       <path value="MeasureReport.group.stratifier.code"/>
-      <short value="What stratifier of the group"/>
-      <definition value="The meaning of this stratifier, as defined in the measure definition."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -508,6 +508,7 @@
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">
       <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
+      <sliceName value="countQuantity"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -530,14 +531,29 @@
       <condition value="deqm-9"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.stratifier.stratum.measureScore">
+      <path value="MeasureReport.group.stratifier.stratum.measureScore"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.measureScore.extension:alternateScoreType">
+      <path value="MeasureReport.group.stratifier.stratum.measureScore.extension"/>
+      <sliceName value="alternateScoreType"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.evaluatedResource">
       <path value="MeasureReport.evaluatedResource"/>
       <requirements value="To support the reporting of supplemental data elements."/>
       <mustSupport value="true"/>
     </element>
-    <element id="MeasureReport.evaluatedResource.extension:popref">
+    <element id="MeasureReport.evaluatedResource.extension:criteriaReference">
       <path value="MeasureReport.evaluatedResource.extension"/>
-      <sliceName value="popref"/>
+      <sliceName value="criteriaReference"/>
       <min value="0"/>
       <max value="*"/>
       <type>
