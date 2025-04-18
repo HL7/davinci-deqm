@@ -15,34 +15,34 @@ The following data-elements are mandatory (i.e data MUST be present).
 9. reporter: Organization that generated the MeasureReport
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
-1. popref: Criteria reference
-2. description: Description of the population
-3. careGapRemark: Condition Category remark
-4. countQuantity: Count as a Quantity
-5. supplementalData: Supplemental Data
-6. group.population: The populations in the group
-7. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
-8. group.measureScore: What score this group achieved
-9. group.population.count: Size of the population
-10. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
-11. group.stratifier.stratum.population.count: Size of the population
-12. group: Measure results for each group
-13. message: Evaluation messages
-14. group.code: Meaning of the group
-15. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
-16. group.id: Unique id for inter-element referencing
-17. group.stratifier.code: What stratifier of the group
-18. description: Description of the stratifier
-19. altscoretype: Possible additional measureScore value types
+1. description: Description of the population
+2. careGapRemark: Condition Category remark
+3. countQuantity: Count as a Quantity
+4. category: What category is this measure report
+5. group.population: The populations in the group
+6. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+7. group.measureScore: What score this group achieved
+8. group.population.count: Size of the population
+9. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+10. group.stratifier.stratum.population.count: Size of the population
+11. group: Measure results for each group
+12. alternateScoreType: Possible additional measureScore value types
+13. criteriaReference: Criteria reference
+14. countQuantity: Size of the population as a quantity.
+15. group.code: Meaning of the group
+16. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+17. group.id: Unique id for inter-element referencing
+18. group.stratifier.code: What stratifier of the group
+19. description: Description of the stratifier
 20. evaluatedResource: What data was used to calculate the measure score
-21. measurereport-category: What category is this measure report
-22. group: Group of practitioners responsible for a report
-23. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
-24. improvementNotation: increase \| decrease
-25. calculatedDate: The date the score was calculated
-26. groupImprovementNotation: increase \| decrease
-27. description: Description of the group
-28. group.stratifier.stratum.population: Population results in this stratum
+21. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
+22. improvementNotation: increase \| decrease
+23. calculatedDate: The date the score was calculated
+24. description: Description of the group
+25. group.stratifier: Stratification results
+26. supplementalData: Optional Extensions Element
+27. group.stratifier.stratum.population: Population results in this stratum
+28. group.stratifier.stratum.measureScore: What score this stratum achieved
 
 <!--End Generated Intro (DO NOT REMOVE)-->
 
