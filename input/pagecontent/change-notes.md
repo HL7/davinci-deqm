@@ -50,6 +50,8 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - link goes to deprecated extension ([FHIR-46864](https://jira.hl7.org/browse/FHIR-46864.)) Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)), ([here](StructureDefinition-summary-measurereport-deqm.html)), ([here](artifacts.html)) and ([here](profiles.html))
    - supplementalData extension models both value and extension ([FHIR-50091](https://jira.hl7.org/browse/FHIR-50091)) Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)), and ([here](StructureDefinition-summary-measurereport-deqm-intro.md))
    - Updated Care Gap Remark to align with Condition Category Remark ([FHIR-50210](https://jira.hl7.org/browse/FHIR-50210)) Applied ([here](StructureDefinition-extension-careGapRemark.html))
+   - The expression for the SubjectList Measure Report deqm-6 seems to be incorrectly written ([FHIR-47453](https://jira.hl7.org/browse/FHIR-47453)) Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-summary-measurereport-deqm.html)), and ([here](StructureDefinition-subjectlist-measurereport-deqm.html))
+     
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

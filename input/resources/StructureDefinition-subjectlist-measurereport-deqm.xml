@@ -44,12 +44,6 @@
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty()) xor (extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').empty() and group.all(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists()))"/>
       </constraint>
      <constraint>
-        <key value="deqm-6"/>
-        <severity value="error"/>
-        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
-      </constraint>
-      <constraint>
         <key value="deqm-7"/>
         <severity value="error"/>
         <human value="If group.stratifier exists, then stratifier.code or the stratifier.stratum.component.code is present, but not both"/>
@@ -324,6 +318,12 @@
         <severity value="error"/>
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio' or 'continuous-variable' then the groupImprovementNotation element is required."/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+      </constraint>
+      <constraint>
+        <key value="deqm-6"/>
+        <severity value="error"/>
+        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
+        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
