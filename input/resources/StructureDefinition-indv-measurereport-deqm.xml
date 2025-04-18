@@ -51,12 +51,6 @@
         <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not() implies group.population.count()>=1"/>
       </constraint>
-      <constraint>
-        <key value="deqm-6"/>
-        <severity value="error"/>
-        <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies group.all(measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
-      </constraint>
       <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.extension:careGapRemark">
@@ -322,16 +316,6 @@
     </element>
     <element id="MeasureReport.group">
       <path value="MeasureReport.group"/>
-
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-      <min value="0"/>
-      <max value="*"/>
       <constraint>
         <key value="deqm-4"/>
         <severity value="error"/>
@@ -344,13 +328,6 @@
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
         <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
       </constraint>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.group.measureScore">
-      <path value="MeasureReport.group"/>
-      <min value="0"/>
-      <max value="1"/>
-      <condition value="deqm-6"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -466,6 +443,13 @@
       <max value="0"/>
       <mustSupport value="false"/>
     </element>
+    <element id="MeasureReport.group.measureScore">
+      <path value="MeasureReport.group.measureScore"/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="deqm-6"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.measureScore.extension:altscoretype">
       <path value="MeasureReport.group.measureScore.extension"/>
       <sliceName value="altscoretype"/>
@@ -506,17 +490,7 @@
       <definition value="The meaning of this stratifier, as defined in the measure definition."/>
       <min value="0"/>
       <max value="1"/>
-      <base>
-        <path value="MeasureReport.group.stratifier.code"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
       <mustSupport value="true"/>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum">
       <path value="MeasureReport.group.stratifier.stratum"/>
