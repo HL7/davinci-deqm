@@ -67,7 +67,7 @@ In this scenario, a _reporter_ such as a clinic submits a summary level quality 
 
 {% include img.html img="population-reporting-no-supporting-data.png" %}
 
-1. The _measure evaluation service_ gathers the _data of interest_ from the _clinical data repository_ using the FHIR API
+1. The _measure evaluation service_ gathers the [_data of interest_](glossary.html#data-of-interest) from the _clinical data repository_ using the FHIR API
 2. The _measure evaluation service_ calculates the measure, producing the MeasureReport
 3. The _measure evaluation service_ then POSTs the MeasureReport to the _receiver_
 
@@ -81,7 +81,7 @@ In this scenario, a _reporter_ such as a hospital submits individual level quali
 
 {% include img.html img="population-reporting-supporting-data.png" %}
 
-1. The _measure evaluation service_ gathers the _data of interest_ from the _clinical data repository_ using the FHIR API
+1. The _measure evaluation service_ gathers the [_data of interest_](glossary.html#data-of-interest) from the _clinical data repository_ using the FHIR API
 2. The _measure evaluation service_ calculates the measure, producing a MeasureReport for each attributed patient
 3. The _measure evaluation service_ assembles a Bundle for each patient, consisting of the calculated MeasureReport and any data referenced during the calculation (i.e. evaluatedResource)
 4. The _measure evaluation service_ POSTs the measure report Bundles to the _receiver_
