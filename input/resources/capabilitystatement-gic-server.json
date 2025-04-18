@@ -140,8 +140,17 @@
                               }
                           ],
                           "code": "search-type"
-                        }
-                    ],
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
+                                }
+                            ],
+                            "code": "patch",
+                            "documentation": "Patch allows maintainers of the MeasureReports to update the logical definition of a MeasureReport by posting a set of changes to it"
+                        }                    ],
                     "searchParam": [
                       {
                         "name": "measurereport-category",

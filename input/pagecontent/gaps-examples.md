@@ -67,7 +67,11 @@ The provider noticed *Gaps Patient01* was indicated as having an [open gap] for 
 
 The provider also noticed *Gaps Patient03* was indicated as having a [prospective gap] for Colorectal Cancer Screening. The colonoscopy from 10 years ago is only valid for the measure numerator until 2020-06-05. The provider ordered a colonoscopy and the patient was able to get it done in quickly. This ensures that the procpective gap is closed and does not become an open gap.
 
-In some cases where there is a delay between order and performance, a provider may want to "soft close" the gap for some amount of time due to the existing order.This prevents the gap from showing up as "open" for some amount of time or until the order is carried out. While this feature can be important for users, the functionality is left up to the implementer and is out of scope for this implementation guide.
+In some cases where there is a delay between order and performance, a provider may want to "soft close" the gap for some amount of time due to the existing order. This prevents the gap from showing up as "open" for some amount of time or until the order is carried out. The gaps in care remark extension allows for such functionality, and is described further in ([DEQM Parameters Care Gap Remark Patch Profile](StructureDefinition-parameters-careGap-Remark-Patch.html)).
+
+([Parameters MeasureReport01 Patch Example](Parameters-measurereport01-patch.html))
+
+([Parameters MeasureReport01 Patch Multiple Example](Parameters-measurereport01-patch-mult.html))
 
 #### Step 3 - Rerun for a Gaps in Care Report
 

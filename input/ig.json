@@ -1063,6 +1063,22 @@
                 "description": "DEQM Promoting Interoperability (PI) Measure example"
             },
             {
+                "exampleBoolean": true,
+                "name": "MeasureReport 01 Patch Mult",
+                "reference": {
+                    "reference": "Parameters/measurereport01-patch-mult"
+                },
+                "description": "Parameters: PATCH example for sending Condition Category Remark with multiple value."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "MeasureReport 01 Patch",
+                "reference": {
+                    "reference": "Parameters/measurereport01-patch"
+                },
+                "description": "Parameters: PATCH example for sending Condition Category Remark."
+            },
+            {
                 "exampleBoolean": false,
                 "reference": {
                     "reference": "StructureDefinition/extension-measureScoring"
