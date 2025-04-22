@@ -89,7 +89,7 @@
             "detail": [{
                 "reference": "MeasureReport/gaps-indv-measurereport03",
                 "extension": [{
-                    "url": " http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                     "valueString": "numerator"
                   }
                 ]
