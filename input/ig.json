@@ -915,30 +915,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Measure Venous Thromboembolism Prophylaxis (EXM108)",
-                "reference": {
-                    "reference": "Measure/measure-exm108-example"
-                },
-                "description": "Measure Venous Thromboembolism Prophylaxis (EXM108) example"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "Measure Colorectal Cancer Screening (EXM130)",
-                "reference": {
-                    "reference": "Measure/measure-exm130-example"
-                },
-                "description": "Measure Colorectal Cancer Screening (EXM130) example"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "Measure Cervical Cancer Screening (EXM124)",
-                "reference": {
-                    "reference": "Measure/measure-exm124-example"
-                },
-                "description": "Measure Cervical Cancer Screening (EXM124) example"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Library Colorectal Cancer Screening (EXM130)",
                 "reference": {
                     "reference": "Library/library-exm130-example"
