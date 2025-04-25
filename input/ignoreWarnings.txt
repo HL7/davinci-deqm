@@ -16,6 +16,7 @@ URL value 'http://exampleoflocation.com' does not resolve
 URL value 'urn:oid:2.16.840.1.113883.6.1000' does not resolve
 URL value 'urn:oid:1.2.840.114350.1.13.310.3.7.2.798268' does not resolve
 URL value 'urn:oid:1.3.4.5.6.7' does not resolve
+URL value 'http://someguidelineprovider.org/medication-adherence-guidelines.html' does not resolve
 
 # The validator is trying to resolve an "example.org" artifact which by convention does not exist
 A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
@@ -32,22 +33,6 @@ The Measure 'http://example.org/fhir/Measure/example-stratification-measure|5.0.
 
 # Information messages validated: Related to the ActCode#CAREGAP issue, example.org, Slicing is open so other slices are intentionally allowed, Confirmed profile validation messages
 None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
-
-# The following error message occur due to an issue with the publisher in which in-page anchor references are generated incorrectly in html pages. This issue will be fixed in the next publisher release.  (See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Hyperlink.20.2E.2E.2E.20does.20not.20resolve)
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.reporter.extension:group' at 'div/table/tr/td/a' for 'group' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.start' at 'div/table/tr/td/a' for 'start' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.period.end' at 'div/table/tr/td/a' for 'end' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:scoring' at 'div/table/tr/td/a' for 'scoring' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:calculatedDate' at 'div/table/tr/td/a' for 'calculatedDate' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:groupImprovementNotation' at 'div/table/tr/td/a' for 'groupImprovementNotation' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:description' at 'div/table/tr/td/a' for 'description' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:numeratorMembership' at 'div/table/tr/td/a' for 'numeratorMembership' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:denominatorMembership' at 'div/table/tr/td/a' for 'denominatorMembership' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.extension:measurePopulationMembership' at 'div/table/tr/td/a' for 'measurePopulationMembership' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:countQuantity' at 'div/table/tr/td/a' for 'countQuantity' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.population.extension:description' at 'div/table/tr/td/a' for 'description' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.measureScore.extension:altscoretype' at 'div/table/tr/td/a' for 'altscoretype' does not resolve
-Hyperlink 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.group.stratifier.extension:description' at 'div/table/tr/td/a' for 'description' does not resolve
 
 # The following Build Errors occur due to an issue with the publisher in which in-page anchor references are generated incorrectly in html pages. This issue will be fixed in the next publisher release.  (See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Hyperlink.20.2E.2E.2E.20does.20not.20resolve)
 The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.reporter.extension:group' for "group" cannot be resolved (valid targets: 206 targets)
