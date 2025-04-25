@@ -206,6 +206,10 @@
             {
                 "code": "auto-oid-root",
                 "value": "2.16.840.1.113883.4.642.40.23"
+            },
+            {
+                "code": "pin-canonicals",
+                "value": "pin-multiples"
             }
         ],
         "resource": [

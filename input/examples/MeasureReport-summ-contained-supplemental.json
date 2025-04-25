@@ -19,7 +19,7 @@
         ]
       }
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData",
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData",
       "valueReference": {
         "extension": [ {
           "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
@@ -28,7 +28,7 @@
         "reference": "#60e33dd8-9150-45d7-8429-9d7f1e3e2fd6"
       }
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/measurereport-supplementalData",
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData",
       "valueReference": {
         "extension": [ {
           "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",

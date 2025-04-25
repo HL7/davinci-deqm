@@ -64,7 +64,7 @@
         "resourceType": "Measure",
         "id": "CDCPatientImpactAndHospitalCapacity",
         "extension": [{
-            "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/ReportingPeriod",
+            "url": "http://example.org/fhir/saner/StructureDefinition/ReportingPeriod",
             "valueTiming": {
               "repeat": {
                 "frequency": 1,
@@ -74,7 +74,7 @@
             }
           }
         ],
-        "url": "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity",
+        "url": "http://example.org/fhir/saner/Measure/CDCPatientImpactAndHospitalCapacity",
         "identifier": [{
             "system": "urn:ietf:rfc:3986",
             "value": "urn:oid:2.16.840.1.113883.4.642.40.42.29.3"
@@ -176,7 +176,7 @@
             }
           }
         ],
-        "library": ["http://hl7.org/fhir/uv/saner/StructureDefinition/NHSNMeasureLibrary"],
+        "library": ["http://example.org/fhir/saner/StructureDefinition/NHSNMeasureLibrary"],
         "definition": ["Ventilator\n: Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive\npressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.\nNote: Ventilation and lung expansion devices that deliver positive pressure to the airway (for example: CPAP, BiPAP, bi-level, IPPB and\nPEEP) via non-invasive means (for example: nasal prongs, nasal mask, full face mask, total mask, etc.) are not considered ventilators\nunless positive pressure is delivered via an artificial airway (oral/nasal endotracheal or tracheostomy tube).\n\nBeds\n: Baby beds in mom's room count as 1 bed, even if there are multiple baby beds\nFollow-up in progress if staffed is less than licensed.\nTotal includes all beds, even if with surge beds it exceeds licensed beds.\n\nICU beds\n: Include NICU (from CDC Webinar 31-Mar-2020) (outstanding question on burn unit)"],
         "scoring" : {
             "coding" : [{
@@ -232,12 +232,12 @@
                     "valueString": "count"
                   }
                 ],
-                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+                "url": "http://example.org/fhir/saner/StructureDefinition/MeasureGroupAttributes"
               }
             ],
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "Beds",
                   "display": "Beds"
                 }
@@ -247,7 +247,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numTotBeds",
                       "display": "All Hospital Beds"
                     }, {
@@ -267,7 +267,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numbeds",
                       "display": "Hospital Inpatient Beds"
                     }
@@ -284,7 +284,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numBedsOcc",
                       "display": "Hospital Inpatient Bed Occupancy"
                     }
@@ -301,7 +301,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numICUBeds",
                       "display": "ICU Beds"
                     }
@@ -318,7 +318,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numICUBedsOcc",
                       "display": "ICU Bed Occupancy"
                     }
@@ -382,12 +382,12 @@
                     "valueString": "count"
                   }
                 ],
-                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+                "url": "http://example.org/fhir/saner/StructureDefinition/MeasureGroupAttributes"
               }
             ],
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "Ventilators",
                   "display": "Ventilators"
                 }
@@ -397,7 +397,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numVent",
                       "display": "Mechanical Ventilators"
                     }, {
@@ -417,7 +417,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numVentUse",
                       "display": "Mechanical Ventilators in Use"
                     }
@@ -481,12 +481,12 @@
                     "valueString": "count"
                   }
                 ],
-                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+                "url": "http://example.org/fhir/saner/StructureDefinition/MeasureGroupAttributes"
               }
             ],
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "Encounters",
                   "display": "Encounters"
                 }
@@ -496,7 +496,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19HospPats",
                       "display": "Hospitalized COVID-19 Patients"
                     }
@@ -513,7 +513,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19MechVentPats",
                       "display": "Hospitalized and Ventilated COVID-19 Patients"
                     }
@@ -530,7 +530,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19HOPats",
                       "display": "Hospital Onset COVID-19 Patients"
                     }
@@ -547,7 +547,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19OverflowPats",
                       "display": "ED/Overflow COVID-19 Patients"
                     }
@@ -564,7 +564,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19OFMechVentPats",
                       "display": "ED/Overflow and Ventilated COVID-19 Patients"
                     }
@@ -581,7 +581,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19Died",
                       "display": "COVID-19 Patient Deaths"
                     }
@@ -598,7 +598,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19Pats",
                       "display": "All COVID-19 Confirmed or Suspected Patients"
                     }, {
@@ -618,7 +618,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19VentPats",
                       "display": "Ventilated COVID-19 Patients"
                     }
@@ -700,7 +700,7 @@
         ],
         "status": "complete",
         "type": "summary",
-        "measure": "http://hl7.org/fhir/uv/saner/Measure/FEMADailyHospitalCOVID19Reporting",
+        "measure": "http://example.org/fhir/saner/Measure/FEMADailyHospitalCOVID19Reporting",
         "date": "2020-04-04T00:00:00-05:00",
         "reporter": {
           "reference": "Organization/NJ-DPH",
@@ -713,7 +713,7 @@
         "group": [{
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "positiveIncreasePercent"
                 }
               ]
@@ -721,7 +721,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalOrdersIncrease"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -739,7 +739,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalTestResultsIncrease"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -751,7 +751,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "positiveIncrease"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -771,7 +771,7 @@
           }, {
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "positivePercent"
                 }
               ]
@@ -779,7 +779,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalOrders"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -797,7 +797,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "rejected"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -815,7 +815,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalTestResults"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -827,7 +827,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "positive"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -839,7 +839,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "allReports"
                     }
                   ],
@@ -855,7 +855,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "latestReports"
                     }
                   ],
@@ -895,7 +895,7 @@
         ],
         "status": "complete",
         "type": "summary",
-        "measure": "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity",
+        "measure": "http://example.org/fhir/saner/Measure/CDCPatientImpactAndHospitalCapacity",
          "date": "2020-04-04T00:00:00-05:00",
         "reporter": {
           "reference": "Organization/NJ-DPH",
@@ -908,7 +908,7 @@
         "group": [{
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "Beds"
                 }
               ]
@@ -919,7 +919,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numTotBeds"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -931,7 +931,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numbeds"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -943,7 +943,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numBedsOcc"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -961,7 +961,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numICUBeds"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -973,7 +973,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numICUBedsOcc"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -993,7 +993,7 @@
           }, {
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "Ventilators"
                 }
               ]
@@ -1004,7 +1004,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numVent"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1016,7 +1016,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numVentUse"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1036,7 +1036,7 @@
           }, {
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "Encounters"
                 }
               ]
@@ -1047,7 +1047,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19HospPats"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1059,7 +1059,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19MechVentPats"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1077,7 +1077,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19HOPats"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1095,7 +1095,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19OverflowPats"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1113,7 +1113,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19OFMechVentPats"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1131,7 +1131,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19Died"
                     }, {
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population",
@@ -1149,7 +1149,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19Pats"
                     }
                   ],
@@ -1165,7 +1165,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "numC19VentPats"
                     }
                   ],
@@ -1193,7 +1193,7 @@
         "resourceType": "Measure",
         "id": "FEMADailyHospitalCOVID19Reporting",
         "extension": [{
-            "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/ReportingPeriod",
+            "url": "http://example.org/fhir/saner/StructureDefinition/ReportingPeriod",
             "valueTiming": {
               "repeat": {
                 "frequency": 1,
@@ -1203,7 +1203,7 @@
             }
           }
         ],
-        "url": "http://hl7.org/fhir/uv/saner/Measure/FEMADailyHospitalCOVID19Reporting",
+        "url": "http://example.org/fhir/saner/Measure/FEMADailyHospitalCOVID19Reporting",
         "identifier": [{
             "system": "urn:ietf:rfc:3986",
             "value": "urn:oid:2.16.840.1.113883.4.642.40.42.29.5"
@@ -1314,7 +1314,7 @@
             }
           }
         ],
-        "library": ["http://hl7.org/fhir/uv/saner/StructureDefinition/FEMAMeasureLibrary"],
+        "library": ["http://example.org/fhir/saner/StructureDefinition/FEMAMeasureLibrary"],
         "type": [{
             "coding": [{
                 "system": "http://terminology.hl7.org/CodeSystem/measure-type",
@@ -1378,12 +1378,12 @@
                     "valueString": "cumulative"
                   }
                 ],
-                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+                "url": "http://example.org/fhir/saner/StructureDefinition/MeasureGroupAttributes"
               }
             ],
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "positiveIncreasePercent",
                   "display": "Percent Positive among Newly Resulted Tests"
                 }
@@ -1393,7 +1393,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalOrdersIncrease",
                       "display": "New Diagnostic Tests Ordered/Received"
                     }, {
@@ -1413,7 +1413,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalTestResultsIncrease",
                       "display": "New Tests Resulted"
                     }, {
@@ -1433,7 +1433,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "positiveIncrease",
                       "display": "New Positive COVID-19 Tests"
                     }, {
@@ -1500,12 +1500,12 @@
                     "valueString": "cumulative"
                   }
                 ],
-                "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+                "url": "http://example.org/fhir/saner/StructureDefinition/MeasureGroupAttributes"
               }
             ],
             "code": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+                  "system": "http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem",
                   "code": "positivePercent",
                   "display": "Cumulative Percent Positive among Resulted Tests"
                 }
@@ -1515,7 +1515,7 @@
             "population": [{
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalOrders",
                       "display": "Cumulative Diagnostic Tests Ordered/Received"
                     }, {
@@ -1535,7 +1535,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "rejected",
                       "display": "Cumulative Specimens Rejected"
                     }, {
@@ -1555,7 +1555,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "totalTestResults",
                       "display": "Cumulative Tests Performed"
                     }, {
@@ -1575,7 +1575,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "positive",
                       "display": "Cumulative Positive COVID-19 Tests"
                     }, {
@@ -1595,7 +1595,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "allReports",
                       "display": "All Laboratory Reports for any Order"
                     }
@@ -1612,7 +1612,7 @@
               }, {
                 "code": {
                   "coding": [{
-                      "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
+                      "system": "http://example.org/fhir/saner/CodeSystem/MeasuredValues",
                       "code": "latestReports",
                       "display": "Most Recent Laboratory Reports for any Order"
                     }
