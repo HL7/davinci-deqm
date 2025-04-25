@@ -46,7 +46,7 @@ Below are the Measures used by the MeasureReports above that are defined in this
 * [Cervical Cancer Screening EXM124](Measure-measure-exm124-example.html)
 * [COL Colorectal Cancer Screening EXM130](Measure-measure-exm130-example.html)
 * [Date of Last Power Outage](Measure-date-of-last-power-outage.html)
-* [Medicare Stratifications](Measure-stratification-measure-example.html)
+* [Stratification Measure Example](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM55-FHIR.html)
 * [MRP Medication Reconciliation](Measure-measure-mrp-example.html)
 * [PI Promoting Interoperability](Measure-measure-pi-example.html)
 * [VTE Venous Thromboembolism Prophylaxis EXM108](Measure-measure-exm108-example.html)
