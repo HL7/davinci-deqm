@@ -9,8 +9,11 @@
         {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
             "valueCode": "cqi"
-        }
-    ],
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+        }    ],
     "publisher": "HL7 International / Clinical Quality Information",
     "license": "CC0-1.0",
     "name": "DEQM",
@@ -918,30 +921,6 @@
                     "reference": "Parameters/multiple-gaps-indv-report02"
                 },
                 "description": "GIC Gaps Multiple Parameters Individual MeasureReports02 example"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "Measure Venous Thromboembolism Prophylaxis (EXM108)",
-                "reference": {
-                    "reference": "Measure/measure-exm108-example"
-                },
-                "description": "Measure Venous Thromboembolism Prophylaxis (EXM108) example"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "Measure Colorectal Cancer Screening (EXM130)",
-                "reference": {
-                    "reference": "Measure/measure-exm130-example"
-                },
-                "description": "Measure Colorectal Cancer Screening (EXM130) example"
-            },
-            {
-                "exampleBoolean": true,
-                "name": "Measure Cervical Cancer Screening (EXM124)",
-                "reference": {
-                    "reference": "Measure/measure-exm124-example"
-                },
-                "description": "Measure Cervical Cancer Screening (EXM124) example"
             },
             {
                 "exampleBoolean": true,

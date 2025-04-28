@@ -29,7 +29,7 @@
         ],
         "status": "complete",
         "type": "individual",
-        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0",
+        "measure": "https://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR|8.0.0",
         "subject": {
           "reference": "urn:uuid:47709cc7-b3ec-4abc-9d26-3df3d3d57906"
         },

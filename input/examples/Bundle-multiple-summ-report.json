@@ -2,6 +2,36 @@
   "id": "multiple-summ-report",
   "entry": [
     {
+      "fullUrl": "http://example.org/CodeSystem/stratifier",
+      "resource": {
+        "resourceType": "CodeSystem",
+        "id": "stratifier",
+        "url": "http://example.org/CodeSystem/stratifier",
+        "version": "1.0.0",
+        "name": "StratifierCodes",
+        "status": "active",
+        "content": "complete",
+        "concept": [
+          {
+            "code": "S1",
+            "display": "Stratifier 1"
+          },
+          {
+            "code": "S2",
+            "display": "Stratifier 2"
+          },
+          {
+            "code": "S3",
+            "display": "Stratifier 3"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "CodeSystem"
+      }
+    },
+    {
       "fullUrl": "urn:uuid:884bd27a-b1a0-11ea-b615-a4d18ccf5172",
       "request": {
         "method": "POST",
@@ -36,46 +66,56 @@
                     }
                   ]
                 },
-                "count": 10000
+                "count": 1000
               },
               {
                 "code": {
                   "coding": [
                     {
-                      "code": "denominator",
+                      "code": "measure-population",
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population"
                     }
                   ]
                 },
-                "count": 8000
+                "count": 1000
               },
               {
                 "code": {
                   "coding": [
                     {
-                      "code": "numerator",
+                      "code": "measure-population-exclusion",
                       "system": "http://terminology.hl7.org/CodeSystem/measure-population"
                     }
                   ]
                 },
-                "count": 4000
+                "count": 0
               }
             ],
             "stratifier": [
               {
+                "id": "stratifier-1",
                 "code": [
                   {
                     "coding": [
                       {
-                        "code": "CoverageType",
-                        "display": "Coverage Type",
-                        "system": "http://example.org/CodeSystem/stratifier-classifications"
+                        "code": "S1",
+                        "system": "http://example.org/CodeSystem/stratifier",
+                        "display": "Stratifier 1"
                       }
                     ]
                   }
                 ],
                 "stratum": [
                   {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://example.org/CodeSystem/stratifier",
+                          "code": "S1",
+                          "display": "Stratifier 1"
+                        }
+                      ]
+                    },
                     "measureScore": {
                       "value": 0.62
                     },
@@ -89,101 +129,38 @@
                             }
                           ]
                         },
-                        "count": 1747
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "denominator",
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                            }
-                          ]
-                        },
-                        "count": 392
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator",
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                            }
-                          ]
-                        },
-                        "count": 243
+                        "count": 500
                       }
-                    ],
-                    "value": {
-                      "coding": [
-                        {
-                          "code": "MEDICARE",
-                          "display": "Medicare",
-                          "system": "http://example.org/CodeSystem/SOP"
-                        }
-                      ]
-                    }
+                    ]
                   }
                 ]
               },
               {
+                "id": "stratifier-2",
                 "code": [
                   {
                     "coding": [
                       {
-                        "code": "CoverageTypeAndClass",
-                        "display": "Coverage Type and Class",
-                        "system": "http://example.org/CodeSystem/stratifier-classifications"
+                        "code": "S2",
+                        "system": "http://example.org/CodeSystem/stratifier",
+                        "display": "Stratifier 2"
                       }
                     ]
                   }
                 ],
                 "stratum": [
                   {
-                    "component": [
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "CoverageType",
-                              "display": "Coverage Type",
-                              "system": "http://example.org/CodeSystem/stratifier-classifications"
-                            }
-                          ]
-                        },
-                        "value": {
-                          "coding": [
-                            {
-                              "code": "MEDICARE",
-                              "display": "Medicare",
-                              "system": "http://example.org/CodeSystem/SOP"
-                            }
-                          ]
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://example.org/CodeSystem/stratifier",
+                          "code": "S2",
+                          "display": "Stratifier 2"
                         }
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "CoverageClass",
-                              "display": "Coverage Class",
-                              "system": "http://example.org/CodeSystem/stratifier-classifications"
-                            }
-                          ]
-                        },
-                        "value": {
-                          "coding": [
-                            {
-                              "code": "Non-LIS/DE,Nondisability",
-                              "display": "Non-LIS/DE,Nondisability",
-                              "system": "http://example.org/CodeSystem/medicare-subgroup"
-                            }
-                          ]
-                        }
-                      }
-                    ],
+                      ]
+                    },
                     "measureScore": {
-                      "value": 0.69
+                      "value": 0.62
                     },
                     "population": [
                       {
@@ -195,29 +172,50 @@
                             }
                           ]
                         },
-                        "count": 745
-                      },
+                        "count": 250
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "stratifier-3",
+                "code": [
+                  {
+                    "coding": [
+                      {
+                        "code": "S3",
+                        "system": "http://example.org/CodeSystem/stratifier",
+                        "display": "Stratifier 3"
+                      }
+                    ]
+                  }
+                ],
+                "stratum": [
+                  {
+                    "value": {
+                      "coding": [
+                        {
+                          "system": "http://example.org/CodeSystem/stratifier",
+                          "code": "S3",
+                          "display": "Stratifier 3"
+                        }
+                      ]
+                    },
+                    "measureScore": {
+                      "value": 0.62
+                    },
+                    "population": [
                       {
                         "code": {
                           "coding": [
                             {
-                              "code": "denominator",
+                              "code": "initial-population",
                               "system": "http://terminology.hl7.org/CodeSystem/measure-population"
                             }
                           ]
                         },
-                        "count": 150
-                      },
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "numerator",
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                            }
-                          ]
-                        },
-                        "count": 103
+                        "count": 250
                       }
                     ]
                   }
@@ -235,7 +233,7 @@
             }
           ]
         },
-        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/stratification-measure-example|5.0.0",
+        "measure": "https://hl7.org/fhir/us/cqfmeasures/Measure-EXM55-FHIR.html|5.0.0",
         "period": {
           "end": "2018-12-31",
           "start": "2018-01-01"
@@ -417,7 +415,7 @@
             }
           ]
         },
-        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0",
+        "measure": "https://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR|8.0.0",
         "period": {
           "end": "2019-09-01",
           "start": "2019-08-01"

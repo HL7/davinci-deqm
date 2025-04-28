@@ -149,7 +149,7 @@
               ],
               "status": "complete",
               "type": "individual",
-              "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-exm130-example|5.0.0",
+              "measure": "https://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR|8.0.0",
               "subject": {
                 "reference": "Patient/gaps-patient01"
               },
