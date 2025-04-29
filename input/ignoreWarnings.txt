@@ -18,6 +18,9 @@ URL value 'urn:oid:1.2.840.114350.1.13.310.3.7.2.798268' does not resolve
 URL value 'urn:oid:1.3.4.5.6.7' does not resolve
 URL value 'http://someguidelineprovider.org/medication-adherence-guidelines.html' does not resolve
 
+# Canonical URLs not intended to resolve
+Canonical URL 'https://madie.cms.gov/Measure/AlaraCTFHIR' does not resolve
+
 # The validator is trying to resolve an "example.org" artifact which by convention does not exist
 A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/SOP' could not be found, so the code cannot be validated
