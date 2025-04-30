@@ -40,5 +40,5 @@ Date: Wed, 14 Mar 2019 01:02:06 GMT
 Content-Type: application/fhir+json;charset=UTF-8
 ...Other Headers...
 
-{% include_relative Parameters-col-submit-collect-obs.json %}
+{% include_relative Parameters-col-collect-obs.json %}
 ~~~
