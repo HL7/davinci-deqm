@@ -377,12 +377,20 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Col Submit Collect Obs",
+                "name": "Col Collect Obs",
                 "reference": {
-                    "reference": "Parameters/col-submit-collect-obs"
+                    "reference": "Parameters/col-collect-obs"
                 },
-                "description": "DEQM Col Submit Collect Obs example"
+                "description": "DEQM Col Collect Obs example"
             },
+	    {
+		"exampleBoolean": true,
+		"name": "Col Submit Obs",
+		"reference": {
+		    "reference": "Parameters/col-submit-obs"
+		},
+		"description": "DEQM Col Submit Obs example"
+	    },
             {
                 "exampleBoolean": true,
                 "name": "Patient03",

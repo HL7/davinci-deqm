@@ -118,7 +118,8 @@ Below are the resources that are referenced by the examples above.
 
 ### Parameters
 * [Mrp Submit Task](Parameters-mrp-submit-task.html)
-* [Col Submit Collect Obs](Parameters-col-submit-collect-obs.html)
+* [Col Collect Obs](Parameters-col-collect-obs.html)
+* [Col Submit Obs](Parameters-col-submit-obs.html)
 * [Mrp Submit Obs](Parameters-mrp-submit-obs.html)
 * [Gaps Parameters Open Individual MeasureReports](Parameters-single-gaps-open-indv-report01.html)
 * [Gaps Parameters Closed Individual MeasureReport01](Parameters-single-gaps-closed-indv-report01.html)
