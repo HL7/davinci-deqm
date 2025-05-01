@@ -143,7 +143,7 @@
         ],
         "status": "complete",
         "type": "individual",
-        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR|8.0.000",
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130-FHIR|8.0.000",
         "subject": {
           "reference": "Patient/gaps-patient01"
         },

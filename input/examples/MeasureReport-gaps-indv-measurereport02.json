@@ -34,7 +34,7 @@
   ],
   "status": "complete",
   "type": "individual",
-  "measure": "https://hl7.org/fhir/us/cqfmeasures/Measure-EXM124-FHIR|9.0.000",
+  "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM124-FHIR|9.0.000",
   "subject": {
     "reference": "Patient/gaps-patient01"
   },
