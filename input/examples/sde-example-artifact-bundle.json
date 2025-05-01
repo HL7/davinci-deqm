@@ -8,7 +8,7 @@
             "resource": {
                 "resourceType": "Library",
                 "id": "FHIRHelpers",
-                "url": "http://fhir.org/guides/cqf/Library/FHIRHelpers",
+                "url": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers",
                 "version": "4.0.1",
                 "name": "FHIRHelpers",
                 "title": "FHIR Helpers",
@@ -79,7 +79,7 @@
                     {
                         "type": "depends-on",
                         "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/Library/FHIRHelpers|4.0.1"
+                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
                     },
                     {
                         "type": "depends-on",
@@ -208,7 +208,7 @@
                     {
                         "type": "depends-on",
                         "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/Library/FHIRHelpers|4.0.1"
+                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
                     },
                     {
                         "type": "depends-on",
@@ -433,7 +433,7 @@
                     {
                         "type": "depends-on",
                         "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/Library/FHIRHelpers|4.0.1"
+                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
                     },
                     {
                         "type": "depends-on",
@@ -571,7 +571,7 @@
                     {
                         "type": "depends-on",
                         "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/Library/FHIRHelperss|4.0.1"
+                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
                     },
                     {
                         "type": "depends-on",
@@ -1422,7 +1422,7 @@
                             {
                                 "type": "depends-on",
                                 "display": "Library FHIRHelpers",
-                                "resource": "http://fhir.org/guides/cqf/Library/FHIRHelpers|4.0.1"
+                                "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
                             },
                             {
                                 "type": "depends-on",
