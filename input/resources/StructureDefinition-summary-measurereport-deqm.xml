@@ -456,7 +456,7 @@
         <key value="deqm-7"/>
         <severity value="error"/>
         <human value="If group.stratifier exists, then either group.stratifier.code or the group.stratifier.stratum.component.code is present, but not both"/>
-        <expression value="(code.exists() and stratum.component.empty()) xor (code.empty() and stratum.component.exists())"/>
+        <expression value="code.exists() xor stratum.component.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
