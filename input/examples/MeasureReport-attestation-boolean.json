@@ -19,7 +19,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/attestation-boolean-example|1.0.0",
+  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/attestation-boolean-example|5.0.0",
   "date": "2023-04-01",
   "reporter": {
     "reference": "Organization/organization01"

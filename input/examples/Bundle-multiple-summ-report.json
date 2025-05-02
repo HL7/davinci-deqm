@@ -233,7 +233,7 @@
             }
           ]
         },
-        "measure": "https://hl7.org/fhir/us/cqfmeasures/Measure-EXM55-FHIR.html|5.0.0",
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM55-FHIR|5.0.0",
         "period": {
           "end": "2018-12-31",
           "start": "2018-01-01"
@@ -415,7 +415,7 @@
             }
           ]
         },
-        "measure": "https://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR|8.0.0",
+        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130-FHIR|8.0.000",
         "period": {
           "end": "2019-09-01",
           "start": "2019-08-01"
