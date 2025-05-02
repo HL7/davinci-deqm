@@ -59,7 +59,7 @@ Duplicate data is a concern in DEQM because the operations support multiple meas
 
 Note that the $data-requirements operation is currently defined for a single Measure or Library, so it is a responsibility of the data producer to check for, and address, duplicate data.
 
-The Bundles utilized in DEQM operations SHOULD be organized by subject – meaning that a Bundle contains all of the MeasureReport(s) and associated data of interest or evaluated resources for a subject. This reduces the potential for proliferation of duplicate data because resources common to the subject, such as Encounters, would not be repeated across Bundles. A resource instance SHALL occur only once for the data of interest and evaluated resources for with the Bundle. See ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)).
+As described below in the section "DEQM Operation Bundles Organized by Subject," Bundles utilized in DEQM operations SHOULD be organized by subject. This reduces the potential for proliferation of duplicate data because resources common to the subject, such as Encounters, would not be repeated across Bundles. As described in ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)), a given version of a resource SHALL occur only once in a Bundle, and for DEQM that requires consideration of the data of interest and evaluated resources within the Bundle.
 
 Receiving systems need to consider the possibility that some duplicate data may be present across Bundles, such as an Organization resource that is relevant to more than one subject.
 
@@ -99,7 +99,7 @@ For example, the below measure population criteria and stratifier would result i
 
 ### DEQM Operation Bundles Organized by Subject
 
-The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Each Bundle SHOULD contain the resources, including MeasureReports and data of interest (MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Organizing the Bundles by subject means that resources are less likely to be duplicated when used by multiple measures. Resources that are not unique to the subject, such as Pracitioner or Organization, may still be duplicated across Bundles.
+The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Bundles SHOULD be organized by subject, meaning that a Bundle SHOULD contain the resources, the including MeasureReport(s) and data of interest (in MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Resources that are not unique to the subject, such as Practitioner or Organization, may still be duplicated across Bundles.
 
 ### Ad-hoc Organizations for DEQM Operations
 
