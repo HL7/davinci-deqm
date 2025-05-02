@@ -239,9 +239,9 @@
                 "resourceType": "MedicationRequest",
                 "id": "nhsn-iip-add101-10",
                 "meta": {
-                    "versionId": "1",
-                    "lastUpdated": "2022-06-30T06:15:09.030+00:00",
-                    "source": "#04ea320cd2709af0"
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+                    ]
                 },
                 "identifier": [
                     {
