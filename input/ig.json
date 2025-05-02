@@ -2,10 +2,6 @@
 	"resourceType" : "ImplementationGuide",
     "status": "active",
     "extension": [
-		{
-			"url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-			"valueCode" : "trial-use"
-		},
         {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
             "valueCode": "cqi"
@@ -58,6 +54,12 @@
             "id": "cqfm",
             "packageId": "hl7.fhir.us.cqfmeasures",
             "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
+        },
+        {
+            "version": "4.0.1",
+            "id": "cqf",
+            "packageId": "fhir.cqf.common",
+            "uri": "http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common"
         }
     ],
     "fhirVersion": [
@@ -377,12 +379,20 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Col Submit Collect Obs",
+                "name": "Col Collect Obs",
                 "reference": {
-                    "reference": "Parameters/col-submit-collect-obs"
+                    "reference": "Parameters/col-collect-obs"
                 },
-                "description": "DEQM Col Submit Collect Obs example"
+                "description": "DEQM Col Collect Obs example"
             },
+	    {
+		"exampleBoolean": true,
+		"name": "Col Submit Obs",
+		"reference": {
+		    "reference": "Parameters/col-submit-obs"
+		},
+		"description": "DEQM Col Submit Obs example"
+	    },
             {
                 "exampleBoolean": true,
                 "name": "Patient03",

@@ -1,576 +1,514 @@
 {
-    "id": "mrp-submit-task",
-    "resourceType": "Parameters",
-    "parameter": [
-        {
-            "name": "measureReport",
+  "id": "mrp-submit-task",
+  "resourceType": "Parameters",
+  "parameter": [{
+      "name": "bundle",
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "entry": [{
+            "fullUrl": "https://example.com/MeasureReport/datax-measurereport01",
             "resource": {
-                "resourceType": "MeasureReport",
-                "id": "datax-measurereport01",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
-                    ],
-                    "source": "http://example.org/fhir/server"
-                },
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem",
-                        "valueReference": {
-                            "reference": "Device/deqm-software-system-example"
-                        }
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
-                        "valueCode": "incremental"
-                    }
-                ],
-                "status": "complete",
-                "type": "data-collection",
-                "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
-                "subject": {
-                    "reference": "Patient/patient01"
-                },
-                "date": "2018-09-05T16:59:52.404Z",
-                "reporter": {
-                    "reference": "Organization/organization01"
-                },
-                "period": {
-                    "start": "2018-08-01",
-                    "end": "2018-09-01"
-                },
-                "evaluatedResource": [
-                    {
-                        "reference": "Task/task01"
-                    }
+              "resourceType": "MeasureReport",
+              "id": "datax-measurereport01",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
                 ]
-            }
-        },
-        {
-            "name": "resource",
-            "resource": {
-                "resourceType": "Patient",
-                "id": "patient01",
-                "meta": {
-                    "versionId": "5",
-                    "lastUpdated": "2019-02-11T14:19:25.000+00:00",
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
-                    ],
-                    "source": "http://example.org/fhir/server"
-                },
-                "text": {
-                    "status": "generated",
-                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jairo <b>WEBSTER </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr><tr><td>Address</td><td><span>7496 Beaver Ridge Ave </span><br/><span>Thornton </span><span>NJ </span><span>USA </span></td></tr><tr><td>Date of birth</td><td><span>16 December 1946</span></td></tr></tbody></table></div>"
-                },
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-                        "valueCode": "M"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
-                        "extension": [
-                            {
-                                "url": "ombCategory",
-                                "valueCoding": {
-                                    "system": "urn:oid:2.16.840.1.113883.6.238",
-                                    "code": "2106-3",
-                                    "display": "White"
-                                }
-                            },
-                            {
-                                "url": "text",
-                                "valueString": "White"
-                            }
-                        ]
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
-                        "extension": [
-                            {
-                                "url": "ombCategory",
-                                "valueCoding": {
-                                    "system": "urn:oid:2.16.840.1.113883.6.238",
-                                    "code": "2186-5",
-                                    "display": "Not Hispanic or Latino"
-                                }
-                            },
-                            {
-                                "url": "text",
-                                "valueString": "Not Hispanic or Latino"
-                            }
-                        ]
-                    }
-                ],
-                "identifier": [
-                    {
-                        "use": "usual",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                                    "code": "MR",
-                                    "display": "Medical record number"
-                                }
-                            ]
-                        },
-                        "system": "http://hospital.davinci.org",
-                        "value": "12345"
-                    }
-                ],
-                "active": true,
-                "name": [
-                    {
-                        "use": "official",
-                        "family": "Webster",
-                        "given": [
-                            "Jairo"
-                        ]
-                    }
-                ],
-                "gender": "male",
-                "birthDate": "1946-12-16",
-                "deceasedBoolean": false,
-                "address": [
-                    {
-                        "use": "home",
-                        "line": [
-                            "7496 Beaver Ridge Ave"
-                        ],
-                        "city": "Thornton",
-                        "state": "NJ",
-                        "postalCode": "07003",
-                        "country": "USA"
-                    }
-                ],
-                "maritalStatus": {
-                    "coding": [
-                        {
-                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                            "code": "M",
-                            "display": "Married"
-                        }
-                    ]
-                },
-                "communication": [
-                    {
-                        "language": {
-                            "coding": [
-                                {
-                                    "system": "urn:ietf:bcp:47",
-                                    "code": "en-US",
-                                    "display": "English (Region=United States)"
-                                }
-                            ]
-                        },
-                        "preferred": true
-                    }
-                ],
-                "managingOrganization": {
-                    "reference": "Organization/organization01"
+              },
+              "extension": [{
+                  "url": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem",
+                  "valueReference": {
+                    "reference": "Device/deqm-software-system-example"
+                  }
+                }, {
+                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+                  "valueCode": "incremental"
                 }
-            }
-        },
-        {
-            "name": "resource",
-            "resource": {
-                "resourceType": "Task",
-                "id": "Task01",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
-                    ],
-                    "source": "http://example.org/fhir/server"
-                },
-                "identifier": [
-                    {
-                        "system": "http://example.org/tasks",
-                        "value": "19009"
-                    }
-                ],
-                "status": "completed",
-                "intent": "plan",
-                "priority": "routine",
-                "code": {
-                    "coding": [
-                        {
-                            "code": "fulfill",
-                            "display": "Fulfill the focal request",
-                            "system": "http://hl7.org/fhir/CodeSystem/task-code"
-                         }
-                    ]
-                },
-                "for": {
-                    "reference": "Patient/patient01"
-                },
-                "encounter": {
-                    "reference": "Encounter/encounter01"
-                },
-                "executionPeriod": {
-                    "start": "2017-06-11",
-                    "end": "2017-06-11"
-                },
-                "authoredOn": "2018-09-25T14:24:23.584Z",
-                "owner": {
-                    "reference": "Practitioner/practitioner01"
+              ],
+              "status": "complete",
+              "type": "data-collection",
+              "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
+              "subject": {
+                "reference": "Patient/patient01"
+              },
+              "date": "2018-09-05T16:59:52.404Z",
+              "reporter": {
+                "reference": "Organization/organization01"
+              },
+              "period": {
+                "start": "2018-08-01",
+                "end": "2018-09-01"
+              },
+              "evaluatedResource": [{
+                  "reference": "Task/task01"
                 }
+              ]
             }
-        },
-        {
-            "name": "resource",
+          }, {
+            "fullUrl": "https://example.com/Patient/patient01",
             "resource": {
-                "id": "practitioner01",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
-                    ],
-                    "source": "http://example.org/fhir/server"
-                },
-                "active": true,
-                "gender": "male",
-                "identifier": [
-                    {
-                        "system": "http://hl7.org/fhir/sid/us-npi",
-                        "type": {
-                            "coding": [
-                                {
-                                    "code": "PRN",
-                                    "display": "Provider number",
-                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                                }
-                            ]
-                        },
-                        "use": "official",
-                        "value": "1234567893"
+              "resourceType": "Patient",
+              "id": "patient01",
+              "meta": {
+                "versionId": "5",
+                "lastUpdated": "2019-02-11T14:19:25.000+00:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jairo <b>WEBSTER </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr><tr><td>Address</td><td><span>7496 Beaver Ridge Ave </span><br/><span>Thornton </span><span>NJ </span><span>USA </span></td></tr><tr><td>Date of birth</td><td><span>16 December 1946</span></td></tr></tbody></table></div>"
+              },
+              "extension": [{
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                  "valueCode": "M"
+                }, {
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+                  "extension": [{
+                      "url": "ombCategory",
+                      "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2106-3",
+                        "display": "White"
+                      }
+                    }, {
+                      "url": "text",
+                      "valueString": "White"
                     }
-                ],
-                "name": [
-                    {
-                        "family": "Hale",
-                        "given": [
-                            "Cody"
-                        ],
-                        "suffix": [
-                            "MD"
-                        ]
+                  ]
+                }, {
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+                  "extension": [{
+                      "url": "ombCategory",
+                      "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2186-5",
+                        "display": "Not Hispanic or Latino"
+                      }
+                    }, {
+                      "url": "text",
+                      "valueString": "Not Hispanic or Latino"
                     }
-                ],
-                "resourceType": "Practitioner"
-            }
-        },
-        {
-            "name": "resource",
-            "resource": {
-                "resourceType": "Encounter",
-                "id": "encounter01",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
-                    ],
-                    "source": "http://example.org/fhir/server"
-                },
-                "status": "finished",
-                "class": {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                    "code": "IMP",
-                    "display": "inpatient encounter"
-                },
-                "type": [
-                    {
-                        "coding": [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "56876005",
-                                "display": "Drug rehabilitation and detoxification"
-                            }
-                        ]
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/patient01",
-                    "display": "Jairo Webster"
-                },
-                "period": {
-                    "start": "2018-05-29T11:00:00-04:00",
-                    "end": "2018-05-29T11:00:00-04:00"
-                },
-                "hospitalization": {
-                    "dischargeDisposition": {
-                        "coding": [
-                            {
-                                "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
-                                "code": "home",
-                                "display": "Home"
-                            }
-                        ]
-                    }
+                  ]
                 }
-            }
-        },
-        {
-            "name": "resource",
-            "resource": {
-                "id": "coverage01",
-                "meta": {
-                    "lastUpdated": "2019-02-11T14:19:25.000+00:00",
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage"
-                    ],
-                    "versionId": "2",
-                    "source": "http://example.org/fhir/server"
-                },
-                "status": "active",
-                "beneficiary": {
-                    "reference": "Patient/patient01"
-                },
-                "payor": [
-                    {
-                        "reference": "Organization/organization04"
-                    }
-                ],
-                "policyHolder": {
-                    "reference": "Patient/patient01"
-                },
-                "relationship": {
-                    "coding": [
-                        {
-                            "code": "self",
-                            "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
-                        }
+              ],
+              "identifier": [{
+                  "use": "usual",
+                  "type": {
+                    "coding": [{
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                      }
                     ]
-                },
-                "subscriber": {
-                    "reference": "Patient/patient01"
-                },
-                "subscriberId": "A123456789",
-                "resourceType": "Coverage"
-            }
-        },
-        {
-            "name": "resource",
-            "resource": {
-                "resourceType": "Location",
-                "id": "location01",
-                "meta": {
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"
-                    ],
-                    "source": "http://example.org/fhir/server"
-                },
-                "identifier" : [
-                    {
-                      "use" : "temp",
-                      "system" : "http://exampleoflocation.com",
-                      "value" : "DaVinciClinic01"
-                    }
+                  },
+                  "system": "http://hospital.davinci.org",
+                  "value": "12345"
+                }
+              ],
+              "active": true,
+              "name": [{
+                  "use": "official",
+                  "family": "Webster",
+                  "given": [
+                    "Jairo"
+                  ]
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1946-12-16",
+              "deceasedBoolean": false,
+              "address": [{
+                  "use": "home",
+                  "line": [
+                    "7496 Beaver Ridge Ave"
                   ],
-                "name": "DaVinciClinic01",
-                "address": {
-                    "line": [
-                        "102 Heritage Dr."
-                    ],
-                    "city": "Somerset",
-                    "state": "NJ",
-                    "postalCode": "08873",
-                    "country": "USA"
+                  "city": "Thornton",
+                  "state": "NJ",
+                  "postalCode": "07003",
+                  "country": "USA"
                 }
+              ],
+              "maritalStatus": {
+                "coding": [{
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M",
+                    "display": "Married"
+                  }
+                ]
+              },
+              "communication": [{
+                  "language": {
+                    "coding": [{
+                        "system": "urn:ietf:bcp:47",
+                        "code": "en-US",
+                        "display": "English (Region=United States)"
+                      }
+                    ]
+                  },
+                  "preferred": true
+                }
+              ],
+              "managingOrganization": {
+                "reference": "Organization/organization01"
+              }
             }
-        },
-        {
-            "name": "resource",
+          }, {
+            "fullUrl": "https://example.com/Task/Task01",
             "resource": {
-                "id": "organization01",
-                "meta": {
-                    "lastUpdated": "2019-02-21T01:47:54.000+00:00",
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
-                    ],
-                    "versionId": "4",
-                    "source": "http://example.org/fhir/server"
-                },
-                "active": true,
-                "address": [
-                    {
-                        "city": "Warwick",
-                        "country": "USA",
-                        "line": [
-                            "73 Lakewood Street"
-                        ],
-                        "postalCode": "02886",
-                        "state": "RI"
-                    }
-                ],
-                "identifier": [
-                    {
-                        "assigner": {
-                            "display": "www.irs.gov"
-                        },
-                        "system": "urn:oid:2.16.840.1.113883.4.4",
-                        "type": {
-                            "coding": [
-                                {
-                                    "code": "TAX",
-                                    "display": "Tax ID number",
-                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                                }
-                            ]
-                        },
-                        "use": "official",
-                        "value": "123456789"
-                    }
-                ],
-                "name": "DaVinciHospital01",
-                "telecom": [
-                    {
-                        "system": "phone",
-                        "value": "(+1) 401-555-1212"
-                    }
-                ],
-                "type": [
-                    {
-                        "coding": [
-                            {
-                                "code": "prov",
-                                "display": "Healthcare Provider",
-                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                            }
-                        ]
-                    }
-                ],
-                "resourceType": "Organization"
+              "resourceType": "Task",
+              "id": "Task01",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-task"
+                ]
+              },
+              "identifier": [{
+                  "value": "19009"
+                }
+              ],
+              "status": "completed",
+              "intent": "plan",
+              "priority": "routine",
+              "code": {
+                "coding": [{
+                    "code": "fulfill",
+                    "display": "Fulfill the focal request",
+                    "system": "http://hl7.org/fhir/CodeSystem/task-code"
+                  }
+                ]
+              },
+              "for": {
+                "reference": "Patient/patient01"
+              },
+              "encounter": {
+                "reference": "Encounter/encounter01"
+              },
+              "executionPeriod": {
+                "start": "2017-06-11",
+                "end": "2017-06-11"
+              },
+              "authoredOn": "2018-09-25T14:24:23.584Z",
+              "owner": {
+                "reference": "Practitioner/practitioner01"
+              }
             }
-        },
-        {
-            "name": "resource",
+          }, {
+            "fullUrl": "https://example.com/Practitioner/practitioner01",
             "resource": {
-                "id": "organization02",
-                "meta": {
-                    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
-                    ],
-                    "versionId": "3",
-                    "source": "http://example.org/fhir/server"
-                },
-                "active": true,
-                "address": [
-                    {
-                        "city": "Englewood",
-                        "country": "USA",
-                        "line": [
-                            "3 Sherwood St."
-                        ],
-                        "postalCode": "07631",
-                        "state": "NJ"
-                    }
-                ],
-                "identifier": [
-                    {
-                        "assigner": {
-                            "display": "www.irs.gov"
-                        },
-                        "system": "urn:oid:2.16.840.1.113883.4.4",
-                        "type": {
-                            "coding": [
-                                {
-                                    "code": "TAX",
-                                    "display": "Tax ID number",
-                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                                }
-                            ]
-                        },
-                        "use": "official",
-                        "value": "234567891"
-                    }
-                ],
-                "name": "DaVinciHospital02",
-                "telecom": [
-                    {
-                        "system": "phone",
-                        "value": "(+1) 551-555-1212"
-                    }
-                ],
-                "type": [
-                    {
-                        "coding": [
-                            {
-                                "code": "prov",
-                                "display": "Healthcare Provider",
-                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                            }
-                        ]
-                    }
-                ],
-                "resourceType": "Organization"
+              "id": "practitioner01",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"
+                ]
+              },
+              "active": true,
+              "gender": "male",
+              "identifier": [{
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "type": {
+                    "coding": [{
+                        "code": "PRN",
+                        "display": "Provider number",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                      }
+                    ]
+                  },
+                  "use": "official",
+                  "value": "1234567893"
+                }
+              ],
+              "name": [{
+                  "family": "Hale",
+                  "given": [
+                    "Cody"
+                  ],
+                  "suffix": [
+                    "MD"
+                  ]
+                }
+              ],
+              "resourceType": "Practitioner"
             }
-        },
-        {
-            "name": "resource",
+          }, {
+            "fullUrl": "https://example.com/Encounter/encounter01",
             "resource": {
-                "id": "organization04",
-                "meta": {
-                    "lastUpdated": "2019-03-06T19:03:03.000+00:00",
-                    "profile": [
-                        "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
-                    ],
-                    "versionId": "4",
-                    "source": "http://example.org/fhir/server"
-                },
-                "active": true,
-                "address": [
-                    {
-                        "city": "Grand Rapids",
-                        "country": "USA",
-                        "line": [
-                            "160 Glen Eagles Road"
-                        ],
-                        "postalCode": "49503",
-                        "state": "MI"
+              "resourceType": "Encounter",
+              "id": "encounter01",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+                ]
+              },
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [{
+                  "coding": [{
+                      "system": "http://snomed.info/sct",
+                      "code": "56876005",
+                      "display": "Drug rehabilitation and detoxification"
                     }
-                ],
-                "identifier": [
-                    {
-                        "assigner": {
-                            "display": "www.irs.gov"
-                        },
-                        "system": "urn:oid:2.16.840.1.113883.4.4",
-                        "type": {
-                            "coding": [
-                                {
-                                    "code": "TAX",
-                                    "display": "Tax ID number",
-                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                                }
-                            ]
-                        },
-                        "use": "official",
-                        "value": "456789123"
+                  ]
+                }
+              ],
+              "subject": {
+                "reference": "Patient/patient01",
+                "display": "Jairo Webster"
+              },
+              "period": {
+                "start": "2018-05-29T11:00:00-04:00",
+                "end": "2018-05-29T11:00:00-04:00"
+              },
+              "hospitalization": {
+                "dischargeDisposition": {
+                  "coding": [{
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
                     }
-                ],
-                "name": "DVPayer04",
-                "telecom": [
-                    {
-                        "system": "phone",
-                        "value": "(+1) 616-555-1212"
-                    }
-                ],
-                "type": [
-                    {
-                        "coding": [
-                            {
-                                "code": "ins",
-                                "display": "Insurance Company",
-                                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-                            }
-                        ]
-                    }
-                ],
-                "resourceType": "Organization"
+                  ]
+                }
+              }
             }
-        }
-    ],
-    "meta": {
-        "source": "http://example.org/fhir/server"
+          }, {
+            "fullUrl": "https://example.com/Coverage/coverage01",
+            "resource": {
+              "id": "coverage01",
+              "meta": {
+                "lastUpdated": "2019-02-11T14:19:25.000+00:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage"
+                ],
+                "versionId": "2"
+              },
+              "status": "active",
+              "beneficiary": {
+                "reference": "Patient/patient01"
+              },
+              "payor": [{
+                  "reference": "Organization/organization04"
+                }
+              ],
+              "policyHolder": {
+                "reference": "Patient/patient01"
+              },
+              "relationship": {
+                "coding": [{
+                    "code": "self",
+                    "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+                  }
+                ]
+              },
+              "subscriber": {
+                "reference": "Patient/patient01"
+              },
+              "subscriberId": "A123456789",
+              "resourceType": "Coverage"
+            }
+          }, {
+            "fullUrl": "https://example.com/Location/location01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "location01",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"
+                ]
+              },
+              "identifier": [{
+                  "use": "temp",
+                  "system": "http://exampleoflocation.com",
+                  "value": "DaVinciClinic01"
+                }
+              ],
+              "name": "DaVinciClinic01",
+              "address": {
+                "line": [
+                  "102 Heritage Dr."
+                ],
+                "city": "Somerset",
+                "state": "NJ",
+                "postalCode": "08873",
+                "country": "USA"
+              }
+            }
+          }, {
+            "fullUrl": "https://example.com/Organization/organization01",
+            "resource": {
+              "id": "organization01",
+              "meta": {
+                "lastUpdated": "2019-02-21T01:47:54.000+00:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
+                ],
+                "versionId": "4"
+              },
+              "active": true,
+              "address": [{
+                  "city": "Warwick",
+                  "country": "USA",
+                  "line": [
+                    "73 Lakewood Street"
+                  ],
+                  "postalCode": "02886",
+                  "state": "RI"
+                }
+              ],
+              "identifier": [{
+                  "assigner": {
+                    "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "type": {
+                    "coding": [{
+                        "code": "TAX",
+                        "display": "Tax ID number",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                      }
+                    ]
+                  },
+                  "use": "official",
+                  "value": "123456789"
+                }
+              ],
+              "name": "DaVinciHospital01",
+              "telecom": [{
+                  "system": "phone",
+                  "value": "(+1) 401-555-1212"
+                }
+              ],
+              "type": [{
+                  "coding": [{
+                      "code": "prov",
+                      "display": "Healthcare Provider",
+                      "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                    }
+                  ]
+                }
+              ],
+              "resourceType": "Organization"
+            }
+          }, {
+            "fullUrl": "https://example.com/Organization/organization02",
+            "resource": {
+              "id": "organization02",
+              "meta": {
+                "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
+                ],
+                "versionId": "3"
+              },
+              "active": true,
+              "address": [{
+                  "city": "Englewood",
+                  "country": "USA",
+                  "line": [
+                    "3 Sherwood St."
+                  ],
+                  "postalCode": "07631",
+                  "state": "NJ"
+                }
+              ],
+              "identifier": [{
+                  "assigner": {
+                    "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "type": {
+                    "coding": [{
+                        "code": "TAX",
+                        "display": "Tax ID number",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                      }
+                    ]
+                  },
+                  "use": "official",
+                  "value": "234567891"
+                }
+              ],
+              "name": "DaVinciHospital02",
+              "telecom": [{
+                  "system": "phone",
+                  "value": "(+1) 551-555-1212"
+                }
+              ],
+              "type": [{
+                  "coding": [{
+                      "code": "prov",
+                      "display": "Healthcare Provider",
+                      "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                    }
+                  ]
+                }
+              ],
+              "resourceType": "Organization"
+            }
+          }, {
+            "fullUrl": "https://example.com/Organization/organization04",
+            "resource": {
+              "id": "organization04",
+              "meta": {
+                "lastUpdated": "2019-03-06T19:03:03.000+00:00",
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
+                ],
+                "versionId": "4"
+              },
+              "active": true,
+              "address": [{
+                  "city": "Grand Rapids",
+                  "country": "USA",
+                  "line": [
+                    "160 Glen Eagles Road"
+                  ],
+                  "postalCode": "49503",
+                  "state": "MI"
+                }
+              ],
+              "identifier": [{
+                  "assigner": {
+                    "display": "www.irs.gov"
+                  },
+                  "system": "urn:oid:2.16.840.1.113883.4.4",
+                  "type": {
+                    "coding": [{
+                        "code": "TAX",
+                        "display": "Tax ID number",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                      }
+                    ]
+                  },
+                  "use": "official",
+                  "value": "456789123"
+                }
+              ],
+              "name": "DVPayer04",
+              "telecom": [{
+                  "system": "phone",
+                  "value": "(+1) 616-555-1212"
+                }
+              ],
+              "type": [{
+                  "coding": [{
+                      "code": "ins",
+                      "display": "Insurance Company",
+                      "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                    }
+                  ]
+                }
+              ],
+              "resourceType": "Organization"
+            }
+          }
+        ]
+      }
     }
+  ]
 }

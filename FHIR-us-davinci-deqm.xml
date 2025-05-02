@@ -26,7 +26,9 @@
 <artifact id="CodeSystem/care-gap-remark" key="CodeSystem-care-gap-remark" name="Care Gap Remark Code System"/>
 <artifact id="ValueSet/care-gap-remark" key="ValueSet-care-gap-remark" name="Care Gap Remark Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
-<artifact id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
+<artifact id="Parameters/col-collect-obs" key="Parameters-col-collect-obs" name="Col Collect Obs"/>
+<artifact deprecated="true" id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
+<artifact id="Parameters/col-submit-obs" key="Parameters-col-submit-obs" name="Col Submit Obs"/>
 <artifact id="OperationDefinition/collect-data" key="OperationDefinition-collect-data" name="Collect Data"/>
 <artifact id="Condition/nhsn-iip-con101" key="Condition-nhsn-iip-con101" name="Condition nhsn-iip-con101"/>
 <artifact id="CapabilityStatement/consumer-client" key="CapabilityStatement-consumer-client" name="Consumer Client CapabilityStatement"/>

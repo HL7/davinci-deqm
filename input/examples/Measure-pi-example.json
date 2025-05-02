@@ -102,6 +102,15 @@
       "display" : "proportion"
     }]
   },
+  "improvementNotation": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "code": "increase",
+        "display": "Increased score indicates improvement"
+      }
+    ]
+  },
   "group" : [{
     "id" : "group-1",
     "population" : [{
