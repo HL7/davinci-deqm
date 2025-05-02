@@ -14,7 +14,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure reported has an open gap or a closed gap as identified in the gapStatus modifier extension."/>
+    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure reported has an open gap, prospective-gap or a closed gap as identified in the gapStatus modifier extension."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
