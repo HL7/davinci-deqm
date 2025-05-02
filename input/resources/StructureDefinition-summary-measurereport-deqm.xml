@@ -121,7 +121,7 @@
     <element id="MeasureReport.extension:scoring">
       <path value="MeasureReport.extension"/>
       <sliceName value="scoring"/>
-      <short value="proportion | ratio | continuous-variable | cohort | composite"/>
+      <short value="proportion | ratio | continuous-variable | cohort | composite | attestation"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -327,7 +327,7 @@
     <element id="MeasureReport.group.extension:scoring">
       <path value="MeasureReport.group.extension"/>
       <sliceName value="scoring"/>
-      <short value="proportion | ratio | continuous-variable | cohort | composite"/>
+      <short value="proportion | ratio | continuous-variable | cohort | composite | attestation"/>
       <min value="0"/>
       <max value="1"/>
       <type>
