@@ -3,7 +3,7 @@
     "id": "deqm-software-system-example",
     "meta": {
         "profile": [
-            "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"
+            "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystemdevice"
         ],
         "source": "http://example.org/fhir/server"
     },

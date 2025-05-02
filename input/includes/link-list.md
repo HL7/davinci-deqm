@@ -140,7 +140,7 @@
 [HL7 Da Vinci Guiding Principles]: https://confluence.hl7.org/display/DVP/Da+Vinci+Clinical+Advisory+Council+Members?preview=/66940155/66942916/Guiding%20Principles%20for%20Da%20Vinci%20Implementation%20Guides.pdf
 [Bundle Multiple Summ Report]: Bundle-multiple-summ-report.html
 [Bundle Multiple Indv Report]: Bundle-multiple-indv-mrp-obs-report.html
-[Software System]: {{site.data.fhir.cqfm}}StructureDefinition-cqfm-softwaresystem.html
+[Software System]: {{site.data.fhir.ver.crmi}}StructureDefinition-crmi-softwaresystemdevice.html
 [Default Profiles]: {{site.data.fhir.path}}implementationguide.html#default
 [Gaps In Care Reporting]: gaps-in-care-reporting.html
 [DEQM Gaps In Care Bundle Profile]: StructureDefinition-gaps-bundle-deqm.html
