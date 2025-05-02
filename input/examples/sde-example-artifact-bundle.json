@@ -96,7 +96,7 @@
                     {
                         "type": "depends-on",
                         "display": "Code system RequestIntent",
-                        "resource": "http://hl7.org/fhir/R4/codesystem-request-intent.html"
+                        "resource": "http://hl7.org/fhir/request-intent"
                     },
                     {
                         "type": "depends-on",
