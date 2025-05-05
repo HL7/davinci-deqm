@@ -19,6 +19,19 @@ URL value 'urn:oid:1.3.4.5.6.7' does not resolve
 URL value 'http://someguidelineprovider.org/medication-adherence-guidelines.html' does not resolve
 URL value 'http://someguidelineprovider.org/radiology-appropriateness-guidelines.html' does not resolve
 
+# Intended URLs for a transaction bundle with PUT requests in entry.request.url
+WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].request.url: URL value 'Patient/patient04' does not resolve
+WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[1].request.url: URL value 'Encounter/encounter04' does not resolve
+WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[2].request.url: URL value 'MedicationRequest/nhsn-iip-add101' does not resolve
+WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].request.url: URL value 'MedicationRequest/nhsn-iip-add101-10' does not resolve
+WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[4].request.url: URL value 'ServiceRequest/nhsn-iip-sr-sde' does not resolve
+WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[5].request.url: URL value 'Location/nhsn-iip-loc101' does not resolve
+WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[6].request.url: URL value 'Condition/condition04' does not resolve
+
+# URLs that do resolve, but still give warnings anyway
+https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19
+
+
 # Example coding systems
 A definition for CodeSystem 'http://example.org/stratification' could not be found, so the code cannot be validated
 
