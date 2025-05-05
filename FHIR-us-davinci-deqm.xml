@@ -91,7 +91,6 @@
 <artifact id="Encounter/encounter02" key="Encounter-encounter02" name="Encounter02"/>
 <artifact id="Encounter/encounter03" key="Encounter-encounter03" name="Encounter03"/>
 <artifact id="OperationDefinition/evaluate" key="OperationDefinition-evaluate" name="Evaluate Operation"/>
-<artifact id="MeasureReport/summary-multirate-measurereport" key="MeasureReport-summary-multirate-measurereport" name="Example MeasureReport - summary-multirate-measurereport"/>
 <artifact deprecated="true" key="ExampleScenario" name="ExampleScenario"/>
 <artifact id="Bundle/single-gaps-closed-indv-report01" key="Bundle-single-gaps-closed-indv-report01" name="Gaps Bundle Closed Individual MeasureReport01"/>
 <artifact id="Bundle/single-gaps-closed-indv-report02" key="Bundle-single-gaps-closed-indv-report02" name="Gaps Bundle Closed Individual MeasureReport02"/>
