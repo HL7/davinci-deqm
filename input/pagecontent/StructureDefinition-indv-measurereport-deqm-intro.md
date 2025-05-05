@@ -23,20 +23,20 @@ The following data-elements are mandatory (i.e data MUST be present).
 6. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
 7. group.measureScore: What score this group achieved
 8. group.population.count: Size of the population
-9. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
-10. group.stratifier.stratum.population.count: Size of the population
-11. group: Measure results for each group
-12. alternateScoreType: Possible additional measureScore value types
-13. criteriaReference: Criteria reference
-14. countQuantity: Size of the population as a quantity.
-15. group.code: Meaning of the group
-16. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
-17. group.id: Unique id for inter-element referencing
-18. group.stratifier.code: What stratifier of the group
-19. description: Description of the stratifier
-20. evaluatedResource: What data was used to calculate the measure score
-21. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
-22. improvementNotation: increase \| decrease
+9. group.stratifier.stratum.population.count: Size of the population
+10. group: Measure results for each group
+11. alternateScoreType: Possible additional measureScore value types
+12. criteriaReference: Criteria reference
+13. countQuantity: Size of the population as a quantity.
+14. group.code: Meaning of the group
+15. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+16. group.id: Unique id for inter-element referencing
+17. group.stratifier.code: What stratifier of the group
+18. description: Description of the stratifier
+19. evaluatedResource: What data was used to calculate the measure score
+20. group.stratifier.stratum: Stratum results, one for each unique value, or set of values, in the stratifier, or stratifier components
+21. improvementNotation: increase \| decrease
+22. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite \| attestation
 23. calculatedDate: The date the score was calculated
 24. description: Description of the group
 25. group.stratifier: Stratification results

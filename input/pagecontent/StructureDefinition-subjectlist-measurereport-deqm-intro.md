@@ -33,7 +33,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 10. group.measureScore: What score this group achieved
 11. group.population.count: Size of the population
 12. subject: What individual(s) the report is for
-13. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+13. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite \| attestation
 14. calculatedDate: The date the score was calculated
 15. alternateScoreType: Possible additional measureScore value types
 16. description: Description of the group

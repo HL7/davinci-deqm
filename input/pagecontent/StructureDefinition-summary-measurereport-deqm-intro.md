@@ -31,7 +31,7 @@ The following data-elements are mandatory (i.e data MUST be present).
 9. improvementNotation: increase \| decrease
 10. group.measureScore: What score this group achieved
 11. group.population.count: Size of the population
-12. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite
+12. scoring: proportion \| ratio \| continuous-variable \| cohort \| composite \| attestation
 13. calculatedDate: The date the score was calculated
 14. alternateScoreType: Possible additional measureScore value types
 15. description: Description of the group
