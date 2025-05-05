@@ -1,542 +1,585 @@
 {
-  "id": "multiple-summ-report",
-  "entry": [
-    {
-      "fullUrl": "http://example.org/CodeSystem/stratifier",
-      "resource": {
-        "resourceType": "CodeSystem",
-        "id": "stratifier",
-        "url": "http://example.org/CodeSystem/stratifier",
-        "version": "1.0.0",
-        "name": "StratifierCodes",
-        "status": "active",
-        "content": "complete",
-        "concept": [
-          {
-            "code": "S1",
-            "display": "Stratifier 1"
-          },
-          {
-            "code": "S2",
-            "display": "Stratifier 2"
-          },
-          {
-            "code": "S3",
-            "display": "Stratifier 3"
-          }
-        ]
-      },
-      "request": {
-        "method": "POST",
-        "url": "CodeSystem"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:884bd27a-b1a0-11ea-b615-a4d18ccf5172",
-      "request": {
-        "method": "POST",
-        "url": "MeasureReport"
-      },
-      "resource": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "proportion",
-                  "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                }
-              ]
-            }
-          }
-        ],
-        "group": [
-          {
-            "measureScore": {
-              "value": 0.50
-            },
-            "population": [
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "initial-population",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 1000
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "measure-population",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 1000
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "measure-population-exclusion",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 0
-              }
-            ],
-            "stratifier": [
-              {
-                "id": "stratifier-1",
-                "code": [
-                  {
-                    "coding": [
-                      {
-                        "code": "S1",
-                        "system": "http://example.org/CodeSystem/stratifier",
-                        "display": "Stratifier 1"
-                      }
-                    ]
-                  }
-                ],
-                "stratum": [
-                  {
-                    "value": {
-                      "coding": [
-                        {
-                          "system": "http://example.org/CodeSystem/stratifier",
-                          "code": "S1",
-                          "display": "Stratifier 1"
-                        }
-                      ]
-                    },
-                    "measureScore": {
-                      "value": 0.62
-                    },
-                    "population": [
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "initial-population",
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                            }
-                          ]
-                        },
-                        "count": 500
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "stratifier-2",
-                "code": [
-                  {
-                    "coding": [
-                      {
-                        "code": "S2",
-                        "system": "http://example.org/CodeSystem/stratifier",
-                        "display": "Stratifier 2"
-                      }
-                    ]
-                  }
-                ],
-                "stratum": [
-                  {
-                    "value": {
-                      "coding": [
-                        {
-                          "system": "http://example.org/CodeSystem/stratifier",
-                          "code": "S2",
-                          "display": "Stratifier 2"
-                        }
-                      ]
-                    },
-                    "measureScore": {
-                      "value": 0.62
-                    },
-                    "population": [
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "initial-population",
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                            }
-                          ]
-                        },
-                        "count": 250
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "stratifier-3",
-                "code": [
-                  {
-                    "coding": [
-                      {
-                        "code": "S3",
-                        "system": "http://example.org/CodeSystem/stratifier",
-                        "display": "Stratifier 3"
-                      }
-                    ]
-                  }
-                ],
-                "stratum": [
-                  {
-                    "value": {
-                      "coding": [
-                        {
-                          "system": "http://example.org/CodeSystem/stratifier",
-                          "code": "S3",
-                          "display": "Stratifier 3"
-                        }
-                      ]
-                    },
-                    "measureScore": {
-                      "value": 0.62
-                    },
-                    "population": [
-                      {
-                        "code": {
-                          "coding": [
-                            {
-                              "code": "initial-population",
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                            }
-                          ]
-                        },
-                        "count": 250
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "improvementNotation": {
-          "coding": [
-            {
-              "code": "increase",
-              "display": "Increased score indicates improvement",
-              "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-            }
-          ]
-        },
-        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM55-FHIR|5.0.0",
-        "period": {
-          "end": "2018-12-31",
-          "start": "2018-01-01"
-        },
-        "status": "complete",
-        "type": "summary",
-        "resourceType": "MeasureReport",
-        "meta": {
-          "source": "http://example.org/fhir/server"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172",
-      "request": {
-        "method": "POST",
-        "url": "Organization"
-      },
-      "resource": {
-        "meta": {
-          "lastUpdated": "2019-02-21T01:47:54.000+00:00",
-          "profile": [
-            "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
-          ],
-          "versionId": "4",
-          "source": "http://example.org/fhir/server"
-        },
-        "active": true,
-        "address": [
-          {
-            "city": "Warwick",
-            "country": "USA",
-            "line": [
-              "73 Lakewood Street"
-            ],
-            "postalCode": "02886",
-            "state": "RI"
-          }
-        ],
-        "identifier": [
-          {
-            "assigner": {
-              "display": "www.irs.gov"
-            },
-            "system": "urn:oid:2.16.840.1.113883.4.4",
-            "type": {
-              "coding": [
-                {
-                  "code": "TAX",
-                  "display": "Tax ID number",
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                }
-              ]
-            },
-            "use": "official",
-            "value": "123456789"
-          }
-        ],
-        "name": "DaVinciHospital01",
-        "telecom": [
-          {
-            "system": "phone",
-            "value": "(+1) 401-555-1212"
-          }
-        ],
-        "type": [
-          {
-            "coding": [
-              {
-                "code": "prov",
-                "display": "Healthcare Provider",
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
-              }
-            ]
-          }
-        ],
-        "resourceType": "Organization"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:884cd4e0-b1a0-11ea-b615-a4d18ccf5172",
-      "request": {
-        "method": "POST",
-        "url": "MeasureReport"
-      },
-      "resource": {
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
-          ],
-          "source": "http://example.org/fhir/server"
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "proportion",
-                  "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                }
-              ]
-            }
-          }
-        ],
-        "date": "2019-09-05T16:59:52.404Z",
-        "group": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "code": "group-1",
-                  "display": "group-1",
-                  "system": "http://example.org/fhir/"
-                }
-              ]
-            },
-            "measureScore": {
-              "value": 0.66
-            },
-            "population": [
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "initial-population",
-                      "display": "Initial Population",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 100
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "numerator",
-                      "display": "Numerator",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 60
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "denominator",
-                      "display": "Denominator",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 100
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "denominator-exclusion",
-                      "display": "Denominator Exclusion",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 10
-              }
-            ]
-          }
-        ],
-        "improvementNotation": {
-          "coding": [
-            {
-              "code": "increase",
-              "display": "Increased score indicates improvement",
-              "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-            }
-          ]
-        },
-        "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130-FHIR|8.0.000",
-        "period": {
-          "end": "2019-09-01",
-          "start": "2019-08-01"
-        },
-        "reporter": {
-          "reference": "urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172"
-        },
-        "status": "complete",
-        "type": "summary",
-        "resourceType": "MeasureReport"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:884ec872-b1a0-11ea-b615-a4d18ccf5172",
-      "request": {
-        "method": "POST",
-        "url": "MeasureReport"
-      },
-      "resource": {
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
-          ],
-          "source": "http://example.org/fhir/server"
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "proportion",
-                  "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                }
-              ]
-            }
-          }
-        ],
-        "date": "2018-09-05T16:59:52.404Z",
-        "group": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "code": "mrp-group",
-                  "display": "MRP Group",
-                  "system": "http://example.org/fhir/"
-                }
-              ],
-              "text": "MRP Group"
-            },
-            "measureScore": {
-              "value": 0.8
-            },
-            "population": [
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "initial-population",
-                      "display": "Initial Population",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 100
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "numerator",
-                      "display": "Numerator",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 80
-              },
-              {
-                "code": {
-                  "coding": [
-                    {
-                      "code": "denominator",
-                      "display": "Denominator",
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
-                    }
-                  ]
-                },
-                "count": 100
-              }
-            ]
-          }
-        ],
-        "improvementNotation": {
-          "coding": [
-            {
-              "code": "increase",
-              "display": "Increased score indicates improvement",
-              "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-            }
-          ]
-        },
-        "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
-        "period": {
-          "end": "2018-09-01",
-          "start": "2018-08-01"
-        },
-        "reporter": {
-          "reference": "urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172"
-        },
-        "status": "complete",
-        "type": "summary",
-        "resourceType": "MeasureReport"
-      }
-    }
-  ],
-  "timestamp": "2020-06-18T20:16:02.653993Z",
-  "type": "transaction",
-  "resourceType": "Bundle",
-  "meta": {
-    "source": "http://example.org/fhir/server"
-  }
+	"id": "multiple-summ-report",
+	"entry": [
+		{
+			"fullUrl": "http://example.org/CodeSystem/stratifier",
+			"resource": {
+				"resourceType": "CodeSystem",
+				"id": "stratifier",
+				"url": "http://example.org/CodeSystem/stratifier",
+				"version": "1.0.0",
+				"name": "StratifierCodes",
+				"title": "StratifierCodes",
+				"status": "active",
+				"content": "complete",
+				"concept": [
+					{
+						"code": "S1",
+						"display": "Stratifier 1"
+					},
+					{
+						"code": "S2",
+						"display": "Stratifier 2"
+					},
+					{
+						"code": "S3",
+						"display": "Stratifier 3"
+					}
+				]
+			},
+			"request": {
+				"method": "POST",
+				"url": "CodeSystem"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:884bd27a-b1a0-11ea-b615-a4d18ccf5172",
+			"request": {
+				"method": "POST",
+				"url": "MeasureReport"
+			},
+			"resource": {
+				"resourceType": "MeasureReport",
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+					],
+					"source": "http://example.org/fhir/server"
+				},
+				"id": "summ-medicare-stratification-example",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+						"valueCodeableConcept": {
+							"coding": [
+								{
+									"code": "proportion",
+									"system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+								}
+							]
+						}
+					}
+				],
+				"status": "complete",
+				"type": "summary",
+				"measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM55-FHIR|5.0.0",
+				"date": "2018-09-05T16:59:52.404Z",
+				"period": {
+					"start": "2018-01-01",
+					"end": "2018-12-31"
+				},
+				"reporter": {
+					"reference": "Organization/organization01",
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup",
+							"valueReference": {
+								"reference": "Group/group01"
+							}
+						}
+					]
+				},
+				"improvementNotation": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+							"code": "increase",
+							"display": "Increased score indicates improvement"
+						}
+					]
+				},
+				"group": [
+					{
+						"population": [
+							{
+								"code": {
+									"coding": [
+										{
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+											"code": "initial-population"
+										}
+									]
+								},
+								"count": 10000
+							},
+							{
+								"code": {
+									"coding": [
+										{
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+											"code": "measure-population"
+										}
+									]
+								},
+								"count": 8000
+							},
+							{
+								"code": {
+									"coding": [
+										{
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+											"code": "measure-population-exclusion"
+										}
+									]
+								},
+								"count": 4000
+							}
+						],
+						"measureScore": {
+							"value": 0.5
+						},
+						"stratifier": [
+							{
+								"code": [
+									{
+										"coding": [
+											{
+												"system": "http://example.org/stratification",
+												"code": "Stratification 1",
+												"display": "Stratification 1"
+											}
+										]
+									}
+								],
+								"stratum": [
+									{
+										"value": {
+											"coding": [
+												{
+													"system": "http://example.org/stratification",
+													"code": "true"
+												}
+											]
+										},
+										"population": [
+											{
+												"code": {
+													"coding": [
+														{
+															"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+															"code": "initial-population"
+														}
+													]
+												},
+												"count": 1747
+											},
+											{
+												"code": {
+													"coding": [
+														{
+															"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+															"code": "denominator"
+														}
+													]
+												},
+												"count": 392
+											},
+											{
+												"code": {
+													"coding": [
+														{
+															"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+															"code": "numerator"
+														}
+													]
+												},
+												"count": 243
+											}
+										],
+										"measureScore": {
+											"value": 0.699
+										}
+									}
+								]
+							},
+							{
+								"id": "Stratification 2",
+								"code": [
+									{
+										"coding": [
+											{
+												"system": "http://example.org/stratification",
+												"code": "Stratification 2",
+												"display": "Stratification 2"
+											}
+										]
+									}
+								],
+								"stratum": [
+									{
+										"value": {
+											"coding": [
+												{
+													"system": "http://example.org/CodeSystem/SOP",
+													"code": "MEDICARE",
+													"display": "Medicare"
+												}
+											]
+										},
+										"population": [
+											{
+												"code": {
+													"coding": [
+														{
+															"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+															"code": "initial-population"
+														}
+													]
+												},
+												"count": 745
+											},
+											{
+												"code": {
+													"coding": [
+														{
+															"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+															"code": "denominator"
+														}
+													]
+												},
+												"count": 150
+											},
+											{
+												"code": {
+													"coding": [
+														{
+															"system": "http://terminology.hl7.org/CodeSystem/measure-population",
+															"code": "numerator"
+														}
+													]
+												},
+												"count": 103
+											}
+										],
+										"measureScore": {
+											"value": 0.6867
+										}
+									}
+								]
+							},
+							{
+								"id": "Stratification 3",
+								"code": [
+									{
+										"coding": [
+											{
+												"system": "http://example.org/stratification",
+												"code": "Stratification 3",
+												"display": "Stratification 3"
+											}
+										]
+									}
+								],
+								"stratum": [
+									{
+										"value": {
+											"coding": [
+												{
+													"system": "http://example.org/CodeSystem/medicare-subgroup",
+													"code": "Non-LIS/DE,Nondisability",
+													"display": "Non-LIS/DE,Nondisability"
+												}
+											]
+										}
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172",
+			"request": {
+				"method": "POST",
+				"url": "Organization"
+			},
+			"resource": {
+				"meta": {
+					"lastUpdated": "2019-02-21T01:47:54.000+00:00",
+					"profile": [
+						"http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"
+					],
+					"versionId": "4",
+					"source": "http://example.org/fhir/server"
+				},
+				"active": true,
+				"address": [
+					{
+						"city": "Warwick",
+						"country": "USA",
+						"line": [
+							"73 Lakewood Street"
+						],
+						"postalCode": "02886",
+						"state": "RI"
+					}
+				],
+				"identifier": [
+					{
+						"assigner": {
+							"display": "www.irs.gov"
+						},
+						"system": "urn:oid:2.16.840.1.113883.4.4",
+						"type": {
+							"coding": [
+								{
+									"code": "TAX",
+									"display": "Tax ID number",
+									"system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+								}
+							]
+						},
+						"use": "official",
+						"value": "123456789"
+					}
+				],
+				"name": "DaVinciHospital01",
+				"telecom": [
+					{
+						"system": "phone",
+						"value": "(+1) 401-555-1212"
+					}
+				],
+				"type": [
+					{
+						"coding": [
+							{
+								"code": "prov",
+								"display": "Healthcare Provider",
+								"system": "http://terminology.hl7.org/CodeSystem/organization-type"
+							}
+						]
+					}
+				],
+				"resourceType": "Organization"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:884cd4e0-b1a0-11ea-b615-a4d18ccf5172",
+			"request": {
+				"method": "POST",
+				"url": "MeasureReport"
+			},
+			"resource": {
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+					],
+					"source": "http://example.org/fhir/server"
+				},
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+						"valueCodeableConcept": {
+							"coding": [
+								{
+									"code": "proportion",
+									"system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+								}
+							]
+						}
+					}
+				],
+				"date": "2019-09-05T16:59:52.404Z",
+				"group": [
+					{
+						"code": {
+							"coding": [
+								{
+									"code": "group-1",
+									"display": "group-1",
+									"system": "http://example.org/fhir/"
+								}
+							]
+						},
+						"measureScore": {
+							"value": 0.66
+						},
+						"population": [
+							{
+								"code": {
+									"coding": [
+										{
+											"code": "initial-population",
+											"display": "Initial Population",
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population"
+										}
+									]
+								},
+								"count": 100
+							},
+							{
+								"code": {
+									"coding": [
+										{
+											"code": "numerator",
+											"display": "Numerator",
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population"
+										}
+									]
+								},
+								"count": 60
+							},
+							{
+								"code": {
+									"coding": [
+										{
+											"code": "denominator",
+											"display": "Denominator",
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population"
+										}
+									]
+								},
+								"count": 100
+							},
+							{
+								"code": {
+									"coding": [
+										{
+											"code": "denominator-exclusion",
+											"display": "Denominator Exclusion",
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population"
+										}
+									]
+								},
+								"count": 10
+							}
+						]
+					}
+				],
+				"improvementNotation": {
+					"coding": [
+						{
+							"code": "increase",
+							"display": "Increased score indicates improvement",
+							"system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+						}
+					]
+				},
+				"measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130-FHIR|8.0.000",
+				"period": {
+					"end": "2019-09-01",
+					"start": "2019-08-01"
+				},
+				"reporter": {
+					"reference": "urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172"
+				},
+				"status": "complete",
+				"type": "summary",
+				"resourceType": "MeasureReport"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:884ec872-b1a0-11ea-b615-a4d18ccf5172",
+			"request": {
+				"method": "POST",
+				"url": "MeasureReport"
+			},
+			"resource": {
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+					],
+					"source": "http://example.org/fhir/server"
+				},
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+						"valueCodeableConcept": {
+							"coding": [
+								{
+									"code": "proportion",
+									"system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+								}
+							]
+						}
+					}
+				],
+				"date": "2018-09-05T16:59:52.404Z",
+				"group": [
+					{
+						"code": {
+							"coding": [
+								{
+									"code": "mrp-group",
+									"display": "MRP Group",
+									"system": "http://example.org/fhir/"
+								}
+							],
+							"text": "MRP Group"
+						},
+						"measureScore": {
+							"value": 0.8
+						},
+						"population": [
+							{
+								"code": {
+									"coding": [
+										{
+											"code": "initial-population",
+											"display": "Initial Population",
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population"
+										}
+									]
+								},
+								"count": 100
+							},
+							{
+								"code": {
+									"coding": [
+										{
+											"code": "numerator",
+											"display": "Numerator",
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population"
+										}
+									]
+								},
+								"count": 80
+							},
+							{
+								"code": {
+									"coding": [
+										{
+											"code": "denominator",
+											"display": "Denominator",
+											"system": "http://terminology.hl7.org/CodeSystem/measure-population"
+										}
+									]
+								},
+								"count": 100
+							}
+						]
+					}
+				],
+				"improvementNotation": {
+					"coding": [
+						{
+							"code": "increase",
+							"display": "Increased score indicates improvement",
+							"system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+						}
+					]
+				},
+				"measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
+				"period": {
+					"end": "2018-09-01",
+					"start": "2018-08-01"
+				},
+				"reporter": {
+					"reference": "urn:uuid:884cb1a4-b1a0-11ea-b615-a4d18ccf5172"
+				},
+				"status": "complete",
+				"type": "summary",
+				"resourceType": "MeasureReport"
+			}
+		}
+	],
+	"timestamp": "2020-06-18T20:16:02.653993Z",
+	"type": "transaction",
+	"resourceType": "Bundle",
+	"meta": {
+		"source": "http://example.org/fhir/server"
+	}
 }
