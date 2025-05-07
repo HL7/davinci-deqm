@@ -48,7 +48,7 @@
         {
             "version": "6.3.0",
             "id": "tx",
-            "packageId": "hl7.terminology",
+            "packageId": "hl7.terminology.r4",
             "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"
         },
         {
@@ -942,6 +942,14 @@
                     "reference": "Parameters/multiple-gaps-indv-report02"
                 },
                 "description": "GIC Gaps Multiple Parameters Individual MeasureReports02 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Non-Document Gaps In Care Report",
+                "reference": {
+                    "reference": "Bundle/non-document-gaps-in-care"
+                },
+                "description": "GIC Gaps Illustrating DetectedIssue-only Approach"
             },
             {
                 "exampleBoolean": true,
