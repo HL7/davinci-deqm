@@ -243,6 +243,9 @@ ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient
 ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 ERROR: Bundle/sde-example-patient-data-bundle Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 
+# This is a multi-rate measure, working on getting the validator to use the scoring extension to support these
+INFORMATION: MeasureReport/summary-multirate-measurereport: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+
 # Validated these counts are correct
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[0]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[1]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
@@ -445,3 +448,4 @@ INFORMATION: StructureDefinition.differential.element[33].type[0].profile[0]: Pi
 INFORMATION: StructureDefinition.differential.element[34].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 INFORMATION: StructureDefinition.differential.element[41].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 INFORMATION: StructureDefinition.differential.element[46].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+
