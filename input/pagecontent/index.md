@@ -38,7 +38,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [**Operations**](operations.html): A list of all DEQM operations.
   - [**Terminology**](terminology.html): A list of all DEQM terminology code systems and value sets.
   - [**Capability statements**](capstatements.html): A list of all DEQM capability statements for the various DEQM roles.
-- [**Examples**](examples.html): List of all the examples used in this guide.
+- [**Examples**](all-examples.html): List of all the examples used in this guide.
 - [**Downloads**](downloads.html): This page provides links to downloadable artifacts.
 
 ### Scenarios
@@ -88,7 +88,7 @@ In this scenario, a _reporter_ such as a hospital submits individual level quali
 
 In this scenario, there is a Bundle of individual-level patient data for each attributed Patient. Determining the overall measure score then requires the additional step of aggregating the individual MeasureReport resources. Alternatively, a subject-list report can be included that references all the individual-level MeasureReports and provides the summary level measure score.
 
-For more details on this scenario, see the [Individual Reporting](individual-reporting.html) and [Subject-list Reporting](subjectlist-reporting.html) framework topics.
+For more details on this scenario, see the [Individual Reporting](indv-reporting.html) and [Subject-list Reporting](subjectlist-reporting.html) framework topics.
 
 ##### Bulk Data
 

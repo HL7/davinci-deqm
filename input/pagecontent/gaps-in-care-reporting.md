@@ -16,7 +16,7 @@ Gaps in care may exist for several reasons. The following are some common scenar
 
 A Gaps in Care Report is designed to communicate actual or perceived gaps in care between systems, such as the payer’s system and provider’s EMR. The report provides opportunities for providers to provide missing care and/or to communicate care provision data to payers. The report may also provide information for upcoming care opportunities, prospective gaps.
 
-In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram].
+In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram](background.html#quality-improvement-ecosystem).
 
 {% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 2-12 Quality Improvement Ecosystem - Gaps in Care" %}
 
@@ -132,7 +132,7 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 The [DEQM Gaps In Care Bundle](StructureDefinition-gaps-bundle-deqm.html) can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
 
 Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
-- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-indv-measurereport-deqm.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-gaps-detectedissue-deqm.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-gaps-composition-deqm.html). 
+- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-indv-measurereport-deqm.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-gaps-detectedissue-deqm.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-gaps-composition-deqm.html).
 - In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
