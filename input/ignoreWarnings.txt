@@ -1,18 +1,18 @@
 == Suppressed Messages ==
 
-# These code systems have been approved by TSMG: https://confluence.hl7.org/spaces/VOC/pages/288397544/2024-12-02+TI+Chair+Agenda+Minutes
+# 01 - These code systems have been approved by TSMG: https://confluence.hl7.org/spaces/VOC/pages/288397544/2024-12-02+TI+Chair+Agenda+Minutes
 INFORMATION: CodeSystem/care-gap-reason: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/care-gap-remark: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/gaps-status: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/remark-reason: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# This code systems has been approved by TSMG: https://confluence.hl7.org/spaces/TSMG/pages/324964674/2025-03-10+TSMG+Agenda+and+Minutes
+# 02 - This code systems has been approved by TSMG: https://confluence.hl7.org/spaces/TSMG/pages/324964674/2025-03-10+TSMG+Agenda+and+Minutes
 INFORMATION: CodeSystem/update-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# Updating to 7 will be performed in a future release, we need QICore to be 7 as well before we can do this
+# 03 - Updating to 7 will be performed in a future release, we need QICore to be 7 as well before we can do this
 WARNING: ImplementationGuide/hl7.fhir.us.davinci-deqm: ImplementationGuide.dependsOn[3]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 7.0.0. This reference is getting old and the more recent version should be considered
 
-# DaVinci Warnings, we have addressed the downloads issues, and plan to address the rest of these with the next publication
+# 04 - DaVinci Warnings, we have addressed the downloads issues, and plan to address the rest of these with the next publication
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Content and Organization.
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Dependencies.
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Intellectual Property Considerations.
@@ -23,30 +23,18 @@ WARNING: DA VINCI: The first menu item should have the label IG Home.
 WARNING: DA VINCI: The second menu item (Background) must be a dropdown menu with children.
 WARNING: DA VINCI: There must be a menu item under Background called Project and Participants.
 WARNING: DA VINCI: The third menu item should have the label Specification.
-WARNING: DA VINCI: The FHIR Artifacts menu item must either link directly to the artifacts.html page, or one of the child menu items needs to.
 WARNING: DA VINCI: There must be a menu item with the label Base Specs.
 WARNING: DA VINCI: There must be a menu item with the label Support.
 WARNING: DA VINCI: There must be a menu item with the label Change Log.
 
-# Attestation measures are a newer measure feature, currently working on adding this support to the FHIR validator
+# 05 - Attestation measures are a newer measure feature, currently working on adding this support to the FHIR validator
 INFORMATION: Measure/attestation-boolean-example: Measure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: MeasureReport/attestation-boolean-example: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
 
-# There are examples of the use of this extension in the [Patch](Parameters-measurereport01-patch.html) and [Patch Multiple](Parameters-measurereport01-patch-mult.html) examples
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark'): The Implementation Guide contains no examples for this extension
-
-# The contained resource kelly-smith-role does reference the containing resource ad-hoc-organization in the organization reference, and it references kelly-smith-1 in the practitioner reference
-ERROR: Organization/ad-hoc-organization: Organization.contained[0]: The contained resource 'kelly-smith-1' is not referenced to from elsewhere in the containing resource nor does it refer to the containing resource (dom-3)
-ERROR: Organization/ad-hoc-organization: Organization.contained[1]: The contained resource 'kelly-smith-role' is not referenced to from elsewhere in the containing resource nor does it refer to the containing resource (dom-3)
-
-# The publisher is having issues in auto-generating a narrative for the parameter examples, discussed here (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.20example.20narratives.20not.20being.20generated)
+# 06 - The publisher is having issues in auto-generating a narrative for the parameter examples, discussed here (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.20example.20narratives.20not.20being.20generated)
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
-# These links are generated by the publisher, there were similar issues in other bundles, those were resolved by a publisher fix, but these two remain
-ERROR: Bundle/sde-example-artifact-bundle: Bundle.entry[5].resource/*Measure/NHSNGlycemicControlHypoglycemicInitialPopulation*/.text.div: Hyperlink '#nhsnglycemiccontrolhypoglycemicinitialpopulation-sde-ethnicity-coding' at 'div/table/tbody/tr/td/a' for 'SDE Ethnicity Coding' does not resolve
-ERROR: Bundle/sde-example-artifact-bundle: Bundle.entry[5].resource/*Measure/NHSNGlycemicControlHypoglycemicInitialPopulation*/.text.div: Hyperlink '#nhsnglycemiccontrolhypoglycemicinitialpopulation-sde-race-coding' at 'div/table/tbody/tr/td/a' for 'SDE Race Coding' does not resolve
-
-# The publisher is not falling back to text equality for codeableconcepts for this, currently working on adding this support to the FHIR validator
+# 07 - The validator is not falling back to text equality for codeableconcepts for this, currently working on adding this support to the FHIR validator
 ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[0]: The code ''Patients'' for this group has no match in the measure definition
 ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[1]: The code ''Practitioners'' for this group has no match in the measure definition
 ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[2]: The code ''Beds'' for this group has no match in the measure definition
@@ -60,7 +48,7 @@ ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The Measure
 ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Patients that recevied screenings''
 ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Weighted Average capacity''
 
-# CAREGAP is the correct code, based on the profile, this is due to validation of the base detected issue
+# 08 - CAREGAP is the correct code, these messages are because the binding in the DetectedIssue resource itself is preferred
 INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[3].resource/*DetectedIssue/gaps-detectedissue01*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[4].resource/*DetectedIssue/gaps-detectedissue02*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[1].resource/*Bundle/single-gaps-closed-indv-report01*/.entry[1].resource/*DetectedIssue/gaps-detectedissue03*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
@@ -71,10 +59,10 @@ INFORMATION: Parameters/single-gaps-closed-indv-report02: Parameters.parameter[0
 INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[3].resource/*DetectedIssue/gaps-detectedissue01*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[4].resource/*DetectedIssue/gaps-detectedissue02*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 
-# This code is correct, but apparently not in tx.fhir.org ICD-9 code system
+# 09 - This code is correct, but apparently not in tx.fhir.org ICD-9 code system
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[4].resource/*ServiceRequest/nhsn-iip-sr-sde*/.reasonCode[0].coding[0].code: Unknown Code 'V17.3' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-# URIs in examples that are not intended to resolve
+# 10 - URIs in examples that are not intended to resolve
 URL value 'urn:oid:2.16.840.1.113883.4.336' does not resolve
 URL value 'http://hospital.davinci.org' does not resolve
 URL value 'http://hospital.smarthealthit.org' does not resolve
@@ -89,13 +77,13 @@ URL value 'http://someguidelineprovider.org/radiology-appropriateness-guidelines
 URL value 'http://sanerproject.org/connectathon/hospitals' does not resolve
 URL value 'https://nhsnlink.org' does not resolve
 
-# Patch URIs that should not resolve generally, they are part of the patch process:
+# 11 - Patch URIs that should not resolve generally, they are part of the patch process:
 WARNING: Parameters/measurereport01-patch: Parameters.parameter[0].part[3].part[1].part[0].value.ofType(uri): URL value 'authorDatetime' does not resolve
 WARNING: Parameters/measurereport01-patch-mult: Parameters.parameter[0].part[3].part[1].part[0].value.ofType(uri): URL value 'authorDatetime' does not resolve
 WARNING: Parameters/measurereport01-patch-mult: Parameters.parameter[1].part[3].part[1].part[0].value.ofType(uri): URL value 'text' does not resolve
 WARNING: Parameters/measurereport01-patch-mult: Parameters.parameter[2].part[3].part[1].part[0].value.ofType(uri): URL value 'authorDatetime' does not resolve
 
-# Intended URLs for a transaction bundle with PUT requests in entry.request.url
+# 12 - Intended URLs for a transaction bundle with PUT requests in entry.request.url
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].request.url: URL value 'Patient/patient04' does not resolve
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[1].request.url: URL value 'Encounter/encounter04' does not resolve
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[2].request.url: URL value 'MedicationRequest/nhsn-iip-add101' does not resolve
@@ -106,11 +94,9 @@ WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[6].request.url: UR
 WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[4].request.url: URL value 'Library/NHSNGlycemicControlHypoglycemicInitialPopulation' does not resolve
 WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[5].request.url: URL value 'Measure/NHSNGlycemicControlHypoglycemicInitialPopulation' does not resolve
 
-# Example coding systems
-A definition for CodeSystem 'http://example.org/stratification' could not be found, so the code cannot be validated
-
-# The validator is trying to resolve an "example.org" artifact which by convention does not exist
+# 13 - The validator is trying to resolve an "example.org" artifact which by convention does not exist
 A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.org/stratification' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/SOP' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated
@@ -121,7 +107,7 @@ WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http:/
 The Measure 'http://example.org/fhir/Measure/AlaraCTFHIRMeasure|1.0.0' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure|5.0.0' could not be resolved, so no validation can be performed against the Measure
 
-# The following information messages in the examples are related to terminology referenced in profiles with the status of draft . Will address these in future profiles
+# 14 - The following information messages in the examples are related to terminology referenced in profiles with the status of draft . Will address these in future profiles
 Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
@@ -137,7 +123,7 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationre
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
 
-# The following information messages are expected since the elements in the following examples do not match the slice in the gaps-bundle.entry
+# 15 - The following information messages are expected since the elements in the following examples do not match the slice in the gaps-bundle.entry
 INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/single-gaps-closed-indv-report01: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -205,7 +191,7 @@ INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].
 INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Parameters/single-gaps-open-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# The following information messages are expected since the slices in the examples do not match the slice in the observation.value[x]
+# 16 - The following information messages are expected since the slices in the examples do not match the slice in the observation.value[x]
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[0].resource/*Observation/observation03*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[9].resource/*Observation/observation02*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[14].resource/*Observation/observation01*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -215,30 +201,30 @@ INFORMATION: Observation/observation02: Observation.value.ofType(boolean): This 
 INFORMATION: Observation/observation03: Observation.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation|6.0.0
 INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[2].resource/*Observation/observation01*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation|6.0.0
 
-# The following information messages are expected since the slice in the examples do not match the slice in the observation.identifer
+# 17 - The following information messages are expected since the slice in the examples do not match the slice in the observation.identifer
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[4].resource/*Organization/organization03*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[16].resource/*Organization/organization03*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Organization/organization03: Organization.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization|6.0.0
 
-# The following information messages are expected since the slice in the examples do not match the qicore profile, but they do match the uscore profile
+# 18 - The following information messages are expected since the slice in the examples do not match the qicore profile, but they do match the uscore profile
 INFORMATION: Bundle/multiple-indv-mrp-obs-report: Bundle.entry[5].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/multiple-indv-mrp-task-report: Bundle.entry[6].resource/*Practitioner/practitioner01*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/single-indv-vte-report-option7: Bundle.entry[5].resource/*Practitioner/practitioner02*/.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Practitioner/practitioner01: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Parameters/mrp-submit-obs: Parameters.parameter[0].resource/*Bundle/null*/.entry[2].resource/*Observation/observation01*/.value.ofType(boolean): This element does not match any known slice defined in the profile http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation|6.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# The example is intentionally using a CPT code outside the LOINC expectation
+# 19 - The example is intentionally using a CPT code outside the LOINC expectation
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://www.ama-assn.org/go/cpt#1111F)
 
-# VSAC issues - The following codes in the codesystem have been checked and the concepts are correct
+# 20 - VSAC issues - The following codes in the codesystem have been checked and the concepts are correct
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
 
-# The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
+# 21 - The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-type|3.0.0
 INFORMATION: StructureDefinition/datax-measurereport-deqm: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-# These detailed race code errors are to be suppressed for now because the publisher tooling currently is unable to access these codes. The codes have been checked manually and the concepts are correct. See the Zulip thread where this specific issue is discussed: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Publisher.20reporting.20code.20not.20found/near/460123037:
+# 22 - These detailed race code errors are to be suppressed for now because the publisher tooling currently is unable to access these codes. The codes have been checked manually and the concepts are correct. See the Zulip thread where this specific issue is discussed: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Publisher.20reporting.20code.20not.20found/near/460123037:
 ERROR: MeasureReport/sde-example: MeasureReport.contained[0]/*Patient/nhsn-iip-ip101*/.extension[0].extension[3].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#1586-7) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#1586-7 ('Shoshone')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'
 ERROR: MeasureReport/sde-example: MeasureReport.contained[0]/*Patient/nhsn-iip-ip101*/.extension[0].extension[4].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2036-2) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2036-2 ('Filipino')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'
 ERROR: MeasureReport/sde-example: MeasureReport.contained[0]/*Patient/nhsn-iip-ip101*/.extension[1].extension[1].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2184-0) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2184-0 ('Dominican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
@@ -257,20 +243,20 @@ ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient
 ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 ERROR: Bundle/sde-example-patient-data-bundle Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 
-# This is a multi-rate measure, working on getting the validator to use the scoring extension to support these
+# 23 - This is a multi-rate measure, working on getting the validator to use the scoring extension to support these
 INFORMATION: MeasureReport/summary-multirate-measurereport: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
 
-# Validated these counts are correct
+# 24 - Validated these counts are correct
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[0]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[1]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[2]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
 
-# Validated these slices are expected because they match other profiles
+# 25 - Validated these slices are expected because they match other profiles
 INFORMATION: Measure/measure-exm108-example: Measure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# These messages reference the Situational Awareness for Novel Epidemic Response (SANER) IG. We do not want to take a dependency on SANER. The intent of the DEQM IG is to provide guidance and support regarding value-based care data exchange in the US Realm. These references are used in examples only.
+# 26 - These messages reference the Situational Awareness for Novel Epidemic Response (SANER) IG. We do not want to take a dependency on SANER. The intent of the DEQM IG is to provide guidance and support regarding value-based care data exchange in the US Realm. These references are used in examples only.
 WARNING: Bundle/Location-Aware-example: Bundle.entry[0].resource/*Location/Loc-X140008*/.managingOrganization: Entry 2 matches the reference Organization/X140008 by type and id but it's fullUrl urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f03 does not match the full target URL urn:uuid:X140008 by Bundle resolution rules
 WARNING: Bundle/Location-Aware-example: Bundle.entry[4].resource/*MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting*/.reporter: Entry 3 matches the reference Organization/NJ-DPH by type and id but it's fullUrl urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f04 does not match the full target URL urn:uuid:NJ-DPH by Bundle resolution rules
 WARNING: Bundle/Location-Aware-example: Bundle.entry[5].resource/*MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity*/.reporter: Entry 3 matches the reference Organization/NJ-DPH by type and id but it's fullUrl urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f04 does not match the full target URL urn:uuid:NJ-DPH by Bundle resolution rules
@@ -357,7 +343,7 @@ WARNING: Bundle/Location-Aware-example: Bundle.entry[1].resource/*Measure/CDCPat
 WARNING: Bundle/Location-Aware-example: Bundle.entry[4].resource/*MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting*/.group[0].code.coding[0]: A definition for CodeSystem 'http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem' could not be found, so the code cannot be validated
 WARNING: Bundle/Location-Aware-example: Bundle.entry[5].resource/*MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity*/.group[0].code.coding[0]: A definition for CodeSystem 'http://example.org/fhir/saner/CodeSystem/MeasureGroupSystem' could not be found, so the code cannot be validated
 
-# Accepted pinning, only occurring because multiple versions of hl7.terminology are being included through dependencies
+# 27 - Accepted pinning, only occurring because multiple versions of hl7.terminology are being included through dependencies
 WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[1].resource/*Library/FHIRCommon*/.relatedArtifact[4].resource: There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v3-RoleCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.2.0, 3.0.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' to 'http://terminology.hl7.org/CodeSystem/v3-RoleCode|3.0.0'
 WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[1].resource/*Library/FHIRCommon*/.relatedArtifact[5].resource: There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/diagnosis-role'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.1.0', found versions: 0.1.1, 1.0.0, 1.1.0, 1.1.1. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/diagnosis-role' to 'http://terminology.hl7.org/CodeSystem/diagnosis-role|1.1.0'
 WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[1].resource/*Library/FHIRCommon*/.relatedArtifact[7].resource: There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/medicationrequest-category'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.0.0', found versions: 0.1.0, 1.0.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/medicationrequest-category' to 'http://terminology.hl7.org/CodeSystem/medicationrequest-category|1.0.0'
@@ -387,7 +373,7 @@ INFORMATION: StructureDefinition.snapshot.element[5].binding.valueSet: Pinned th
 INFORMATION: StructureDefinition.differential.element[3].binding.valueSet: Pinned the version of http://terminology.hl7.org/ValueSet/measure-scoring to 2.0.0 from choices of 0.2.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology#5.5.0), 2.0.0 (hl7.terminology.r4#6.0.2)
 INFORMATION: StructureDefinition.snapshot.element[37].binding.valueSet: Pinned the version of http://terminology.hl7.org/ValueSet/v3-ActCode to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#5.0.0), 3.0.0 (hl7.terminology#5.5.0)
 
-# Accepted pins of extensions pack, only occurring because multiple versions of the extensions pack are included through dependencies
+# 28 - Accepted pins of extensions pack, only occurring because multiple versions of the extensions pack are included through dependencies
 INFORMATION: StructureDefinition.snapshot.element[9].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/measurereport-category to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 INFORMATION: StructureDefinition.snapshot.element[13].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-messages to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 INFORMATION: StructureDefinition.snapshot.element[14].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-inputParameters to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)

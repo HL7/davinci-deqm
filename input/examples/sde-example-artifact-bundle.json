@@ -39,7 +39,7 @@
             },
             "request": {
                 "method": "PUT",
-                "url": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers"
+                "url": "Library/FHIRHelpers"
             }
         },
         {
@@ -160,7 +160,7 @@
             },
             "request": {
                 "method": "PUT",
-                "url": "http://fhir.org/guides/cqf/Library/FHIRCommon"
+                "url": "Library/FHIRCommon"
             }
         },
         {
@@ -377,7 +377,7 @@
             },
             "request": {
                 "method": "PUT",
-                "url": "http://fhir.org/guides/cqf/Library/MATGlobalCommonFunctionsFHIR4"
+                "url": "Library/MATGlobalCommonFunctionsFHIR4"
             }
         },
         {
@@ -507,7 +507,7 @@
             },
             "request": {
                 "method": "PUT",
-                "url": "http://fhir.org/guides/cqf/Library/SupplementalDataElementsFHIR4"
+                "url": "Library/SupplementalDataElementsFHIR4"
             }
         },
         {
@@ -1906,20 +1906,6 @@
                         "criteria": {
                             "language": "text/cql.identifier",
                             "expression": "SDE Minimal Medication Requests"
-                        }
-                    },
-                    {
-                        "id": "sde-ethnicity-coding",
-                        "criteria": {
-                            "language": "text/cql.identifier",
-                            "expression": "SDE Ethnicity Coding"
-                        }
-                    },
-                    {
-                        "id": "sde-race-coding",
-                        "criteria": {
-                            "language": "text/cql.identifier",
-                            "expression": "SDE Race Coding"
                         }
                     }
                 ]
