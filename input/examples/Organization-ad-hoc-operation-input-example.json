@@ -20,8 +20,8 @@
       "identifier": [
         {
           "use": "official",
-          "system": "http://hospital.smarthealthit.org/practitioner",
-          "value": "kelly-smith-identifier"
+          "system": "urn:oid:2.16.840.1.113883.4.4",
+          "value": "EIN-00YYZ"
         }
       ],
       "name": [
@@ -48,8 +48,8 @@
       "identifier": [
         {
           "use": "official",
-          "system": "http://hospital.smarthealthit.org/practitionerrole",
-          "value": "kelly-smith-role-identifier"
+          "system": "urn:oid:2.16.840.1.113883.4.4",
+          "value": "EIN-00YYZ"
         }
       ],
       "active": true,
