@@ -46,6 +46,20 @@ Rule dom-6: 'A resource should have narrative for robust management' Failed (def
 ERROR: Bundle/sde-example-artifact-bundle: Bundle.entry[5].resource/*Measure/NHSNGlycemicControlHypoglycemicInitialPopulation*/.text.div: Hyperlink '#nhsnglycemiccontrolhypoglycemicinitialpopulation-sde-ethnicity-coding' at 'div/table/tbody/tr/td/a' for 'SDE Ethnicity Coding' does not resolve
 ERROR: Bundle/sde-example-artifact-bundle: Bundle.entry[5].resource/*Measure/NHSNGlycemicControlHypoglycemicInitialPopulation*/.text.div: Hyperlink '#nhsnglycemiccontrolhypoglycemicinitialpopulation-sde-race-coding' at 'div/table/tbody/tr/td/a' for 'SDE Race Coding' does not resolve
 
+# The publisher is not falling back to text equality for codeableconcepts for this, currently working on adding this support to the FHIR validator
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[0]: The code ''Patients'' for this group has no match in the measure definition
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[1]: The code ''Practitioners'' for this group has no match in the measure definition
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[2]: The code ''Beds'' for this group has no match in the measure definition
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[3]: The code ''Screening Procedures'' for this group has no match in the measure definition
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[4]: The code ''Patients that received screenings'' for this group has no match in the measure definition
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[5]: The code ''Weighted Average capacity'' for this group has no match in the measure definition
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Patients''
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Practitioners''
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Beds''
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Screening Procedures''
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Patients that recevied screenings''
+ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Weighted Average capacity''
+
 # CAREGAP is the correct code, based on the profile, this is due to validation of the base detected issue
 INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[3].resource/*DetectedIssue/gaps-detectedissue01*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[4].resource/*DetectedIssue/gaps-detectedissue02*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
