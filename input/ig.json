@@ -46,6 +46,12 @@
     "packageId": "hl7.fhir.us.davinci-deqm",
     "dependsOn": [
         {
+            "version": "6.3.0",
+            "id": "tx",
+            "packageId": "hl7.terminology",
+            "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"
+        },
+        {
             "version": "6.0.0",
             "id": "qicore",
             "packageId": "hl7.fhir.us.qicore",

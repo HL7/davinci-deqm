@@ -146,34 +146,22 @@
             "type": "documentation",
             "label": "NHSN COVID-19 Reporting",
             "display": "CDC/NHSN COVID-19 Patient Impact & Hospital Capacity Module Home Page",
-            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/",
-            "document": {
-              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"
-            }
+            "citation": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"
           }, {
             "type": "documentation",
             "label": "How to import COVID-19 Summary Data",
             "display": "Importing COVID-19 Patient Module Denominator data for Patient Safety Component",
-            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf",
-            "document": {
-              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"
-            }
+            "citation": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"
           }, {
             "type": "documentation",
             "label": "Table of Instructions",
             "display": "Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)",
-            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf",
-            "document": {
-              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf"
-            }
+            "citation": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf"
           }, {
             "type": "documentation",
             "label": "CSV File Template",
             "display": "CDC/NHSN COVID-19 Reporting CSV File Template",
-            "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv",
-            "document": {
-              "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv"
-            }
+            "citation": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv"
           }
         ],
         "library": ["http://example.org/fhir/saner/StructureDefinition/NHSNMeasureLibrary"],
@@ -1284,34 +1272,22 @@
             "type": "documentation",
             "label": "CMS Press Release",
             "display": "Trump Administration Engages America’s Hospitals in Unprecedented Data Sharing",
-            "url": "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing",
-            "document": {
-              "url": "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing"
-            }
+            "citation": "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing"
           }, {
             "type": "documentation",
             "label": "Vice President Pence Letter to Hospital Administrators",
             "display": "Text of a Letter from the Vice President to Hospital Administrators",
-            "url": "https://www.whitehouse.gov/briefings-statements/text-letter-vice-president-hospital-administrators/",
-            "document": {
-              "url": "https://www.whitehouse.gov/briefings-statements/text-letter-vice-president-hospital-administrators/"
-            }
+            "citation": "https://www.whitehouse.gov/briefings-statements/text-letter-vice-president-hospital-administrators/"
           }, {
             "type": "documentation",
             "label": "AHA Advisory on COVID-19 Reporting",
             "display": "Administration Requests Hospitals Report Daily on COVID-19 Testing Results, Bed and Ventilator",
-            "url": "https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19",
-            "document": {
-              "url": "https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19"
-            }
+            "citation": "https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19"
           }, {
             "type": "documentation",
             "label": "Excel Spreadsheet template for reporting to FEMA",
             "display": "Template for Daily Hospital COVID-19 Reporting.xlsx",
-            "url": "https://images.magnetmail.net/images/clients/AHA_MCHF/attach/2020/March/0330/Template_for_Daily_Hospital_COVID19_Reporting.xlsx",
-            "document": {
-              "url": "https://images.magnetmail.net/images/clients/AHA_MCHF/attach/2020/March/0330/Template_for_Daily_Hospital_COVID19_Reporting.xlsx"
-            }
+            "citation": "https://images.magnetmail.net/images/clients/AHA_MCHF/attach/2020/March/0330/Template_for_Daily_Hospital_COVID19_Reporting.xlsx"
           }
         ],
         "library": ["http://example.org/fhir/saner/StructureDefinition/FEMAMeasureLibrary"],

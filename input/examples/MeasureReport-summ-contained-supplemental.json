@@ -45,7 +45,7 @@
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
       "extension": [ {
         "url": "measure",
-        "valueCanonical": "https://madie.cms.gov/Measure/AlaraCTFHIR"
+        "valueCanonical": "http://example.org/fhir/Measure/AlaraCTFHIRMeasure|1.0.0"
       } ]
     } ],
     "status": "final",
@@ -73,7 +73,7 @@
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-measureInfo",
       "extension": [ {
         "url": "measure",
-        "valueCanonical": "https://madie.cms.gov/Measure/AlaraCTFHIR"
+        "valueCanonical": "http://example.org/fhir/Measure/AlaraCTFHIRMeasure|1.0.0"
       } ]
     } ],
     "status": "final",

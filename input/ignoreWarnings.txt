@@ -28,15 +28,8 @@ WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[4].request.url: UR
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[5].request.url: URL value 'Location/nhsn-iip-loc101' does not resolve
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[6].request.url: URL value 'Condition/condition04' does not resolve
 
-# URLs that do resolve, but still give warnings anyway
-https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19
-
-
 # Example coding systems
 A definition for CodeSystem 'http://example.org/stratification' could not be found, so the code cannot be validated
-
-# Canonical URLs not intended to resolve
-Canonical URL 'https://madie.cms.gov/Measure/AlaraCTFHIR' does not resolve
 
 # The validator is trying to resolve an "example.org" artifact which by convention does not exist
 A definition for CodeSystem 'http://example.org/fhir/' could not be found, so the code cannot be validated
@@ -50,9 +43,6 @@ The Measure 'http://example.org/fhir/Measure/measure-medicare-stratification-exa
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/AlaraCTFHIRMeasure|1.0.0' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure|5.0.0' could not be resolved, so no validation can be performed against the Measure
-
-# Information messages validated: Related to the ActCode#CAREGAP issue, example.org, Slicing is open so other slices are intentionally allowed, Confirmed profile validation messages
-None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
 
 # The following Build Errors occur due to an issue with the publisher in which in-page anchor references are generated incorrectly in html pages. This issue will be fixed in the next publisher release.  (See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Hyperlink.20.2E.2E.2E.20does.20not.20resolve)
 The link 'StructureDefinition-indv-measurereport-deqm-definitions.html#MeasureReport.reporter.extension:group' for "group" cannot be resolved (valid targets: 206 targets)
@@ -180,16 +170,12 @@ INFORMATION: Measure/attestation-boolean: Measure.extension[0]: This element doe
 # The following examples are using valid codes in the CPT codesystem but THO doesn't define the codes. we are confident the CPT codes referenced here are correct
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://www.ama-assn.org/go/cpt#1111F)
 
-# The following terminology artifacts are defined in the IG and have been discussed internally against a move to THO
-Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-
 # VSAC issues - The following codes in the codesystem have been checked and the concepts are correct
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
 
 # The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-type|3.0.0
-
 
 # These detailed race code errors are to be suppressed for now because the publisher tooling currently is unable to access these codes. The codes have been checked manually and the concepts are correct. See the Zulip thread where this specific issue is discussed: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Publisher.20reporting.20code.20not.20found/near/460123037:
 ERROR: MeasureReport/sde-example: MeasureReport.contained[0]/*Patient/nhsn-iip-ip101*/.extension[0].extension[3].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#1586-7) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#1586-7 ('Shoshone')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'
@@ -210,9 +196,6 @@ ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient
 ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 ERROR: Bundle/sde-example-patient-data-bundle Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 
-# This warning is because of a valid ICD code that the publisher doesn't have the complete code system.
-WARNING: Bundle/sde-example-patient-data-bundle Bundle.entry[4].resource/*ServiceRequest/nhsn-iip-sr-sde*/.reasonCode[0].coding[0].code: Unknown Code 'V173' in the system 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-
 # These links do resolve, it's not clear why they are being reported as bad links but they are inherited from the publisher via dependency-table script
 The link 'http://hl7.org/fhir/extensions/5.1.0-snapshot1' for "FHIR Extensions Pack" cannot be resolved
 The link 'http://terminology.hl7.org/5.3.0' for "HL7 Terminology (THO)" cannot be resolved
@@ -226,7 +209,6 @@ INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].p
 INFORMATION: Measure/measure-exm108-example: Measure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-
 
 # These messages reference the Situational Awareness for Novel Epidemic Response (SANER) IG. We do not want to take a dependency on SANER. The intent of the DEQM IG is to provide guidance and support regarding value-based care data exchange in the US Realm. These references are used in examples only.
 WARNING: Bundle/Location-Aware-example: Bundle.entry[0].resource/*Location/Loc-X140008*/.managingOrganization: Entry 2 matches the reference Organization/X140008 by type and id but it's fullUrl urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f03 does not match the full target URL urn:uuid:X140008 by Bundle resolution rules
