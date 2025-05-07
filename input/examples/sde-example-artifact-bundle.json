@@ -1916,7 +1916,7 @@
                         }
                     },
                     {
-                        "id": "nhsnglycemiccontrolhypoglycemicinitialpopulation-sde-ethnicity-coding",
+                        "id": "sde-race-coding",
                         "criteria": {
                             "language": "text/cql.identifier",
                             "expression": "SDE Race Coding"

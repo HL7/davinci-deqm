@@ -5,7 +5,7 @@
   <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subjectlist-measurereport-deqm"/>
   <name value="DEQMSubjectListMeasureReport"/>
   <title value="DEQM Subject List MeasureReport"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <publisher value="Da Vinci Project"/>
   <contact>

@@ -5,7 +5,7 @@
     <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
     <name value="DEQMIndividualMeasureReportList"/>
     <title value="DEQM Individual MeasureReport List"/>
-    <status value="draft"/>
+    <status value="active"/>
     <publisher value="Da Vinci Project"/>
     <contact>
       <telecom>

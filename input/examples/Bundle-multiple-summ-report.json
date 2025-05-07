@@ -11,7 +11,10 @@
 				"name": "StratifierCodes",
 				"title": "StratifierCodes",
 				"status": "active",
+				"experimental": true,
+				"description": "Example code system representing stratifiers of a measure",
 				"content": "complete",
+				"caseSensitive": true,
 				"concept": [
 					{
 						"code": "S1",

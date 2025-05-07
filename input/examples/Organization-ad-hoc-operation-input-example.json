@@ -20,8 +20,8 @@
       "identifier": [
         {
           "use": "official",
-          "system": "http://hospital.smarthealthit.org/practitioner",
-          "value": "kelly-smith-identifier"
+          "system": "urn:oid:2.16.840.1.113883.4.4",
+          "value": "EIN-00YYZ"
         }
       ],
       "name": [
@@ -48,8 +48,8 @@
       "identifier": [
         {
           "use": "official",
-          "system": "http://hospital.smarthealthit.org/practitionerrole",
-          "value": "kelly-smith-role-identifier"
+          "system": "urn:oid:2.16.840.1.113883.4.4",
+          "value": "EIN-00YYZ"
         }
       ],
       "active": true,
@@ -94,9 +94,5 @@
         }
       ]
     }
-  ],
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Organization: Ad hoc org</p><p>Practitioner: <a href=\"#kelly-smith-1\">Dr Kelly Smith</a></p><p>Practitioner Role: <a href=\"#kelly-smith-role\">Primary physician</a></p></div>"
-  }
+  ]
 }

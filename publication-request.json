@@ -1,10 +1,10 @@
 {
   "package-id" : "hl7.fhir.us.davinci-deqm",
-  "version" : "5.0.0-ballot",
-  "path" : "http://hl7.org/fhir/us/davinci-deqm/2024Sep",
-  "mode": "working",
-    "status": "ballot",
+  "version" : "5.0.0",
+  "path" : "http://hl7.org/fhir/us/davinci-deqm/STU5",
+  "mode": "milestone",
+    "status": "release",
     "sequence": "STU5 (v5.0.0)",
-    "desc": "STU5 (v5.0.0) Ballot",
-  "descmd" : "This September 2024 Ballot version updates the Data Exchange for Quality Measures Implementation Guide (IG) to STU5 (v5.0.0)."
+    "desc": "STU5 (v5.0.0) Release",
+  "descmd" : "This STU5 (v5.0.0) Update to Data Exchange for Quality Measures Implementation Guide (IG) incorporates numerous changes from implementer feedback, as well as allowing for multi-measure operations and exchanges throughout See the Change Notes for a detailed description of changes applied."
 }
