@@ -23,7 +23,7 @@ The example presented is based on the QDM version of CMS108v7, which has been re
 |Measure|CRMI Shareable Measure Profile|[CRMI Shareable Measure]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-|MedicationRequest|QI Core Medication Not Requested|[QI CoreMedicationNotRequested]|
+|MedicationRequest|QI Core Medication Not Requested|[QICoreMedicationNotRequested]|
 |Observation|QI Core Observation Profile|[QI Core Observation]|
 |Organization|QI Core Organization Profile|[QI Core Organization]|
 |Patient|QI Core Patient Profile|[QI Core Patient]|
