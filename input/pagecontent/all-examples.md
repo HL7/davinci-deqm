@@ -1,5 +1,5 @@
 
-## All DEQM examples can be downloaded as a zip on the [Downloads page](downloads.html#examples)
+## All DEQM examples can be downloaded as a zip on the [Downloads page](downloads.html)
 
 ### MeasureReports
 

@@ -31,7 +31,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "MeasureReport.Group"
+      "expression": "MeasureReport.group"
     }
   ],
   "type": "Extension",

@@ -62,7 +62,7 @@
         "display": "Dr Kelly Smith"
       },
       "organization": {
-        "reference": "Organization/ad-hoc-organization"
+        "reference": "#"
       },
       "telecom": [
         {

@@ -57,6 +57,25 @@
   "group": [
     {
       "id": "group-exm130",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark",
+          "extension": [
+            {
+              "url": "author",
+              "valueString": "Dr. Jones"
+            },
+            {
+              "url": "authorDatetime",
+              "valueDateTime": "2025-05-07T05:17:00.000Z"
+            },
+            {
+              "url": "text",
+              "valueString": "The screening took place last month"
+            }
+          ]
+        }
+      ],
       "population": [
         {
           "code": {
