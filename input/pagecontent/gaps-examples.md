@@ -22,14 +22,14 @@ When patients change providers or healthcare payers, health data can become frag
 |Bundle| DEQM Gaps In Care Bundle Profile   | [DEQM Gaps In Care Bundle Profile]   
 |Composition| DEQM Gaps In Care Composition Profile | [DEQM Gaps In Care Composition Profile] 
 |DetectedIssue| DEQM Gaps In Care DetectedIssue Profile | [DEQM Gaps In Care DetectedIssue Profile] 
-|Encounter| QICore Encounter Profile           | [QICore Encounter]                   |
+|Encounter| QI Core Encounter Profile           | [QI Core Encounter]                   |
 |Library| CRMI Shareable Library             | [CRMI Shareable Library]                       |
 |Measure| CRMI Shareable Measure Profile     | [CRMI Shareable Measure]                       |
 |MeasureReport| DEQM Individual MeasureReport Profile | [DEQM Individual MeasureReport Profile] |
-|Organization| QICore Organization Profile        | [QICore Organization]                |
-|Patient| QICore Patient Profile             | [QICore Patient]                     |
-|Practitioner| QICore Practitioner Profile        | [QICore Practitioner]                |
-|Procedure| QICore Procedure Profile           | [QICore Procedure]                   |
+|Organization| QI Core Organization Profile        | [QI Core Organization]                |
+|Patient| QI Core Patient Profile             | [QI Core Patient]                     |
+|Practitioner| QI Core Practitioner Profile        | [QI Core Practitioner]                |
+|Procedure| QI Core Procedure Profile           | [QI Core Procedure]                   |
 
 ### Care Gaps Operation
 {:.no_toc}

@@ -14,21 +14,21 @@ The example presented is based on the QDM version of CMS108v7, which has been re
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
 |Condition|QI-Core Condition Problems Health Concerns Profile|[QI-Core Condition Problems Health Concerns]|
-|Coverage|QICore Coverage Profile|[QICore Coverage]|
-|DeviceRequest|QICore DeviceRequest Profile|[QICore DeviceRequest]|
-|DeviceUseStatement|QICore DeviceUseStatement Profile|[QICore DeviceUseStatement]|
-|Encounter|QICore Encounter Profile|[QICore Encounter]|
+|Coverage|QI Core Coverage Profile|[QI Core Coverage]|
+|DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest]|
+|DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement]|
+|Encounter|QI Core Encounter Profile|[QI Core Encounter]|
 |Library|CRMI Shareable Library|[CRMI Shareable Library]|
-|Location|QICore Location Profile|[QICore Location]|
+|Location|QI Core Location Profile|[QI Core Location]|
 |Measure|CRMI Shareable Measure Profile|[CRMI Shareable Measure]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 |MeasureReport|DEQM Summary MeasureReport Profile|[DEQM Summary MeasureReport Profile]|
-|MedicationRequest|QICore Medication Not Requested|[QICoreMedicationNotRequested]|
-|Observation|QICore Observation Profile|[QICore Observation]|
-|Organization|QICore Organization Profile|[QICore Organization]|
-|Patient|QICore Patient Profile|[QICore Patient]|
-|Practitioner|QICore Practitioner Profile|[QICore Practitioner]|
-|ServiceRequest|QICore ServiceRequest Profile|[QICore ServiceRequest]|
+|MedicationRequest|QI Core Medication Not Requested|[QI CoreMedicationNotRequested]|
+|Observation|QI Core Observation Profile|[QI Core Observation]|
+|Organization|QI Core Organization Profile|[QI Core Organization]|
+|Patient|QI Core Patient Profile|[QI Core Patient]|
+|Practitioner|QI Core Practitioner Profile|[QI Core Practitioner]|
+|ServiceRequest|QI Core ServiceRequest Profile|[QI Core ServiceRequest]|
 
 {: #practitioner-references}
 ### Graph of VTE-1 Resources
