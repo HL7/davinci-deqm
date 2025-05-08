@@ -114,7 +114,7 @@ The organization provided in $care-gaps or $collect-data, whether in the "organi
  Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI-Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI-Core profiles and are used as the default instead of the corresponding QI-Core profile.  Refer to the [QI-Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
 <div class="new-content" markdown="1">
-[QICore Practitioner], [QICore Organization], and [QICore Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
+[QI Core Practitioner], [QI Core Organization], and [QI Core Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
 
 
 ### Negation Patterns for Quality Measures

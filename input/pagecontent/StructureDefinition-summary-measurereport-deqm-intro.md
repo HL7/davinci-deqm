@@ -4,20 +4,15 @@
 The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
-1. group.stratifier.stratum.component.code: What stratifier component of the group
-2. group.stratifier.stratum.component.value: The stratum component value, e.g. male
-3. measure: What measure and version was calculated
-4. reporter: Organization that generated the MeasureReport
-5. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
-6. period.start: Starting time with inclusive boundary
-7. status: complete \| pending \| error
-8. type: individual \| subject-list \| summary \| data-collection
-9. period.end: End time with inclusive boundary, if not ongoing
-10. group.stratifier.stratum.population.count: Size of the population
-11. date: When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent.
-12. group: Measure results for each group
-13. period: What period the report covers
-14. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+1. measure: What measure and version was calculated
+2. reporter: Organization that generated the MeasureReport
+3. period.start: Starting time with inclusive boundary
+4. status: complete \| pending \| error
+5. type: individual \| subject-list \| summary \| data-collection
+6. period.end: End time with inclusive boundary, if not ongoing
+7. date: When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent.
+8. group: Measure results for each group
+9. period: What period the report covers
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. group.id: Unique id for inter-element referencing

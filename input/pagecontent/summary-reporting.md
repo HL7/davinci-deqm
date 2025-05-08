@@ -20,11 +20,11 @@ The [supplementalData extension](https://hl7.org/fhir/R5/measurereport-definitio
 ### Default Profiles
 The following resources are used in the summary reporting scenario:
 
-|Resource Type| Profile Name                       |Link to Profile|
-|---|------------------------------------|---|
-|Measure| CRMI Shareable Measure Profile               |[CRMI Shareable Measure]|
-|Summary MeasureReport| DEQM Summary MeasureReport Profile |[DEQM Summary MeasureReport Profile]|
-|Organization| QICore Organization Profile        |[QICore Organization] |
+|Resource Type| Profile Name                       | Link to Profile                      |
+|---|------------------------------------|--------------------------------------|
+|Measure| CRMI Shareable Measure Profile     | [CRMI Shareable Measure]             |
+|Summary MeasureReport| DEQM Summary MeasureReport Profile | [DEQM Summary MeasureReport Profile] |
+|Organization| QI Core Organization Profile       | [QI Core Organization]               |
 
 ### Summary Measure Reporting
 {: #summary-measure-reporting}

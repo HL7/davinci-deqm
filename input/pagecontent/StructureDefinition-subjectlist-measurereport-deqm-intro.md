@@ -3,22 +3,15 @@
 The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
-1. group.population.subjectResults: For subject-list reports, the subject results in this population
-2. group.stratifier.stratum.component.code: What stratifier component of the group
-3. group.stratifier.stratum.component.value: The stratum component value, e.g. male
-4. measure: What measure and version was calculated
-5. reporter: Organization that generated the MeasureReport
-6. group.stratifier.stratum.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
-7. group.stratifier.stratum.population.subjectResults: For subject-list reports, the subject results in this population
-8. period.start: Starting time with inclusive boundary
-9. status: complete \| pending \| error
-10. type: individual \| subject-list \| summary \| data-collection
-11. period.end: End time with inclusive boundary, if not ongoing
-12. group.stratifier.stratum.population.count: Size of the population
-13. date: When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent.
-14. group: Measure results for each group
-15. period: What period the report covers
-16. group.population.code: initial-population \| numerator \| numerator-exclusion \| denominator \| denominator-exclusion \| denominator-exception \| measure-population \| measure-population-exclusion \| measure-observation
+1. measure: What measure and version was calculated
+2. reporter: Organization that generated the MeasureReport
+3. period.start: Starting time with inclusive boundary
+4. status: complete \| pending \| error
+5. type: individual \| subject-list \| summary \| data-collection
+6. period.end: End time with inclusive boundary, if not ongoing
+7. date: When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent.
+8. group: Measure results for each group
+9. period: What period the report covers
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. group.id: Unique id for inter-element referencing
