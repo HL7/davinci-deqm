@@ -16,6 +16,8 @@ WARNING: ImplementationGuide/hl7.fhir.us.davinci-deqm: ImplementationGuide.depen
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Content and Organization.
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Dependencies.
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Intellectual Property Considerations.
+WARNING: DA VINCI: The Downloads page (downloads.html) must include a link to download the text of the FHIR core spec - http://hl7.org/fhir/R4/fhir-spec.zip
+WARNING: DA VINCI: The Downloads page (downloads.html) must include a link to the current version of the FHIR validator - https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar
 WARNING: DA VINCI: This IG does not depend on HRex.  Either add a formal dependency or confirm that a textual dependency has been declared.
 WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 7.0.0.
 WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 3.1.1.
@@ -33,20 +35,6 @@ INFORMATION: MeasureReport/attestation-boolean-example: MeasureReport.measure: T
 
 # 06 - The publisher is having issues in auto-generating a narrative for the parameter examples, discussed here (https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Parameter.20example.20narratives.20not.20being.20generated)
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-
-# 07 - The validator is not falling back to text equality for codeableconcepts for this, currently working on adding this support to the FHIR validator
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[0]: The code ''Patients'' for this group has no match in the measure definition
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[1]: The code ''Practitioners'' for this group has no match in the measure definition
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[2]: The code ''Beds'' for this group has no match in the measure definition
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[3]: The code ''Screening Procedures'' for this group has no match in the measure definition
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[4]: The code ''Patients that received screenings'' for this group has no match in the measure definition
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport.group[5]: The code ''Weighted Average capacity'' for this group has no match in the measure definition
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Patients''
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Practitioners''
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Beds''
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Screening Procedures''
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Patients that recevied screenings''
-ERROR: MeasureReport/summary-multirate-measurereport: MeasureReport: The MeasureReport does not include a group for the group with code ''Weighted Average capacity''
 
 # 08 - CAREGAP is the correct code, these messages are because the binding in the DetectedIssue resource itself is preferred
 INFORMATION: Parameters/multiple-gaps-indv-report01: Parameters.parameter[0].resource/*Bundle/single-gaps-open-indv-report01*/.entry[3].resource/*DetectedIssue/gaps-detectedissue01*/.code: None of the codings provided are in the value set 'Detected Issue Category' (http://hl7.org/fhir/ValueSet/detectedissue-category|4.0.1), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-ActCode#CAREGAP)
@@ -91,6 +79,10 @@ WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].request.url: UR
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[4].request.url: URL value 'ServiceRequest/nhsn-iip-sr-sde' does not resolve
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[5].request.url: URL value 'Location/nhsn-iip-loc101' does not resolve
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[6].request.url: URL value 'Condition/condition04' does not resolve
+WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[0].request.url: URL value 'Library/FHIRHelpers' does not resolve
+WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[1].request.url: URL value 'Library/FHIRCommon' does not resolve
+WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[2].request.url: URL value 'Library/MATGlobalCommonFunctionsFHIR4' does not resolve
+WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[3].request.url: URL value 'Library/SupplementalDataElementsFHIR4' does not resolve
 WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[4].request.url: URL value 'Library/NHSNGlycemicControlHypoglycemicInitialPopulation' does not resolve
 WARNING: Bundle/sde-example-artifact-bundle: Bundle.entry[5].request.url: URL value 'Measure/NHSNGlycemicControlHypoglycemicInitialPopulation' does not resolve
 
@@ -243,9 +235,6 @@ ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient
 ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 ERROR: Bundle/sde-example-patient-data-bundle Bundle.entry[0].resource/*Patient/patient04*/.extension[1].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) was not found in the value set 'Detailed ethnicity' (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2148-5 ('Mexican')' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity|6.1.0'
 
-# 23 - This is a multi-rate measure, working on getting the validator to use the scoring extension to support these
-INFORMATION: MeasureReport/summary-multirate-measurereport: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
-
 # 24 - Validated these counts are correct
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[0]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[1]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
@@ -255,6 +244,7 @@ INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].p
 INFORMATION: Measure/measure-exm108-example: Measure.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: MeasureReport/gaps-indv-measurereport04: MeasureReport.group[0].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 26 - These messages reference the Situational Awareness for Novel Epidemic Response (SANER) IG. We do not want to take a dependency on SANER. The intent of the DEQM IG is to provide guidance and support regarding value-based care data exchange in the US Realm. These references are used in examples only.
 WARNING: Bundle/Location-Aware-example: Bundle.entry[0].resource/*Location/Loc-X140008*/.managingOrganization: Entry 2 matches the reference Organization/X140008 by type and id but it's fullUrl urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f03 does not match the full target URL urn:uuid:X140008 by Bundle resolution rules

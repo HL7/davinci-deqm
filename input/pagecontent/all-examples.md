@@ -22,7 +22,6 @@
 * [Continuous-Variable Scoring MeasureReport](MeasureReport-date-of-last-power-outage.html)
 * [Attestation Boolean Improvement Activities MeasureReport](MeasureReport-attestation-boolean-example.html)
 * [Attestation Proportion Promoting Interoperability MeasureReport](MeasureReport-MeasureReport-PI-example.html)
-* [Multiple Rate Scoring MeasureReport](MeasureReport-summary-multirate-measurereport.html)
 
 ### Bundles
 Below are examples of Bundle resources.

@@ -249,14 +249,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Multi-rate Summary Measure Report Example",
-                "reference": {
-                    "reference": "MeasureReport/summary-multirate-measurereport"
-                },
-                "description": "Illustration of a summary-level multi-rate, multi-scoring type measure report"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Summ Medicare Stratification Example",
                 "reference": {
                     "reference": "MeasureReport/summ-medicare-stratification-example"
