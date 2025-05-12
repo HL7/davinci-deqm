@@ -1081,14 +1081,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "MeasureReport Summary MultiRate",
-                "reference": {
-                    "reference": "MeasureReport/summary-multirate-measurereport"
-                },
-                "description": "MeasureReport: Summary multirate example."
-            },
-            {
-                "exampleBoolean": true,
                 "name": "MeasureReport 01 Patch Mult",
                 "reference": {
                     "reference": "Parameters/measurereport01-patch-mult"
