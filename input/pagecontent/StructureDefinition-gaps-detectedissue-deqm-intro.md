@@ -5,12 +5,11 @@ The following data-elements are mandatory (i.e data MUST be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. modifierExtension: Gap Status
-2. modifierExtension: Extension
-3. evidence: Supporting evidence
-4. code: Issue Category, e.g. drug-drug, duplicate therapy, etc.
-5. status: registered \| preliminary \| final \| amended +
-6. evidence.detail: This references either a DEQM Individual MeasureReport or a Detailed Care Gap Guidance Response resource.
-7. patient: Associated patient
+2. evidence: Supporting evidence
+3. code: Issue Category, e.g. drug-drug, duplicate therapy, etc.
+4. status: registered \| preliminary \| final \| amended +
+5. evidence.detail: This references either a DEQM Individual MeasureReport or a Detailed Care Gap Guidance Response resource.
+6. patient: Associated patient
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Support:**
 1. criteriaReference: Criteria reference

@@ -4,54 +4,54 @@
 ### MeasureReports
 
 #### General MeasureReports
-* [Data Exchange MeasureReport](MeasureReport-datax-measurereport01.html)
-* [Gaps in Care Individual MeasureReport](MeasureReport-gaps-indv-measurereport04.html)
-* [Individual MeasureReport](MeasureReport-indv-measurereport01.html)
-* [Subject-List MeasureReport](MeasureReport-subjectlist-measurereport01.html)
-* [Summary MeasureReport](MeasureReport-summ-measurereport02.html)
+* [Example MeasureReport: Datax Measurereport01](MeasureReport-datax-measurereport01.html)
+* [Example MeasureReport: Gaps Individual MeasureReport04](MeasureReport-gaps-indv-measurereport04.html)
+* [Example MeasureReport: Indv Measurereport01](MeasureReport-indv-measurereport01.html)
+* [Example MeasureReport: Subject List MeasureReport01](MeasureReport-subjectlist-measurereport01.html)
+* [Example MeasureReport: Summ Measurereport02](MeasureReport-summ-measurereport02.html)
 
 #### Stratification MeasureReports
-* [Individual MeasureReport with Stratifiction](MeasureReport-indv-measurreport-stratification-example.html)
-* [Summary MeasureReport with Stratifiction](MeasureReport-summ-medicare-stratification-example.html)
+* [Example MeasureReport: Indv Measurreport Stratification Example](MeasureReport-indv-measurreport-stratification-example.html)
+* [Example MeasureReport: Summ Medicare Stratification Example](MeasureReport-summ-medicare-stratification-example.html)
 
 #### Supplemental Data Element (SDE) Measure Report
-* [Supplemental Data Elements MeasureReport](MeasureReport-sde-example.html)
+* [Example MeasureReport: Additional Supplemental Data Example](MeasureReport-sde-example.html)
 
 #### Scoring Type MeasureReports
-* [Ratio Scoring MeasureReport](MeasureReport-ratio-measurereport01.html)
-* [Continuous-Variable Scoring MeasureReport](MeasureReport-date-of-last-power-outage.html)
-* [Attestation Boolean Improvement Activities MeasureReport](MeasureReport-attestation-boolean-example.html)
-* [Attestation Proportion Promoting Interoperability MeasureReport](MeasureReport-MeasureReport-PI-example.html)
+* [Example MeasureReport: Gaps Ratio MeasureReport01](MeasureReport-ratio-measurereport01.html)
+* [Example MeasureReport: Summary MeasureReport Date of Last Power Outage](MeasureReport-date-of-last-power-outage.html)
+* [Example MeasureReport: MeasureReport Attestation Boolean](MeasureReport-attestation-boolean-example.html)
+* [Example MeasureReport: MeasureReport-PI-example](MeasureReport-MeasureReport-PI-example.html)
 
 ### Bundles
 Below are examples of Bundle resources.
 
 #### MeasureReport Bundles
-* [Individual VTE Option 1 Bundle](Bundle-single-indv-vte-report-option1.html)
-* [Individual VTE Option 7 Bundle](Bundle-single-indv-vte-report-option7.html)
-* [Individual MRP Task Bundle](Bundle-single-indv-mrp-task-report.html)
-* [Individual MRP Observation Bundle](Bundle-single-indv-mrp-obs-report.html)
-* [Individual COL Observation Bundle](Bundle-single-indv-col-obs-report.html)
-* [Summary Multiple Measures Bundle](Bundle-multiple-summ-report.html)
+* [Example Bundle: Single Indv Vte Report Option 1](Bundle-single-indv-vte-report-option1.html)
+* [Example Bundle: Single Indv Vte Report Option 7](Bundle-single-indv-vte-report-option7.html)
+* [Example Bundle: Single Indv Mrp Task Report](Bundle-single-indv-mrp-task-report.html)
+* [Example Bundle: Single Indv Mrp Obs Report](Bundle-single-indv-mrp-obs-report.html)
+* [Example Bundle: Single Indv Col Obs Report](Bundle-single-indv-col-obs-report.html)
+* [Example Bundle: Multiple Summ Report](Bundle-multiple-summ-report.html)
 
 #### Gaps In Care Bundles
-* [Gaps Document Bundle with Open Gaps](Bundle-single-gaps-open-indv-report01.html)
-* [Gaps Document Bundle with Closed Gaps](Bundle-single-gaps-closed-indv-report01.html)
-* [Gaps Non-Document Bundle](Bundle-non-document-gaps-in-care.html)
+* [Example Bundle: Gaps Bundle Open Individual MeasureReports](Bundle-single-gaps-open-indv-report01.html)
+* [Example Bundle: Gaps Bundle Closed Individual MeasureReport01](Bundle-single-gaps-closed-indv-report01.html)
+* [Example Bundle: Gaps Non-Document Gaps In Care Report](Bundle-non-document-gaps-in-care.html)
 
 ### Ad-hoc Organization
-* [Ad Hoc Operation Input Example](Organization-ad-hoc-organization.html)
+* [Example Organization: Ad Hoc Operation Input Example](Organization-ad-hoc-organization.html)
 
 ### Measures
 Below are the Measures used by the MeasureReports above that are defined in this IG.
-* [Attestation Boolean](Measure-attestation-boolean-example.html)
-* [Cervical Cancer Screening EXM124](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM124-FHIR.html)
-* [COL Colorectal Cancer Screening EXM130](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR.htmll)
-* [Date of Last Power Outage](Measure-date-of-last-power-outage.html)
-* [Stratification Measure Example](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM55-FHIR.html)
-* [MRP Medication Reconciliation](Measure-measure-mrp-example.html)
-* [PI Promoting Interoperability](Measure-measure-pi-example.html)
-* [VTE Venous Thromboembolism Prophylaxis EXM108](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM108-FHIR.html)
+* [Measure: Immunization Registry Reporting (Experimental)](Measure-attestation-boolean-example.html)
+* [Measure: EXM124 - Cervical Cancer Screening (Experimental) ](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM124-FHIR.html)
+* [COL Colorectal Cancer Screening EXM130](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR.html)
+* [Measure: Measure Date of Last Power Outage (Experimental)](Measure-date-of-last-power-outage.html)
+* [Measure: EXM55 - Median Emergency Department Visit Duration (Experimental)](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM55-FHIR.html)
+* [Measure: Measure Mrp Example (Experimental)](Measure-measure-mrp-example.html)
+* [Measure: EXMPromotingInteroperabilityMeasure (Experimental) ](Measure-measure-pi-example.html)
+* [Measure: EXM108 - Venous Thromboembolism Prophylaxis (Experimental) ](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM108-FHIR.html)
 
 #### Da Vinci VBPR Examples
 The Da Vinci Value-Based Performance Reporting IG uses DEQM as a dependency. In addition to the above DEQM examples, 
@@ -61,94 +61,94 @@ measure report examples based on the [DEQM Summary MeasureReport Profile](Struct
 ### Other Support Resources
 Below are the resources that are referenced by the examples above.
 #### Composition
-* [Gaps Composition01](Composition-gaps-composition01.html)
-* [Gaps Composition02](Composition-gaps-composition02.html)
-* [Gaps Composition03](Composition-gaps-composition03.html)
+* [Example Composition: Gaps Composition01](Composition-gaps-composition01.html)
+* [Example Composition: Gaps Composition02](Composition-gaps-composition02.html)
+* [Example Composition: Gaps Composition03](Composition-gaps-composition03.html)
 
 #### Coverage
-* [Coverage01](Coverage-coverage01.html)
+* [Example Coverage: Coverage01](Coverage-coverage01.html)
 
 #### DetectedIssue
-* [Gaps DetectedIssue01](DetectedIssue-gaps-detectedissue01.html)
-* [Gaps DetectedIssue02](DetectedIssue-gaps-detectedissue02.html)
-* [Gaps DetectedIssue03](DetectedIssue-gaps-detectedissue03.html)
-* [Gaps DetectedIssue04](DetectedIssue-gaps-detectedissue04.html)
-* [Gaps DetectedIssue05](DetectedIssue-gaps-detectedissue05.html)
+* [Example DetectedIssue: Gaps DetectedIssue01](DetectedIssue-gaps-detectedissue01.html)
+* [Example DetectedIssue: Gaps DetectedIssue02](DetectedIssue-gaps-detectedissue02.html)
+* [Example DetectedIssue: Gaps DetectedIssue03](DetectedIssue-gaps-detectedissue03.html)
+* [Example DetectedIssue: Gaps DetectedIssue04](DetectedIssue-gaps-detectedissue04.html)
+* [Example DetectedIssue: Gaps DetectedIssue05](DetectedIssue-gaps-detectedissue05.html)
 
 #### Device
-* [DEQM Software System Example](Device-deqm-software-system-example.html)
+* [Example Device: DEQM Software System Example](Device-deqm-software-system-example.html)
 
 #### Encounter
-* [Encounter01](Encounter-encounter01.html)
-* [Encounter02](Encounter-encounter02.html)
-* [Encounter03](Encounter-encounter03.html)
-* [Gaps Encounter01](Encounter-gaps-encounter01.html)
-* [Gaps Encounter02](Encounter-gaps-encounter02.html)
-* [Gaps Encounter03](Encounter-gaps-encounter03.html)
+* [Example Encounter: Encounter01](Encounter-encounter01.html)
+* [Example Encounter: Encounter02](Encounter-encounter02.html)
+* [Example Encounter: Encounter03](Encounter-encounter03.html)
+* [Example Encounter: Gaps Encounter01](Encounter-gaps-encounter01.html)
+* [Example Encounter: Gaps Encounter02](Encounter-gaps-encounter02.html)
+* [Example Encounter: Gaps Encounter03](Encounter-gaps-encounter03.html)
 
 #### Group
-* [Group01](Group-group01.html)
-* [Gaps Group01 subject](Group-gaps-subject-group01.html)
+* [Example Group: Group01](Group-group01.html)
+* [Example Group: Gaps Group01 subject](Group-gaps-subject-group01.html)
 
 #### GuidanceResponse
-* [GuidanceResponse01](GuidanceResponse-guidanceresponse01.html)
-* [DetailedGuidanceResponse01](GuidanceResponse-detailedguidanceresponse01.html)
-* [DetailedGuidanceResponse02](GuidanceResponse-detailedguidanceresponse02.html)
+* [Example GuidanceResponse: Guidance Response Example](GuidanceResponse-guidanceresponse01.html)
+* [Example GuidanceResponse: DetailedGuidanceResponse01](GuidanceResponse-detailedguidanceresponse01.html)
+* [Example GuidanceResponse: DetailedGuidanceResponse02](GuidanceResponse-detailedguidanceresponse02.html)
 
 #### Library
-* [Library Mrp Example](Library-library-mrp-example.html)
-* [Library Colorectal Cancer Screening (EXM130)](Library-library-exm130-example.html)
-* [Library Cervical Cancer Screening (EXM124)](Library-library-exm124-example.html)
+* [Library: Library Mrp Example](Library-library-mrp-example.html)
+* [Library: Library Colorectal Cancer Screening (EXM130) (Experimental)](Library-library-exm130-example.html)
+* [Library: Library Cervical Cancer Screening (EXM124) (Experimental)](Library-library-exm124-example.html)
 
 #### Location
-* [Location03](Location-location03.html)
-* [Location02](Location-location02.html)
-* [Location01](Location-location01.html)
+* [Example Location: Location01](Location-location01.html)
+* [Example Location: Location02](Location-location02.html)
+* [Example Location: Location03](Location-location03.html)
 
 #### Observation
-* [Observation01](Observation-observation01.html)
-* [Observation02](Observation-observation02.html)
-* [Observation03](Observation-observation03.html)
-* [DNA Occult Blood](Observation-DNA-occultblood.html)
+* [Example Observation: Observation01](Observation-observation01.html)
+* [Example Observation: Observation02](Observation-observation02.html)
+* [Example Observation: Observation03](Observation-observation03.html)
+* [Example Observation: DNA Occult Blood](Observation-DNA-occultblood.html)
 
 #### Organization
-* [Organization02](Organization-organization02.html)
-* [Organization03](Organization-organization03.html)
-* [Organization04](Organization-organization04.html)
-* [Organization01](Organization-organization01.html)
-* [Gaps Reporting Vendor Organization](Organization-gaps-organization-reportingvendor.html)
+* [Example Organization: Organization01](Organization-organization01.html)
+* [Example Organization: Organization02](Organization-organization02.html)
+* [Example Organization: Organization03](Organization-organization03.html)
+* [Example Organization: Organization04](Organization-organization04.html)
+* [Example Organization: Gaps Reporting Vendor Organization](Organization-gaps-organization-reportingvendor.html)
 
 #### Parameters
-* [Mrp Submit Task](Parameters-mrp-submit-task.html)
-* [Col Collect Obs](Parameters-col-collect-obs.html)
-* [Col Submit Obs](Parameters-col-submit-obs.html)
-* [Mrp Submit Obs](Parameters-mrp-submit-obs.html)
-* [Gaps Parameters Open Individual MeasureReports](Parameters-single-gaps-open-indv-report01.html)
-* [Gaps Parameters Closed Individual MeasureReport01](Parameters-single-gaps-closed-indv-report01.html)
-* [Gaps Parameters Closed Individual MeasureReport02](Parameters-single-gaps-closed-indv-report02.html)
-* [Gaps Multiple Parameters Individual MeasureReports01](Parameters-multiple-gaps-indv-report01.html)
-* [Gaps Multiple Parameters Individual MeasureReports02](Parameters-multiple-gaps-indv-report02.html)
+* [Example Parameters: Mrp Submit Task](Parameters-mrp-submit-task.html)
+* [Example Parameters: Col Collect Obs](Parameters-col-collect-obs.html)
+* [Example Parameters: Col Submit Obs](Parameters-col-submit-obs.html)
+* [Example Parameters: Mrp Submit Obs](Parameters-mrp-submit-obs.html)
+* [Example Parameters: Gaps Parameters Open Individual MeasureReports](Parameters-single-gaps-open-indv-report01.html)
+* [Example Parameters: Gaps Parameters Closed Individual MeasureReport01](Parameters-single-gaps-closed-indv-report01.html)
+* [Example Parameters: Gaps Parameters Closed Individual MeasureReport02](Parameters-single-gaps-closed-indv-report02.html)
+* [Example Parameters: Gaps Multiple Parameters Individual MeasureReports01](Parameters-multiple-gaps-indv-report01.html)
+* [Example Parameters: Gaps Multiple Parameters Individual MeasureReports02](Parameters-multiple-gaps-indv-report02.html)
 
 #### Patient
-* [Patient02](Patient-patient02.html)
-* [Patient03](Patient-patient03.html)
-* [Gaps Patient01](Patient-gaps-patient01.html)
-* [Gaps Patient02](Patient-gaps-patient02.html)
-* [Patient01](Patient-patient01.html)
+* [Example Patient: Patient02](Patient-patient02.html)
+* [Example Patient: Patient03](Patient-patient03.html)
+* [Example Patient: Gaps Patient01](Patient-gaps-patient01.html)
+* [Example Patient: Gaps Patient02](Patient-gaps-patient02.html)
+* [Example Patient: Patient01](Patient-patient01.html)
 
 #### Practitioner
-* [Practitioner01](Practitioner-practitioner01.html)
-* [Practitioner02](Practitioner-practitioner02.html)
-* [Practitioner03](Practitioner-practitioner03.html)
+* [Example Practitioner: Practitioner01](Practitioner-practitioner01.html)
+* [Example Practitioner: Practitioner02](Practitioner-practitioner02.html)
+* [Example Practitioner: Practitioner03](Practitioner-practitioner03.html)
 
 #### Procedure
-* [Gaps Procedure01](Procedure-gaps-procedure01.html)
-* [Gaps Procedure02](Procedure-gaps-procedure02.html)
+* [Example Procedure: Gaps Procedure01](Procedure-gaps-procedure01.html)
+* [Example Procedure: Gaps Procedure02](Procedure-gaps-procedure02.html)
 
 #### Task
-* [Task01](Task-task01.html)
-* [Task02](Task-task02.html)
-* [Task03](Task-task03.html)
+* [Example Task: Task01](Task-task01.html)
+* [Example Task: Task02](Task-task02.html)
+* [Example Task: Task03](Task-task03.html)
 
 <!-- ================================================ -->
 <!--  use this line to include an autogenerated list of all examples from the remove it if you would like to hand generate it -->
