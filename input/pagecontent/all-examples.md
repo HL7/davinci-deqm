@@ -22,7 +22,6 @@
 * [Example MeasureReport: Summary MeasureReport Date of Last Power Outage](MeasureReport-date-of-last-power-outage.html)
 * [Example MeasureReport: MeasureReport Attestation Boolean](MeasureReport-attestation-boolean-example.html)
 * [Example MeasureReport: MeasureReport-PI-example](MeasureReport-MeasureReport-PI-example.html)
-* [Example MeasureReport: MeasureReport Summary MultiRate](MeasureReport-summary-multirate-measurereport.html)
 
 ### Bundles
 Below are examples of Bundle resources.

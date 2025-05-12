@@ -2,7 +2,7 @@
 * This full [DEQM Implementation Guide](full-ig.zip)
 * FHIR R4 DEQM Resource Definitions [(JSON)](definitions.json.zip) [(XML)](definitions.xml.zip) [(TTL)](definitions.ttl.zip)
 * FHIR R4 DEQM Examples [(JSON)](examples.json.zip) [(XML)](examples.xml.zip) [(TTL)](examples.ttl.zip)
-* The full [FHIR R4 core]({{site.data.fhir.path}}/fhir-spec.zip) specifications and other [FHIR core downloads]({{site.data.fhir.path}}downloads.html)
+* [FHIR core downloads]({{site.data.fhir.path}}downloads.html)
 * [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator)
 
 #### Package File
