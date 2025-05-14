@@ -52,6 +52,12 @@
             "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"
         },
         {
+            "version": "0.22.0",
+            "id": "vsac",
+            "packageId": "us.nlm.vsac",
+            "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
+        },
+        {
             "version": "6.0.0",
             "id": "qicore",
             "packageId": "hl7.fhir.us.qicore",
