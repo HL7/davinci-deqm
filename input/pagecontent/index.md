@@ -45,7 +45,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 The following scenarios illustrate the various ways that the DEQM framework can be used, providing an overview of and index into the more detailed use cases and specification documentation in the implementation guide.
 
-Broadly, these scenarios fall into three categories: 1) *Reporting Scenarios*, focused on communicating the results of a quality measure calculation at the end of a [_measurement period_](glossary.html#measurement-period) as part of a quality improvement initiative, 2) *Exchange Scenarios*, focused on echanging the data of interest for a measure or set of measures throughout the measurement period, and 3) Gaps in care scenarios.
+Broadly, these scenarios fall into three categories: 1) *Reporting Scenarios*, focused on communicating the results of a quality measure calculation at the end of a [_measurement period_](glossary.html#measurement-period) as part of a quality improvement initiative, 2) *Exchange Scenarios*, focused on exchanging the data of interest for a measure or set of measures throughout the measurement period, and 3) Gaps in care scenarios.
 
 As a precondition, systems in these scenarios have already obtained the relevant measure specifications being reported from a measure repository as described in the [Quality Measure IG Measure Repository]({{site.data.fhir.ver.cqfm}}/measure-repository-service.html).
 
