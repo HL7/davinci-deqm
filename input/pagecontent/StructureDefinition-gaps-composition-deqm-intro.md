@@ -28,6 +28,6 @@ Note:  The date range for the Gaps in Care Report is specified using the `period
 
 <!-- ### Examples-->
 
-<!--{% include list-simple-organizations.xhtml %} -->
+{% lang-fragment list-simple-organizations.xhtml %}
 
 {% include link-list.md %}

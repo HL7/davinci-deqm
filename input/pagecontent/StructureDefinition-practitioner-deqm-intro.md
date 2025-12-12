@@ -26,6 +26,6 @@ The "Full View" tab below displays all the identifier slices including the *CCN*
 
 ### Examples
 
-{% include list-simple-practitioners.xhtml %}
+{% lang-fragment list-simple-practitioners.xhtml %}
 
 {% include link-list.md %}

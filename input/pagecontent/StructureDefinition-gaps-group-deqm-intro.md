@@ -26,6 +26,6 @@ Each {{site.data.structuredefinitions.[id].type}} *should* have ([Must Support](
 
 <!-- ### Examples-->
 
-<!--{% include list-simple-organizations.xhtml %} -->
+
 
 {% include link-list.md %}
