@@ -41,13 +41,13 @@
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "rest": [
         {
-            "documentation": "Da Vinci DEQM Producer Client **SHALL** support at least one of the following  transactions defined in the *Framework* Section of  this  Implementation Guide:\n\n- Individual Reporting\n- Summary Reporting\n\n",
+            "documentation": "Da Vinci DEQM Producer Client **SHALL** support at least one of the following  transactions defined in the *Framework* Section of  this  Implementation Guide:\n\n- Individual Reporting\n- Summary Reporting\n\n\nDEQM Producer Client **SHALL** support at least one of 'batch' or 'transaction'.",
             "interaction": [
                 {
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHALL"
+                            "valueCode": "MAY"
                         }
                     ],
                     "code": "transaction"

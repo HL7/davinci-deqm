@@ -76,3 +76,4 @@ list:
       1. **Applied**: Added prospective-gap to Gap in Care Example ([FHIR-48455](https://jira.hl7.org/browse/FHIR-48455))   ([Applied here](gaps-examples.html))
       1. **Applied**: Updated and organized examples ([FHIR-43012](https://jira.hl7.org/browse/FHIR-43012))
       1. **Applied**: Add Example(s) for Composite Measure Report ([FHIR-55408](https://jira.hl7.org/browse/FHIR-55408))
+      1. **Applied**: Receiver Server Capability - Bundle Transaction support  ([FHIR-51401](https://jira.hl7.org/browse/FHIR-51401))

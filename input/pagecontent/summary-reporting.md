@@ -30,6 +30,16 @@ The following resources are used in the summary reporting scenario:
 {: #summary-measure-reporting}
 When the results of a quality measure are completed for a population at the end of a measurement period, they are POSTed to the quality measure Receiver's FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API. Multiple summary results can be sent in a single FHIR Bundle as described [here](indv-reporting.html#individual-measure-reporting).  (Note that if the Bundle consist of only Summary MeasureReports, then a [collection] bundle is used.)
 
+In order to support real-world implementations (i.e. QPP) where:
+
+-  External producers submit summary MeasureReport resources for multiple providers (TINs/NPIs) in a single bundle.
+
+-  FHIR servers often act as facade layers over existing APIs (e.g., Measurement  /api/submissions/measurements) that perform individual POST/PUT operations atomically.
+
+-  In scenarios where the FHIR layer interacts directly with the database, supporting true bundle-level atomicity (e.g., 500+ entries) often requires pessimistic locking of rows or tables, increasing the risk of contention and deadlocks.
+
+All systems **SHALL** support one of "batch" or "transaction", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types.
+
 Posting a Summary Measure Report is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  If the payload is a single Summary MeasureReport it is updated using the PUT or Delete transactions. Otherwise, the FHIR transaction bundle is used and **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
 
 {% include img-narrow.html img="summ_report_post.jpg" caption="Figure 2-11 POST Summary Report" %}
