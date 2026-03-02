@@ -1,5 +1,5 @@
 {
-	"resourceType" : "ImplementationGuide",
+    "resourceType": "ImplementationGuide",
     "status": "active",
     "extension": [
         {
@@ -14,13 +14,12 @@
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
             "valueInteger": 4
         }
-	],
+    ],
     "publisher": "HL7 International / Clinical Quality Information",
     "license": "CC0-1.0",
     "name": "DEQM",
     "copyright": "Used by permission of HL7 International - Clinical Quality Information Work Group, all rights reserved Creative Commons License",
     "title": "Data Exchange For Quality Measures Implementation Guide",
-
     "jurisdiction": [
         {
             "coding": [
@@ -82,9 +81,7 @@
             "uri": "http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common"
         }
     ],
-    "fhirVersion": [
-        "4.0.1"
-    ],
+    "fhirVersion": ["4.0.1"],
     "definition": {
         "parameter": [
             {
@@ -240,1011 +237,771 @@
             {
                 "exampleBoolean": true,
                 "name": "Organization02",
-                "reference": {
-                    "reference": "Organization/organization02"
-                },
+                "reference": {"reference": "Organization/organization02"},
                 "description": "DEQM Organization02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Patient02",
-                "reference": {
-                    "reference": "Patient/patient02"
-                },
+                "reference": {"reference": "Patient/patient02"},
                 "description": "DEQM Patient02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Summ Medicare Stratification Example",
-                "reference": {
-                    "reference": "MeasureReport/summ-medicare-stratification-example"
-                },
+                "reference": {"reference": "MeasureReport/summ-medicare-stratification-example"},
                 "description": "DEQM Summ Medicare Stratification Example example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Additional Supplemental Data Example",
-                "reference": {
-                    "reference": "MeasureReport/sde-example"
-                },
+                "reference": {"reference": "MeasureReport/sde-example"},
                 "description": "Illustration of using supplemental data elements to gather additional information about a patient population"
             },
             {
                 "exampleBoolean": true,
                 "name": "Additional Supplemental Data Example - Artifact Bundle",
-                "reference": {
-                    "reference": "Bundle/sde-example-artifact-bundle"
-                },
+                "reference": {"reference": "Bundle/sde-example-artifact-bundle"},
                 "description": "Artifact bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
             },
             {
                 "exampleBoolean": true,
                 "name": "Additional Supplemental Data Example - Patient Bundle",
-                "reference": {
-                    "reference": "Bundle/sde-example-patient-data-bundle"
-                },
+                "reference": {"reference": "Bundle/sde-example-patient-data-bundle"},
                 "description": "Patient data bundle for a measure illustrating the use of supplemental data elements to gather additional information about a patient population"
             },
             {
                 "exampleBoolean": true,
                 "name": "Location03",
-                "reference": {
-                    "reference": "Location/location03"
-                },
+                "reference": {"reference": "Location/location03"},
                 "description": "DEQM Location03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Summ Measurereport01",
-                "reference": {
-                    "reference": "MeasureReport/summ-measurereport01"
-                },
+                "reference": {"reference": "MeasureReport/summ-measurereport01"},
                 "description": "DEQM Summ Measurereport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "MeasureReport Attestation Boolean",
-                "reference": {
-                    "reference": "MeasureReport/attestation-boolean-example"
-                },
+                "reference": {"reference": "MeasureReport/attestation-boolean-example"},
                 "description": "DEQM Attestation Boolean example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Datax Measurereport02",
-                "reference": {
-                    "reference": "MeasureReport/datax-measurereport02"
-                },
+                "reference": {"reference": "MeasureReport/datax-measurereport02"},
                 "description": "DEQM Datax Measurereport02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Measurereport with contained data",
-                "reference": {
-                    "reference": "MeasureReport/summ-contained-supplemental"
-                },
+                "reference": {"reference": "MeasureReport/summ-contained-supplemental"},
                 "description": "Measurereport with contained supplemental data"
             },
             {
                 "exampleBoolean": true,
                 "name": "Mrp Submit Task",
-                "reference": {
-                    "reference": "Parameters/mrp-submit-task"
-                },
+                "reference": {"reference": "Parameters/mrp-submit-task"},
                 "description": "DEQM Mrp Submit Task example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Multiple Indv Mrp Obs Report",
-                "reference": {
-                    "reference": "Bundle/multiple-indv-mrp-obs-report"
-                },
+                "reference": {"reference": "Bundle/multiple-indv-mrp-obs-report"},
                 "description": "DEQM Multiple Indv Mrp Obs Report example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Measure Mrp Example",
-                "reference": {
-                    "reference": "Measure/measure-mrp-example"
-                },
+                "reference": {"reference": "Measure/measure-mrp-example"},
                 "description": "DEQM Measure Mrp Example example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Measure Date of Last Power Outage",
-                "reference": {
-                    "reference": "Measure/date-of-last-power-outage"
-                },
+                "reference": {"reference": "Measure/date-of-last-power-outage"},
                 "description": "DEQM Measure Date of Last Power Outage example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Datax Measurereport03",
-                "reference": {
-                    "reference": "MeasureReport/datax-measurereport03"
-                },
+                "reference": {"reference": "MeasureReport/datax-measurereport03"},
                 "description": "DEQM Datax Measurereport03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Location02",
-                "reference": {
-                    "reference": "Location/location02"
-                },
+                "reference": {"reference": "Location/location02"},
                 "description": "DEQM Location02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Single Indv Vte Report Option 1",
-                "reference": {
-                    "reference": "Bundle/single-indv-vte-report-option1"
-                },
+                "reference": {"reference": "Bundle/single-indv-vte-report-option1"},
                 "description": "DEQM Single Indv Vte Report example using MedicationAdministration"
             },
             {
                 "exampleBoolean": true,
                 "name": "Single Indv Vte Report Option 7",
-                "reference": {
-                    "reference": "Bundle/single-indv-vte-report-option7"
-                },
+                "reference": {"reference": "Bundle/single-indv-vte-report-option7"},
                 "description": "DEQM Single Indv Vte Report example using MedicationRequest"
             },
             {
                 "exampleBoolean": true,
                 "name": "Ad Hoc Operation Input Example",
-                "reference": {
-                    "reference": "Organization/ad-hoc-organization"
-                },
+                "reference": {"reference": "Organization/ad-hoc-organization"},
                 "description": "Ad Hoc Operation Input Example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Col Collect Obs",
-                "reference": {
-                    "reference": "Parameters/col-collect-obs"
-                },
+                "reference": {"reference": "Parameters/col-collect-obs"},
                 "description": "DEQM Col Collect Obs example"
             },
-	    {
-		"exampleBoolean": true,
-		"name": "Col Submit Obs",
-		"reference": {
-		    "reference": "Parameters/col-submit-obs"
-		},
-		"description": "DEQM Col Submit Obs example"
-	    },
+            {
+                "exampleBoolean": true,
+                "name": "Col Submit Obs",
+                "reference": {"reference": "Parameters/col-submit-obs"},
+                "description": "DEQM Col Submit Obs example"
+            },
             {
                 "exampleBoolean": true,
                 "name": "Patient03",
-                "reference": {
-                    "reference": "Patient/patient03"
-                },
+                "reference": {"reference": "Patient/patient03"},
                 "description": "DEQM Patient03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Coverage01",
-                "reference": {
-                    "reference": "Coverage/coverage01"
-                },
+                "reference": {"reference": "Coverage/coverage01"},
                 "description": "DEQM Coverage01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Organization03",
-                "reference": {
-                    "reference": "Organization/organization03"
-                },
+                "reference": {"reference": "Organization/organization03"},
                 "description": "DEQM Organization03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Library Mrp Example",
-                "reference": {
-                    "reference": "Library/library-mrp-example"
-                },
+                "reference": {"reference": "Library/library-mrp-example"},
                 "description": "DEQM Library Mrp Example example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Organization04",
-                "reference": {
-                    "reference": "Organization/organization04"
-                },
+                "reference": {"reference": "Organization/organization04"},
                 "description": "DEQM Organization04 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Mrp Submit Obs",
-                "reference": {
-                    "reference": "Parameters/mrp-submit-obs"
-                },
+                "reference": {"reference": "Parameters/mrp-submit-obs"},
                 "description": "DEQM Mrp Submit Obs example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Observation01",
-                "reference": {
-                    "reference": "Observation/observation01"
-                },
+                "reference": {"reference": "Observation/observation01"},
                 "description": "DEQM Observation01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Observation02",
-                "reference": {
-                    "reference": "Observation/observation02"
-                },
+                "reference": {"reference": "Observation/observation02"},
                 "description": "DEQM Observation02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Observation03",
-                "reference": {
-                    "reference": "Observation/observation03"
-                },
+                "reference": {"reference": "Observation/observation03"},
                 "description": "DEQM Observation03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Multiple Summ Report",
-                "reference": {
-                    "reference": "Bundle/multiple-summ-report"
-                },
+                "reference": {"reference": "Bundle/multiple-summ-report"},
                 "description": "DEQM Multiple Summ Report example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Location Aware example",
-                "reference": {
-                    "reference": "Bundle/Location-Aware-example"
-                },
+                "reference": {"reference": "Bundle/Location-Aware-example"},
                 "description": "Bundle with location aware information"
             },
-             {
+            {
                 "exampleBoolean": true,
                 "name": "DEQM Software System Example",
-                "reference": {
-                    "reference": "Device/deqm-software-system-example"
-                },
+                "reference": {"reference": "Device/deqm-software-system-example"},
                 "description": "DEQM DEQM Software System Example example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Indv Measurereport01",
-                "reference": {
-                    "reference": "MeasureReport/indv-measurereport01"
-                },
+                "reference": {"reference": "MeasureReport/indv-measurereport01"},
                 "description": "DEQM Indv Measurereport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Indv Measurereport02",
-                "reference": {
-                    "reference": "MeasureReport/indv-measurereport02"
-                },
+                "reference": {"reference": "MeasureReport/indv-measurereport02"},
                 "description": "DEQM Indv Measurereport02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Multiple Indv Mrp Task Report",
-                "reference": {
-                    "reference": "Bundle/multiple-indv-mrp-task-report"
-                },
+                "reference": {"reference": "Bundle/multiple-indv-mrp-task-report"},
                 "description": "DEQM Multiple Indv Mrp Task Report example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Encounter01",
-                "reference": {
-                    "reference": "Encounter/encounter01"
-                },
+                "reference": {"reference": "Encounter/encounter01"},
                 "description": "DEQM Encounter01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Encounter02",
-                "reference": {
-                    "reference": "Encounter/encounter02"
-                },
+                "reference": {"reference": "Encounter/encounter02"},
                 "description": "DEQM Encounter02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Encounter03",
-                "reference": {
-                    "reference": "Encounter/encounter03"
-                },
+                "reference": {"reference": "Encounter/encounter03"},
                 "description": "DEQM Encounter03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "DNA Occult Blood",
-                "reference": {
-                    "reference": "Observation/DNA-occultblood"
-                },
+                "reference": {"reference": "Observation/DNA-occultblood"},
                 "description": "DEQM DNA Occult Blood example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Single Indv Mrp Task Report",
-                "reference": {
-                    "reference": "Bundle/single-indv-mrp-task-report"
-                },
+                "reference": {"reference": "Bundle/single-indv-mrp-task-report"},
                 "description": "DEQM Single Indv Mrp Task Report example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Single Indv Col Obs Report",
-                "reference": {
-                    "reference": "Bundle/single-indv-col-obs-report"
-                },
+                "reference": {"reference": "Bundle/single-indv-col-obs-report"},
                 "description": "DEQM Single Indv Col Obs Report example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Practitioner01",
-                "reference": {
-                    "reference": "Practitioner/practitioner01"
-                },
+                "reference": {"reference": "Practitioner/practitioner01"},
                 "description": "DEQM Practitioner01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Practitioner02",
-                "reference": {
-                    "reference": "Practitioner/practitioner02"
-                },
+                "reference": {"reference": "Practitioner/practitioner02"},
                 "description": "DEQM Practitioner02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Practitioner03",
-                "reference": {
-                    "reference": "Practitioner/practitioner03"
-                },
+                "reference": {"reference": "Practitioner/practitioner03"},
                 "description": "DEQM Practitioner03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Group01",
-                "reference": {
-                    "reference": "Group/group01"
-                },
+                "reference": {"reference": "Group/group01"},
                 "description": "DEQM Group01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Indv Measurereport03",
-                "reference": {
-                    "reference": "MeasureReport/indv-measurereport03"
-                },
+                "reference": {"reference": "MeasureReport/indv-measurereport03"},
                 "description": "DEQM Indv Measurereport03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Indv Measurreport Stratification Example",
-                "reference": {
-                    "reference": "MeasureReport/indv-measurreport-stratification-example"
-                },
+                "reference": {"reference": "MeasureReport/indv-measurreport-stratification-example"},
                 "description": "DEQM Indv Measurreport Stratification Example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Location01",
-                "reference": {
-                    "reference": "Location/location01"
-                },
+                "reference": {"reference": "Location/location01"},
                 "description": "DEQM Location01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Single Indv Mrp Obs Report",
-                "reference": {
-                    "reference": "Bundle/single-indv-mrp-obs-report"
-                },
+                "reference": {"reference": "Bundle/single-indv-mrp-obs-report"},
                 "description": "DEQM Single Indv Mrp Obs Report example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Summ Measurereport02",
-                "reference": {
-                    "reference": "MeasureReport/summ-measurereport02"
-                },
+                "reference": {"reference": "MeasureReport/summ-measurereport02"},
                 "description": "DEQM Summ Measurereport02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Summary MeasureReport Date of Last Power Outage",
-                "reference": {
-                    "reference": "MeasureReport/date-of-last-power-outage"
-                },
+                "reference": {"reference": "MeasureReport/date-of-last-power-outage"},
                 "description": "DEQM Summary Measurereport Date of Last Power Outage example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Datax Measurereport01",
-                "reference": {
-                    "reference": "MeasureReport/datax-measurereport01"
-                },
+                "reference": {"reference": "MeasureReport/datax-measurereport01"},
                 "description": "DEQM Datax Measurereport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Task01",
-                "reference": {
-                    "reference": "Task/task01"
-                },
+                "reference": {"reference": "Task/task01"},
                 "description": "DEQM Task01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Task02",
-                "reference": {
-                    "reference": "Task/task02"
-                },
+                "reference": {"reference": "Task/task02"},
                 "description": "DEQM Task02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Task03",
-                "reference": {
-                    "reference": "Task/task03"
-                },
+                "reference": {"reference": "Task/task03"},
                 "description": "DEQM Task03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Organization01-001",
-                "reference": {
-                    "reference": "Organization/organization01"
-                },
+                "reference": {"reference": "Organization/organization01"},
                 "description": "DEQM Organization01 example"
             },
-           {
+            {
                 "exampleBoolean": true,
                 "name": "Subject List MeasureReport01",
-                "reference": {
-                    "reference": "MeasureReport/subjectlist-measurereport01"
-                },
+                "reference": {"reference": "MeasureReport/subjectlist-measurereport01"},
                 "description": "Subject List MeasureReport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Individual MeasureReport01",
-                "reference": {
-                    "reference": "MeasureReport/gaps-indv-measurereport01"
-                },
+                "reference": {"reference": "MeasureReport/gaps-indv-measurereport01"},
                 "description": "GIC Individual MeasureReport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Individual MeasureReport02",
-                "reference": {
-                    "reference": "MeasureReport/gaps-indv-measurereport02"
-                },
+                "reference": {"reference": "MeasureReport/gaps-indv-measurereport02"},
                 "description": "GIC Individual MeasureReport02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Individual MeasureReport03",
-                "reference": {
-                    "reference": "MeasureReport/gaps-indv-measurereport03"
-                },
+                "reference": {"reference": "MeasureReport/gaps-indv-measurereport03"},
                 "description": "GIC Individual MeasureReport03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Individual MeasureReport04",
-                "reference": {
-                    "reference": "MeasureReport/gaps-indv-measurereport04"
-                },
+                "reference": {"reference": "MeasureReport/gaps-indv-measurereport04"},
                 "description": "GIC Individual MeasureReport04 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Ratio MeasureReport01",
-                "reference": {
-                    "reference": "MeasureReport/ratio-measurereport01"
-                },
+                "reference": {"reference": "MeasureReport/ratio-measurereport01"},
                 "description": "GIC Ratio MeasureReport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Patient01",
-                "reference": {
-                    "reference": "Patient/gaps-patient01"
-                },
+                "reference": {"reference": "Patient/gaps-patient01"},
                 "description": "GIC Patient01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Patient02",
-                "reference": {
-                    "reference": "Patient/gaps-patient02"
-                },
+                "reference": {"reference": "Patient/gaps-patient02"},
                 "description": "GIC Patient02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Encounter01",
-                "reference": {
-                    "reference": "Encounter/gaps-encounter01"
-                },
+                "reference": {"reference": "Encounter/gaps-encounter01"},
                 "description": "GIC Encounter01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Encounter02",
-                "reference": {
-                    "reference": "Encounter/gaps-encounter02"
-                },
+                "reference": {"reference": "Encounter/gaps-encounter02"},
                 "description": "GIC Encounter02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Encounter03",
-                "reference": {
-                    "reference": "Encounter/gaps-encounter03"
-                },
+                "reference": {"reference": "Encounter/gaps-encounter03"},
                 "description": "GIC Encounter03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Procedure01",
-                "reference": {
-                    "reference": "Procedure/gaps-procedure01"
-                },
+                "reference": {"reference": "Procedure/gaps-procedure01"},
                 "description": "GIC Procedure01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Procedure02",
-                "reference": {
-                    "reference": "Procedure/gaps-procedure02"
-                },
+                "reference": {"reference": "Procedure/gaps-procedure02"},
                 "description": "GIC Procedure02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Reporting Vendor Organization",
-                "reference": {
-                    "reference": "Organization/gaps-organization-reportingvendor"
-                },
+                "reference": {"reference": "Organization/gaps-organization-reportingvendor"},
                 "description": "GIC Reporting Vendor Organization example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Composition01",
-                "reference": {
-                    "reference": "Composition/gaps-composition01"
-                },
+                "reference": {"reference": "Composition/gaps-composition01"},
                 "description": "GIC Composition01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Composition02",
-                "reference": {
-                    "reference": "Composition/gaps-composition02"
-                },
+                "reference": {"reference": "Composition/gaps-composition02"},
                 "description": "GIC Composition02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Composition03",
-                "reference": {
-                    "reference": "Composition/gaps-composition03"
-                },
+                "reference": {"reference": "Composition/gaps-composition03"},
                 "description": "GIC Composition03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps DetectedIssue01",
-                "reference": {
-                    "reference": "DetectedIssue/gaps-detectedissue01"
-                },
+                "reference": {"reference": "DetectedIssue/gaps-detectedissue01"},
                 "description": "GIC DetectedIssue01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps DetectedIssue02",
-                "reference": {
-                    "reference": "DetectedIssue/gaps-detectedissue02"
-                },
+                "reference": {"reference": "DetectedIssue/gaps-detectedissue02"},
                 "description": "GIC DetectedIssue02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps DetectedIssue03",
-                "reference": {
-                    "reference": "DetectedIssue/gaps-detectedissue03"
-                },
+                "reference": {"reference": "DetectedIssue/gaps-detectedissue03"},
                 "description": "GIC DetectedIssue03 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps DetectedIssue04",
-                "reference": {
-                    "reference": "DetectedIssue/gaps-detectedissue04"
-                },
+                "reference": {"reference": "DetectedIssue/gaps-detectedissue04"},
                 "description": "GIC DetectedIssue04 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps DetectedIssue05",
-                "reference": {
-                    "reference": "DetectedIssue/gaps-detectedissue05"
-                },
+                "reference": {"reference": "DetectedIssue/gaps-detectedissue05"},
                 "description": "GIC DetectedIssue05 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Group01 subject",
-                "reference": {
-                    "reference": "Group/gaps-subject-group01"
-                },
+                "reference": {"reference": "Group/gaps-subject-group01"},
                 "description": "GIC Group01 subject example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Bundle Open Individual MeasureReports",
-                "reference": {
-                    "reference": "Bundle/single-gaps-open-indv-report01"
-                },
+                "reference": {"reference": "Bundle/single-gaps-open-indv-report01"},
                 "description": "GIC Bundle Open Individual MeasureReports example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Bundle Closed Individual MeasureReport01",
-                "reference": {
-                    "reference": "Bundle/single-gaps-closed-indv-report01"
-                },
+                "reference": {"reference": "Bundle/single-gaps-closed-indv-report01"},
                 "description": "GIC Bundle Closed Individual MeasureReport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Bundle Closed Individual MeasureReport02",
-                "reference": {
-                    "reference": "Bundle/single-gaps-closed-indv-report02"
-                },
+                "reference": {"reference": "Bundle/single-gaps-closed-indv-report02"},
                 "description": "GIC Bundle Closed Individual MeasureReport02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Parameters Open Individual MeasureReports",
-                "reference": {
-                    "reference": "Parameters/single-gaps-open-indv-report01"
-                },
+                "reference": {"reference": "Parameters/single-gaps-open-indv-report01"},
                 "description": "GIC Parameters Open Individual MeasureReports example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Parameters Closed Individual MeasureReport01",
-                "reference": {
-                    "reference": "Parameters/single-gaps-closed-indv-report01"
-                },
+                "reference": {"reference": "Parameters/single-gaps-closed-indv-report01"},
                 "description": "GIC Parameters Closed Individual MeasureReport01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Parameters Closed Individual MeasureReport02",
-                "reference": {
-                    "reference": "Parameters/single-gaps-closed-indv-report02"
-                },
+                "reference": {"reference": "Parameters/single-gaps-closed-indv-report02"},
                 "description": "GIC Parameters Closed Individual MeasureReport02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Multiple Parameters Individual MeasureReports01",
-                "reference": {
-                    "reference": "Parameters/multiple-gaps-indv-report01"
-                },
+                "reference": {"reference": "Parameters/multiple-gaps-indv-report01"},
                 "description": "GIC Gaps Multiple Parameters Individual MeasureReports01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Multiple Parameters Individual MeasureReports02",
-                "reference": {
-                    "reference": "Parameters/multiple-gaps-indv-report02"
-                },
+                "reference": {"reference": "Parameters/multiple-gaps-indv-report02"},
                 "description": "GIC Gaps Multiple Parameters Individual MeasureReports02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Gaps Non-Document Gaps In Care Report",
-                "reference": {
-                    "reference": "Bundle/non-document-gaps-in-care"
-                },
+                "reference": {"reference": "Bundle/non-document-gaps-in-care"},
                 "description": "GIC Gaps Illustrating DetectedIssue-only Approach"
             },
             {
                 "exampleBoolean": true,
                 "name": "Library Colorectal Cancer Screening (EXM130)",
-                "reference": {
-                    "reference": "Library/library-exm130-example"
-                },
+                "reference": {"reference": "Library/library-exm130-example"},
                 "description": "Library Colorectal Cancer Screening (EXM130) example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Library Cervical Cancer Screening (EXM124)",
-                "reference": {
-                    "reference": "Library/library-exm124-example"
-                },
+                "reference": {"reference": "Library/library-exm124-example"},
                 "description": "Library Cervical Cancer Screening (EXM124) example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Library Venous Thromboembolism Prophylaxis (EXM108)",
-                "reference": {
-                    "reference": "Library/library-exm108-example"
-                },
+                "reference": {"reference": "Library/library-exm108-example"},
                 "description": "Library Venous Thromboembolism Prophylaxis (EXM108) example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Patient01",
-                "reference": {
-                    "reference": "Patient/patient01"
-                },
+                "reference": {"reference": "Patient/patient01"},
                 "description": "DEQM Patient01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Encounter nhsn-iip-en101",
-                "reference": {
-                    "reference": "Encounter/nhsn-iip-en101"
-                },
+                "reference": {"reference": "Encounter/nhsn-iip-en101"},
                 "description": "Encounter example"
             },
             {
                 "exampleBoolean": true,
                 "name": "MedicationRequest nhsn-iip-add101-10",
-                "reference": {
-                    "reference": "MedicationRequest/nhsn-iip-add101-10"
-                },
+                "reference": {"reference": "MedicationRequest/nhsn-iip-add101-10"},
                 "description": "MedicationRequest example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Location nhsn-iip-loc101",
-                "reference": {
-                    "reference": "Location/nhsn-iip-loc101"
-                },
+                "reference": {"reference": "Location/nhsn-iip-loc101"},
                 "description": "Location example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Patient nhsn-iip-ip101",
-                "reference": {
-                    "reference": "Patient/nhsn-iip-ip101"
-                },
+                "reference": {"reference": "Patient/nhsn-iip-ip101"},
                 "description": "Patient example"
             },
             {
                 "exampleBoolean": true,
                 "name": "MedicationRequest nhsn-iip-add101",
-                "reference": {
-                    "reference": "MedicationRequest/nhsn-iip-add101"
-                },
+                "reference": {"reference": "MedicationRequest/nhsn-iip-add101"},
                 "description": "MedicationRequest example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Condition nhsn-iip-con101",
-                "reference": {
-                    "reference": "Condition/nhsn-iip-con101"
-                },
+                "reference": {"reference": "Condition/nhsn-iip-con101"},
                 "description": "Condition example"
             },
             {
                 "exampleBoolean": true,
                 "name": "Guidance Response Example",
-                "reference": {
-                    "reference": "GuidanceResponse/guidanceresponse01"
-                },
+                "reference": {"reference": "GuidanceResponse/guidanceresponse01"},
                 "description": "Guidance Response example"
             },
             {
                 "exampleBoolean": true,
                 "name": "DetailedGuidanceResponse01",
-                "reference": {
-                    "reference": "GuidanceResponse/detailedguidanceresponse01"
-                },
+                "reference": {"reference": "GuidanceResponse/detailedguidanceresponse01"},
                 "description": "DEQM DetailedGuidanceResponse01 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "DetailedGuidanceResponse02",
-                "reference": {
-                    "reference": "GuidanceResponse/detailedguidanceresponse02"
-                },
+                "reference": {"reference": "GuidanceResponse/detailedguidanceresponse02"},
                 "description": "DEQM DetailedGuidanceResponse02 example"
             },
             {
                 "exampleBoolean": true,
                 "name": "list2",
-                "reference": {
-                    "reference": "List/list2"
-                },
+                "reference": {"reference": "List/list2"},
                 "description": "DEQM Individual MeasureReport List example"
             },
             {
                 "exampleBoolean": true,
                 "name": "MeasureReport-PI-example",
-                "reference": {
-                    "reference": "MeasureReport/MeasureReport-PI-example"
-                },
+                "reference": {"reference": "MeasureReport/MeasureReport-PI-example"},
                 "description": "DEQM MeasureReport Promoting Interoperability (PI) example"
             },
             {
                 "exampleBoolean": true,
                 "name": "EXMPromotingInteroperabilityMeasure",
-                "reference": {
-                    "reference": "Measure/measure-pi-example"
-                },
+                "reference": {"reference": "Measure/measure-pi-example"},
                 "description": "DEQM Promoting Interoperability (PI) Measure example"
             },
             {
                 "exampleBoolean": true,
                 "name": "MeasureReport 01 Patch Mult",
-                "reference": {
-                    "reference": "Parameters/measurereport01-patch-mult"
-                },
+                "reference": {"reference": "Parameters/measurereport01-patch-mult"},
                 "description": "Parameters: PATCH example for sending Condition Category Remark with multiple value."
             },
             {
                 "exampleBoolean": true,
                 "name": "MeasureReport 01 Patch",
-                "reference": {
-                    "reference": "Parameters/measurereport01-patch"
-                },
+                "reference": {"reference": "Parameters/measurereport01-patch"},
                 "description": "Parameters: PATCH example for sending Condition Category Remark."
             },
+             {
+                "exampleBoolean": true,
+                "name": "Indv MeasureReport - Patient-level linear",
+                "reference": {"reference": "MeasureReport/indv-measurereport-patient-level-linear"},
+                "description": "MeasureReport example for an individual Preventive Care and Wellness (Patient-level linear) measure."
+            },
             {
-                "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-measureScoring"
-                }
+                "exampleBoolean": true,
+                "name": "Indv MeasureReport - Weighted Composite",
+                "reference": {"reference": "MeasureReport/indv-measurereport-weighted-composite"},
+                "description": "MeasureReport example for an individual a Preventive Care and Wellness (Component-level weighted) measure."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Summ MeasureReport - Patient-level linear",
+                "reference": {"reference": "MeasureReport/summary-measurereport-patient-level-linear"},
+                "description": "MeasureReport example for a summary Preventive Care and Wellness (Patient-level linear) measure."
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Summ MeasureReport - Weighted Composite",
+                "reference": {"reference": "MeasureReport/summary-measurereport-weighted-composite"},
+                "description": "MeasureReport example for a Preventive Care and Wellness (Component-level weighted) measure.."
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "CapabilityStatement/producer-server"
-                }
+                "reference": {"reference": "StructureDefinition/extension-measureScoring"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-alternateScoreType"
-                }
+                "reference": {"reference": "CapabilityStatement/producer-server"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-reporterGroup"
-                }
+                "reference": {"reference": "StructureDefinition/extension-alternateScoreType"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "CapabilityStatement/consumer-server"
-                }
+                "reference": {"reference": "StructureDefinition/extension-reporterGroup"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/summary-measurereport-deqm"
-                }
+                "reference": {"reference": "CapabilityStatement/consumer-server"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/indv-measurereport-deqm"
-                }
-            },
-            {
-              "exampleBoolean": false,
-              "name": "Measure Report Category Search Parameter",
-              "reference": {
-                  "reference": "SearchParameter/measurereport-category"
-              }
+                "reference": {"reference": "StructureDefinition/summary-measurereport-deqm"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "CapabilityStatement/receiver-server"
-                }
+                "reference": {"reference": "StructureDefinition/indv-measurereport-deqm"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/datax-measurereport-deqm"
-                }
+                "name": "Measure Report Category Search Parameter",
+                "reference": {"reference": "SearchParameter/measurereport-category"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "CodeSystem/update-type"
-                }
+                "reference": {"reference": "CapabilityStatement/receiver-server"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-reportingVendor"
-                }
+                "reference": {"reference": "StructureDefinition/datax-measurereport-deqm"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "ValueSet/update-type"
-                }
+                "reference": {"reference": "CodeSystem/update-type"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-careGapRemark"
-                }
+                "reference": {"reference": "StructureDefinition/extension-reportingVendor"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-certificationIdentifier"
-                }
+                "reference": {"reference": "ValueSet/update-type"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-criteriaReference"
-                }
+                "reference": {"reference": "StructureDefinition/extension-careGapRemark"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-submitDataUpdateType"
-                }
+                "reference": {"reference": "StructureDefinition/extension-certificationIdentifier"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-reportingProgram"
-                }
+                "reference": {"reference": "StructureDefinition/extension-criteriaReference"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "CapabilityStatement/reporter-client"
-                }
+                "reference": {"reference": "StructureDefinition/extension-submitDataUpdateType"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "CapabilityStatement/producer-client"
-                }
+                "reference": {"reference": "StructureDefinition/extension-reportingProgram"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "CapabilityStatement/consumer-client"
-                }
+                "reference": {"reference": "CapabilityStatement/reporter-client"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-dataLocation"
-                }
+                "reference": {"reference": "CapabilityStatement/producer-client"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/subjectlist-measurereport-deqm"
-                }
+                "reference": {"reference": "CapabilityStatement/consumer-client"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {
-                    "reference": "StructureDefinition/extension-calculatedDate"
-                }
+                "reference": {"reference": "StructureDefinition/extension-dataLocation"}
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "StructureDefinition/subjectlist-measurereport-deqm"}
+            },
+            {
+                "exampleBoolean": false,
+                "reference": {"reference": "StructureDefinition/extension-calculatedDate"}
             }
         ],
         "page": {
@@ -1364,9 +1121,7 @@
             "title": "Home"
         },
         "grouping": [
-            {
-                "name": "base"
-            }
+            {"name": "base"}
         ]
     },
     "id": "hl7.fhir.us.davinci-deqm"
