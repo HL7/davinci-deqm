@@ -41,7 +41,7 @@
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "rest": [
         {
-            "documentation": "Da Vinci DEQM Producer Server **SHALL**\n\n1. Support the following  transactions defined in the *Framework* Section of  this  Implementation Guide:\n\n   - Individual Reporting\n   - Summary Reporting\n1. Declare a CapabilityStatement identifying the list of supported profiles and operations.\n1. Implement the FHIR RESTful API for operations including returning the appropriate response classes as described in the FHIR specification for [Extended Operations on the RESTful API ](http://hl7.org/fhir/R4/operations.html).\n1. Support both xml and json resource formats for all interactions.\n",
+            "documentation": "Da Vinci DEQM Receiver Server **SHALL**\n\n1. Support the following  transactions defined in the *Framework* Section of  this  Implementation Guide:\n\n   - Individual Reporting\n   - Summary Reporting\n1. Declare a CapabilityStatement identifying the list of supported profiles and operations.\n1. Implement the FHIR RESTful API for operations including returning the appropriate response classes as described in the FHIR specification for [Extended Operations on the RESTful API ](http://hl7.org/fhir/R4/operations.html).\n1. Support both xml and json resource formats for all interactions.\n",
             "interaction": [
                 {
                     "extension": [
