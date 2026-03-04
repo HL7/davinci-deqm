@@ -60,6 +60,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - $evaluate should indicate exclusive use of subject or subjectGroup ([FHIR-52910](https://jira.hl7.org/browse/FHIR-52910))
    - Correct return value description in $evaluate ([FHIR-51238](https://jira.hl7.org/browse/FHIR-51238))
    - Simplify Measure/$evaluate ([FHIR-51856](https://jira.hl7.org/browse/FHIR-51856))
+   - Align $evaluate with changes made in base FHIR R6 ([FHIR-51067](https://jira.hl7.org/browse/FHIR-51067))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

@@ -67,7 +67,32 @@
         <max value="1"/>
         <documentation value="The type of measure report: `individual`, `subject-list`, or `summary`. If not specified, a default value of `summary` will be used if the subject parameter is supplied and is a `Group` resource; a default value of `individual` will be used if the subject parameter is supplied and is not a `Group` resource; otherwise, a default value of `summary` will be used. NOTE: Implementations should support the use of `subject` for `individual` and `population` for `summary` for backwards compatibility with existing implementations."/>
         <type value="code"/>
-    </parameter>    
+    </parameter> 
+    <parameter> 
+        <name value="reporterResource"/> 
+        <use value="in"/> 
+        <min value="0"/> 
+        <max value="1"/> 
+        <documentation value="The provider for which the report will be run, provided as an Organization resource.
+            This is intended to support the use case in which the organization information
+            is not on the server performing the evaluation, for example an [ad-hoc group of
+            practitioners](clinicalreasoning-quality-reporting.html#ad-hoc-organizations) that
+            are part of a provider group. This parameter is reflected in the reporter element
+            of the resulting MeasureReport(s). This parameter cannot be used with the reporter
+            parameter."/> 
+        <type value="string"/> 
+        <searchType value="reference"/> 
+    </parameter> 
+    <parameter> 
+        <name value="location"/> 
+        <use value="in"/> 
+        <min value="0"/> 
+        <max value="*"/> 
+        <documentation value="The location(s) for which the report will be run. This parameter is reflected in
+            the location element of the resulting MeasureReport(s)."/> 
+        <type value="string"/> 
+        <searchType value="reference"/> 
+    </parameter> 
     <parameter>
         <name value="subject"/>
         <use value="in"/>
@@ -85,7 +110,6 @@
         <documentation value="Subjects for which the measure will be evaluated, provided as a Group resource. Subjects provided in this parameter SHALL match the subjectType of the measure being evaluated. (e.g. if the Measure.group.subjectType is Patient, the subject SHALL be a reference to a Patient or a Group of Patients). This parameter cannot be used with the subject parameter. If no subject or subjectGroup is provided, what subjects are evaluated is up to the server. "/>
         <type value="Group"/>
     </parameter>
-    
     <parameter>
         <name value="parameters"/>
         <use value="in"/>
@@ -93,15 +117,6 @@
         <max value="1"/>
         <documentation value="Any input parameters for the Measure evaluation. If the measure uses CQL, the parameter types are mapped to CQL as specified in the Parameters and Data Requirements section of the Using CQL with FHIR Implementation Guide. Any parameters defined in this input will be bound by name to parameters defined in the logic library referenced from library element of the Measure. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL."/>
         <type value="Parameters"/>
-    </parameter>
-    <parameter>
-        <name value="practitioner"/>
-        <use value="in"/>
-        <min value="0"/>
-        <max value="1"/> 
-        <documentation value="Practitioner (references [QICore Practitioner](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner)) for which the measure will be evaluated. If specified, the measure will be evaluated only for subjects that have a primary relationship to the identified practitioner"/>
-        <type value="string"/>
-        <searchType value="reference"/>
     </parameter>
     <parameter>
         <name value="lastReceivedOn"/>
@@ -120,7 +135,168 @@
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
-    
+    <parameter> 
+        <name value="stratifier"/> 
+        <use value="in"/> 
+        <min value="0"/> 
+        <max value="*"/> 
+        <documentation value="Additional stratifier criteria for the measure. The resulting MeasureReport will
+            contain this additional stratifier information as well as any stratifiers defined
+            in the Measure being reported."/> 
+        <part> 
+            <name value="measureUrl"/> 
+            <use value="in"/> 
+            <min value="0"/> 
+            <max value="*"/> 
+            <documentation value="If the evaluate operation is for multiple measures, this parameter may be used
+                to specify which measures the additional stratifier should be reported on. If not
+                specified, the stratifier will be reported on all the measures. Note that if this
+                results in a stratifier definition that cannot be interpreted correctly for the
+                measure being reported, the behavior is at server discretion; it may throw an error,
+                or simply ignore the additional stratifier definition."/> 
+            <type value="canonical"/> 
+        </part> 
+        <part> 
+            <name value="groupId"/> 
+            <use value="in"/> 
+            <min value="0"/> 
+            <max value="*"/> 
+            <documentation value="If the measure being evaluated has multiple groups, this parameter may be used
+                to specify which groups the additional stratifier should be reported on. If not
+                specified, the stratifier will be reported on all groups in the measure being reported.
+                Note that if this results in a stratifier definition that cannot be interpreted
+                correctly for the measure group being reported, the behavior is at server discretion;
+                it may throw an error, or simply ignore the additional stratifier definition."/> 
+            <type value="string"/> 
+        </part> 
+        <part> 
+            <name value="component"/> 
+            <use value="in"/> 
+            <min value="1"/> 
+            <max value="*"/> 
+            <documentation value="One or more components of the stratifier definition. Additional stratifiers are
+                reported in the MeasureReport in the same way as stratifiers defined in the Measure."/> 
+            <part> 
+                <name value="code"/> 
+                <use value="in"/> 
+                <min value="0"/> 
+                <max value="1"/> 
+                <documentation value="Meaning of the stratifier component."/> 
+                <type value="code"/> 
+                <binding> 
+                    <strength value="example"/> 
+                    <valueSet value="http://hl7.org/fhir/ValueSet/measure-stratifier-example"/> 
+                </binding> 
+            </part> 
+            <part> 
+                <name value="description"/> 
+                <use value="in"/> 
+                <min value="0"/> 
+                <max value="1"/> 
+                <documentation value="Human readable description of the stratifier component"/> 
+                <type value="markdown"/> 
+            </part> 
+            <part> 
+                <name value="criteria"/> 
+                <use value="in"/> 
+                <min value="1"/> 
+                <max value="1"/> 
+                <documentation value="An expression that returns the value of this component of the stratifier for a
+                    member of the population. This is typically the name of an expression defined within
+                    a referenced library, but it may also be a path to a stratifier element, evaluated
+                    from the perspective of the measure subject. If this is a non-subject-based measure,
+                    the expression may be a reference to a function that takes an argument of the type
+                    of the measure basis, allowing the stratifier value to be determined for each member
+                    of the population."/> 
+                <type value="Expression"/> 
+            </part> 
+            <part> 
+                <name value="valueSet"/> 
+                <use value="in"/> 
+                <min value="0"/> 
+                <max value="1"/> 
+                <documentation value="A value set defining possible stratifier values. If both expression and valueset
+                    are specified, they SHALL be consistent (i.e. the expression SHALL evaluate to
+                    a code that is a member of the specified valueset)."/> 
+                <type value="canonical"/> 
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/ValueSet"/> 
+            </part> 
+            <part> 
+                <name value="unit"/> 
+                <use value="in"/> 
+                <min value="0"/> 
+                <max value="1"/> 
+                <documentation value="Indicates what units, if any, stratifier values are expected to be expressed in.
+                    This element SHOULD be specified in UCUM units or calendar units. This information
+                    SHOULD be provided if it cannot be inferred from the stsratifier expression directly."/> 
+                <type value="string"/> 
+            </part> 
+        </part> 
+    </parameter>
+    <parameter> 
+        <name value="supplementalData"/> 
+        <use value="in"/> 
+        <min value="0"/> 
+        <max value="*"/> 
+        <documentation value="What additional supplemental data should be reported with the measure. This additional
+            data is specified in the same was as supplemental data in the Measure resource,
+            and is reported in the same way in the MeasureReport."/> 
+        <part> 
+            <name value="measureUrl"/> 
+            <use value="in"/> 
+            <min value="0"/> 
+            <max value="*"/> 
+            <documentation value="If the evaluate operation is for multiple measures, this parameter may be used
+                to specify which measures the additional supplemental data should be reported on.
+                If not specified, the stratifier will be reported on all the measures. Note that
+                if this results in a stratifier definition that cannot be interpreted correctly
+                for the measure being reported, the behavior is at server discretion; it may throw
+                an error, or simply ignore the additional stratifier definition."/> 
+            <type value="canonical"/> 
+        </part> 
+        <part> 
+            <name value="code"/> 
+            <use value="in"/> 
+            <min value="0"/> 
+            <max value="1"/> 
+            <documentation value="Meaning of the supplemental data."/> 
+            <type value="CodeableConcept"/> 
+            <binding> 
+                <strength value="example"/> 
+                <valueSet value="http://hl7.org/fhir/ValueSet/measure-supplemental-data-example"/> 
+            </binding> 
+        </part> 
+        <part> 
+            <name value="usage"/> 
+            <use value="in"/> 
+            <min value="0"/> 
+            <max value="*"/> 
+            <documentation value="supplemental-data | risk-adjustment | factor"/> 
+            <type value="CodeableConcept"/> 
+            <binding> 
+                <strength value="extensible"/> 
+                <valueSet value="http://terminology.hl7.org/ValueSet/measure-data-usage"/> 
+            </binding> 
+        </part> 
+        <part> 
+            <name value="description"/> 
+            <use value="in"/> 
+            <min value="0"/> 
+            <max value="1"/> 
+            <documentation value="Human readable description of this supplemental data element"/> 
+            <type value="markdown"/> 
+        </part> 
+        <part> 
+            <name value="criteria"/> 
+            <use value="in"/> 
+            <min value="1"/> 
+            <max value="1"/> 
+            <documentation value="Expression describing the additional data to be reported. This may be the name
+                of an expression in a library, or it may be a path to a specific data element,
+                reachable from the subject being evaluated."/> 
+            <type value="Expression"/> 
+        </part> 
+    </parameter> 
     <parameter>
         <name value="return"/>
         <use value="out"/>

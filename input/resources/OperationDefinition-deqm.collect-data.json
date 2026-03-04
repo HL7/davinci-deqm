@@ -70,6 +70,33 @@
             "type": "Group"
         },
         {
+            "name": "reporter",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The provider for which the data-of-interest will be collected. This may be a reference to a Practitioner, PractitionerRole, or Organization. If specified, systems MAY use this information to determine subjects for which the data-of-interest will be calculated, but how subjects are determined is implementation-specific. This parameter is reflected in the reporter element of the resulting MeasureReport(s). This parameter cannot be used with the reporterResource parameter.",
+            "type": "string",
+            "searchType": "reference"
+        },
+        {
+            "name": "reporterResource",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The provider for which the data-of-interest will be collected, provided as an Organization resource. This is intended to support the use case in which the organization information is not on the server performing the evaluation, for example an [ad-hoc group of practitioners](clinicalreasoning-quality-reporting.html#ad-hoc-organizations) that are part of a provider group. This parameter is reflected in the reporter element of the resulting MeasureReport(s). This parameter cannot be used with the reporter parameter.",
+            "type": "string",
+            "searchType": "reference"
+        },
+        {
+            "name": "location",
+            "use": "in",
+            "min": 0,
+            "max": "*",
+            "documentation": "The location(s) for which the data-of-interest will be collected. This parameter is reflected in the location element of the resulting MeasureReport(s).",
+            "type": "string",
+            "searchType": "reference"
+        },
+        {
             "name": "practitioner",
             "use": "in",
             "min": 0,
@@ -98,13 +125,23 @@
             ]
         },
         {
-            "name": "organization",
+            "name": "parameters",
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "Organization (references [QICore Organization](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization)) for which data-of-interest for the given measure will be collected. Either 'organization' or 'organizationResource' SHALL be provided, but not both.",
-            "type": "string",
-            "searchType": "reference"
+            "documentation": "Any input parameters for the evaluation. Parameters defined in this input will be made available by name to the CQL expression. Parameter types are mapped to CQL as specified in the [Using CQL with FHIR](https://hl7.org/fhir/uv/cql/) implementation guide. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL.",
+            "type": "Parameters"
+        },
+        {
+            "name": "manifest",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "Specifies an asset-collection library that provides dependency version resolution and expansion rules for the operation. See the version manifest discussion in the [Canonical Resource Management Infrastructure IG](http://hl7.org/fhir/uv/crmi/version-manifest.html) for a complete description of how manifest values are used to provide defaults for dependency version resolution and expansion parameters. Parameters specified directly in the operation override behaviors specified by the manifest parameter. In general, if this parameter is supplied, it is expected to be used in nested operation calls. For example, in evaluating a measure, if the expansion of a value set is required, this parameter SHALL be supplied to that expansion.",
+            "type": "canonical",
+            "targetProfile": [
+                "http://hl7.org/fhir/StructureDefinition/Library"
+            ]
         },
         {
             "name": "validateResources",
