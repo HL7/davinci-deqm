@@ -112,6 +112,7 @@ A measure defines calculation rates using the group elements, and it can identif
 | supplementalData.id | Only in measure report if linkId is not present |
 | supplementalData.code | Only in a contained Observation |
 
+All linkId and code elements in the measure identified in the table above SHALL be in the measure report in the corresponding location. All id elements SHOULD be in the measure report. There are two exceptions: (1) supplementalData.id SHALL be in the measure report if and only if the supplementalData.linkId is not present, and (2) supplementalData.code SHALL be in contained Observation resources on the code element that report supplemental data.
 
 If the measure does not contain all of these elements, then they would not be reflected in the measure report. If the measure does not have group.stratifier elements, then the measure report would not reflect any elements any group.stratifier.stratum elements.
 
