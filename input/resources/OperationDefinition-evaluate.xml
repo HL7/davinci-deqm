@@ -125,7 +125,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Subject for which the measure will be evaluated. If not specified, the measure will be evaluated for all subjects that meet the requirements of the measure. If specified, the measure will only be evaluated for the referenced subject(s)"/>
+        <documentation value="Subject(s) for which the measure will be calculated. Subjects provided in this parameter SHALL match the subjectType of the measure being evaluated (e.g. if the Measure.group.subjectType is Patient, the subject SHALL be a reference to a Patient or a Group of Patients). This parameter cannot be used with the subjectGroup parameter. If no subject or subjectGroup is provided, what subjects are evaluated is up to the server. "/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
@@ -134,7 +134,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Subject for which the measure will be evaluated provided as a Group resource."/>
+        <documentation value="Subjects for which the measure will be evaluated, provided as a Group resource. Subjects provided in this parameter SHALL match the subjectType of the measure being evaluated. (e.g. if the Measure.group.subjectType is Patient, the subject SHALL be a reference to a Patient or a Group of Patients). This parameter cannot be used with the subject parameter. If no subject or subjectGroup is provided, what subjects are evaluated is up to the server. "/>
         <type value="Group"/>
     </parameter>
     
