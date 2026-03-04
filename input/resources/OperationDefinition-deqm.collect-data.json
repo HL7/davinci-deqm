@@ -146,6 +146,14 @@
           "documentation": "Indicates whether data collected conform to the appropriate profiles as specified by the measure.",
           "type": "boolean"
        },
+       {
+        "name": "dataEndpoint",
+        "use": "in",
+        "min": 0,
+        "max": "1",
+        "documentation": "An endpoint to use to collect the data of interest for the specified measures. If provided, this endpoint is used instead of data available on the server. This is useful when a provider system wants to submit the data of interest for a measure or set of measures, but wants that data gathered from its public endpoint, rather than determining the data requirements of the measures directly. Note that when this parameter is provided, the bundles resulting from the operation do not contain the referenced data, only the MeasureReport resources, since the requesting system already has the data in the provided endpoint.",
+        "type": "Endpoint"
+       },
      {
           "name": "return",
           "use": "out",
