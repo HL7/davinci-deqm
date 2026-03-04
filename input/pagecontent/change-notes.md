@@ -56,6 +56,9 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Receiver Server Capability - Bundle Transaction support ([FHIR-51401](https://jira.hl7.org/browse/FHIR-51401))
    - support for Measure linkId ([FHIR-50297](https://jira.hl7.org/browse/FHIR-50297))
    - update section "Group, Stratifier, and Population Codes and Ids" ([FHIR-53109](https://jira.hl7.org/browse/FHIR-53109))
+   - ReportType parameter in $evaluate should align with R6 operation 9([FHIR-51857](https://jira.hl7.org/browse/FHIR-51857))
+   - $evaluate should indicate exclusive use of subject or subjectGroup ([FHIR-52910](https://jira.hl7.org/browse/FHIR-52910))
+   - Correct return value description in $evaluate ([FHIR-51238](https://jira.hl7.org/browse/FHIR-51238))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

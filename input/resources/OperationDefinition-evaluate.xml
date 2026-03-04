@@ -178,7 +178,7 @@
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more Bundles. These Bundles SHALL contain 1..* DEQM Individual MeasureReport, or DEQM Summary MeasureReport, or DEQM Subject List MeasureReport, and subsequent entries in the bundle are data-of-interest. Note that the result of the $evaluate operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*."/>
+        <documentation value="The result of this operation is a Bundle for each input subject. These Bundles SHALL contain 1..* DEQM MeasureReport resources conforming to the appropriate MeasureReport profile for the type of report, one for each measure evaluated by the operation. Subsequent entries in the bundle are evaluated resources referenced by the MeasureReport(s). See the [guidance on Bundle structure](https://hl7.org/fhir/us/davinci-deqm/guidance.html#deqm-operation-bundles-organized-by-subject) for discussion about the Bundle content and organization. Note that even though there is a single parameter named return of type Bundle, it is a multi-cardinality parameter, and so will still be returned using a Parameters resource, as described in the [general operations framework](https://hl7.org/fhir/R4/operations.html#response)."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>
