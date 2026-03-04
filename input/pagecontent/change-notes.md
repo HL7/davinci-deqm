@@ -54,6 +54,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Updated Care Gap Remark to align with Condition Category Remark ([FHIR-50210](https://jira.hl7.org/browse/FHIR-50210)) Applied ([here](StructureDefinition-extension-careGapRemark.html))
    - Add Example(s) for Composite Measure Report ([FHIR-55408](https://jira.hl7.org/browse/FHIR-55408))
    - Receiver Server Capability - Bundle Transaction support ([FHIR-51401](https://jira.hl7.org/browse/FHIR-51401))
+   - support for Measure linkId ([FHIR-50297](https://jira.hl7.org/browse/FHIR-50297))
 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 

@@ -67,6 +67,12 @@
                 },
                 "group": [
                     {
+                          "extension": [
+                     {
+                        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                        "valueString": "mpr-group"
+                     }
+                  ],
                         "code": {
                             "coding": [
                                 {
@@ -79,6 +85,12 @@
                         },
                         "population": [
                             {
+                                  "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "initial-population"
+                           }
+                        ],
                                 "code": {
                                     "coding": [
                                         {
@@ -92,6 +104,12 @@
                                 "count": 1
                             },
                             {
+                                  "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "numerator"
+                           }
+                        ],
                                 "code": {
                                     "coding": [
                                         {
@@ -105,6 +123,12 @@
                                 "count": 1
                             },
                             {
+                                  "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "denominator"
+                           }
+                        ],
                                 "code": {
                                     "coding": [
                                         {

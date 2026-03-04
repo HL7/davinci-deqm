@@ -17,6 +17,10 @@
     "group": [
         {
             "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                    "valueString": "group-1"
+                },
                 {
                     "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
                     "valueCodeableConcept": {
@@ -42,6 +46,12 @@
             ],
             "population": [
                 {
+                      "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "initial-population"
+                        }
+                    ],
                     "code": {
                         "coding": [
                             {
@@ -54,6 +64,12 @@
                     "count": 2
                 },
                 {
+                      "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "numerator"
+                        }
+                    ],
                     "code": {
                         "coding": [
                             {
@@ -66,6 +82,12 @@
                     "count": 2
                 },
                 {
+                      "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "denominator"
+                        }
+                    ],
                     "code": {
                         "coding": [
                             {
