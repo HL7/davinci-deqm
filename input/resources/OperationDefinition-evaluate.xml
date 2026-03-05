@@ -14,7 +14,7 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The evaluate operation is used to calculate an eMeasure and obtain the results."/>
+    <description value="The evaluate operation is used to calculate an eMeasure and obtain the results. &#10;&#10;It is often the case that the operation should not be performed from the server's timezone, rather the client's timezone is typically a more correct option. Note that even this isn't always correct because the evaluation may be running over data from multiple sources in different timezones. Providing guidance to the measure evaluator with the timezone header can facilitate consistent behavior."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
@@ -126,15 +126,36 @@
         <documentation value="The date the results of this measure were last received. This parameter is only valid for patient-level reports and is used to indicate when the last time a result for this patient was received. This information can be used to limit the set of resources returned for a patient-level report"/>
         <type value="dateTime"/>
     </parameter>
-    <parameter>
-        <name value="reporter"/>
-        <use value="in"/>
-        <min value="0"/>
-        <max value="1"/>
-        <documentation value="A reference to an Organization that will be populated in the MeasureReport.reporter"/>
-        <type value="string"/>
-        <searchType value="reference"/>
-    </parameter>
+    <parameter> 
+        <name value="reporter"/> 
+        <use value="in"/> 
+        <min value="0"/> 
+        <max value="1"/> 
+        <documentation value="The provider for which the report will be run. This may be a reference to a Practitioner,
+            PractitionerRole, or Organization. If specified, systems MAY use this information
+            to determine subjects for which the measure will be calculated, but how subjects
+            are determined is implementation-specific. This parameter is reflected in the reporter
+            element of the resulting MeasureReport(s). This parameter cannot be used with the
+            reporterResource parameter."/> 
+        <type value="string"/> 
+        <searchType value="reference"/> 
+    </parameter> 
+    <parameter> 
+        <name value="reporterResource"/> 
+        <use value="in"/> 
+        <min value="0"/> 
+        <max value="1"/> 
+        <documentation value="The provider for which the report will be run, provided as an Organization resource.
+            This is intended to support the use case in which the organization information
+            is not on the server performing the evaluation, for example an [ad-hoc group of
+            practitioners](clinicalreasoning-quality-reporting.html#ad-hoc-organizations) that
+            are part of a provider group. This parameter is reflected in the reporter element
+            of the resulting MeasureReport(s). This parameter cannot be used with the reporter
+            parameter."/> 
+        <allowedType value="Practitioner"/>
+        <allowedType value="PractitionerRole"/>
+        <allowedType value="Organization"/>
+    </parameter> 
     <parameter> 
         <name value="stratifier"/> 
         <use value="in"/> 

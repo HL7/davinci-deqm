@@ -40,6 +40,10 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
     -  The MeasureReport profiles in this IG are used to report CQFM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQFM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQFM Measure, including those not utilizing CQL.
 
+### Timezone Support
+
+When evaluating measure logic with $evaluate and $care-gaps, it is often the case that the operation should not be performed with respect to the server's timezone, but rather a timezone specified by the client is typically a more correct option. The [timezone header](https://hl7.org/fhir/http.html#timezones) is available for use in $evaluate and $care-gaps to provide guidance to the measure evaluator about the correct timezone to use. Any number of other methods to specify a timezone could be implemented by measure evaluators, but these would be beyond the scope of this implementation guide. Note that even specifying a single timezone isn't always correct because the evaluation may be running over data from multiple sources in different timezones.
+
 ### DEQM MeasureReport Profiles
 
 The MeasureReport resource is used as an organizer for both the Data Exchange Scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
