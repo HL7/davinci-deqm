@@ -29,13 +29,13 @@
                }
             ],
             "code": {
-               "coding" : [
+               "coding": [
                   {
-                    "system" : "http://www.ama-assn.org/go/cpt",
-                    "code" : "1111F",
-                    "display" : "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
+                     "system": "http://www.ama-assn.org/go/cpt",
+                     "code": "1111F",
+                     "display": "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
                   }
-                ]
+               ]
             },
             "effectiveDateTime": "2018-09-30T14:15:04.424Z",
             "encounter": {
@@ -659,6 +659,12 @@
             ],
             "group": [
                {
+                  "extension": [
+                     {
+                        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                        "valueString": "mpr-group"
+                     }
+                  ],
                   "code": {
                      "coding": [
                         {
@@ -675,6 +681,12 @@
                   "population": [
                      {
                         "id": "initial-population",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "initial-population"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -688,6 +700,12 @@
                      },
                      {
                         "id": "numerator",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "numerator"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -701,6 +719,12 @@
                      },
                      {
                         "id": "denominator",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "denominator"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -766,13 +790,13 @@
                }
             ],
             "code": {
-               "coding" : [
+               "coding": [
                   {
-                    "system" : "http://www.ama-assn.org/go/cpt",
-                    "code" : "1111F",
-                    "display" : "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
+                     "system": "http://www.ama-assn.org/go/cpt",
+                     "code": "1111F",
+                     "display": "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
                   }
-                ]
+               ]
             },
             "effectiveDateTime": "2018-09-30T14:15:04.424Z",
             "encounter": {
@@ -840,6 +864,12 @@
             ],
             "group": [
                {
+                  "extension": [
+                     {
+                        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                        "valueString": "mpr-group"
+                     }
+                  ],
                   "code": {
                      "coding": [
                         {
@@ -856,6 +886,12 @@
                   "population": [
                      {
                         "id": "initial-population",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "initial-population"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -868,6 +904,12 @@
                         "count": 1
                      },
                      {
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "numerator"
+                           }
+                        ],
                         "id": "numerator",
                         "code": {
                            "coding": [
@@ -882,6 +924,12 @@
                      },
                      {
                         "id": "denominator",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "denominator"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -1037,6 +1085,12 @@
             ],
             "group": [
                {
+                  "extension": [
+                     {
+                        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                        "valueString": "mpr-group"
+                     }
+                  ],
                   "code": {
                      "coding": [
                         {
@@ -1053,6 +1107,12 @@
                   "population": [
                      {
                         "id": "initial-population",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "initial-population"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -1066,6 +1126,12 @@
                      },
                      {
                         "id": "numerator",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "numerator"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -1079,6 +1145,12 @@
                      },
                      {
                         "id": "denominator",
+                        "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "denominator"
+                           }
+                        ],
                         "code": {
                            "coding": [
                               {
@@ -1197,13 +1269,13 @@
                }
             ],
             "code": {
-               "coding" : [
+               "coding": [
                   {
-                    "system" : "http://www.ama-assn.org/go/cpt",
-                    "code" : "1111F",
-                    "display" : "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
+                     "system": "http://www.ama-assn.org/go/cpt",
+                     "code": "1111F",
+                     "display": "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
                   }
-                ]
+               ]
             },
             "effectiveDateTime": "2018-09-29T14:15:04.424Z",
             "encounter": {

@@ -9,6 +9,10 @@
 * [Example MeasureReport: Indv Measurereport01](MeasureReport-indv-measurereport01.html)
 * [Example MeasureReport: Subject List MeasureReport01](MeasureReport-subjectlist-measurereport01.html)
 * [Example MeasureReport: Summ Measurereport02](MeasureReport-summ-measurereport02.html)
+* [Example MeasureReport: Indv Patient-level linear](MeasureReport-indv-measurereport-patient-level-linear.html)
+* [Example MeasureReport: Indv Component-level weighted Composite](MeasureReport-indv-measurereport-weighted-composite.html)
+* [Example MeasureReport: Summ Patient-level linear](MeasureReport-summary-measurereport-patient-level-linear.html)
+* [Example MeasureReport: Summ Component-level weighted Composite](MeasureReport-summary-measurereport-weighted-composite.html)
 
 #### Stratification MeasureReports
 * [Example MeasureReport: Indv Measurreport Stratification Example](MeasureReport-indv-measurreport-stratification-example.html)

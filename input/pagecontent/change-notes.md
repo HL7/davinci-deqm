@@ -52,7 +52,17 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - link goes to deprecated extension ([FHIR-46864](https://jira.hl7.org/browse/FHIR-46864.)) Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)), ([here](StructureDefinition-summary-measurereport-deqm.html)), ([here](artifacts.html)) and ([here](profiles.html))
    - supplementalData extension models both value and extension ([FHIR-50091](https://jira.hl7.org/browse/FHIR-50091)) Applied ([here](StructureDefinition-indv-measurereport-deqm.html)), ([here](StructureDefinition-subjectlist-measurereport-deqm.html)), and ([here](StructureDefinition-summary-measurereport-deqm-intro.md))
    - Updated Care Gap Remark to align with Condition Category Remark ([FHIR-50210](https://jira.hl7.org/browse/FHIR-50210)) Applied ([here](StructureDefinition-extension-careGapRemark.html))
-
+   - Add Example(s) for Composite Measure Report ([FHIR-55408](https://jira.hl7.org/browse/FHIR-55408))
+   - Receiver Server Capability - Bundle Transaction support ([FHIR-51401](https://jira.hl7.org/browse/FHIR-51401))
+   - support for Measure linkId ([FHIR-50297](https://jira.hl7.org/browse/FHIR-50297))
+   - update section "Group, Stratifier, and Population Codes and Ids" ([FHIR-53109](https://jira.hl7.org/browse/FHIR-53109))
+   - ReportType parameter in $evaluate should align with R6 operation 9([FHIR-51857](https://jira.hl7.org/browse/FHIR-51857))
+   - $evaluate should indicate exclusive use of subject or subjectGroup ([FHIR-52910](https://jira.hl7.org/browse/FHIR-52910))
+   - Correct return value description in $evaluate ([FHIR-51238](https://jira.hl7.org/browse/FHIR-51238))
+   - Simplify Measure/$evaluate ([FHIR-51856](https://jira.hl7.org/browse/FHIR-51856))
+   - Align $evaluate with changes made in base FHIR R6 ([FHIR-51067](https://jira.hl7.org/browse/FHIR-51067))
+   - Provide guidance on timezone configuration and selection ([FHIR-47749](https://jira.hl7.org/browse/FHIR-47749))
+   - 
 ### Changes and Updates for STU5 Ballot for 2024Sept Version of the DEQM IG.
 
 1. Applied the following trackers:

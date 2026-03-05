@@ -40,6 +40,10 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
     -  The MeasureReport profiles in this IG are used to report CQFM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQFM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQFM Measure, including those not utilizing CQL.
 
+### Timezone Support
+
+When evaluating measure logic with $evaluate and $care-gaps, it is often the case that the operation should not be performed with respect to the server's timezone, but rather a timezone specified by the client is typically a more correct option. The [timezone header](https://hl7.org/fhir/http.html#timezones) is available for use in $evaluate and $care-gaps to provide guidance to the measure evaluator about the correct timezone to use. Any number of other methods to specify a timezone could be implemented by measure evaluators, but these would be beyond the scope of this implementation guide. Note that even specifying a single timezone isn't always correct because the evaluation may be running over data from multiple sources in different timezones.
+
 ### DEQM MeasureReport Profiles
 
 The MeasureReport resource is used as an organizer for both the Data Exchange Scenario and for measure reporting scenario. To meet the different needs in these scenarios, DEQM has created 3 MeasureReport profiles.  Technically the type of profiles can be determined by inspecting the `meta.profile` element if present or the `type` element.
@@ -89,7 +93,32 @@ The DEQM Individual MeasureReport contains all of the data that is relevant to c
 
 #### Group, Stratifier, and Population Codes and Ids
 
-A measure defines one or more populations in one or more groups, with zero or more stratifiers. For each of these, a population count is calculated during measure evaluation with $evaluate. Each of these population counts SHALL be reported in the measure report, and the measure report's groups and populations SHALL be organized and identified in the same manner as in the evaluated measure – the group.id, group.code, stratifier.id, stratifier.code, population.id, and population.code, including any populations within in stratum elements, must match between the measure report and the measure. If the measure does not contain all of these elements, then they would not be reflected in the measure report.
+A measure defines calculation rates using the group elements, and it can identify these groups with several data elements. A DEQM measure report's groups SHALL be organized and identified in the same manner as in the evaluated measure without alteration. The table below shows which measure elements must be present in measure report.
+
+| **Measure Elements** | **DEQM MeasureReport Elements** |
+|:--------------------:|:-------------------------------:|
+| group.linkId | group.linkId |
+| group.id | group.id |
+| group.code | group.code |
+| group.population.linkId | group.population.linkId |
+| group.stratifier.stratum.population.linkId |  |
+| group.population.id | group.population.id |
+| group.stratifier.stratum.population.id |  |
+| group.population.code | group.population.code |
+| group.stratifier.stratum.population.code |  |
+| group.stratifier.linkId | group.stratifier.linkId |
+| group.stratifier.id | group.stratifier.id |
+| group.stratifier.code | group.stratifier.code |
+| group.stratifier.component.linkId | group.stratifier.stratum.component.linkId |
+| group.stratifier.component.id | group.stratifier.stratum.component.id |
+| group.stratifier.component.code | group.stratifier.stratum.component.code |
+| supplementalData.linkId | extension:supplementalData.value[x].extension:criteriaReference.value[x] |
+| supplementalData.id | Only in measure report if linkId is not present |
+| supplementalData.code | Only in a contained Observation |
+
+All linkId and code elements in the measure identified in the table above SHALL be in the measure report in the corresponding location. All id elements SHOULD be in the measure report. There are two exceptions: (1) supplementalData.id SHALL be in the measure report if and only if the supplementalData.linkId is not present, and (2) supplementalData.code SHALL be in contained Observation resources on the code element that report supplemental data.
+
+If the measure does not contain all of these elements, then they would not be reflected in the measure report. If the measure does not have group.stratifier elements, then the measure report would not reflect any elements any group.stratifier.stratum elements.
 
 For example, the below measure population criteria and stratifier would result in the following measure report snippet.
 
