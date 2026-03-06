@@ -140,7 +140,15 @@
         <allowedType value="Practitioner"/>
         <allowedType value="PractitionerRole"/>
         <allowedType value="Organization"/>
-    </parameter> 
+    </parameter>
+    <parameter>
+        <name value="excludeEvaluatedResources"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Indicates that evaluated resources and supplemental data referenced by the MeasureReport(s) should not be included in the resulting bundles. The default for this parameter is false, so that evaluated resources are NOT included. Note that this parameter does not apply to the contained resources that are created by evaluation to communicate the results of stratification or supplemental data counts."/>
+        <type value="boolean"/>
+    </parameter>
     <parameter> 
         <name value="stratifier"/> 
         <use value="in"/> 
