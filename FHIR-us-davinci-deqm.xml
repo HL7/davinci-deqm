@@ -129,6 +129,8 @@
 <artifact id="Group/group01" key="Group-group01" name="Group01"/>
 <artifact id="GuidanceResponse/guidanceresponse01" key="GuidanceResponse-guidanceresponse01" name="Guidance Response Example"/>
 <artifact id="Measure/attestation-boolean-example" key="Measure-attestation-boolean-example" name="Immunization Registry Reporting"/>
+<artifact id="MeasureReport/indv-measurereport-patient-level-linear" key="MeasureReport-indv-measurereport-patient-level-linear" name="Indv MeasureReport - Patient-level linear"/>
+<artifact id="MeasureReport/indv-measurereport-weighted-composite" key="MeasureReport-indv-measurereport-weighted-composite" name="Indv MeasureReport - Weighted Composite"/>
 <artifact id="MeasureReport/indv-measurereport01" key="MeasureReport-indv-measurereport01" name="Indv Measurereport01"/>
 <artifact id="MeasureReport/indv-measurereport02" key="MeasureReport-indv-measurereport02" name="Indv Measurereport02"/>
 <artifact id="MeasureReport/indv-measurereport03" key="MeasureReport-indv-measurereport03" name="Indv Measurereport03"/>
@@ -196,6 +198,8 @@
 <artifact id="MeasureReport/subjectlist-measurereport01" key="MeasureReport-subjectlist-measurereport01" name="Subject List MeasureReport01"/>
 <artifact id="OperationDefinition/submit-data" key="OperationDefinition-submit-data" name="Submit Data"/>
 <artifact deprecated="true" id="MeasureReport/summ-attestation" key="MeasureReport-summ-attestation" name="Summ Attestation"/>
+<artifact id="MeasureReport/summary-measurereport-patient-level-linear" key="MeasureReport-summary-measurereport-patient-level-linear" name="Summ MeasureReport - Patient-level linear"/>
+<artifact id="MeasureReport/summary-measurereport-weighted-composite" key="MeasureReport-summary-measurereport-weighted-composite" name="Summ MeasureReport - Weighted Composite"/>
 <artifact id="MeasureReport/summ-measurereport01" key="MeasureReport-summ-measurereport01" name="Summ Measurereport01"/>
 <artifact id="MeasureReport/summ-measurereport02" key="MeasureReport-summ-measurereport02" name="Summ Measurereport02"/>
 <artifact id="MeasureReport/summ-medicare-stratification-example" key="MeasureReport-summ-medicare-stratification-example" name="Summ Medicare Stratification Example"/>
