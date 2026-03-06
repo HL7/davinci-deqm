@@ -121,7 +121,6 @@
 [following rules]: {{site.data.fhir.path}}references.html#
 [Contained resources]: {{site.data.fhir.path}}references.html#contained
 [Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
-[Reporting Group]: StructureDefinition-extension-reporterGroup.html
 [Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html
 [Not Done Value Set]: https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-notDoneValueSet.html
 [negation patterns in quality measurements]: {{site.data.fhir.cqfm}}/using-cql.html
