@@ -231,9 +231,14 @@
     </element>
     <element id="MeasureReport.subject">
       <path value="MeasureReport.subject"/>
-      <requirements value="This will indicate the measure being reported on. For example,  the cannonical uri location for the MRP measure."/>
+      <short value="What group the report is for."/>
+      <definition value="What group the report is for."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+      </type>
       <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.date">
@@ -245,25 +250,17 @@
     </element>
     <element id="MeasureReport.reporter">
       <path value="MeasureReport.reporter"/>
-      <short value="Organization that generated the MeasureReport"/>
-      <definition value="Organization that generated the MeasureReport."/>
+      <short value="Who is reporting the data. The reporter is the entity fulfilling the reporting requirement."/>
+      <definition value="Who is reporting the data. The reporter is the entity fulfilling the reporting requirement."/>
       <min value="1"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"/>
       </type>
       <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.reporter.extension:group">
-      <path value="MeasureReport.reporter.extension"/>
-      <sliceName value="group"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
-      </type>
     </element>
     <element id="MeasureReport.period">
       <path value="MeasureReport.period"/>
@@ -315,8 +312,7 @@
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <expression value="((%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"
-        />
+        <expression value="((%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
