@@ -13,7 +13,7 @@ The example presented is based on the QDM version of [CMS108v13](https://ecqi.he
 
 |Resource Type|Profile Name|Link to Profile|
 |---|---|---|
-|Condition|QI-Core Condition Problems Health Concerns Profile|[QI-Core Condition Problems Health Concerns]|
+|Condition|QI Core Condition Problems Health Concerns Profile|[QI Core Condition Problems Health Concerns]|
 |Coverage|QI Core Coverage Profile|[QI Core Coverage]|
 |DeviceRequest|QI Core DeviceRequest Profile|[QI Core DeviceRequest]|
 |DeviceUseStatement|QI Core DeviceUseStatement Profile|[QI Core DeviceUseStatement]|
