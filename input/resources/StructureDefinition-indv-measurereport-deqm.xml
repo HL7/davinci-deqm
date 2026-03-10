@@ -37,7 +37,9 @@
         <key value="deqm-2"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required"/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies improvementNotation.exists()"/>
+        <!--  Update for FHIR-51433  -->
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().anyTrue() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).anyTrue() implies improvementNotation.exists()"/>
+<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies improvementNotation.exists()"/>-->
       </constraint>
       <constraint>
         <key value="deqm-3"/>
@@ -49,7 +51,9 @@
         <key value="deqm-5"/>
         <severity value="error"/>
         <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not() implies group.population.count()>=1"/>
+        <!--  Update for FHIR-51433  -->
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not().anyTrue()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not().anyTrue() implies group.population.count()>=1"/>
+<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not() implies group.population.count()>=1"/>-->
       </constraint>
       <mustSupport value="false"/>
     </element>
@@ -321,18 +325,34 @@
         <key value="deqm-4"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio', or 'continuous-variable' then the groupImprovementNotation element is required."/>
-        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+        <!--  Update for FHIR-51433  -->
+        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().anyTrue() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).anyTrue() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
+<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>-->
       </constraint>
       <constraint>
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
+        <!--  Update for FHIR-51433  -->
+        <expression value="((%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
+<!--        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>-->
       </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
       <path value="MeasureReport.group.id"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:linkId">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="linkId"/>
+      <short value="Unique id of the group from the measure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.extension:scoring">
@@ -397,6 +417,18 @@
         <human value="The population must either have a count (integer) or a countQuantity (quantity), but not both."/>
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor count.exists()"/>
       </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.extension:linkId">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="linkId"/>
+      <short value="Unique id for group.population from the measure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.population.extension:countQuantity">
@@ -473,6 +505,18 @@
       </constraint>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.stratifier.extension:linkId">
+      <path value="MeasureReport.group.stratifier.extension"/>
+      <sliceName value="linkId"/>
+      <short value="Unique id for group.stratifier from the measure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.linkId"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.stratifier.extension:description">
       <path value="MeasureReport.group.stratifier.extension"/>
       <sliceName value="description"/>
@@ -496,6 +540,18 @@
       <path value="MeasureReport.group.stratifier.stratum"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.stratifier.stratum.component.extension:linkId">
+      <path value="MeasureReport.group.stratifier.stratum.component.extension"/>
+      <sliceName value="linkId"/>
+      <short value="Unique id for group.stratifier.component from the measure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.component.linkId"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.stratifier.stratum.population">
       <path value="MeasureReport.group.stratifier.stratum.population"/>
       <constraint>
@@ -504,6 +560,18 @@
         <human value="The stratum population must either have a count (integer) or a countQuantity (quantity), but not both."/>
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/measurereport-countQuantity').exists() xor count.exists()"/>
       </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.stratifier.stratum.population.extension:linkId">
+      <path value="MeasureReport.group.stratifier.stratum.population.extension"/>
+      <sliceName value="linkId"/>
+      <short value="Unique id for group.stratifier.population from the measure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.stratifier.stratum.population.extension:countQuantity">

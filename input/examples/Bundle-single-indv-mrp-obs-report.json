@@ -6,7 +6,6 @@
     "meta": {
         "source": "http://example.org/fhir/server"
     },
-
     "entry": [
         {
             "fullUrl": "urn:uuid:a8f9c686-17f1-11ea-a072-4ccc6a181ed3",
@@ -74,6 +73,12 @@
                 },
                 "group": [
                     {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                                "valueString": "mpr-group"
+                            }
+                        ],
                         "code": {
                             "coding": [
                                 {
@@ -86,6 +91,12 @@
                         },
                         "population": [
                             {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                                        "valueString": "initial-population"
+                                    }
+                                ],
                                 "code": {
                                     "coding": [
                                         {
@@ -99,6 +110,12 @@
                                 "count": 1
                             },
                             {
+                                  "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "numerator"
+                           }
+                        ],
                                 "code": {
                                     "coding": [
                                         {
@@ -112,6 +129,12 @@
                                 "count": 1
                             },
                             {
+                                  "extension": [
+                           {
+                              "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                              "valueString": "denominator"
+                           }
+                        ],
                                 "code": {
                                     "coding": [
                                         {
@@ -324,21 +347,21 @@
                     {
                         "coding": [
                             {
-                               "code": "exam",
-                               "display": "Exam",
-                               "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                                "code": "exam",
+                                "display": "Exam",
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
                             }
-                         ]
+                        ]
                     }
                 ],
                 "code": {
-                    "coding" : [
+                    "coding": [
                         {
-                          "system" : "http://www.ama-assn.org/go/cpt",
-                          "code" : "1111F",
-                          "display" : "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
+                            "system": "http://www.ama-assn.org/go/cpt",
+                            "code": "1111F",
+                            "display": "Discharge medications reconciled with the current medication list in outpatient medical record (COA) (GER)"
                         }
-                      ]
+                    ]
                 },
                 "effectiveDateTime": "2018-09-29T14:15:04.424Z",
                 "encounter": {
@@ -661,7 +684,7 @@
                         "value": "Manuel446.Granados71@example.com"
                     }
                 ]
-             }
+            }
         },
         {
             "fullUrl": "urn:uuid:ebc3f5c4-6700-34af-8323-85621c313726",
@@ -723,7 +746,7 @@
                         "text": "Healthcare Provider"
                     }
                 ]
-             }
+            }
         },
         {
             "fullUrl": "urn:uuid:8938e769-59f7-40ff-a541-50b0bfcd6742",
@@ -738,13 +761,13 @@
                     ],
                     "source": "http://example.org/fhir/server"
                 },
-                "identifier" : [
+                "identifier": [
                     {
-                      "use" : "temp",
-                      "system" : "http://exampleoflocation.com",
-                      "value" : "NOBLE HOSPITAL"
+                        "use": "temp",
+                        "system": "http://exampleoflocation.com",
+                        "value": "NOBLE HOSPITAL"
                     }
-                  ],
+                ],
                 "address": {
                     "city": "WESTFIELD",
                     "country": "US",
@@ -774,4 +797,4 @@
             }
         }
     ]
- }
+}

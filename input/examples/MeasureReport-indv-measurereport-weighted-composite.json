@@ -1,0 +1,153 @@
+{
+    "resourceType": "MeasureReport",
+    "id": "indv-measurereport-weighted-composite",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+        ]
+    },
+    "language": "en",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+            "valueIdentifier": {
+                "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                "value": "0015HQN9BD3304E"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+            "valueReference": {
+                "reference": "Organization/organization02"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation",
+            "valueReference": {
+                "reference": "Location/location01"
+            }
+        }
+    ],
+    "status": "complete",
+    "type": "individual",
+    "measure": "http://hl7.org/fhir/uv/cqm/Measure/PreventiveCareandWellnessPatientLevelLinearComposite|0.0.001",
+    "subject": {
+        "reference": "Patient/patient01"
+    },
+    "date": "2023-03-01T16:59:52.404Z",
+    "reporter": {
+        "reference": "Organization/organization01"
+    },
+    "period": {
+        "start": "2022-08-01",
+        "end": "2022-09-01"
+    },
+    "group": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                    "valueString": "mpr-group"
+                },
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                                "code": "composite"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                                "code": "increase"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-calculatedDate",
+                    "valueDateTime": "2026-01-01"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://example.org/fhir/",
+                        "code": "mrp-group",
+                        "display": "MRP Group"
+                    }
+                ],
+                "text": "MRP Group"
+            },
+            "population": [
+                {
+                    "id": "initial-population",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "initial-population"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population",
+                                "display": "Initial Population"
+                            }
+                        ]
+                    },
+                    "count": 1
+                },
+                {
+                    "id": "numerator",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "numerator"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "numerator",
+                                "display": "Numerator"
+                            }
+                        ]
+                    },
+                    "count": 1
+                },
+                {
+                    "id": "denominator",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "denominator"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator",
+                                "display": "Denominator"
+                            }
+                        ]
+                    },
+                    "count": 1
+                }
+            ],
+            "measureScore": {
+                "value": 1
+            }
+        }
+    ]
+}

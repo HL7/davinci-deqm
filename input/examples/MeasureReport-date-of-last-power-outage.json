@@ -43,8 +43,20 @@
     "group": [
         {
             "id": "location-datetime",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                    "valueString": "location-datetime"
+                }
+            ],
             "population": [
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "measure-observation"
+                        }
+                    ],
                     "code": {
                         "coding": [
                             {

@@ -204,6 +204,30 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
+    <element id="MeasureReport.group.extension:linkId">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="linkId"/>
+      <short value="Unique id of the group from the measure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.population.extension:linkId">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="linkId"/>
+      <short value="Unique id for group.population from the measure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.population.extension:populationDescription">
       <path value="MeasureReport.group.population.extension"/>
       <sliceName value="description"/>
