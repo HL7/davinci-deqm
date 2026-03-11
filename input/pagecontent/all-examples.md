@@ -18,7 +18,7 @@
 * [Example MeasureReport: Indv Measurreport Stratification Example](MeasureReport-indv-measurreport-stratification-example.html)
 * [Example MeasureReport: Summ Medicare Stratification Example](MeasureReport-summ-medicare-stratification-example.html)
 
-#### Supplemental Data Element (SDE) Measure Report
+#### Supplemental Data Element (SDE) MeasureReport
 * [Example MeasureReport: Additional Supplemental Data Example](MeasureReport-sde-example.html)
 
 #### Scoring Type MeasureReports
@@ -26,6 +26,9 @@
 * [Example MeasureReport: Summary MeasureReport Date of Last Power Outage](MeasureReport-date-of-last-power-outage.html)
 * [Example MeasureReport: MeasureReport Attestation Boolean](MeasureReport-attestation-boolean-example.html)
 * [Example MeasureReport: MeasureReport-PI-example](MeasureReport-MeasureReport-PI-example.html)
+
+#### Supporting Evidence MeasureReport
+* [Example MeasureReport: Supporting Evidence](MeasureReport-SupportingEvidenceExample.json)
 
 ### Bundles
 Below are examples of Bundle resources.
@@ -56,6 +59,7 @@ Below are the Measures used by the MeasureReports above that are defined in this
 * [Measure: Measure Mrp Example (Experimental)](Measure-measure-mrp-example.html)
 * [Measure: EXMPromotingInteroperabilityMeasure (Experimental) ](Measure-measure-pi-example.html)
 * [Measure: EXM108 - Venous Thromboembolism Prophylaxis (Experimental) ](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM108-FHIR.html)
+* [Measure: Supporting Evidence Example](Measure-SupportingEvidenceExample.json)
 
 #### Da Vinci VBPR Examples
 The Da Vinci Value-Based Performance Reporting IG uses DEQM as a dependency. In addition to the above DEQM examples, 

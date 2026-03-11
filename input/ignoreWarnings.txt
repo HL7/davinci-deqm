@@ -395,3 +395,9 @@ INFORMATION: StructureDefinition.differential.element[3].type[0].profile[0]: Pin
 INFORMATION: StructureDefinition.differential.element[5].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 INFORMATION: StructureDefinition.differential.element[6].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 INFORMATION: StructureDefinition.differential.element[13].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/cqf-messages to 5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+
+#29 Madie resources are not expected to be found/contained
+WARNING: Measure/SupportingEvidenceExample: Measure.library[0]: A definition could not be found for Canonical URL 'https://madie.cms.gov/Library/SupportingEvidenceExample'
+WARNING: Measure/SupportingEvidenceExample: Measure.scoring.coding[0].system: A definition for CodeSystem 'http://hl7.org/fhir/measure-scoring' could not be found, so the code cannot be validated
+WARNING: Measure-SupportingEvidenceExample.json: Artifact library could not be found so no data requirements were inferred.
+INFORMATION: Measure/SupportingEvidenceExample: Measure: The Library https://madie.cms.gov/Library/SupportingEvidenceExample could not be resolved, so expression validation may not be correct
