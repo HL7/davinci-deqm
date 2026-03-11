@@ -805,7 +805,13 @@
                                 ]
                             },
                             "population": [
-                                {
+                                     {
+                                    "extension": [
+										{
+											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
+											"valueString": "initial-population"
+										}
+									],
                                     "code": {
                                         "coding": [
                                             {
@@ -818,6 +824,12 @@
                                     "count": 0
                                 },
                                 {
+                                      "extension": [
+										{
+											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
+											"valueString": "numerator"
+										}
+									],
                                     "code": {
                                         "coding": [
                                             {
@@ -830,6 +842,12 @@
                                     "count": 0
                                 },
                                 {
+                                      "extension": [
+										{
+											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
+											"valueString": "denominator"
+										}
+									],
                                     "code": {
                                         "coding": [
                                             {
@@ -842,6 +860,12 @@
                                     "count": 0
                                 },
                                 {
+                                      "extension": [
+										{
+											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
+											"valueString": "denominator-exclusion"
+										}
+									],
                                     "code": {
                                         "coding": [
                                             {

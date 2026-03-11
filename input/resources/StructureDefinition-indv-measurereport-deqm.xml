@@ -37,10 +37,8 @@
         <key value="deqm-2"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required"/>
-        <!--  Update for FHIR-51433  -->
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().anyTrue() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).anyTrue() implies improvementNotation.exists()"/>
-<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies improvementNotation.exists()"/>-->
-      </constraint>
+     </constraint>
       <constraint>
         <key value="deqm-3"/>
         <severity value="error"/>
@@ -51,10 +49,8 @@
         <key value="deqm-5"/>
         <severity value="error"/>
         <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
-        <!--  Update for FHIR-51433  -->
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not().anyTrue()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not().anyTrue() implies group.population.count()>=1"/>
-<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not() implies group.population.count()>=1"/>-->
-      </constraint>
+     </constraint>
       <mustSupport value="false"/>
     </element>
     <element id="MeasureReport.extension:careGapRemark">
@@ -325,18 +321,14 @@
         <key value="deqm-4"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio', or 'continuous-variable' then the groupImprovementNotation element is required."/>
-        <!--  Update for FHIR-51433  -->
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().anyTrue() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).anyTrue() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
-<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>-->
       </constraint>
       <constraint>
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <!--  Update for FHIR-51433  -->
         <expression value="((%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
-<!--        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>-->
-      </constraint>
+     </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.id">
@@ -454,6 +446,18 @@
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+      <element id="MeasureReport.group.population.extension:cqf_supportingEvidence">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="cqf-supportingEvidence"/>
+      <short value="Specifies the result of a supporting evidence expression in the measure population."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence"/>
       </type>
       <mustSupport value="true"/>
     </element>

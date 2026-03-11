@@ -240,6 +240,18 @@
       </type>
       <mustSupport value="true"/>
     </element>
+     <element id="MeasureReport.group.population.extension:cqf_supportingEvidence">
+      <path value="MeasureReport.group.population.extension"/>
+      <sliceName value="cqf-supportingEvidence"/>
+      <short value="Specifies the result of a supporting evidence expression in the measure population."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.group.measureScore">
       <path value="MeasureReport.group.measureScore"/>
       <min value="0"/>
