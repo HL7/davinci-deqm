@@ -127,6 +127,16 @@ For example, the below measure population criteria and stratifier would result i
 
 The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Bundles SHOULD be organized by subject, meaning that a Bundle SHOULD contain the resources, the including MeasureReport(s) and data of interest (in MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Resources that are not unique to the subject, such as Practitioner or Organization, may still be duplicated across Bundles.
 
+### Referential Integrity in Bundles
+
+Clients SHOULD include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible. This may result in bundles that have references to data that is not included in the bundle, which could be both patient-specific information, such as immunizations, and non-patient-specific information, such as locations and practitioners, that are not relevant to the evaluated measure.
+
+Servers SHOULD be permissive in accepting references to data that are not included in the bundle.
+
+Considerations such as privacy, consent, authorization, minimum necessary, etc., are outside the scope of this IG.
+
+More guidance and discussion are available in the [bulk data section and specification](https://hl7.org/fhir/us/davinci-deqm/index.html#bulk-data). 
+
 ### Ad-hoc Organizations for DEQM Operations
 
 Data producers and consumers may want to gather data from different locations and providers within a large organization that is comprised of multiple sub-organizations. In such cases, it can be desirable to model portions of the organization from which data should be gathered as a way to target data requests. The $care-gaps and $collect-data operations allow an Organization resource to be either referenced or passed in as part of the request body. If it is passed in, it can be an ad-hoc Organization created only as part of that request. PractitionerRole resources can be used to link Practitioner resources to the Organization to model the set of participating practitioners.
