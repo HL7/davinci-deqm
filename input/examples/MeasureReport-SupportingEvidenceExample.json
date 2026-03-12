@@ -1,0 +1,801 @@
+{
+    "resourceType": "MeasureReport",
+    "id": "SupportingEvidenceExample",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+        ]
+    },
+    "status": "complete",
+    "type": "individual",
+    "measure": "https://madie.cms.gov/Measure/SupportingEvidenceExample",
+    "subject": "Patient/patient01",
+    "date": "2025-09-01",
+    "reporter": "Organization/organization01",
+    "period": {
+        "start": "2025-08-01",
+        "end": "2025-09-01"
+    },
+    "group": [
+        {
+            "population": [
+                {
+                    "id": "denominator",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator",
+                                "display": "Denominator"
+                            }
+                        ]
+                    },
+                    "count": 1,
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "AlwaysTrue"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is always true"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "always-true",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Always True"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueBoolean": true
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "DenominatorResource"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a Denominator Resource"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "denominator-resource",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Denominator Resource"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueReference": {
+                                        "reference": "Encounter/encounter01"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "ListOfBoolean"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a list of boolean"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "list-of-boolean",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "List of Boolean"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueBoolean": true
+                                },
+                                {
+                                    "url": "value",
+                                    "valueBoolean": false
+                                },
+                                {
+                                    "url": "value",
+                                    "valueBoolean": true
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "String"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a string"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "string",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "String"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueString": "string test"
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "Date"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a date"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "date",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Date"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDate": "2026-01-01"
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "Decimal"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a decimal"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "decimal",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Decimal"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDecimal": 31.31
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "Number"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a number"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "number",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Number"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueInteger": 31
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "ListOfDates"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a list of dates"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "list-of-dates",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "List of Dates"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDate": "2024-02-01"
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDate": "2024-02-02"
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDate": "2024-02-03"
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "ListOfNumbers"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a list of numbers"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "list-of-numbers",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "List of Numbers"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueInteger": 31
+                                },
+                                {
+                                    "url": "value",
+                                    "valueInteger": 88
+                                },
+                                {
+                                    "url": "value",
+                                    "valueInteger": 11
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "ListOfString"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a list of string"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "list-of-string",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "List of String"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueString": "test1"
+                                },
+                                {
+                                    "url": "value",
+                                    "valueString": "test2"
+                                },
+                                {
+                                    "url": "value",
+                                    "valueString": "test3"
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "TestTuple"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a tuple"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "test-tuple",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Test Tuple"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "extension": [
+                                        {
+                                            "url": "number",
+                                            "valueInteger": 31
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-01"
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-02"
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-03"
+                                        },
+                                        {
+                                            "url": "birthYear",
+                                            "valueString": "string test"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "Interval"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is an interval"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "interval",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Interval"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valuePeriod": {
+                                        "start": "2024-01-01T00:00:00Z",
+                                        "end": "2024-12-31T23:59:59Z"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "TestIntervalList"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a list of intervals"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "test-interval-list",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Test Interval List"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valuePeriod": {
+                                        "start": "2024-01-01T00:00:00Z",
+                                        "end": "2024-01-31T23:59:59Z"
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valuePeriod": {
+                                        "start": "2024-02-01T00:00:00Z",
+                                        "end": "2024-02-29T23:59:59Z"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "TestDecimalList"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a list of decimals"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "test-decimal-list",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Test Decimal List"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDecimal": 1.5
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDecimal": 2.75
+                                },
+                                {
+                                    "url": "value",
+                                    "valueDecimal": 0.33333333
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "TestCode"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a code"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "test-code",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Test Code"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueCoding": {
+                                        "code": "M",
+                                        "system": "http://hl7.org/fhir/administrative-gender",
+                                        "display": "Male"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "EmptyListExample"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is an empty list"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "empty-list-example",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Empty List Example"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "_valueBoolean": {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/StructureDefinition/cqf-isEmptyList",
+                                                "valueBoolean": true
+                                            },
+                                            {
+                                                "url": "http://hl7.org/fhir/StructureDefinition/cqf-cqlType",
+                                                "valueString": "List<System.Any>"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "NullExample"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a null"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "null-example",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Null Example"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueBoolean": {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                                                "valueCode": "unknown"
+                                            },
+                                            {
+                                                "url": "http://hl7.org/fhir/StructureDefinition/cqf-cqlType",
+                                                "valueString": "System.Any"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "PatientResource"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a Patient Resource"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "patient-resource",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "Patient Resource"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "valueReference": {
+                                        "reference": "Patient/example"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidence",
+                            "extension": [
+                                {
+                                    "url": "name",
+                                    "valueCode": "ListTestTuple"
+                                },
+                                {
+                                    "url": "description",
+                                    "valueString": "Example of supporting evidence that is a list of tuples"
+                                },
+                                {
+                                    "url": "code",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "code": "list-test-tuple",
+                                                "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                                                "display": "List Test Tuple"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "url": "value",
+                                    "extension": [
+                                        {
+                                            "url": "number",
+                                            "valueInteger": 31
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-01"
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-02"
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-03"
+                                        },
+                                        {
+                                            "url": "birthYear",
+                                            "valueString": "string test"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "url": "value",
+                                    "extension": [
+                                        {
+                                            "url": "number",
+                                            "valueInteger": 31
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-01"
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-02"
+                                        },
+                                        {
+                                            "url": "dates",
+                                            "valueDate": "2024-02-03"
+                                        },
+                                        {
+                                            "url": "birthYear",
+                                            "valueString": "string test"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "initial-population",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "initial-population"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population",
+                                "display": "Initial Population"
+                            }
+                        ]
+                    },
+                    "count": 100
+                },
+                {
+                    "id": "numerator",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "Numerator"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "numerator",
+                                "display": "Numerator"
+                            }
+                        ]
+                    },
+                    "count": 70
+                },
+                {
+                    "id": "denominator-exclusion",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                            "valueString": "Denominator-Exclusion"
+                        }
+                    ],
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator-exclusion",
+                                "display": "Denominator Exclusion"
+                            }
+                        ]
+                    },
+                    "count": 70
+                }
+            ],
+            "measureScore": {
+                "value": 0.1
+            }
+        }
+    ]
+}

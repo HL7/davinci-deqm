@@ -904,7 +904,19 @@
                 "exampleBoolean": true,
                 "name": "Summ MeasureReport - Weighted Composite",
                 "reference": {"reference": "MeasureReport/summary-measurereport-weighted-composite"},
-                "description": "MeasureReport example for a Preventive Care and Wellness (Component-level weighted) measure.."
+                "description": "MeasureReport example for a Preventive Care and Wellness (Component-level weighted) measure."
+            },
+             {
+                "exampleBoolean": true,
+                "name": "Measure - Supporting Evidence",
+                "reference": {"reference": "Measure/SupportingEvidenceExample"},
+                "description": "Example showing cqf-supportingEvidenceDefinition extension on a Measure."
+            },
+             {
+                "exampleBoolean": true,
+                "name": "MeasureReport - Supporting Evidence",
+                "reference": {"reference": "MeasureReport/SupportingEvidenceExample"},
+                "description": "Example showing cqf-supportingEvidenceDefinition extension on a MeasureReport."
             },
             {
                 "exampleBoolean": false,

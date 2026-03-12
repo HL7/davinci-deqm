@@ -1,0 +1,475 @@
+{
+  "id": "SupportingEvidenceExample",
+  "resourceType": "Measure",
+  "url": "https://madie.cms.gov/Measure/SupportingEvidenceExample",
+  "library": [
+    "https://madie.cms.gov/Library/SupportingEvidenceExample"
+  ],
+   "name": "SupportingEvidenceMeasure",
+  "title": "Supporting Evidence Measure" ,
+  "experimental": true,
+  "description": "This is an example of a Maasure using Supporing Evidence", 
+  "scoring": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+        "code": "ratio"
+      }
+    ]
+  },
+  "group": [
+    {
+      "id": "group-1",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-populationBasis",
+          "valueCode": "boolean"
+        }
+      ],
+      "population": [
+        {
+          "id": "initial-population",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql-identifier",
+            "expression": "Initial Population Boolean"
+          }
+        },
+        {
+          "id": "denominator",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql-identifier",
+            "expression": "Denominator Boolean"
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "always-true",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Always True"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is always true",
+                "name": "AlwaysTrue",
+                "language": "text/cql-identifier",
+                "expression": "always true"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "denominator-resource",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Denominator Resource"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a Denominator Resource",
+                "name": "DenominatorResource",
+                "language": "text/cql-identifier",
+                "expression": "Denominator Resource"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "list-of-boolean",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "List of Boolean"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a list of boolean",
+                "name": "ListOfBoolean",
+                "language": "text/cql-identifier",
+                "expression": "list of boolean"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "string",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "String"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a string",
+                "name": "String",
+                "language": "text/cql-identifier",
+                "expression": "string"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "date",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Date"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a date",
+                "name": "Date",
+                "language": "text/cql-identifier",
+                "expression": "date"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "decimal",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Decimal"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a decimal",
+                "name": "Decimal",
+                "language": "text/cql-identifier",
+                "expression": "decimal"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "number",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Number"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a number",
+                "name": "Number",
+                "language": "text/cql-identifier",
+                "expression": "number"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "list-of-dates",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "List of Dates"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a list of dates",
+                "name": "ListOfDates",
+                "language": "text/cql-identifier",
+                "expression": "list of dates"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "list-of-numbers",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "List of Numbers"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a list of numbers",
+                "name": "ListOfNumbers",
+                "language": "text/cql-identifier",
+                "expression": "list of numbers"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "list-of-string",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "List of String"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a list of string",
+                "name": "ListOfString",
+                "language": "text/cql-identifier",
+                "expression": "list of string"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "test-tuple",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Test Tuple"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a tuple",
+                "name": "TestTuple",
+                "language": "text/cql-identifier",
+                "expression": "test tuple"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "interval",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Interval"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is an interval",
+                "name": "Interval",
+                "language": "text/cql-identifier",
+                "expression": "interval"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "test-interval-list",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Test Interval List"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a list of intervals",
+                "name": "TestIntervalList",
+                "language": "text/cql-identifier",
+                "expression": "TestIntervalList"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "test-decimal-list",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Test Decimal List"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a list of decimals",
+                "name": "TestDecimalList",
+                "language": "text/cql-identifier",
+                "expression": "TestDecimalList"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "test-code",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Test Code"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a code",
+                "name": "TestCode",
+                "language": "text/cql-identifier",
+                "expression": "test code"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "empty-list-example",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Empty List Example"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is an empty list",
+                "name": "EmptyListExample",
+                "language": "text/cql-identifier",
+                "expression": "EmptyListExample"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "null-example",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Null Example"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a null",
+                "name": "NullExample",
+                "language": "text/cql-identifier",
+                "expression": "NullExample"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "patient-resource",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "Patient Resource"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a Patient Resource",
+                "name": "PatientResource",
+                "language": "text/cql-identifier",
+                "expression": "PatientRes"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-supportingEvidenceDefinition",
+              "valueExpression": {
+                "extension": [
+                  { 
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expressionCode",
+                    "valueCoding": {
+                      "code": "list-test-tuple",
+                      "system": "http://example.org/fhir/CodeSystem/example-supporting-evidence-codes",
+                      "display": "List Test Tuple"
+                    }
+                  }
+                ],
+                "description": "Example of supporting evidence that is a list of tuples",
+                "name": "ListTestTuple",
+                "language": "text/cql-identifier",
+                "expression": "list test tuple"
+              }
+            }
+          ]
+        },
+        {
+          "id": "denominator-exclusion",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exclusion",
+                "display": "Denominator Exclusion"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql-identifier",
+            "expression": "Denominator Exclusion Boolean"
+          }
+        },
+        {
+          "id": "numerator-exclusion",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator-exclusion",
+                "display": "Numerator Exclusion"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql-identifier",
+            "expression": "Numerator Exclusion Boolean"
+          }
+        },
+        {
+          "id": "numerator",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql-identifier",
+            "expression": "Numerator Boolean"
+          }
+        }
+      ]
+    }]
+}

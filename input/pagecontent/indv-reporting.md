@@ -60,6 +60,11 @@ At the very least, an individual measure report should include:
 
 -  The conclusive evidence needed to confirm that a criterion was met for that CQM.  For instance, a record for a patient who has been in the Intensive Care Unit undergoing continuous blood pressure monitoring may have much more blood pressure observations than are needed to compute the criteria.
 
+#### Use of Supporting Evidence
+The Supporting Evidence extension on the population element of the DEQM Individual MeasureReport Profile provides an optional mechanism to convey additional computed evidence that supports the evaluation of a specific measure population for an individual patient. The extension captures the result of a supporting evidence expression defined in the measure logic and represents the result using the same mapping conventions described in Using CQL With FHIR IG. Unlike the typical mapping where complex results may be returned in a Parameters resource, tuple and list results are represented directly within the extension structure. This allows implementers to attach detailed contextual evidence alongside the evaluated population outcome within the MeasureReport itself.
+
+The intended use of this extension is to support transparency, validation, and downstream processing of measure evaluation results by exposing the intermediate or supporting data elements that contributed to a population determination. In common scenarios, systems generating an individual MeasureReport may include supporting evidence such as the specific resources, derived values, or calculated indicators that explain why a patient was included in a population (e.g., denominator, numerator, or exclusion). For example, a quality reporting system may include the clinical observations, encounters, or derived calculations used by a CQL expression that determined a patient met a numerator condition. This information can assist implementers, quality analysts, or receiving systems in auditing, debugging, or validating measure evaluation outcomes for individual patients.
+
 #### Missing Data
 {:.no_toc}
 
