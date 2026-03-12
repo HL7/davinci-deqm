@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="indv-measurereport-deqm"/>
   <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
@@ -37,9 +36,7 @@
         <key value="deqm-2"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified at the root and the scoring type is 'proportion','ratio', or 'continuous-variable' then the improvementNotation element is required"/>
-        <!--  Update for FHIR-51433  -->
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().anyTrue() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).anyTrue() implies improvementNotation.exists()"/>
-<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies improvementNotation.exists()"/>-->
       </constraint>
       <constraint>
         <key value="deqm-3"/>
@@ -51,9 +48,7 @@
         <key value="deqm-5"/>
         <severity value="error"/>
         <human value="If the scoring, at either the root level or the group level, is other than composite then the group.population cardinality is &gt;=1"/>
-        <!--  Update for FHIR-51433  -->
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not().anyTrue()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not().anyTrue() implies group.population.count()>=1"/>
-<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not()  or  (group.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains ('composite')).not() implies group.population.count()>=1"/>-->
       </constraint>
       <mustSupport value="false"/>
     </element>
@@ -216,7 +211,8 @@
     </element>
     <element id="MeasureReport.type">
       <path value="MeasureReport.type"/>
-      <requirements value="For individual quality meaure reporting, this report is constrained to reporting on an individual."/>
+      <requirements
+        value="For individual quality meaure reporting, this report is constrained to reporting on an individual."/>
       <type>
         <code value="code"/>
       </type>
@@ -251,37 +247,30 @@
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-device"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-relatedperson"/>
-       </type>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.date">
       <path value="MeasureReport.date"/>
-      <short value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
+      <short
+        value="When the report was generated. Note: The language in R5 was changed to calculated.  We are clarifying that intent."/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.reporter">
       <path value="MeasureReport.reporter"/>
-      <short value="Organization that generated the MeasureReport"/>
-      <definition value="Organization that generated the MeasureReport"/>
+      <short value="Who is reporting the data. The reporter is the entity fulfilling the reporting requirement."/>
+      <definition value="Who is reporting the data. The reporter is the entity fulfilling the reporting requirement."/>
       <min value="1"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-organization"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-practitionerrole"/>
       </type>
       <mustSupport value="true"/>
-    </element>
-    <element id="MeasureReport.reporter.extension:group">
-      <path value="MeasureReport.reporter.extension"/>
-      <sliceName value="group"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup"/>
-      </type>
     </element>
     <element id="MeasureReport.period">
       <path value="MeasureReport.period"/>
@@ -325,17 +314,13 @@
         <key value="deqm-4"/>
         <severity value="error"/>
         <human value="If the measure scoring is specified on the group and the scoring type is 'proportion', 'ratio', or 'continuous-variable' then the groupImprovementNotation element is required."/>
-        <!--  Update for FHIR-51433  -->
         <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists().anyTrue() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')).anyTrue() implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>
-<!--        <expression value="(extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').exists() and extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code in ('proportion' | 'ratio' | 'continuous-variable')) implies extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation').exists()"/>-->
       </constraint>
       <constraint>
         <key value="deqm-6"/>
         <severity value="error"/>
         <human value="If the measure scoring type is 'proportion' then the measureScore SHALL be a numerical value between 0 and 1"/>
-        <!--  Update for FHIR-51433  -->
         <expression value="((%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion').anyTrue() implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>
-<!--        <expression value="(%resource.extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion' or extension('http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring').value.coding.code contains 'proportion') implies (measureScore.value &gt;= 0.0 and measureScore.value &lt;= 1.0)"/>-->
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -366,6 +351,18 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"/>
       </type>
       <condition value="deqm-3"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.group.extension:cqfm-compositeScoring">
+      <path value="MeasureReport.group.extension"/>
+      <sliceName value="cqfm-compositeScoring"/>
+      <short value="How the calculation is performed for the measure, including proportion, ratio, continuous-variable, and cohort"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-compositeScoring"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MeasureReport.group.extension:calculatedDate">
@@ -400,8 +397,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile
-          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -525,8 +521,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile
-          value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription"/>
       </type>
       <mustSupport value="true"/>
     </element>

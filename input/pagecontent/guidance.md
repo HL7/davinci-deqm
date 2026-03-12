@@ -95,24 +95,21 @@ The DEQM Individual MeasureReport contains all of the data that is relevant to c
 
 A measure defines calculation rates using the group elements, and it can identify these groups with several data elements. A DEQM measure report's groups SHALL be organized and identified in the same manner as in the evaluated measure without alteration. The table below shows which measure elements must be present in measure report.
 
-| **Measure Elements** | **DEQM MeasureReport Elements** |
-|:--------------------:|:-------------------------------:|
+| **Measure Elements** |                  **DEQM MeasureReport Elements** |
+|--------------------|-------------------------------|
 | group.linkId | group.linkId |
 | group.id | group.id |
 | group.code | group.code |
-| group.population.linkId | group.population.linkId |
-| group.stratifier.stratum.population.linkId |  |
-| group.population.id | group.population.id |
-| group.stratifier.stratum.population.id |  |
-| group.population.code | group.population.code |
-| group.stratifier.stratum.population.code |  |
+| group.population.linkId | group.population.linkId <br>group.stratifier.stratum.population.linkId |
+| group.population.id | group.population.id<br>group.stratifier.stratum.population.id |
+| group.population.code | group.population.code<br>group.stratifier.stratum.population.code |
 | group.stratifier.linkId | group.stratifier.linkId |
 | group.stratifier.id | group.stratifier.id |
 | group.stratifier.code | group.stratifier.code |
 | group.stratifier.component.linkId | group.stratifier.stratum.component.linkId |
 | group.stratifier.component.id | group.stratifier.stratum.component.id |
 | group.stratifier.component.code | group.stratifier.stratum.component.code |
-| supplementalData.linkId | extension:supplementalData.value[x].extension:criteriaReference.value[x] |
+| supplementalData.linkId | extension:supplementalData.value[x]<br>extension:criteriaReference.value[x] |
 | supplementalData.id | Only in measure report if linkId is not present |
 | supplementalData.code | Only in a contained Observation |
 

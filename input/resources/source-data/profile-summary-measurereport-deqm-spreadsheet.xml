@@ -1475,34 +1475,6 @@
     <Cell ss:StyleID="s112"/>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="4" ss:StyleID="s114"><Data ss:Type="String">group</Data></Cell>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s115"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">reporter.extension</Data></Cell>
-    <Cell ss:StyleID="s105" ss:Formula="=R2C8&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">MeasureReport.reporter.extension</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell><Data ss:Type="String">0..1</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Extension{#reporterGroup}</Data></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data></Cell>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s106"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s107"/>
-    <Cell ss:StyleID="s108"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s110"/>
-    <Cell ss:StyleID="s112"/>
-   </Row>
-   <Row ss:AutoFitHeight="0">
     <Cell ss:Index="4" ss:StyleID="s114"/>
     <Cell ss:StyleID="s115"/>
     <Cell ss:StyleID="s115"/>
