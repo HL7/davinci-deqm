@@ -95,24 +95,21 @@ The DEQM Individual MeasureReport contains all of the data that is relevant to c
 
 A measure defines calculation rates using the group elements, and it can identify these groups with several data elements. A DEQM measure report's groups SHALL be organized and identified in the same manner as in the evaluated measure without alteration. The table below shows which measure elements must be present in measure report.
 
-| **Measure Elements** | **DEQM MeasureReport Elements** |
-|:--------------------:|:-------------------------------:|
+| **Measure Elements** |                  **DEQM MeasureReport Elements** |
+|--------------------|-------------------------------|
 | group.linkId | group.linkId |
 | group.id | group.id |
 | group.code | group.code |
-| group.population.linkId | group.population.linkId |
-| group.stratifier.stratum.population.linkId |  |
-| group.population.id | group.population.id |
-| group.stratifier.stratum.population.id |  |
-| group.population.code | group.population.code |
-| group.stratifier.stratum.population.code |  |
+| group.population.linkId | group.population.linkId <br>group.stratifier.stratum.population.linkId |
+| group.population.id | group.population.id<br>group.stratifier.stratum.population.id |
+| group.population.code | group.population.code<br>group.stratifier.stratum.population.code |
 | group.stratifier.linkId | group.stratifier.linkId |
 | group.stratifier.id | group.stratifier.id |
 | group.stratifier.code | group.stratifier.code |
 | group.stratifier.component.linkId | group.stratifier.stratum.component.linkId |
 | group.stratifier.component.id | group.stratifier.stratum.component.id |
 | group.stratifier.component.code | group.stratifier.stratum.component.code |
-| supplementalData.linkId | extension:supplementalData.value[x].extension:criteriaReference.value[x] |
+| supplementalData.linkId | extension:supplementalData.value[x]<br>extension:criteriaReference.value[x] |
 | supplementalData.id | Only in measure report if linkId is not present |
 | supplementalData.code | Only in a contained Observation |
 
@@ -129,6 +126,16 @@ For example, the below measure population criteria and stratifier would result i
 ### DEQM Operation Bundles Organized by Subject
 
 The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Bundles SHOULD be organized by subject, meaning that a Bundle SHOULD contain the resources, the including MeasureReport(s) and data of interest (in MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Resources that are not unique to the subject, such as Practitioner or Organization, may still be duplicated across Bundles.
+
+### Referential Integrity in Bundles
+
+Clients SHOULD include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible. This may result in bundles that have references to data that is not included in the bundle, which could be both patient-specific information, such as immunizations, and non-patient-specific information, such as locations and practitioners, that are not relevant to the evaluated measure.
+
+Servers SHOULD be permissive in accepting references to data that are not included in the bundle.
+
+Considerations such as privacy, consent, authorization, minimum necessary, etc., are outside the scope of this IG.
+
+More guidance and discussion are available in the [bulk data section and specification](https://hl7.org/fhir/us/davinci-deqm/index.html#bulk-data). 
 
 ### Ad-hoc Organizations for DEQM Operations
 

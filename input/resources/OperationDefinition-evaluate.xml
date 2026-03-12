@@ -28,6 +28,14 @@
     <type value="true"/>
     <instance value="false"/>
     <parameter>
+        <name value="measureUrl"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="*"/>
+        <documentation value="The URL of the measure to be evaluated. A measure URL is specified in the [url](https://www.hl7.org/fhir/measure-definitions.html#Measure.url) element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
+        <type value="canonical"/>
+    </parameter>
+    <parameter>
         <name value="periodStart"/>
         <use value="in"/>
         <min value="1"/>
@@ -53,35 +61,12 @@
         <type value="canonical"/>
     </parameter>
     <parameter>
-        <name value="measureUrl"/>
-        <use value="in"/>
-        <min value="1"/>
-        <max value="*"/>
-        <documentation value="The URL of the measure to be evaluated. A measure URL is specified in the [url](https://www.hl7.org/fhir/measure-definitions.html#Measure.url) element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
-        <type value="canonical"/>
-    </parameter>
-    <parameter>
         <name value="reportType"/>
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
         <documentation value="The type of measure report: `individual`, `subject-list`, or `summary`. If not specified, a default value of `summary` will be used if the subject parameter is supplied and is a `Group` resource; a default value of `individual` will be used if the subject parameter is supplied and is not a `Group` resource; otherwise, a default value of `summary` will be used. NOTE: Implementations should support the use of `subject` for `individual` and `population` for `summary` for backwards compatibility with existing implementations."/>
         <type value="code"/>
-    </parameter> 
-    <parameter> 
-        <name value="reporterResource"/> 
-        <use value="in"/> 
-        <min value="0"/> 
-        <max value="1"/> 
-        <documentation value="The provider for which the report will be run, provided as an Organization resource.
-            This is intended to support the use case in which the organization information
-            is not on the server performing the evaluation, for example an [ad-hoc group of
-            practitioners](clinicalreasoning-quality-reporting.html#ad-hoc-organizations) that
-            are part of a provider group. This parameter is reflected in the reporter element
-            of the resulting MeasureReport(s). This parameter cannot be used with the reporter
-            parameter."/> 
-        <type value="string"/> 
-        <searchType value="reference"/> 
     </parameter> 
     <parameter> 
         <name value="location"/> 
@@ -155,7 +140,15 @@
         <allowedType value="Practitioner"/>
         <allowedType value="PractitionerRole"/>
         <allowedType value="Organization"/>
-    </parameter> 
+    </parameter>
+    <parameter>
+        <name value="excludeEvaluatedResources"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="1"/>
+        <documentation value="Indicates that evaluated resources and supplemental data referenced by the MeasureReport(s) should not be included in the resulting bundles. The default for this parameter is false, so that evaluated resources are NOT included. Note that this parameter does not apply to the contained resources that are created by evaluation to communicate the results of stratification or supplemental data counts."/>
+        <type value="boolean"/>
+    </parameter>
     <parameter> 
         <name value="stratifier"/> 
         <use value="in"/> 

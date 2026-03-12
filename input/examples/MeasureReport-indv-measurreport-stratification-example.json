@@ -805,8 +805,8 @@
                                 ]
                             },
                             "population": [
-                                     {
-                                    "extension": [
+                                {
+                                     "extension": [
 										{
 											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
 											"valueString": "initial-population"
@@ -824,7 +824,7 @@
                                     "count": 0
                                 },
                                 {
-                                      "extension": [
+                                     "extension": [
 										{
 											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
 											"valueString": "numerator"
@@ -842,7 +842,7 @@
                                     "count": 0
                                 },
                                 {
-                                      "extension": [
+                                     "extension": [
 										{
 											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
 											"valueString": "denominator"
@@ -860,7 +860,7 @@
                                     "count": 0
                                 },
                                 {
-                                      "extension": [
+                                     "extension": [
 										{
 											"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
 											"valueString": "denominator-exclusion"

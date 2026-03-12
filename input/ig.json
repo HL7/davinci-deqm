@@ -932,10 +932,6 @@
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-reporterGroup"}
-            },
-            {
-                "exampleBoolean": false,
                 "reference": {"reference": "CapabilityStatement/consumer-server"}
             },
             {

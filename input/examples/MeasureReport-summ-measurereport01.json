@@ -29,15 +29,7 @@
         "end": "2018-09-01"
     },
     "reporter": {
-        "reference": "Organization/organization01",
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reporterGroup",
-                "valueReference": {
-                    "reference": "Group/group01"
-                }
-            }
-        ]
+        "reference": "Organization/organization01"
     },
     "improvementNotation": {
         "coding": [

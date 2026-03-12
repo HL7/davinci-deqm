@@ -22,7 +22,6 @@ Payers and providers need common data specification, measure specification, repo
 |-----------------------------------------------------------------------------------------------------|
 | [DEQM Measure Scoring Extension](StructureDefinition-extension-measureScoring.html)                 |
 | [DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html)        |
-| [DEQM Reporter Group Extension Extension](StructureDefinition-extension-reporterGroup.html)         |
 | [DEQM Reporting Vendor Extension](StructureDefinition-extension-reportingVendor.html)               |
 | [DEQM Certification Identifier Extension](StructureDefinition-extension-certificationIdentifier.html) |
 | [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html)   |

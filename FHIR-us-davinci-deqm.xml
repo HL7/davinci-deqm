@@ -66,7 +66,7 @@
 <artifact id="StructureDefinition/extension-populationDescription" key="StructureDefinition-extension-populationDescription" name="DEQM Population Description"/>
 <artifact deprecated="true" id="StructureDefinition/extension-populationReference" key="StructureDefinition-extension-populationReference" name="DEQM Population Reference Extension"/>
 <artifact deprecated="true" id="StructureDefinition/practitioner-deqm" key="StructureDefinition-practitioner-deqm" name="DEQM Practitioner Profile"/>
-<artifact id="StructureDefinition/extension-reporterGroup" key="StructureDefinition-extension-reporterGroup" name="DEQM Reporter Group Extension"/>
+<artifact deprecated="true" id="StructureDefinition/extension-reporterGroup" key="StructureDefinition-extension-reporterGroup" name="DEQM Reporter Group Extension"/>
 <artifact id="StructureDefinition/extension-reportingProgram" key="StructureDefinition-extension-reportingProgram" name="DEQM Reporting Program Extension"/>
 <artifact deprecated="true" id="StructureDefinition/extension-reportingProgramReference" key="StructureDefinition-extension-reportingProgramReference" name="DEQM Reporting Program Reference Extension"/>
 <artifact id="StructureDefinition/extension-reportingVendor" key="StructureDefinition-extension-reportingVendor" name="DEQM Reporting Vendor Extension"/>
