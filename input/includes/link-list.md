@@ -145,7 +145,6 @@
 [DEQM Gaps In Care Bundle Profile]: StructureDefinition-gaps-bundle-deqm.html
 [DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
 [DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
-[DEQM Gaps In Care Group Profile]: StructureDefinition-gaps-group-deqm.html
 [DEQM Gaps In Care Gap Status Value Set]: ValueSet-gaps-status.html
 [DEQM Gap Status Extension]: StructureDefinition-extension-gapStatus.html
 [DEQM Care Gap Guidance Response]: StructureDefinition-gaps-guidanceresponse-detailedcaregap.html
