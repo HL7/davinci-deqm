@@ -6,7 +6,7 @@
   "id": "care-gap-remark",
   "title": "Care Gap Remark Code System",
   "version": "1.0.0",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-remark",
+  "url": "http://hl7.org/fhir/uv/deqm/CodeSystem/care-gap-remark",
   "experimental": false,
   "description": "This is a code system for Care Gap Remark",
   "caseSensitive": true,

@@ -1,7 +1,7 @@
 {
     "resourceType": "Measure",
     "id": "date-of-last-power-outage",
-    "url": "http://hl7.org/fhir/us/davinci-deqm/Measure/date-of-last-power-outage",
+    "url": "http://hl7.org/fhir/uv/deqm/Measure/date-of-last-power-outage",
     "extension": [
         {
             "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",

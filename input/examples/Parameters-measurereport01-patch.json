@@ -3,7 +3,7 @@
   "id": "measurereport01-patch",
   "meta" : {
     "profile" : [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/parameters-caregap-remark-patch"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/parameters-caregap-remark-patch"
     ]
   },
   "parameter": [
@@ -27,7 +27,7 @@
           "part": [
             {
               "name": "url",
-              "valueUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark"
+              "valueUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-careGapRemark"
             },
             {
               "name": "extension",

@@ -1,6 +1,6 @@
-package-id: hl7.fhir.us.davinci-deqm
+package-id: hl7.fhir.uv.deqm
 title: Data Exchange For Quality Measures
-canonical: 'http://hl7.org/fhir/us/davinci-deqm'
+canonical: 'http://hl7.org/fhir/uv/deqm'
 introduction: >-
   The Da Vinci Data Exchange for Quality Measures (DEQM) FHIR Implementation Guide (IG) supports value based care data exchange in the US Realm
 list:

@@ -2,7 +2,7 @@
 <OperationDefinition
     xmlns="http://hl7.org/fhir">
     <id value="care-gaps"/>
-    <url value="http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/care-gaps"/>
+    <url value="http://hl7.org/fhir/uv/deqm/OperationDefinition/care-gaps"/>
     <name value="CareGaps"/>
     <title value="Care Gaps Operation"/>
     <status value="active"/>
@@ -130,7 +130,7 @@
         <type value="code"/>
         <binding>
             <strength value="extensible"/>
-            <valueSet value="http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"/>
+            <valueSet value="http://hl7.org/fhir/uv/deqm/ValueSet/gaps-status"/>
         </binding>
     </parameter>
     <parameter>

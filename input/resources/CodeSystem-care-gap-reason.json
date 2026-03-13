@@ -6,7 +6,7 @@
   "id": "care-gap-reason",
   "title": "Care Gap Reasons Code System",
   "version": "3.0.0",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
+  "url": "http://hl7.org/fhir/uv/deqm/CodeSystem/care-gap-reason",
   "experimental": false,
   "description": "This is a code system for Care Gap Reasons",
   "caseSensitive": true,

@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "extension-reportingProgram",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram",
+  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingProgram",
   "name": "DEQMReportingProgramExtension",
   "title": "DEQM Reporting Program Extension",
   "status": "active",
@@ -38,7 +38,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingProgram"
+        "fixedUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingProgram"
       },
       {
         "id" : "Extension.value[x]",

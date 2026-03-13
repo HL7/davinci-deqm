@@ -3,7 +3,7 @@
   "id": "guidanceresponse01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"
     ]
   },
   "reasonCode": [
@@ -22,13 +22,13 @@
               "valueString": "value"
             }
           ],
-          "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/reasonDetail"
+          "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/reasonDetail"
         }
       ],
       "coding": [
         {
           "code": "ValueInRange",
-          "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/care-gap-reason",
+          "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/care-gap-reason",
           "display": "Value is within specified range"
         }
       ]

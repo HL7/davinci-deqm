@@ -9,7 +9,7 @@
         "id": "single-gaps-closed-indv-report02",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-bundle-deqm"
           ]
         },
         "identifier": {
@@ -26,7 +26,7 @@
               "id": "gaps-composition03",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-composition-deqm"
                 ]
               },
               "status": "final",
@@ -71,16 +71,16 @@
               "id": "gaps-detectedissue05",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"
                 ]
               },
               "modifierExtension": [
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus",
                   "valueCodeableConcept": {
                     "coding": [
                       {
-                        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+                        "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/gaps-status",
                         "code": "closed-gap"
                       }
                     ]
@@ -118,12 +118,12 @@
               "id": "gaps-indv-measurereport04",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
                 ]
               },
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
                   "valueCodeableConcept": {
                     "coding": [
                       {
@@ -134,14 +134,14 @@
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
                   "valueIdentifier": {
                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                     "value": "0015HQN9BD3304E"
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
                     "reference": "Organization/gaps-organization-reportingvendor"
                   }
@@ -512,7 +512,7 @@
         "id": "single-gaps-closed-indv-report01",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-bundle-deqm"
           ]
         },
         "identifier": {
@@ -529,7 +529,7 @@
               "id": "gaps-composition02",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-composition-deqm"
                 ]
               },
               "status": "final",
@@ -574,16 +574,16 @@
               "id": "gaps-detectedissue03",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"
                 ]
               },
               "modifierExtension": [
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus",
                   "valueCodeableConcept": {
                     "coding": [
                       {
-                        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/gaps-status",
+                        "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/gaps-status",
                         "code": "closed-gap"
                       }
                     ]
@@ -621,12 +621,12 @@
               "id": "gaps-indv-measurereport03",
               "meta": {
                 "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
                 ]
               },
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
                   "valueCodeableConcept": {
                     "coding": [
                       {
@@ -637,14 +637,14 @@
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
                   "valueIdentifier": {
                     "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                     "value": "0015HQN9BD3304E"
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
                     "reference": "Organization/gaps-organization-reportingvendor"
                   }

@@ -15,7 +15,7 @@
       "valueCode": "trial-use"
     }
   ],
-  "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-data",
+  "url": "http://hl7.org/fhir/uv/deqm/OperationDefinition/bulk-submit-data",
   "version": "4.0.1",
   "name": "BulkSubmitData",
   "title": "Bulk Submit Data",

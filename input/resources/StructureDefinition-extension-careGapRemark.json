@@ -7,7 +7,7 @@
       "valueCode": "trial-use"
     }
   ],
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark",
+  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-careGapRemark",
   "name": "DEQMCareGapRemarkExtension",
   "title": "DEQM Care Gap Remark Extension",
   "status": "active",
@@ -307,7 +307,7 @@
         ],
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/care-gap-remark"
+          "valueSet": "http://hl7.org/fhir/uv/deqm/ValueSet/care-gap-remark"
         }
       },
       {
@@ -357,7 +357,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-careGapRemark"
+        "fixedUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-careGapRemark"
       },
       {
         "id": "Extension.value[x]",

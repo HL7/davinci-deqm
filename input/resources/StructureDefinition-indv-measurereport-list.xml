@@ -2,7 +2,7 @@
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
     <id value="indv-measurereport-list"/>
-    <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"/>
+    <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-list"/>
     <name value="DEQMIndividualMeasureReportList"/>
     <title value="DEQM Individual MeasureReport List"/>
     <status value="active"/>
@@ -40,7 +40,7 @@
             <short value="DEQM Individual MeasureReport"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"/>
             </type>
             <mustSupport value="true"/>
         </element>

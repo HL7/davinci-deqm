@@ -19,7 +19,7 @@
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
+        "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
         "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore",
         "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
     ],
@@ -108,7 +108,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/care-gaps",
+                            "definition": "http://hl7.org/fhir/uv/deqm/OperationDefinition/care-gaps",
                             "name": "care-gaps"
                         }
                     ],
@@ -154,12 +154,12 @@
                     "searchParam": [
                       {
                         "name": "measurereport-category",
-                        "definition": "http://hl7.org/fhir/us/davinci-deqm/SearchParameter/measurereport-category",
+                        "definition": "http://hl7.org/fhir/uv/deqm/SearchParameter/measurereport-category",
                         "type": "token"
                       }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
                     ],
                     "type": "MeasureReport"
                 },
@@ -183,7 +183,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-bundle-deqm"
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-bundle-deqm"
                     ],
                     "type": "Bundle"
                 }
@@ -195,7 +195,7 @@
     ],
     "status": "active",
     "title": "Gaps In Care Server CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/gic-server",
+    "url": "http://hl7.org/fhir/uv/deqm/CapabilityStatement/gic-server",
     "version": "3.0.0",
     "resourceType": "CapabilityStatement"
 }

@@ -15,7 +15,7 @@
       "valueCode" : "trial-use"
     }
   ],
-  "url": "http://hl7.org/fhir/us/davinci-deqm/SearchParameter/measurereport-category",
+  "url": "http://hl7.org/fhir/uv/deqm/SearchParameter/measurereport-category",
   "version": "3.0.0",
   "name": "MeasureReportCategory",
   "status": "active",

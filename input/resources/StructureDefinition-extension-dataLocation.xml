@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-dataLocation"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
+  <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-dataLocation"/>
   <version value="1.0.0"/>
   <name value="DEQMDataLocationExtension"/>
   <title value="DEQM Data Location Extension"/>
@@ -48,7 +48,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
+      <fixedUri value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-dataLocation"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>

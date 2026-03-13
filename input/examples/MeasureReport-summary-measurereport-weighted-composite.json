@@ -2,7 +2,7 @@
     "resourceType": "MeasureReport",
     "id": "summary-measurereport-weighted-composite",
     "meta": {
-        "profile": ["http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"]
+        "profile": ["http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"]
     },
     "language": "en",
     "status": "complete",
@@ -30,7 +30,7 @@
                     "valueString": "group-1"
                 },
                 {
-                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
                     "valueCodeableConcept": {
                         "coding": [
                             {
@@ -41,7 +41,7 @@
                     }
                 },
                 {
-                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation",
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-groupImprovementNotation",
                     "valueCodeableConcept": {
                         "coding": [
                             {

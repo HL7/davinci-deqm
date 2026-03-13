@@ -144,19 +144,19 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
 
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
                ]
             },
             "extension": [
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
                   "valueIdentifier": {
                      "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                      "value": "0015HQN9BD3304E"
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
                      "reference": "urn:uuid:a54890a2-45e7-11e9-bdf7-5cf3707b2e61"
                   }
@@ -166,7 +166,7 @@ Payer X who is acting in the role of a Reporter submits a MRP Individual Report 
             "evaluatedResources": {
                "extension": [
                   {
-                     "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-referenceAny",
+                     "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-referenceAny",
                      "valueReference": {
                         "reference": "urn:uuid:a548de80-45e7-11e9-83b6-5cf3707b2e61"
                      }

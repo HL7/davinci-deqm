@@ -3,13 +3,13 @@
     "id": "date-of-last-power-outage",
     "meta": {
         "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
         ],
         "source": "http://example.org/fhir/server"
     },
     "extension": [
         {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
             "valueCodeableConcept": {
                 "coding": [
                     {
@@ -22,7 +22,7 @@
     ],
     "status": "complete",
     "type": "summary",
-    "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/date-of-last-power-outage|5.0.0",
+    "measure": "http://hl7.org/fhir/uv/deqm/Measure/date-of-last-power-outage|5.0.0",
     "date": "2020-07-07T14:29:28-07:00",
     "period": {
         "start": "2018-07-07",
@@ -73,7 +73,7 @@
             "measureScore": {
                 "extension": [
                     {
-                        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType",
+                        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-alternateScoreType",
                         "valueDateTime": "2019-10-07T14:29:28-07:00"
                     }
                 ]

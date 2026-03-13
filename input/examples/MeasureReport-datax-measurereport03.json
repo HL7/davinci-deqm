@@ -3,13 +3,13 @@
     "id": "datax-measurereport03",
     "meta": {
         "profile": [
-            "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/datax-measurereport-deqm"
         ],
         "source": "http://example.org/fhir/server"
     },
     "extension": [
         {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-submitDataUpdateType",
             "valueCode": "incremental"
         }
     ],

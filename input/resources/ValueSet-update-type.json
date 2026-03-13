@@ -7,11 +7,11 @@
   "title": "DEQM Update Type Value Set",
   "experimental": false,
   "description": "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/update-type",
+  "url": "http://hl7.org/fhir/uv/deqm/ValueSet/update-type",
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/davinci-deqm/CodeSystem/update-type"
+        "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/update-type"
       }
     ]
   }

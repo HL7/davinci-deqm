@@ -7,7 +7,7 @@
       "valueCode" : "deprecated"
     }
   ],
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription",
+  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-populationDescription",
   "name": "DEQMPopulationDescription",
   "title": "DEQM Population Description",
   "status": "retired",
@@ -58,7 +58,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-populationDescription"
+        "fixedUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-populationDescription"
       },
       {
         "id": "Extension.value[x]",

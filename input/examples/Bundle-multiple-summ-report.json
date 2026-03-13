@@ -45,14 +45,14 @@
 				"resourceType": "MeasureReport",
 				"meta": {
 					"profile": [
-						"http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+						"http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
 					],
 					"source": "http://example.org/fhir/server"
 				},
 				"id": "summ-medicare-stratification-example",
 				"extension": [
 					{
-						"url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
 						"valueCodeableConcept": {
 							"coding": [
 								{
@@ -438,13 +438,13 @@
 			"resource": {
 				"meta": {
 					"profile": [
-						"http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+						"http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
 					],
 					"source": "http://example.org/fhir/server"
 				},
 				"extension": [
 					{
-						"url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
 						"valueCodeableConcept": {
 							"coding": [
 								{
@@ -583,13 +583,13 @@
 			"resource": {
 				"meta": {
 					"profile": [
-						"http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+						"http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
 					],
 					"source": "http://example.org/fhir/server"
 				},
 				"extension": [
 					{
-						"url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
 						"valueCodeableConcept": {
 							"coding": [
 								{
@@ -689,7 +689,7 @@
 						}
 					]
 				},
-				"measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
+				"measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
 				"period": {
 					"end": "2018-09-01",
 					"start": "2018-08-01"

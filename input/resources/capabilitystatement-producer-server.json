@@ -19,7 +19,7 @@
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
+        "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
         "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore",
         "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
     ],
@@ -125,7 +125,7 @@
     ],
     "status": "active",
     "title": "Producer Server CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/producer-server",
+    "url": "http://hl7.org/fhir/uv/deqm/CapabilityStatement/producer-server",
     "version": "3.0.0",
     "resourceType": "CapabilityStatement"
 }

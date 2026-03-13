@@ -2,7 +2,7 @@
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
     <id value="gaps-detectedissue-deqm"/>
-    <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
+    <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"/>
     <name value="DEQMGapsInCareDetectedIssueProfile"/>
     <title value="DEQM Gaps In Care Detected Issue Profile"/>
     <status value="active"/>
@@ -39,7 +39,7 @@
            <max value="1"/>
            <type>
              <code value="Extension"/>
-             <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus"/>
+             <profile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus"/>
            </type>
            <mustSupport value="true"/>
            <isModifier value="true"/>
@@ -76,8 +76,8 @@
             <comment value="The reason that this supports a reference to a DEQM Individual MeasureReport is because a DEQM Gaps In Care DetectedIssue may be used stand alone and not be part of the DEQM Gaps In Care Composition."/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"/>
+                <targetProfile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"/>
             </type>
             <min value="1"/>
             <max value="1"/>

@@ -1,7 +1,7 @@
 {
     "resourceType": "Measure",
     "id": "measure-mrp-example",
-    "url": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example",
+    "url": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example",
     "version": "1.1.1",
     "name": "DEQMMeasureMRPExample",
     "title": "MRP Measure",
@@ -21,7 +21,7 @@
         }
     ],
     "library": [
-        "http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example"
+        "http://hl7.org/fhir/uv/deqm/Library/library-mrp-example"
     ],
     "scoring": {
         "coding": [

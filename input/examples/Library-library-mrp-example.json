@@ -1,7 +1,7 @@
 {
     "resourceType": "Library",
     "id": "library-mrp-example",
-    "url": "http://hl7.org/fhir/us/davinci-deqm/Library/library-mrp-example",
+    "url": "http://hl7.org/fhir/uv/deqm/Library/library-mrp-example",
     "name": "DEQMLibraryMRPExample",
     "title": "DEQM Library MRP Example",
     "status": "active",
@@ -18,7 +18,7 @@
         {
             "type": "MeasureReport",
             "profile": [
-                "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/datax-measurereport-deqm"
+                "http://hl7.org/fhir/uv/deqm/StructureDefinition/datax-measurereport-deqm"
             ]
         },
         {

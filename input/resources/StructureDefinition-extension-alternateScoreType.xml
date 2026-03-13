@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-alternateScoreType"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+  <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-alternateScoreType"/>
   <version value="1.1.1"/>
   <name value="DEQMAlternateScoreTypeExtension"/>
   <title value="DEQM Alternate Score Type Extension"/>
@@ -52,7 +52,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType"/>
+      <fixedUri value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-alternateScoreType"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>

@@ -11,7 +11,7 @@
             "valueCode": "trial-use"
         }
     ],
-    "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/collect-data",
+    "url": "http://hl7.org/fhir/uv/deqm/OperationDefinition/collect-data",
     "version": "4.0.1",
     "name": "CollectData",
     "title": "Collect Data",

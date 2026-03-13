@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-reportingVendor"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
+  <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor"/>
   <version value="1.1.1"/>
   <name value="DEQMreportingVendorExtension"/>
   <title value="DEQM Reporting Vendor Extension"/>
@@ -48,7 +48,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor"/>
+      <fixedUri value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>

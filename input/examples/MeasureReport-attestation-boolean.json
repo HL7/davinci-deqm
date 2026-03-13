@@ -3,12 +3,12 @@
   "id": "attestation-boolean-example",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
     ]
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
       "valueCodeableConcept": {
         "coding": [
           {
@@ -21,7 +21,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/attestation-boolean-example|5.0.0",
+  "measure": "http://hl7.org/fhir/uv/deqm/Measure/attestation-boolean-example|5.0.0",
   "date": "2023-04-01",
   "reporter": {
     "reference": "Organization/organization01"
@@ -50,7 +50,7 @@
       "measureScore": {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-alternateScoreType",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-alternateScoreType",
             "valueBoolean": true
           }
         ]

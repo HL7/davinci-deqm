@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "extension-gapStatus",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus",
+  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus",
   "name": "DEQMGapStatusModifierExtension",
   "title": "DEQM Gap Status Modifier Extension",
   "status": "active",
@@ -51,7 +51,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-gapStatus"
+        "fixedUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus"
       },
       {
         "id": "Extension.value[x]",
@@ -63,7 +63,7 @@
         ],
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/davinci-deqm/ValueSet/gaps-status"
+          "valueSet": "http://hl7.org/fhir/uv/deqm/ValueSet/gaps-status"
         }
       }
     ]

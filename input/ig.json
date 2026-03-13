@@ -40,49 +40,25 @@
             ]
         }
     ],
-    "url": "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
-    "version": "5.0.0",
-    "packageId": "hl7.fhir.us.davinci-deqm",
+    "url": "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
+    "version": "1.0.0-ballot",
+    "packageId": "hl7.fhir.uv.deqm",
     "dependsOn": [
         {
-            "version": "6.3.0",
-            "id": "tx",
-            "packageId": "hl7.terminology.r4",
-            "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"
-        },
-        {
-            "version": "0.22.0",
-            "id": "vsac",
-            "packageId": "us.nlm.vsac",
-            "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"
-        },
-        {
-            "version": "6.0.0",
-            "id": "qicore",
-            "packageId": "hl7.fhir.us.qicore",
-            "uri": "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore"
-        },
-        {
-            "version": "6.1.0",
-            "id": "uscore",
-            "packageId": "hl7.fhir.us.core",
-            "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"
-        },
-        {
-            "version": "5.0.0",
-            "id": "cqfm",
-            "packageId": "hl7.fhir.us.cqfmeasures",
-            "uri": "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
-        },
-        {
-            "version": "4.0.1",
-            "id": "cqf",
-            "packageId": "fhir.cqf.common",
-            "uri": "http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common"
+            "version": "dev",
+            "id": "cqm",
+            "packageId": "hl7.fhir.uv.cqm",
+            "uri": "http://hl7.org/fhir/uv/cqm/ImplementationGuide/hl7.fhir.uv.cqm"
         }
     ],
     "fhirVersion": ["4.0.1"],
     "definition": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+                "valueCode": "hl7.fhir.us.qicore#6.0.0"
+            }
+        ],
         "parameter": [
             {
                 "code": "special-url",
@@ -206,7 +182,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "STU5"
+                "value": "STU 1 Ballot"
             },
             {
                 "code": "excludexml",
@@ -223,10 +199,6 @@
             {
                 "code": "excludemap",
                 "value": "true"
-            },
-            {
-                "code": "auto-oid-root",
-                "value": "2.16.840.1.113883.4.642.40.23"
             },
             {
                 "code": "pin-canonicals",
@@ -1132,5 +1104,5 @@
             {"name": "base"}
         ]
     },
-    "id": "hl7.fhir.us.davinci-deqm"
+    "id": "hl7.fhir.uv.deqm"
 }

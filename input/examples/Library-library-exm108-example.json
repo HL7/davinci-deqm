@@ -4,7 +4,7 @@
   "meta": {
     "profile": [ "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary" ]
   },
-  "url": "http://hl7.org/fhir/us/davinci-deqm/Library/library-exm108-example",
+  "url": "http://hl7.org/fhir/uv/deqm/Library/library-exm108-example",
   "identifier": [ {
     "use": "official",
     "system": "http://example.org/fhir/cqi/ecqm/Library/Identifier",

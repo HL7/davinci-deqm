@@ -621,13 +621,13 @@
             "id": "indv-measurereport02a",
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
                ],
                "source": "http://example.org/fhir/server"
             },
             "extension": [
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
                   "valueCodeableConcept": {
                      "coding": [
                         {
@@ -638,14 +638,14 @@
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
                   "valueIdentifier": {
                      "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                      "value": "0015HQN9BD3304E"
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
                      "reference": "Organization/organization02"
                   }
@@ -748,7 +748,7 @@
                   }
                ]
             },
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
+            "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
             "period": {
                "end": "2018-09-01",
                "start": "2018-08-01"
@@ -826,13 +826,13 @@
             "id": "indv-measurereport02",
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
                ],
                "source": "http://example.org/fhir/server"
             },
             "extension": [
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
                   "valueCodeableConcept": {
                      "coding": [
                         {
@@ -843,14 +843,14 @@
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
                   "valueIdentifier": {
                      "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                      "value": "0015HQN9BD3304E"
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
                      "reference": "Organization/organization02"
                   }
@@ -953,7 +953,7 @@
                   }
                ]
             },
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
+            "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
             "period": {
                "end": "2018-09-01",
                "start": "2018-08-01"
@@ -1047,13 +1047,13 @@
             "id": "indv-measurereport02b",
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
                ],
                "source": "http://example.org/fhir/server"
             },
             "extension": [
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
                   "valueCodeableConcept": {
                      "coding": [
                         {
@@ -1064,14 +1064,14 @@
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
                   "valueIdentifier": {
                      "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                      "value": "0015HQN9BD3304E"
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
                   "valueReference": {
                      "reference": "Organization/organization02"
                   }
@@ -1174,7 +1174,7 @@
                   }
                ]
             },
-            "measure": "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
+            "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
             "period": {
                "end": "2018-09-01",
                "start": "2018-08-01"

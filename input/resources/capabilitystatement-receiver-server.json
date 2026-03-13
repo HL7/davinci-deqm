@@ -19,7 +19,7 @@
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
+        "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
         "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore",
         "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
     ],
@@ -131,14 +131,14 @@
                     "searchParam": [
                       {
                         "name": "measurereport-category",
-                        "definition": "http://hl7.org/fhir/us/davinci-deqm/SearchParameter/measurereport-category",
+                        "definition": "http://hl7.org/fhir/uv/deqm/SearchParameter/measurereport-category",
                         "type": "token"
                       }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm",
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm",
-                        "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subjectlist-measurereport-deqm"
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm",
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm",
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/subjectlist-measurereport-deqm"
                     ],
                     "type": "MeasureReport"
                 }
@@ -150,7 +150,7 @@
     ],
     "status": "active",
     "title": "Receiver Server CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/receiver-server",
+    "url": "http://hl7.org/fhir/uv/deqm/CapabilityStatement/receiver-server",
     "version": "3.0.0",
     "resourceType": "CapabilityStatement"
 }

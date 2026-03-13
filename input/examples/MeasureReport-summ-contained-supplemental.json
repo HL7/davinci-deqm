@@ -3,13 +3,13 @@
   "id": "summ-contained-supplemental",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/summary-measurereport-deqm"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
     ],
     "source": "http://example.org/fhir/server"
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+      "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
       "valueCodeableConcept": {
         "coding": [
           {

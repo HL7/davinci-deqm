@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-certificationIdentifier"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier"/>
+  <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier"/>
   <version value="1.1.1"/>
   <name value="DEQMCertificationIdentifierExtension"/>
   <title value="DEQM Certification Identifier Extension"/>
@@ -48,7 +48,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-certificationIdentifier"/>
+      <fixedUri value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>

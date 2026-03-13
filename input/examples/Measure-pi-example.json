@@ -24,7 +24,7 @@
       "reference" : "Device/deqm-software-system-example"
     }
   }],
-  "url" : "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-pi-example",
+  "url" : "http://hl7.org/fhir/uv/deqm/Measure/measure-pi-example",
   "identifier" : [{
     "system" : "http://example.org/fhir/cqi/ecqm/Measure/Identifier/exm",
     "value" : "EXMPI"

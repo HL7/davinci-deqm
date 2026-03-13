@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-calculatedDate"/>
-  <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-calculatedDate"/>
+  <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-calculatedDate"/>
   <version value="1.0.0"/>
   <name value="DEQMCalculatedDateExtension"/>
   <title value="DEQM Calculated Date Extension"/>
@@ -47,7 +47,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-calculatedDate"/>
+      <fixedUri value="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-calculatedDate"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>

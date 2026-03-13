@@ -1,7 +1,7 @@
 {
   "resourceType": "Library",
   "id": "library-exm124-example",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/Library/library-exm124-example",
+  "url": "http://hl7.org/fhir/uv/deqm/Library/library-exm124-example",
   "version": "2.0.0",
   "name": "DEQMLibraryEXM124Example",
   "status": "active",

@@ -11,7 +11,7 @@ HTTP/1.1 400 Not Found
       "details": {
         "text": "Snapshot/Incremental update is not supported."
       },
-      "diagnostics": "Resubmit the payload as a snapshot/incremental update and populate the extension http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataa-updateType" with the code 'snapshot'/'incremental'"
+      "diagnostics": "Resubmit the payload as a snapshot/incremental update and populate the extension http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-dataa-updateType" with the code 'snapshot'/'incremental'"
     }
   ]
 }

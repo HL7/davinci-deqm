@@ -19,7 +19,7 @@
         "json"
     ],
     "implementationGuide": [
-        "http://hl7.org/fhir/us/davinci-deqm/ImplementationGuide/hl7.fhir.us.davinci-deqm",
+        "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
         "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore",
         "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
     ],
@@ -118,7 +118,7 @@
                                     "valueCode": "SHALL"
                                 },
                                 {
-                                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+                                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-submitDataUpdateType",
                                     "valueCode": "incremental"
                                 }
                             ],
@@ -133,11 +133,11 @@
                                     "valueCode": "SHOULD"
                                 },
                                 {
-                                    "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-submitDataUpdateType",
+                                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-submitDataUpdateType",
                                     "valueCode": "incremental"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-data",
+                            "definition": "http://hl7.org/fhir/uv/deqm/OperationDefinition/bulk-submit-data",
                             "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
                             "name": "bulk-submit-data"
                         }
@@ -155,7 +155,7 @@
     ],
     "status": "active",
     "title": "Consumer Server CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/consumer-server",
+    "url": "http://hl7.org/fhir/uv/deqm/CapabilityStatement/consumer-server",
     "version": "3.0.0",
     "resourceType": "CapabilityStatement"
 }

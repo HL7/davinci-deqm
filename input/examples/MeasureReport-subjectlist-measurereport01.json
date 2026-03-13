@@ -3,7 +3,7 @@
   "id" : "subjectlist-measurereport01",
   "meta" : {
     "profile" : [
-      "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/subjectlist-measurereport-deqm"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/subjectlist-measurereport-deqm"
     ]
   },
   "contained" : [
@@ -12,7 +12,7 @@
       "id" : "list1",
       "meta" : {
         "profile" : [
-          "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-list"
+          "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-list"
         ]
       },
       "status" : "current",
@@ -33,7 +33,7 @@
   ],
   "extension": [
     {
-        "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring",
+        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
         "valueCodeableConcept": {
             "coding": [
                 {
@@ -46,7 +46,7 @@
   ],
   "status" : "complete",
   "type" : "subject-list",
-  "measure" : "http://hl7.org/fhir/us/davinci-deqm/Measure/measure-mrp-example|5.0.0",
+  "measure" : "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
   "date": "2023-05-31",
   "reporter" : {
     "reference" : "Organization/organization01"

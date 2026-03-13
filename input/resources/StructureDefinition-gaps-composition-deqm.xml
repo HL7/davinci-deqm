@@ -2,7 +2,7 @@
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
     <id value="gaps-composition-deqm"/>
-    <url value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-composition-deqm"/>
+    <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-composition-deqm"/>
     <name value="DEQMGapsInCareCompositionProfile"/>
     <title value="DEQM Gaps In Care Composition Profile"/>
     <status value="active"/>
@@ -90,7 +90,7 @@
             <min value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/indv-measurereport-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -100,7 +100,7 @@
             <min value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/gaps-detectedissue-deqm"/>
+                <targetProfile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"/>
             </type>
             <mustSupport value="true"/>
         </element>

@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "extension-groupImprovementNotation",
-  "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation",
+  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-groupImprovementNotation",
   "version": "1.1.1",
   "name": "DEQMGroupImprovementNotationExtension",
   "title": "DEQM Group Improvement Notation Extension",
@@ -29,7 +29,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-groupImprovementNotation"
+        "fixedUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-groupImprovementNotation"
       },
       {
         "id": "Extension.value[x]",

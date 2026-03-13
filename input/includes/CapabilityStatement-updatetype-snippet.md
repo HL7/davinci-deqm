@@ -19,14 +19,14 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-updateType",
+              "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-updateType",
               "valueCode": "incremental"
             }
           ]
         },{
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-updateType",
+              "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-updateType",
               "valueCode": "snapshot"
             }
           ]
