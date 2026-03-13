@@ -137,9 +137,19 @@
                                     "valueCode": "incremental"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-data",
+                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit",
                             "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
-                            "name": "bulk-submit-data"
+                            "name": "bulk-submit"
+                        },
+						{
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
+                                }
+                            ],
+                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-status",
+                            "name": "bulk-submit-status"
                         }
                     ],
                     "supportedProfile": [

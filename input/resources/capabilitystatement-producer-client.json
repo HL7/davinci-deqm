@@ -149,9 +149,19 @@
                                     "valueCode": "SHOULD"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-data",
+                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit",
                             "documentation": "It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer Server CapabilityStatement.",
-                            "name": "bulk-submit-data"
+                            "name": "bulk-submit"
+                        },
+						{
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
+                                }
+                            ],
+                            "definition": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-status",
+                            "name": "bulk-submit-status"
                         }
                     ],
                     "supportedProfile": [
