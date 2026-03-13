@@ -42,7 +42,6 @@ The following resources are used in the Gaps in Care Reporting Scenario:
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
-|Group|DEQM Gaps In Care Group Profile|[DEQM Gaps In Care Group Profile]|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 {: .grid}
 
@@ -74,22 +73,7 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a G
 
 A report calculated on any given date provides all of the data from the server's system as of that date. A request for a previous time period will still show all data available as of the date the report is calculated. Therefore, a requester can ask for multiple reports, save them and compare them, but not request data "as of" previous dates.
 
-The updated operation, [care-gaps](OperationDefinition-care-gaps.html), makes the following changes to the existing input parameters in the base operation:
-- **periodStart** is still required, but the description is modified to reference the start date of the [gaps through period].
-- **periodEnd** is still required, but the description is modified to reference the end of the [gaps through period].
--	**topic** is an optional parameter for which the cardinality has been updated to allow multiple topics to be specified.
--	**subject** can now point to either a patient or a group of patients. Subject is optional when run a Gaps in Care Report for an organization or a practitioner of an organization.
-
-Several new input parameters are specified and added to the [care-gaps](OperationDefinition-care-gaps.html) operation defined in this guide:
-- **practitioner** references a practitioner for which the Gaps in Care Report will be created.
-- **organization** references an organization for which the Gaps in Care Report will be created.
--	**status** is required, it SHALL be a code from the [gaps status value set], which indicates an open, closed, or prospective gap. For the Gaps in Care Report to return [open, closed, and prospective gaps], the status must indicate all three.
--	**measureId** is the id of a Measure resource that is on the server for which the gaps in care will be reported. The Client will need to check with the Server to know the identifiers used by the Server to uniquely identify measures. This parameter is one of the three options provided by this operation to specify one or more measures for which the Gaps in Care Report will be created.
-- **measureIdentifier** is the business identifier for a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
-- **measureUrl** is the url of a measure. This parameter is one of the three options provided by this operation to specify one or more measures for the which the Gaps in Care Report will be created.  
--	**program** is used to specify one or more programs that a provider or an organization participates in. For example, the program may be a risk based, value based, or other performance program such as the Merit-based Incentive Payment System (MIPS) and Hospital Quality Reporting programs of CMS.
-
-The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter: **return**. In comparison to the return output parameter specified in the [base care-gaps operation], the **return** here returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
+The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter, **return**, which returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
 
 Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
 {% include img-narrow.html img="gic-care-gaps-operation-single-patient.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
