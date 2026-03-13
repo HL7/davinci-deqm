@@ -7,11 +7,12 @@ The list of operations defined by this implementation guide.
 |---|
 |$care-gaps operation|[$care-gaps](OperationDefinition-care-gaps.html)|
 |$collect-data operation|[$collect-data](OperationDefinition-collect-data.html)|
-|$bulk-submit-data operation|[$bulk-submit-data](OperationDefinition-bulk-submit-data.html) NOTE: To be aligned|
+|$bulk-submit operation|[$bulk-submit](OperationDefinition-bulk-submit.html)
+|$bulk-submit-status operation|[$bulk-submit-status](OperationDefinition-bulk-submit-status.html)
 |$evaluate operation|[$evaluate](OperationDefinition-evaluate.html)
 |$submit-data operation|[$submit-data](OperationDefinition-submit-data.html) (DEPRECATED)|
 
-> NOTE: Generalized bulk data operations in FHIR are in the process of being updated based on implementer feedback and as part of industry initiatives. As of the time of this publication, those specification updates are still in progress. Implementers should be aware that the $bulk-submit-data operation proposed by this specification will be updated (up to and included simply removed in favor of referencing updated operations) when newer versions of the bulkdata import and export specifications are published.
+> NOTE: As of the time of this publication, the [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/en/) is in the process of being updated based on implementer feedback as part of industry initiatives. Its specification for "Bulk Submit" is still under development and has been adopted by DEQM with the $bulk-submit operation before it has been balloted in the Bulk Data Access IG.
 {:.stu-note}
 <br />
 

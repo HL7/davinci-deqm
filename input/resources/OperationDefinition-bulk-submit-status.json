@@ -1,0 +1,53 @@
+{
+    "resourceType": "OperationDefinition",
+    "id": "bulk-submit-status",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 0
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+        }
+    ],
+    "url": "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/bulk-submit-status",
+    "version": "4.0.1",
+    "name": "BulkSubmitStatus",
+    "title": "Bulk Submit Status",
+    "status": "active",
+    "kind": "operation",
+    "date": "2026-03-12T10:00:00-05:00",
+    "publisher": "The MITRE Corporation",
+    "description": "The bulk-submit-status operation sends a status request for a previous bulk-submit operation request.",
+    "code": "bulk-submit-status",
+    "system": true,
+    "type": false,
+    "instance": false,
+    "parameter": [
+        {
+            "name": "submitter",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The submitter must match a system and code specified by the Data Recipient (coordinated out-of-band or in an implementation guide specific to a use case).",
+            "type": "Identifier"
+        },
+        {
+            "name": "submissionId",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The value must be unique for the submitter.",
+            "type": "string"
+        },
+        {
+            "name": "_outputFormat",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The format for the generated bulk data files used to return OperationOutcome resources related to the submission status and, when applicable, other resources. Currently, ndjson must be supported, though servers may choose to also support other output formats. Servers SHALL support the full content type of application/fhir+ndjson as well as abbreviated representations including application/ndjson and ndjson. Defaults to application/fhir+ndjson.",
+            "type": "string"
+        }
+    ]
+}
