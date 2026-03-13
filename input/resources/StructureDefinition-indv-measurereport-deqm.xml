@@ -205,6 +205,30 @@
         <profile value="http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"/>
       </type>
     </element>
+    <element id="MeasureReport.extension:limitations">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="limitations"/>
+      <short value="identifies what limitations should be noted, including potential selection biases and confounding factors when interpreting indicator results or comparing results across the country. If the extension is present in the Measure, then it SHALL be in the MeasureReport (MustSupport) and SHALL at least contain a copy of the content from the Measure. It is permissible to add content to the extensions in the MeasureReport."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-limitations"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MeasureReport.extension:trendingIssues">
+      <path value="MeasureReport.extension"/>
+      <sliceName value="trendingIssues"/>
+      <short value="identifies what issues might affect the interpretation of trending results, including changes in geographic coverage, data quality, coding standards and classification changes (for example, a new ICD standard). If the extension is present in the Measure, then it SHALL be in the MeasureReport (MustSupport) and SHALL at least contain a copy of the content from the Measure. It is permissible to add content to the extensions in the MeasureReport."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-trendingIssues"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <mustSupport value="true"/>
