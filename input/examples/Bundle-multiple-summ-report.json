@@ -45,14 +45,14 @@
 				"resourceType": "MeasureReport",
 				"meta": {
 					"profile": [
-						"http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
+						"http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport"
 					],
 					"source": "http://example.org/fhir/server"
 				},
 				"id": "summ-medicare-stratification-example",
 				"extension": [
 					{
-						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
 						"valueCodeableConcept": {
 							"coding": [
 								{
@@ -65,7 +65,7 @@
 				],
 				"status": "complete",
 				"type": "summary",
-				"measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM55-FHIR|5.0.0",
+				"measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM55-FHIR|1.0.0-ballot",
 				"date": "2018-09-05T16:59:52.404Z",
 				"period": {
 					"start": "2018-01-01",
@@ -438,13 +438,13 @@
 			"resource": {
 				"meta": {
 					"profile": [
-						"http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
+						"http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport"
 					],
 					"source": "http://example.org/fhir/server"
 				},
 				"extension": [
 					{
-						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
 						"valueCodeableConcept": {
 							"coding": [
 								{
@@ -561,7 +561,7 @@
 						}
 					]
 				},
-				"measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130-FHIR|8.0.000",
+				"measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
 				"period": {
 					"end": "2019-09-01",
 					"start": "2019-08-01"
@@ -583,13 +583,13 @@
 			"resource": {
 				"meta": {
 					"profile": [
-						"http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
+						"http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport"
 					],
 					"source": "http://example.org/fhir/server"
 				},
 				"extension": [
 					{
-						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+						"url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
 						"valueCodeableConcept": {
 							"coding": [
 								{
@@ -689,7 +689,7 @@
 						}
 					]
 				},
-				"measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
+				"measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|1.0.0-ballot",
 				"period": {
 					"end": "2018-09-01",
 					"start": "2018-08-01"

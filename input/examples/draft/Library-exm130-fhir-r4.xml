@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Library xmlns="http://hl7.org/fhir">
   <id value="exm130-fhir-r4"/>
-  <url value="http://hl7.org/fhir/us/cqfmeasures/Library/exm130-fhir"/>
+  <url value="http://hl7.org/fhir/uv/cqm/Library/exm130-fhir"/>
   <identifier>
     <use value="official"/>
     <system value="http://example.org/fhir/cqi/ecqm/Library/Identifier"/>
@@ -41,23 +41,23 @@
   <lastReviewDate value="2019-08-03"/>
   <relatedArtifact>
     <type value="depends-on"/>
-    <resource value="http://hl7.org/fhir/us/cqfmeasures/Library/adultoutpatientencounters-fhir"/>
+    <resource value="http://hl7.org/fhir/uv/cqm/Library/adultoutpatientencounters-fhir"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <resource value="http://hl7.org/fhir/us/cqfmeasures/Library/matglobalcommonfunctions-fhir"/>
+    <resource value="http://hl7.org/fhir/uv/cqm/Library/matglobalcommonfunctions-fhir"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <resource value="http://hl7.org/fhir/us/cqfmeasures/Library/hospice-fhir"/>
+    <resource value="http://hl7.org/fhir/uv/cqm/Library/hospice-fhir"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <resource value="http://hl7.org/fhir/us/cqfmeasures/Library/fhirhelpers"/>
+    <resource value="http://hl7.org/fhir/uv/cqm/Library/fhirhelpers"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <resource value="http://hl7.org/fhir/us/cqfmeasures/Library/supplementaldataelements-fhir"/>
+    <resource value="http://hl7.org/fhir/uv/cqm/Library/supplementaldataelements-fhir"/>
   </relatedArtifact>
   <dataRequirement>
     <type value="Encounter"/>

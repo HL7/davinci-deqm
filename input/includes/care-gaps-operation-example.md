@@ -52,7 +52,7 @@ Request:
 
 ~~~
 GET [base]/Measure/$care-gaps?measureIdentifier=http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/cms|130&periodStart=2014-01&periodEnd=2014-03&status=open-gap&subject=Patient/124
-GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130|7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&subject=Patient/124
+GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/uv/cqm/Measure/EXM130|7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&subject=Patient/124
 ~~~
 
 Request: 
@@ -63,6 +63,6 @@ Request:
 
 ~~~
 GET [base]/Measure/$care-gaps?measureIdentifier=http://hl7.org/fhir/cqi/ecqm/Measure/Identifier/cms|130&periodStart=2014-01&periodEnd=2014-03&status=open-gap&organization=Organization/124
-GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130|7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&&organization=Organization/124&practitioner=Practitioner/124
+GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/uv/cqm/Measure/EXM130|7.3.000&periodStart=2014-01&periodEnd=2014-03&status=open-gap&&organization=Organization/124&practitioner=Practitioner/124
 ~~~
 

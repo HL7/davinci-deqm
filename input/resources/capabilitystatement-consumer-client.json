@@ -123,7 +123,7 @@
                             "valueCode": "SHALL"
                         }
                     ],
-                    "documentation": "The DaVinci DEQM Consumer Client **SHOULD** be capable of supporting the DEQM MeasureReport Profile and all the DEQM, CQFM and QI Core Profiles they reference.",
+                    "documentation": "The DaVinci DEQM Consumer Client **SHOULD** be capable of supporting the DEQM MeasureReport Profile and all the DEQM, CQM and QI Core Profiles they reference.",
                     "interaction": [
                         {
                             "extension": [
@@ -136,7 +136,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/datax-measurereport-deqm"
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
                     ],
                     "type": "MeasureReport"
                 }

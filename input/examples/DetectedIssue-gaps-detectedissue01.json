@@ -3,16 +3,16 @@
   "id": "gaps-detectedissue01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincaredetectedissue"
     ]
   },
   "modifierExtension": [
     {
-      "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus",
+      "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapStatus",
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/gaps-status",
+            "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-gaps-status",
             "code": "open-gap"
           }
         ]

@@ -20,8 +20,7 @@
     ],
     "implementationGuide": [
         "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
-        "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore",
-        "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
+        "http://hl7.org/fhir/uv/cqm/ImplementationGuide/hl7.fhir.uv.cqm"
     ],
     "jurisdiction": [
         {
@@ -41,7 +40,7 @@
     "publisher": "HL7 International - Clinical Quality Information Work Group",
     "rest": [
         {
-            "documentation": "Da Vinci DEQM Consumer Server **SHALL**\n\n1. Support the Submit Data transaction defined in the *Framework* Section of  this  Implementation Guide.\n1. Declare a CapabilityStatement identifying the list of supported profiles and operations.\n   - Use the [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.\n1. Implement the FHIR RESTful API for operations including returning the appropriate response classes as described in the FHIR specification for [Extended Operations on the RESTful API ](http://hl7.org/fhir/R4/operations.html).\n1. Support both xml and json resource formats for all interactions.",
+            "documentation": "Da Vinci DEQM Consumer Server **SHALL**\n\n1. Support the Submit Data transaction defined in the *Framework* Section of  this  Implementation Guide.\n1. Declare a CapabilityStatement identifying the list of supported profiles and operations.\n   - Use the [DEQM Submit Data Update Type Extension](StructureDefinition-deqm-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.\n1. Implement the FHIR RESTful API for operations including returning the appropriate response classes as described in the FHIR specification for [Extended Operations on the RESTful API ](http://hl7.org/fhir/R4/operations.html).\n1. Support both xml and json resource formats for all interactions.",
             "interaction": [
                 {
                     "extension": [
@@ -118,12 +117,12 @@
                                     "valueCode": "SHALL"
                                 },
                                 {
-                                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-submitDataUpdateType",
+                                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
                                     "valueCode": "incremental"
                                 }
                             ],
                             "definition": "http://hl7.org/fhir/OperationDefinition/Measure-submit-data",
-                            "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
+                            "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-deqm-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
                             "name": "submit-data"
                         },
                         {
@@ -133,12 +132,12 @@
                                     "valueCode": "SHOULD"
                                 },
                                 {
-                                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-submitDataUpdateType",
+                                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
                                     "valueCode": "incremental"
                                 }
                             ],
                             "definition": "http://hl7.org/fhir/uv/deqm/OperationDefinition/bulk-submit-data",
-                            "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-extension-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
+                            "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-deqm-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
                             "name": "bulk-submit-data"
                         }
                     ],

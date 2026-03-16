@@ -47,10 +47,10 @@ HTTP/1.1 200 OK
   "id": "EXM130",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/library-cqfm"
+      "http://hl7.org/fhir/uv/cqm/StructureDefinition/library-cqm"
     ]
   },
-  "url": "http://hl7.org/fhir/us/cqfmeasures/Library/EXM130",
+  "url": "http://hl7.org/fhir/uv/cqm/Library/EXM130",
   "identifier": [
     {
       "use": "official",
@@ -93,7 +93,7 @@ HTTP/1.1 200 OK
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/intended-venue-codes",
+            "system": "http://hl7.org/fhir/uv/cqm/CodeSystem/intended-venue-codes",
             "code": "ec",
             "display": "EC"
           }
@@ -124,19 +124,19 @@ HTTP/1.1 200 OK
     },
     {
       "type": "depends-on",
-      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/Hospice|2.0.000"
+      "resource": "http://hl7.org/fhir/uv/cqm/Library/Hospice|2.0.000"
     },
     {
       "type": "depends-on",
-      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/AdultOutpatientEncounters|2.0.000"
+      "resource": "http://hl7.org/fhir/uv/cqm/Library/AdultOutpatientEncounters|2.0.000"
     },
     {
       "type": "depends-on",
-      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/MATGlobalCommonFunctions|5.0.000"
+      "resource": "http://hl7.org/fhir/uv/cqm/Library/MATGlobalCommonFunctions|5.0.000"
     },
     {
       "type": "depends-on",
-      "resource": "http://hl7.org/fhir/us/cqfmeasures/Library/SupplementalDataElements|2.0.0"
+      "resource": "http://hl7.org/fhir/uv/cqm/Library/SupplementalDataElements|2.0.0"
     },
     {
       "type": "depends-on",

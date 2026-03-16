@@ -4,7 +4,7 @@
     {
       "type": "Measure",
       "supportedProfile": [
-        "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm"
+        "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-measure"
       ],
       "interaction": [
         {
@@ -19,14 +19,14 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-updateType",
+              "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-updateType",
               "valueCode": "incremental"
             }
           ]
         },{
           "extension": [
             {
-              "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-updateType",
+              "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-updateType",
               "valueCode": "snapshot"
             }
           ]

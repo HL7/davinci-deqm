@@ -3,7 +3,7 @@
   "id": "detailedguidanceresponse02",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-guidanceresponse-detailedcaregap"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-detailedcaregapguidanceresponse"
     ]
   },
   "moduleUri": "http://someguidelineprovider.org/medication-adherence-guidelines.html",
@@ -15,7 +15,7 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/care-gap-reason",
+          "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-care-gap-reason",
           "code": "CountOutOfRange",
           "display": "Count is out of specified range"
         }

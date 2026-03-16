@@ -12,16 +12,16 @@
               "resourceType": "MeasureReport",
               "id": "datax-measurereport03",
               "meta": {
-                "profile": ["http://hl7.org/fhir/uv/deqm/StructureDefinition/datax-measurereport-deqm"]
+                "profile": ["http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"]
               },
               "extension": [{
-                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-submitDataUpdateType",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
                   "valueCode": "incremental"
                 }
               ],
               "status": "complete",
               "type": "data-collection",
-              "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130-FHIR|8.0.000",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
               "subject": {
                 "reference": "Patient/patient03"
               },

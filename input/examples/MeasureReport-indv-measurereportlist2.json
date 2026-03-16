@@ -3,7 +3,7 @@
       "id" : "list2",
       "meta" : {
         "profile" : [
-          "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-list"
+          "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereportlist"
         ]
       },
       "status" : "current",

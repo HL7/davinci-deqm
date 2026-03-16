@@ -3,26 +3,26 @@
     "id": "indv-measurereport-weighted-composite",
     "meta": {
         "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
         ]
     },
     "language": "en",
     "extension": [
         {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-certificationIdentifier",
             "valueIdentifier": {
                 "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                 "value": "0015HQN9BD3304E"
             }
         },
         {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingVendor",
             "valueReference": {
                 "reference": "Organization/organization02"
             }
         },
         {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-dataLocation",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataLocation",
             "valueReference": {
                 "reference": "Location/location01"
             }
@@ -50,7 +50,7 @@
                     "valueString": "mpr-group"
                 },
                 {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
                     "valueCodeableConcept": {
                         "coding": [
                             {
@@ -61,7 +61,7 @@
                     }
                 },
                 {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-groupImprovementNotation",
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-groupImprovementNotation",
                     "valueCodeableConcept": {
                         "coding": [
                             {
@@ -72,7 +72,7 @@
                     }
                 },
                 {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-calculatedDate",
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-calculatedDate",
                     "valueDateTime": "2026-01-01"
                 }
             ],

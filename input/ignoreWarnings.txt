@@ -1,16 +1,13 @@
 == Suppressed Messages == 
 
 # 01 - These code systems have been approved by TSMG: https://confluence.hl7.org/spaces/VOC/pages/288397544/2024-12-02+TI+Chair+Agenda+Minutes
-INFORMATION: CodeSystem/care-gap-reason: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: CodeSystem/care-gap-remark: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: CodeSystem/gaps-status: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: CodeSystem/remark-reason: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/deqm-care-gap-reason: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/deqm-care-gap-remark: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/deqm-gaps-status: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/deqm-remark-reason: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # 02 - This code system has been approved by TSMG: https://confluence.hl7.org/spaces/TSMG/pages/324964674/2025-03-10+TSMG+Agenda+and+Minutes
-INFORMATION: CodeSystem/update-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-
-# 03 - Updating to 7 will be performed in a future release, we need QICore to be 7 as well before we can do this
-WARNING: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 7.0.0. This reference is getting old and the more recent version should be considered
+INFORMATION: CodeSystem/deqm-update-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # 04 - DaVinci Warnings, we have addressed the downloads issues, and plan to address the rest of these with the next publication
 WARNING: DA VINCI: The home page (index.html) must include an h3 section called Content and Organization.
@@ -206,7 +203,7 @@ None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/
 # 21 - The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/measure-type|3.0.0
-INFORMATION: StructureDefinition/datax-measurereport-deqm: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+INFORMATION: StructureDefinition/deqm-dataexchangemeasurereport: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
 
 # 24 - Validated these counts are correct
@@ -215,9 +212,9 @@ INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].p
 INFORMATION: MeasureReport/subjectlist-measurereport01: MeasureReport.group[0].population[2]: Unable to check the stated count 2 because the subject list cannot be fully processed (Subject reference MeasureReport resolved to a #list1, which could not be processed)
 
 # 25 - Validated these slices are expected because they match other profiles
-INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: MeasureReport/gaps-indv-measurereport04: MeasureReport.group[0].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cqm/StructureDefinition/proportion-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Measure/measure-pi-example: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cqm/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: MeasureReport/gaps-indv-measurereport04: MeasureReport.group[0].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 26 - These messages reference the Situational Awareness for Novel Epidemic Response (SANER) IG. We do not want to take a dependency on SANER. The intent of the DEQM IG is to provide guidance and support regarding value-based care data exchange in the US Realm. These references are used in examples only.
 A definition for CodeSystem 'http://example.org/fhir/saner/CodeSystem/MeasuredValues' could not be found, so the code cannot be validated
@@ -401,3 +398,5 @@ WARNING: Measure/SupportingEvidenceExample: Measure.library[0]: A definition cou
 WARNING: Measure/SupportingEvidenceExample: Measure.scoring.coding[0].system: A definition for CodeSystem 'http://hl7.org/fhir/measure-scoring' could not be found, so the code cannot be validated
 WARNING: Measure-SupportingEvidenceExample.json: Artifact library could not be found so no data requirements were inferred.
 INFORMATION: Measure/SupportingEvidenceExample: Measure: The Library https://madie.cms.gov/Library/SupportingEvidenceExample could not be resolved, so expression validation may not be correct
+
+

@@ -4,7 +4,7 @@
     "url": "http://hl7.org/fhir/uv/deqm/Measure/date-of-last-power-outage",
     "extension": [
         {
-            "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+            "url": "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-populationBasis",
             "valueCode": "Location"
         }
     ],
@@ -25,7 +25,7 @@
             ]
         }
     ],
-    "description": "This example measure illustrates a use for the [DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html). It is a measure for a system health metric for \"date of last power outage\" for a  location. The MeasureReport returns a measure Score as DateTime value using the [DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html).",
+    "description": "This example measure illustrates a use for the [DEQM Alternate Score Type Extension](StructureDefinition-deqm-alternateScoreType.html). It is a measure for a system health metric for \"date of last power outage\" for a  location. The MeasureReport returns a measure Score as DateTime value using the [DEQM Alternate Score Type Extension](StructureDefinition-deqm-alternateScoreType.html).",
     "jurisdiction": [
         {
             "coding": [
@@ -73,7 +73,7 @@
     "group": [
         {
             "id": "location-datetime",
-            "description": "The MeasureReport returns a measure Score as DateTime value using the [DEQM Alternate Score Type Extension](StructureDefinition-extension-alternateScoreType.html).",
+            "description": "The MeasureReport returns a measure Score as DateTime value using the [DEQM Alternate Score Type Extension](StructureDefinition-deqm-alternateScoreType.html).",
             "population": [
                 {
                     "code": {

@@ -20,8 +20,7 @@
     ],
     "implementationGuide": [
         "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
-        "http://hl7.org/fhir/us/qicore/ImplementationGuide/hl7.fhir.us.qicore",
-        "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"
+        "http://hl7.org/fhir/uv/cqm/ImplementationGuide/hl7.fhir.uv.cqm"
     ],
     "jurisdiction": [
         {
@@ -121,7 +120,7 @@
                             "valueCode": "SHALL"
                         }
                     ],
-                    "documentation": "The DaVinci DEQM Gaps In Care Server **SHALL** be capable of supporting the DEQM Individual MeasureReport Profile and all the DEQM, CQFM, and QI-Core Profiles they reference.",
+                    "documentation": "The DaVinci DEQM Gaps In Care Server **SHALL** be capable of supporting the DEQM Individual MeasureReport Profile and all the DEQM, CQM, and QI-Core Profiles they reference.",
                     "interaction": [
                         {
                             "extension": [
@@ -159,7 +158,7 @@
                       }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
                     ],
                     "type": "MeasureReport"
                 },
@@ -170,7 +169,7 @@
                             "valueCode": "SHALL"
                         }
                     ],
-                    "documentation": "The DaVinci DEQM Gaps In Care Server **SHALL** be capable of supporting the DEQM Gaps in Care Bundle Profile and all the DEQM, CQFM, and QI-Core Profiles they reference.",
+                    "documentation": "The DaVinci DEQM Gaps In Care Server **SHALL** be capable of supporting the DEQM Gaps in Care Bundle Profile and all the DEQM, CQM, and QI-Core Profiles they reference.",
                     "interaction": [
                         {
                             "extension": [
@@ -183,7 +182,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-bundle-deqm"
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarebundle"
                     ],
                     "type": "Bundle"
                 }

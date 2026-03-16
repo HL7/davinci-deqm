@@ -1,7 +1,7 @@
 <MeasureReport xmlns="http://hl7.org/fhir">
   <id value="summ-medicare-stratification-example"/>
   <extension
-           url="http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring">
+           url="http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring">
   <valueCodeableConcept>
     <coding>
       <code value="proportion"/>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="deqm-gapsincaredetectedissue"/>
+    <url value="http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincaredetectedissue"/>
+    <name value="DEQMGapsInCareDetectedIssue"/>
+    <title value="DEQM Gaps In Care Detected Issue Profile"/>
+    <status value="active"/>
+    <date value="2021-04-23"/>
+    <publisher value="Da Vinci Project"/>
+    <contact>
+      <telecom>
+        <system value="url"/>
+        <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+      </telecom>
+    </contact>
+    <description value="The DEQM Gaps In Care DetectedIssue Profile indicates that the measure reported has an open gap, prospective-gap or a closed gap as identified in the gapStatus modifier extension."/>
+    <jurisdiction>
+      <coding>
+        <system value="urn:iso:std:iso:3166"/>
+        <code value="US"/>
+        <display value="United States of America"/>
+      </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="DetectedIssue"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DetectedIssue"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="DetectedIssue">
+            <path value="DetectedIssue"/>
+        </element>
+        <element id="DetectedIssue.modifierExtension:gapStatus">
+           <path value="DetectedIssue.modifierExtension"/>
+           <sliceName value="gapStatus"/>
+           <min value="1"/>
+           <max value="1"/>
+           <type>
+             <code value="Extension"/>
+             <profile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapStatus"/>
+           </type>
+           <mustSupport value="true"/>
+           <isModifier value="true"/>
+           <isModifierReason value="Identifies care gap status detected"/>
+        </element>
+        <element id="DetectedIssue.code">
+          <path value="DetectedIssue.code"/>
+          <min value="1"/>
+          <patternCodeableConcept>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+                  <code value="CAREGAP"/>
+                </coding>
+            </patternCodeableConcept>
+          <mustSupport value="true"/>
+        </element>
+        <element id="DetectedIssue.patient">
+            <path value="DetectedIssue.patient"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+            </type>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="DetectedIssue.evidence">
+            <path value="DetectedIssue.evidence"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="DetectedIssue.evidence.detail">
+            <path value="DetectedIssue.evidence.detail"/>
+            <short value="This references either a DEQM Individual MeasureReport or a Detailed Care Gap Guidance Response resource."/>
+            <comment value="The reason that this supports a reference to a DEQM Individual MeasureReport is because a DEQM Gaps In Care DetectedIssue may be used stand alone and not be part of the DEQM Gaps In Care Composition."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"/>
+                <targetProfile value="http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-detailedcaregapguidanceresponse"/>
+            </type>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="DetectedIssue.evidence.detail.extension:criteriaReference">
+            <path value="DetectedIssue.evidence.detail.extension"/>
+            <sliceName value="criteriaReference"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

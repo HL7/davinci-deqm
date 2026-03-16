@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "date": "2021-04-23",
+  "name": "DEQMGapsStatusValueSet",
+  "id": "deqm-gaps-status",
+  "title": "DEQM Gaps In Care Gap Status Value Set",
+  "experimental": false,
+  "description": "Concepts for care gap status",
+  "url": "http://hl7.org/fhir/uv/deqm/ValueSet/deqm-gaps-status",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-gaps-status"
+      }
+    ]
+  }
+}

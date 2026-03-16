@@ -3,7 +3,7 @@
   "id": "gaps-composition02",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-composition-deqm"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarecomposition"
     ]
   },
   "status": "final",

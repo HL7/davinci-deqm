@@ -17,7 +17,7 @@ Payer X who is acting in the role of a Reporter submits a VTE Summary Report for
   "resourceType": "MeasureReport",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/ig/davinci/StructureDefinition/summary-measurereport-deqm"
+      "http://hl7.org/fhir/ig/davinci/StructureDefinition/deqm-summarymeasurereport"
     ]
   },
   "status": "complete",

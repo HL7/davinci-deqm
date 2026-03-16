@@ -45,7 +45,13 @@
     "packageId": "hl7.fhir.uv.deqm",
     "dependsOn": [
         {
-            "version": "dev",
+            "id": "ext",
+            "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+            "version": "5.2.0",
+            "packageId": "hl7.fhir.uv.extensions.r4"
+        },
+        {
+            "version": "1.0.0",
             "id": "cqm",
             "packageId": "hl7.fhir.uv.cqm",
             "uri": "http://hl7.org/fhir/uv/cqm/ImplementationGuide/hl7.fhir.uv.cqm"
@@ -892,7 +898,7 @@
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-measureScoring"}
+                "reference": {"reference": "StructureDefinition/deqm-measureScoring"}
             },
             {
                 "exampleBoolean": false,
@@ -900,7 +906,7 @@
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-alternateScoreType"}
+                "reference": {"reference": "StructureDefinition/deqm-alternateScoreType"}
             },
             {
                 "exampleBoolean": false,
@@ -908,11 +914,11 @@
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/summary-measurereport-deqm"}
+                "reference": {"reference": "StructureDefinition/deqm-summarymeasurereport"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/indv-measurereport-deqm"}
+                "reference": {"reference": "StructureDefinition/deqm-individualmeasurereport"}
             },
             {
                 "exampleBoolean": false,
@@ -925,39 +931,35 @@
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/datax-measurereport-deqm"}
+                "reference": {"reference": "StructureDefinition/deqm-dataexchangemeasurereport"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "CodeSystem/update-type"}
+                "reference": {"reference": "CodeSystem/deqm-update-type"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-reportingVendor"}
+                "reference": {"reference": "StructureDefinition/deqm-reportingVendor"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "ValueSet/update-type"}
+                "reference": {"reference": "ValueSet/deqm-update-type"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-careGapRemark"}
+                "reference": {"reference": "StructureDefinition/deqm-careGapRemark"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-certificationIdentifier"}
+                "reference": {"reference": "StructureDefinition/deqm-certificationIdentifier"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-criteriaReference"}
+                "reference": {"reference": "StructureDefinition/deqm-submitDataUpdateType"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-submitDataUpdateType"}
-            },
-            {
-                "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-reportingProgram"}
+                "reference": {"reference": "StructureDefinition/deqm-reportingProgram"}
             },
             {
                 "exampleBoolean": false,
@@ -973,15 +975,15 @@
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-dataLocation"}
+                "reference": {"reference": "StructureDefinition/deqm-dataLocation"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/subjectlist-measurereport-deqm"}
+                "reference": {"reference": "StructureDefinition/deqm-subjectlistmeasurereport"}
             },
             {
                 "exampleBoolean": false,
-                "reference": {"reference": "StructureDefinition/extension-calculatedDate"}
+                "reference": {"reference": "StructureDefinition/deqm-calculatedDate"}
             }
         ],
         "page": {

@@ -2,15 +2,15 @@
   "resourceType" : "Measure",
   "id" : "measure-pi-example",
   "meta" : {
-    "profile" : ["http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/proportion-measure-cqfm",
-    "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"]
+    "profile" : ["http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-proportionmeasure",
+    "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-computablemeasure"]
   },
   "extension" : [{
-    "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+    "url" : "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-populationBasis",
     "valueCode" : "Encounter"
   },
   {
-    "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit",
+    "url" : "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-scoringUnit",
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://unitsofmeasure.org",
@@ -51,7 +51,7 @@
     },
     "valueCodeableConcept" : {
       "coding" : [{
-        "system" : "http://hl7.org/fhir/us/cqfmeasures/CodeSystem/intended-venue-codes",
+        "system" : "http://hl7.org/fhir/uv/cqm/CodeSystem/intended-venue-codes",
         "code" : "ec",
         "display": "EC"
       }]
@@ -70,11 +70,11 @@
   "lastReviewDate" : "2019-02-17",
   "effectivePeriod" : {
     "extension" : [{
-      "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectivePeriodAnchor",
+      "url" : "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-effectivePeriodAnchor",
       "valueDateTime" : "2018-01-01"
     },
     {
-      "url" : "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectivePeriodDuration",
+      "url" : "http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-effectivePeriodDuration",
       "valueDuration" : {
         "value" : 1,
         "system" : "http://unitsofmeasure.org",

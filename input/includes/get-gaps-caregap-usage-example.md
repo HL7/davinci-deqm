@@ -31,7 +31,7 @@ Content-Type: application/fhir+json;charset=UTF-8
   "id": "single-gaps-open-indv-report01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-bundle-deqm"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarebundle"
     ]
   },
   "identifier": {
@@ -47,7 +47,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-composition01",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-composition-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarecomposition"
           ]
         },
         "status": "final",
@@ -105,11 +105,11 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-indv-measurereport01",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
           ]
         },
         "extension": [{
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
             "valueCodeableConcept": {
               "coding": [{
                   "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
@@ -118,13 +118,13 @@ Content-Type: application/fhir+json;charset=UTF-8
               ]
             }
           }, {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-certificationIdentifier",
             "valueIdentifier": {
               "system": "urn:oid:2.16.840.1.113883.3.2074.1",
               "value": "0015HQN9BD3304E"
             }
           }, {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingVendor",
             "valueReference": {
               "reference": "Organization/gaps-organization-reportingvendor"
             }
@@ -202,14 +202,14 @@ Content-Type: application/fhir+json;charset=UTF-8
         ],
         "evaluatedResource": [{
             "extension": [{
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "initial-population"
               }
             ],
             "reference": "Encounter/gaps-encounter01"
           }, {
             "extension": [{
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "initial-population"
               }
             ],
@@ -224,11 +224,11 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-indv-measurereport02",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
           ]
         },
         "extension": [{
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
             "valueCodeableConcept": {
               "coding": [{
                   "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
@@ -237,13 +237,13 @@ Content-Type: application/fhir+json;charset=UTF-8
               ]
             }
           }, {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-certificationIdentifier",
             "valueIdentifier": {
               "system": "urn:oid:2.16.840.1.113883.3.2074.1",
               "value": "0015HQN9BD3304E"
             }
           }, {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingVendor",
             "valueReference": {
               "reference": "Organization/gaps-organization-reportingvendor"
             }
@@ -321,20 +321,20 @@ Content-Type: application/fhir+json;charset=UTF-8
         ],
         "evaluatedResource": [{
             "extension": [{
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "initial-population"
               }, {
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "denominator"
               }
             ],
             "reference": "Encounter/gaps-encounter01"
           }, {
             "extension": [{
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "initial-population"
               }, {
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "denominator"
               }
             ],
@@ -349,11 +349,11 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-indv-measurereport03",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
           ]
         },
         "extension": [{
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
             "valueCodeableConcept": {
               "coding": [{
                   "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
@@ -362,13 +362,13 @@ Content-Type: application/fhir+json;charset=UTF-8
               ]
             }
           }, {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-certificationIdentifier",
             "valueIdentifier": {
               "system": "urn:oid:2.16.840.1.113883.3.2074.1",
               "value": "0015HQN9BD3304E"
             }
           }, {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingVendor",
             "valueReference": {
               "reference": "Organization/gaps-organization-reportingvendor"
             }
@@ -445,20 +445,20 @@ Content-Type: application/fhir+json;charset=UTF-8
         ],
         "evaluatedResource": [{
             "extension": [{
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "initial-population"
               }, {
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "denominator"
               }
             ],
             "reference": "Encounter/gaps-encounter01"
           }, {
             "extension": [{
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "initial-population"
               }, {
-                "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-criteriaReference",
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
                 "valueString": "denominator"
               }
             ],
@@ -473,14 +473,14 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-detectedissue01",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincaredetectedissue"
           ]
         },
         "modifierExtension": [{
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapStatus",
             "valueCodeableConcept": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/gaps-status",
+                  "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-gaps-status",
                   "code": "closed-gap"
                 }
               ]
@@ -514,14 +514,14 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-detectedissue02",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincaredetectedissue"
           ]
         },
         "modifierExtension": [{
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapStatus",
             "valueCodeableConcept": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/gaps-status",
+                  "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-gaps-status",
                   "code": "closed-gap"
                 }
               ]
@@ -555,14 +555,14 @@ Content-Type: application/fhir+json;charset=UTF-8
         "id": "gaps-detectedissue03",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/gaps-detectedissue-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincaredetectedissue"
           ]
         },
         "modifierExtension": [{
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-gapStatus",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapStatus",
             "valueCodeableConcept": {
               "coding": [{
-                  "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/gaps-status",
+                  "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-gaps-status",
                   "code": "prospective-gap"
                 }
               ]

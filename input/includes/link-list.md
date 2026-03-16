@@ -12,7 +12,7 @@
 [Argonaut Clinical Data Subscriptions]: https://argonautwiki.hl7.org/Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Capability statements]: capstatements.html
 [CDS Hooks]: https://cds-hooks.org/
-[Certification Identifier]: StructureDefinition-extension-certificationIdentifier.html
+[Certification Identifier]: StructureDefinition-deqm-certificationIdentifier.html
 [Clinical Decision Support (CDS)]: http://www.hl7.org/Special/committees/dss/index.cfm
 [Clinical Quality Framework]: http://wiki.hl7.org/index.php?title=Clinical_Quality_Framework&oldid=158051
 [Clinical Quality Information (CQI)]: http://www.hl7.org/Special/committees/cqi/index.cfm
@@ -26,21 +26,21 @@
 [CRMI Shareable Library]:  http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary
 [CRMI Shareable Measure]:  http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure
 [Da Vinci]: http://www.hl7.org/about/davinci/index.cfm?ref=common
-[Data Collection Type]: StructureDefinition-extension-dataCollectionType.html
-[Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
+[Data Collection Type]: StructureDefinition-deqm-dataCollectionType.html
+[Alternate Score Type]: StructureDefinition-deqm-alternateScoreType.html
 [Data Exchange]: datax.html
-[DEQM Data Collection Type Extension]: StructureDefinition-extension-dataCollectionType.html
-[DEQM Submit Data Update Type Extension]: StructureDefinition-extension-submitDataUpdateType.html
-[DEQM Data Exchange MeasureReport Profile]: StructureDefinition-datax-measurereport-deqm.html
+[DEQM Data Collection Type Extension]: StructureDefinition-deqm-dataCollectionType.html
+[DEQM Submit Data Update Type Extension]: StructureDefinition-deqm-submitDataUpdateType.html
+[DEQM Data Exchange MeasureReport Profile]: StructureDefinition-deqm-dataexchangemeasurereport.html
 [DEQM DeviceRequest]: StructureDefinition-devicerequest-deqm.html
-[DEQM Individual MeasureReport Profile]: StructureDefinition-indv-measurereport-deqm.html
-[DEQM Individual MeasureReport List]: StructureDefinition-indv-measurereport-list.html
+[DEQM Individual MeasureReport Profile]: StructureDefinition-deqm-individualmeasurereport.html
+[DEQM Individual MeasureReport List]: StructureDefinition-deqm-individualmeasurereportlist.html
 [//]: # [DEQM MedicationAdministration]: StructureDefinition-medicationadministration-deqm.html  Removed per FHIR-45974
 [DEQM MedicationRequest]: StructureDefinition-medicationrequest-deqm.html
-[DEQM Reporting Program Reference]: StructureDefinition-extension-reportingProgramReference.html
-[DEQM Subject List MeasureReport Profile]: StructureDefinition-subjectlist-measurereport-deqm.html
-[DEQM Summary MeasureReport Profile]: StructureDefinition-summary-measurereport-deqm.html
-[Do Not Perform]: StructureDefinition-extension-doNotPerform.html
+[DEQM Reporting Program Reference]: StructureDefinition-deqm-reportingProgramReference.html
+[DEQM Subject List MeasureReport Profile]: StructureDefinition-deqm-subjectlistmeasurereport.html
+[DEQM Summary MeasureReport Profile]: StructureDefinition-deqm-summarymeasurereport.html
+[Do Not Perform]: StructureDefinition-deqm-doNotPerform.html
 [Downloads]: downloads.html "Downloads Page"
 [eCR]: http://www.hl7.org/fhir/us/ecr/history.cfml
 [Extensions]: profiles.html#extensions "Profiles and Extensions Page"
@@ -72,7 +72,7 @@
 [COL Submit Data Operation]: col.html#submit-data
 [COL Collect Data Operation]: col.html#collect-data
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
-[Not Done]: {{site.data.fhir.path}}extension-event-notdone.html
+[Not Done]: {{site.data.fhir.path}}deqm-event-notdone.html
 [NQF Measure Description for Colorectal Cancer Screening]: http://www.qualityforum.org/QPS/MeasureDetails.aspx?standardID=394&print=0&entityTypeID=1
 [Profiles and Extensions]: profiles.html#profiles "Profiles and Extensions Page"
 [Profiles]: profiles.html#profiles "Profiles and Extensions Page"
@@ -97,10 +97,10 @@
 [QI Core Profiles]: {{site.data.fhir.qicore}}/index.html
 [QI Core]: {{site.data.fhir.qicore}}/index.html
 [QRDA]: https://ecqi.healthit.gov/qrda-quality-reporting-document-architecture
-[Quality Measure Implementation Guide]: {{site.data.fhir.cqfm}}/index.html
+[Quality Measure Implementation Guide]: {{site.data.fhir.cqm}}/index.html
 [Quality Reporting]: {{site.data.fhir.path}}clinicalreasoning-quality-reporting.html
 [Reporting Individual Data]: {{site.data.fhir.path}}clinicalreasoning-quality-reporting.html#reporting-individual-data
-[Reporting Vendor]: StructureDefinition-extension-reportingVendor.html
+[Reporting Vendor]: StructureDefinition-deqm-reportingVendor.html
 [SMART App Launch]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SMART backend services]: http://www.hl7.org/fhir/uv/bulkdata/history.cfml
 [Subscription]: {{site.data.fhir.path}}subscription.html
@@ -120,10 +120,10 @@
 [Parameters]: {{site.data.fhir.path}}parameters.html
 [following rules]: {{site.data.fhir.path}}references.html#
 [Contained resources]: {{site.data.fhir.path}}references.html#contained
-[Alternate Score Type]: StructureDefinition-extension-alternateScoreType.html
-[Valueset Reference extension]: http://hl7.org/fhir/R4/extension-valueset-reference.html
+[Alternate Score Type]: StructureDefinition-deqm-alternateScoreType.html
+[Valueset Reference extension]: http://hl7.org/fhir/R4/deqm-valueset-reference.html
 [Not Done Value Set]: https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-notDoneValueSet.html
-[negation patterns in quality measurements]: {{site.data.fhir.cqfm}}/using-cql.html
+[negation patterns in quality measurements]: {{site.data.fhir.cqm}}/using-cql.html
 [transaction response]: {{site.data.fhir.path}}http.html#transaction-response
 [Medicare Stratification Example]: MeasureReport-summ-medicare-stratification-example.html
 [Examples]: all-examples.html
@@ -135,32 +135,31 @@
 [submission period]: index.html#submission-period
 [incremental]: index.html#incremental-update
 [snapshot]: index.html#snapshot-update
-[Measure Scoring]: StructureDefinition-extension-measureScoring.html
+[Measure Scoring]: StructureDefinition-deqm-measureScoring.html
 [HL7 Da Vinci Guiding Principles]: https://confluence.hl7.org/display/DVP/Da+Vinci+Clinical+Advisory+Council+Members?preview=/66940155/66942916/Guiding%20Principles%20for%20Da%20Vinci%20Implementation%20Guides.pdf
 [Bundle Multiple Summ Report]: Bundle-multiple-summ-report.html
 [Bundle Multiple Indv Report]: Bundle-multiple-indv-mrp-obs-report.html
 [Software System]: {{site.data.fhir.ver.crmi}}StructureDefinition-crmi-softwaresystemdevice.html
 [Default Profiles]: {{site.data.fhir.path}}implementationguide.html#default
 [Gaps In Care Reporting]: gaps-in-care-reporting.html
-[DEQM Gaps In Care Bundle Profile]: StructureDefinition-gaps-bundle-deqm.html
-[DEQM Gaps In Care Composition Profile]: StructureDefinition-gaps-composition-deqm.html
-[DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-gaps-detectedissue-deqm.html
-[DEQM Gaps In Care Gap Status Value Set]: ValueSet-gaps-status.html
-[DEQM Gap Status Extension]: StructureDefinition-extension-gapStatus.html
-[DEQM Care Gap Guidance Response]: StructureDefinition-gaps-guidanceresponse-detailedcaregap.html
+[DEQM Gaps In Care Bundle Profile]: StructureDefinition-deqm-gapsincarebundle.html
+[DEQM Gaps In Care Composition Profile]: StructureDefinition-deqm-gapsincarecomposition.html
+[DEQM Gaps In Care DetectedIssue Profile]: StructureDefinition-deqm-gapsincaredetectedissue.html
+[DEQM Gaps In Care Gap Status Value Set]: ValueSet-deqm-gaps-status.html
+[DEQM Gap Status Extension]: StructureDefinition-deqm-gapStatus.html
+[DEQM Care Gap Guidance Response]: StructureDefinition-deqm-detailedcaregapguidanceresponse.html
 
 
 [Da Vinci - Risk Based Contracts Member Attribution (ATR) List IG]: http://hl7.org/fhir/us/davinci-atr/
 [Asynchronous Request Patterns]: https://www.hl7.org/fhir/async.html
 [MeasurePopulationType]: http://hl7.org/fhir/R4/valueset-measure-population.html
 [$care-gaps]: OperationDefinition-care-gaps.html
-[gaps status value set]:ValueSet-gaps-status.html
+[gaps status value set]:ValueSet-deqm-gaps-status.html
 [FHIR specification for operation behavior]: {{site.data.fhir.path}}operations.html#response
 [Gaps In Care]: gaps-examples.html
 [Operations]: operations.html
 [Terminology]: terminology.html
 [CQF Criteria Reference Extension]:  http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference 
-[DEQM Criteria Reference Extension]: StructureDefinition-extension-criteriaReference.html
 [base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html
 [Datax Measurereport01]: MeasureReport-datax-measurereport01.html
 [Indv Measurereport01]: MeasureReport-indv-measurereport01.html

@@ -3,7 +3,7 @@
     "id": "datax-measurereport01",
     "meta": {
         "profile": [
-            "http://hl7.org/fhir/uv/deqm/StructureDefinition/datax-measurereport-deqm"
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
         ],
         "source": "http://example.org/fhir/server"
     },
@@ -15,13 +15,13 @@
             }
         },
         {
-            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-submitDataUpdateType",
+            "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
             "valueCode": "incremental"
         }
     ],
     "status": "complete",
     "type": "data-collection",
-    "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
+    "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|1.0.0-ballot",
     "subject": {
         "reference": "Patient/patient01"
     },

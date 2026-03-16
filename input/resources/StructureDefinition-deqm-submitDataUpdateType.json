@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "deqm-submitDataUpdateType",
+  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
+  "name": "DEQMSubmitDataUpdateType",
+  "title": "DEQM Submit Data Update Type Extension",
+  "status": "active",
+  "description": "This Extension supports the concepts 'incremental' and 'snapshot' and corresponds to the measureScore types in the FHIR R5 version of MeasureReport.\n\n- The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot or incremental](datax.html#collect-updates) updates for the [DEQM Submit Data transaction](datax.html#submit-data).\n- The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction.\n When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL**  value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot if the `lastReceivedOn` parameter is absent.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "CapabilityStatement.rest.resource.operation"
+    },
+    {
+      "type": "element",
+      "expression": "MeasureReport"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCode",
+        "path": "Extension.valueCode",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/uv/deqm/ValueSet/deqm-update-type"
+        }
+      }
+    ]
+  }
+}

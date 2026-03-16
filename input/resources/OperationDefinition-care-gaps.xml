@@ -53,7 +53,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Subject will be a reference to either Patient [QI Core Patient](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient) or Group. Must provide either Patient/123 or Group/123, cannot simply provide 123. If only 123 is provided, then the operation would not know if it is a Patient reference or a Group reference."/>
+        <documentation value="Subject SHALL be a reference to either a Patient or Group (e.g. Patient/123 or Group/123) Note this is a reference, providing only an id (such as 123) will not be resolvable."/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
@@ -78,7 +78,7 @@
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Reference to a practitioner [QI Core Practitioner](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-practitioner.html) for which the gaps in care report will be created. For a practitioner focused gaps in care report, this is a required In Parameter. The Server needs to make sure that practitioner is authorized to get the gaps in care report for and know what measures the practitioner are eligible or qualified."/>
+        <documentation value="Reference to a practitioner for which the gaps in care report will be created. For a practitioner focused gaps in care report, this is a required In Parameter. The Server needs to make sure that practitioner is authorized to get the gaps in care report for and know what measures the practitioner are eligible or qualified."/>
         <type value="string"/>
         <searchType value="reference"/>
     </parameter>
@@ -130,7 +130,7 @@
         <type value="code"/>
         <binding>
             <strength value="extensible"/>
-            <valueSet value="http://hl7.org/fhir/uv/deqm/ValueSet/gaps-status"/>
+            <valueSet value="http://hl7.org/fhir/uv/deqm/ValueSet/deqm-gaps-status"/>
         </binding>
     </parameter>
     <parameter>
@@ -162,7 +162,7 @@
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The $care-gaps operation returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, containing zero or more document bundles that conform to the [DEQM Gaps In Care Bundle Profile](StructureDefinition-gaps-bundle-deqm.html). Note that the result of the $care-gaps operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*. When these Bundles optionally contain [DEQM Gaps In Care Composition Profile](StructureDefinition-gaps-composition-deqm.html), then they are limited to a single subject. If these Bundles do not contain the Composition Profile, they SHOULD be for a single subject. See the [guidance on Bundle structure](guidance.html#deqm-operation-bundles-organized-by-subject) for discussion about the Bundle content and organization."/>
+        <documentation value="The $care-gaps operation returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, containing zero or more document bundles that conform to the [DEQM Gaps In Care Bundle Profile](StructureDefinition-deqm-gapsincarebundle.html). Note that the result of the $care-gaps operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*. When these Bundles optionally contain [DEQM Gaps In Care Composition Profile](StructureDefinition-deqm-gapsincarecomposition.html), then they are limited to a single subject. If these Bundles do not contain the Composition Profile, they SHOULD be for a single subject. See the [guidance on Bundle structure](guidance.html#deqm-operation-bundles-organized-by-subject) for discussion about the Bundle content and organization."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>

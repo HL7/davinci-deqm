@@ -1,0 +1,59 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "deqm-reportingProgram",
+  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingProgram",
+  "name": "DEQMReportingProgramExtension",
+  "title": "DEQM Reporting Program Extension",
+  "status": "active",
+  "experimental": false,
+  "date": "2022-11-21",
+  "publisher": "Da Vinci Project",
+  "description": "Extension that supports the reporting program as a reference to the CRMI Manifest Library, as well as an identifier of the reporting program, for which measures are being evaluated",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Reference"
+    },
+    {
+      "type": "element",
+      "expression": "MeasureReport"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Reporting program",
+        "definition": "Reference the reporting program by referencing their unique id specified in a Library resource that conforms to the Quality Program profile.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingProgram"
+      },
+      {
+        "id" : "Extension.value[x]",
+        "path" : "Extension.value[x]",
+        "type" : [
+          {
+            "code" : "Identifier"
+          },
+          {
+            "code" : "canonical",
+            "targetProfile": ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary"]
+          }
+           
+        ]
+      }
+    ]
+  }
+}

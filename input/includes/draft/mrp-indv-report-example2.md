@@ -143,19 +143,19 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
 
             "meta": {
                "profile": [
-                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
                ]
             },
             "extension": [
                {
-                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-certificationIdentifier",
                   "valueIdentifier": {
                      "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                      "value": "0015HQN9BD3304E"
                   }
                },
                {
-                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingVendor",
                   "valueReference": {
                      "reference": "urn:uuid:015c69ca-45e9-11e9-ac61-5cf3707b2e61"
                   }
@@ -165,7 +165,7 @@ Reporter X submits a MRP Individual Report for Patient P to Receiver Z.  The bod
             "evaluatedResources": {
                "extension": [
                   {
-                     "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-referenceAny",
+                     "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-referenceAny",
                      "valueReference": {
                         "reference": "urn:uuid:01536f40-45e9-11e9-983b-5cf3707b2e61"
                      }

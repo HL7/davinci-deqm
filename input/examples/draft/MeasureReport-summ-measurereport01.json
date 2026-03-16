@@ -3,12 +3,12 @@
   "id": "summ-measurereport01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport"
     ]
   },
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
+  "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|1.0.0-ballot",
   "date": "2018-09-05T16:59:52.404Z",
   "period": {
     "start": "2018-08-01",

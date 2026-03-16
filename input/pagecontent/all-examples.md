@@ -52,19 +52,19 @@ Below are examples of Bundle resources.
 ### Measures
 Below are the Measures used by the MeasureReports above that are defined in this IG.
 * [Measure: Immunization Registry Reporting (Experimental)](Measure-attestation-boolean-example.html)
-* [Measure: EXM124 - Cervical Cancer Screening (Experimental) ](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM124-FHIR.html)
-* [COL Colorectal Cancer Screening EXM130](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM130-FHIR.html)
+* [Measure: EXM124 - Cervical Cancer Screening (Experimental) ](http://hl7.org/fhir/uv/cqm/Measure-EXM124-FHIR.html)
+* [COL Colorectal Cancer Screening EXM130](http://hl7.org/fhir/uv/cqm/Measure-EXM130-FHIR.html)
 * [Measure: Measure Date of Last Power Outage (Experimental)](Measure-date-of-last-power-outage.html)
-* [Measure: EXM55 - Median Emergency Department Visit Duration (Experimental)](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM55-FHIR.html)
+* [Measure: EXM55 - Median Emergency Department Visit Duration (Experimental)](http://hl7.org/fhir/uv/cqm/Measure-EXM55-FHIR.html)
 * [Measure: Measure Mrp Example (Experimental)](Measure-measure-mrp-example.html)
 * [Measure: EXMPromotingInteroperabilityMeasure (Experimental) ](Measure-measure-pi-example.html)
-* [Measure: EXM108 - Venous Thromboembolism Prophylaxis (Experimental) ](https://hl7.org/fhir/us/cqfmeasures/Measure-EXM108-FHIR.html)
+* [Measure: EXM108 - Venous Thromboembolism Prophylaxis (Experimental) ](http://hl7.org/fhir/uv/cqm/Measure-EXM108-FHIR.html)
 * [Measure: Supporting Evidence Example](Measure-SupportingEvidenceExample.json)
 
 #### Da Vinci VBPR Examples
 The Da Vinci Value-Based Performance Reporting IG uses DEQM as a dependency. In addition to the above DEQM examples, 
 the [Value-Based Performance Reporting Examples](https://build.fhir.org/ig/HL7/davinci-vbpr/examples.html) provides additional 
-measure report examples based on the [DEQM Summary MeasureReport Profile](StructureDefinition-summary-measurereport-deqm.html).
+measure report examples based on the [DEQM Summary MeasureReport Profile](StructureDefinition-deqm-summarymeasurereport.html).
 
 ### Other Support Resources
 Below are the resources that are referenced by the examples above.

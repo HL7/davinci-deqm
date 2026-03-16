@@ -12,13 +12,13 @@
                 "id": "97e6dbd2-17f1-11ea-82fa-4ccc6a181ed3",
                 "meta": {
                     "profile": [
-                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/indv-measurereport-deqm"
+                        "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
                     ],
                     "source": "http://example.org/fhir/server"
                 },
                 "extension": [
                     {
-                        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+                        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
                         "valueCodeableConcept": {
                             "coding": [
                                 {
@@ -29,14 +29,14 @@
                         }
                     },
                     {
-                        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-certificationIdentifier",
+                        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-certificationIdentifier",
                         "valueIdentifier": {
                             "system": "urn:oid:2.16.840.1.113883.3.2074.1",
                             "value": "0015HQN9BD3304E"
                         }
                     },
                     {
-                        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-reportingVendor",
+                        "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingVendor",
                         "valueReference": {
                             "reference": "Organization/organization02"
                         }
@@ -44,7 +44,7 @@
                 ],
                 "status": "complete",
                 "type": "individual",
-                "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|5.0.0",
+                "measure": "http://hl7.org/fhir/uv/deqm/Measure/measure-mrp-example|1.0.0-ballot",
                 "subject": {
                     "reference": "urn:uuid:6f0cef31-2235-4d66-82e2-fa861fc909a8"
                 },

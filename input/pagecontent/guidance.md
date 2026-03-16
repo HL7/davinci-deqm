@@ -38,7 +38,7 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
     the application of the same measures across populations that span
     multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
 
-    -  The MeasureReport profiles in this IG are used to report CQFM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQFM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQFM Measure, including those not utilizing CQL.
+    -  The MeasureReport profiles in this IG are used to report CQM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQM Measure, including those not utilizing CQL.
 
 ### Timezone Support
 
@@ -77,7 +77,7 @@ The [DEQM Subject List MeasureReport Profile] is used when a measure is reported
 
 The [DEQM Summary MeasureReport Profile] is used when a measure is reported for a group of patients at the conclusion of a measure measurement period. It includes the measure outcome data. Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.
 
-Measure population determination SHALL be done as specified in the Quality Measure IG's section [Population Criteria](https://hl7.org/fhir/us/cqfmeasures/measure-conformance.html#population-criteria). This section describes how the appropriate population is determined for each subject when evaluating a measure. These populations are reported in the measure reports.
+Measure population determination SHALL be done as specified in the Quality Measure IG's section [Population Criteria](http://hl7.org/fhir/uv/cqm/measure-conformance.html#population-criteria). This section describes how the appropriate population is determined for each subject when evaluating a measure. These populations are reported in the measure reports.
 
 #### Data Quality
 
@@ -135,7 +135,7 @@ Servers SHOULD be permissive in accepting references to data that are not includ
 
 Considerations such as privacy, consent, authorization, minimum necessary, etc., are outside the scope of this IG.
 
-More guidance and discussion are available in the [bulk data section and specification](https://hl7.org/fhir/us/davinci-deqm/index.html#bulk-data). 
+More guidance and discussion are available in the [bulk data section and specification](https://hl7.org/fhir/uv/deqm/index.html#bulk-data). 
 
 ### Ad-hoc Organizations for DEQM Operations
 
@@ -147,7 +147,7 @@ The organization provided in $care-gaps or $collect-data, whether in the "organi
 
 ### Default Profiles Used in the Evaluation of a Measure
 
- Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI-Core, and CQFM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI-Core profiles and are used as the default instead of the corresponding QI-Core profile.  Refer to the [QI-Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
+ Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI-Core, and CQM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI-Core profiles and are used as the default instead of the corresponding QI-Core profile.  Refer to the [QI-Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
 
 <div class="new-content" markdown="1">
 [QI Core Practitioner], [QI Core Organization], and [QI Core Coverage] profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
@@ -155,7 +155,7 @@ The organization provided in $care-gaps or $collect-data, whether in the "organi
 
 ### Negation Patterns for Quality Measures
 
-When DEQM is used to report CQFM Measures that use CQL and the QI-Core data model, negation patterns allow identifying when events are not present or when events are documented as not occurring for a reason.  They may appear throughout a measure in any of the population criteria. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. The negation pattern for the MedicationRequest (MedicationNotRequested) resource is demonstrated in the [Single Indv Vte Report Option 7] example. For more information refer to the [Using CQL IG section on negation] and the [QI-Core Negation] page.
+When DEQM is used to report CQM Measures that use CQL and the QI-Core data model, negation patterns allow identifying when events are not present or when events are documented as not occurring for a reason.  They may appear throughout a measure in any of the population criteria. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. The negation pattern for the MedicationRequest (MedicationNotRequested) resource is demonstrated in the [Single Indv Vte Report Option 7] example. For more information refer to the [Using CQL IG section on negation] and the [QI-Core Negation] page.
 
 
 ### Using Contained Resources in the Response Transaction

@@ -84,7 +84,7 @@ Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefin
 #### Measure Evaluation for a Gap in Care
 {:.no_toc}
 
-As shown in Figure 2-16 and 2-17 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQFMComputableMeaure profile, depending on the server implementation).
+As shown in Figure 2-16 and 2-17 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
 
 This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its gapStatus element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. If the status is not-applicable the measureScore SHALL NOT be included in the DEQM Individual MeasureReport.
 
@@ -113,10 +113,10 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 #### Gaps in Care Bundle Structure
 {:.no_toc}
 
-The [DEQM Gaps In Care Bundle](StructureDefinition-gaps-bundle-deqm.html) can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
+The [DEQM Gaps In Care Bundle](StructureDefinition-deqm-gapsincarebundle.html) can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
 
 Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
-- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-indv-measurereport-deqm.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-gaps-detectedissue-deqm.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-gaps-composition-deqm.html).
+- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-deqm-gapsincarecomposition.html).
 - In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
@@ -125,7 +125,7 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
 
-Derived from the GuidanceResponse resource, the  [Detailed Care Gap Guidance Response](StructureDefinition-gaps-guidanceresponse-detailedcaregap.html) supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps. This section provides a detailed description of how the profile should be used, with a focus on the utilization of the `reasonCode` and the `dataRequirement` along with some practical business use cases.
+Derived from the GuidanceResponse resource, the  [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps. This section provides a detailed description of how the profile should be used, with a focus on the utilization of the `reasonCode` and the `dataRequirement` along with some practical business use cases.
 
 - **reasonCode** The `GuidanceResponse.reasonCode` has a preferred binding to the Care Gap Reasons value set. It contains codes that represent the reason or rationale behind the identified care gap, such as data element is not found or value is out of the specified range. It helps in categorizing and organizing the gaps based on their underlying causes, facilitating a more targeted approach to addressing them.
 
@@ -143,17 +143,17 @@ Example Business Use Cases:
 [Medication Adherence Detailed Care Gap Guidance Response Example](GuidanceResponse-detailedguidanceresponse02.html)
 
 
-By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefinition-gaps-guidanceresponse-detailedcaregap.html), healthcare organizations can receive tailored and actionable guidance on addressing specific care gaps. The inclusion of `reasonCode` and `dataRequirement` enables standardized categorization, context-specific recommendations, and ensures a more focused approach to quality improvement efforts.
+By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefinition-deqm-detailedcaregapguidanceresponse.html), healthcare organizations can receive tailored and actionable guidance on addressing specific care gaps. The inclusion of `reasonCode` and `dataRequirement` enables standardized categorization, context-specific recommendations, and ensures a more focused approach to quality improvement efforts.
 
 #### Add Remark to Gaps in Care Report
 {:.no_toc}
 
-Note to Balloters: We are actively seeking input on [remark codes](CodeSystem-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
+Note to Balloters: We are actively seeking input on [remark codes](CodeSystem-deqm-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
 {:.note-to-balloters}
 
-When considering a Gaps in Care Report, a remark(s) may be added using the [Care Gap Remark](StructureDefinition-extension-careGapRemark.html) extension. If a remark is added to a Gaps in Care Report, then the [Care Gap Remark](StructureDefinition-extension-careGapRemark.html) extension can be added to the measure report with a ([PATCH](https://www.hl7.org/fhir/http.html#patch)) request, or the entire MeasureReport with the added extension can be POSTed.
+When considering a Gaps in Care Report, a remark(s) may be added using the [Care Gap Remark](StructureDefinition-deqm-careGapRemark.html) extension. If a remark is added to a Gaps in Care Report, then the [Care Gap Remark](StructureDefinition-deqm-careGapRemark.html) extension can be added to the measure report with a ([PATCH](https://www.hl7.org/fhir/http.html#patch)) request, or the entire MeasureReport with the added extension can be POSTed.
 
-A ([DEQM Parameters Care Gap Remark Patch Profile](StructureDefinition-parameters-caregap-remark-patch.html)) is defined to specify the required structures to send the remark using a PATCH request.
+A ([DEQM Parameters Care Gap Remark Patch Profile](StructureDefinition-deqm-caregapremarkpatchparameters.html)) is defined to specify the required structures to send the remark using a PATCH request.
 
 This implementation guide does not direct any action be taken by the payer upon receipt of an Individual MeasureReport with added gaps in care remark(s).
 

@@ -18,7 +18,7 @@
         {
             "type": "MeasureReport",
             "profile": [
-                "http://hl7.org/fhir/uv/deqm/StructureDefinition/datax-measurereport-deqm"
+                "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
             ]
         },
         {

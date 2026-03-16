@@ -2,7 +2,7 @@
     "resourceType": "MeasureReport",
     "id": "summary-measurereport-patient-level-linear",
     "meta": {
-        "profile": ["http://hl7.org/fhir/uv/deqm/StructureDefinition/summary-measurereport-deqm"]
+        "profile": ["http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport"]
     },
     "language": "en",
     "status": "complete",
@@ -22,7 +22,7 @@
                     "valueString": "group-1"
                 },
                 {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-measureScoring",
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
                     "valueCodeableConcept": {
                         "coding": [
                             {
@@ -33,7 +33,7 @@
                     }
                 },
                 {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/extension-groupImprovementNotation",
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-groupImprovementNotation",
                     "valueCodeableConcept": {
                         "coding": [
                             {
