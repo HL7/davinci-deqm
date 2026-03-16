@@ -137,9 +137,10 @@
             are part of a provider group. This parameter is reflected in the reporter element
             of the resulting MeasureReport(s). This parameter cannot be used with the reporter
             parameter."/> 
-        <allowedType value="Practitioner"/>
-        <allowedType value="PractitionerRole"/>
-        <allowedType value="Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <searchType value="reference"/>
     </parameter>
     <parameter>
         <name value="excludeEvaluatedResources"/>
