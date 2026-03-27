@@ -207,11 +207,11 @@
                 <min value="0"/> 
                 <max value="1"/> 
                 <documentation value="Meaning of the stratifier component."/> 
-                <type value="code"/> 
-                <binding> 
-                    <strength value="preferred"/> 
-                    <valueSet value="http://terminology.hl7.org/CodeSystem/measure-stratifier-type"/> 
-                </binding> 
+                <type value="code"/>
+                <binding>
+                    <strength value="preferred"/>
+                    <valueSet value="http://terminology.hl7.org/ValueSet/measure-stratifier-type"/>
+                </binding>
             </part> 
             <part> 
                 <name value="description"/> 

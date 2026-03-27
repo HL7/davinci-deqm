@@ -133,6 +133,7 @@ A definition for CodeSystem 'http://example.org/stratification' could not be fou
 A definition for CodeSystem 'http://example.org/CodeSystem/SOP' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/medicare-subgroup' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.org/CodeSystem/dose-rate-type' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.org/fhir/CodeSystem/example-supporting-evidence-codes' could not be found, so the code cannot be validated
 WARNING: MeasureReport/ratio-measurereport01: MeasureReport: The Measure 'http://example.org/ecqms/Measure/HospitalHarmHyperglycemiainHospitalizedPatientsFHIR|1.0.0' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/AlaraCTFHIRMeasure|1.0.0' could not be resolved, so no validation can be performed against the Measure
 The Measure 'http://example.org/fhir/Measure/example-stratification-measure|5.0.0' could not be resolved, so no validation can be performed against the Measure
@@ -141,6 +142,7 @@ The Measure 'http://example.org/fhir/Measure/example-stratification-measure|5.0.
 Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|1.0.0
+Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/medicationrequest-status|4.0.1
 
 # The example is intentionally using a CPT code outside the LOINC expectation
 None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://www.ama-assn.org/go/cpt#1111F)
@@ -194,6 +196,10 @@ No definition could be found for URL value 'http://standardhealthrecord.org/fhir
 No definition could be found for URL value 'http://hospital.davinci.org'
 No definition could be found for URL value 'http://exampleoflocation.com'
 No definition could be found for URL value 'https://nhsnlink.org'
+
+# Relative sub-extension URLs within deqm-careGapRemark used in FHIR Patch Parameters — validator cannot resolve them outside extension context
+No definition could be found for URL value 'authorDatetime'
+No definition could be found for URL value 'text'
 WARNING: Measure/FHIRPath-example: Measure.relatedArtifact[0].url: No definition could be found for URL value 'https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/'
 WARNING: Measure/FHIRPath-example: Measure.relatedArtifact[1].url: No definition could be found for URL value 'https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf'
 WARNING: Measure/FHIRPath-example: Measure.relatedArtifact[2].url: No definition could be found for URL value 'https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf'
@@ -291,13 +297,27 @@ INFORMATION: Resource: The resource Measure/date-of-last-power-outage could usef
 INFORMATION: Resource: The resource Measure/measure-mrp-example could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 INFORMATION: Resource: The resource Measure/measure-pi-example could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
+# CQF extensions used in supporting evidence extension context — valid per CQF IG pattern but not permitted by R4 extension context definitions
+ERROR: MeasureReport/SupportingEvidenceExample: MeasureReport.group[0].population[0].extension[16].extension[3]: The extension http://hl7.org/fhir/StructureDefinition/cqf-isEmptyList v5.3.0-ballot-tc1 is not allowed to be used at this point (this element is [Extension, Extension.extension, MeasureReport.group.population.extension.extension]; allowed for this version = e:Parameters.parameter.value, e:Parameters.parameter.part.value)
+ERROR: MeasureReport/SupportingEvidenceExample: MeasureReport.group[0].population[0].extension[16].extension[3]: The extension http://hl7.org/fhir/StructureDefinition/cqf-cqlType v5.3.0-ballot-tc1 is not allowed to be used at this point (this element is [Extension, Extension.extension, MeasureReport.group.population.extension.extension]; allowed for this version = e:ParameterDefinition, e:Parameters.parameter, e:Parameters.parameter.part)
+ERROR: MeasureReport/SupportingEvidenceExample: MeasureReport.group[0].population[0].extension[17].extension[3]: The extension http://hl7.org/fhir/StructureDefinition/cqf-cqlType v5.3.0-ballot-tc1 is not allowed to be used at this point (this element is [Extension, Extension.extension, MeasureReport.group.population.extension.extension]; allowed for this version = e:ParameterDefinition, e:Parameters.parameter, e:Parameters.parameter.part)
+
+# Attestation measures do not use linkId extensions — this is an intentional deviation from the summary MeasureReport profile
+ERROR: MeasureReport/attestation-boolean-example: MeasureReport.group[0]: MeasureReport.group.extension: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport|1.0.0-ballot)
+ERROR: MeasureReport/attestation-boolean-example: MeasureReport.group[0]: Slice 'MeasureReport.group.extension:linkId' for extension 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId': a matching slice is required, but not found (from http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+ERROR: MeasureReport/attestation-boolean-example: MeasureReport.group[0].population[0]: MeasureReport.group.population.extension: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport|1.0.0-ballot)
+ERROR: MeasureReport/attestation-boolean-example: MeasureReport.group[0].population[0]: Slice 'MeasureReport.group.population.extension:linkId' for extension 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId': a matching slice is required, but not found (from http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport|1.0.0-ballot). Note that other slices are allowed in addition to this required slice
+
+# R5 cross-version extension StructureDefinitions for Measure.group.linkId and Measure.group.population.linkId are not published in any dependency package — upstream CQM IG issue
+ERROR: Measure/measure-pi-example: Measure.group[0].extension[0]: Slicing cannot be evaluated: Problem with use of resolve() - profile [CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Measure.group.linkId]] on Measure.group.extension:linkId could not be resolved (@char 1)
+INFORMATION: Measure/measure-pi-example: Measure.group[0]: Measure.group.extension:linkId: Found 0 matches, but unable to check minimum required (Measure.group.extension) due to lack of slicing validation (from http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-proportionmeasure|1.0.0)
+ERROR: Measure/measure-pi-example: Measure.group[0].population[0].extension[0]: Slicing cannot be evaluated: Problem with use of resolve() - profile [CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Measure.group.population.linkId]] on Measure.group.population:initialPopulation.extension:linkId could not be resolved (@char 1)
+INFORMATION: Measure/measure-pi-example: Measure.group[0].population[0]: Measure.group.population:initialPopulation.extension:linkId: Found 0 matches, but unable to check minimum required (Measure.group.population.extension) due to lack of slicing validation (from http://hl7.org/fhir/uv/cqm/StructureDefinition/cqm-proportionmeasure|1.0.0)
+
 # Not yet using CQL processing for measures in this IG, so this is expected
 %Measure-SupportingEvidenceExample.json: Artifact library could not be found so no data requirements were inferred.
 
-# Example codes for illustrating supporting evidence
-WARNING: MeasureReport/SupportingEvidenceExample: MeasureReport.group[0].population[0].extension[17].extension[2].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/example-supporting-evidence-codes' could not be found, so the code cannot be validated
-WARNING: MeasureReport/SupportingEvidenceExample: MeasureReport.group[0].population[0].extension[18].extension[2].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/example-supporting-evidence-codes' could not be found, so the code cannot be validated
-WARNING: MeasureReport/SupportingEvidenceExample: MeasureReport.group[0].population[0].extension[19].extension[2].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://example.org/fhir/CodeSystem/example-supporting-evidence-codes' could not be found, so the code cannot be validated
+# Example codes for illustrating supporting evidence — now covered by generic suppression in URIs section
 
 # Composite measures are a newer feature, we are working on adding validator support
 INFORMATION: MeasureReport/indv-measurereport-patient-level-linear: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
@@ -446,11 +466,18 @@ WARNING: StructureDefinition/deqm-summarymeasurereport: StructureDefinition.diff
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[2].resource/*MedicationRequest/nhsn-iip-add101*/.medication.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.nlm.nih.gov/research/umls/rxnorm' version '11062023' could not be found, so the code cannot be validated. Valid versions: 02032025
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].resource/*MedicationRequest/nhsn-iip-add101-10*/.medication.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.nlm.nih.gov/research/umls/rxnorm' version '11062023' could not be found, so the code cannot be validated. Valid versions: 02032025
 
+
+# The artifact bundle contains multiple Library resources, each generating narrative with the same anchor IDs via liquid templates
+WARNING: /Users/christopherschuler/Documents/workspace/implementation-guides/davinci-deqm/output/en/Bundle-sde-example-artifact-bundle.html: The html source has duplicate anchor Ids: cql-content,parameters
+
+# Bundle-Location-Aware-example was removed but the change notes reference is preserved as historical record
+ERROR: en/change-notes.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 325, column 280: The link 'Bundle-Location-Aware-example.html' for "here" cannot be resolved
+
 # Path liquid ig needs to be used to get the publisher to load the right version of the liquid templates
-ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[7].extension[0].value.ofType(string): The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0'
-ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[7].extension[0].value.ofType(string): The value provided ('path-liquid-ig') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0'; The provided code '#path-liquid-ig' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0')
-ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[50].extension[0].value.ofType(code): The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0'
-ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[50].extension[0].value.ofType(code): The value provided ('path-liquid-ig') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0'; The provided code '#path-liquid-ig' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.0')
+ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[7].extension[0].value.ofType(string): The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'
+ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[7].extension[0].value.ofType(string): The value provided ('path-liquid-ig') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2), and a code is required from this value set  (error message = The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'; The provided code '#path-liquid-ig' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2')
+ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[50].extension[0].value.ofType(code): The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'
+ERROR: ImplementationGuide/hl7.fhir.uv.deqm: ImplementationGuide.definition.extension[50].extension[0].value.ofType(code): The value provided ('path-liquid-ig') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2), and a code is required from this value set  (error message = The System URI could not be determined for the code 'path-liquid-ig' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2'; The provided code '#path-liquid-ig' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|1.1.2')
 
 # This should be allowed to be string, since we are using the string as a reference, and the publisher renders this correctly
 ERROR: OperationDefinition/care-gaps: OperationDefinition.parameter[3]: Constraint failed: opd-3: 'A targetProfile can only be specified for parameters of type Reference or Canonical (targetProfile.exists() implies (type = 'Reference' or type = 'canonical'))'

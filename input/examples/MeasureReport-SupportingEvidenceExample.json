@@ -37,6 +37,18 @@
                         }
                         ]
                     }
+                },
+                {
+                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-groupImprovementNotation",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                                "code": "increase",
+                                "display": "Increased score indicates improvement"
+                            }
+                        ]
+                    }
                 }
             ],
             "population": [
