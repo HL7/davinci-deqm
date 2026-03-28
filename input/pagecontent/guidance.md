@@ -115,6 +115,8 @@ A measure defines calculation rates using the group elements, and it can identif
 
 All linkId and code elements in the measure identified in the table above SHALL be in the measure report in the corresponding location. All id elements SHOULD be in the measure report. There are two exceptions: (1) supplementalData.id SHALL be in the measure report if and only if the supplementalData.linkId is not present, and (2) supplementalData.code SHALL be in contained Observation resources on the code element that report supplemental data.
 
+> Note that for backwards compatibility with measure specifications that do not use `linkId` elements, MeasureReports MAY be produced that do not include the linkId, but in these cases, the report SHALL provide the corresponding `id` elements to ensure measure components in the report can be correlated to the measure specification.
+
 If the measure does not contain all of these elements, then they would not be reflected in the measure report. If the measure does not have group.stratifier elements, then the measure report would not reflect any elements any group.stratifier.stratum elements.
 
 For example, the below measure population criteria and stratifier would result in the following measure report snippet.

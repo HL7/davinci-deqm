@@ -24,7 +24,7 @@
 #### Scoring Type MeasureReports
 * [Example MeasureReport: Gaps Ratio MeasureReport01](MeasureReport-ratio-measurereport01.html)
 * [Example MeasureReport: Summary MeasureReport Date of Last Power Outage](MeasureReport-date-of-last-power-outage.html)
-* [Example MeasureReport: MeasureReport Attestation Boolean](MeasureReport-attestation-boolean-example.html)
+* [Example MeasureReport: MeasureReport Attestation Boolean](MeasureReport-attestation-boolean-example.html) Note that this example intentionally omits linkIds to illustrate backwards-compatible linking support
 * [Example MeasureReport: MeasureReport-PI-example](MeasureReport-MeasureReport-PI-example.html)
 
 #### Supporting Evidence MeasureReport

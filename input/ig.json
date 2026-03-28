@@ -269,7 +269,7 @@
                 "reference": {
                     "reference": "MeasureReport/attestation-boolean-example"
                 },
-                "description": "DEQM Attestation Boolean example"
+                "description": "DEQM Attestation Boolean example. This example also illustrates a backwards-compatible linking (i.e. correlation of the components based on `id` because the source Measure does not have `linkId` elements)"
             },
             {
                 "exampleBoolean": true,
