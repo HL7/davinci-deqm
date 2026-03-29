@@ -16,18 +16,3 @@ See the overview on validating <a href="http://hl7.org/fhir/R4/validation.html">
 
 {% include cross-version-analysis.xhtml %}
 
-#### Dependency Table
-
-{% include dependency-table.xhtml %}
-
-#### Globals Table
-
-{% include globals-table.xhtml %}
-
-#### IP Statements
-
-{% include ip-statements.xhtml %}
-
-### Expansion Parameters
-
-{% include expansion-params.xhtml %}

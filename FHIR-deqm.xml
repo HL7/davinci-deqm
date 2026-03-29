@@ -151,7 +151,6 @@
 <artifact id="Location/location02" key="Location-location02" name="Location02"/>
 <artifact id="Location/location03" key="Location-location03" name="Location03"/>
 <artifact id="Measure/FHIRPath-example" key="Measure-FHIRPath-example" name="Measure - FHIRPath Example"/>
-<artifact id="Measure/SupportingEvidenceExample" key="Measure-SupportingEvidenceExample" name="Measure - Supporting Evidence"/>
 <artifact deprecated="true" id="Measure/measure-exm124-example" key="Measure-measure-exm124-example" name="Measure Cervical Cancer Screening (EXM124)"/>
 <artifact deprecated="true" id="Measure/measure-exm130-example" key="Measure-measure-exm130-example" name="Measure Colorectal Cancer Screening (EXM130)"/>
 <artifact id="Measure/date-of-last-power-outage" key="Measure-date-of-last-power-outage" name="Measure Date of Last Power Outage"/>

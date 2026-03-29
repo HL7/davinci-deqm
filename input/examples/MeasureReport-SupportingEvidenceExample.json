@@ -8,7 +8,7 @@
     },
     "status": "complete",
     "type": "individual",
-    "measure": "https://madie.cms.gov/Measure/SupportingEvidenceExample|1.0.0",
+    "measure": "http://hl7.org/fhir/uv/cqm/Measure/SupportingEvidenceExample|2.0.0-ballot",
    "subject": {
         "reference": "Patient/patient01"
       },

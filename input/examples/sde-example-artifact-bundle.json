@@ -23,13 +23,6 @@
                         }
                     ]
                 },
-                "relatedArtifact": [
-                    {
-                        "type": "depends-on",
-                        "display": "FHIR model information",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"
-                    }
-                ],
                 "content": [
                     {
                         "contentType": "text/cql",
@@ -63,16 +56,6 @@
                     ]
                 },
                 "relatedArtifact": [
-                    {
-                        "type": "depends-on",
-                        "display": "FHIR model information",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"
-                    },
-                    {
-                        "type": "depends-on",
-                        "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
-                    },
                     {
                         "type": "depends-on",
                         "display": "Code system LOINC",
@@ -122,16 +105,6 @@
                         "type": "depends-on",
                         "display": "Code system AllergyIntoleranceVerificationStatusCodes",
                         "resource": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
-                    },
-                    {
-                        "type": "depends-on",
-                        "display": "Value set Active Condition",
-                        "resource": "http://fhir.org/guides/cqf/common/ValueSet/active-condition"
-                    },
-                    {
-                        "type": "depends-on",
-                        "display": "Value set Inactive Condition",
-                        "resource": "http://fhir.org/guides/cqf/common/ValueSet/inactive-condition"
                     }
                 ],
                 "parameter": [
@@ -184,16 +157,6 @@
                     ]
                 },
                 "relatedArtifact": [
-                    {
-                        "type": "depends-on",
-                        "display": "FHIR model information",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"
-                    },
-                    {
-                        "type": "depends-on",
-                        "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
-                    },
                     {
                         "type": "depends-on",
                         "display": "Code system ConditionClinicalStatusCodes",
@@ -403,16 +366,6 @@
                 "relatedArtifact": [
                     {
                         "type": "depends-on",
-                        "display": "FHIR model information",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"
-                    },
-                    {
-                        "type": "depends-on",
-                        "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
-                    },
-                    {
-                        "type": "depends-on",
                         "display": "Value set Ethnicity",
                         "resource": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837"
                     },
@@ -531,16 +484,6 @@
                     ]
                 },
                 "relatedArtifact": [
-                    {
-                        "type": "depends-on",
-                        "display": "FHIR model information",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"
-                    },
-                    {
-                        "type": "depends-on",
-                        "display": "Library FHIRHelpers",
-                        "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"
-                    },
                     {
                         "type": "depends-on",
                         "display": "Library SDE",

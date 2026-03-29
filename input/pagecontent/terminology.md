@@ -3,11 +3,15 @@ Refer to the specific FHIR resources and profiles for each measure’s requireme
 
 ### Value Sets
 
-{% lang-fragment list-simple-valuesets.xhtml %}
+{% lang-fragment list-valuesets.xhtml %}
 
 ### Code Systems[^5]
 
-{% lang-fragment list-simple-codesystems.xhtml %}
+{% lang-fragment list-codesystems.xhtml %}
+
+### Expansion Parameters
+
+{% include expansion-params.xhtml %}
 
 ---
 

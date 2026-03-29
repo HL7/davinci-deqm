@@ -1097,14 +1097,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Measure - Supporting Evidence",
-                "reference": {
-                    "reference": "Measure/SupportingEvidenceExample"
-                },
-                "description": "Example showing cqf-supportingEvidenceDefinition extension on a Measure."
-            },
-            {
-                "exampleBoolean": true,
                 "name": "MeasureReport - Supporting Evidence",
                 "reference": {
                     "reference": "MeasureReport/SupportingEvidenceExample"
