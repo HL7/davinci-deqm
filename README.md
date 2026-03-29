@@ -1,9 +1,8 @@
 # DaVinci Data Exchange For Quality Measures
 
-
-## [STU4 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU4)
-
-## [Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
+* [STU4 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU4)
+* [STU5 Published Version](http://hl7.org/fhir/us/davinci-deqm/STU5)
+* [Current build (FHIR Version R4)](https://build.fhir.org/ig/HL7/davinci-deqm/)
 
 Primary Author:  Eric Haas
 
