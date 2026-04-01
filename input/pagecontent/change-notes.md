@@ -3,7 +3,7 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
 
 ### Changes for STU1 Ballot
 
-#### Compatible, Substance Changes
+#### Compatible, Substantive Changes
 - [FHIR-51762](https://jira.hl7.org/browse/FHIR-51762): Align DEQM bulk submit options with upcoming Bulk Data IG changes  
 - [FHIR-40800](https://jira.hl7.org/browse/FHIR-40800): Include Basic Clinical Dates for Care Gaps  
 - [FHIR-51556](https://jira.hl7.org/browse/FHIR-51556): Add an includeSupportingData parameter  
