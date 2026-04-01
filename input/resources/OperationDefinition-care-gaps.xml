@@ -63,10 +63,9 @@
         <min value="0"/>
         <max value="1"/>
         <documentation value="Subject SHALL be a reference to either a Patient or Group (e.g. Patient/123 or Group/123) Note this is a reference, providing only an id (such as 123) will not be resolvable."/>
-        <type value="string"/>
+        <type value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
-        <searchType value="reference"/>
     </parameter>
     <parameter>
         <name value="subjectGroup"/>
@@ -87,11 +86,10 @@
             are determined is implementation-specific. This parameter is reflected in the reporter
             element of the resulting MeasureReport(s). This parameter cannot be used with the
             reporterResource parameter."/> 
-        <type value="string"/>
+        <type value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/> 
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/> 
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/> 
-        <searchType value="reference"/> 
     </parameter> 
     <parameter> 
         <extension url="http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type">
@@ -124,9 +122,8 @@
         <max value="*"/> 
         <documentation value="The location(s) for which the gaps in care report will be run. This parameter is
             reflected in the location element of the resulting MeasureReport(s)."/> 
-        <type value="string"/> 
+        <type value="Reference"/> 
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
-        <searchType value="reference"/> 
     </parameter>
     <parameter>
         <name value="status"/>

@@ -65,8 +65,7 @@
         <min value="0"/>
         <max value="1"/>
         <documentation value="Subject(s) for which the measure will be calculated. Subjects provided in this parameter SHALL match the subjectType of the measure being evaluated (e.g. if the Measure.group.subjectType is Patient, the subject SHALL be a reference to a Patient or a Group of Patients). This parameter cannot be used with the subjectGroup parameter. If no subject or subjectGroup is provided, what subjects are evaluated is up to the server."/>
-        <type value="string"/>
-        <searchType value="reference"/>
+        <type value="Reference"/>
     </parameter>
     <parameter>
         <name value="subjectGroup"/>
@@ -87,11 +86,10 @@
             are determined is implementation-specific. This parameter is reflected in the reporter
             element of the resulting MeasureReport(s). This parameter cannot be used with the
             reporterResource parameter."/> 
-        <type value="string"/> 
+        <type value="Reference"/> 
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-        <searchType value="reference"/> 
     </parameter> 
     <parameter> 
         <extension url="http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type">
@@ -124,8 +122,8 @@
         <max value="*"/> 
         <documentation value="The location(s) for which the report will be run. This parameter is reflected in
             the location element of the resulting MeasureReport(s)."/> 
-        <type value="string"/> 
-        <searchType value="reference"/> 
+        <type value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
     </parameter> 
     <parameter>
         <name value="parameters"/>

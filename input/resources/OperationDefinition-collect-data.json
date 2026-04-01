@@ -58,8 +58,7 @@
             "min": 0,
             "max": "1",
             "documentation": "Subject for which the data-of-interest for the measure will be collected. If not specified, measure data will be collected for all subjects that meet the requirements of the measure.  If specified, the measure will only be collected for the referenced subject(s).",
-            "type": "string",
-            "searchType": "reference"
+            "type": "Reference"
         },
         {
             "name": "subjectGroup",
@@ -75,7 +74,7 @@
             "min": 0,
             "max": "1",
             "documentation": "The provider for which the data-of-interest will be collected. This may be a reference to a Practitioner, PractitionerRole, or Organization. If specified, systems MAY use this information to determine subjects for which the data-of-interest will be calculated, but how subjects are determined is implementation-specific. This parameter is reflected in the reporter element of the resulting MeasureReport(s). This parameter cannot be used with the reporterResource parameter.",
-            "type": "string",
+            "type": "Reference",
              "targetProfile": [
                 "http://hl7.org/fhir/StructureDefinition/Practitioner",
                 "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
@@ -110,11 +109,10 @@
             "min": 0,
             "max": "*",
             "documentation": "The location(s) for which the data-of-interest will be collected. This parameter is reflected in the location element of the resulting MeasureReport(s).",
-            "type": "string",
+            "type": "Reference",
             "targetProfile": [
                 "http://hl7.org/fhir/StructureDefinition/Location"
-            ],
-            "searchType": "reference"
+            ]
         },
         {
             "name": "lastReceivedOn",

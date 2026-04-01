@@ -28,7 +28,7 @@
 * [Example MeasureReport: MeasureReport-PI-example](MeasureReport-MeasureReport-PI-example.html)
 
 #### Supporting Evidence MeasureReport
-* [Example MeasureReport: Supporting Evidence](MeasureReport-SupportingEvidenceExample.json)
+* [Example MeasureReport: Supporting Evidence](MeasureReport-SupportingEvidenceExample.html)
 
 ### Bundles
 Below are examples of Bundle resources.
@@ -59,7 +59,7 @@ Below are the Measures used by the MeasureReports above that are defined in this
 * [Measure: Measure Mrp Example (Experimental)](Measure-measure-mrp-example.html)
 * [Measure: EXMPromotingInteroperabilityMeasure (Experimental) ](Measure-measure-pi-example.html)
 * [Measure: EXM108 - Venous Thromboembolism Prophylaxis (Experimental) ](http://hl7.org/fhir/uv/cqm/Measure-EXM108-FHIR.html)
-* [Measure: Supporting Evidence Example](Measure-SupportingEvidenceExample.json)
+* [Measure: Supporting Evidence Example](Measure-SupportingEvidenceExample.html)
 
 #### Da Vinci VBPR Examples
 The Da Vinci Value-Based Performance Reporting IG uses DEQM as a dependency. In addition to the above DEQM examples, 
