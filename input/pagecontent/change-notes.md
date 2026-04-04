@@ -1,6 +1,50 @@
 
 The Data Exchange For Quality Measures Implementation Guide was developed under the  [Davinci Project](#)
 
+### Changes for STU1 Ballot
+
+#### Compatible, Substantive Changes
+- [FHIR-51762](https://jira.hl7.org/browse/FHIR-51762): Align DEQM bulk submit options with upcoming Bulk Data IG changes  
+- [FHIR-40800](https://jira.hl7.org/browse/FHIR-40800): Include Basic Clinical Dates for Care Gaps  
+- [FHIR-51556](https://jira.hl7.org/browse/FHIR-51556): Add an includeSupportingData parameter  
+- [FHIR-55978](https://jira.hl7.org/browse/FHIR-55978): All MeasureReport profiles should include compositeScoring extension on .group  
+- [FHIR-51535](https://jira.hl7.org/browse/FHIR-51535): Add dataEndpoint parameter to $collect-data  
+- [FHIR-51401](https://jira.hl7.org/browse/FHIR-51401): Receiver Server Capability - Bundle Transaction support  
+
+#### Non-Subtantitve Changes:
+- [FHIR-56006](https://jira.hl7.org/browse/FHIR-56006): Clarify separation between exchange and reporting use cases  
+- [FHIR-55970](https://jira.hl7.org/browse/FHIR-55970): Update quality improvement ecosystem diagram  
+- [FHIR-56028](https://jira.hl7.org/browse/FHIR-56028): Duplicate reporterResource parameter in $evaluate  
+- [FHIR-56059](https://jira.hl7.org/browse/FHIR-56059): consider deprecating or removing gaps in care Group profile  
+- [FHIR-43013](https://jira.hl7.org/browse/FHIR-43013): Add example for non-CQL based Measure and associated MeasureReport  
+- [FHIR-40798](https://jira.hl7.org/browse/FHIR-40798): Lacking Element to Support Episodic Based Measures  
+- [FHIR-47402](https://jira.hl7.org/browse/FHIR-47402): Suggest updating "Example Use Cases" info  
+- [FHIR-51761](https://jira.hl7.org/browse/FHIR-51761): Add guidance for omission of measureScore for "Not Applicable" gap status MeasureReports  
+- [FHIR-53825](https://jira.hl7.org/browse/FHIR-53825): Provide guidance on referential integrity  
+- [FHIR-52910](https://jira.hl7.org/browse/FHIR-52910): $evaluate should indicate exclusive use of subject or subjectGroup  
+- [FHIR-55408](https://jira.hl7.org/browse/FHIR-55408): Add Example(s) for Composite Measure Report  
+- [FHIR-47749](https://jira.hl7.org/browse/FHIR-47749): Provide guidance on timezone configuration and selection  
+- [FHIR-51708](https://jira.hl7.org/browse/FHIR-51708): $submit-data referred to as $deqm-submit-data in documentation  
+
+#### Non-Compatible Changes
+- [FHIR-46155](https://jira.hl7.org/browse/FHIR-46155): Remove DEQM's dependencies on QMIG, US Core, and QI-Core  
+- [FHIR-51575](https://jira.hl7.org/browse/FHIR-51575): Reflect new extensions  
+- [FHIR-51503](https://jira.hl7.org/browse/FHIR-51503): MeasureReport to Subject association  
+- [FHIR-53109](https://jira.hl7.org/browse/FHIR-53109): update section "Group, Stratifier, and Population Codes and Ids"  
+- [FHIR-53275](https://jira.hl7.org/browse/FHIR-53275): allow Organization to be passed in on $evaluate  
+- [FHIR-51067](https://jira.hl7.org/browse/FHIR-51067): Align $evaluate with changes made in base FHIR R6  
+- [FHIR-51856](https://jira.hl7.org/browse/FHIR-51856): Simplify Measure/$evaluate  
+- [FHIR-50297](https://jira.hl7.org/browse/FHIR-50297): support for Measure linkId  
+- [FHIR-52856](https://jira.hl7.org/browse/FHIR-52856): Specify output for $submit-data
+
+#### Technical Corrections
+- [FHIR-51433](https://jira.hl7.org/browse/FHIR-51433): Invariants that use implies need to account for empty lists  
+- [FHIR-51857](https://jira.hl7.org/browse/FHIR-51857): ReportType parameter in $evaluate should align with R6 operation  
+- [FHIR-51238](https://jira.hl7.org/browse/FHIR-51238): Correct return value description in $evaluate  
+- [FHIR-51400](https://jira.hl7.org/browse/FHIR-51400): Incorrect narrative in Receiver Server Capability page  
+- [FHIR-51004](https://jira.hl7.org/browse/FHIR-51004): DEQM defines two purposes. But there are three bullets  
+- [FHIR-50942](https://jira.hl7.org/browse/FHIR-50942): Typo: "echanging"  
+
 ### Changes and Updates for STU5 Publication (STU5).
 
 1. Applied the following trackers:
