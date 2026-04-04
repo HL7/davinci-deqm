@@ -452,5 +452,8 @@ WARNING: Parameters/measurereport01-patch-mult: Parameters.parameter[2].part[3].
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[2].resource/*MedicationRequest/nhsn-iip-add101*/.medication.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.nlm.nih.gov/research/umls/rxnorm' version '11062023' could not be found, so the code cannot be validated. Valid versions: 03022026
 WARNING: Bundle/sde-example-patient-data-bundle: Bundle.entry[3].resource/*MedicationRequest/nhsn-iip-add101-10*/.medication.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.nlm.nih.gov/research/umls/rxnorm' version '11062023' could not be found, so the code cannot be validated. Valid versions: 03022026
 
-# The OID in this case is a canonical, and the version reference here is appropriate and needed to ensure the correct version of the code system is used
+# The OID in this case is a canonical, and the version reference here is appropriate and needed to ensure the correct version of the code system is used (See Zulip thread: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Inconsistent.20behavior.20for.20urn.3Aoid.3A2.2E16.2E840.2E1.2E113883.2E6.2E238/with/583118192)
 ERROR: Parameters/manifest: Parameters.parameter[1].value.ofType(canonical): OIDs must be valid (2.16.840.1.113883.6.238|1.3)
+
+# This extension is defined in ci-build, but there is no publication that has it (Approved by FMG: https://confluence.hl7.org/spaces/FMG/pages/441130082/2026-04-01+FMG+Agenda+Minutes)
+%cqf-supportingEvidence%
