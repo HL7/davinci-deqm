@@ -1,3 +1,5 @@
+{:toc}
+
 {: .note-to-balloters}
 >  This implementation guide is the Universal Realm successor of the US-based [Data Exchange for Quality Measures IG STU 5](https://hl7.org/fhir/us/davinci-deqm), and incorporates stakeholder feedback and implementation experience from that specification. 
 
