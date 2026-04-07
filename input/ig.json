@@ -52,7 +52,7 @@
             "packageId": "hl7.fhir.uv.extensions.r4"
         },
         {
-            "version": "dev",
+            "version": "2.0.0-ballot",
             "id": "cqm",
             "packageId": "hl7.fhir.uv.cqm",
             "uri": "http://hl7.org/fhir/uv/cqm/ImplementationGuide/hl7.fhir.uv.cqm"
