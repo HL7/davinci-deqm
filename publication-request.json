@@ -7,9 +7,11 @@
   "sequence": "STU 1",
   "desc": "STU 1 Ballot (v1.0.0-ballot) of the Universal Realm Data Exchange for Quality Measures Implementation Guide.",
   "descmd" : "STU 1 Ballot (v1.0.0-ballot) of the Universal Realm Data Exchange for Quality Measures Implementation Guide.",
+  "registry-description" : "Provides a mechanism for healthcare providers and data aggregators to exchange quality measure information using subscription, query, and push methods",
   "first": true,
   "title": "Data Exchange for Quality Measures",
   "ci-build": "https://build.fhir.org/ig/HL7/davinci-deqm",
   "category": "Quality / CDS",
+  "previouslyPublishedAs" : "http://hl7.org/fhir/us/davinci-deqm",
   "introduction": "This implementation guide defines a framework to support quality measurement, reporting, and related use cases by enabling 1) The exchange of the data of interest for a measure or set of measures, and 2) The reporting of quality measurement results, with or without the data involved in calculating those results."
 }
