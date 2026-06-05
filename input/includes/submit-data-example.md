@@ -8,47 +8,39 @@ Provider X acting in the role of Producer submits MRP data for Patient Y to Paye
 
 **Request using `POST`**
 
-`POST [base]/Measure/measure-mrp/$submit-data`
+`POST [base]`
 
 **Request body**
 
 ~~~
 {
-   "resourceType":"Parameters",
-    "parameter":[
-		{
-          "name":"bundle",
-          "resource":
-             {"resourceType": "Bundle",
-              "entry":[
-               {
-                 "resource":"{"resourceType": "MeasureReport",
-                 ...}
-               },
-               {
-                 "resource":"{"resourceType": "Patient",
-                 ...}
-               },
-               {
-                 "resource":"{"resourceType": "Location",
-                   ...}
-               },
-               {
-                 "resource":"{"resourceType": "Practitioner",
-                 ...}
-               },
-               {
-                 "resource":"{"resourceType": "Organization",
-                 ...}
-               },
-               {
-                 "resource":"{"resourceType": "Coverage",
-                 ...}
-               }
-              ]
-             }
+  "resourceType": "Bundle",
+    "entry":[
+      {
+        "resource":"{"resourceType": "MeasureReport",
+        ...}
+      },
+      {
+        "resource":"{"resourceType": "Patient",
+        ...}
+      },
+      {
+        "resource":"{"resourceType": "Location",
+        ...}
+      },
+      {
+        "resource":"{"resourceType": "Practitioner",
+        ...}
+      },
+      {
+        "resource":"{"resourceType": "Organization",
+        ...}
+      },
+      {
+        "resource":"{"resourceType": "Coverage",
+        ...}
        }
-	] 
+     ]
 }
 ~~~
 

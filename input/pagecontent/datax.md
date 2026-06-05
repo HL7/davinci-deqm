@@ -58,7 +58,7 @@ The DEQM resources form a network through their relationships with each other - 
 #### Gather Data Requirements from Consumer
 {:.no_toc}
 
-To support the Submit Data operation, an implementation needs to know specifically what data are required to provide as the payload for the operation.  As described in the [Background](background.html) section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
+Producers are required to know specifically what data to provide to Consumers as part of data exchange.  As described in the [Background](background.html) section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
 
 Note that because the data exchange scenarios described are intended to support exchange throughout a measurement period, the versions of measure specifications may change during the measurement period. Care should be taken to ensure the appropriate versioning of measure specifications and the impact of those changes on data exchanged using these methods
 
@@ -88,13 +88,13 @@ Note the use of the `periodStart` and `periodEnd` parameters supports descriptio
 
 For another example see the [COL Data Requirements Operation] example.
 
-#### Submit Data Operation
+#### Submitting Data with POST
 {:.no_toc}
 
 
-Once the Producer understands the data requirements, they will use the *Submit Data* operation to submit bundles of MeasureReports and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to every Submit Data. In addition, the Submit Data operation does not provide for analytics or feedback on the submitted data.
+Once the Producer understands the data requirements, they will POST bundles of MeasureReports and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to the data submission.
 
-{% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submit data Operation" %}
+{% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submitting Data with POST" %}
 
 <div class="highlight-note" markdown="1">
 
@@ -138,7 +138,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Snapshot Update Requirements and Expectations:**
 
-  - Snapshot data exchange overwrites previous data ( in other words, the Producer resubmit all data for multiple patients even for a single error).
+  - Snapshot data exchange overwrites previous data (in other words, the Producer resubmits all data for multiple patients even for a single error).
 
   - Snapshot data exchange is appropriate when the Consumer system is stateless (doesn’t persist data)
 
@@ -153,21 +153,21 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Submit Data operation: [$submit-data]
+1. Submission of data with POST
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 ##### Usage
 {:.no_toc}
 
-Using the `POST` Syntax, the operation can be invoked by the Producer:
+Using the `POST` syntax, the data can be submitted by Producer:
 
-`POST|[base]/Measure/[measure-id]/$submit-data`
+`POST|[base]`
 
 {% include error-note.md transaction = 'Submit Data' %}
 
 {% include examplebutton.html example="submit-data-example" b_title = "Click Here To See Example Submit Data Operation (edited for brevity)" %}
 
-For a complete un-edited example see the [MRP Submit Data Operation] and [COL Submit Data Operation] examples.
+For a complete un-edited example see the [MRP Submit Data] and [COL Submit Data] examples.
 
 ### Collect Data
 {: #collect-data}
@@ -210,7 +210,7 @@ In addition to the resources listed above, the following artifacts are used in t
 
 Using either the `GET` or `POST` Syntax, the operation can be invoked by the Consumer:
 
-`GET|[base]/Measure/[measure-id]/$collect-data&[parameters]`
+`GET|[base]/Measure/[measure-id]/$collect-data?[parameters]`
 
 `POST|[base]/Measure/[measure-id]/$collect-data`
 
@@ -220,60 +220,18 @@ Using either the `GET` or `POST` Syntax, the operation can be invoked by the Con
 
 For a complete un-edited example see the [COL Collect Data Operation] example.
 
-#### Submit Data and Collect Data for Multiple Patients
 
-##### Submit Data Operation Request for Multiple Patients
-{:.no_toc}
-
-The [transaction] bundle processing as defined by FHIR specification is used for transacting the body of Submit Data operation request for *multiple* patients in a single interaction.
-
-- The transaction bundle contains an entry for each patient as illustrated in the examples below:
-  - The fullUrl is a UUID (`urn:uuid:...`).
-  - The resource is a Parameters resource as defined in the operation.
-  - The request method is `POST`
-  - The request url is the operation endpoint `Measure/$submit-data` or `Measure/[measure-id]/$submit-data`.
-- When resolving references, references are never resolved outside the Parameters resource.  Specifically, resolution stops at the elements Parameters.parameter.resource."
-- The matching [transaction response] is returned by the operation endpoint server.
-
-~~~
-POST|[base]
-
-{
-  "resourceType": "Bundle",
-  "type": "transaction",
-  "entry": [
-    {
-      "fullUrl": "urn:uuid:79378cb8-8f58-48e8-a5e8-60ac2755b674",
-      "resource": {
-        "resourceType": "Parameters",
-        "parameter": [
-          {
-            "name": "measurereport",
-            "resource": {
-              "resourceType": "MeasureReport",
-              ...,
-            "name": "resource",
-            "resource": {
-              "resourceType": "Patient",
-              ...,
-            [other "resource" parameters]
-          ]
-        },
-        "request": {
-          "method": "POST",
-          "url": "Measure/[measure-id]/$submit-data"
-            }
-            ....
-~~~
 
 ##### Collect Data Operation Response for Multiple Patients
 {:.no_toc}
 
 Because operations are typically executed synchronously, a collect data request to a server returns a Parameter resource for a *single* patient as defined by the `$collect-data` operation.  Execution of this operation and returning multiple patients in a single *asynchronous* transaction is outside the scope of this guide.
 
-#### DEQM Data Exchange Operations Naming
+#### DEQM Data Exchange Interaction Naming
 
-The two DEQM data exchange operations, [$submit-data] and [$collect-data], have the same names as two of the base FHIR operations. They serve very similar functions, but the DEQM versions have more flexibility when referencing measures, subjects, and organizations, and they support multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR $submit-data and $collect-data operations.
+The DEQM data exchange operation [$collect-data] has the same names as the base FHIR operation. It serves very similar functions, but the DEQM version has more improved referencing of measures, subjects, and organizations, and it supports multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR R4 $collect-data operation.
+
+Base FHIR R4 has a $submit-data operation that is deprecated after R4. DEQM defines data submission as a POST of a Bundle to the base URL of the FHIR server.
 
 #### Use of Supporting Evidence
 
@@ -286,7 +244,7 @@ The [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/en/) provides workflo
 
 ### Provenance
 
-Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $submit-data and $collect-data transactions described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
+Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the data submittion interaction and the $collect-data transaction described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 
 <br />
 

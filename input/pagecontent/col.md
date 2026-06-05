@@ -83,9 +83,9 @@ In the following interactions, the Provider is acting in the role of the *Produc
 We are seeking input on the feasibility and interest in using *CDS Hooks* to report on Screening data.
 {:.stu-note}
 
-##### Data Exchange Using the Submit Data Operation {#submit-data}
+##### Submitting Data with POST {#submit-data}
 {:.no_toc}
-The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
+The Provider will POST a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
 {% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" caption = "Figure 3-9 Submit Data Technical Workflow" %}
 
