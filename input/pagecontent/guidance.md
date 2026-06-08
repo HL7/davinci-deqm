@@ -32,11 +32,8 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
     -  Multiple MeasureReport may reference the same instance of a resource.
 
--   Both Consumers and Producers *should* use a common clinical
-    quality language (CQL) that would allow the same measures to be
-    applied in healthcare and at the aggregator. This would also enable
-    the application of the same measures across populations that span
-    multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
+-   Both Consumers and Producers *should* use a common expression
+    language, such as Clinical Quality Languages (CQL).
 
     -  The MeasureReport profiles in this IG are used to report CQM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQM Measure, including those not utilizing CQL.
 
