@@ -34,6 +34,6 @@ Payers and providers need common data specification, measure specification, repo
 
 #### Globals Table
 
-{% include globals-table.xhtml %}
+{% lang-fragment globals-table.xhtml %}
 
 {% include link-list.md %}
