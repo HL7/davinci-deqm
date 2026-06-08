@@ -147,14 +147,6 @@ The [ad-hoc organization example](Organization-ad-hoc-organization.html) illustr
 
 The organization provided in $care-gaps or $collect-data, whether in the "organization" parameter or the "organizationResource" parameter, SHALL be the reporter in the resulting measure report(s) and SHALL be included as a contained resource if necessary. When included as a contained resource in the measure report, the structure must be flattened so that the Organization does not have any contained resources because contained resources cannot themselves have contained resources. References among the contained resources SHALL be maintained. See the organizationResource example and the resulting MeasureReport example.
 
-### Default Profiles Used in the Evaluation of a Measure
-
- Depending on the specific Measure and Interaction, *[Default Profiles]* from DEQM, QI-Core, and CQM are used in the evaluation of a measure and referenced by a MeasureReport. These profiles apply to *any resource* that does not otherwise have an explicit profile assigned by the  implementation guide.  Note that several DEQM [Profiles] are  derived from QI-Core profiles and are used as the default instead of the corresponding QI-Core profile.  Refer to the [QI-Core] implementation guide for examples of how to represent data involved in calculation of quality measures.
-
-<div class="new-content" markdown="1">
-[QI Core Practitioner](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-practitioner.html), [QI Core Organization](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-organization.html), and [QI Core Coverage](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-coverage.html) profiles have replaced respective DEQM specific profiles and are used to model reporters and participating practitioners and organizations.
-
-
 ### Negation Patterns for Quality Measures
 
 When DEQM is used to report CQM Measures that use CQL and the QI-Core data model, negation patterns allow identifying when events are not present or when events are documented as not occurring for a reason.  They may appear throughout a measure in any of the population criteria. For example, the absence of a particular medication may be grounds for membership in the initial population, denominator, numerator, or an exclusion or exception criteria, depending on how the measure is constructed. The negation pattern for the MedicationRequest (MedicationNotRequested) resource is demonstrated in the [Single Indv Vte Report Option 7](Bundle-single-indv-vte-report-option7.html) example. For more information refer to the [Using CQL IG section on negation](https://hl7.org/fhir/uv/cql/patterns.html#negation-in-fhir) and the [QI-Core Negation](https://hl7.org/fhir/us/qicore/negation.html) page.
