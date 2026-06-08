@@ -32,8 +32,4 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Measure Report Population Description Extension](StructureDefinition-deqm-populationDescription.html) |
 | [DEQM Care Gap Remark Extension](StructureDefinition-deqm-careGapRemark.html) |
 
-#### Globals Table
-
-{% include globals-table.xhtml %}
-
 {% include link-list.md %}
