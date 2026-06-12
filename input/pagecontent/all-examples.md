@@ -40,6 +40,9 @@ Below are examples of Bundle resources.
 * [Example Bundle: Single Indv Mrp Obs Report](Bundle-single-indv-mrp-obs-report.html)
 * [Example Bundle: Single Indv Col Obs Report](Bundle-single-indv-col-obs-report.html)
 * [Example Bundle: Multiple Summ Report](Bundle-multiple-summ-report.html)
+* [Example Bundle: Mrp Submit Task](Bundle-mrp-submit-task.html)
+* [Example Bundle: Col Submit Obs](Bundle-col-submit-obs.html)
+* [Example Bundle: Mrp Submit Obs](Bundle-mrp-submit-obs.html)
 
 #### Gaps In Care Bundles
 * [Example Bundle: Gaps Bundle Open Individual MeasureReports](Bundle-single-gaps-open-indv-report01.html)
@@ -127,10 +130,7 @@ Below are the resources that are referenced by the examples above.
 * [Example Organization: Gaps Reporting Vendor Organization](Organization-gaps-organization-reportingvendor.html)
 
 #### Parameters
-* [Example Parameters: Mrp Submit Task](Parameters-mrp-submit-task.html)
 * [Example Parameters: Col Collect Obs](Parameters-col-collect-obs.html)
-* [Example Parameters: Col Submit Obs](Parameters-col-submit-obs.html)
-* [Example Parameters: Mrp Submit Obs](Parameters-mrp-submit-obs.html)
 * [Example Parameters: Gaps Parameters Open Individual MeasureReports](Parameters-single-gaps-open-indv-report01.html)
 * [Example Parameters: Gaps Parameters Closed Individual MeasureReport01](Parameters-single-gaps-closed-indv-report01.html)
 * [Example Parameters: Gaps Parameters Closed Individual MeasureReport02](Parameters-single-gaps-closed-indv-report02.html)
