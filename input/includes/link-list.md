@@ -8,7 +8,6 @@
 [^10]: HEDIS measures referenced are *example content only* for the purposes of working through standards. Organizations should not be using the HEDIS specified measures for the actual measurement.
 [$collect-data]: {{site.data.fhir.path}}measure-operation-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$data-requirements]: {{site.data.fhir.path}}measure-operation-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
-[$submit-data]:{{site.data.fhir.path}}measure-operation-submit-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [Argonaut Clinical Data Subscriptions]: https://argonautwiki.hl7.org/Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Capability statements]: capstatements.html
 [CDS Hooks]: https://cds-hooks.org/
@@ -67,9 +66,9 @@
 [VTE Individual MeasureReport]: vte1.html#individual-measurereport
 [MRP Summary MeasureReport]: mrp.html#summary-measurereport
 [COL Summary MeasureReport]: col.html#summary-measurereport
-[MRP Submit Data Operation]: mrp.html#data-exchange-using-the-submit-data-operation
+[MRP Data Exchange]: mrp.html#submit-data
 [COL Data Requirements Operation]: col.html#data-requirements
-[COL Submit Data Operation]: col.html#submit-data
+[COL Data Exchange]: col.html#submit-data
 [COL Collect Data Operation]: col.html#collect-data
 [Must Support]: guidance.html#must-support "DEQM Core definition of *Must Support*"
 [Not Done]: {{site.data.fhir.path}}deqm-event-notdone.html

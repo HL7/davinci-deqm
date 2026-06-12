@@ -14,5 +14,5 @@ See the overview on validating <a href="http://hl7.org/fhir/R4/validation.html">
 
 #### Cross Version Analysis
 
-{% include cross-version-analysis.xhtml %}
+{% lang-fragment cross-version-analysis.xhtml %}
 

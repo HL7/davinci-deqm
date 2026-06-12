@@ -291,7 +291,7 @@
                 "exampleBoolean": true,
                 "name": "Mrp Submit Task",
                 "reference": {
-                    "reference": "Parameters/mrp-submit-task"
+                    "reference": "Bundle/mrp-submit-task"
                 },
                 "description": "DEQM Mrp Submit Task example"
             },
@@ -379,7 +379,7 @@
                 "exampleBoolean": true,
                 "name": "Col Submit Obs",
                 "reference": {
-                    "reference": "Parameters/col-submit-obs"
+                    "reference": "Bundle/col-submit-obs"
                 },
                 "description": "DEQM Col Submit Obs example"
             },
@@ -427,7 +427,7 @@
                 "exampleBoolean": true,
                 "name": "Mrp Submit Obs",
                 "reference": {
-                    "reference": "Parameters/mrp-submit-obs"
+                    "reference": "Bundle/mrp-submit-obs"
                 },
                 "description": "DEQM Mrp Submit Obs example"
             },
