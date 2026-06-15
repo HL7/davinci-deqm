@@ -33,7 +33,9 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
     -  Multiple MeasureReport may reference the same instance of a resource.
 
 -   Both Consumers and Producers *should* use a common expression
-    language, such as Clinical Quality Languages (CQL).
+    language, such as Clinical Quality Language (CQL). This would also enable
+    the application of the same measures across populations that span
+    multiple Consumers (such as payers). Using common measures across payers reduces development burden for FHIR implementers.
 
     -  The MeasureReport profiles in this IG are used to report CQM Measures. In the context of the FHIR Clinical Quality Framework, CQL is used to facilitate the definition and execution of measures, however the CQM Measure profile does not require the use of CQL. DEQM MeasureReports can reference any CQM Measure, including those not utilizing CQL.
 
@@ -106,11 +108,11 @@ When the [care-gaps](OperationDefinition-care-gaps.html) operation is run on the
 
 The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps] or [prospective gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with any combination of [open, closed, and prospective gaps]. The [CQF Criteria Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [DEQCQF Criteria Reference Extension]the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
 
-#### Data Requirements
+### Data Requirements
 
 Measure specifications define logic and data requirements necessary to perform evaluation of a given measure, often through the use of CQL definitions. The use of CQL definitions/queries supports the retrieval of applicable data elements and associated metadata. Measure specifications will typically make use of a set of defined profiles suitable for use in the target environment, such as US Core or QI-Core, to ensure that data exchanged is standardized, consumable, and suitable for evaluation.
 
-#### Duplicate Data
+### Duplicate Data
 
 Implementations SHOULD avoid sending duplicate data (identical FHIR resources) in data exchanges (collect-data or submit-data) or as resolvable references in MeasureReport.evaluatedResources.
 
