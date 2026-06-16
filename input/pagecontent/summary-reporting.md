@@ -10,29 +10,23 @@ The Summary reporting scenario is supported by the [DEQM Summary MeasureReport P
 
 The Quality Reporting Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Population Data]section describes how to use a MeasureReport resource to represent the results of a summary calculation, as well as how to use the $evaluate-measure operation to generate a summary MeasureReport from a Measure.
 
+### DEQM Summary Resource Diagram
+
+The following diagram shows the relationships of resources required for summary reporting. Depending on the specific Measure and interaction being performed, additional DEQM profiles and resources may also be required beyond those listed above.
+
+{% include img-narrow.html img="summary_resource_diagram.jpg" caption="Figure 2-25 Summary Resource Diagram" %}
+
 ### Supplemental Data Resources in MeasureReport
 
 The [supplementalData extension](https://hl7.org/fhir/R5/measurereport-definitions.html#MeasureReport.supplementalData) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
-
-### Relationship between QI-Core, DEQM, and CQMs
-{: #qualityMeasurementStandardsLandscapeSummary}
-<span class="bg-success"> As described in the [Quality Measurement Standards Landscape](background.html#quality-measurement-standards-landscape) section of this implementation guide, </span>the QI-Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports summary reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category III (QRDA Category III), QI-Core profiles are equivalent to the Quality Data Model (QDM) and the DEQM Summary MeasureReport Profile is equivalent to the QRDA Category III in the QDM-CQL-QRDA paradigm.
-### Default Profiles
-The following resources are used in the summary reporting scenario:
-
-|Resource Type| Profile Name                       | Link to Profile                      |
-|---|------------------------------------|--------------------------------------|
-|Measure| CRMI Shareable Measure Profile     | [CRMI Shareable Measure](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablemeasure.html)             |
-|Summary MeasureReport| DEQM Summary MeasureReport Profile | [DEQM Summary MeasureReport Profile](StructureDefinition-deqm-summarymeasurereport.html) |
-|Organization| QI Core Organization Profile       | [QI Core Organization](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-organization.html)               |
 
 ### Summary Measure Reporting
 {: #summary-measure-reporting}
 When the results of a quality measure are completed for a population at the end of a measurement period, they are POSTed to the quality measure Receiver's FHIR Server. The report may only consist of the Summary MeasureReport in which case it is POSTed to the MeasureReport endpoint.  If there are other referenced resources all the resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API. Multiple summary results can be sent in a single FHIR Bundle as described [here](indv-reporting.html#individual-measure-reporting).  (Note that if the Bundle consist of only Summary MeasureReports, then a [collection] bundle is used.)
 
-In order to support real-world implementations (i.e. QPP) where:
+In order to support real-world implementations where:
 
--  External producers submit summary MeasureReport resources for multiple providers (TINs/NPIs) in a single bundle.
+-  External producers submit summary MeasureReport resources for multiple providers in a single bundle.
 
 -  FHIR servers often act as facade layers over existing APIs (e.g., Measurement  /api/submissions/measurements) that perform individual POST/PUT operations atomically.
 
@@ -59,7 +53,7 @@ for a Bundle Transaction:
 
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See POST summary Report Example" %}
 
-for an example of a Summary MeasureReport with counts for multiple populations and stratifiers specified in an eCQM see the [Medicare Stratification Example].  For an example of a Bundle of multiple summary results see the [Bundle Multiple Summ Report].
+for an example of a Summary MeasureReport with counts for multiple populations and stratifiers specified in a quality measure see the [Medicare Stratification Example].  For an example of a Bundle of multiple summary results see the [Bundle Multiple Summ Report].
 
 <br />
 
