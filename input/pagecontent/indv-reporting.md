@@ -5,6 +5,12 @@ An individual patient level report contains quality data for one patient for one
 
 The Individual reporting scenario is supported by the [DEQM Individual MeasureReport Profile]. Transactions between Reporters (for example, an organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of individual patient level quality reports for CQMs to various quality reporting programs.
 
+### DEQM Individual Resource Diagram
+
+The following diagram shows the relationships of resources required for individual reporting. Depending on the specific Measure and interaction being performed, additional DEQM profiles and resources may also be required beyond those listed above.
+
+{% include img-narrow.html  img="individual_reporting_resources.png" caption="Figure 2-9 Individual Reporting" %}
+
 ### Supplemental Data Resources in MeasureReport
 
 The [supplementalData extension](https://hl7.org/fhir/R5/measurereport-definitions.html#MeasureReport.supplementalData) allows supplementalData to be included in the MeasureReport. For supplementalData that is a calculation, this will be a reference to an Observation containing the result of the supplementalData calculation. For supplementalData that is a resource, this will be a reference to the supplementalData resource. For supplementalData that is calculated only for the measure being reported the resource may be in a contained resource.
@@ -13,12 +19,6 @@ The [supplementalData extension](https://hl7.org/fhir/R5/measurereport-definitio
 {:.no_toc}
 
 The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation, as well as how to use the $evaluate-measure operation to generate an individual MeasureReport from a Measure.
-
-#### Relationship between QI-Core, DEQM, and CQMs
-{:.no_toc}
-{: qualityMeasurementStandardsLandscapeIndv}
-
-<span class="bg-success">As described in the [Quality Measurement Standards Landscape](background.html#quality-measurement-standards-landscape) section of this implementation guide, </span>the QI-Core IG defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. For implementers that are familiar with the previous generation of standards that supports individual reporting---Quality Data Model (QDM), Clinical Quality Language (CQL), and the Quality Reporting Document Architecture Category I (QRDA Category I), QI-Core profiles are equivalent to the Quality Data Model (QDM) that is used in the QDM-CQL-QRDA paradigm. The collection of resources consisting of the DEQM Individual MeasureReport Profile and the relevant QI-Core and DEQM profiles representing the detailed patient data to support calculations of those CQMs is similar to the QRDA Category I in the QDM-CQL-QRDA paradigm.
 
 ### Constructing an Individual Report
 
@@ -89,26 +89,13 @@ GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profi
 
 {:.no_toc}
 
-### Default Profiles
-
-The following resources are used in all individual reporting transactions.
-
-|Resource Type|Profile Name|Link to Profile|
-|---|---|---|
-|Measure|CRMI Shareable Measure Profile|[CRMI Shareable Measure](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablemeasure.html)|
-|Individual MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile](StructureDefinition-deqm-individualmeasurereport.html)|
-|Organization|QI Core Organization Profile|[QI Core Organization](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-organization.html)|
-|Patient|QI Core Patient Profile|[QI Core Patient](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html)|
-
-Depending on the specific Measure and Interaction, various DEQM and QI-Core Profiles are used in addition to the profiles listed above.
-
 ### Individual Measure Reporting
 
 When the results of a CQM are completed they are POSTed to the quality measure Receiver's FHIR Server. The Individual MeasureReport(s) and all the referenced resources are bundled together as a set of `POST` interactions and sent as a single [transaction] interaction using the Standard FHIR API.
 
-In order to support real-world implementations (i.e. QPP) where:
+In order to support real-world implementations where:
 
--  External producers submit summary MeasureReport resources for multiple providers (TINs/NPIs) in a single bundle.
+-  External producers submit individual MeasureReport resources for multiple providers in a single bundle.
 
 -  FHIR servers often act as facade layers over existing APIs (e.g., Measurement  /api/submissions/measurements) that perform individual POST/PUT operations atomically.
 
@@ -133,7 +120,7 @@ Note that Multiple individual reports either for the same or multiple patient fo
 </div>
 {: #request-body}
 
-For a complete un-edited examples for both *single* and *multiple* patients see the [MRP Individual MeasureReport], [COL Individual MeasureReport], and [VTE Individual MeasureReport] and [Bundle Multiple Indv Report] examples.  for an example of a Individual MeasureReport with counts for stratifiers specified in an eCQM see the [Indv Measurreport Stratification Example].
+For a complete un-edited examples for both *single* and *multiple* patients see the [MRP Individual MeasureReport], [COL Individual MeasureReport], and [VTE Individual MeasureReport] and [Bundle Multiple Indv Report] examples.  for an example of a Individual MeasureReport with counts for stratifiers specified in a quality measure see the [Indv Measurreport Stratification Example].
 
 <br />
 

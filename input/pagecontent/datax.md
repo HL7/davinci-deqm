@@ -22,29 +22,13 @@ Note that FHIR operations allow the implementation to be viewed as a 'black box'
   This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned and will align with the outcomes of the Argonaut project.
   {:.stu-note}
 
-### Default Profiles
 
-The following resources are used in all data exchange transactions:
-
-
-| Resource Type | Profile Name                             | Link to Profile                            |
-|---------------|------------------------------------------|--------------------------------------------|
-| Library       | CRMI Shareable Library                   | [CRMI Shareable Library](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablelibrary.html)                   |
-| Measure       | CRMI Shareable Measure                   | [CRMI Shareable Measure](https://hl7.org/fhir/uv/crmi/StructureDefinition-crmi-shareablemeasure.html)                   |
-| MeasureReport | DEQM Data Exchange MeasureReport Profile | [DEQM Data Exchange MeasureReport Profile](StructureDefinition-deqm-dataexchangemeasurereport.html) |
-| Organization  | QI Core Organization Profile             | [QI Core Organization](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-organization.html)                     |
-| Patient       | QI Core Patient Profile                  | [QI Core Patient](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html)                          |
-| Practitioner  | QI Core Practitioner Profile             | [QI Core Practitioner](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-practitioner.html)                     |
-
-
-Depending on the specific Measure, various DEQM and QI Core Profiles are also used in addition to the profiles listed above
-
-#### Graph of DEQM Resources
+### Graph of DEQM Resources
 {:.no_toc}
 
 The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1, below. The resource graph shows data for a single measure for a single patient, but as described below and in [DEQM Operations Bundles Organized by Subject](guidance.html#deqm-operation-bundles-organized-by-subject), the DEQM data exchange operations are designed to allow for multiple measures across multiple patients.
 
-{% include img.html img="measure-resource-graph.jpg" caption="Figure 2-1 DEQM Resource Graph" %}
+{% include img.html img="measure-resource-graph.jpg" caption="Figure 2-1 DEQM Data Exchange Resource Diagram" %}
 
 
 ### Submit Data
