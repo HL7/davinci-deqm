@@ -30,23 +30,17 @@ The following diagram depicts this data model standards landscape:
 <details open>
 <summary>
 
-<b>Figure 3: The Data Model Standards Landscape Diagram</b>
+<b>Figure 1-3: The Data Model Standards Landscape Diagram</b>
 
 </summary>
 
-<img src="data-model-standards-landscape.png" alt="Data Model
+<img src="data-model-standards-landscape_MAY_2026.png" alt="Data Model
 Standards Landscape" class="img-responsive img-rounded center-block"/>
 
 </details>
 
 
-As illustrated, FHIR provides the foundation, and sets of profiles are built
-on top of FHIR that provide more and more focused use cases by constraining
-profiles and extending functionality to cover gaps. While the additional layers
-are necessary to represent specific operations and provide space for agreement
-among relevant stakeholders, the consensus-based standards development process
-is used to suggest changes to the layers below, resulting in an ever-broadening
-umbrella of interoperability.
+As illustrated, FHIR provides the foundational resources and guidance that are broadly applicable across healthcare interoperability use cases. Building on that foundation, realm-specific implementation guides define additional constraints and conventions to support regional requirements. Further specialization occurs through quality improvement-focused profiles and guidance, which establish common representations needed for quality measurement, reporting, and related use cases. At the highest level, use case-focused content IGs provide the most specific constraints and requirements needed to support particular workflows or programs. As implementation experience accumulates and consensus emerges, patterns and requirements defined in more specialized layers can inform enhancements to the layers below, promoting greater consistency, reuse, and interoperability across the ecosystem.
 
 This layering of profiles balances the relative adoption and implementation
 maturity of FHIR and the data representation requirements of the use cases
@@ -56,13 +50,9 @@ involved, guided by the following principles:
 use of existing profiles at the lowest level of the stack, only defining a new
 profile if absolutely necessary to express a requirement for a particular use
 case that cannot be represented by an existing one.
-2.  **Share profiles across measures.** There should not be profiles specific to any particular
-measure. Instead, QI Core provides a layer for the expression of quality
-improvement requirements across measures and decision support artifacts.
+2.  **Share profiles across measures.** There should not be profiles specific to any distinct measure. Instead, quality improvement requirements that are common across measures and decision support artifacts should be represented using shared profiles and constraints to maximize reuse and interoperability.
 3.  **No terminology-narrowing-only profiles.** Profiles should not be used
 to specify only terminology narrowing constraints. The FHIR Clinical Reasoning
 module and CQL enable the representation of data requirements for quality
 measures and decision support artifacts.
-4.  **Promote data-related profiles.** When it becomes necessary to define a data-related profile at the
-measurement-specific level (in DEQM or HEDIS for example), steps should be taken
-to promote that profile to the broadest consensus group possible.
+4.  **Promote use case related profiles.** When it becomes necessary to define a profile at the use case level, steps should be taken to promote that profile to the broadest consensus group possible.
