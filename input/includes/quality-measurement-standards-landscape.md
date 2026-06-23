@@ -11,7 +11,7 @@ diagram:
 
 </summary>
 
-<img src="quality-measurement-standards-landscape.png"
+<img src="quality-measurement-standards-landscape_MAY_2026.png"
 alt="Quality Measurement Standards Landscape" class="img-responsive img-rounded center-block"/>
 
 </details>
