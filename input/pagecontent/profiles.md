@@ -29,7 +29,6 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Group Improvement Notation Extension](StructureDefinition-deqm-groupImprovementNotation.html)                |
 | [DEQM Reporting Program Extension](StructureDefinition-deqm-reportingProgram.html) |
 | [DEQM Calculated Date Extension](StructureDefinition-deqm-calculatedDate.html)                |  
-| [DEQM Measure Report Population Description Extension](StructureDefinition-deqm-populationDescription.html) |
 | [DEQM Care Gap Remark Extension](StructureDefinition-deqm-careGapRemark.html) |
 
 #### Globals Table
