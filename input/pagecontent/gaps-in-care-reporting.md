@@ -42,6 +42,7 @@ The following resources are used in the Gaps in Care Reporting Scenario:
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
+|GuideanceResponse|DEQM Detailed Care Gap Guidance Response|[DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html)|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 {: .grid}
 
