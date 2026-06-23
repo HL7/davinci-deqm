@@ -35,8 +35,7 @@ The DEQM resources form a network through their relationships with each other - 
 {: #submit-data .toc}
 
 {:.highlight-note}
-<span class="bg-success">The $submit-data operation defined in earlier versions of this guide has been deprecated. A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html)</span> to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).  The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available.  <span class="bg-success">A  bundle SHALL contain 1..* DEQM Data Exchange MeasureReport with data-of-interest and SHOULD be for a single subject. See the guidance on Bundle structure for discussion about the Bundle content and organization.</span> The Producer submits the data either as  [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
-
+These Bundles SHALL contain data-of-interest, SHALL contain 0..* DEQM Data Exchange MeasureReports for that data, and SHOULD be for a single subject. See the guidance on Bundle structure for discussion about the Bundle content and organization.
 {% include img.html img="submit-data-step.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
 #### Gather Data Requirements from Consumer
