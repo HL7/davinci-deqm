@@ -11,7 +11,7 @@ diagram:
 
 </summary>
 
-<img src="quality-measurement-standards-landscape.png"
+<img src="quality-measurement-standards-landscape_MAY_2026.png"
 alt="Quality Measurement Standards Landscape" class="img-responsive img-rounded center-block"/>
 
 </details>
@@ -127,17 +127,10 @@ any particular measure, rather it defines the standard approach to the
 representation of that content so that quality measure specifiers can define and
 share standardized FHIR-based electronic Clinical Quality Measures (eCQMs).
 
-#### Quality Improvement Core Implementation Guide (QI-Core)
-{:.no_toc #quality-improvement-core-implementation-guide-(qi-core)}
+#### Quality Improvement Data Model
+{:.no_toc #quality-improvement-data-model}
 
-The Quality Improvement Core Implementation Guide, or QI-Core, defines a set
-of FHIR profiles with extensions and bindings needed to create interoperable,
-quality-focused applications. Importantly, the scope of QI-Core includes both
-quality measurement and decision support to ensure that knowledge expressed can
-be shared across both domains. QI-Core is derived from US Core, meaning that
-where possible, QI-Core profiles are based on US Core to ensure alignment with
-and support for quality improvement data within healthcare systems in the US
-Realm.
+A quality measurement data model defines the structured clinical and administrative data needed to support interoperable quality measurement and related healthcare quality activities. These models establish common representations, terminology bindings, and constraints to enable consistent interpretation and exchange of quality-related data across systems. Quality measurement data models often support both quality measurement and related use cases, such as clinical decision support and population health management, to promote reuse of computable knowledge and reduce implementation variability.
 
 #### Data Exchange for Quality Measures (DEQM)
 {:.no_toc #data-exchange-for-quality-measures-(deqm)}
@@ -145,6 +138,4 @@ Realm.
 The Data Exchange for Quality Measures Implementation Guide, or DEQM, (this IG)
 provides a framework that defines conformance profiles and guidance to enable
 the exchange of quality information and quality measure reporting (e.g. for
-transferring quality information from a health care provider to a payer). The
-DEQM expects to use quality measures specified in accordance with the Quality
-Measure IG and QI-Core.
+transferring quality information from a health care provider to a payer). The DEQM expects to use quality measures specified in accordance with the Quality Measure IG.

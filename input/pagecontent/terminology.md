@@ -11,7 +11,7 @@ Refer to the specific FHIR resources and profiles for each measure’s requireme
 
 ### Expansion Parameters
 
-{% include expansion-params.xhtml %}
+{% lang-fragment expansion-params.xhtml %}
 
 ---
 

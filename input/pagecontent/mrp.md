@@ -60,10 +60,10 @@ In the following interactions, the Provider is acting in the role of the *Produc
 
         {% include examplebutton.html example="data-requirements-example" b_title = "Click Here To See Example Data Requirements operation" %}
 
-#### Data Exchange Using the Submit Data Operation
+#### Submitting Data with POST {#submit-data}
 {:.no_toc}
 
-The Provider will use the Submit Data operation to submit a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the Payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
+The Provider will POST a MeasureReport and the referenced resources required by the payers as supporting evidence to provide the MRP attestation to the Payer.  Note that the Collect Data and Subscription Operations are not supported for this use case.
 
 The technical Workflow is outlined in the following figure.  The parts outlined in orange are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 

@@ -14,7 +14,7 @@ This implementation guide defines a framework to support quality measurement, re
 
 Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models. To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common information models and data exchange standards. The intent of the framework defined in this guide is to enable automatic data collection and submission limiting the need for manual processing and intervention.  Ultimately, a national standard based on FHIR for data structure and exchange will reduce the burden on clinicians of transforming data between systems.
 
-The guide is based upon prior work from the [US Core] and [QI Core] Implementation Guides and the [QRDA] Category I and III reporting specifications. Initially supported by the [Da Vinci] initiative, development and ongoing maintenance of this specification is managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups. Implementation feedback is incorporated through the standard HL7 balloting process.
+The guide is based upon prior work from the [US Core](https://hl7.org/fhir/us/core/) and [QI-Core](https://hl7.org/fhir/us/qicore/) Implementation Guides and the [QRDA Category I](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=35) and [QRDA III](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=286) reporting specifications. Initially supported by the [Da Vinci] initiative, development and ongoing maintenance of this specification is managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups. Implementation feedback is incorporated through the standard HL7 balloting process.
 
 ### How to read this Guide
 
@@ -68,11 +68,11 @@ For these scenarios, the actors are Producers and Consumers, used in the same se
 
 ##### Exchange Payload
 
-DEQM is a framework specification that supports a broad set of use cases. As such, DEQM profiles do not require the use of any specific set of profiles to characterize the data being exchanged; rather, the framework relies on the content (i.e. the measure specifications) to drive the data requirements and profiles. For example, measures may make use of the QI Core profiles in the US Realm, and many of the examples in this implementation guide do so. It is the measures that specify the profiles to be used, not DEQM directly.
+DEQM is a framework specification that supports a broad set of use cases. As such, DEQM profiles do not require the use of any specific set of profiles to characterize the data being exchanged; rather, the framework relies on the content (i.e. the measure specifications) to drive the data requirements and profiles. For example, measures may make use of the QI-Core profiles in the US Realm, and many of the examples in this implementation guide do so. It is the measures that specify the profiles to be used, not DEQM directly.
 
 ##### Bulk Data
 
-In each of the scenarios described in DEQM, the FHIR API can be used directly to access the data of interest for the measure being reported. However, to support large volumes of data, [Bulk Data](https://hl7.org/fhir/uv/bulkdata/) may be used to transfer the data of interest between the clinical data repository and the reporting system. As of the time of this publication, the Bulk Data specification is being updated to include important capabilities that will improve the performance of bulk data for the quality reporting use case, in particular the ability to organize bulk data feeds by subject. A future version of this publication will provide more detail on how this capability can be used directly once the updated Bulk Data specification is published  (expected to ballot in September 2026, currently in draft [here](https://hackmd.io/@argonaut/rJoqHZrPle).
+In each of the scenarios described in DEQM, the FHIR API can be used directly to access the data of interest for the measure being reported. However, to support large volumes of data, [Bulk Data](https://hl7.org/fhir/uv/bulkdata/) may be used to transfer the data of interest between the clinical data repository and the reporting system. As of the time of this publication, the Bulk Data specification is being updated to include important capabilities that will improve the performance of bulk data for the quality reporting use case, in particular the ability to organize bulk data feeds by subject. A future version of this publication will provide more detail on how this capability can be used directly once the updated Bulk Data specification is published  (expected to ballot in September 2026, currently in draft [here](https://hackmd.io/@argonaut/rJoqHZrPle)).
 
 ##### Aggregated Reporting
 
@@ -84,7 +84,7 @@ Because data from multiple facilities and organizations can be aggregated in man
 
 For simplicity, each of the above reporting scenarios is specified in terms of a single measure. However, all the framework operations and scenarios support specifying any number of measures to be reported, or the _exchange scope_:
 
-{% include img.html caption="Figure 1-5 Exchange Scope" img="quality-reporting-exchange-scope.png" %}
+{% include img.html caption="Figure 1-5 Exchange Scope" img="quality-reporting-exchange-scope-2026.png" %}
 
 Exchanging data for multiple measures impacts:
 
@@ -102,7 +102,7 @@ For more details on data requirements, see the [Data Requirements](datax.html#ga
 
 Figure 1-6 illustrates the *Reporting Scenarios*:
 
-{% include img.html caption="Figure 1-6 Reporting Scenarios" img="quality-reporting-reporting-scenarios.png" %}
+{% include img.html caption="Figure 1-6 Reporting Scenarios" img="quality-reporting-reporting-scenarios-2026.png" %}
 
 Reporting scenarios are used to report the results of quality measures on patient populations, typically, though not always, at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement initiative by a payer or other quality improvement stakeholder such as public health agencies.
 
@@ -180,11 +180,11 @@ For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 
 #### Dependency Table
 
-{% include dependency-table-nontech.xhtml %}
+{% lang-fragment dependency-table-nontech.xhtml %}
 
 #### IP Statements
 
-{% include ip-statements.xhtml %}
+{% lang-fragment ip-statements.xhtml %}
 
 <a href="https://www.flaticon.com/free-icons/hospital" title="hospital icons">Hospital icons created by Freepik - Flaticon</a>
 
