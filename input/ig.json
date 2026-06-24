@@ -48,13 +48,13 @@
         {
             "id": "ext",
             "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
-            "version": "dev",
+            "version": "5.3.0",
             "packageId": "hl7.fhir.uv.extensions.r4"
         },
         {
             "version": "2.0.0-ballot",
             "id": "cqm",
-            "packageId": "dev",
+            "packageId": "hl7.fhir.uv.cqm",
             "uri": "http://hl7.org/fhir/uv/cqm/ImplementationGuide/hl7.fhir.uv.cqm"
         }
     ],
