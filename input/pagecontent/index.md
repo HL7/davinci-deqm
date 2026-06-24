@@ -84,7 +84,7 @@ Because data from multiple facilities and organizations can be aggregated in man
 
 For simplicity, each of the above reporting scenarios is specified in terms of a single measure. However, all the framework operations and scenarios support specifying any number of measures to be reported, or the _exchange scope_:
 
-{% include img.html caption="Figure 1-5 Exchange Scope" img="quality-reporting-exchange-scope.png" %}
+{% include img.html caption="Figure 1-5 Exchange Scope" img="quality-reporting-exchange-scope-2026.png" %}
 
 Exchanging data for multiple measures impacts:
 
@@ -102,7 +102,7 @@ For more details on data requirements, see the [Data Requirements](datax.html#ga
 
 Figure 1-6 illustrates the *Reporting Scenarios*:
 
-{% include img.html caption="Figure 1-6 Reporting Scenarios" img="quality-reporting-reporting-scenarios.png" %}
+{% include img.html caption="Figure 1-6 Reporting Scenarios" img="quality-reporting-reporting-scenarios-2026.png" %}
 
 Reporting scenarios are used to report the results of quality measures on patient populations, typically, though not always, at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement initiative by a payer or other quality improvement stakeholder such as public health agencies.
 

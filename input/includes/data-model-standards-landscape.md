@@ -7,9 +7,7 @@ delivery system, and needs to be able to represent information across that
 entire spectrum. FHIR provides a foundation for representation of this
 information in a universally applicable way. In particular cases, more
 specificity is required to capture the intended meaning of healthcare
-information. As FHIR is more and more broadly adopted, consensus among
-participating stakeholders on the use of particular profiles and patterns
-enables semantic interoperability for more use cases.
+information. Increasingly widespread adoption of FHIR requires consensus on the use of specific profiles and patterns to ensure semantic interoperability for a broader range of use cases.
 
 Within the US Realm, US Core profiles comprise this base consensus, and
 although it enables a variety of interoperability use cases, the profiles do not
