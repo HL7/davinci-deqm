@@ -4,9 +4,9 @@ When using a MeasureReport resource to represent a subject-list, the MeasureRepo
 
 {% include img.html img="clinicalreasoning-measure-report-patient-list.png" caption="Figure 2-19 DEQM MeasureReport Subject List" %}
 
-In order to support real-world implementations (i.e. QPP) where:
+In order to support real-world implementations where:
 
--  External producers submit summary MeasureReport resources for multiple providers (TINs/NPIs) in a single bundle.
+-  External producers submit subject list MeasureReport resources for multiple providers in a single bundle.
 
 -  FHIR servers often act as facade layers over existing APIs (e.g., Measurement  /api/submissions/measurements) that perform individual POST/PUT operations atomically.
 
