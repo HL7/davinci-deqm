@@ -31,8 +31,5 @@ Payers and providers need common data specification, measure specification, repo
 | [DEQM Calculated Date Extension](StructureDefinition-deqm-calculatedDate.html)                |  
 | [DEQM Care Gap Remark Extension](StructureDefinition-deqm-careGapRemark.html) |
 
-#### Globals Table
-
-{% lang-fragment globals-table.xhtml %}
 
 {% include link-list.md %}
