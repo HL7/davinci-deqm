@@ -65,7 +65,7 @@
 <artifact deprecated="true" id="MedicationAdministration/medicationadministration01" key="MedicationAdministration-medicationadministration01" name="DEQM MedicationAdministration Example"/>
 <artifact deprecated="true" id="StructureDefinition/medicationadministration-deqm" key="StructureDefinition-medicationadministration-deqm" name="DEQM MedicationAdministration Profile"/>
 <artifact deprecated="true" id="StructureDefinition/organization-deqm" key="StructureDefinition-organization-deqm" name="DEQM Organization Profile"/>
-<artifact id="StructureDefinition/deqm-populationDescription" key="StructureDefinition-extension-populationDescription" name="DEQM Population Description"/>
+<artifact deprecated="true" id="StructureDefinition/deqm-populationDescription" key="StructureDefinition-extension-populationDescription" name="DEQM Population Description"/>
 <artifact deprecated="true" id="StructureDefinition/extension-populationReference" key="StructureDefinition-extension-populationReference" name="DEQM Population Reference Extension"/>
 <artifact deprecated="true" id="StructureDefinition/practitioner-deqm" key="StructureDefinition-practitioner-deqm" name="DEQM Practitioner Profile"/>
 <artifact id="StructureDefinition/deqm-reasonDetail" key="StructureDefinition-deqm-reasonDetail" name="DEQM Reason Detail"/>
@@ -205,7 +205,7 @@
 <artifact id="Bundle/single-indv-vte-report-option1" key="Bundle-single-indv-vte-report-option1" name="Single Indv Vte Report Option 1"/>
 <artifact id="Bundle/single-indv-vte-report-option7" key="Bundle-single-indv-vte-report-option7" name="Single Indv Vte Report Option 7"/>
 <artifact id="MeasureReport/subjectlist-measurereport01" key="MeasureReport-subjectlist-measurereport01" name="Subject List MeasureReport01"/>
-<artifact id="OperationDefinition/submit-data" key="OperationDefinition-submit-data" name="Submit Data"/>
+<artifact deprecated="true" id="OperationDefinition/submit-data" key="OperationDefinition-submit-data" name="Submit Data"/>
 <artifact deprecated="true" id="MeasureReport/summ-attestation" key="MeasureReport-summ-attestation" name="Summ Attestation"/>
 <artifact id="MeasureReport/summary-measurereport-patient-level-linear" key="MeasureReport-summary-measurereport-patient-level-linear" name="Summ MeasureReport - Patient-level linear"/>
 <artifact id="MeasureReport/summary-measurereport-weighted-composite" key="MeasureReport-summary-measurereport-weighted-composite" name="Summ MeasureReport - Weighted Composite"/>
