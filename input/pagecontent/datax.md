@@ -36,7 +36,7 @@ The DEQM resources form a network through their relationships with each other - 
 
 {:.highlight-note}
 
-The $submit-data operation defined in earlier versions of this guide has been deprecated. A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available. These Bundles SHALL contain data-of-interest, SHALL contain 0..* DEQM Data Exchange MeasureReports for that data, and SHOULD be for a single subject. See the guidance on Bundle structure for discussion about the Bundle content and organization. The Producer submits the data either as  [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
+The $submit-data operation defined in earlier versions of this guide has been deprecated. A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available. These Bundles SHALL contain data-of-interest, SHALL contain 0..* DEQM Data Exchange MeasureReports for that data, and SHOULD be for a single subject. See the guidance on Bundle structure for discussion about the Bundle content and organization. The Producer submits the data either as [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
 
 {% include img.html img="submit-data-step.jpg" caption = "Figure 2-2 Submit Data Steps" %}
 
@@ -157,7 +157,7 @@ For a complete un-edited example see the [MRP Submit Data] and [COL Submit Data]
 ### Collect Data
 {: #collect-data}
 
-In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
+In this scenario, the Consumer initiates a [$collect-data](OperationDefinition-collect-data.html) operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
 
 {% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 
@@ -184,7 +184,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Collect Data operation:[$collect-data]
+1. Collect Data operation:[$collect-data](OperationDefinition-collect-data.html)
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 
@@ -214,7 +214,7 @@ Because operations are typically executed synchronously, a collect data request 
 
 #### DEQM Data Exchange Interaction Naming
 
-The DEQM data exchange operation [$collect-data] has the same names as the base FHIR operation. It serves very similar functions, but the DEQM version has more improved referencing of measures, subjects, and organizations, and it supports multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR R4 $collect-data operation.
+The DEQM data exchange operation [$collect-data](OperationDefinition-collect-data.html) has the same names as the base FHIR operation. It serves very similar functions, but the DEQM version has more improved referencing of measures, subjects, and organizations, and it supports multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR R4 $collect-data operation.
 
 Base FHIR R4 has a $submit-data operation that is deprecated after R4. DEQM defines data submission as a POST of a Bundle to the base URL of the FHIR server.
 
@@ -229,7 +229,7 @@ The [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/en/) provides workflo
 
 ### Provenance
 
-Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the data submittion interaction and the $collect-data transaction described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
+Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the data submittion interaction and the [$collect-data](OperationDefinition-collect-data.html) transaction described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 
 <br />
 

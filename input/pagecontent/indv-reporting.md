@@ -18,7 +18,7 @@ The [supplementalData extension](https://hl7.org/fhir/R5/measurereport-definitio
 #### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
-The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation, as well as how to use the $evaluate-measure operation to generate an individual MeasureReport from a Measure.
+The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation, as well as how to use the [$evaluate-measure](https://hl7.org/fhir/R4/operation-measure-evaluate-measure.html) operation to generate an individual MeasureReport from a Measure.
 
 ### Constructing an Individual Report
 
@@ -79,11 +79,11 @@ criteria, and it is the job of the individual measure report to include
 relevant data that was present in the EHR, and to not include data that
 was missing from the EHR.
 
-The $care-gaps report indicates instances in which information does not
+The [$care-gaps](OperationDefinition-care-gaps.html) report indicates instances in which information does not
 support the occurrence of an expected action. The report indicates absence
 of evidence; it cannot differentiate between activity that happened yet is
 missing from the record or from activities that did not occur. However,
-both of these situations result in the $care-gaps and the provider is
+both of these situations result in the [$care-gaps](OperationDefinition-care-gaps.html) and the provider is
 notified in that report.  Missing data may be identified in a
 GuidanceResponse resource as shown in the [DEQM Gaps In Care DetectedIssue Profile].
 
