@@ -43,7 +43,7 @@ The Data Exchange for Quality Measure (DEQM) Implementation Guide defines the in
 
 ### Timezone Support
 
-When evaluating measure logic with $evaluate and $care-gaps, it is often the case that the operation should not be performed with respect to the server's timezone, but rather a timezone specified by the client is typically a more correct option. The [timezone header](https://hl7.org/fhir/http.html#timezones) is available for use in $evaluate and $care-gaps to provide guidance to the measure evaluator about the correct timezone to use. Any number of other methods to specify a timezone could be implemented by measure evaluators, but these would be beyond the scope of this implementation guide. Note that even specifying a single timezone isn't always correct because the evaluation may be running over data from multiple sources in different timezones.
+When evaluating measure logic with [$evaluate](OperationDefinition-evaluate.html) and $care-gaps, it is often the case that the operation should not be performed with respect to the server's timezone, but rather a timezone specified by the client is typically a more correct option. The [timezone header](https://hl7.org/fhir/http.html#timezones) is available for use in [$evaluate](OperationDefinition-evaluate.html) and $care-gaps to provide guidance to the measure evaluator about the correct timezone to use. Any number of other methods to specify a timezone could be implemented by measure evaluators, but these would be beyond the scope of this implementation guide. Note that even specifying a single timezone isn't always correct because the evaluation may be running over data from multiple sources in different timezones.
 
 ### DEQM MeasureReport Profiles
 
