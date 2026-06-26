@@ -6,7 +6,6 @@
 [^6]: This extension not needed because the data element is an element in the R4 Measure Resource.
 [^9]: Changes to QI Core and US Core Organization profiles are being proposed based on the DEQM Organization profile that may lead to this profiles being replaced by the QI Core profile.
 [^10]: HEDIS measures referenced are *example content only* for the purposes of working through standards. Organizations should not be using the HEDIS specified measures for the actual measurement.
-[$collect-data]: {{site.data.fhir.path}}measure-operation-collect-data.html "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure."
 [$data-requirements]: {{site.data.fhir.path}}measure-operation-data-requirements.html "The data-requirements operation aggregates and returns the parameters and data requirements for the measure and all its dependencies as a single module definition"
 [Argonaut Clinical Data Subscriptions]: https://argonautwiki.hl7.org/Argonaut_2019_Projects#Clinical_Data_Subscriptions
 [Capability statements]: capstatements.html

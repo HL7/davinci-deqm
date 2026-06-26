@@ -214,7 +214,7 @@ Because operations are typically executed synchronously, a collect data request 
 
 #### DEQM Data Exchange Interaction Naming
 
-The DEQM data exchange operation [$collect-data] has the same names as the base FHIR operation. It serves very similar functions, but the DEQM version has more improved referencing of measures, subjects, and organizations, and it supports multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR R4 $collect-data operation.
+The DEQM data exchange operation [$collect-data](OperationDefinition-collect-data.html) has the same names as the base FHIR operation. It serves very similar functions, but the DEQM version has more improved referencing of measures, subjects, and organizations, and it supports multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR R4 $collect-data operation.
 
 Base FHIR R4 has a $submit-data operation that is deprecated after R4. DEQM defines data submission as a POST of a Bundle to the base URL of the FHIR server.
 
@@ -229,7 +229,7 @@ The [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/en/) provides workflo
 
 ### Provenance
 
-Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the data submittion interaction and the $collect-data transaction described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
+Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the data submittion interaction and the  [$collect-data](OperationDefinition-collect-data.html) transaction described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 
 <br />
 
