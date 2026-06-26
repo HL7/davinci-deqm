@@ -1,3 +1,6 @@
+NOTE: Generate images using the UML Sequence Diagram Online Tool at SequenceDiagram.org. Coppy text between lines below into the tool.
+
+-------------------------------------------------------
 title Care Gap Operation
 actor Care Manager
 participant Care Management System
@@ -13,3 +16,7 @@ Measurement Analytic System->Payer System: MeasureReports
 Payer System->Payer System: Construct Care Gaps
 Payer System->Care Management System: Care Gaps
 Care Management System->Care Manager: Display Care Gaps
+
+-------------------------------------------------------
+May 2026 ballot version = gic-care-gaps-operation-group.png
+2026 Publication version = gic-care-gaps-operation-group-2026.png

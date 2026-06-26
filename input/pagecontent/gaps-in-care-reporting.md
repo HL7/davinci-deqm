@@ -77,10 +77,10 @@ A report calculated on any given date provides all of the data from the server's
 The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter, **return**, which returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
 
 Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
-{% include img-narrow.html img="gic-care-gaps-operation-single-patient.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
+{% include img-narrow.html img="gic-care-gaps-operation-single-patient-2026.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
 
 Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
-{% include img-narrow.html img="gic-care-gaps-operation-group.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
+{% include img-narrow.html img="gic-care-gaps-operation-group-2026.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
 
 #### Measure Evaluation for a Gap in Care
 {:.no_toc}
