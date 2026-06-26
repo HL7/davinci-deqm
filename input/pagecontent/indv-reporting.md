@@ -18,7 +18,7 @@ The [supplementalData extension](https://hl7.org/fhir/R5/measurereport-definitio
 #### Relationship of Measure and MeasureReport Resources
 {:.no_toc}
 
-The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation, as well as how to use the $evaluate-measure operation to generate an individual MeasureReport from a Measure.
+The [Quality Reporting] Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Individual Data] section describes how to use a MeasureReport resource to represent the results of an individual calculation, as well as how to use the [$evaluate](OperationDefinition-evaluate.html) operation to generate an individual MeasureReport from a Measure.
 
 ### Constructing an Individual Report
 

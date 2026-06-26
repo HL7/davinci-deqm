@@ -8,7 +8,7 @@ The Summary reporting scenario is supported by the [DEQM Summary MeasureReport P
 
 ### Relationship of Measure and MeasureReport Resources
 
-The Quality Reporting Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Population Data]section describes how to use a MeasureReport resource to represent the results of a summary calculation, as well as how to use the $evaluate-measure operation to generate a summary MeasureReport from a Measure.
+The Quality Reporting Page in the R4 Release of the FHIR Specification provides an overview of CQM structures, how CQMs are represented using the Measure resource, and how CQMs are reported using the MeasureReport resource. The [Reporting Population Data]section describes how to use a MeasureReport resource to represent the results of a summary calculation, as well as how to use the [$evaluate](OperationDefinition-evaluate.html) operation to generate a summary MeasureReport from a Measure.
 
 ### DEQM Summary Resource Diagram
 
