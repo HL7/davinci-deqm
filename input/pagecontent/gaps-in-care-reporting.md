@@ -126,7 +126,7 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
 
-Derived from the GuidanceResponse resource, the  [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps. This section provides a detailed description of how the profile should be used, with a focus on the utilization of the `reasonCode` and the `dataRequirement` along with some practical business use cases.
+Derived from the GuidanceResponse resource, the [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps. This section provides a detailed description of how the profile should be used, with a focus on the utilization of the `reasonCode` and the `dataRequirement` along with some practical business use cases.
 
 - **reasonCode** The `GuidanceResponse.reasonCode` has a preferred binding to the Care Gap Reasons value set. It contains codes that represent the reason or rationale behind the identified care gap, such as data element is not found or value is out of the specified range. It helps in categorizing and organizing the gaps based on their underlying causes, facilitating a more targeted approach to addressing them.
 
