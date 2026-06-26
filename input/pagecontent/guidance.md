@@ -120,7 +120,7 @@ Implementations SHOULD avoid sending duplicate data (identical FHIR resources) i
 
 Duplicate data is a concern in DEQM because the operations support multiple measures per subject. The same resource instance could be referenced by multiple MeasureReports, or multiple measures may use different elements within the same resource. Another situation to consider when evaluating a measure is when multiple value sets have overlapping codes, then two different CQL retrieve operations can return the same resource instance because it matches a code twice from the overlap.
 
-Note that the $data-requirements operation is currently defined for a single Measure or Library, so it is a responsibility of the data producer to check for, and address, duplicate data.
+Note that the [$data-requirements] operation is currently defined for a single Measure or Library, so it is a responsibility of the data producer to check for, and address, duplicate data.
 
 As described below in the section "DEQM Operation Bundles Organized by Subject," Bundles utilized in DEQM operations SHOULD be organized by subject. This reduces the potential for proliferation of duplicate data because resources common to the subject, such as Encounters, would not be repeated across Bundles. As described in ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)), a given version of a resource SHALL occur only once in a Bundle, and for DEQM that requires consideration of the data of interest and evaluated resources within the Bundle.
 
