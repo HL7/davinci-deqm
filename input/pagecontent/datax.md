@@ -157,7 +157,7 @@ For a complete un-edited example see the [MRP Submit Data] and [COL Submit Data]
 ### Collect Data
 {: #collect-data}
 
-In this scenario, the Consumer initiates a [$collect-data] operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
+In this scenario, the Consumer initiates a [$collect-data](OperationDefinition-collect-data.html) operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
 
 {% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
 
@@ -184,7 +184,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 
 In addition to the resources listed above, the following artifacts are used in this transaction:
 
-1. Collect Data operation:[$collect-data]
+1. Collect Data operation:[$collect-data](OperationDefinition-collect-data.html)
 1. Various DEQM and QI Core Profiles depending on the specific Measure
 
 
