@@ -16,17 +16,17 @@ Gaps in care may exist for several reasons. The following are some common scenar
 
 A Gaps in Care Report is designed to communicate actual or perceived gaps in care between systems, such as the payer’s system and provider’s EMR. The report provides opportunities for providers to provide missing care and/or to communicate care provision data to payers. The report may also provide information for upcoming care opportunities, prospective gaps.
 
-In Figure 2-12, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram](background.html#quality-improvement-ecosystem).
+In Figure 3.6-1, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram](background.html#quality-improvement-ecosystem).
 
-{% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 2-12 Quality Improvement Ecosystem - Gaps in Care" %}
+{% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 3.6-1 Quality Improvement Ecosystem - Gaps in Care" %}
 
 The gaps in care flow is between a provider and a measurement organization’s system performing analytics.
 
 Note that this implementation guide does not address actual workflow around managing the process of requesting a Gaps in Care Report and to whom the report should be sent.
 
-Figure 2-13 reflects the details within the red circle representing the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem.
+Figure 3.6-2 reflects the details within the red circle representing the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem.
 
-{% include img-portrait.html img="gic-reporting-flow.png" caption = "Figure 2-13 Gaps in Care Reporting Flow" %}
+{% include img-portrait.html img="gic-reporting-flow.png" caption = "Figure 3.6-2 Gaps in Care Reporting Flow" %}
 
 #### Relationship of Individual Reporting and Gaps in Care Reporting
 {:.no_toc}
@@ -46,9 +46,9 @@ The following resources are used in the Gaps in Care Reporting Scenario:
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 {: .grid}
 
-Figure 2-14 provides a graphical view of how these resources are related. A Composition is created for each Patient (linked via `subject` element) and is contained in a Bundle. The Composition resource references one or more DEQM Individual MeasureReport resources. One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under `evaluatedResource` element. The [CQF Criteria Reference Extension] on the `evaluatedResource` documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
+Figure 3.6-3 provides a graphical view of how these resources are related. A Composition is created for each Patient (linked via `subject` element) and is contained in a Bundle. The Composition resource references one or more DEQM Individual MeasureReport resources. One MeasureReport for each Measure included in the report. If the generator of the MeasureReport resource has data used in the Measure, they are linked under `evaluatedResource` element. The [CQF Criteria Reference Extension] on the `evaluatedResource` documents how that resource contributed to the measure, i.e. numerator, denominator, etc.
 
-{% include img-portrait.html img="gic-resources.png" caption = "Figure 2-14 Gaps In Care Resources" %}
+{% include img-portrait.html img="gic-resources.png" caption = "Figure 3.6-3 Gaps In Care Resources" %}
 
 ### Gaps in Care Reporting
 
@@ -65,7 +65,7 @@ Figure 2-14 provides a graphical view of how these resources are related. A Comp
 
 The timeline below represents the data described above. A colonoscopy procedure per the Colorectal Cancer Screen measure is required every 10 years. If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
 
-{% include img-portrait.html img="gic-prospective-retrospective.png" caption = "Figure 2-15 Prospective and Retrospective Use Case" %}
+{% include img-portrait.html img="gic-prospective-retrospective.png" caption = "Figure 3.6-4 Prospective and Retrospective Use Case" %}
 
 #### Care Gaps Operation
 {:.no_toc}
@@ -76,16 +76,16 @@ A report calculated on any given date provides all of the data from the server's
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter, **return**, which returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
 
-Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
-{% include img-narrow.html img="gic-care-gaps-operation-single-patient.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
+Figure 3.6-5 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
+{% include img-narrow.html img="gic-care-gaps-operation-single-patient.png" caption="Figure 3.6-5 Care Gaps Operation - Single Patient" %}
 
-Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
-{% include img-narrow.html img="gic-care-gaps-operation-group.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
+Figure 3.6-6 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
+{% include img-narrow.html img="gic-care-gaps-operation-group.png" caption="Figure 3.6-6 Care Gaps Operation - Group of Patients" %}
 
 #### Measure Evaluation for a Gap in Care
 {:.no_toc}
 
-As shown in Figure 2-16 and 2-17 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
+As shown in Figure 3.6-5 and 3.6-5 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
 
 This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its gapStatus element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. If the status is not-applicable the measureScore SHALL NOT be included in the DEQM Individual MeasureReport.
 
@@ -116,12 +116,12 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 
 The [DEQM Gaps In Care Bundle](StructureDefinition-deqm-gapsincarebundle.html) can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
 
-Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
+Figure 3.6-7 illustrates structure of a DEQM Gaps In Care Bundle.
 - The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-deqm-gapsincarecomposition.html).
 - In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
-{% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 2-18 DEQM Gaps In Care Bundle" %}
+{% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 3.6-7 DEQM Gaps In Care Bundle" %}
 
 #### Detailed Care Gap Guidance Response
 {:.no_toc}

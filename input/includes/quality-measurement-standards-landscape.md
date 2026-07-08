@@ -7,7 +7,7 @@ diagram:
 <details open>
 <summary>
 
-<b>Figure 1-2: The Quality Measurement Standards Landscape Diagram</b>
+<b>Figure 2-2: The Quality Measurement Standards Landscape Diagram</b>
 
 </summary>
 

@@ -2,7 +2,7 @@
 When using a MeasureReport resource to represent a subject-list, the MeasureReport SHALL have a type-code of "subject-list" and if a subject reference is present, it SHALL be a reference to a Group. In addition, the resource SHALL include for each population a reference to a List resource that references individual level MeasureReport resources for the same measure, one for each subject in the overall population.
 
 
-{% include img.html img="clinicalreasoning-measure-report-patient-list.png" caption="Figure 2-19 DEQM MeasureReport Subject List" %}
+{% include img.html img="clinicalreasoning-measure-report-patient-list.png" caption="Figure 3.5-1 DEQM MeasureReport Subject List" %}
 
 In order to support real-world implementations where:
 

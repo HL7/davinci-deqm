@@ -45,9 +45,9 @@ For MRP either a *Task* resource or an *Observation* resource can be used as the
 |The state of completion|`Task.status`|`Observation.valueBoolean`(= "true" for complete) + `Observation.status`|
 {:.grid}
 
-{% include img.html img="mrp-task.png" caption="Figure 3-1 MRP Using Task" %}
+{% include img.html img="mrp-task.png" caption="Figure 4.1-1 MRP Using Task" %}
 
-{% include img.html img="mrp-observation.png" caption="Figure 3-2 MRP Using Observation" %}
+{% include img.html img="mrp-observation.png" caption="Figure 4.1-2 MRP Using Observation" %}
 
 ### MRP Data Exchange Interactions
 
@@ -67,7 +67,7 @@ The Provider will POST a MeasureReport and the referenced resources required by 
 
 The technical Workflow is outlined in the following figure.  The parts outlined in orange are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 
-{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption="Figure 3-3 Submit Data Technical Workflow" %}
+{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption="Figure 4.1-3 Submit Data Technical Workflow" %}
 
 {% include examplebutton.html example="submit-data-task" b_title = "Click Here To See Example Submit Data operation using Task option" %}
 
@@ -85,7 +85,7 @@ In the following interactions,  The Payer ("Aggregator") is acting in the role o
 
 The Payer (“Aggregator”) pushes the Bundle of supporting resources with the MRP Individual MeasureReport Bundle to the Receiver.
 
-{% include img-portrait.html img="mrp_indv_report.jpg" caption = "Figure 3-4 Individual Reporting Technical Workflow" %}
+{% include img-portrait.html img="mrp_indv_report.jpg" caption = "Figure 4.1-4 Individual Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="single-indv-mrp-task-report" b_title = "Click Here To See Example Post Bundle with MRP Individual MeasureReport using Task" %}
 
@@ -99,7 +99,7 @@ The Payer (“Aggregator”) pushes the Bundle of supporting resources with the 
 
 The Payer (“Aggregator”) pushes the MRP Summary MeasureReport to the Receiver.
 
-{% include img-portrait.html img="mrp_summ_report.jpg" caption = "Figure 3-5 Summary Reporting Technical Workflow" %}
+{% include img-portrait.html img="mrp_summ_report.jpg" caption = "Figure 4.1-5 Summary Reporting Technical Workflow" %}
 
 {% include examplebutton.html example="mrp-summary-report-example" b_title = "Click Here To See Example Post MRP Summary MeasureReport" %}
 

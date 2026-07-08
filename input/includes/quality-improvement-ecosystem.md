@@ -8,7 +8,7 @@ Quality measurement enables the LHS cycle by identifying variation in care, reve
 <details open>
 <summary>
 
-<b>Figure 1-1: The Learning Health System</b>
+<b>Figure 2-1: The Learning Health System</b>
 
 </summary>
 
