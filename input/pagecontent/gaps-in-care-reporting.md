@@ -85,7 +85,7 @@ Figure 3.6-6 shows an example workflow for running the [care-gaps](OperationDefi
 #### Measure Evaluation for a Gap in Care
 {:.no_toc}
 
-As shown in Figure 3.6-5 and 3.6-5 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
+As shown in Figure 3.6-5 and 3.6-6 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
 
 This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its gapStatus element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. If the status is not-applicable the measureScore SHALL NOT be included in the DEQM Individual MeasureReport.
 
