@@ -87,7 +87,7 @@ We are seeking input on the feasibility and interest in using *CDS Hooks* to rep
 {:.no_toc}
 The Provider will POST a MeasureReport and the referenced resources required by the payers as supporting evidence for Colorectal Cancer Screening to the payer.  
 
-{% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv submit-data.jpg" caption = "Figure 3-9 Submit Data Technical Workflow" %}
+{% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv submit-data_2026.jpg" caption = "Figure 3-9 Submit Data Technical Workflow" %}
 
 {% include examplebutton.html example="col-submit-example" b_title = "Click Here To See Example COL Submit Data" %}
 
