@@ -42,13 +42,13 @@
         }
     ],
     "url": "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
-    "version": "1.0.0-ballot",
+    "version": "1.0.0-cibuild",
     "packageId": "hl7.fhir.uv.deqm",
     "dependsOn": [
         {
             "id": "ext",
             "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
-            "version": "5.3.0-ballot-tc1",
+            "version": "5.3.0",
             "packageId": "hl7.fhir.uv.extensions.r4"
         },
         {
@@ -171,7 +171,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "STU 1 Ballot"
+                "value": "CI Build"
             },
             {
                 "code": "excludexml",

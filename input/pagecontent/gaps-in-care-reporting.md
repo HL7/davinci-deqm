@@ -42,6 +42,7 @@ The following resources are used in the Gaps in Care Reporting Scenario:
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
+|GuideanceResponse|DEQM Detailed Care Gap Guidance Response|[DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html)|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 {: .grid}
 
@@ -84,7 +85,7 @@ Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefin
 #### Measure Evaluation for a Gap in Care
 {:.no_toc}
 
-As shown in Figure 2-16 and 2-17 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
+As shown in Figure 2-16 and 2-17 above, gaps in care reporting leverages the quality measure evaluation capability of [$evaluate](OperationDefinition-evaluate.html) to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the [$care-gaps](OperationDefinition-care-gaps.html) operation utilizes [$evaluate](OperationDefinition-evaluate.html), any QMIG profile requirements for [$evaluate](OperationDefinition-evaluate.html) apply to [$care-gaps](OperationDefinition-care-gaps.html) as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
 
 This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its gapStatus element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. If the status is not-applicable the measureScore SHALL NOT be included in the DEQM Individual MeasureReport.
 
@@ -125,7 +126,7 @@ Figure 2-18 illustrates structure of a DEQM Gaps In Care Bundle.
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
 
-Derived from the GuidanceResponse resource, the  [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps. This section provides a detailed description of how the profile should be used, with a focus on the utilization of the `reasonCode` and the `dataRequirement` along with some practical business use cases.
+Derived from the GuidanceResponse resource, the [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) supports the functionality of providing reason for guidance and detailed guidance to help address care gaps and close open gaps. This section provides a detailed description of how the profile should be used, with a focus on the utilization of the `reasonCode` and the `dataRequirement` along with some practical business use cases.
 
 - **reasonCode** The `GuidanceResponse.reasonCode` has a preferred binding to the Care Gap Reasons value set. It contains codes that represent the reason or rationale behind the identified care gap, such as data element is not found or value is out of the specified range. It helps in categorizing and organizing the gaps based on their underlying causes, facilitating a more targeted approach to addressing them.
 
