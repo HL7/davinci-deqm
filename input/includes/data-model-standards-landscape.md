@@ -28,7 +28,7 @@ The following diagram depicts this data model standards landscape:
 <details open>
 <summary>
 
-<b>Figure 1-3: The Data Model Standards Landscape Diagram</b>
+<b>Figure 2-3: The Data Model Standards Landscape Diagram</b>
 
 </summary>
 

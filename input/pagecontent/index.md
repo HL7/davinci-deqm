@@ -10,11 +10,13 @@ This implementation guide defines a framework to support quality measurement, re
 1. The exchange of the [_data of interest_](glossary.html#data-of-interest) for a measure or set of measures
 2. The reporting of quality measurement results, with or without the data involved in calculating those results
 
-{% include img.html img="quality-reporting-overview.png" %}
+{% include img.html caption="Figure 1-1 Quality Reporting Overview" img="quality-reporting-overview.png" %}
 
 Interoperability challenges have limited many stakeholders in the healthcare community from achieving better care at lower cost. The dual challenges of data standardization and easy information access are compromising the ability of both payers and providers to create efficient care delivery solutions and effective care management models. To promote interoperability across value-based care stakeholders and to guide the development and deployment of interoperable solutions on a national scale, the industry needs common information models and data exchange standards. The intent of the framework defined in this guide is to enable automatic data collection and submission limiting the need for manual processing and intervention.  Ultimately, a national standard based on FHIR for data structure and exchange will reduce the burden on clinicians of transforming data between systems.
 
 The guide is based upon prior work from the [US Core](https://hl7.org/fhir/us/core/) and [QI-Core](https://hl7.org/fhir/us/qicore/) Implementation Guides and the [QRDA Category I](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=35) and [QRDA III](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=286) reporting specifications. Initially supported by the [Da Vinci] initiative, development and ongoing maintenance of this specification is managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups. Implementation feedback is incorporated through the standard HL7 balloting process.
+
+Quality measures are increasingly represented using standardized, computable approaches across the healthcare ecosystem. Terms such as electronic Clinical Quality Measure (eCQM) and digital Quality Measure (dQM) are used throughout the industry to describe specific formats of quality measures. For the purposes of this IG, all such measures are referred to as "quality measures".
 
 ### How to read this Guide
 
@@ -53,9 +55,9 @@ As a precondition, systems in these scenarios make use of relevant measure speci
 
 #### Exchange Scenarios
 
-Figure 1-4 illustrates *Exchange Scenarios*.
+Figure 1-2 illustrates *Exchange Scenarios*.
 
-{% include img-portrait.html caption="Figure 1-4 Quality Reporting Exchange Scenarios" img="quality-reporting-exchange-scenarios.png" %}
+{% include img-portrait.html caption="Figure 1-2 Quality Reporting Exchange Scenarios" img="quality-reporting-exchange-scenarios.png" %}
 
 Exchange scenarios are used to exchange the data of interest for a measure or set of measures, either throughout the measurement period, or at the end of the measurement period as the first step in the reporting process. These scenarios enable providers and quality stakeholders such as payers, accountable care organizations, and other secondary use partners to keep better track of how patients are performing with respect to a particular quality measure during the measurement period.
 
@@ -84,7 +86,7 @@ Because data from multiple facilities and organizations can be aggregated in man
 
 For simplicity, each of the above reporting scenarios is specified in terms of a single measure. However, all the framework operations and scenarios support specifying any number of measures to be reported, or the _exchange scope_:
 
-{% include img.html caption="Figure 1-5 Exchange Scope" img="quality-reporting-exchange-scope-2026.png" %}
+{% include img.html caption="Figure 1-3 Exchange Scope" img="quality-reporting-exchange-scope-2026.png" %}
 
 Exchanging data for multiple measures impacts:
 
@@ -100,9 +102,9 @@ For more details on data requirements, see the [Data Requirements](datax.html#ga
 
 #### Reporting Scenarios
 
-Figure 1-6 illustrates the *Reporting Scenarios*:
+Figure 1-4 illustrates the *Reporting Scenarios*:
 
-{% include img.html caption="Figure 1-6 Reporting Scenarios" img="quality-reporting-reporting-scenarios-2026.png" %}
+{% include img.html caption="Figure 1-4 Reporting Scenarios" img="quality-reporting-reporting-scenarios-2026.png" %}
 
 Reporting scenarios are used to report the results of quality measures on patient populations, typically, though not always, at the end of a measurement period. Measure reports are provided to attest the standard of care given to patients in a population as measured by specific quality measures. The measures are typically identified as part of a quality improvement initiative by a payer or other quality improvement stakeholder such as public health agencies.
 

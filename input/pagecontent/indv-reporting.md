@@ -9,7 +9,7 @@ The Individual reporting scenario is supported by the [DEQM Individual MeasureRe
 
 The following diagram shows the relationships of resources required for individual reporting. Depending on the specific Measure and interaction being performed, additional DEQM profiles and resources may also be required beyond those listed above.
 
-{% include img-narrow.html  img="individual_reporting_resources.png" caption="Figure 2-9 Individual Reporting" %}
+{% include img-narrow.html  img="individual_reporting_resources.png" caption="Figure 3.3-1 Individual Reporting" %}
 
 ### Supplemental Data Resources in MeasureReport
 
@@ -109,7 +109,7 @@ Posting Individual Measure Reports is typically a one time event, although there
 
 Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced multiple times within the Bundle, the reporting overhead for the Reporter may be reduced when compared to reporting each individual report separately. (See the FHIR specification for more information about using [Bundles] and resolving references in Bundles).
 
-{% include img-narrow.html  img="indv_report_post.jpg" caption="Figure 2-10 POST Individual Report" %}
+{% include img-narrow.html  img="indv_report_post.jpg" caption="Figure 3.3-2 POST Individual Report" %}
 
 #### Usage
 {:.no_toc}

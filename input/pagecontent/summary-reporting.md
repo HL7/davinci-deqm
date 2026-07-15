@@ -16,7 +16,7 @@ As the quality reporting implementation guides have evolved, implementation feed
 
 The following diagram shows the relationships of resources required for summary reporting. Depending on the specific Measure and interaction being performed, additional DEQM profiles and resources may also be required beyond those listed above.
 
-{% include img-narrow.html img="summary_resource_diagram.jpg" caption="Figure 2-25 Summary Resource Diagram" %}
+{% include img-narrow.html img="summary_resource_diagram.jpg" caption="Figure 3.4-1 Summary Resource Diagram" %}
 
 ### Supplemental Data Resources in MeasureReport
 
@@ -38,7 +38,7 @@ All systems **SHALL** support one of "batch" or "transaction", and that the serv
 
 Posting a Summary Measure Report is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  If the payload is a single Summary MeasureReport it is updated using the PUT or Delete transactions. Otherwise, the FHIR transaction bundle is used and **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
 
-{% include img-narrow.html img="summ_report_post.jpg" caption="Figure 2-11 POST Summary Report" %}
+{% include img-narrow.html img="summ_report_post.jpg" caption="Figure 3.4-2 POST Summary Report" %}
 
 #### Usage
 {:.no_toc}
