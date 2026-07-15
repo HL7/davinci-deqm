@@ -67,7 +67,7 @@ The Provider will POST a MeasureReport and the referenced resources required by 
 
 The technical Workflow is outlined in the following figure.  The parts outlined in orange are the actual FHIR transactions that are the focus of this Guide and are described in detail in the following sections:
 
-{% include img-portrait.html img="MRP_Technical_Workflow.jpg" caption="Figure 4.1-3 Submit Data Technical Workflow" %}
+{% include img-portrait.html img="MRP_Technical_Workflow_2026.jpg" caption="Figure 3-3 Submit Data Technical Workflow" %}
 
 {% include examplebutton.html example="submit-data-task" b_title = "Click Here To See Example Submit Data operation using Task option" %}
 
