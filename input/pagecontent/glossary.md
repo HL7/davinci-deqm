@@ -53,6 +53,7 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |CQL |Clinical Quality Language|
 |CQM |Clinical Quality Measures|
 |DEQM|Data Exchange For Quality Measures|
+|dQM |Digital Quality Measure|
 |eCQM|electronic Clinical Quality Measures|
 |EHR|Electronic Health Record|
 |FHIR|Fast Healthcare Interoperability Resources|

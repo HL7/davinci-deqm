@@ -16,6 +16,8 @@ Interoperability challenges have limited many stakeholders in the healthcare com
 
 The guide is based upon prior work from the [US Core](https://hl7.org/fhir/us/core/) and [QI-Core](https://hl7.org/fhir/us/qicore/) Implementation Guides and the [QRDA Category I](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=35) and [QRDA III](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=286) reporting specifications. Initially supported by the [Da Vinci] initiative, development and ongoing maintenance of this specification is managed by the sponsoring HL7 [Clinical Quality Information (CQI)] and [Clinical Decision Support (CDS)] workgroups. Implementation feedback is incorporated through the standard HL7 balloting process.
 
+Quality measures are increasingly represented using standardized, computable approaches across the healthcare ecosystem. Terms such as electronic Clinical Quality Measure (eCQM) and digital Quality Measure (dQM) are used throughout the industry to describe specific formats of quality measures. For the purposes of this IG, all such measures are referred to as "quality measures".
+
 ### How to read this Guide
 
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
