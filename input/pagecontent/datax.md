@@ -26,9 +26,9 @@ Note that FHIR operations allow the implementation to be viewed as a 'black box'
 ### Graph of DEQM Resources
 {:.no_toc}
 
-The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 2-1, below. The resource graph shows data for a single measure for a single patient, but as described below and in [DEQM Operations Bundles Organized by Subject](guidance.html#deqm-operation-bundles-organized-by-subject), the DEQM data exchange operations are designed to allow for multiple measures across multiple patients.
+The DEQM resources form a network through their relationships with each other - either through a direct reference to another resource or through a chain of intermediate references. These groups of resources are referred to as resources graphs.  The DEQM data exchange resource graph is shown in Figure 3.2-1, below. The resource graph shows data for a single measure for a single patient, but as described below and in [DEQM Operations Bundles Organized by Subject](guidance.html#deqm-operation-bundles-organized-by-subject), the DEQM data exchange operations are designed to allow for multiple measures across multiple patients.
 
-{% include img.html img="measure-resource-graph.jpg" caption="Figure 2-1 DEQM Data Exchange Resource Diagram" %}
+{% include img.html img="measure-resource-graph.jpg" caption="Figure 3.2-1 DEQM Data Exchange Resource Diagram" %}
 
 
 ### Submit Data
@@ -38,7 +38,7 @@ The DEQM resources form a network through their relationships with each other - 
 
 The $submit-data operation defined in earlier versions of this guide has been deprecated. A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available. These Bundles SHALL contain data-of-interest, SHALL contain 0..* DEQM Data Exchange MeasureReports for that data, and SHOULD be for a single subject. See the guidance on Bundle structure for discussion about the Bundle content and organization. The Producer submits the data either as [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
 
-{% include img.html img="submit-data-step.jpg" caption = "Figure 2-2 Submit Data Steps" %}
+{% include img.html img="submit-data-step.jpg" caption = "Figure 3.2-2 Submit Data Steps" %}
 
 #### Gather Data Requirements from Consumer
 {:.no_toc}
@@ -47,7 +47,7 @@ Producers are required to know specifically what data to provide to Consumers as
 
 Note that because the data exchange scenarios described are intended to support exchange throughout a measurement period, the versions of measure specifications may change during the measurement period. Care should be taken to ensure the appropriate versioning of measure specifications and the impact of those changes on data exchanged using these methods
 
-{% include img-narrow.html img="data-requirement.jpg" caption="Figure 2-3 Data Requirements Operation" %}
+{% include img-narrow.html img="data-requirement.jpg" caption="Figure 3.2-3 Data Requirements Operation" %}
 
 ##### APIs
 {:.no_toc}
@@ -79,7 +79,7 @@ For another example see the [COL Data Requirements Operation] example.
 
 Once the Producer understands the data requirements, they will POST bundles of MeasureReports and the referenced resources as discovered by the *Data Requirements* operation to the Consumer. There is no expectation that the submitted data represents all the data of interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The Consumer simply accepts the submitted data and there is no expectation that the Consumer will actually evaluate the quality measure in response to the data submission.
 
-{% include img-narrow.html img="submit-data.jpg" caption="Figure 2-4 Submitting Data with POST" %}
+{% include img-narrow.html img="submit-data.jpg" caption="Figure 3.2-4 Submitting Data with POST" %}
 
 <div class="highlight-note" markdown="1">
 
@@ -159,7 +159,7 @@ For a complete un-edited example see the [MRP Submit Data] and [COL Submit Data]
 
 In this scenario, the Consumer initiates a [$collect-data](OperationDefinition-collect-data.html) operation to gather any available CQM data for a particular measure from the Producer.  In response to the operation, the Producer returns a MeasureReport containing data relevant to the Measure. The Producer gathers the data requirements as [described](#gather-data-requirements-from-consumer) above in the Submit Data scenario. Like the Submit Data scenario, there is no expectation that the data returned represents all the data required to evaluate the quality measure only that all the data submitted is relevant to the calculation of the measure for a particular subject or population.  Unlike the Submit Data interaction, the exchange is typically incremental as detailed [below](#).
 
-{% include img.html  img="collect-data-steps.jpg" caption = "Figure 2-5 Collect Data Steps"%}
+{% include img.html  img="collect-data-steps.jpg" caption = "Figure 3.2-5 Collect Data Steps"%}
 
 #### Collect Data Operation
 {:.no_toc}
@@ -167,7 +167,7 @@ In this scenario, the Consumer initiates a [$collect-data](OperationDefinition-c
 
 The Consumer uses a Collect Data operation to request any available relevant data for the evaluation of measures from a Producer. Unlike the Submit Data interaction, the collect data exchange is typically incremental. This would typically be done on a periodic basis to support incremental collection of quality data. The `lastReceivedOn` parameter can be used to indicate when the last Collect Data operation was performed, allowing the Producer to limit the response to only data that has been entered or changed since the last received on date.
 
-{% include img-narrow.html img="collect-data.jpg" caption="Figure 2-6 Collect data Operation" %}
+{% include img-narrow.html img="collect-data.jpg" caption="Figure 3.2-6 Collect data Operation" %}
 
 ##### Incremental and Snapshot Updates
 {:.no_toc #collect-updates}
