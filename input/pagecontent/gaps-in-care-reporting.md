@@ -14,11 +14,11 @@ Gaps in care may exist for several reasons. The following are some common scenar
  - Recommended care was provided prior to the coverage by the current payer
  - Recommended Care was provided between generation of a Gap in Care Report and receipt of the report.
 
-A Gaps in Care Report is designed to communicate actual or perceived gaps in care between systems, such as the payer’s system and provider’s EMR. The report provides opportunities for providers to provide missing care and/or to communicate care provision data to payers. The report may also provide information for upcoming care opportunities, prospective gaps.
+A Gaps in Care Report is designed to communicate actual or perceived gaps in care between systems, such as the payer’s system and provider’s EHR. The report provides opportunities for providers to provide missing care and/or to communicate care provision data to payers. The report may also provide information for upcoming care opportunities, prospective gaps.
 
-In Figure 3.6-1, the red circle represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram](background.html#quality-improvement-ecosystem).
+In Figure 3.6-1, the red arrow represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram](background.html#quality-improvement-ecosystem).
 
-{% include img-portrait.html img="gic-ecosystem_new.png" caption = "Figure 3.6-1 Quality Improvement Ecosystem - Gaps in Care" %}
+{% include img-portrait.html img="gic-ecosystem-2026-07-17-06-51-13-270.png" caption = "Figure 3.6-1 Quality Improvement Ecosystem - Gaps in Care" %}
 
 The gaps in care flow is between a provider and a measurement organization’s system performing analytics.
 
@@ -70,7 +70,7 @@ The timeline below represents the data described above. A colonoscopy procedure 
 #### Care Gaps Operation
 {:.no_toc}
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a Gaps in Care Report. In this guide, we have updated the [base care-gaps operation] in the R4 Release of the FHIR (FHIR R4) Specification to allow for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a Gaps in Care Report based on the quality measures available in the Server’s system.
+The [care-gaps](OperationDefinition-care-gaps.html) operation is used to run a Gaps in Care Report. In this guide, we have updated the [base care-gaps operation](https://hl7.org/fhir/R4/measure-operation-care-gaps.html) in the R4 Release of the FHIR (FHIR R4) Specification to allow for the specification of additional parameters that will be useful to the communities needing this report. This operation is run on the Measure resource and allows a Server to create a Gaps in Care Report based on the quality measures available in the Server’s system.
 
 A report calculated on any given date provides all of the data from the server's system as of that date. A request for a previous time period will still show all data available as of the date the report is calculated. Therefore, a requester can ask for multiple reports, save them and compare them, but not request data "as of" previous dates.
 
@@ -91,7 +91,7 @@ This IG provides guidance for inferring that a care gap has occurred (or will oc
 
 Patient-based measures lend themselves most readily to gaps in care calculations because they are evaluated over a long time period. Other measure bases, such as an encounter-based measure, typically happen over shorter time spans. The types of population bases to support is at the server’s discretion. Servers SHOULD support patient-based measures, and MAY support any other base.
 
-Measures with multiple groups (a multiple rate measure) have the potential to create multiple gaps in care for a single patient. The extension [DEQM Criteria Reference Extension] allows the detected issue to reference which group or population from the measure report led to the creation of the detected issue.
+Measures with multiple groups (a multiple rate measure) have the potential to create multiple gaps in care for a single patient. The extension [DEQM Criteria Reference Extension](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-cqf-criteriaReference.html) allows the detected issue to reference which group or population from the measure report led to the creation of the detected issue.
 
 #### How to Construct a Gaps in Care Report
 {:.no_toc}
