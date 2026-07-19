@@ -24,7 +24,7 @@ The gaps in care flow is between a provider and a measurement organization’s s
 
 Note that this implementation guide does not address actual workflow around managing the process of requesting a Gaps in Care Report and to whom the report should be sent.
 
-Figure 3.6-2 reflects the details within the red circle representing the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem.
+Figure 3.6-2 reflects the details at the red arrow representing the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem.
 
 {% include img-portrait.html img="gic-reporting-flow.png" caption = "Figure 3.6-2 Gaps in Care Reporting Flow" %}
 
