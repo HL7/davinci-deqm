@@ -97,7 +97,11 @@ The Provider will POST a MeasureReport and the referenced resources required by 
 
 {% include img-portrait.html img="COL Worklow Diagram - Data Exchange Indiv collect-data.jpg" caption = "Figure 4.2-6 Collect Data Technical Workflow" %}
 
+##### Examples
+
 {% include examplebutton.html example="col-collect-example" b_title = "Click Here To See Example COL Collect Data" %}
+
+{% include examplebutton.html example="col-collect-invited-example" b_title = "Click Here To See Example COL Invited Pull Collect Data" %}
 
 <!-- {%raw%}
 ##### Payer/Aggregator Subscribes for Notification when Data is Available

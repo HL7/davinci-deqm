@@ -375,6 +375,14 @@
                 },
                 "description": "DEQM Col Collect Obs example"
             },
+             {
+                "exampleBoolean": true,
+                "name": "Col Collect Invited Obs",
+                "reference": {
+                    "reference": "Parameters/col-collect-invited-obs"
+                },
+                "description": "DEQM Col Collect Obs example"
+            },
             {
                 "exampleBoolean": true,
                 "name": "Col Submit Obs",
@@ -574,6 +582,14 @@
                     "reference": "Group/group01"
                 },
                 "description": "DEQM Group01 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Group02",
+                "reference": {
+                    "reference": "Group/group02"
+                },
+                "description": "DEQM Group02 example"
             },
             {
                 "exampleBoolean": true,

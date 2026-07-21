@@ -24,6 +24,7 @@
 <artifact deprecated="true" id="CodeSystem/care-gap-remark" key="CodeSystem-care-gap-remark" name="Care Gap Remark Code System"/>
 <artifact id="ValueSet/care-gap-remark" key="ValueSet-care-gap-remark" name="Care Gap Remark Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
+<artifact id="Parameters/col-collect-invited-obs" key="Parameters-col-collect-invited-obs" name="Col Collect Invited Obs"/>
 <artifact id="Parameters/col-collect-obs" key="Parameters-col-collect-obs" name="Col Collect Obs"/>
 <artifact deprecated="true" id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
 <artifact id="Bundle/col-submit-obs" key="Parameters-col-submit-obs" name="Col Submit Obs"/>
@@ -132,6 +133,7 @@
 <artifact id="MeasureReport/ratio-measurereport01" key="MeasureReport-ratio-measurereport01" name="Gaps Ratio MeasureReport01"/>
 <artifact id="Organization/gaps-organization-reportingvendor" key="Organization-gaps-organization-reportingvendor" name="Gaps Reporting Vendor Organization"/>
 <artifact id="Group/group01" key="Group-group01" name="Group01"/>
+<artifact id="Group/group02" key="Group-group02" name="Group02"/>
 <artifact id="GuidanceResponse/guidanceresponse01" key="GuidanceResponse-guidanceresponse01" name="Guidance Response Example"/>
 <artifact id="Measure/attestation-boolean-example" key="Measure-attestation-boolean-example" name="Immunization Registry Reporting"/>
 <artifact id="MeasureReport/indv-measurereport-patient-level-linear" key="MeasureReport-indv-measurereport-patient-level-linear" name="Indv MeasureReport - Patient-level linear"/>
