@@ -158,7 +158,7 @@
 [Operations]: operations.html
 [Terminology]: terminology.html
 [CQF Criteria Reference Extension]:  http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference 
-[base care-gaps operation]: https://www.hl7.org/fhir/measure-operation-care-gaps.html
+[base care-gaps operation]: https://hl7.org/fhir/R4/measure-operation-care-gaps.html
 [Datax Measurereport01]: MeasureReport-datax-measurereport01.html
 [Indv Measurereport01]: MeasureReport-indv-measurereport01.html
 [Summ Measurereport01]: MeasureReport-summ-measurereport01.json.html
