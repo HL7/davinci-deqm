@@ -18,7 +18,7 @@ A Gaps in Care Report is designed to communicate actual or perceived gaps in car
 
 In Figure 3.6-1, the red arrow represents the Gaps in Care Reporting flow portion of the Quality Improvement Ecosystem. Please see [The Quality Improvement Ecosystem Diagram](background.html#quality-improvement-ecosystem).
 
-{% include img-portrait.html img="gic-CQL-ecosystem-2026-07-17.png" caption = "Figure 3.6-1 Quality Improvement Ecosystem - Gaps in Care" %}
+{% include img-portrait.html img="gic-CQL-ecosystem-2026-07-20.png" caption = "Figure 3.6-1 Quality Improvement Ecosystem - Gaps in Care" %}
 
 The gaps in care flow is between a provider and a measurement organization’s system performing analytics.
 
