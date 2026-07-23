@@ -1,9 +1,8 @@
 
-
 **Scenario:**
 {:.no_toc}
 
-Payer X acting in the role of Consumer collect Patient Y's COL data from Provider Z, which is acting in the role of Producer.  The body of the request is a Parameters resource containing the desired input parameters.  An HTTP Status success code is returned on successful submission.
+Payer X acting in the role of Consumer receives a $collect-data invited pull to collect COL data for all Patients within Group02 from Provider Z, which is acting in the role of Producer.  The body of the request is a Parameters resource containing the desired input parameters.  An HTTP Status success code is returned on successful submission.
 
 **Request using `POST`**
 
@@ -28,12 +27,16 @@ Payer X acting in the role of Consumer collect Patient Y's COL data from Provide
       "valueDate": "2018-12-31"
     },
     {
-      "name": "subject",
-      "valueReference": "Patient/patient03"
+      "name": "subjectGroup",
+      "valueReference": "Group/group02"
     },
     {
       "name": "validateResources",
       "valueBoolean": true
+    },
+    {
+      "name": "dataEndpoint",
+      "valueEndpoint": "https://example.org/fhir/DaVinciHospital03/public-endpoint"
     }
   ]
 }
@@ -47,5 +50,5 @@ Date: Wed, 14 Mar 2019 01:02:06 GMT
 Content-Type: application/fhir+json;charset=UTF-8
 ...Other Headers...
 
-{% include_relative Parameters-col-collect-obs.json %}
+{% include_relative Parameters-col-collect-invited-obs.json %}
 ~~~

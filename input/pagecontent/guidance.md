@@ -66,11 +66,25 @@ The [DEQM Subject List MeasureReport Profile] is used when a measure is reported
 
 The [DEQM Summary MeasureReport Profile] is used when a measure is reported for a group of patients at the conclusion of a measure measurement period. It includes the measure outcome data. Unlike the [DEQM Individual MeasureReport Profile], the report is typically transacted as a single MeasureReport report.
 
-Measure population determination SHALL be done as specified in the Quality Measure IG's section [Population Criteria](http://hl7.org/fhir/uv/cqm/measure-conformance.html#population-criteria). This section describes how the appropriate population is determined for each subject when evaluating a measure. These populations are reported in the measure reports.
+§deqm-21: Measure population determination **SHALL** be done as specified in the Quality Measure (QM) IG's section [Population Criteria](http://hl7.org/fhir/uv/cqm/measure-conformance.html#population-criteria). § This section describes how the appropriate population is determined for each subject when evaluating a measure. These populations are reported in the measure reports.
+
+As an example, consider reporting a proportion measure, so named because it calculates the proportion of the denominator population that is also in the numerator population (accounting for exclusions and exceptions as well). The measure populations can be made up of either the subject of the measure itself, or it can be data related to the subject.
+
+- **Subject-based measures** count the number of subjects in each population. That is, the measure's population basis is boolean to indicate if the subject belongs to the population. A subject-based proportion measure, for example, that has a subject of Patient may define the denominator as "Patients with condition A that had one or more encounters during the measurement period" and the numerator as "Patients that underwent procedure B during the measurement period." A "true" or "false" indicates whether or not the subject belongs to each population. When evaluating subject-based measures, a null result is interpreted as false. A patient with "condition A" but no procedure would be evaluated as "true" for the denominator and "false" for the numerator, and so would contribute to the denominator count but not to the numerator count in the MeasureReport. For more information, see the [measure conformance (QMs) section](https://hl7.org/fhir/uv/cqm/measure-conformance.html) of the QM IG.
+- **Non-subject-based measures** report populations of data related to the subject. That is, the measure's population basis is items of a single type related the subject, typeically a type of FHIR resource. A non-subject-based proportion measure, for example, that has a subject of Patient may define the denominator as "All encounters where the patient has condition A during the measurement period" and the numerator as "All encounters from the denominator where procedure B was performed during the encounter." The reported Encounter resources that make up the measure populations are evaluated within the context of subject, but are not an evaluation of the subject itself. For non-subject-based measures, a null result is interpreted as an empty list, and null elements within the resulting list do not contribute to the result. A patient with "condition A" during an encounter but no procedure would contribute an encounter to the denominator but would not contribute one to the numerator in the MeasureReport. For more information, see the [measure conformance (QMs) section](https://hl7.org/fhir/uv/cqm/measure-conformance.html) of the QM IG.
+
+Populations and data outside of the regular measurement populations (e.g. Initial Population, Numerator, Measure Population, etc.) can also be defined in the Measure resource. 
+
+- **Criteria-based stratifiers** report each measure population broken down into the categories defined by the stratifier criteria. This type of stratifier must evaluate to the same type as the measure basis. For example, consider a subject-based measure with stratifier criteria that categorize the subjects as under age 18. The MeasureReport would report the overall population results and also the population results for subjects under age 18. For more information, see the [stratification section](https://hl7.org/fhir/uv/cqm/measure-conformance.html#stratification) of the QM IG.
+- **Value-based stratifiers** report each measure population broken down into the categories defined by the stratifier criteria. This type of stratifier evaluates to a value, which is then used to categorize the population results. For example, consider a subject-based measure with a value-based stratifier that simply returns Patient.gender. The MeasureReport would report the overall population results and also the population results for each value returned from the stratifier. For more information, see the [stratification section](https://hl7.org/fhir/uv/cqm/measure-conformance.html#stratification) of the QM IG.
+- **Supplemental data elements** define an expression that returns desired data related to the measure subject. This data does not affect the population reporting but rather is reported as a reference to a contained resource in the MeasureReport. For more information, see the [supplemental data elements section](https://hl7.org/fhir/uv/cqm/measure-conformance.html#supplemental-data-elements) of the QM IG.
+- **Continuous variable measure observations** are the individual measure observations that are combined to produce a continuous variable result. The method used to combine results is defined by the measure-observation criteria. For more information, see the [continuous variable measures section](https://hl7.org/fhir/uv/cqm/measure-conformance.html#continuous-variable-measure) of the QM IG.
+
+For a detailed description of how calculation algorithms are evaluated for each scoring type, refer to the [Measure Population Semantics section](https://hl7.org/fhir/uv/cqm/measure-conformance.html#measure-population-semantics) of the QM IG.
 
 #### Group, Stratifier, and Population Codes and Ids
 
-A measure defines calculation rates using the group elements, and it can identify these groups with several data elements. A DEQM measure report's groups SHALL be organized and identified in the same manner as in the evaluated measure without alteration. The table below shows which measure elements must be present in measure report.
+A measure defines calculation rates using the group elements, and it can identify these groups with several data elements. §deqm-22: A DEQM measure report's groups **SHALL** be organized and identified in the same manner as in the evaluated measure without alteration. § The table below shows which measure elements must be present in measure report.
 
 | **Measure Elements** |                  **DEQM MeasureReport Elements** |
 |--------------------|-------------------------------|
@@ -90,9 +104,9 @@ A measure defines calculation rates using the group elements, and it can identif
 | supplementalData.id | Only in measure report if linkId is not present |
 | supplementalData.code | Only in a contained Observation |
 
-All linkId and code elements in the measure identified in the table above SHALL be in the measure report in the corresponding location. All id elements SHOULD be in the measure report. There are two exceptions: (1) supplementalData.id SHALL be in the measure report if and only if the supplementalData.linkId is not present, and (2) supplementalData.code SHALL be in contained Observation resources on the code element that report supplemental data.
+§deqm-23: All linkId and code elements in the measure identified in the table above **SHALL** be in the measure report in the corresponding location. § §deqm-24: All id elements **SHOULD** be in the measure report. § §deqm-25: There are two exceptions: (1) supplementalData.id **SHALL** be in the measure report if and only if the supplementalData.linkId is not present, and (2) supplementalData.code **SHALL** be in contained Observation resources on the code element that report supplemental data. §
 
-> Note that for backwards compatibility with measure specifications that do not use `linkId` elements, MeasureReports MAY be produced that do not include the linkId, but in these cases, the report SHALL provide the corresponding `id` elements to ensure measure components in the report can be correlated to the measure specification.
+§deqm-26: > Note that for backwards compatibility with measure specifications that do not use `linkId` elements, MeasureReports **MAY** be produced that do not include the linkId, but in these cases, the report **SHALL** provide the corresponding `id` elements to ensure measure components in the report can be correlated to the measure specification. §
 
 If the measure does not contain all of these elements, then they would not be reflected in the measure report. If the measure does not have group.stratifier elements, then the measure report would not reflect any elements any group.stratifier.stratum elements.
 
@@ -116,25 +130,25 @@ Measure specifications define logic and data requirements necessary to perform e
 
 ### Duplicate Data
 
-Implementations SHOULD avoid sending duplicate data (identical FHIR resources) in data exchanges (collect-data or submit-data) or as resolvable references in MeasureReport.evaluatedResources.
+§deqm-27: Implementations **SHOULD** avoid sending duplicate data (identical FHIR resources) in data exchanges (collect-data or submit-data) or as resolvable references in MeasureReport.evaluatedResources. §
 
 Duplicate data is a concern in DEQM because the operations support multiple measures per subject. The same resource instance could be referenced by multiple MeasureReports, or multiple measures may use different elements within the same resource. Another situation to consider when evaluating a measure is when multiple value sets have overlapping codes, then two different CQL retrieve operations can return the same resource instance because it matches a code twice from the overlap.
 
 Note that the [$data-requirements] operation is currently defined for a single Measure or Library, so it is a responsibility of the data producer to check for, and address, duplicate data.
 
-As described below in the section "DEQM Operation Bundles Organized by Subject," Bundles utilized in DEQM operations SHOULD be organized by subject. This reduces the potential for proliferation of duplicate data because resources common to the subject, such as Encounters, would not be repeated across Bundles. As described in ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)), a given version of a resource SHALL occur only once in a Bundle, and for DEQM that requires consideration of the data of interest and evaluated resources within the Bundle.
+§deqm-28: As described below in the section "DEQM Operation Bundles Organized by Subject," Bundles utilized in DEQM operations **SHOULD** be organized by subject. § This reduces the potential for proliferation of duplicate data because resources common to the subject, such as Encounters, would not be repeated across Bundles. §deqm-29: As described in ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)), a given version of a resource **SHALL** occur only once in a Bundle, and for DEQM that requires consideration of the data of interest and evaluated resources within the Bundle. §
 
 Receiving systems need to consider the possibility that some duplicate data may be present across Bundles, such as an Organization resource that is relevant to more than one subject.
 
 ### DEQM Operation Bundles Organized by Subject
 
-The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. Bundles SHOULD be organized by subject, meaning that a Bundle SHOULD contain the resources, the including MeasureReport(s) and data of interest (in MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. Resources that are not unique to the subject, such as Practitioner or Organization, may still be duplicated across Bundles.
+The Bundles used in the DEQM operations enable the evaluation and exchange of data for multiple measures, while also constraining duplicate data. §deqm-30: Bundles **SHOULD** be organized by subject, meaning that a Bundle **SHOULD** contain the resources, the including MeasureReport(s) and data of interest (in MeasureReport.evaluatedResources), for all of the measures that apply to a single subject. § Resources that are not unique to the subject, such as Practitioner or Organization, may still be duplicated across Bundles.
 
 ### Referential Integrity in Bundles
 
-Clients SHOULD include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible. This may result in bundles that have references to data that is not included in the bundle, which could be both patient-specific information, such as immunizations, and non-patient-specific information, such as locations and practitioners, that are not relevant to the evaluated measure.
+§deqm-31: Clients **SHOULD** include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible. § This may result in bundles that have references to data that is not included in the bundle, which could be both patient-specific information, such as immunizations, and non-patient-specific information, such as locations and practitioners, that are not relevant to the evaluated measure.
 
-Servers SHOULD be permissive in accepting references to data that are not included in the bundle.
+§deqm-32: Servers **SHOULD** be permissive in accepting references to data that are not included in the bundle. §
 
 Considerations such as privacy, consent, authorization, minimum necessary, etc., are outside the scope of this IG.
 
@@ -144,7 +158,7 @@ Data producers and consumers may want to gather data from different locations an
 
 The [ad-hoc organization example](Organization-ad-hoc-organization.html) illustrates an Organization resource with two contained PractitionerRole resources. It assumes a simple attribution model for the patient-provider interactions. In practice, attribution of patient encounters to providers will be more sophisticated and include factors such as coverage, ACOs, etc.
 
-The organization provided in [$care-gaps](OperationDefinition-care-gaps.html) or [$collect-data](OperationDefinition-collect-data.html), whether in the "organization" parameter or the "organizationResource" parameter, SHALL be the reporter in the resulting measure report(s) and SHALL be included as a contained resource if necessary. When included as a contained resource in the measure report, the structure must be flattened so that the Organization does not have any contained resources because contained resources cannot themselves have contained resources. References among the contained resources SHALL be maintained. See the organizationResource example and the resulting MeasureReport example.
+§deqm-33: The organization provided in [$care-gaps](OperationDefinition-care-gaps.html) or [$collect-data](OperationDefinition-collect-data.html), whether in the "organization" parameter or the "organizationResource" parameter, **SHALL** be the reporter in the resulting measure report(s) and **SHALL** be included as a contained resource if necessary. § When included as a contained resource in the measure report, the structure must be flattened so that the Organization does not have any contained resources because contained resources cannot themselves have contained resources. §deqm-34: References among the contained resources **SHALL** be maintained. § See the organizationResource example and the resulting MeasureReport example.
 
 ### Negation Patterns for Quality Measures
 
@@ -153,7 +167,7 @@ When DEQM is used to report CQM Measures that use CQL and the QI-Core data model
 
 ### Using Contained Resources in the Response Transaction
 
-[Contained resources] **SHOULD NOT** be used when responding to the submit-data or collect-data operation or to the Individual reporting transactions.  The data exchange transaction payloads are Parameters resources containing resource parameters. The response to the individual reporting transactions are Bundles. The only time contained resource can be used is when the source data exists only within the context of the transaction. For example, if the only information about the patient's coverage is the payor name, the Coverage resource could be contained by the Patient resource:
+§deqm-35: [Contained resources] **SHOULD NOT** be used when responding to the submit-data or collect-data operation or to the Individual reporting transactions. §  The data exchange transaction payloads are Parameters resources containing resource parameters. The response to the individual reporting transactions are Bundles. The only time contained resource can be used is when the source data exists only within the context of the transaction. For example, if the only information about the patient's coverage is the payor name, the Coverage resource could be contained by the Patient resource:
 
 ~~~
 {
@@ -177,11 +191,11 @@ When DEQM is used to report CQM Measures that use CQL and the QI-Core data model
 }
 ~~~
 
-[Contained resources] **SHOULD NOT** be used when responding to the [care-gaps](OperationDefinition-care-gaps.html) operation.
+§deqm-36: [Contained resources] **SHOULD NOT** be used when responding to the [care-gaps](OperationDefinition-care-gaps.html) operation. §
 
 ### Must Support
 
-Certain elements in the profiles defined in this implementation guide are marked as Must Support. This flag is used to indicate that the element plays a critical role in defining and sharing quality measures, and implementations SHALL understand and process the element.
+Certain elements in the profiles defined in this implementation guide are marked as Must Support. §deqm-37: This flag is used to indicate that the element plays a critical role in defining and sharing quality measures, and implementations **SHALL** understand and process the element. §
 
 When exchanging data and reporting with DEQM, any Must Support flags in the supporting data model should be respected when exchanging data with DEQM profiles. The use of DEQM profiles alone does not imply that evaluated resources are valid to base FHIR or any other FHIR profiles.
 
