@@ -36,7 +36,7 @@ The DEQM resources form a network through their relationships with each other - 
 
 {:.highlight-note}
 
-The $submit-data operation defined in earlier versions of this guide has been deprecated. A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation MAY be repeated during the submission period as additional data relevant to the quality measure becomes available. These Bundles SHALL contain data-of-interest, SHALL contain 0..* DEQM Data Exchange MeasureReports for that data, and SHOULD be for a single subject. See the guidance on Bundle structure for discussion about the Bundle content and organization. The Producer submits the data either as [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
+The $submit-data operation defined in earlier versions of this guide has been deprecated. §deqm-02: A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation **MAY** be repeated during the submission period as additional data relevant to the quality measure becomes available. § §deqm-03: These Bundles **SHALL** contain data-of-interest, **SHALL** contain 0..* DEQM Data Exchange MeasureReports for that data, and **SHOULD** be for a single subject. § See the guidance on Bundle structure for discussion about the Bundle content and organization. The Producer submits the data either as [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
 
 {% include img.html img="submit-data-step.jpg" caption = "Figure 3.2-2 Submit Data Steps" %}
 
@@ -99,7 +99,7 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
   `GET|[base]/metadata`
 
-  - The Consumer (server) **SHALL** advertise whether it supports snapshot and/or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension].  The extension is added to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and the code is valued `incremental` or `snapshot`, as appropriate.  The snippet shown below would be used for supporting both `incremental` and `snapshot` data exchanges:
+  - §deqm-04: The Consumer (server) **SHALL** advertise whether it supports snapshot and/or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension]. §  The extension is added to the `CapabilityStatement.rest.resource.operation` element for the Submit Data operation and the code is valued `incremental` or `snapshot`, as appropriate.  The snippet shown below would be used for supporting both `incremental` and `snapshot` data exchanges:
 
      {% include CapabilityStatement-updatetype-snippet.md %}
 
@@ -107,9 +107,9 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
    - It is the responsibility of the Producer (client) to discover whether snapshot, incremental or both data exchange is supported by the inspection of the Consumer’s (server) CapabilityStatement.
 
-   - The Producer (client) **SHALL** populate the required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates.
+   - §deqm-05: The Producer (client) **SHALL** populate the required [DEQM Submit Data Update Type Extension] on the [DEQM Data Exchange MeasureReport Profile] to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates. §
 
-  - The Consumer (server) **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server)  by returning a `400 Bad Request` http error code. An OperationOutcome **SHALL** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:
+  - §deqm-06: The Consumer (server) **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server)  by returning a `400 Bad Request` http error code. § §deqm-07: An OperationOutcome **SHALL** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example: §
 
     {% include snapshotincremental-notsupported-oo.md %}
 
@@ -175,7 +175,7 @@ The Consumer uses a Collect Data operation to request any available relevant dat
 - Unlike the Submit Data interaction, there is no need for out of band discovery.
 - The Consumer uses the Collect Data operation’s `lastReceivedOn` parameter for incremental data exchange - if the  parameter present, it is an incremental update and snapshot if not.
 - The same Snapshot and Incremental Requirements and Expectations described above for the Submit Data transaction apply for Collect Data.
-- If the Producer cannot support the lastReceivedOn parameter then it SHALL return a `400 Bad Request` http error code. An OperationOutcome **SHALL** be returned stating that the `lastReceivedOn` parameter is not supported  as shown in the following example:
+- §deqm-08: If the Producer cannot support the lastReceivedOn parameter then it **SHALL** return a `400 Bad Request` http error code. § §deqm-09: An OperationOutcome **SHALL** be returned stating that the `lastReceivedOn` parameter is not supported  as shown in the following example: §
 
    {% include lastupdated-notsupported-oo.md %}
 
@@ -214,7 +214,7 @@ Because operations are typically executed synchronously, a collect data request 
 
 #### DEQM Data Exchange Interaction Naming
 
-The DEQM data exchange operation [$collect-data](OperationDefinition-collect-data.html) has the same names as the base FHIR operation. It serves very similar functions, but the DEQM version has more improved referencing of measures, subjects, and organizations, and it supports multiple subjects and measures. To avoid confusion, implementers of the DEQM operations SHOULD NOT support the base FHIR R4 $collect-data operation.
+The DEQM data exchange operation [$collect-data](OperationDefinition-collect-data.html) has the same names as the base FHIR operation. It serves very similar functions, but the DEQM version has more improved referencing of measures, subjects, and organizations, and it supports multiple subjects and measures. §deqm-10: To avoid confusion, implementers of the DEQM operations **SHOULD NOT** support the base FHIR R4 $collect-data operation. §
 
 Base FHIR R4 has a $submit-data operation that is deprecated after R4. DEQM defines data submission as a POST of a Bundle to the base URL of the FHIR server.
 
@@ -229,7 +229,7 @@ The [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/en/) provides workflo
 
 ### Provenance
 
-Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the data submittion interaction and the [$collect-data](OperationDefinition-collect-data.html) transaction described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
+§deqm-11: Note that the use of the [X-Provenance header data]({{site.data.fhir.path}}provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported. §  This provides the capability for associating the provider with the data submitted through the data submittion interaction and the [$collect-data](OperationDefinition-collect-data.html) transaction described above. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile.
 
 <br />
 

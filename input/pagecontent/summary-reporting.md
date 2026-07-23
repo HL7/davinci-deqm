@@ -34,9 +34,9 @@ In order to support real-world implementations where:
 
 -  In scenarios where the FHIR layer interacts directly with the database, supporting true bundle-level atomicity (e.g., 500+ entries) often requires pessimistic locking of rows or tables, increasing the risk of contention and deadlocks.
 
-All systems **SHALL** support one of "batch" or "transaction", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types.
+§deqm-79: All systems **SHALL** support one of "batch" or "transaction", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types. §
 
-Posting a Summary Measure Report is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  If the payload is a single Summary MeasureReport it is updated using the PUT or Delete transactions. Otherwise, the FHIR transaction bundle is used and **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
+Posting a Summary Measure Report is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  If the payload is a single Summary MeasureReport it is updated using the PUT or Delete transactions. §deqm-80: Otherwise, the FHIR transaction bundle is used and **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted. § (`Bundle.request.method` = POST, PUT, or DELETE).
 
 {% include img-narrow.html img="summ_report_post.jpg" caption="Figure 3.4-2 POST Summary Report" %}
 

@@ -14,7 +14,9 @@
         <value value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
       </telecom>
     </contact>
-    <description value="The evaluate operation is used to calculate an eMeasure and obtain the results. &#10;&#10;It is often the case that the operation should not be performed from the server's timezone, rather the client's timezone is typically a more correct option. Note that even this isn't always correct because the evaluation may be running over data from multiple sources in different timezones. Providing guidance to the measure evaluator with the timezone header can facilitate consistent behavior."/>
+    <description value="The evaluate operation is used to calculate an eMeasure and obtain the results. 
+
+It is often the case that the operation should not be performed from the server&#x27;s timezone, rather the client&#x27;s timezone is typically a more correct option. Note that even this isn&#x27;t always correct because the evaluation may be running over data from multiple sources in different timezones. Providing guidance to the measure evaluator with the timezone header can facilitate consistent behavior."/>
     <jurisdiction>
       <coding>
         <system value="urn:iso:std:iso:3166"/>
