@@ -101,7 +101,7 @@ The Provider will POST a MeasureReport and the referenced resources required by 
 
 {% include examplebutton.html example="col-collect-example" b_title = "Click Here To See Example COL Collect Data" %}
 
-{% include examplebutton.html example="col-collect-invited-example" b_title = "Click Here To See Example COL Invited Pull Collect Data" %}
+{% include examplebutton.html example="col-collect-invited-example" b_title = "Click Here To See Example COL+VTE Invited Pull Collect Data" %}
 
 <!-- {%raw%}
 ##### Payer/Aggregator Subscribes for Notification when Data is Available

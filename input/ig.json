@@ -377,11 +377,11 @@
             },
              {
                 "exampleBoolean": true,
-                "name": "Col Collect Invited Obs",
+                "name": "Multiple Measure Invited Obs",
                 "reference": {
-                    "reference": "Parameters/col-collect-invited-obs"
+                    "reference": "Parameters/multi-measure-invited-obs"
                 },
-                "description": "DEQM Col Collect Obs example"
+                "description": "DEQM Multiple Measure Invited Collect Obs example"
             },
             {
                 "exampleBoolean": true,

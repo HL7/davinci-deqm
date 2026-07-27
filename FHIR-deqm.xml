@@ -24,7 +24,6 @@
 <artifact deprecated="true" id="CodeSystem/care-gap-remark" key="CodeSystem-care-gap-remark" name="Care Gap Remark Code System"/>
 <artifact id="ValueSet/care-gap-remark" key="ValueSet-care-gap-remark" name="Care Gap Remark Value Set"/>
 <artifact id="OperationDefinition/care-gaps" key="OperationDefinition-care-gaps" name="Care Gaps Operation"/>
-<artifact id="Parameters/col-collect-invited-obs" key="Parameters-col-collect-invited-obs" name="Col Collect Invited Obs"/>
 <artifact id="Parameters/col-collect-obs" key="Parameters-col-collect-obs" name="Col Collect Obs"/>
 <artifact deprecated="true" id="Parameters/col-submit-collect-obs" key="Parameters-col-submit-collect-obs" name="Col Submit Collect Obs"/>
 <artifact id="Bundle/col-submit-obs" key="Parameters-col-submit-obs" name="Col Submit Obs"/>
@@ -175,6 +174,7 @@
 <artifact deprecated="true" id="MeasureReport/summary-multirate-measurereport" key="MeasureReport-summary-multirate-measurereport" name="Multi-rate Summary Measure Report Example"/>
 <artifact id="Bundle/multiple-indv-mrp-obs-report" key="Bundle-multiple-indv-mrp-obs-report" name="Multiple Indv Mrp Obs Report"/>
 <artifact id="Bundle/multiple-indv-mrp-task-report" key="Bundle-multiple-indv-mrp-task-report" name="Multiple Indv Mrp Task Report"/>
+<artifact id="Parameters/multi-measure-invited-obs" key="Parameters-multi-measure-invited-obs" name="Multiple Measure Invited Obs"/>
 <artifact id="Bundle/multiple-summ-report" key="Bundle-multiple-summ-report" name="Multiple Summ Report"/>
 <artifact deprecated="true" id="StructureDefinition/cqf-numeratorMembership" key="StructureDefinition-cqf-numeratorMembership" name="Numerator Membership"/>
 <artifact id="Observation/observation01" key="Observation-observation01" name="Observation01"/>

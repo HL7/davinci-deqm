@@ -29,7 +29,9 @@ Payer X acting in the role of Consumer collect Patient Y's COL data from Provide
     },
     {
       "name": "subject",
-      "valueReference": "Patient/patient03"
+      "valueReference": {
+        "reference": "Patient/patient03"
+      }
     },
     {
       "name": "validateResources",
