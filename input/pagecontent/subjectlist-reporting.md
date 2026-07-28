@@ -6,7 +6,7 @@
 
 In order to support real-world implementations where:
 
--  External producers submit subject list MeasureReport resources for multiple providers in a single bundle.
+-  External Reporters submit subject list MeasureReport resources for multiple providers in a single bundle.
 
 -  FHIR servers often act as facade layers over existing APIs (e.g., Measurement  /api/submissions/measurements) that perform individual POST/PUT operations atomically.
 

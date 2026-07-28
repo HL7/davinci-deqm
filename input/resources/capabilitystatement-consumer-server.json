@@ -11,7 +11,7 @@
         }
     ],
     "date": "2020-07-05",
-    "description": "This profile defines the expected capabilities of a Da Vinci DEQM Consumer Server when conforming to the Da Vinci DEQM Implementation Guide.  Consumers include systems that are primary consumers of patient healthcare information and systems that consume data from Producers.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that a Da Vinci DEQM Consumer Server could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements.",
+    "description": "This profile defines the expected capabilities of a Da Vinci DEQM Consumer Server when conforming to the Da Vinci DEQM Implementation Guide.  Consumers are the systems that request or receive the data of interest for a measure from a Producer, such as payers, registries, aggregators, health information exchanges, and public health agencies.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that a Da Vinci DEQM Consumer Server could support. Servers have the option of choosing from this list based on their local use cases and other contextual requirements.",
     "experimental": false,
     "fhirVersion": "4.0.1",
     "format": [

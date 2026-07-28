@@ -4,11 +4,11 @@ Clinical Quality Measures are a common tool used throughout healthcare to help e
 
 The Data Exchange for Quality Measures (DEQM) Implementation Guide defines the interactions for several purposes in the Quality Measure Ecosystem.  
 
-- The first interaction is when a Producer, such as a practitioner, or owner of data needs to exchange that data with a Consumer of that data, such as a payer, a registry or public health agency. We call this the [Data Exchange] Scenario. Examples of this interaction might be when a provider has patient information from a recent visit that he needs to share with a payer under a value based contract. There may also be use cases where the Producer in this scenario is a Payer and needs to exchange data with a Provider.
+- The first interaction is when a [Producer] — the system holding the data, such as a practitioner's EHR — needs to exchange that data with a [Consumer] of that data, such as a payer, a registry or public health agency. We call this the [Data Exchange] Scenario. Examples of this interaction might be when a provider has patient information from a recent visit that they need to share with a payer under a value based contract. There may also be use cases where the Producer in this scenario is a Payer and needs to exchange data with a Provider.
 
-- The second interaction is when a Reporter needs to exchange a measure report with a Receiver. This guide addresses the Individual Measure Reporting and the Summary Reporting. As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver. Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
+- The second interaction is when a [Reporter] — the system that calculates the measure results — needs to exchange a measure report with a [Receiver]. This guide addresses the Individual Measure Reporting and the Summary Reporting. As an example, Individual Measure Reports may be used by hospitals acting as the Reporter to report a specific measure to a payer acting as a Receiver. Similarly, Summary Measure Reports may be used to report yearly eCQM results on a specific measure.
 
-- The third interaction is Gaps in Care Reporting. Gaps in Care Reporting is used to report the [open, closed, and/or prospective gaps] for quality measures over a [gaps through period] specified by a Client. Optionally, it is also used to report details of the open and/or prospective gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
+- The third interaction is Gaps in Care Reporting. Gaps in Care Reporting is used to report the [open, closed, and/or prospective gaps] for quality measures over a [gaps through period] specified by a [Client](glossary.html#client). Optionally, it is also used to report details of the open and/or prospective gaps identified and mitigation steps for addressing them. It further provides capability of associating clinical data included in the report with the population criteria (i.e. denominator, numerator) of a measure that they apply to.
 
 ### Preconditions and Assumptions
 
@@ -23,7 +23,7 @@ The Data Exchange for Quality Measures (DEQM) Implementation Guide defines the i
 
 -   The MeasureReport provides an association to a specific quality
     measure and links the submitted data together to simplify processing
-    for the receiver.
+    for the receiving system.
 
 -   It is the responsibility of the Producer to ensure that measure data is present in a structured, retrievable form.
 
@@ -53,12 +53,12 @@ The MeasureReport resource is also used for the Gaps in Care Reporting Scenario.
 
 #### Data Exchange
 
-The [DEQM Data Exchange MeasureReport Profile] is used to get the data from the producer to a consumer of the data.  The consumer might be a system that calculates the measure report but they could also be an aggregator who sends that data on to another system to do measure calculation and reporting.
-Along with Data Exchange MeasureReport Profile, the data producer sends the Organization, Patient and any relevant resources for the measure they have produced data on. When a data producer, such as a practitioner,  sends a MeasureReport bundle, they may not have all the data that is required to calculate the measure report. One example might be because the measure requires outcome data from at a later point in time during the measurement period. Another example where the data producer may not have all the data would be continuous coverage period as the producer of the data may not know the patient was covered on the day the patient was seen.  The Consumer (in this case the payer as aggregator) is the owner of all coverage information.  Therefore, only the consumer could determine if the continuous coverage period requirement is met.
+The [DEQM Data Exchange MeasureReport Profile] is used to get the data from the [Producer] to a [Consumer] of the data.  The Consumer might be a system that calculates the measure report but they could also be an aggregator who sends that data on to another system to do measure calculation and reporting.
+Along with Data Exchange MeasureReport Profile, the Producer sends the Organization, Patient and any relevant resources for the measure they have produced data on. When a Producer, such as a practitioner's EHR, sends a MeasureReport bundle, it may not have all the data that is required to calculate the measure report. One example might be because the measure requires outcome data from at a later point in time during the measurement period. Another example where the Producer may not have all the data would be continuous coverage period as the Producer may not know the patient was covered on the day the patient was seen.  The Consumer (in this case the payer as aggregator) is the owner of all coverage information.  Therefore, only the Consumer could determine if the continuous coverage period requirement is met.
 
 #### Measure Reporting
 
-Measure Reporting is done by a Reporter who has all of the data that is required to generate a report(s). Three profiles for measure reporting have been defined in this guide.
+Measure Reporting is done by a [Reporter] that has all of the data that is required to generate a report(s). Three profiles for measure reporting have been defined in this guide.
 
 The [DEQM Individual MeasureReport Profile] is used when a measure is reported for a specific patient. It contains all of the data that is relevant to generate the report including the measure outcome. The MeasureReport(s) are packaged in a FHIR Bundle with Organization, Patient and any other resources that were used to calculate this measure.
 
@@ -118,11 +118,11 @@ For example, the below measure population criteria and stratifier would result i
 
 #### Gaps in Care Reporting
 
-Gaps in Care Reporting can be requested by a Client to a Server system that has all of the data that is known about the patient(s) at a point in time during a [gaps through period]. The [care-gaps](OperationDefinition-care-gaps.html) operation is used to request and receive Gaps in Care Report for measures.
+Gaps in Care Reporting can be requested by a [Client](glossary.html#client) to a [Server](glossary.html#server) system that has all of the data that is known about the patient(s) at a point in time during a [gaps through period]. The [care-gaps](OperationDefinition-care-gaps.html) operation is used to request and receive Gaps in Care Report for measures.
 
 When the [care-gaps](OperationDefinition-care-gaps.html) operation is run on the Server, it returns a FHIR Bundle for each patient. The bundle conforms to the [DEQM Gaps In Care Bundle Profile], which must contain a Composition that uses the [DEQM Gaps In Care Composition Profile]. The DEQM Gaps In Care Composition references one to many MeasureReport resource; each MeasureReport is for a single measure and conforms to the [DEQM Individual MeasureReport Profile]. Optionally, the actual individual MeasureReport resources referenced are also packaged in the same DEQM Gaps In Care Bundle, along with Patient, Organization, and other resources that were used to calculate this measure. A DetectedIssue resource defined using the [DEQM Gaps In Care DetectedIssue Profile] must be included to indicate gap status of that measure via the [DEQM Gap Status Extension], a modifier extension.
 
-The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps] or [prospective gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with any combination of [open, closed, and prospective gaps]. The [CQF Criteria Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [DEQCQF Criteria Reference Extension]the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
+The DEQM Individual MeasureReport contains all of the data that is relevant to calculate the report including the measure outcome and indication of [open gaps] or [prospective gaps]. The [care-gaps](OperationDefinition-care-gaps.html) operation determines the gaps status for the patient for a specific measure based on the measureScore data contained in the MeasureReport. Depending on what input parameters are provided to the [care-gaps](OperationDefinition-care-gaps.html) operation for generating a Gaps in Care Report, a DEQM Gaps In Care Composition may contain reports for measures with any combination of [open, closed, and prospective gaps]. The [CQF Criteria Reference Extension] to the `evaluatedResource` is added to the [DEQM Individual MeasureReport Profile] to support associating an evaluated resource with a specific measure population or populations that it applies to. For example, a colonoscopy procedure done for an individual 5 years ago is used to meet the numerator population criteria when evaluating the colorectal cancer screening measure for the individual. Through the use of this [CQF Criteria Reference Extension] the Server can indicate this colonoscopy procedure data was used for evaluating the numerator population, identified by the population group id for numerator specified in the Colorectal Cancer Screening Measure resource.
 
 ### Data Requirements
 
@@ -134,7 +134,7 @@ Measure specifications define logic and data requirements necessary to perform e
 
 Duplicate data is a concern in DEQM because the operations support multiple measures per subject. The same resource instance could be referenced by multiple MeasureReports, or multiple measures may use different elements within the same resource. Another situation to consider when evaluating a measure is when multiple value sets have overlapping codes, then two different CQL retrieve operations can return the same resource instance because it matches a code twice from the overlap.
 
-Note that the [$data-requirements] operation is currently defined for a single Measure or Library, so it is a responsibility of the data producer to check for, and address, duplicate data.
+Note that the [$data-requirements] operation is currently defined for a single Measure or Library, so it is a responsibility of the [Producer] to check for, and address, duplicate data.
 
 §deqm-28: As described below in the section "DEQM Operation Bundles Organized by Subject," Bundles utilized in DEQM operations **SHOULD** be organized by subject. § This reduces the potential for proliferation of duplicate data because resources common to the subject, such as Encounters, would not be repeated across Bundles. §deqm-29: As described in ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)), a given version of a resource **SHALL** occur only once in a Bundle, and for DEQM that requires consideration of the data of interest and evaluated resources within the Bundle. §
 
@@ -146,15 +146,17 @@ The Bundles used in the DEQM operations enable the evaluation and exchange of da
 
 ### Referential Integrity in Bundles
 
-§deqm-31: Clients **SHOULD** include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible. § This may result in bundles that have references to data that is not included in the bundle, which could be both patient-specific information, such as immunizations, and non-patient-specific information, such as locations and practitioners, that are not relevant to the evaluated measure.
+The guidance in this section applies to every DEQM scenario. The system sending a Bundle is the [Producer] in the exchange scenarios, the [Reporter] in the reporting scenarios, and the [Server](glossary.html#server) in the Gaps in Care scenarios; the system receiving it is the [Consumer], the [Receiver], and the [Client](glossary.html#client), respectively.
 
-§deqm-32: Servers **SHOULD** be permissive in accepting references to data that are not included in the bundle. §
+§deqm-31: The sending system **SHOULD** include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible. § This may result in bundles that have references to data that is not included in the bundle, which could be both patient-specific information, such as immunizations, and non-patient-specific information, such as locations and practitioners, that are not relevant to the evaluated measure.
+
+§deqm-32: The receiving system **SHOULD** be permissive in accepting references to data that are not included in the bundle. §
 
 Considerations such as privacy, consent, authorization, minimum necessary, etc., are outside the scope of this IG.
 
 ### Ad-hoc Organizations for DEQM Operations
 
-Data producers and consumers may want to gather data from different locations and providers within a large organization that is comprised of multiple sub-organizations. In such cases, it can be desirable to model portions of the organization from which data should be gathered as a way to target data requests. The [$care-gaps](OperationDefinition-care-gaps.html) and [$collect-data](OperationDefinition-collect-data.html) operations allow an Organization resource to be either referenced or passed in as part of the request body. If it is passed in, it can be an ad-hoc Organization created only as part of that request. PractitionerRole resources can be used to link Practitioner resources to the Organization to model the set of participating practitioners.
+Producers and Consumers may want to gather data from different locations and providers within a large organization that is comprised of multiple sub-organizations. In such cases, it can be desirable to model portions of the organization from which data should be gathered as a way to target data requests. The [$care-gaps](OperationDefinition-care-gaps.html) and [$collect-data](OperationDefinition-collect-data.html) operations allow an Organization resource to be either referenced or passed in as part of the request body. If it is passed in, it can be an ad-hoc Organization created only as part of that request. PractitionerRole resources can be used to link Practitioner resources to the Organization to model the set of participating practitioners.
 
 The [ad-hoc organization example](Organization-ad-hoc-organization.html) illustrates an Organization resource with two contained PractitionerRole resources. It assumes a simple attribution model for the patient-provider interactions. In practice, attribution of patient encounters to providers will be more sophisticated and include factors such as coverage, ACOs, etc.
 

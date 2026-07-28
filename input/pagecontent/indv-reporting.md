@@ -3,7 +3,7 @@
 
 An individual patient level report contains quality data for one patient for one or more Clinical Quality Measures (CQMs).  The [data of interest](glossary.html#data-of-interest) is the source data (raw applicable patient data) needed to calculate a CQM.  The data elements in the report are defined by the particular CQM being reported on.   When pooled and analyzed, each report contributes the quality data necessary to calculate population measure metrics.
 
-The Individual reporting scenario is supported by the [DEQM Individual MeasureReport Profile]. Transactions between Reporters (for example, an organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of individual patient level quality reports for CQMs to various quality reporting programs.
+The Individual reporting scenario is supported by the [DEQM Individual MeasureReport Profile]. Transactions between [Reporters] (the systems that calculate the measure results, such as a practice, hospital, aggregator, or payer) and [Receivers] (the systems that receive those results, such as quality reporting programs, healthcare agencies, or quality improvement organizations) are triggered by specific administrative events such as the submission of individual patient level quality reports for CQMs to various quality reporting programs. Note that a system acting as a [Consumer] in a [Data Exchange] scenario commonly acts as the Reporter here.
 
 ### DEQM Individual Resource Diagram
 
@@ -97,7 +97,7 @@ When the results of a CQM are completed they are POSTed to the quality measure R
 
 In order to support real-world implementations where:
 
--  External producers submit individual MeasureReport resources for multiple providers in a single bundle.
+-  External Reporters submit individual MeasureReport resources for multiple providers in a single bundle.
 
 -  FHIR servers often act as facade layers over existing APIs (e.g., Measurement  /api/submissions/measurements) that perform individual POST/PUT operations atomically.
 

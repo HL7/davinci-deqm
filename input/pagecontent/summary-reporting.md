@@ -4,7 +4,7 @@
 
 A summary report contains calculated summary data for one or more Clinical Quality Measures (CQMs) for a specified population of patients within a particular health system over a specific period of time. For example, a colorectal cancer screening CQM has patient counts for the initial population, denominator, denominator exclusions, and numerator respectively for a specified population of patients. Summary reports may also contain summary data for stratifier criteria (such as gender or age) as defined in a CQM.
 
-The Summary reporting scenario is supported by the [DEQM Summary MeasureReport Profile]. Transactions between Reporters (for example, organizations that deliver care to patients, such as a practice or hospital) and Receivers (organizations that want to evaluate CQMs, such as quality reporting programs) are triggered by specific administrative events such as the submission of summary level quality reports for CQMs to various quality reporting programs.
+The Summary reporting scenario is supported by the [DEQM Summary MeasureReport Profile]. Transactions between [Reporters] (the systems that calculate the measure results, such as a practice, hospital, aggregator, or payer) and [Receivers] (the systems that receive those results, such as quality reporting programs, healthcare agencies, or quality improvement organizations) are triggered by specific administrative events such as the submission of summary level quality reports for CQMs to various quality reporting programs. Note that a system acting as a [Consumer] in a [Data Exchange] scenario commonly acts as the Reporter here.
 
 ### Relationship of Measure and MeasureReport Resources
 
@@ -28,7 +28,7 @@ When the results of a quality measure are completed for a population at the end 
 
 In order to support real-world implementations where:
 
--  External producers submit summary MeasureReport resources for multiple providers in a single bundle.
+-  External Reporters submit summary MeasureReport resources for multiple providers in a single bundle.
 
 -  FHIR servers often act as facade layers over existing APIs (e.g., Measurement  /api/submissions/measurements) that perform individual POST/PUT operations atomically.
 

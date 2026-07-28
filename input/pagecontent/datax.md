@@ -3,7 +3,7 @@
 
 Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of [data of interest](glossary.html#data-of-interest) is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data of interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.
 
-Transactions between Consumers (organizations that want to evaluate quality measures) and Producers (organizations that deliver care to patients) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation or a request from a Payer for the attestation information. Note that although triggering is implementation specific and out of scope for this IG,  there are a variety of potential triggering points for reporting events within clinical systems.  These include:
+Transactions between [Producers] (the systems that hold the data of interest, such as an EHR or clinical data repository) and [Consumers] (the systems that want to evaluate quality measures, such as payers, registries, aggregators, or public health agencies) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation or a request from a Payer for the attestation information. Note that although triggering is implementation specific and out of scope for this IG,  there are a variety of potential triggering points for reporting events within clinical systems.  These include:
 
 * [Infobutton] event listing
 * [eCR] Event Types
@@ -95,6 +95,8 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 
 **Discovery:**
 
+In the Submit Data interaction the Producer acts as the FHIR client and the Consumer acts as the FHIR server. The `(client)` and `(server)` qualifiers used below refer to those FHIR REST roles; they are not the [Client](glossary.html#client) and [Server](glossary.html#server) actors of the Gaps in Care Reporting scenarios.
+
   - A CapabilityStatement is retrieved from a FHIR endpoint:
 
   `GET|[base]/metadata`
@@ -152,7 +154,7 @@ Using the `POST` syntax, the data can be submitted by Producer:
 
 {% include examplebutton.html example="submit-data-example" b_title = "Click Here To See Example Submit Data Operation (edited for brevity)" %}
 
-For a complete un-edited example see the [MRP Submit Data] and [COL Submit Data] examples.
+For a complete un-edited example see the [MRP Data Exchange] and [COL Data Exchange] examples.
 
 ### Collect Data
 {: #collect-data}
