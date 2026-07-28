@@ -132,6 +132,7 @@
 <artifact id="MeasureReport/ratio-measurereport01" key="MeasureReport-ratio-measurereport01" name="Gaps Ratio MeasureReport01"/>
 <artifact id="Organization/gaps-organization-reportingvendor" key="Organization-gaps-organization-reportingvendor" name="Gaps Reporting Vendor Organization"/>
 <artifact id="Group/group01" key="Group-group01" name="Group01"/>
+<artifact id="Group/group02" key="Group-group02" name="Group02"/>
 <artifact id="GuidanceResponse/guidanceresponse01" key="GuidanceResponse-guidanceresponse01" name="Guidance Response Example"/>
 <artifact id="Measure/attestation-boolean-example" key="Measure-attestation-boolean-example" name="Immunization Registry Reporting"/>
 <artifact id="MeasureReport/indv-measurereport-patient-level-linear" key="MeasureReport-indv-measurereport-patient-level-linear" name="Indv MeasureReport - Patient-level linear"/>
@@ -173,6 +174,7 @@
 <artifact deprecated="true" id="MeasureReport/summary-multirate-measurereport" key="MeasureReport-summary-multirate-measurereport" name="Multi-rate Summary Measure Report Example"/>
 <artifact id="Bundle/multiple-indv-mrp-obs-report" key="Bundle-multiple-indv-mrp-obs-report" name="Multiple Indv Mrp Obs Report"/>
 <artifact id="Bundle/multiple-indv-mrp-task-report" key="Bundle-multiple-indv-mrp-task-report" name="Multiple Indv Mrp Task Report"/>
+<artifact id="Parameters/multi-measure-invited-obs" key="Parameters-multi-measure-invited-obs" name="Multiple Measure Invited Obs"/>
 <artifact id="Bundle/multiple-summ-report" key="Bundle-multiple-summ-report" name="Multiple Summ Report"/>
 <artifact deprecated="true" id="StructureDefinition/cqf-numeratorMembership" key="StructureDefinition-cqf-numeratorMembership" name="Numerator Membership"/>
 <artifact id="Observation/observation01" key="Observation-observation01" name="Observation01"/>

@@ -103,9 +103,9 @@ In order to support real-world implementations where:
 
 -  In scenarios where the FHIR layer interacts directly with the database, supporting true bundle-level atomicity (e.g., 500+ entries) often requires pessimistic locking of rows or tables, increasing the risk of contention and deadlocks.
 
-All systems **SHALL** support one of "batch" or "transaction", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types.
+§deqm-38: All systems **SHALL** support one of "batch" or "transaction", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types. §
 
-Posting Individual Measure Reports is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  The FHIR transaction bundle used in the reporting scenarios **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted. (`Bundle.request.method` = POST, PUT, or DELETE).
+Posting Individual Measure Reports is typically a one time event, although there may be a need to amend or update a report or to report periodically based on the reporting program.  §deqm-39: The FHIR transaction bundle used in the reporting scenarios **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted. § (`Bundle.request.method` = POST, PUT, or DELETE).
 
 Note that Multiple individual reports either for the same or multiple patient for the same or multiple CQMs can be sent in a single FHIR Bundle.  Since each referenced resource is represented only once in the Bundle even though it may be referenced multiple times within the Bundle, the reporting overhead for the Reporter may be reduced when compared to reporting each individual report separately. (See the FHIR specification for more information about using [Bundles] and resolving references in Bundles).
 

@@ -64,3 +64,9 @@ For additional definitions see the [eCQI Resource Center Glossary]
 |REST|Representational State Transfer|
 |STU3|FHIR Release 3 (STU)|
 |VTE-1|Venous Thromboembolism Prophylaxis Measure|
+
+### Narrative Conformance
+
+This table consolidates all conformance statements that are included in the narrative of the Implementation Guide.
+
+§§§

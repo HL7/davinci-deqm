@@ -1,7 +1,7 @@
 {% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
-The following data-elements are mandatory (i.e data MUST be present).
+§deqm-57: The following data-elements are mandatory (i.e data **MUST** be present). §
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. type: document \| message \| transaction \| transaction-response \| batch \| batch-response \| history \| searchset \| collection
@@ -24,7 +24,7 @@ This profile builds on [Bundle](https://www.hl7.org/fhir/bundle.html).
 
 Conformance Requirement 1:
 
-The DEQM Gaps In Care Bundle SHALL include entries for all patient specific resources including evaluated resources referenced by the included [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and for resources referenced by the [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) including GuidanceResponse. 
+§deqm-58: The DEQM Gaps In Care Bundle **SHALL** include entries for all patient specific resources including evaluated resources referenced by the included [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and for resources referenced by the [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) including GuidanceResponse. § 
 
 
 <!-- ### Examples-->

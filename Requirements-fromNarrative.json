@@ -6,5 +6,316 @@
   "title" : "Narrative Conformance Statements",
   "status" : "active",
   "experimental" : false,
-  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes"
+  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
+  "statement" : [{
+    "key" : "1",
+    "conformance" : ["SHALL"],
+    "requirement" : "deqm-82: The DEQM Producer Client <b>SHALL</b> use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction."
+  },
+  {
+    "key" : "2",
+    "conformance" : ["SHALL"],
+    "requirement" : "deqm-82: The DEQM Producer Client <b>SHALL</b> use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction."
+  },
+  {
+    "key" : "3",
+    "conformance" : ["SHALL"],
+    "requirement" : "deqm-82: The DEQM Producer Client <b>SHALL</b> use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction."
+  },
+  {
+    "key" : "4",
+    "conformance" : ["SHALL"],
+    "requirement" : "deqm-82: The DEQM Producer Client <b>SHALL</b> use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction."
+  },
+  {
+    "key" : "deqm-01",
+    "conformance" : ["SHALL"],
+    "requirement" : "If the measure scoring type is 'proportion' then the `MeasureReport.group.measureScore.value` **SHALL** be a numerical value between 0 and 1."
+  },
+  {
+    "key" : "deqm-02",
+    "conformance" : ["MAY"],
+    "requirement" : "A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation **MAY** be repeated during the submission period as additional data relevant to the quality measure becomes available."
+  },
+  {
+    "key" : "deqm-03",
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "requirement" : "These Bundles **SHALL** contain data-of-interest, **SHALL** contain 0..* DEQM Data Exchange MeasureReports for that data, and **SHOULD** be for a single subject."
+  },
+  {
+    "key" : "deqm-04",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Consumer (server) **SHALL** advertise whether it supports snapshot and/or incremental data exchange via its CapabilityStatement using the [DEQM Submit Data Update Type Extension](StructureDefinition-deqm-submitDataUpdateType.html)."
+  },
+  {
+    "key" : "deqm-05",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Producer (client) **SHALL** populate the required [DEQM Submit Data Update Type Extension](StructureDefinition-deqm-submitDataUpdateType.html) on the [DEQM Data Exchange MeasureReport Profile](StructureDefinition-deqm-dataexchangemeasurereport.html) to indicate whether the payload is a snapshot or incremental update for both the initial transaction and subsequent updates."
+  },
+  {
+    "key" : "deqm-06",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Consumer (server) **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a `400 Bad Request` http error code."
+  },
+  {
+    "key" : "deqm-07",
+    "conformance" : ["SHALL"],
+    "requirement" : "An OperationOutcome **SHALL** be returned stating that the [snapshot/incremental] update is not supported as shown in the following example:"
+  },
+  {
+    "key" : "deqm-08",
+    "conformance" : ["SHALL"],
+    "requirement" : "If the Producer cannot support the lastReceivedOn parameter then it **SHALL** return a `400 Bad Request` http error code."
+  },
+  {
+    "key" : "deqm-09",
+    "conformance" : ["SHALL"],
+    "requirement" : "An OperationOutcome **SHALL** be returned stating that the `lastReceivedOn` parameter is not supported as shown in the following example:"
+  },
+  {
+    "key" : "deqm-10",
+    "conformance" : ["SHOULD-NOT"],
+    "requirement" : "To avoid confusion, implementers of the DEQM operations **SHOULD NOT** support the base FHIR R4 $collect-data operation."
+  },
+  {
+    "key" : "deqm-11",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Note that the use of the [X-Provenance header data](http://hl7.org/fhir/R4/provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    }],
+    "key" : "deqm-12",
+    "requirement" : "If the status is not-applicable the measureScore **SHALL NOT** be included in the DEQM Individual MeasureReport."
+  },
+  {
+    "key" : "deqm-13",
+    "conformance" : ["SHOULD",
+    "MAY"],
+    "requirement" : "Servers **SHOULD** support patient-based measures, and **MAY** support any other base."
+  },
+  {
+    "key" : "deqm-14",
+    "conformance" : ["SHALL"],
+    "requirement" : "The bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile](StructureDefinition-deqm-gapsincarebundle.html)."
+  },
+  {
+    "key" : "deqm-15",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Gaps In Care Composition **SHALL** contain one to many section(s)."
+  },
+  {
+    "key" : "deqm-16",
+    "conformance" : ["SHALL"],
+    "requirement" : "All Individual MeasureReport referenced **SHALL** be for the same patient specified in the Composition `subject`."
+  },
+  {
+    "key" : "deqm-17",
+    "conformance" : ["SHALL"],
+    "requirement" : "Each `section` **SHALL** also contain one or more `entry` of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile](StructureDefinition-deqm-gapsincaredetectedissue.html) for the measure regardless of its gap status (e.g., open or closed)."
+  },
+  {
+    "key" : "deqm-18",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Individual MeasureReport **SHALL** conform to the [DEQM Individual MeasureReport Profile](StructureDefinition-deqm-individualmeasurereport.html)."
+  },
+  {
+    "key" : "deqm-19",
+    "conformance" : ["SHALL"],
+    "requirement" : "Each DetectedIssue **SHALL** contain at least one `evidence` element that each evidence **SHALL** provide a detail that references either a DEQM Individual MeasureReport of the measure or a GuidanceResponse."
+  },
+  {
+    "key" : "deqm-20",
+    "conformance" : ["SHALL"],
+    "requirement" : "**Prefer** specifies the response is immediate or asynchronous, which **SHALL** be set to **respond-async**."
+  },
+  {
+    "key" : "deqm-21",
+    "conformance" : ["SHALL"],
+    "requirement" : "Measure population determination **SHALL** be done as specified in the Quality Measure (QM) IG's section [Population Criteria](http://hl7.org/fhir/uv/cqm/measure-conformance.html#population-criteria)."
+  },
+  {
+    "key" : "deqm-22",
+    "conformance" : ["SHALL"],
+    "requirement" : "A DEQM measure report's groups **SHALL** be organized and identified in the same manner as in the evaluated measure without alteration."
+  },
+  {
+    "key" : "deqm-23",
+    "conformance" : ["SHALL"],
+    "requirement" : "All linkId and code elements in the measure identified in the table above **SHALL** be in the measure report in the corresponding location."
+  },
+  {
+    "key" : "deqm-24",
+    "conformance" : ["SHOULD"],
+    "requirement" : "All id elements **SHOULD** be in the measure report."
+  },
+  {
+    "key" : "deqm-25",
+    "conformance" : ["SHALL"],
+    "requirement" : "There are two exceptions: (1) supplementalData.id **SHALL** be in the measure report if and only if the supplementalData.linkId is not present, and (2) supplementalData.code **SHALL** be in contained Observation resources on the code element that report supplemental data."
+  },
+  {
+    "key" : "deqm-26",
+    "conformance" : ["SHALL",
+    "MAY"],
+    "requirement" : "> Note that for backwards compatibility with measure specifications that do not use `linkId` elements, MeasureReports **MAY** be produced that do not include the linkId, but in these cases, the report **SHALL** provide the corresponding `id` elements to ensure measure components in the report can be correlated to the measure specification."
+  },
+  {
+    "key" : "deqm-27",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Implementations **SHOULD** avoid sending duplicate data (identical FHIR resources) in data exchanges (collect-data or submit-data) or as resolvable references in MeasureReport.evaluatedResources."
+  },
+  {
+    "key" : "deqm-28",
+    "conformance" : ["SHOULD"],
+    "requirement" : "As described below in the section \"DEQM Operation Bundles Organized by Subject,\" Bundles utilized in DEQM operations **SHOULD** be organized by subject."
+  },
+  {
+    "key" : "deqm-29",
+    "conformance" : ["SHALL"],
+    "requirement" : "As described in ([Resource URL & Uniqueness rules in a bundle](https://hl7.org/fhir/R4/bundle.html#bundle-unique)), a given version of a resource **SHALL** occur only once in a Bundle, and for DEQM that requires consideration of the data of interest and evaluated resources within the Bundle."
+  },
+  {
+    "key" : "deqm-30",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Bundles **SHOULD** be organized by subject, meaning that a Bundle **SHOULD** contain the resources, the including MeasureReport(s) and data of interest (in MeasureReport.evaluatedResources), for all of the measures that apply to a single subject."
+  },
+  {
+    "key" : "deqm-31",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Clients **SHOULD** include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible."
+  },
+  {
+    "key" : "deqm-32",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Servers **SHOULD** be permissive in accepting references to data that are not included in the bundle."
+  },
+  {
+    "key" : "deqm-33",
+    "conformance" : ["SHALL"],
+    "requirement" : "The organization provided in [$care-gaps](OperationDefinition-care-gaps.html) or [$collect-data](OperationDefinition-collect-data.html), whether in the \"organization\" parameter or the \"organizationResource\" parameter, **SHALL** be the reporter in the resulting measure report(s) and **SHALL** be included as a contained resource if necessary."
+  },
+  {
+    "key" : "deqm-34",
+    "conformance" : ["SHALL"],
+    "requirement" : "References among the contained resources **SHALL** be maintained."
+  },
+  {
+    "key" : "deqm-35",
+    "conformance" : ["SHOULD-NOT"],
+    "requirement" : "[Contained resources](http://hl7.org/fhir/R4/references.html#contained) **SHOULD NOT** be used when responding to the submit-data or collect-data operation or to the Individual reporting transactions."
+  },
+  {
+    "key" : "deqm-36",
+    "conformance" : ["SHOULD-NOT"],
+    "requirement" : "[Contained resources](http://hl7.org/fhir/R4/references.html#contained) **SHOULD NOT** be used when responding to the [care-gaps](OperationDefinition-care-gaps.html) operation."
+  },
+  {
+    "key" : "deqm-37",
+    "conformance" : ["SHALL"],
+    "requirement" : "This flag is used to indicate that the element plays a critical role in defining and sharing quality measures, and implementations **SHALL** understand and process the element."
+  },
+  {
+    "key" : "deqm-38",
+    "conformance" : ["SHALL"],
+    "requirement" : "All systems **SHALL** support one of \"batch\" or \"transaction\", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types."
+  },
+  {
+    "key" : "deqm-39",
+    "conformance" : ["SHALL"],
+    "requirement" : "The FHIR transaction bundle used in the reporting scenarios **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted."
+  },
+  {
+    "key" : "deqm-40",
+    "conformance" : ["SHALL"],
+    "requirement" : "The body **SHALL** include a FHIR MeasureReport Resource of type `data-collection` that references a measure by canonical URL."
+  },
+  {
+    "key" : "deqm-41",
+    "conformance" : ["SHALL"],
+    "requirement" : "Additionally, the FHIR Parameters resource **SHALL** include the URL of a Data Provider, as defined in the [Bulk Data Import Ping and Pull Approach](https://github.com/smart-on-fhir/bulk-import/blob/master/import-pnp.md#bulk-data-import-kick-off-request-ping-from-data-provider-to-data-consumer)."
+  },
+  {
+    "key" : "deqm-42",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Data Provider **SHALL** support `$export`."
+  },
+  {
+    "key" : "deqm-43",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Data Consumer server **SHALL** support invocation of the bulk submit-data operation using the [FHIR Asynchronous Request Pattern](http://hl7.org/fhir/async.html) via a POST request containing the FHIR Parameters Resource described above."
+  },
+  {
+    "key" : "deqm-44",
+    "conformance" : ["SHALL"],
+    "requirement" : "In addition to the required parameters, a caller of the $care-gaps operation **SHALL** provide subject|practitioner|organization, which could be one of the following:"
+  },
+  {
+    "key" : "deqm-45",
+    "conformance" : ["SHALL"],
+    "requirement" : "A $care-gaps operation **SHALL** provide a subject; OR"
+  },
+  {
+    "key" : "deqm-46",
+    "conformance" : ["SHALL"],
+    "requirement" : "A $care-gaps operation **SHALL** provide an organization; OR"
+  },
+  {
+    "key" : "deqm-47",
+    "conformance" : ["SHALL"],
+    "requirement" : "A $care-gaps operation **SHALL** provide a practitioner and an organization"
+  },
+  {
+    "key" : "deqm-58",
+    "conformance" : ["SHALL"],
+    "requirement" : "The DEQM Gaps In Care Bundle **SHALL** include entries for all patient specific resources including evaluated resources referenced by the included [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and for resources referenced by the [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) including GuidanceResponse."
+  },
+  {
+    "key" : "deqm-75",
+    "conformance" : ["SHALL"],
+    "requirement" : "When using a MeasureReport resource to represent a subject-list, the MeasureReport **SHALL** have a type-code of \"subject-list\" and if a subject reference is present, it **SHALL** be a reference to a Group."
+  },
+  {
+    "key" : "deqm-76",
+    "conformance" : ["SHALL"],
+    "requirement" : "In addition, the resource **SHALL** include for each population a reference to a List resource that references individual level MeasureReport resources for the same measure, one for each subject in the overall population."
+  },
+  {
+    "key" : "deqm-77",
+    "conformance" : ["SHALL"],
+    "requirement" : "All systems **SHALL** support one of \"batch\" or \"transaction\", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types."
+  },
+  {
+    "key" : "deqm-78",
+    "conformance" : ["MAY"],
+    "requirement" : "Note that for very large populations, implementations **MAY** decide to limit the size of the result, either by returning an error indicating the request is too costly, or by returning a partial result, so long as there is an indication that the report is only a partial response."
+  },
+  {
+    "key" : "deqm-79",
+    "conformance" : ["SHALL"],
+    "requirement" : "All systems **SHALL** support one of \"batch\" or \"transaction\", and that the server **SHALL** declare its support in the capability statement for these Bundle transaction types."
+  },
+  {
+    "key" : "deqm-80",
+    "conformance" : ["SHALL"],
+    "requirement" : "Otherwise, the FHIR transaction bundle is used and **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted."
+  },
+  {
+    "key" : "deqm-81",
+    "conformance" : ["SHALL"],
+    "requirement" : "The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot or incremental](datax.html#collect-updates) updates for the [DEQM Submit Data transaction](datax.html#submit-data)."
+  },
+  {
+    "key" : "deqm-82",
+    "conformance" : ["SHALL"],
+    "requirement" : "The DEQM Producer Client **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for DEQM Submit Data transaction."
+  },
+  {
+    "key" : "deqm-83",
+    "conformance" : ["SHALL"],
+    "requirement" : "When responding to the [DEQM Collect Data transaction](datax.html#collect-data), the DEQM Producer Server **SHALL** value it 'incremental' if the `lastReceivedOn` parameter is present or 'snapshot' if the `lastReceivedOn` parameter is absent."
+  }]
 }
