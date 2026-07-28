@@ -74,7 +74,7 @@ It is often the case that the operation should not be performed from the server&
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Subjects provided in this parameter SHALL match the subjectType of the measure being evaluated. (e.g. if the Measure.group.subjectType is Patient, the provided subjectGroup SHALL be a Group of Patients)."/>
+        <documentation value="Subjects provided in this parameter SHALL match the subjectType of the measure being evaluated. (e.g. if the Measure.group.subjectType is Patient, the provided subjectGroup SHALL be a Group of Patients). This parameter cannot be used with the subject parameter. If no subject or subjectGroup is provided, what subjects are evaluated is up to the server."/>
         <type value="Group"/>
     </parameter>
     <parameter> 
