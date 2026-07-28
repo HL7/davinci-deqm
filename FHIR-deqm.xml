@@ -19,6 +19,7 @@
 <artifact id="Bundle/sde-example-artifact-bundle" key="Bundle-sde-example-artifact-bundle" name="Additional Supplemental Data Example - Artifact Bundle"/>
 <artifact id="Bundle/sde-example-patient-data-bundle" key="Bundle-sde-example-patient-data-bundle" name="Additional Supplemental Data Example - Patient Bundle"/>
 <artifact id="OperationDefinition/bulk-submit-data" key="OperationDefinition-bulk-submit-data" name="Bulk Submit Data"/>
+<artifact id="Bundle/single-gaps-open-indv-report02" key="Bundle-single-gaps-open-indv-report02" name="BundleSingleGapsOpenIndivReport02"/>
 <artifact deprecated="true" id="CodeSystem/care-gap-reason" key="CodeSystem-care-gap-reason" name="Care Gap Reasons Code System"/>
 <artifact deprecated="true" id="ValueSet/care-gap-reason" key="ValueSet-care-gap-reason" name="Care Gap Reasons Value Set"/>
 <artifact deprecated="true" id="CodeSystem/care-gap-remark" key="CodeSystem-care-gap-remark" name="Care Gap Remark Code System"/>
@@ -91,6 +92,7 @@
 <artifact deprecated="true" id="StructureDefinition/gaps-guidanceresponse-detailedcaregap" key="StructureDefinition-gaps-guidanceresponse-detailedcaregap" name="Detailed Care Gap Guidance Response"/>
 <artifact id="GuidanceResponse/detailedguidanceresponse01" key="GuidanceResponse-detailedguidanceresponse01" name="DetailedGuidanceResponse01"/>
 <artifact id="GuidanceResponse/detailedguidanceresponse02" key="GuidanceResponse-detailedguidanceresponse02" name="DetailedGuidanceResponse02"/>
+<artifact id="DetectedIssue/gaps-detectedissue06" key="DetectedIssue-gaps-detectedissue06" name="DetectedIssue05"/>
 <artifact id="Measure/measure-pi-example" key="Measure-measure-pi-example" name="EXMPromotingInteroperabilityMeasure"/>
 <artifact id="Encounter/nhsn-iip-en101" key="Encounter-nhsn-iip-en101" name="Encounter nhsn-iip-en101"/>
 <artifact id="Encounter/encounter01" key="Encounter-encounter01" name="Encounter01"/>
@@ -109,6 +111,7 @@
 <artifact id="DetectedIssue/gaps-detectedissue03" key="DetectedIssue-gaps-detectedissue03" name="Gaps DetectedIssue03"/>
 <artifact id="DetectedIssue/gaps-detectedissue04" key="DetectedIssue-gaps-detectedissue04" name="Gaps DetectedIssue04"/>
 <artifact id="DetectedIssue/gaps-detectedissue05" key="DetectedIssue-gaps-detectedissue05" name="Gaps DetectedIssue05"/>
+<artifact id="Encounter/gaps-encounter04" key="Encounter-gaps-encounter04" name="Gaps Encounter 04"/>
 <artifact id="Encounter/gaps-encounter01" key="Encounter-gaps-encounter01" name="Gaps Encounter01"/>
 <artifact id="Encounter/gaps-encounter02" key="Encounter-gaps-encounter02" name="Gaps Encounter02"/>
 <artifact id="Encounter/gaps-encounter03" key="Encounter-gaps-encounter03" name="Gaps Encounter03"/>
@@ -131,6 +134,8 @@
 <artifact id="Procedure/gaps-procedure02" key="Procedure-gaps-procedure02" name="Gaps Procedure02"/>
 <artifact id="MeasureReport/ratio-measurereport01" key="MeasureReport-ratio-measurereport01" name="Gaps Ratio MeasureReport01"/>
 <artifact id="Organization/gaps-organization-reportingvendor" key="Organization-gaps-organization-reportingvendor" name="Gaps Reporting Vendor Organization"/>
+<artifact id="Composition/gaps-composition04" key="Composition-gaps-composition04" name="GapsComposition04"/>
+<artifact id="MeasureReport/gaps-indv-measurereport05" key="MeasureReport-gaps-indv-measurereport05" name="GapsIndivMeasureReport05"/>
 <artifact id="Group/group01" key="Group-group01" name="Group01"/>
 <artifact id="Group/group02" key="Group-group02" name="Group02"/>
 <artifact id="GuidanceResponse/guidanceresponse01" key="GuidanceResponse-guidanceresponse01" name="Guidance Response Example"/>
@@ -190,6 +195,7 @@
 <artifact id="Patient/patient01" key="Patient-patient01" name="Patient01"/>
 <artifact id="Patient/patient02" key="Patient-patient02" name="Patient02"/>
 <artifact id="Patient/patient03" key="Patient-patient03" name="Patient03"/>
+<artifact id="Patient/gaps-patient04" key="Patient-gaps-patient04" name="Patient04"/>
 <artifact deprecated="true" key="Practitioner" name="Practitioner"/>
 <artifact id="Practitioner/practitioner01" key="Practitioner-practitioner01" name="Practitioner01"/>
 <artifact id="Practitioner/practitioner02" key="Practitioner-practitioner02" name="Practitioner02"/>

@@ -53,11 +53,15 @@ Figure 4.4-3 shows the second patient, *Gaps Patient02*, that has a [closed gap]
 
 Figure 4.4-4 shows the third patient, *Gaps Patient03*, that has a [prospective gap]. The `evaluatedResource` points to a colonoscopy procedure done in 2010 that will be older than 10 years at the [gaps through period]. Because 10 years is the cutoff for a colonoscopy in the measure, the DetectedIssue resource's gap status code is "prospective-gap", which that a discrepancy will exist in the future between recommended best practices and the services that are actually provided and documented unless actions are taken.  
 
+Figure 4.4-5 shows the patient, Gaps Patient04, has an [open gap](glossary.html) because there were no resources in the payer system that would put her in numerator or denominator exclusion of the Colorectal Cancer Screening measure. The DetectedIssue resource contained in this Gaps in Care Report has the code "open-gap" as gap status indicating Gaps Patient04 has an [open gap](glossary.html) for this measure.
+
 {% include img-portrait.html img="gic-colonoscopy-example-pt1-step1-open-gap.png" caption = "Figure 4.4-2 Gaps in Care Resources Colonoscopy Gaps Patient01 Example: Step 1 - Open Gap" %}
 
 {% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 4.4-3 Gaps in Care Resources Colonoscopy Gaps Patient02 Example: Step 1- Closed Gap" %}
 
 {% include img-portrait.html img="gic-colonoscopy-example-pt3-step1-prospective-gap.png" caption = "Figure 4.4-4 Gaps in Care Resources Colonoscopy Gaps Patient03 Example: Step 1- Prospective Gap" %}
+
+{% include img-portrait.html img="gic-colonoscopy-example-pt4-step1-open-gap.png" caption = "Figure 4.4-5 Gaps in Care Resources Colonoscopy Gaps Patient04 Example: Step 1- Open Gap" %}
 
 {% include examplebutton.html example="get-gaps-bundle-initial-run-example" b_title = "Click Here To See Example of the Gaps in Care Report Described in Step 1" %}
 
@@ -67,7 +71,7 @@ The provider noticed *Gaps Patient01* was indicated as having an [open gap] for 
 
 The provider also noticed *Gaps Patient03* was indicated as having a [prospective gap] for Colorectal Cancer Screening. The colonoscopy from 10 years ago is only valid for the measure numerator until 2020-06-05. The provider ordered a colonoscopy and the patient was able to get it done in quickly. This ensures that the procpective gap is closed and does not become an open gap.
 
-In some cases where there is a delay between order and performance, a provider may want to "soft close" the gap for some amount of time due to the existing order. This prevents the gap from showing up as "open" for some amount of time or until the order is carried out. The gaps in care remark extension allows for such functionality, and is described further in ([DEQM Parameters Care Gap Remark Patch Profile](StructureDefinition-deqm-caregapremarkpatchparameters.html)).
+In some cases where there is a delay between order and performance, a provider may want to provide additional information about an open gap. A care gap remark can be added to indicate some action has been taken. Systems may choose to "soft close" the gap for some amount of time due to the existing order. This prevents the gap from showing up as "open" for some amount of time or until the order is carried out. The gaps in care remark extension and the [DEQM Parameters Care Gap Remark Patch Profile](StructureDefinition-deqm-caregapremarkpatchparameters.html) allow for such functionality.
 
 ([Parameters MeasureReport01 Patch Example](Parameters-measurereport01-patch.html))
 
@@ -75,13 +79,15 @@ In some cases where there is a delay between order and performance, a provider m
 
 #### Step 3 - Rerun for a Gaps in Care Report
 
-The provider rerun the Colorectal Cancer Screening Gaps in Care Report and confirmed that the [open gap] for *Gaps Patient01* and the [prospective gap] for *Gaps Patient03* were closed. Note that in the Figure 4.4-5 below, the DetectedIssue resource for *Gaps Patient01* now has the gap status code "closed-gap", because the [open gap] is now closed. The *Gaps Patient01* shows a recent colonoscopy. Figure 4.4-6 shows that there are no changes to *Gaps Patient02* comparing to the initially generated report, it still shows [closed gap]. Figure 4.4-7 shows that the [prospective gap] is now a [closed gap].
+The provider rerun the Colorectal Cancer Screening Gaps in Care Report and confirmed that the [open gap] for *Gaps Patient01* and the [prospective gap] for *Gaps Patient03* were closed. Note that in the Figure 4.4-6 below, the DetectedIssue resource for *Gaps Patient01* now has the gap status code "closed-gap", because the [open gap] is now closed. The *Gaps Patient01* shows a recent colonoscopy. Figure 4.4-7 shows that there are no changes to *Gaps Patient02* comparing to the initially generated report, it still shows [closed gap]. Figure 4.4-8 shows that the [prospective gap] is now a [closed gap]. Figure 4.4-9 shows that additional information has been provided as progress towards closing the gap but the gap status does not change.
 
-{% include img-portrait.html img="gic-colonoscopy-example-pt1-step3-gap-closed.png" caption = "Figure 4.4-5 Gaps in Care Resources Colonoscopy Gaps Patient01 Example: Step 3 - Open Gap Closed" %}
+{% include img-portrait.html img="gic-colonoscopy-example-pt1-step3-gap-closed.png" caption = "Figure 4.4-6 Gaps in Care Resources Colonoscopy Gaps Patient01 Example: Step 3 - Open Gap Closed" %}
 
-{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 4.4-6 Gaps in Care Resources Colonoscopy Gaps Patient02 Example: Step 3 - Closed Gap" %}
+{% include img-portrait.html img="gic-colonoscopy-example-pt2-step1-no-gap.png" caption = "Figure 4.4-7 Gaps in Care Resources Colonoscopy Gaps Patient02 Example: Step 3 - Closed Gap" %}
 
-{% include img-portrait.html img="gic-colonoscopy-example-pt3-step3-prospective-gap-closed.png" caption = "Figure 4.4-7 Gaps in Care Resources Colonoscopy Gaps Patient03 Example: Step 3 - Prospective Gap Closed" %}
+{% include img-portrait.html img="gic-colonoscopy-example-pt3-step3-prospective-gap-closed.png" caption = "Figure 4.4-8 Gaps in Care Resources Colonoscopy Gaps Patient03 Example: Step 3 - Prospective Gap Closed" %}
+
+{% include img-portrait.html img="gic-colonoscopy-example-pt4-step3-open-gap.png" caption = "Figure 4.4-9 Gaps in Care Resources Colonoscopy Gaps Patient04 Example: Step 3 - Care Gap Remark - Open Gap" %}
 
 {% include examplebutton.html example="get-gaps-bundle-rerun-example" b_title = "Click Here To See Example of the Gaps in Care Report Described in Step 3" %}
 
