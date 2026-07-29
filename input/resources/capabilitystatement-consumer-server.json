@@ -124,21 +124,6 @@
                             "definition": "http://hl7.org/fhir/OperationDefinition/Measure-submit-data",
                             "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-deqm-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
                             "name": "submit-data"
-                        },
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHOULD"
-                                },
-                                {
-                                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
-                                    "valueCode": "incremental"
-                                }
-                            ],
-                            "definition": "http://hl7.org/fhir/uv/deqm/OperationDefinition/bulk-submit-data",
-                            "documentation": "**SHALL** Use the [DEQM Submit Data Update Type Extension](StructureDefinition-deqm-submitDataUpdateType.html) to indicate whether it whether it supports snapshot or incremental data exchange.  **SHALL** reject the submit data payload if there is mismatch between the update type stated in the data exchange MeasureReport submitted by the Producer (client) and the capabilities supported by the Consumer (server) by returning a 400 Bad Request http error code. An OperationOutcome **SHOULD** be returned stating that the [snapshot/incremental] update is not supported .",
-                            "name": "bulk-submit-data"
                         }
                     ],
                     "supportedProfile": [
