@@ -180,12 +180,12 @@
                   ],
                   "population": [
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "initial-population"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "initial-population"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -198,12 +198,12 @@
                       "count": 1
                     },
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "numerator"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "numerator"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -216,12 +216,12 @@
                       "count": 1
                     },
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "denominator"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -234,12 +234,12 @@
                       "count": 1
                     },
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "denominator-exclusion"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator-exclusion"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -675,20 +675,20 @@
               "group": [
                 {
                   "id": "group-exm130",
-                   "extension": [
-                {
-                    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
-                    "valueString": "group-exm130"
-                }
-            ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                      "valueString": "group-exm130"
+                    }
+                  ],
                   "population": [
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "initial-population"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "initial-population"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -701,12 +701,12 @@
                       "count": 1
                     },
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "numerator"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "numerator"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -719,12 +719,12 @@
                       "count": 1
                     },
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "denominator"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -737,12 +737,12 @@
                       "count": 1
                     },
                     {
-                       "extension": [
+                      "extension": [
                         {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "denominator-exclusion"
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator-exclusion"
                         }
-                    ],
+                      ],
                       "code": {
                         "coding": [
                           {
@@ -1003,6 +1003,403 @@
                   "country": "USA"
                 }
               ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "return",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "single-gaps-open-indv-report02",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarebundle"
+          ]
+        },
+        "identifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:uuid:77f43ef5-8c60-4222-ae58-36969063a093"
+        },
+        "type": "document",
+        "timestamp": "2020-06-30T13:08:53+00:00",
+        "entry": [
+          {
+            "fullUrl": "http://example.org/fhir/gaps/Composition/gaps-composition04",
+            "resource": {
+              "resourceType": "Composition",
+              "id": "gaps-composition04",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarecomposition"
+                ]
+              },
+              "status": "final",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "96315-7",
+                    "display": "Gaps in care report"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/gaps-patient04"
+              },
+              "date": "2020-06-30T13:08:53+00:00",
+              "author": [
+                {
+                  "reference": "Organization/gaps-organization-reportingvendor"
+                }
+              ],
+              "title": "Care Gap Report for patient gaps-patient04",
+              "custodian": {
+                "reference": "Organization/gaps-organization-reportingvendor"
+              },
+              "section": [
+                {
+                  "title": "Colorectal Cancer Screening",
+                  "focus": {
+                    "reference": "MeasureReport/gaps-indv-measurereport05"
+                  },
+                  "entry": [
+                    {
+                      "reference": "DetectedIssue/gaps-detectedissue06"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "http://example.org/fhir/gaps/MeasureReport/gaps-indv-measurereport05",
+            "resource": {
+              "resourceType": "MeasureReport",
+              "id": "gaps-indv-measurereport05",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                        "code": "proportion"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-certificationIdentifier",
+                  "valueIdentifier": {
+                    "system": "urn:oid:2.16.840.1.113883.3.2074.1",
+                    "value": "0015HQN9BD3304E"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-reportingVendor",
+                  "valueReference": {
+                    "reference": "Organization/gaps-organization-reportingvendor"
+                  }
+                }
+              ],
+              "status": "complete",
+              "type": "individual",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+              "subject": {
+                "reference": "Patient/gaps-patient04"
+              },
+              "date": "2020-06-30T13:08:52+00:00",
+              "reporter": {
+                "reference": "Organization/organization01"
+              },
+              "period": {
+                "start": "2020-01-01",
+                "end": "2020-12-31"
+              },
+              "improvementNotation": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase"
+                  }
+                ]
+              },
+              "group": [
+                {
+                  "id": "group-exm130",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                      "valueString": "group-exm130"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-careGapRemark",
+                      "extension": [
+                        {
+                          "url": "code",
+                          "valueString": "order-placed"
+                        }
+                      ]
+                    }
+                  ],
+                  "population": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "initial-population"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "initial-population",
+                            "display": "Initial Population"
+                          }
+                        ]
+                      },
+                      "count": 1
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "numerator"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "numerator",
+                            "display": "Numerator"
+                          }
+                        ]
+                      },
+                      "count": 0
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "denominator",
+                            "display": "Denominator"
+                          }
+                        ]
+                      },
+                      "count": 1
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator-exclusion"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "denominator-exclusion",
+                            "display": "Denominator Exclusion"
+                          }
+                        ]
+                      },
+                      "count": 0
+                    }
+                  ],
+                  "measureScore": {
+                    "value": 0.0
+                  }
+                }
+              ],
+              "evaluatedResource": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                      "valueString": "initial-population"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+                      "valueString": "denominator"
+                    }
+                  ],
+                  "reference": "Encounter/gaps-encounter04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "http://example.org/fhir/gaps/DetectedIssue/gaps-detectedissue06",
+            "resource": {
+              "resourceType": "DetectedIssue",
+              "id": "gaps-detectedissue06",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincaredetectedissue"
+                ]
+              },
+              "modifierExtension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapStatus",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-gaps-status",
+                        "code": "open-gap"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "status": "final",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "CAREGAP",
+                    "display": "Caregap"
+                  }
+                ]
+              },
+              "patient": {
+                "reference": "Patient/gaps-patient04"
+              },
+              "evidence": [
+                {
+                  "detail": [
+                    {
+                      "reference": "MeasureReport/gaps-indv-measurereport05"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "http://example.org/fhir/gaps/Encounter/gaps-encounter04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "gaps-encounter04",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"
+                ]
+              },
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://www.ama-assn.org/go/cpt",
+                      "code": "99202",
+                      "display": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter."
+                    }
+                  ]
+                }
+              ],
+              "subject": {
+                "reference": "Patient/gaps-patient04"
+              },
+              "period": {
+                "start": "2020-05-30T00:00:00-00:00",
+                "end": "2020-05-31T00:00:00-00:00"
+              }
+            }
+          },
+          {
+            "fullUrl": "http://example.org/fhir/gaps/Patient/gaps-patient04",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "gaps-patient04",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "ombCategory",
+                      "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2028-9",
+                        "display": "Asian"
+                      }
+                    },
+                    {
+                      "url": "text",
+                      "valueString": "Asian"
+                    }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "ombCategory",
+                      "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2135-2",
+                        "display": "Hispanic or Latino"
+                      }
+                    },
+                    {
+                      "url": "text",
+                      "valueString": "Hispanic or Latino"
+                    }
+                  ],
+                  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://example.org",
+                  "value": "999995993"
+                }
+              ],
+              "name": [
+                {
+                  "family": "Margot",
+                  "given": [
+                    "Doe"
+                  ]
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1966-01-01"
             }
           }
         ]
