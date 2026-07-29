@@ -128,11 +128,11 @@
 [Background]: index.html#background
 [US Core Organization Profile]: {{site.data.fhir.uscore}}/StructureDefinition-us-core-organization.html
 [eCQI Resource Center Glossary]: https://ecqi.healthit.gov/glossary
-[data of interest]: index.html#data-of-interest
-[measurement period]: index.html#measurement-period
-[submission period]: index.html#submission-period
-[incremental]: index.html#incremental-update
-[snapshot]: index.html#snapshot-update
+[data of interest]: glossary.html#data-of-interest
+[measurement period]: glossary.html#measurement-period
+[submission period]: glossary.html#submission-period
+[incremental]: glossary.html#incremental-update
+[snapshot]: glossary.html#snapshot-update
 [Measure Scoring]: StructureDefinition-deqm-measureScoring.html
 [HL7 Da Vinci Guiding Principles]: https://confluence.hl7.org/display/DVP/Da+Vinci+Clinical+Advisory+Council+Members?preview=/66940155/66942916/Guiding%20Principles%20for%20Da%20Vinci%20Implementation%20Guides.pdf
 [Bundle Multiple Summ Report]: Bundle-multiple-summ-report.html
@@ -180,5 +180,17 @@
 [prospective gaps]: glossary.html
 [gaps through period]: glossary.html
 [Gaps through period]:  glossary.html
+[Producer]: glossary.html#producer
+[Producers]: glossary.html#producer
+[Consumer]: glossary.html#consumer
+[Consumers]: glossary.html#consumer
+[Reporter]: glossary.html#reporter
+[Reporters]: glossary.html#reporter
+[Receiver]: glossary.html#receiver
+[Receivers]: glossary.html#receiver
+[GIC Client]: glossary.html#client
+[GIC Clients]: glossary.html#client
+[GIC Server]: glossary.html#server
+[GIC Servers]: glossary.html#server
 [Gaps in Care Colorectal Cancer Screening]: gaps-examples.html
 [Reporting Population Data]: http://hl7.org/fhir/clinicalreasoning-quality-reporting.html#reporting-population-data

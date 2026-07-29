@@ -1,9 +1,9 @@
 
 ### Introduction
 
-Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The intent of [data of interest](glossary.html#data-of-interest) is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data of interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.
+Clinical Quality Measures (CQMs) are a common tool used throughout healthcare to help evaluate and understand the impact and quality of the care being provided to an individual or population. The [data of interest](glossary.html#data-of-interest) is the source data needed to calculate a quality measure, as specified by the data requirements of the measure. For example, for a colorectal cancer screening measure, the data of interest is the set of conditions, procedures, and observations related to determining whether a patient is in the initial population, denominator, and numerator of the quality measure. To effectively evaluate quality measures in such an environment requires timely exchange of the relevant data.
 
-Transactions between Consumers (organizations that want to evaluate quality measures) and Producers (organizations that deliver care to patients) are triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation or a request from a Payer for the attestation information. Note that although triggering is implementation specific and out of scope for this IG,  there are a variety of potential triggering points for reporting events within clinical systems.  These include:
+Transactions between [Producers] (the systems that hold the data of interest, such as an EHR or clinical data repository) and [Consumers] (the systems that want to evaluate quality measures, such as payers, registries, aggregators, or public health agencies) may be performed periodically, or they may be triggered by use case specific clinical or administrative events such as the completion of a Medication Reconciliation or a request from a Payer for the attestation information. Note that although triggering is implementation specific and out of scope for this IG,  there are a variety of potential triggering points for reporting events within clinical systems.  These include:
 
 * [Infobutton] event listing
 * [eCR] Event Types
@@ -19,7 +19,7 @@ This Implementation Guide (IG) describes two methods of exchanging data quality 
 
 Note that FHIR operations allow the implementation to be viewed as a 'black box' free to decide how to satisfy the query - "give me the data of interest for a measure" - without requiring generic FHIR search functionality.
 
-  This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which is working on event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned and will align with the outcomes of the Argonaut project.
+  This project recognizes the impact of the [Argonaut Clinical Data Subscriptions] project which defined event based subscriptions and major revisions to the Subscription resource for FHIR R5. In a future version of this guide, a subscription based exchange <!-- in which the Consumer may subscribe to a Producer's Subscription service to be notified when the CQM data is available --> is planned that will align with the outcomes of the Argonaut project.
   {:.stu-note}
 
 
@@ -36,14 +36,14 @@ The DEQM resources form a network through their relationships with each other - 
 
 {:.highlight-note}
 
-The $submit-data operation defined in earlier versions of this guide has been deprecated. §deqm-02: A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation **MAY** be repeated during the submission period as additional data relevant to the quality measure becomes available. § §deqm-03: These Bundles **SHALL** contain data-of-interest, **SHALL** contain 0..* DEQM Data Exchange MeasureReports for that data, and **SHOULD** be for a single subject. § See the guidance on Bundle structure for discussion about the Bundle content and organization. The Producer submits the data either as [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
+The Submit Data scenario supports exchange of the data-of-interest as a _push_ (i.e. the Producer pushes the data to the Consumer). §deqm-02: A Producer uses either the [batch/transaction interaction](https://hl7.org/fhir/R4/http.html#transaction) or an appropriate bulk operation to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period). The operation **MAY** be repeated during the submission period as additional data relevant to the quality measure becomes available. § §deqm-03: These Bundles **SHALL** contain data-of-interest, **SHALL** contain 0..* DEQM Data Exchange MeasureReports for that data, and **SHOULD** be for a single subject. § See the guidance on Bundle structure for discussion about the Bundle content and organization. The Producer submits the data either as [incremental](glossary.html#incremental-update) or [snapshot](glossary.html#snapshot-update) updates. These update methods are described in detail [below](#submit-updates).
 
 {% include img.html img="submit-data-step.jpg" caption = "Figure 3.2-2 Submit Data Steps" %}
 
 #### Gather Data Requirements from Consumer
 {:.no_toc}
 
-Producers are required to know specifically what data to provide to Consumers as part of data exchange.  As described in the [Background](background.html) section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
+Producers need to know specifically what data to provide to Consumers as part of data exchange.  As described in the [Background](background.html) section of this guide, the profiles used in measuring and reporting CQMs are developed through a multi-stakeholder consensus-based process and are made available to the Producer.  The Producer is able to query for profiles needed for reporting a given measure and the criteria for the sending of the data.  This can be done manually by reviewing the measure definition or computationally by invoking the *Data Requirements* operation on a Consumer's measure instance endpoint as described below. These profiles are subsequently referenced in the `MeasureReport.evaluatedResources` element when submitting the measure data to the Consumer.
 
 Note that because the data exchange scenarios described are intended to support exchange throughout a measurement period, the versions of measure specifications may change during the measurement period. Care should be taken to ensure the appropriate versioning of measure specifications and the impact of those changes on data exchanged using these methods
 
@@ -94,6 +94,8 @@ Examples of patient ‘events’ that could trigger the submission of an update:
 - Being discharged from a hospital.
 
 **Discovery:**
+
+In the Submit Data interaction the Producer acts as the FHIR client and the Consumer acts as the FHIR server. The `(client)` and `(server)` qualifiers used below refer to those FHIR REST roles; they are not the [Client](glossary.html#client) and [Server](glossary.html#server) actors of the Gaps in Care Reporting scenarios.
 
   - A CapabilityStatement is retrieved from a FHIR endpoint:
 
@@ -152,7 +154,7 @@ Using the `POST` syntax, the data can be submitted by Producer:
 
 {% include examplebutton.html example="submit-data-example" b_title = "Click Here To See Example Submit Data Operation (edited for brevity)" %}
 
-For a complete un-edited example see the [MRP Submit Data] and [COL Submit Data] examples.
+For a complete un-edited example see the [MRP Data Exchange] and [COL Data Exchange] examples.
 
 ### Collect Data
 {: #collect-data}
@@ -225,7 +227,27 @@ The Supporting Evidence extension on the population element of the Data Exchange
 The primary purpose of this extension in the data exchange context is to support richer interoperability between measure reporting and measure consumption systems by enabling the exchange of explanatory evidence associated with population results. Typical use cases include scenarios where a reporting system shares additional context with a downstream quality analysis platform, payer, or public health agency to clarify how population membership or counts were determined. For example, supporting evidence expressions may provide references to key resources, derived clinical values, or intermediate logic outputs used to determine population inclusion criteria. Including this evidence can facilitate measure result validation, improve transparency of measure computation, and support advanced analytics or troubleshooting when population results differ across systems.
 
 ### Bulk Data Exchange
-The [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/en/) provides workflows for Bulk Export and Bulk Submit (the latter expected to ballot in September 2026, currently in draft [here](https://hackmd.io/@argonaut/rJoqHZrPle)). DEQM endorses the Bulk Data Access IG as the method for bulk data exchange and it can be integrated into DEQM workflows.
+
+As noted above, the Submit and Collect Data interactions can be performed via API (using POST and $collect-data), or they can be performed as bulk operations.
+
+#### Collect Data
+
+For the Collect Data interaction, a Producer may either:
+
+1. Enable bulk transmission by allowing the [Asynchronous Bulk Data Request Pattern](https://hl7.org/fhir/async-bulk.html) on the $collect-data operation, _or_
+2. Implement the bulk [$export](https://hl7.org/fhir/uv/bulkdata/en/export.html) operation, in particular supporting the following parameters:
+    1. _since - to support [incremental] as opposed to [snapshot] exchange
+    2. _type and _typeFilter - corresponding to the set of resource types and FHIR API queries as determined by the [data-of-interest]
+    3. organizeOutputBy - using Patient to indicate that the data should be organized by patient, rather than by resource type
+
+#### Submit Data
+
+For the Submit Data interaction, there is not yet a formal published specification. As of the time of this writing, Bulk Data is being balloted in the September 2026 cycle. The guidance here is intended to align with that anticipated publication.
+
+For the Sumbit Data interaction, a Producer may either:
+
+1. Stage the data in bulk format (i.e. ndjson files organized in the same way they would be in the above description of the $export operation support) and then make those files available to the Consumer (this is effectively an _invited pull_, where the Producer is responsible for making the data available and then notifying the Consumer when it is ready). This is the proposed _Publish_ interaction being considered in the upcoming bulk data ballot.
+2. Submit the data in bulk format using the _Submit_ interaction being considered in the upcoming bulk data ballot.
 
 ### Provenance
 

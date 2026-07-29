@@ -11,7 +11,7 @@
         }
     ],
     "date": "2020-07-05",
-    "description": "This profile defines the expected capabilities of a Da Vinci DEQM Producer Client when conforming to the Da Vinci DEQM Implementation Guide. Producers include systems that are primary producers of patient healthcare information.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that are  Da Vinci DEQM Producer Client could support. Clients have the option of choosing from this list based on their local use cases and other contextual requirements.",
+    "description": "This profile defines the expected capabilities of a Da Vinci DEQM Producer Client when conforming to the Da Vinci DEQM Implementation Guide. Producers are the systems that hold and provide the data of interest for a measure, such as an EHR, a clinical data repository, or a health information exchange. Producer is a role played in a particular exchange, not a category of stakeholder.  This CapabilityStatement resource includes the complete list of the *recommended*  Da Vinci DEQM profiles and RESTful operations that are  Da Vinci DEQM Producer Client could support. Clients have the option of choosing from this list based on their local use cases and other contextual requirements.",
     "experimental": false,
     "fhirVersion": "4.0.1",
     "format": [
@@ -140,17 +140,6 @@
                             "definition": "http://hl7.org/fhir/OperationDefinition/Measure-submit-data",
                             "documentation": "It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer Server CapabilityStatement.",
                             "name": "submit-data"
-                        },
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHOULD"
-                                }
-                            ],
-                            "definition": "http://hl7.org/fhir/uv/deqm/OperationDefinition/bulk-submit-data",
-                            "documentation": "It is the responsibility of the Producer to discover whether snapshot or incremental data exchange is supported by the inspection of the Consumer Server CapabilityStatement.",
-                            "name": "bulk-submit-data"
                         }
                     ],
                     "supportedProfile": [

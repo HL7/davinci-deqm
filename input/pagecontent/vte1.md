@@ -111,10 +111,12 @@ When a patient has an inpatient encounter, during which they should be given ven
 
 ### VTE-1 Measure Reporting Interactions
 
+In the following interactions, the Hospital is acting in the role of the *Reporter* and the quality reporting program is acting in the role of the *Receiver*.
+
 #### Individual MeasureReport
 {:.no_toc}
 
-Reporter pushes the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the end user.
+Hospital in the role of the Reporter pushes the Bundle of supporting resource with VTE-1 Individual MeasureReport Bundle to the Receiver.
 
 {% include img-portrait.html img="vte_indv_report.jpg" caption = "Figure 4.3-8 Individual Reporting Technical Workflow" %}
 
@@ -128,7 +130,7 @@ Reporter pushes the Bundle of supporting resource with VTE-1 Individual MeasureR
 Note to Balloters: The Summary MeasureReport is not currently used for program level reporting.  We are actively seeking input on potential uses for the summary report for VTE-1 or other measures.
 {:.note-to-balloters}
 
-Reporter posts the VTE-1 Summary MeasureReport to the Receiver.
+Hospital in the role of the Reporter posts the VTE-1 Summary MeasureReport to the Receiver.
 
 Note to Balloters: We are actively seeking input on whether a technical workflow diagram would be of value for this use case
 {:.note-to-balloters}

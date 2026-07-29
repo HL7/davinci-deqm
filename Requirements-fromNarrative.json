@@ -186,12 +186,12 @@
   {
     "key" : "deqm-31",
     "conformance" : ["SHOULD"],
-    "requirement" : "Clients **SHOULD** include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible."
+    "requirement" : "The sending system **SHOULD** include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible."
   },
   {
     "key" : "deqm-32",
     "conformance" : ["SHOULD"],
-    "requirement" : "Servers **SHOULD** be permissive in accepting references to data that are not included in the bundle."
+    "requirement" : "The receiving system **SHOULD** be permissive in accepting references to data that are not included in the bundle."
   },
   {
     "key" : "deqm-33",
@@ -236,17 +236,17 @@
   {
     "key" : "deqm-41",
     "conformance" : ["SHALL"],
-    "requirement" : "Additionally, the FHIR Parameters resource **SHALL** include the URL of a Data Provider, as defined in the [Bulk Data Import Ping and Pull Approach](https://github.com/smart-on-fhir/bulk-import/blob/master/import-pnp.md#bulk-data-import-kick-off-request-ping-from-data-provider-to-data-consumer)."
+    "requirement" : "Additionally, the FHIR Parameters resource **SHALL** include the URL of the [Producer](glossary.html#producer), which plays the role referred to as the Data Provider in the [Bulk Data Import Ping and Pull Approach](https://github.com/smart-on-fhir/bulk-import/blob/master/import-pnp.md#bulk-data-import-kick-off-request-ping-from-data-provider-to-data-consumer)."
   },
   {
     "key" : "deqm-42",
     "conformance" : ["SHALL"],
-    "requirement" : "The Data Provider **SHALL** support `$export`."
+    "requirement" : "The Producer **SHALL** support `$export`."
   },
   {
     "key" : "deqm-43",
     "conformance" : ["SHALL"],
-    "requirement" : "The Data Consumer server **SHALL** support invocation of the bulk submit-data operation using the [FHIR Asynchronous Request Pattern](http://hl7.org/fhir/async.html) via a POST request containing the FHIR Parameters Resource described above."
+    "requirement" : "The [Consumer](glossary.html#consumer) server **SHALL** support invocation of the bulk submit-data operation using the [FHIR Asynchronous Request Pattern](http://hl7.org/fhir/async.html) via a POST request containing the FHIR Parameters Resource described above."
   },
   {
     "key" : "deqm-44",
