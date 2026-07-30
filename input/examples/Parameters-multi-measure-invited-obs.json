@@ -4,294 +4,301 @@
   "parameter": [
     {
       "name": "return",
-      "resource": [
-        {
-          "resourceType": "Bundle",
-          "type": "transaction",
-          "entry": [
-            {
-              "fullUrl": "https://example.com/MeasureReport/datax-measurereport01",
-              "resource": {
-                "resourceType": "MeasureReport",
-                "id": "datax-measurereport01",
-                "meta": {
-                  "profile": [
-                    "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
-                  ]
-                },
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
-                    "valueCode": "incremental"
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "transaction",
+        "entry": [
+          {
+            "fullUrl": "https://example.com/MeasureReport/datax-measurereport01",
+            "resource": {
+              "resourceType": "MeasureReport",
+              "id": "datax-measurereport01",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
+                  "valueCode": "incremental"
+                }
+              ],
+              "status": "complete",
+              "type": "data-collection",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+              "subject": {
+                "reference": "Patient/patient01"
+              },
+              "date": "2019-01-01T16:59:52.404Z",
+              "reporter": {
+                "reference": "Organization/organization03"
+              },
+              "period": {
+                "start": "2018-01-01",
+                "end": "2018-12-31"
+              },
+              "evaluatedResource": [
+                {
+                  "reference": "Observation/observation01"
+                }
+              ]
+            },
+            "request": {
+              "method": "POST",
+              "url": "MeasureReport/datax-measurereport01"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "return",
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "transaction",
+        "entry": [
+          {
+            "fullUrl": "https://example.com/MeasureReport/datax-measurereport02",
+            "resource": {
+              "resourceType": "MeasureReport",
+              "id": "datax-measurereport02",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
+                  "valueCode": "incremental"
+                }
+              ],
+              "status": "complete",
+              "type": "data-collection",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+              "subject": {
+                "reference": "Patient/patient02"
+              },
+              "date": "2019-01-01T16:59:52.404Z",
+              "reporter": {
+                "reference": "Organization/organization03"
+              },
+              "period": {
+                "start": "2018-01-01",
+                "end": "2018-12-31"
+              },
+              "evaluatedResource": [
+                {
+                  "reference": "Observation/observation02"
+                }
+              ]
+            },
+            "request": {
+              "method": "POST",
+              "url": "MeasureReport/datax-measurereport02"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "return",
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "transaction",
+        "entry": [
+          {
+            "fullUrl": "https://example.com/MeasureReport/datax-measurereport03",
+            "resource": {
+              "resourceType": "MeasureReport",
+              "id": "datax-measurereport03",
+              "meta": {
+                "profile": [
+                  "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
+                  "valueCode": "incremental"
+                }
+              ],
+              "status": "complete",
+              "type": "data-collection",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+              "subject": {
+                "reference": "Patient/patient03"
+              },
+              "date": "2019-01-01T16:59:52.404Z",
+              "reporter": {
+                "reference": "Organization/organization03"
+              },
+              "period": {
+                "start": "2018-01-01",
+                "end": "2018-12-31"
+              },
+              "evaluatedResource": [
+                {
+                  "reference": "Observation/DNA-occultblood"
+                }
+              ]
+            },
+            "request": {
+              "method": "POST",
+              "url": "MeasureReport/datax-measurereport03"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "return",
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "transaction",
+        "entry": [
+          {
+            "fullUrl": "https://example.com/MeasureReport/b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4",
+            "resource": {
+              "resourceType": "MeasureReport",
+              "id": "b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "proportion",
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                      }
+                    ]
                   }
-                ],
-                "status": "complete",
-                "type": "data-collection",
-                "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
-                "subject": {
-                  "reference": "Patient/patient01"
-                },
-                "date": "2019-01-01T16:59:52.404Z",
-                "reporter": {
-                  "reference": "Organization/organization03"
-                },
-                "period": {
-                  "start": "2018-01-01",
-                  "end": "2018-12-31"
-                },
-                "evaluatedResource": [
+                }
+              ],
+              "status": "complete",
+              "type": "individual",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM108-FHIR|8.2.000",
+              "subject": {
+                "reference": "Patient/patient01"
+              },
+              "date": "2019-01-01T16:59:52.404Z",
+              "reporter": {
+                "reference": "Organization/organization01"
+              },
+              "period": {
+                "end": "2018-01-01",
+                "start": "2018-12-31"
+              },
+              "improvementNotation": {
+                "coding": [
                   {
-                    "reference": "Observation/observation01"
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase",
+                    "display": "Increased score indicates improvement"
                   }
                 ]
               },
-               "request": {
-                "method": "POST",
-                "url": "MeasureReport/datax-measurereport01"
-              }
-            }
-          ]
-        },
-        {
-          "resourceType": "Bundle",
-          "type": "transaction",
-          "entry": [
-            {
-              "fullUrl": "https://example.com/MeasureReport/datax-measurereport02",
-              "resource": {
-                "resourceType": "MeasureReport",
-                "id": "datax-measurereport02",
-                "meta": {
-                  "profile": [
-                    "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
-                  ]
-                },
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
-                    "valueCode": "incremental"
-                  }
-                ],
-                "status": "complete",
-                "type": "data-collection",
-                "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
-                "subject": {
-                  "reference": "Patient/patient02"
-                },
-                "date": "2019-01-01T16:59:52.404Z",
-                "reporter": {
-                  "reference": "Organization/organization03"
-                },
-                "period": {
-                  "start": "2018-01-01",
-                  "end": "2018-12-31"
-                },
-                "evaluatedResource": [
-                  {
-                    "reference": "Observation/observation02"
-                  }
-                ]
-              },
-               "request": {
-                "method": "POST",
-                "url": "MeasureReport/datax-measurereport02"
-              }
-            }
-          ]
-        },
-        {
-          "resourceType": "Bundle",
-          "type": "transaction",
-          "entry": [
-            {
-              "fullUrl": "https://example.com/MeasureReport/datax-measurereport03",
-              "resource": {
-                "resourceType": "MeasureReport",
-                "id": "datax-measurereport03",
-                "meta": {
-                  "profile": [
-                    "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport"
-                  ]
-                },
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-submitDataUpdateType",
-                    "valueCode": "incremental"
-                  }
-                ],
-                "status": "complete",
-                "type": "data-collection",
-                "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
-                "subject": {
-                  "reference": "Patient/patient03"
-                },
-                "date": "2019-01-01T16:59:52.404Z",
-                "reporter": {
-                  "reference": "Organization/organization03"
-                },
-                "period": {
-                  "start": "2018-01-01",
-                  "end": "2018-12-31"
-                },
-                "evaluatedResource": [
-                  {
-                    "reference": "Observation/DNA-occultblood"
-                  }
-                ]
-              },
-               "request": {
-                "method": "POST",
-                "url": "MeasureReport/datax-measurereport03"
-              }
-            }
-          ]
-        },
-        {
-          "resourceType": "Bundle",
-          "type": "transaction",
-          "entry": [
-            {
-              "fullUrl": "https://example.com/MeasureReport/b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4",
-              "resource": {
-                "resourceType": "MeasureReport",
-                "id": "b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4",
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-measureScoring",
-                    "valueCodeableConcept": {
-                      "coding": [
-                        {
-                          "code": "proportion",
-                          "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "status": "complete",
-                "type": "individual",
-                "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM108-FHIR|8.2.000",
-                "subject": {
-                  "reference": "Patient/patient01"
-                },
-                "date": "2019-01-01T16:59:52.404Z",
-                "reporter": {
-                  "reference": "Organization/organization01"
-                },
-                "period": {
-                  "end": "2018-01-01",
-                  "start": "2018-12-31"
-                },
-                "improvementNotation": {
-                  "coding": [
+              "group": [
+                {
+                  "extension": [
                     {
-                      "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
-                      "code": "increase",
-                      "display": "Increased score indicates improvement"
+                      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
+                      "valueString": "group02"
                     }
-                  ]
-                },
-                "group": [
-                  {
-                    "extension": [
-                      {
-                        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
-                        "valueString": "group02"
-                      }
-                    ],
-                    "population": [
-                      {
-                        "extension": [
+                  ],
+                  "population": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "initial-population"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
                           {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "initial-population"
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "initial-population",
+                            "display": "Initial Population"
                           }
-                        ],
-                        "code": {
-                          "coding": [
-                            {
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                              "code": "initial-population",
-                              "display": "Initial Population"
-                            }
-                          ]
-                        },
-                        "count": 1
+                        ]
                       },
-                      {
-                        "extension": [
+                      "count": 1
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "numerator"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
                           {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "numerator"
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "numerator",
+                            "display": "Numerator"
                           }
-                        ],
-                        "code": {
-                          "coding": [
-                            {
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                              "code": "numerator",
-                              "display": "Numerator"
-                            }
-                          ]
-                        },
-                        "count": 1
+                        ]
                       },
-                      {
-                        "extension": [
+                      "count": 1
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
                           {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "denominator"
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "denominator",
+                            "display": "Denominator"
                           }
-                        ],
-                        "code": {
-                          "coding": [
-                            {
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                              "code": "denominator",
-                              "display": "Denominator"
-                            }
-                          ]
-                        },
-                        "count": 1
+                        ]
                       },
-                      {
-                        "extension": [
+                      "count": 1
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
+                          "valueString": "denominator-exclusion"
+                        }
+                      ],
+                      "code": {
+                        "coding": [
                           {
-                            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "denominator-exclusion"
+                            "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                            "code": "denominator-exclusion",
+                            "display": "Denominator Exclusion"
                           }
-                        ],
-                        "code": {
-                          "coding": [
-                            {
-                              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                              "code": "denominator-exclusion",
-                              "display": "Denominator Exclusion"
-                            }
-                          ]
-                        },
-                        "count": 0
-                      }
-                    ],
-                    "measureScore": {
-                      "value": 1
+                        ]
+                      },
+                      "count": 0
                     }
+                  ],
+                  "measureScore": {
+                    "value": 1
                   }
-                ],
-                "evaluatedResource": [
-                  {
-                    "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc5"
-                  }
-                ]
-              },
-              "request": {
-                "method": "POST",
-                "url": "MeasureReport/b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4"
-              }
+                }
+              ],
+              "evaluatedResource": [
+                {
+                  "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc5"
+                }
+              ]
+            },
+            "request": {
+              "method": "POST",
+              "url": "MeasureReport/b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4"
             }
-          ]
-        }
-      ]
+          }
+        ]
+      }
     }
   ]
 }
