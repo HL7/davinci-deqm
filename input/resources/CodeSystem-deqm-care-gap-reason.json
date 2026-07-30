@@ -59,7 +59,12 @@
       "code": "CountOutOfRange",
       "display": "Count is out of specified range",
       "definition": "The count of data elements found was out of specified range"
+    },
+    {
+      "code": "NonComputableDocumentation",
+      "display": "Non-computable Documentation",
+      "definition": "Documentation related to the recommended care is available but cannot be evaluated for measure calculation because it is not represented in a structured, coded, or otherwise measure-computable form."
     }
   ],
-  "count": 10
+  "count": 11
 }
