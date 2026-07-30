@@ -44,8 +44,12 @@
                     "reference": "Observation/observation01"
                   }
                 ]
+              },
+               "request": {
+                "method": "POST",
+                "url": "MeasureReport/datax-measurereport01"
               }
-            }           
+            }
           ]
         },
         {
@@ -87,6 +91,10 @@
                     "reference": "Observation/observation02"
                   }
                 ]
+              },
+               "request": {
+                "method": "POST",
+                "url": "MeasureReport/datax-measurereport02"
               }
             }
           ]
@@ -130,8 +138,12 @@
                     "reference": "Observation/DNA-occultblood"
                   }
                 ]
+              },
+               "request": {
+                "method": "POST",
+                "url": "MeasureReport/datax-measurereport03"
               }
-            }            
+            }
           ]
         },
         {
@@ -271,6 +283,10 @@
                     "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc5"
                   }
                 ]
+              },
+              "request": {
+                "method": "POST",
+                "url": "MeasureReport/b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc4"
               }
             }
           ]
