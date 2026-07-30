@@ -87,7 +87,7 @@ Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefin
 
 As shown in Figure 3.6-5 and 3.6-6 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
 
-This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its gapStatus element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. §deqm-12: If the status is not-applicable the measureScore **SHALL NOT** be included in the DEQM Individual MeasureReport. §
+This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its `gapStatus` element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. §deqm-12: If the status is not-applicable the measureScore **SHALL NOT** be included in the DEQM Individual MeasureReport. §
 
 Patient-based measures lend themselves most readily to gaps in care calculations because they are evaluated over a long time period. Other measure bases, such as an encounter-based measure, typically happen over shorter time spans. The types of population bases to support is at the server’s discretion. §deqm-13: Servers **SHOULD** support patient-based measures, and **MAY** support any other base. §
 
@@ -100,11 +100,11 @@ This section describes the profiles used for Gaps in Care Reporting and how they
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation returns a [Parameters](https://www.hl7.org/fhir/parameters.html) resource that contains zero or more `parameter` with document bundle for each patient for which a Gaps in Care report is calculated. §deqm-14: The bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile]. § A Gaps In Care Bundle can optionally contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile],  to define a document composition consisting of one or more MeasureReports.
 
-The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html), the Gaps in Care Report is for. §deqm-15: The Gaps In Care Composition **SHALL** contain one to many section(s). § Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. §deqm-16: All Individual MeasureReport referenced **SHALL** be for the same patient specified in the Composition `subject`. § §deqm-17: Each `section` **SHALL** also contain one or more `entry` of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed). §
+The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html), the Gaps in Care Report is for. §deqm-15: The Gaps In Care Composition **SHALL** contain one to many section(s). § Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. §deqm-16: All Individual MeasureReport referenced **SHALL** be for the same patient specified in the Composition `subject`. § §deqm-17: Each `section` **SHALL** also contain one or more `entry` of `DetectedIssue` using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed). §
 
 - §deqm-18: The Individual MeasureReport **SHALL** conform to the [DEQM Individual MeasureReport Profile]. § This profile contains an optional extension, [CQF Criteria Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.group.population.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
 
-- The DEQM Gaps In Care DetectedIssue Profile has a fixed code CAREGAP indicating the detected issue is in the Care Gaps detected issue category. §deqm-19: Each DetectedIssue **SHALL** contain at least one `evidence` element that each evidence **SHALL** provide a detail that references either a DEQM Individual MeasureReport of the measure or a GuidanceResponse. §  
+- The [DEQM Gaps In Care DetectedIssue Profile] has a fixed code CAREGAP indicating the detected issue is in the Care Gaps detected issue category. §deqm-19: Each `DetectedIssue` **SHALL** contain at least one `evidence` element that each evidence **SHALL** provide a detail that references either a DEQM Individual MeasureReport of the measure or a `GuidanceResponse`. §  
 
 - The [DEQM Gaps in Care Composition Profile] may also contain all supporting resources referenced by the Composition and its contained measure reports. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
@@ -114,12 +114,12 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 #### Gaps in Care Bundle Structure
 {:.no_toc}
 
-The [DEQM Gaps In Care Bundle](StructureDefinition-deqm-gapsincarebundle.html) can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
+The [DEQM Gaps In Care Bundle Profile] can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
 
 Figure 3.6-7 illustrates structure of a DEQM Gaps In Care Bundle.
-- The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-deqm-gapsincarecomposition.html).
+- The [DEQM Gaps In Care Bundle Profile] shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and [DEQM Gaps In Care DetectedIssue Profile] and optionally the resources included in the [DEQM Gaps In Care Composition Profile].
 - In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
-- The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
+- The bundle shall also include entries for the resources referenced by the [DEQM Gaps In Care DetectedIssue Profile], for example, `GuidanceResponse` if it is included.
 
 {% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 3.6-7 DEQM Gaps In Care Bundle" %}
 
@@ -129,14 +129,17 @@ Figure 3.6-7 illustrates structure of a DEQM Gaps In Care Bundle.
 {: .stu-note}
 We are looking for feedback from the community on this revised section.
 
-Derived from the FHIR GuidanceResponse resource, the DEQM [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) profile provides additional information about why a care gap was identified and what evidence may help resolve or reassess the reported gap. It complements the [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) profile, which communicates whether the gap is open, prospective, closed, or not applicable. Together, these profiles provide recipients with both the outcome of the measure evaluation and the information needed to understand, investigate, and respond to a reported care gap. The `reasonCode` and `dataRequirement` elements communicate the rationale for the reported gap and the evidence that may satisfy the measure criteria or support reevaluation.
+Derived from the FHIR `GuidanceResponse` resource, the DEQM [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) profile provides additional information about why a care gap was identified and what evidence may help resolve or reassess the reported gap. It complements the [DEQM Gaps In Care DetectedIssue Profile], which communicates whether the gap is open, prospective, closed, or not applicable. Together, these profiles provide recipients with both the outcome of the measure evaluation and the information needed to understand, investigate, and respond to a reported care gap. The `reasonCode` and `dataRequirement` elements communicate the rationale for the reported gap and the evidence that may satisfy the measure criteria or support reevaluation.
 
 ##### Actual and Perceived Care Gaps
 {:.no_toc}
 
 A reported care gap may represent either an actual gap in care or a perceived gap caused by missing, delayed, unavailable, or non-computable evidence.
+
 An actual care gap exists when recommended care has not been performed and no applicable exclusion, exception, or other measure-defined reason applies.
+
 A perceived care gap exists when the calculating system does not have usable evidence that the recommended care was performed. The care may have been completed, but the evidence is unavailable, not yet ingested, or not computable at the time the report was generated.
+
 The absence of numerator-satisfying evidence does not necessarily establish that care was not performed. Implementers should avoid characterizing a gap as confirmed “care not performed” solely because the calculating system did not locate qualifying evidence. The table below summarizes the interpretation but specific follow-up workflows are outside of the scope of this IG. 
 
 | Scenario | Interpretation | Typical follow-up to consider |
@@ -152,19 +155,19 @@ The following table summarizes how the primary DEQM profiles and elements work t
 
 | Profile / Artifact | Element | Intended use |
 |:---|:---|:---|
-| [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) | DetectedIssue.gapStatus | Indicates whether the gap is open, prospective, closed, or not applicable. |
-| [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) | GuidanceResponse.reasonCode | Communicates the reason or rationale for the identified gap, such as required evidence not being found or a value falling outside an expected range. |
+| [DEQM Gaps In Care DetectedIssue Profile] | `DetectedIssue.gapStatus` | Indicates whether the gap is open, prospective, closed, or not applicable. |
+| [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) | `GuidanceResponse.reasonCode` | Communicates the reason or rationale for the identified gap, such as required evidence not being found or a value falling outside an expected range. |
 | [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) | Reason Detail extension | Identifies the specific data element or attribute associated with the reason for the gap. |
-| [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) | GuidanceResponse.dataRequirement | Describes the evidence that may help resolve or reassess the gap, including the applicable resource type, profile, terminology, date, code, or value constraints. |
-| [DEQM Individual MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) | MeasureReport.evaluatedResource | Identifies the resources the calculating system considered during measure evaluation. The CQF Criteria Reference extension may indicate how an evaluated resource contributed to specific measure criteria. |
-| [DEQM Individual MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) | MeasureReport.date | Identifies when the gap was calculated and helps the recipient determine whether subsequent care or newly available evidence may not be reflected in the report. |
-| [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) | Care Gap Remark extension | Supports feedback from the recipient following review of the report, such as indicating that care was completed, evidence exists elsewhere, the care was deferred, or attribution is incorrect. |
+| [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) | `GuidanceResponse.dataRequirement` | Describes the evidence that may help resolve or reassess the gap, including the applicable resource type, profile, terminology, date, code, or value constraints. |
+| [DEQM Individual MeasureReport Profile] | `MeasureReport.evaluatedResource` | Identifies the resources the calculating system considered during measure evaluation. The CQF Criteria Reference extension may indicate how an evaluated resource contributed to specific measure criteria. |
+| [DEQM Individual MeasureReport Profile] | `MeasureReport.date` | Identifies when the gap was calculated and helps the recipient determine whether subsequent care or newly available evidence may not be reflected in the report. |
+| [DEQM Gaps In Care DetectedIssue Profile] | Care Gap Remark extension | Supports feedback from the recipient following review of the report, such as indicating that care was completed, evidence exists elsewhere, the care was deferred, or attribution is incorrect. |
 {:.grid}
 
 ##### Using reasonCode
 {:.no_toc}
 
-The GuidanceResponse.reasonCode has a preferred binding to the Care Gap Reasons ValueSet. It communicates the reason the calculating system identified the gap and supports more targeted follow-up than an open-gap status alone.
+The `GuidanceResponse.reasonCode` has a preferred binding to the Care Gap Reasons ValueSet. It communicates the reason the calculating system identified the gap and supports more targeted follow-up than an open-gap status alone.
 
 The reason communicates the calculating system's basis for identifying the gap and its level of certainty. Depending on the available information, the reason can identify:
  - qualifying evidence was not found; 
@@ -179,7 +182,7 @@ The gap status and reason serve different purposes. An open status indicates tha
 ##### Using dataRequirement
 {:.no_toc}
 
-The GuidanceResponse.dataRequirement identifies the data that may help address or reassess the gap. In addition to the codeFilter and dateFilter available in the base resource, the DEQM Detailed Care Gap Guidance Response adds a valueFilter extension that can communicate expected values or ranges. 
+The `GuidanceResponse.dataRequirement` identifies the data that may help address or reassess the gap. In addition to the `codeFilter` and `dateFilter` available in the base resource, the [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) adds a `valueFilter` extension that can communicate expected values or ranges. 
 
 The data requirement describes the evidence needed to resolve or reassess the identified gap. Depending on the measure, it can identify:
  - a procedure or service; 
@@ -199,15 +202,17 @@ The following table provides examples of common care gap scenarios and the DEQM 
 
 | Scenario | Recommended representation and follow-up | Profile and element |
 |:---|:---|:---|
-| Actual care not performed | Represent the gap as open and indicate that the recommended care was not performed. Use dataRequirement to describe the recommended care or qualifying evidence. | DEQM Gaps In Care DetectedIssue – gapStatus, DEQM Detailed Care Gap Guidance Response – reasonCode, dataRequirement |
-| Evidence not found | Indicate that required evidence was not found and specify the evidence needed. This does not confirm that the care was not performed. | DEQM Detailed Care Gap Guidance Response – reasonCode, dataRequirement |
-| Documented elsewhere | Communicate that the calculating system lacks the evidence. The recipient can indicate that the care is documented elsewhere and reference or submit the external evidence. | DEQM Detailed Care Gap Guidance Response – reasonCode, DEQM Care Gap Remark – code, relatedData |
-| Documented but not computable | Identify the documentation or data element that could not be evaluated and describe the structured or coded evidence needed. | DEQM Detailed Care Gap Guidance Response – reasonCode, Reason Detail extension, dataRequirement |
-| Known but not yet ingested | Indicate that evidence has not yet been processed and use the report calculation date to determine whether newer evidence may not be reflected. Recalculate after ingestion. | DEQM Care Gap Remark – code, DEQM Individual MeasureReport – date |
-| Performed after report generation | Compare the date of care with the report calculation date. Recalculate or update the gap rather than initiating duplicate outreach. | DEQM Individual MeasureReport – dateClinical evidence resource (for example, Procedure.performed[x] or Observation.effective[x]), DEQM Care Gap Remark – code |
-| Evidence held by a prior payer or during prior coverage | Submit the qualifying evidence and reevaluate the gap after the evidence has been incorporated into the measure evaluation. | DEQM Detailed Care Gap Guidance Response – reasonCode DEQM Care Gap Remark – code |
+| Actual care not performed | Represent the gap as open and indicate that the recommended care was not performed. Use `dataRequirement` to describe the recommended care or qualifying evidence. | [DEQM Gaps In Care DetectedIssue Profile] – gapStatus, [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) – `reasonCode`, `dataRequirement` |
+| Evidence not found | Indicate that required evidence was not found and specify the evidence needed. This does not confirm that the care was not performed. | [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) – `reasonCode`, `dataRequirement` |
+| Documented elsewhere | Communicate that the calculating system lacks the evidence. The recipient can indicate that the care is documented elsewhere and reference or submit the external evidence. | [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) – `reasonCode`, DEQM Care Gap Remark – code, relatedData |
+| Documented but not computable | Identify the documentation or data element that could not be evaluated and describe the structured or coded evidence needed. | [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) – `reasonCode`, Reason Detail extension, `dataRequirement` |
+| Known but not yet ingested | Indicate that evidence has not yet been processed and use the report calculation date to determine whether newer evidence may not be reflected. Recalculate after ingestion. | DEQM Care Gap Remark – code, [DEQM Individual MeasureReport Profile] – date |
+| Performed after report generation | Compare the date of care with the report calculation date. Recalculate or update the gap rather than initiating duplicate outreach. | [DEQM Individual MeasureReport Profile] – dateClinical evidence resource (for example, Procedure.performed[x] or Observation.effective[x]), DEQM Care Gap Remark – code |
+| Evidence held by a prior payer or during prior coverage | Submit the qualifying evidence and reevaluate the gap after the evidence has been incorporated into the measure evaluation. | [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) – `reasonCode` DEQM Care Gap Remark – code |
 | Attribution mismatch | Indicate that the patient is not actively managed by the receiving provider or organization and route the gap to the appropriate entity. | DEQM Care Gap Remark – codeApplicable attribution resource or workflow |
-| Clinical exception or not applicable | Represent the applicable exclusion, exception, contraindication, refusal, or other measure-defined criterion and update the gap status when supported by the measure logic. | DEQM Gaps In Care DetectedIssue – gapStatusClinical evidence resource documenting the exclusion, exception, contraindication, or refusalDEQM Care Gap Remark – code |
+| Clinical exception or not applicable | Represent the applicable exclusion, exception, contraindication, refusal, or other measure-defined criterion and update the gap status when supported by the measure logic. | [DEQM Gaps In Care DetectedIssue Profile] – gapStatusClinical evidence resource documenting the exclusion, exception, contraindication, or refusalDEQM Care Gap Remark – code |
+{:.grid}
+
 
 Example Business Use Cases:
 
