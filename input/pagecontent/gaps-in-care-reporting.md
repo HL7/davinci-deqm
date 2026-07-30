@@ -118,7 +118,7 @@ The [DEQM Gaps In Care Bundle](StructureDefinition-deqm-gapsincarebundle.html) c
 
 Figure 3.6-7 illustrates structure of a DEQM Gaps In Care Bundle.
 - The DEQM Gaps In Care Bundle shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) and optionally the resources included in the [DEQM Gaps In Care Composition](StructureDefinition-deqm-gapsincarecomposition.html).
-- In addition, the bundle shall include entries for all patient specific resources including evaluated resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
+- In addition, the bundle shall include entries for all resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the organization, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the DEQM Gaps In Care DetectedIssue, for example, GuidanceResponse if it is included.
 
 {% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 3.6-7 DEQM Gaps In Care Bundle" %}
