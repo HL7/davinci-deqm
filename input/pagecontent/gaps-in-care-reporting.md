@@ -126,6 +126,9 @@ Figure 3.6-7 illustrates structure of a DEQM Gaps In Care Bundle.
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
 
+{: .stu-note}
+We are looking for feedback from the community on this revised section.
+
 Derived from the FHIR GuidanceResponse resource, the DEQM [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) profile provides additional information about why a care gap was identified and what evidence may help resolve or reassess the reported gap. It complements the [DEQM Gaps In Care DetectedIssue](StructureDefinition-deqm-gapsincaredetectedissue.html) profile, which communicates whether the gap is open, prospective, closed, or not applicable. Together, these profiles provide recipients with both the outcome of the measure evaluation and the information needed to understand, investigate, and respond to a reported care gap. The `reasonCode` and `dataRequirement` elements communicate the rationale for the reported gap and the evidence that may satisfy the measure criteria or support reevaluation.
 
 ##### Actual and Perceived Care Gaps
@@ -222,8 +225,8 @@ By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefi
 #### Add Remark to Gaps in Care Report
 {:.no_toc}
 
-Note to Balloters: We are actively seeking input on [remark codes](CodeSystem-deqm-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
-{:.note-to-balloters}
+{: .stu-note}
+We are actively seeking input on [remark codes](CodeSystem-deqm-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
 
 When considering a Gaps in Care Report, a remark(s) may be added using the [Care Gap Remark](StructureDefinition-deqm-careGapRemark.html) extension. If a remark is added to a Gaps in Care Report, then the [Care Gap Remark](StructureDefinition-deqm-careGapRemark.html) extension can be added to the measure report with a ([PATCH](https://www.hl7.org/fhir/http.html#patch)) request, or the entire MeasureReport with the added extension can be POSTed.
 
