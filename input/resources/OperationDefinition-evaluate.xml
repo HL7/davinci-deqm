@@ -34,7 +34,9 @@ It is often the case that the operation should not be performed from the server&
         <use value="in"/>
         <min value="1"/>
         <max value="*"/>
-        <documentation value="The URL of the measure to be evaluated. A measure URL is specified in the [url](https://www.hl7.org/fhir/measure-definitions.html#Measure.url) element of the Measure resource. The measure URL remains the same when the measure is stored on different servers."/>
+        <documentation value="The URL of the measure(s) to be evaluated. A measure URL is specified in the url
+            element of the Measure resource. The measure URL remains the same when the measure
+            is stored on different servers."/>
         <type value="canonical"/>
     </parameter>
     <parameter>
@@ -67,7 +69,8 @@ It is often the case that the operation should not be performed from the server&
         <min value="0"/>
         <max value="1"/>
         <documentation value="Subject(s) for which the measure will be calculated. Subjects provided in this parameter SHALL match the subjectType of the measure being evaluated (e.g. if the Measure.group.subjectType is Patient, the subject SHALL be a reference to a Patient or a Group of Patients). This parameter cannot be used with the subjectGroup parameter. If no subject or subjectGroup is provided, what subjects are evaluated is up to the server."/>
-        <type value="Reference"/>
+        <type value="string"/> 
+        <searchType value="reference"/> 
     </parameter>
     <parameter>
         <name value="subjectGroup"/>
@@ -88,10 +91,8 @@ It is often the case that the operation should not be performed from the server&
             are determined is implementation-specific. This parameter is reflected in the reporter
             element of the resulting MeasureReport(s). This parameter cannot be used with the
             reporterResource parameter."/> 
-        <type value="Reference"/> 
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <type value="string"/> 
+        <searchType value="reference"/> 
     </parameter> 
     <parameter> 
         <extension url="http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type">
@@ -124,15 +125,20 @@ It is often the case that the operation should not be performed from the server&
         <max value="*"/> 
         <documentation value="The location(s) for which the report will be run. This parameter is reflected in
             the location element of the resulting MeasureReport(s)."/> 
-        <type value="Reference"/> 
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <type value="string"/> 
+        <searchType value="reference"/> 
     </parameter> 
     <parameter>
         <name value="parameters"/>
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="Any input parameters for the Measure evaluation. If the measure uses CQL, the parameter types are mapped to CQL as specified in the Parameters and Data Requirements section of the Using CQL with FHIR Implementation Guide. Any parameters defined in this input will be bound by name to parameters defined in the logic library referenced from library element of the Measure. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL."/>
+        <documentation value="Any input parameters for the evaluation. Parameters defined in this input will
+            be made available by name to the CQL expression. Parameter types are mapped to
+            CQL as specified in the [Using CQL with FHIR](https://hl7.org/fhir/uv/cql/) implementation
+            guide. If a parameter appears more than once in the input Parameters resource,
+            it is represented with a List in the input CQL. If a parameter has parts, it is
+            represented as a Tuple in the input CQL."/>
         <type value="Parameters"/>
     </parameter>
     <parameter>
@@ -141,8 +147,17 @@ It is often the case that the operation should not be performed from the server&
         <min value="0"/>
         <max value="1"/>
         <targetProfile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary"/>        
-        <documentation value="Specifies an asset-collection library that provides dependency version resolution and expansion rules for the operation. See the description of manifest in the Canonical Resource Management Infrastructure IG for a complete description of how manifest values are used to provide defaults for dependency version resolution and expansion parameters. Parameters specified directly in the operation override behaviors specified by the manifest parameter. In general, if this parameter is supplied, it is expected to be used in nested operation calls. For example, in evaluating a measure, if the expansion of a value set is required, this parameter SHALL be supplied to that expansion."/>
-        <type value="canonical"/>
+        <documentation value="Specifies an asset-collection library that provides dependency version resolution
+            and expansion rules for the operation. See the version manifest discussion in the
+            [Canonical Resource Management Infrastructure IG](http://hl7.org/fhir/uv/crmi/version-manifes
+            t.html) for a complete description of how manifest values are used to provide defaults
+            for dependency version resolution and expansion parameters. Parameters specified
+            directly in the operation override behaviors specified by the manifest parameter.
+            In general, if this parameter is supplied, it is expected to be used in nested
+            operation calls. For example, in evaluating a measure, if the expansion of a value
+            set is required, this parameter SHALL be supplied to that expansion."/>
+        <type value="canonical"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Library"/> 
     </parameter>
     <parameter>
         <name value="lastReceivedOn"/>
@@ -153,19 +168,11 @@ It is often the case that the operation should not be performed from the server&
         <type value="dateTime"/>
     </parameter>
     <parameter>
-        <name value="excludeEvaluatedResources"/>
-        <use value="in"/>
-        <min value="0"/>
-        <max value="1"/>
-        <documentation value="Indicates that evaluated resources and supplemental data referenced by the MeasureReport(s) should not be included in the resulting bundles. The default for this parameter is false, so that evaluated resources are NOT included. Note that this parameter does not apply to the contained resources that are created by evaluation to communicate the results of stratification or supplemental data counts."/>
-        <type value="boolean"/>
-    </parameter>
-    <parameter>
         <name value="return"/>
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The result of this operation is a Bundle for each input subject. These Bundles SHALL contain 1..* DEQM MeasureReport resources conforming to the appropriate MeasureReport profile for the type of report, one for each measure evaluated by the operation. Subsequent entries in the bundle are evaluated resources referenced by the MeasureReport(s). See the [guidance on Bundle structure](https://hl7.org/fhir/uv/deqm/guidance.html#deqm-operation-bundles-organized-by-subject) for discussion about the Bundle content and organization. Note that even though there is a single parameter named return of type Bundle, it is a multi-cardinality parameter, and so will still be returned using a Parameters resource, as described in the [general operations framework](https://hl7.org/fhir/R4/operations.html#response)."/>
+        <documentation value="The results of the measure evaluation, returned as a Bundle for each input subject for individual reports or a single bundle for summary and subject list reports. The first entries in each Bundle are MeasureReport(s) corresponding to the measures that were calculated. Subsequent entries in each Bundle are resources representing the data that was created or referenced during the calculation of the measures, and referenced from the appropriate element of the corresponding MeasureReport resources. See the [guidance](https://hl7.org/fhir/6.0.0-ballot5/clinicalreasoning-quality-reporting.html#bundles-organized-by-subject) on Bundle structure for discussion about the Bundle content and organization. Note that even though there is a single parameter named return of type Bundle, it is a multi-cardinality parameter, and so will still be returned using a Parameters resource, as described in the general operations framework [response](https://hl7.org/fhir/6.0.0-ballot5/operations.html#response). "/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>

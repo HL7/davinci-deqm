@@ -67,7 +67,7 @@ Payer X acting in the role of Consumer receives a $collect-data invited pull to 
       "name": "dataEndpoint",
       "resource": {
         "resourceType": "Endpoint",
-        "id": "example-multi-meaasure-public-endpoint",
+        "id": "example-multi-measure-public-endpoint",
         "status": "active",
         "connectionType": [
           {
@@ -80,21 +80,21 @@ Payer X acting in the role of Consumer receives a $collect-data invited pull to 
           }
         ],
         "name": "DaVinci Hospital FHIR Endpoint",
-        "payload": [
+        "payloadType": [
           {
-            "mimeType": [
-              "application/fhir+json",
-              "application/fhir+xml"
-            ],
-            "profileCanonical": [
-              "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-dataexchangemeasurereport",
-              "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-individualmeasurereport",
-              "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-summarymeasurereport",
-              "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-subjectlistmeasurereport"
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/resource-types",
+                "code": "MeasureReport"
+              }
             ]
           }
         ],
-        "address": "https://example.org/fhir"
+        "payloadMimeType": [
+          "application/fhir+xml",
+          "application/fhir+json"
+        ],
+        "address": "https://example.org/fhir/open/MeasureReport"
       }
     }
   ]

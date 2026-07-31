@@ -29,7 +29,7 @@
       ]
     }
   ],
-  "description": "A Parameters profile that defines structures of multi-part Parameters to be used for sending [Condition Category Remarks](StructureDefinition-deqm-careGapRemark.html) to a [Risk Adjustment Coding Gap Report](https://build.fhir.org/ig/HL7/davinci-ra/StructureDefinition-ra-measurereport.html) using the [PATCH](https://www.hl7.org/fhir/http.html#patch) operation.",
+  "description": "A Parameters profile that defines structures of multi-part Parameters to be used for sending [DEQM Care Gaps Remarks](StructureDefinition-deqm-careGapRemark.html) to a [Risk Adjustment Coding Gap Report](https://hl7.org/fhir/us/davinci-ra/StructureDefinition-ra-measurereport.html) using the [PATCH](https://www.hl7.org/fhir/http.html#patch) operation.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

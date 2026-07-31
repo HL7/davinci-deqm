@@ -399,6 +399,54 @@
                 },
                 "description": "DEQM Patient03 example"
             },
+             {
+                "exampleBoolean": true,
+                "name": "Gaps Patient04",
+                "reference": {
+                    "reference": "Patient/gaps-patient04"
+                },
+                "description": "GIC Patient04 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Encounter 04",
+                "reference": {
+                    "reference": "Encounter/gaps-encounter04"
+                },
+                "description": "GIC Encounter 04 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps DetectedIssue06",
+                "reference": {
+                    "reference": "DetectedIssue/gaps-detectedissue06"
+                },
+                "description": "GIC DetectedIssue06 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Individual Measure Report 05",
+                "reference": {
+                    "reference": "MeasureReport/gaps-indv-measurereport05"
+                },
+                "description": "GIC Individual MeasureReport05 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Composition04",
+                "reference": {
+                    "reference": "Composition/gaps-composition04"
+                },
+                "description": "GIC Composition04 example"
+            },
+            {
+                "exampleBoolean": true,
+                "name": "Gaps Bundle Open Individual MeasureReport02",
+                "reference": {
+                    "reference": "Bundle/single-gaps-open-indv-report02"
+                },
+                "description": "Gaps Bundle Open Individual MeasureReport02 example"
+            },
             {
                 "exampleBoolean": true,
                 "name": "Coverage01",

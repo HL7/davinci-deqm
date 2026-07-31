@@ -1,0 +1,45 @@
+{
+  "resourceType": "Composition",
+  "id": "gaps-composition04",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarecomposition"
+    ]
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "96315-7",
+        "display": "Gaps in care report"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/gaps-patient04"
+  },
+  "date": "2020-06-30T13:08:53+00:00",
+  "author": [
+    {
+      "reference": "Organization/gaps-organization-reportingvendor"
+    }
+  ],
+  "title": "Care Gap Report for patient gaps-patient04",
+  "custodian": {
+    "reference": "Organization/gaps-organization-reportingvendor"
+  },
+  "section": [
+    {
+      "title": "Colorectal Cancer Screening",
+      "focus": {
+        "reference": "MeasureReport/gaps-indv-measurereport05"
+      },
+      "entry": [
+        {
+          "reference": "DetectedIssue/gaps-detectedissue06"
+        }
+      ]
+    }
+  ]
+}
