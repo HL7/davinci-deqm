@@ -225,7 +225,6 @@ Example Business Use Cases:
 
 [Medication Adherence Detailed Care Gap Guidance Response Example](GuidanceResponse-detailedguidanceresponse02.html)
 
-By incorporating the [Detailed Care Gap Guidance Response profile](StructureDefinition-deqm-detailedcaregapguidanceresponse.html), healthcare organizations can receive tailored and actionable guidance on addressing specific care gaps. The inclusion of `reasonCode` and `dataRequirement` enables standardized categorization, context-specific recommendations, and ensures a more focused approach to quality improvement efforts.
 
 #### Add Remark to Gaps in Care Report
 {:.no_toc}
