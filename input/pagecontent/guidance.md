@@ -183,7 +183,7 @@ The guidance in this section applies to every DEQM scenario. The system sending 
 
 §deqm-31: The sending system **SHOULD** include all and only the data required to calculate the measure and send it in a way that reduces data duplication as much as reasonably possible. § This may result in bundles that have references to data that is not included in the bundle, which could be both patient-specific information, such as immunizations, and non-patient-specific information, such as locations and practitioners, that are not relevant to the evaluated measure.
 
-§deqm-32: The receiving system **SHOULD** be permissive in accepting references to data that are not included in the bundle. §
+§deqm-32: The receiving system **SHALL** be permissive in accepting references to data that are not included in the bundle. §
 
 Considerations such as privacy, consent, authorization, minimum necessary, etc., are outside the scope of this IG.
 

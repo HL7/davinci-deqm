@@ -106,6 +106,8 @@ In the simplest case, this approach identifies all the data required for calcula
 
 However, the approach also allows for submitting systems to choose which measures they are reporting, and determine only the data required for those measures.
 
+The DEQM framework focuses on data requests that are limited to identified measures, patients/population, measurement period, purpose, and [data of interest](glossary.html#data-of-interest). The approach is consistent with sharing data for general quality improvement and secondary use initiatives such as shared-risk contracts and value-based programs.
+
 For more details on data requirements, see the [Data Requirements](datax.html#gather-data-requirements-from-consumer) framework topic.
 
 #### Reporting Scenarios
