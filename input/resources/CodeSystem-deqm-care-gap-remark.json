@@ -49,7 +49,22 @@
       "code": "not-ingested",
       "display": "Not ingested",
       "definition": "System cannot process the gap that was received."
+    },
+    {
+      "code": "attribution-mismatch",
+      "display": "Attribution Mismatch",
+      "definition": "Actions to be taken fall outside of the assessing clinician’s scope of care."
+    },
+    {
+      "code": "deferred",
+      "display": "Deferred",
+      "definition": "Actions will be taken in the future to address the gap."
+    },
+    {
+      "code": "documented-elsewhere",
+      "display": "Documented Elsewhere",
+      "definition": "Recommended care was performed and is documented in another system or organization."
     }
   ],
-  "count": 8
+  "count": 11
 }
