@@ -46,6 +46,8 @@ To illustrate how these interactions can be used to facilitate quality reporting
 * Where the quality initiative requires it, the **Payer** also reports the Summary MeasureReport(s) to the **Measure Authority** or other quality program, again playing the role of [Reporter], with the receiving program playing the role of [Receiver]. See [Summary Reporting](summary-reporting.html).
 * Based on these reports, the **Provider** would repeat the process of sharing data as described above. The **Provider** may also request a [Gaps in Care Report](gaps-in-care-reporting.html) from the **Payer** to identify [open gaps] that could be closed before the end of the measurement period; in that interaction the **Provider** is playing the role of [Client](glossary.html#client) and the **Payer’s** system the role of [Server](glossary.html#server).
 
+> Note that depending on the sizes of the populations involved, scale is necessarily a consideration throughout all these interactions. This is why the DEQM exchange and reporting interactions are structured around the subject, so that implementers can choose streaming, bulk, and/or patient-at-a-time architectures as appropriate for their environments. For example, in cases of extremely large payers, implementations may choose to only receive summary data for the entire population, with selective sampling for individuals across the population. These choices do not fundamentally alter the nature of the interactions, and facilitating them is one of the primary drivers of the flexibility provided by the DEQM framework.
+
 ### Preconditions and Assumptions
 
 -  Although the exact mechanisms for securing these exchanges are not specified as part of this implementation guide:
