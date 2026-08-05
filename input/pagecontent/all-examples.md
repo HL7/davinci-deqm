@@ -47,7 +47,6 @@ Below are examples of Bundle resources.
 #### Gaps In Care Bundles
 * [Example Bundle: Gaps Bundle Open Individual MeasureReports](Bundle-single-gaps-open-indv-report01.html)
 * [Example Bundle: Gaps Bundle Closed Individual MeasureReport01](Bundle-single-gaps-closed-indv-report01.html)
-* [Example Bundle: Gaps Non-Document Gaps In Care Report](Bundle-non-document-gaps-in-care.html)
 
 ### Ad-hoc Organization
 * [Example Organization: Ad Hoc Operation Input Example](Organization-ad-hoc-organization.html)

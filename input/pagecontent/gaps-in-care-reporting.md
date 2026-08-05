@@ -98,7 +98,7 @@ Measures with multiple groups (a multiple rate measure) have the potential to cr
 
 This section describes the profiles used for Gaps in Care Reporting and how they are used to construct a Gaps in Care Report.
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation returns a [Parameters](https://www.hl7.org/fhir/parameters.html) resource that contains zero or more `parameter` with document bundle for each patient for which a Gaps in Care report is calculated. §deqm-14: The bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile]. § A Gaps In Care Bundle can optionally contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile],  to define a document composition consisting of one or more MeasureReports.
+The [care-gaps](OperationDefinition-care-gaps.html) operation returns zero or more bundles, one for each input patient. §deqm-14: If `isDocument` is true, each bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile], otherwise, each bundle **SHALL** contain the MeasureReport(s) and related resources, but does not have to contain any of the gaps-in-care-specific resources. § A Gaps In Care Bundle can optionally contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile], to define a document composition consisting of one or more MeasureReports.
 
 The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html), the Gaps in Care Report is for. §deqm-15: The Gaps In Care Composition **SHALL** contain one to many section(s). § Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. §deqm-16: All Individual MeasureReport referenced **SHALL** be for the same patient specified in the Composition `subject`. § §deqm-17: Each `section` **SHALL** also contain one or more `entry` of `DetectedIssue` using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed). §
 
@@ -114,14 +114,38 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 #### Gaps in Care Bundle Structure
 {:.no_toc}
 
-The [DEQM Gaps In Care Bundle Profile] can be defined as a document bundle (`bundle.type` is `document`), then, it must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource. However, the isDocument in parameter allows for specifying that it will not return the document bundle (`bundle.type` is `collection`).
+The `isDocument` in parameter determines which of two shapes the Server returns. In effect, it selects between a Gaps in Care *document* and a plain *measure report* bundle:
 
-Figure 3.6-7 illustrates structure of a DEQM Gaps In Care Bundle.
+|`isDocument`|`Bundle.type`|Composition|DetectedIssue|What the Client receives|
+|---|---|---|---|---|
+|`true` (default)|`document`|Required, first entry|Required, one or more per section|The gap determination: the Server states the gap status for each measure|
+|`false`|`collection`|Permitted, not required|Permitted, not required|At minimum the measure calculation: the MeasureReport(s) and the data evaluated to produce them|
+{: .grid}
+
+When `isDocument` is true the returned bundle is a document bundle, and must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource.
+
+Figure 3.6-7 illustrates the structure of a DEQM Gaps In Care Bundle returned when `isDocument` is true.
 - The [DEQM Gaps In Care Bundle Profile] shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and [DEQM Gaps In Care DetectedIssue Profile] and optionally the resources included in the [DEQM Gaps In Care Composition Profile].
 - In addition, the bundle shall include entries for all resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the organization, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
 - The bundle shall also include entries for the resources referenced by the [DEQM Gaps In Care DetectedIssue Profile], for example, `GuidanceResponse` if it is included.
 
 {% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 3.6-7 DEQM Gaps In Care Bundle" %}
+
+##### Requesting the Measure Calculation Without a Document (isDocument=false)
+{:.no_toc}
+
+When `isDocument` is false, the Server returns a `collection` bundle containing the DEQM Individual MeasureReport(s) and every resource referenced by those MeasureReports - the subject, the reporter, and each `evaluatedResource`. There is no Composition organizing the report into sections, so the bundle is not a document.
+
+As described in [How to Construct a Gaps in Care Report](#how-to-construct-a-gaps-in-care-report) above, the gaps-in-care-specific resources are permitted in this bundle but are not required. A Server may include a DetectedIssue to convey `gapStatus`, and may include other gaps-in-care resources such as a `GuidanceResponse`, alongside the measure calculation. Both of the following are valid responses to the same request:
+
+- **Measure calculation only** - the MeasureReport(s) and the resources they evaluated. This is the minimal form, and is what the example below shows.
+- **Measure calculation with gap status** - the same content plus one or more DetectedIssue resources, conveying the Server's gap determination without the document wrapper.
+
+Because the gaps-in-care resources are optional, a Client cannot rely on their presence and needs to handle a bundle that carries only the measure calculation. This shape suits a Client that wants the measure calculation rather than the Server's gap determination: a Client that ingests the MeasureReport into its own analytics or quality dashboard, a Client that applies its own gap logic to the evaluated data, or a Client that already has a workflow keyed on individual measure reports and does not need the document wrapper.
+
+When no DetectedIssue is returned, the gap status is not communicated explicitly, and the Client determines the gap for itself from the measure score, together with the scoring type and `improvementNotation` of the measure, as described in [Measure Evaluation for a Gap in Care](#measure-evaluation-for-a-gap-in-care). The `evaluatedResource` entries, and the [CQF Criteria Reference Extension] on them, still show which data contributed to which population criteria, so the Client can see the basis for the score.
+
+{% include examplebutton.html example="get-gaps-non-document-example" b_title = "Click Here To See Example GET Gaps in Care Report with isDocument=false" %}
 
 #### Detailed Care Gap Guidance Response
 {:.no_toc}

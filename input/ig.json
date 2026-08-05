@@ -977,14 +977,6 @@
             },
             {
                 "exampleBoolean": true,
-                "name": "Gaps Non-Document Gaps In Care Report",
-                "reference": {
-                    "reference": "Bundle/non-document-gaps-in-care"
-                },
-                "description": "GIC Gaps Illustrating DetectedIssue-only Approach"
-            },
-            {
-                "exampleBoolean": true,
                 "name": "Library Colorectal Cancer Screening (EXM130)",
                 "reference": {
                     "reference": "Library/library-exm130-example"
