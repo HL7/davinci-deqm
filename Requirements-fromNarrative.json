@@ -35,7 +35,7 @@
   {
     "key" : "deqm-02",
     "conformance" : ["MAY"],
-    "requirement" : "A Producer should use the [core FHIR API](https://hl7.org/fhir/R4/http.html) to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period).The operation **MAY** be repeated during the submission period as additional data relevant to the quality measure becomes available."
+    "requirement" : "A Producer uses either the [batch/transaction interaction](https://hl7.org/fhir/R4/http.html#transaction) or an appropriate bulk operation to submit data of interest for one or more measures, and for one or more subjects, within the specified [submission period](glossary.html#submission-period). The operation **MAY** be repeated during the submission period as additional data relevant to the quality measure becomes available."
   },
   {
     "key" : "deqm-03",
@@ -100,7 +100,7 @@
   {
     "key" : "deqm-14",
     "conformance" : ["SHALL"],
-    "requirement" : "The bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile](StructureDefinition-deqm-gapsincarebundle.html)."
+    "requirement" : "If `isDocument` is true, each bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile](StructureDefinition-deqm-gapsincarebundle.html), otherwise, each bundle **SHALL** contain the MeasureReport(s) and related resources, but does not have to contain any of the gaps-in-care-specific resources."
   },
   {
     "key" : "deqm-15",
@@ -115,7 +115,7 @@
   {
     "key" : "deqm-17",
     "conformance" : ["SHALL"],
-    "requirement" : "Each `section` **SHALL** also contain one or more `entry` of DetectedIssue using the [DEQM Gaps In Care DetectedIssue Profile](StructureDefinition-deqm-gapsincaredetectedissue.html) for the measure regardless of its gap status (e.g., open or closed)."
+    "requirement" : "Each `section` **SHALL** also contain one or more `entry` of `DetectedIssue` using the [DEQM Gaps In Care DetectedIssue Profile](StructureDefinition-deqm-gapsincaredetectedissue.html) for the measure regardless of its gap status (e.g., open or closed)."
   },
   {
     "key" : "deqm-18",
@@ -125,7 +125,7 @@
   {
     "key" : "deqm-19",
     "conformance" : ["SHALL"],
-    "requirement" : "Each DetectedIssue **SHALL** contain at least one `evidence` element that each evidence **SHALL** provide a detail that references either a DEQM Individual MeasureReport of the measure or a GuidanceResponse."
+    "requirement" : "Each `DetectedIssue` **SHALL** contain at least one `evidence` element that each evidence **SHALL** provide a detail that references either a DEQM Individual MeasureReport of the measure or a `GuidanceResponse`."
   },
   {
     "key" : "deqm-20",
@@ -190,8 +190,8 @@
   },
   {
     "key" : "deqm-32",
-    "conformance" : ["SHOULD"],
-    "requirement" : "The receiving system **SHOULD** be permissive in accepting references to data that are not included in the bundle."
+    "conformance" : ["SHALL"],
+    "requirement" : "The receiving system **SHALL** be permissive in accepting references to data that are not included in the bundle."
   },
   {
     "key" : "deqm-33",
@@ -227,26 +227,6 @@
     "key" : "deqm-39",
     "conformance" : ["SHALL"],
     "requirement" : "The FHIR transaction bundle used in the reporting scenarios **SHALL** contain only the new and updated DEQM and QI-Core Profiles since the last transaction or those that need to be deleted."
-  },
-  {
-    "key" : "deqm-40",
-    "conformance" : ["SHALL"],
-    "requirement" : "The body **SHALL** include a FHIR MeasureReport Resource of type `data-collection` that references a measure by canonical URL."
-  },
-  {
-    "key" : "deqm-41",
-    "conformance" : ["SHALL"],
-    "requirement" : "Additionally, the FHIR Parameters resource **SHALL** include the URL of the [Producer](glossary.html#producer), which plays the role referred to as the Data Provider in the [Bulk Data Import Ping and Pull Approach](https://github.com/smart-on-fhir/bulk-import/blob/master/import-pnp.md#bulk-data-import-kick-off-request-ping-from-data-provider-to-data-consumer)."
-  },
-  {
-    "key" : "deqm-42",
-    "conformance" : ["SHALL"],
-    "requirement" : "The Producer **SHALL** support `$export`."
-  },
-  {
-    "key" : "deqm-43",
-    "conformance" : ["SHALL"],
-    "requirement" : "The [Consumer](glossary.html#consumer) server **SHALL** support invocation of the bulk submit-data operation using the [FHIR Asynchronous Request Pattern](http://hl7.org/fhir/async.html) via a POST request containing the FHIR Parameters Resource described above."
   },
   {
     "key" : "deqm-44",
