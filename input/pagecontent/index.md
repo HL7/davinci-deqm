@@ -32,6 +32,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [**Summary Reporting**](summary-reporting.html) gives guidance on the interactions between Reporters and Receivers to exchange the summary reports for a measure.
   - [**Subject List Reporting**](subjectlist-reporting.html) gives guidance on the interactions between Reporters and Receivers to exchange the subject-list reports for a measure.
   - [**Gaps in Care Reporting**](gaps-in-care-reporting.html) gives guidance on the interactions between Clients and Servers to exchange the Gaps in Care Reports for a measure.
+  - [**Conformance Index**](conformance.html) provides an index of all the conformance requirements in this implementation guide.
 
   All of the roles named above — Producer, Consumer, Reporter, Receiver, Client, and Server — are defined under [Scenarios](#scenarios) below and in the [Glossary](glossary.html).
 - [**Use cases**](usecases.html): Example use cases are presented to demonstrate how to implement the DEQM framework for a particular measure.
@@ -44,6 +45,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [**Operations**](operations.html): A list of all DEQM operations.
   - [**Terminology**](terminology.html): A list of all DEQM terminology code systems and value sets.
   - [**Capability statements**](capstatements.html): A list of all DEQM capability statements for the various DEQM roles.
+  - [**Artifacts**](artifacts.html): An index of all the FHIR artifacts defined in this implementation guide.
 - [**Examples**](all-examples.html): List of all the examples used in this guide.
 - [**Downloads**](downloads.html): This page provides links to downloadable artifacts.
 

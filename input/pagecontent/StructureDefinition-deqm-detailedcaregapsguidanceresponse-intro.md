@@ -1,7 +1,7 @@
 {% assign id = {{include.id}} %}
 <!--Begin Generated Intro Tag (DO NOT REMOVE)-->
 ### Mandatory Data Elements and Terminology
-§deqm-55: The following data-elements are mandatory (i.e data **MUST** be present). §
+The following data-elements are mandatory (i.e data **MUST** be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} Must Have:**
 1. module[x]: What guidance was requested
@@ -16,7 +16,7 @@ More guidance can be found [here.](gaps-in-care-reporting.html#detailed-care-gap
 
 ### Mandatory Data Elements and Terminology
 
-§deqm-56: The following data-elements are mandatory (i.e data **MUST** be present). §
+The following data-elements are mandatory (i.e data **MUST** be present).
 
 **Each {{site.data.structuredefinitions.[id].type}} must have:**
 
