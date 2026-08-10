@@ -1,17 +1,10 @@
 ### Conformance Index
 
-This table provides an index of all conformance statements that are included in the narrative of the Implementation Guide.
+A consolidated index of the conformance statements in this implementation guide is planned for a future version.
 
-Each statement carries an identifier of the form `<area>-<nn>`, where `<area>` groups the requirement by the part of the framework it governs. The areas correspond to the framework topics described in [How to read this Guide](index.html#how-to-read-this-guide):
+In this version, conformance statements are identified in the narrative by their bolded conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**, and **MUST** - on the pages where the requirements apply. See [General Guidance](guidance.html), [Data Exchange](datax.html), [Individual Reporting](indv-reporting.html), [Summary Reporting](summary-reporting.html), [Subject List Reporting](subjectlist-reporting.html), and [Gaps in Care Reporting](gaps-in-care-reporting.html).
 
-|Area|Identifier|Scope|Primary actors|
-|---|---|---|---|
-|General|`gen-nn`|Cross-cutting requirements that apply to more than one scenario: measure report structure, bundle organization, duplicate data, contained resources, Must Support, and bundle transaction support. See [General Guidance](guidance.html).|All|
-|Data Exchange|`dx-nn`|Requirements for exchanging the [data of interest](#data-of-interest) through the Submit Data and Collect Data scenarios, including snapshot and incremental update behavior. See [Data Exchange](datax.html).|[Producer](#producer), [Consumer](#consumer)|
-|Reporting|`rpt-nn`|Requirements for communicating measure results through the Individual, Summary, and Subject List reporting scenarios. See [Individual Reporting](indv-reporting.html), [Summary Reporting](summary-reporting.html), and [Subject List Reporting](subjectlist-reporting.html).|[Reporter](#reporter), [Receiver](#receiver)|
-|Gaps in Care|`gic-nn`|Requirements for the `$care-gaps` operation and the structure of the Gaps in Care Report. See [Gaps in Care Reporting](gaps-in-care-reporting.html).|[Client](#client), [Server](#server)|
-{: .grid}
+  A candidate organization for the planned index groups requirements by framework area - General, Data Exchange, Reporting, and Gaps in Care - so that implementers can locate the requirements that apply to the scenarios they are implementing. We are seeking feedback on whether this grouping, or another organization, would be most useful.
+  {:.stu-note}
 
-Identifiers are stable within an area and are not reused. A requirement that applies to more than one scenario is stated once in the General area and referenced from the scenario topics rather than being restated.
-
-§§§
+{% include link-list.md %}
