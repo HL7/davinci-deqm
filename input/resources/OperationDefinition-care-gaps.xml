@@ -147,7 +147,7 @@ It is often the case that the operation should not be performed from the server&
         <use value="in"/>
         <min value="1"/>
         <max value="*"/>
-        <documentation value="Indicates status of a care gap. For all [open, closed, and prospective gaps], three seperate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
+        <documentation value="Indicates status of a care gap. For all [open, closed, and prospective gaps], three separate status parameters must be provided. For a positive proportion measure, gap means the patient is not in the numerator. For an inverse (negative) proportion measure (e.g., Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%)), gap means the patient is in the numerator."/>
         <type value="code"/>
         <binding>
             <strength value="extensible"/>
@@ -184,7 +184,7 @@ It is often the case that the operation should not be performed from the server&
         <use value="in"/>
         <min value="0"/>
         <max value="1"/>
-        <documentation value="The isDocument parameter controls whether a Gaps in Care Composition is returned in the Bundle (i.e. if the Bundle is of type 'Document'). When 'true,' the returned Bundles contain the Gaps in Care Composition. This parameter defaults to 'true.'"/>
+        <documentation value="The isDocument parameter controls whether a Gaps in Care Composition is returned in the Bundle (i.e. if the Bundle is of type `document`). When 'true' the returned Bundles contain the Gaps in Care Composition. This parameter defaults to 'true'."/>
         <type value="boolean"/>
     </parameter>
     <parameter>
@@ -193,14 +193,16 @@ It is often the case that the operation should not be performed from the server&
         <min value="0"/>
         <max value="*"/>
         <documentation value="The $care-gaps operation returns zero or more Bundles, one for each input
-            subject. The isDocument parameter controls whether the bundles are documents conforming to
-            the GapsInCareBundle profile, or collection Bundles including just the MeasureReport and
-            related resources. See the [guidance on Bundle structure](https://build.fhir.org/clinicalre
-            asoning-quality-reporting.html#bundles-organized-by-subject) for discussion about
-            the Bundle content and organization.\n\nNote that even though there is a single
-            parameter named return of type Bundle, it is a multi-cardinality parameter, and
-            so will still be returned using a Parameters resource, as described in the general
-            operations framework [response](operations.html#response)."/>
+            subject. Each bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile]. If `isDocument` 
+            is true, each bundle **SHALL** have a `type` of `document` and **SHALL** contain a Composition 
+            entry which uses the [DEQM Gaps In Care Composition Profile], to define a document consisting 
+            of one or more MeasureReports. If `isDocument` is false, each bundle **SHALL** contain at least 
+            the MeasureReport(s) and **SHOULD** contain the resources used to calculate the measure report. 
+            In addition, the collection bundle **MAY** contain the gaps-in-care-specific resources 
+            describing the gaps.\n\nNote that even though there is a single parameter named return of 
+            type Bundle, it is a multi-cardinality parameter, and so will still be returned using a 
+            Parameters resource, as described in the general operations framework 
+            [response](operations.html#response)."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>

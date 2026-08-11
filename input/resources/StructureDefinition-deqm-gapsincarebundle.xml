@@ -31,29 +31,40 @@
     <differential>
         <element id="Bundle">
             <path value="Bundle"/>
+            <constraint>
+              <key value="gic-0"/>
+              <severity value="error"/>
+              <human value="if the bundle is a document, it must have a composition entry, an identifier with a system and value, and a timestamp"/>
+              <expression value="type = 'document' implies (entry.where(resource is Composition).exists() and identifier.where(system.exists() and value.exists()).exists() and timestamp.exists())"/>
+            </constraint>
         </element>
         <element id="Bundle.identifier">
             <path value="Bundle.identifier"/>
-            <min value="1"/>
+            <min value="0"/>
+            <condition value="gic-0"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.identifier.system">
             <path value="Bundle.identifier.system"/>
-            <min value="1"/>
+            <min value="0"/>
+            <condition value="gic-0"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.identifier.value">
             <path value="Bundle.identifier.value"/>
-            <min value="1"/>
+            <min value="0"/>
+            <condition value="gic-0"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.type">
             <path value="Bundle.type"/>
+            <condition value="gic-0"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.timestamp">
             <path value="Bundle.timestamp"/>
-            <min value="1"/>
+            <min value="0"/>
+            <condition value="gic-0"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry">
@@ -79,13 +90,13 @@
             <key value="gic-1"/>
             <severity value="error"/>
             <human value="if 'entry:gaps-composition-deqm' is present, then Bundle.type is 'document'"/>
-            <expression value="resource.meta.profile.contains('http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarecomposition') implies %resource.type='document'"/>
+            <expression value="resource.exists() implies %resource.type='document'"/>
           </constraint>
           <constraint>
             <key value="gic-2"/>
             <severity value="error"/>
             <human value="if 'entry:gaps-composition-deqm' is not present, then Bundle.type is 'collection'"/>
-            <expression value="resource.meta.profile.contains('http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-gapsincarecomposition').not() implies %resource.type='collection'"/>
+            <expression value="resource.exists().not() implies %resource.type='collection'"/>
           </constraint>
         </element>
         <element id="Bundle.entry:gaps-composition-deqm.resource">

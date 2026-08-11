@@ -42,7 +42,7 @@ The following resources are used in the Gaps in Care Reporting Scenario:
 |Bundle|DEQM Gaps In Care Bundle Profile|[DEQM Gaps In Care Bundle Profile]|
 |Composition|DEQM Gaps In Care Composition Profile|[DEQM Gaps In Care Composition Profile]|
 |DetectedIssue|DEQM Gaps In Care DetectedIssue Profile|[DEQM Gaps In Care DetectedIssue Profile]|
-|GuideanceResponse|DEQM Detailed Care Gap Guidance Response|[DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html)|
+|GuidanceResponse|DEQM Detailed Care Gap Guidance Response|[DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html)|
 |MeasureReport|DEQM Individual MeasureReport Profile|[DEQM Individual MeasureReport Profile]|
 {: .grid}
 
@@ -55,12 +55,12 @@ Figure 3.6-3 provides a graphical view of how these resources are related. A Com
 #### Gaps Through Period (Retrospective vs. Prospective)
 {:.no_toc}
 
-[Gaps through period] is the time period defined by a Client for running the Gaps in Care Report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess [prospective gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure. In the example below, Colorectal Cancer Screening ([CMS130]) with measureId EXM130-7.3.000 is used as an example measure.
+[Gaps through period] is the time period defined by a Client for running the Gaps in Care Report. When the [gaps through period] ends on a date that is in the future, the Gaps in Care Reporting is said to look for care gaps prospectively. In this scenario, it provides providers with opportunities to assess [prospective gaps] and take proper actions to close the gaps. When the [gaps through period] ends on a date that is in the past, the Gaps in Care Reporting is said to look for care gaps retrospectively. In the retrospective scenario, identified [open gaps] can no longer be acted upon to meet the quality measure. In the example below, Colorectal Cancer Screening ([CMS130]), identified by the measureUrl `http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR`, is used as an example measure.
 
 |Use Case|care-gaps Operation|Gaps Through Period Start Date|Gaps Through Period End Date|Report Calculated Date|Colorectal Cancer Screening - Colonoscopy Date|Gaps in Care Report|
-|---|---|---|---|---|---|
-|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has a [prospective gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
-|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureId=EXM130-7.3.000&status=open-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The Gaps in Care Report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
+|---|---|---|---|---|---|---|
+|**Prospective Use Case**|$care-gaps?periodStart=2021-01-01&periodEnd=2021-06-30&subject=Patient/123&measureUrl=http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR&status=prospective-gap|2021-01-01|2021-06-30|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2021-06-30. The Gaps in Care Report indicates the patient has a [prospective gap] for the colorectal cancer screening measure. By 2021-06-30, the colonoscopy would be over 10 years.|
+|**Retrospective Use Case**|$care-gaps?periodStart=2020-01-01&periodEnd=2020-12-31&subject=Patient/123&measureUrl=http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR&status=closed-gap|2020-01-01|2020-12-31|2021-04-01|Example: patient had colonoscopy on 2011-05-03|Returns gaps through 2020-12-31. The Gaps in Care Report indicates the patient has a [closed gap] for the colorectal cancer screening measure. Since on 2020-12-31, the procedure would have occurred within the specified 10-year timeframe.|
 {: .grid}
 
 The timeline below represents the data described above. A colonoscopy procedure per the Colorectal Cancer Screen measure is required every 10 years. If as in the example above, the patient had a colonoscopy done on May 3rd, 2011, another one would be due and the gap opened on May 3rd, 2021.
@@ -76,18 +76,18 @@ A report calculated on any given date provides all of the data from the server's
 
 The [care-gaps](OperationDefinition-care-gaps.html) operation has an out parameter, **return**, which returns a Parameters resource that contains zero or more `parameter`, with each `parameter` containing a Bundle resource that conforms to the [DEQM Gaps In Care Bundle Profile].
 
-Figure 2-16 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
-{% include img-narrow.html img="gic-care-gaps-operation-single-patient-2026.png" caption="Figure 2-16 Care Gaps Operation - Single Patient" %}
+Figure 3.6-5 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a single patient.
+{% include img-narrow.html img="gic-care-gaps-operation-single-patient-2026.png" caption="Figure 3.6-5 Care Gaps Operation - Single Patient" %}
 
-Figure 2-17 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
-{% include img-narrow.html img="gic-care-gaps-operation-group-2026.png" caption="Figure 2-17 Care Gaps Operation - Group of Patients" %}
+Figure 3.6-6 shows an example workflow for running the [care-gaps](OperationDefinition-care-gaps.html) operation against a payer's system for a group of patients.
+{% include img-narrow.html img="gic-care-gaps-operation-group-2026.png" caption="Figure 3.6-6 Care Gaps Operation - Group of Patients" %}
 
 #### Measure Evaluation for a Gap in Care
 {:.no_toc}
 
-As shown in Figure 3.6-5 and 3.6-6 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeaure profile, depending on the server implementation).
+As shown in Figure 3.6-5 and 3.6-6 above, gaps in care reporting leverages the quality measure evaluation capability of $evaluate to produce one or more Individual Measure Report, which are then utilized by the gaps in care service to determine a gap status that is reported in a detected issue. Because the $care-gaps operation utilizes $evaluate, any QMIG profile requirements for $evaluate apply to $care-gaps as well (e.g. the CQMComputableMeasure profile, depending on the server implementation).
 
-This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses its `gapStatus` element, bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. If the status is not-applicable the measureScore **SHALL NOT** be included in the DEQM Individual MeasureReport.
+This IG provides guidance for inferring that a care gap has occurred (or will occur, or is closed) based on the scoring type of the measure, specifically proportion measures and ratio measures. Other care gap inferences are possible but not specified in this IG. A detected issue uses the [DEQM Gap Status Extension], a modifier extension bound to the [DEQM Gaps In Care Gap Status Value Set], to communicate if the gap is open, prospective, closed, or not-applicable. If the status is not-applicable the measureScore **SHALL NOT** be included in the DEQM Individual MeasureReport.
 
 Patient-based measures lend themselves most readily to gaps in care calculations because they are evaluated over a long time period. Other measure bases, such as an encounter-based measure, typically happen over shorter time spans. The types of population bases to support is at the server’s discretion. Servers **SHOULD** support patient-based measures, and **MAY** support any other base.
 
@@ -98,11 +98,11 @@ Measures with multiple groups (a multiple rate measure) have the potential to cr
 
 This section describes the profiles used for Gaps in Care Reporting and how they are used to construct a Gaps in Care Report.
 
-The [care-gaps](OperationDefinition-care-gaps.html) operation returns zero or more bundles, one for each input patient. If `isDocument` is true, each bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile], otherwise, each bundle **SHALL** contain the MeasureReport(s) and related resources, but does not have to contain any of the gaps-in-care-specific resources. A Gaps In Care Bundle can optionally contain a Composition entry, which uses the [DEQM Gaps In Care Composition Profile], to define a document composition consisting of one or more MeasureReports.
+The [care-gaps](OperationDefinition-care-gaps.html) operation returns zero or more bundles, one for each input patient. Each bundle **SHALL** conform to the [DEQM Gaps In Care Bundle Profile]. If `isDocument` is true, each bundle **SHALL** have a `type` of `document` and **SHALL** contain a Composition entry which uses the [DEQM Gaps In Care Composition Profile], to define a document consisting of one or more MeasureReports. If `isDocument` is false, each bundle **SHALL** contain at least the MeasureReport(s) and **SHOULD** contain the resources used to calculate the measure report. In addition, the collection bundle **MAY** contain the gaps-in-care-specific resources describing the gaps.
 
 The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html), the Gaps in Care Report is for. The Gaps In Care Composition **SHALL** contain one to many section(s). Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced **SHALL** be for the same patient specified in the Composition `subject`. Each `section` **SHALL** also contain one or more `entry` of `DetectedIssue` using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
 
-- The Individual MeasureReport **SHALL** conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [CQF Criteria Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.group.population.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
+- The Individual MeasureReport(s) **SHALL** conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [CQF Criteria Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.group.population.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
 
 - The [DEQM Gaps In Care DetectedIssue Profile] has a fixed code CAREGAP indicating the detected issue is in the Care Gaps detected issue category. Each `DetectedIssue` **SHALL** contain at least one `evidence` element that each evidence **SHALL** provide a detail that references either a DEQM Individual MeasureReport of the measure or a `GuidanceResponse`.  
 
@@ -114,7 +114,7 @@ The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition 
 #### Gaps in Care Bundle Structure
 {:.no_toc}
 
-The `isDocument` in parameter determines which of two shapes the Server returns. In effect, it selects between a Gaps in Care *document* and a plain *measure report* bundle:
+The `isDocument` in parameter determines which of two shapes the Server returns. In effect, it selects between a Gaps in Care *document* and a Gaps in Care *collection*:
 
 |`isDocument`|`Bundle.type`|Composition|DetectedIssue|What the Client receives|
 |---|---|---|---|---|
@@ -122,26 +122,31 @@ The `isDocument` in parameter determines which of two shapes the Server returns.
 |`false`|`collection`|Permitted, not required|Permitted, not required|At minimum the measure calculation: the MeasureReport(s) and the data evaluated to produce them|
 {: .grid}
 
-When `isDocument` is true the returned bundle is a document bundle, and must conform to the rules specified for a document bundle, which means that a DEQM Gaps In Care Bundle must have an identifier with a system and a value, have a date, and have the DEQM Gaps In Care Composition as the first resource.
+When `isDocument` is true the bundle must additionally conform to the rules specified for a document bundle, which means it has a `type` of `document` and the DEQM Gaps In Care Composition as its first entry, as well as an identifier with a system and a value, and a `timestamp`.
 
 Figure 3.6-7 illustrates the structure of a DEQM Gaps In Care Bundle returned when `isDocument` is true.
-- The [DEQM Gaps In Care Bundle Profile] shall include both the [DEQM Gaps In Care MeasureReport](StructureDefinition-deqm-individualmeasurereport.html) and [DEQM Gaps In Care DetectedIssue Profile] and optionally the resources included in the [DEQM Gaps In Care Composition Profile].
-- In addition, the bundle shall include entries for all resources referenced by the included DEQM Gaps In Care MeasureReport, for example, the patient resource, the organization, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
-- The bundle shall also include entries for the resources referenced by the [DEQM Gaps In Care DetectedIssue Profile], for example, `GuidanceResponse` if it is included.
 
-{% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 3.6-7 DEQM Gaps In Care Bundle" %}
+- The [DEQM Gaps In Care Bundle Profile] **SHALL** include the [DEQM Individual MeasureReport Profile] and optionally, the [DEQM Gaps In Care DetectedIssue Profile] and the other resources that a [DEQM Gaps In Care Composition Profile] would reference.
+- In addition, the bundle **SHOULD** include entries for all resources referenced by the included DEQM Individual MeasureReport, for example, the patient resource, the organization, the resources for the colonoscopy procedure and FOBT lab observation as shown in the figure.
+- The bundle **SHOULD** also include entries for the resources referenced by the [DEQM Gaps In Care DetectedIssue Profile] if it is included. For example, `GuidanceResponse`.
+
+{% include img-narrow.html img="gic-bundle-structure.png" caption="Figure 3.6-7 DEQM Gaps In Care Bundle (document)" %}
 
 ##### Requesting the Measure Calculation Without a Document (isDocument=false)
 {:.no_toc}
 
-When `isDocument` is false, the Server returns a `collection` bundle containing the DEQM Individual MeasureReport(s) and every resource referenced by those MeasureReports - the subject, the reporter, and each `evaluatedResource`. There is no Composition organizing the report into sections, so the bundle is not a document.
+When `isDocument` is false, the Server returns a `collection` bundle containing the DEQM Individual MeasureReport(s) and, as described above, it **SHOULD** also carry the resources those MeasureReports reference - the subject, the reporter, and each `evaluatedResource`. There will not be a Composition resource organizing the report into sections, so the bundle will not be a FHIR Document.
+
+Figure 3.6-8 illustrates the structure of a DEQM Gaps In Care Bundle returned when `isDocument` is true.
+
+{% include img-narrow.html img="gic-bundle-structure-edit.png" caption="Figure 3.6-8 DEQM Gaps In Care Bundle (collection)" %}
 
 As described in [How to Construct a Gaps in Care Report](#how-to-construct-a-gaps-in-care-report) above, the gaps-in-care-specific resources are permitted in this bundle but are not required. A Server may include a DetectedIssue to convey `gapStatus`, and may include other gaps-in-care resources such as a `GuidanceResponse`, alongside the measure calculation. Both of the following are valid responses to the same request:
 
 - **Measure calculation only** - the MeasureReport(s) and the resources they evaluated. This is the minimal form, and is what the example below shows.
 - **Measure calculation with gap status** - the same content plus one or more DetectedIssue resources, conveying the Server's gap determination without the document wrapper.
 
-Because the gaps-in-care resources are optional, a Client cannot rely on their presence and needs to handle a bundle that carries only the measure calculation. This shape suits a Client that wants the measure calculation rather than the Server's gap determination: a Client that ingests the MeasureReport into its own analytics or quality dashboard, a Client that applies its own gap logic to the evaluated data, or a Client that already has a workflow keyed on individual measure reports and does not need the document wrapper.
+Because the gaps-in-care resources (DetectedIssue, GuidanceResponse) are optional, a Client cannot rely on their presence and needs to handle a bundle that carries only the measure calculation (MeasureReport). This shape suits a Client that wants the measure calculation rather than the Server's gap determination: a Client that ingests the MeasureReport into its own analytics or quality dashboard, a Client that applies its own gap logic to the evaluated data, or a Client that already has a workflow keyed on individual measure reports and does not need the document wrapper.
 
 When no DetectedIssue is returned, the gap status is not communicated explicitly, and the Client determines the gap for itself from the measure score, together with the scoring type and `improvementNotation` of the measure, as described in [Measure Evaluation for a Gap in Care](#measure-evaluation-for-a-gap-in-care). The `evaluatedResource` entries, and the [CQF Criteria Reference Extension] on them, still show which data contributed to which population criteria, so the Client can see the basis for the score.
 
@@ -150,8 +155,8 @@ When no DetectedIssue is returned, the gap status is not communicated explicitly
 #### Detailed Care Gap Guidance Response
 {:.no_toc}
 
-{: .stu-note}
-We are looking for feedback from the community on this revised section.
+  We are looking for feedback from the community on this revised section.
+  {:.stu-note}
 
 Derived from the FHIR `GuidanceResponse` resource, the DEQM [Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) profile provides additional information about why a care gap was identified and what evidence may help resolve or reassess the reported gap. It complements the [DEQM Gaps In Care DetectedIssue Profile], which communicates whether the gap is open, prospective, closed, or not applicable. Together, these profiles provide recipients with both the outcome of the measure evaluation and the information needed to understand, investigate, and respond to a reported care gap. The `reasonCode` and `dataRequirement` elements communicate the rationale for the reported gap and the evidence that may satisfy the measure criteria or support reevaluation.
 
@@ -185,13 +190,13 @@ The following table summarizes how the primary DEQM profiles and elements work t
 | [DEQM Detailed Care Gap Guidance Response](StructureDefinition-deqm-detailedcaregapguidanceresponse.html) | `GuidanceResponse.dataRequirement` | Describes the evidence that may help resolve or reassess the gap, including the applicable resource type, profile, terminology, date, code, or value constraints. |
 | [DEQM Individual MeasureReport Profile] | `MeasureReport.evaluatedResource` | Identifies the resources the calculating system considered during measure evaluation. The CQF Criteria Reference extension may indicate how an evaluated resource contributed to specific measure criteria. |
 | [DEQM Individual MeasureReport Profile] | `MeasureReport.date` | Identifies when the gap was calculated and helps the recipient determine whether subsequent care or newly available evidence may not be reflected in the report. |
-| [DEQM Gaps In Care DetectedIssue Profile] | Care Gap Remark extension | Supports feedback from the recipient following review of the report, such as indicating that care was completed, evidence exists elsewhere, the care was deferred, or attribution is incorrect. |
+| [DEQM Individual MeasureReport Profile] | Care Gap Remark extension, on `MeasureReport.group` | Supports feedback from the recipient following review of the report, such as indicating that care was completed, evidence exists elsewhere, the care was deferred, or attribution is incorrect. |
 {:.grid}
 
 ##### Using reasonCode
 {:.no_toc}
 
-The `GuidanceResponse.reasonCode` has a preferred binding to the Care Gap Reasons ValueSet. It communicates the reason the calculating system identified the gap and supports more targeted follow-up than an open-gap status alone.
+The `GuidanceResponse.reasonCode` has a preferred binding to the [DEQM Care Gap Reasons Value Set](ValueSet-deqm-care-gap-reason.html). It communicates the reason the calculating system identified the gap and supports more targeted follow-up than an open-gap status alone.
 
 The reason communicates the calculating system's basis for identifying the gap and its level of certainty. Depending on the available information, the reason can identify:
  - qualifying evidence was not found; 
@@ -253,10 +258,10 @@ Example Business Use Cases:
 #### Add Remark to Gaps in Care Report
 {:.no_toc}
 
-{: .stu-note}
-We are actively seeking input on [remark codes](CodeSystem-deqm-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
+  We are actively seeking input on [remark codes](CodeSystem-deqm-care-gap-remark.html), the [remark value set](ValueSet-care-gap-remark.html), and the remark workflow.
+  {:.stu-note}
 
-When considering a Gaps in Care Report, providers may communicate additional information about a reported care gap using the [Care Gap Remark](StructureDefinition-deqm-careGapRemark.html) extension. Remarks may be used to document actions taken, provide supporting context or indicate reasons a gap remains open. It is important to note that a gap cannot be closed based on a care gap remark alone, a gap is closed only when the supporting data is provided. Common concepts for Care Gap Remarks are included in the [Care Gap Remark Value Set](ValueSet-care-gap-remark.html). If a remark is added to a Gaps in Care Report, the Care Gap Remark extension may be added to the MeasureReport using a [PATCH](https://www.hl7.org/fhir/http.html#patch) request, or an updated MeasureReport containing the extension may be submitted using a POST interaction.
+When considering a Gaps in Care Report, providers may communicate additional information about a reported care gap using the [Care Gap Remark](StructureDefinition-deqm-careGapRemark.html) extension. Remarks may be used to document actions taken, provide supporting context or indicate reasons a gap remains open. It is important to note that a gap cannot be closed based on a care gap remark alone, a gap is closed only when the supporting data is provided. Common concepts for Care Gap Remarks are included in the [Care Gap Remark Value Set](ValueSet-care-gap-remark.html). If a remark is added to a Gaps in Care Report, the Care Gap Remark extension may be added to the MeasureReport on the `MeasureReport.group` element to which it applies, using a [PATCH](https://www.hl7.org/fhir/http.html#patch) request, or an updated MeasureReport containing the extension may be submitted using a POST interaction.
 
 A ([DEQM Parameters Care Gap Remark Patch Profile](StructureDefinition-deqm-caregapremarkpatchparameters.html)) is defined to specify the required structures to send the remark using a PATCH request.
 
@@ -289,7 +294,7 @@ Headers:
 * `Prefer respond-async`
 * `Accept application/fhir+json`
 
-Note that both Prefer and Accept are required. The `Prefer` header specifies whether the response is immediate or asynchronous, and **SHALL** be set to *respond-async*. **Accept** specifies the format of the optional OperationOutcome response to the kick-off request. Any of the Serialization Format Representations are supported. See the base FHIR specification [Asynchronous Request Patterns] for details.
+Note that both Prefer and Accept are required. The `Prefer` header specifies whether the response is immediate or asynchronous, and **SHALL** be set to *respond-async*. The `Accept` header specifies the format of the optional OperationOutcome response to the kick-off request. Any of the Serialization Format Representations are supported. See the base FHIR specification [Asynchronous Request Patterns] for details.
 
 Query Parameters:
 * `_outputFormat (string, optional, defaults to application/fhir+ndjson)`
