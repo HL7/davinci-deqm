@@ -81,16 +81,16 @@ It is often the case that the operation should not be performed from the server&
         <type value="Group"/>
     </parameter>
     <parameter> 
-        <name value="reporter"/> 
+        <name value="provider"/> 
         <use value="in"/> 
         <min value="0"/> 
         <max value="1"/> 
         <documentation value="The provider for which the report will be run. This may be a reference to a Practitioner,
             PractitionerRole, or Organization. If specified, systems MAY use this information
             to determine subjects for which the measure will be calculated, but how subjects
-            are determined is implementation-specific. This parameter is reflected in the reporter
+            are determined is implementation-specific. This parameter is reflected in the `reporter`
             element of the resulting MeasureReport(s). This parameter cannot be used with the
-            reporterResource parameter."/> 
+            `providerResource` parameter."/> 
         <type value="string"/> 
         <searchType value="reference"/> 
     </parameter> 
@@ -104,7 +104,7 @@ It is often the case that the operation should not be performed from the server&
         <extension url="http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type">
           <valueUri value="Organization"/>
         </extension>
-        <name value="reporterResource"/> 
+        <name value="providerResource"/> 
         <use value="in"/> 
         <min value="0"/> 
         <max value="1"/> 
@@ -113,8 +113,8 @@ It is often the case that the operation should not be performed from the server&
             This is intended to support the use case in which the organization information
             is not on the server performing the evaluation, for example an [ad-hoc group of
             practitioners](guidance.html#ad-hoc-organizations-for-deqm-operations) that
-            are part of a provider group. This parameter is reflected in the reporter element
-            of the resulting MeasureReport(s). This parameter cannot be used with the reporter
+            are part of a provider group. This parameter is reflected in the `reporter` element
+            of the resulting MeasureReport(s). This parameter cannot be used with the `provider`
             parameter."/> 
         <type value="DomainResource"/>
     </parameter>
@@ -172,7 +172,7 @@ It is often the case that the operation should not be performed from the server&
         <use value="out"/>
         <min value="0"/>
         <max value="*"/>
-        <documentation value="The results of the measure evaluation, returned as a Bundle for each input subject for individual reports or a single bundle for summary and subject list reports. The first entries in each Bundle are MeasureReport(s) corresponding to the measures that were calculated. Subsequent entries in each Bundle are resources representing the data that was created or referenced during the calculation of the measures, and referenced from the appropriate element of the corresponding MeasureReport resources. See the [guidance](https://hl7.org/fhir/6.0.0-ballot5/clinicalreasoning-quality-reporting.html#bundles-organized-by-subject) on Bundle structure for discussion about the Bundle content and organization. Note that even though there is a single parameter named return of type Bundle, it is a multi-cardinality parameter, and so will still be returned using a Parameters resource, as described in the general operations framework [response](https://hl7.org/fhir/6.0.0-ballot5/operations.html#response). "/>
+        <documentation value="The results of the measure evaluation, returned as a Bundle for each input subject for individual reports or a single bundle for summary and subject list reports. The first entries in each Bundle are MeasureReport(s) corresponding to the measures that were calculated. Subsequent entries in each Bundle are resources representing the data that was created or referenced during the calculation of the measures, and referenced from the appropriate element of the corresponding MeasureReport resources. See the [guidance](https://hl7.org/fhir/6.0.0-ballot5/clinicalreasoning-quality-reporting.html#bundles-organized-by-subject) on Bundle structure for discussion about the Bundle content and organization. Note that even though there is a single parameter named return of type Bundle, it is a multi-cardinality parameter, and so will still be returned using a Parameters resource, as described in the general operations framework [response](https://hl7.org/fhir/R4/operations.html#response)."/>
         <type value="Bundle"/>
     </parameter>
 </OperationDefinition>
