@@ -302,7 +302,7 @@
         "max": "1",
         "type": [
           {
-            "code": "uri"
+            "code": "CodeableConcept"
           }
         ],
         "binding": {

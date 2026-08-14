@@ -131,8 +131,18 @@
                 "url": "http://hl7.org/fhir/uv/deqm/StructureDefinition/deqm-careGapRemark",
                 "extension": [
                   {
+                    "url": "authorSoftware",
+                    "valueString": "ACME Care Gap Assessment Software"
+                  },
+                  {
                     "url": "code",
-                    "valueString": "order-placed"
+                    "valueCodeableConcept": {
+                      "coding": [{
+                        "system": "http://hl7.org/fhir/uv/deqm/CodeSystem/deqm-care-gap-remark",
+                        "code": "order-placed",
+                        "display": "Order placed"
+                      }]
+                    }
                   }
                 ]
               }
