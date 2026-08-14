@@ -198,6 +198,14 @@ For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 
 {% lang-fragment dependency-table-nontech.xhtml %}
 
+#### Cross Version Analysis
+
+{% include cross-version-analysis-en.xhtml %}
+
+#### Global Profiles
+
+{% include globals-table-en.xhtml %}
+
 #### IP Statements
 
 {% lang-fragment ip-statements.xhtml %}
