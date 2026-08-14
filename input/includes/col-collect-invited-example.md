@@ -16,11 +16,11 @@ Payer X acting in the role of Consumer receives a $collect-data invited pull to 
   "parameter": [
     {
       "name": "measureUrl",
-      "valueCanonical": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000"
+      "valueCanonical": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0"
     },
     {
       "name": "measureUrl",
-      "valueCanonical": "http://hl7.org/fhir/uv/cqm/Measure/EXM108-FHIR|8.2.000"
+      "valueCanonical": "http://hl7.org/fhir/uv/cqm/Measure/EXM108-FHIR|2.0.0"
     },
     {
       "name": "periodStart",

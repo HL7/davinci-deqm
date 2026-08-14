@@ -17,7 +17,7 @@ Payer X acting in the role of Consumer collect Patient Y's COL data from Provide
   "parameter": [
      {
       "name": "measureUrl",
-      "valueCanonical": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000"
+      "valueCanonical": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0"
     },
     {
       "name": "periodStart",

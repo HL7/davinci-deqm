@@ -65,7 +65,7 @@
 				],
 				"status": "complete",
 				"type": "summary",
-				"measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM55-FHIR|5.0.0",
+				"measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM55-FHIR|2.0.0",
 				"date": "2018-09-05T16:59:52.404Z",
 				"period": {
 					"start": "2018-01-01",
@@ -561,7 +561,7 @@
 						}
 					]
 				},
-				"measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+				"measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0",
 				"period": {
 					"end": "2019-09-01",
 					"start": "2019-08-01"

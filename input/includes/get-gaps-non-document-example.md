@@ -10,7 +10,7 @@ A Client operating an analytics pipeline wants the underlying measure calculatio
 
 
 ```
-GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000&subject=Patient/gaps-patient02&periodStart=2020-01-01&periodEnd=2020-12-31&status=closed-gap&isDocument=false
+GET [base]/Measure/$care-gaps?measureUrl=http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0&subject=Patient/gaps-patient02&periodStart=2020-01-01&periodEnd=2020-12-31&status=closed-gap&isDocument=false
 ```
 
 **Request body**
@@ -79,7 +79,7 @@ Content-Type: application/fhir+json;charset=UTF-8
         ],
         "status": "complete",
         "type": "individual",
-        "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+        "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0",
         "subject": {
           "reference": "Patient/gaps-patient02"
         },

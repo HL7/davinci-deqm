@@ -26,7 +26,7 @@
               ],
               "status": "complete",
               "type": "data-collection",
-              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0",
               "subject": {
                 "reference": "Patient/patient01"
               },
@@ -76,7 +76,7 @@
               ],
               "status": "complete",
               "type": "data-collection",
-              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0",
               "subject": {
                 "reference": "Patient/patient02"
               },
@@ -126,7 +126,7 @@
               ],
               "status": "complete",
               "type": "data-collection",
-              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|8.0.000",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM130-FHIR|2.0.0",
               "subject": {
                 "reference": "Patient/patient03"
               },
@@ -178,7 +178,7 @@
               ],
               "status": "complete",
               "type": "individual",
-              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM108-FHIR|8.2.000",
+              "measure": "http://hl7.org/fhir/uv/cqm/Measure/EXM108-FHIR|2.0.0",
               "subject": {
                 "reference": "Patient/patient01"
               },

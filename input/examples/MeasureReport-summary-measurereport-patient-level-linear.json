@@ -7,7 +7,7 @@
     "language": "en",
     "status": "complete",
     "type": "summary",
-    "measure": "http://hl7.org/fhir/uv/cqm/Measure/PreventiveCareandWellnessPatientLevelLinearComposite|0.0.001",
+    "measure": "http://hl7.org/fhir/uv/cqm/Measure/PreventiveCareandWellnessPatientLevelLinearComposite|2.0.0",
     "date": "2023-03-01",
     "reporter": {"reference": "Organization/organization01"},
     "period": {

@@ -8,7 +8,7 @@
     },
     "status": "complete",
     "type": "individual",
-    "measure": "http://hl7.org/fhir/uv/cqm/Measure/SupportingEvidenceExample|2.0.0-ballot",
+    "measure": "http://hl7.org/fhir/uv/cqm/Measure/SupportingEvidenceExample|2.0.0",
    "subject": {
         "reference": "Patient/patient01"
       },
