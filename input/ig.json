@@ -42,7 +42,7 @@
         }
     ],
     "url": "http://hl7.org/fhir/uv/deqm/ImplementationGuide/hl7.fhir.uv.deqm",
-    "version": "1.0.0-cibuild",
+    "version": "1.0.0",
     "packageId": "hl7.fhir.uv.deqm",
     "dependsOn": [
         {
@@ -52,7 +52,7 @@
             "packageId": "hl7.fhir.uv.extensions.r4"
         },
         {
-            "version": "2.0.0-ballot",
+            "version": "dev",
             "id": "cqm",
             "packageId": "hl7.fhir.uv.cqm",
             "uri": "http://hl7.org/fhir/uv/cqm/ImplementationGuide/hl7.fhir.uv.cqm"
@@ -122,7 +122,7 @@
                 "value": "input-cache/txcache"
             },
             {
-                "code": "path-liquid-ig",
+                "code": "path-liquid",
                 "value": "templates/liquid"
             },
             {
@@ -132,6 +132,10 @@
             {
                 "code": "path-output",
                 "value": "output"
+            },
+            {
+                "code": "auto-oid-root",
+                "value": "2.16.840.1.113883.4.642.40.87"
             },
             {
                 "code": "active-tables",
@@ -171,7 +175,7 @@
             },
             {
                 "code": "releaselabel",
-                "value": "CI Build"
+                "value": "STU 1"
             },
             {
                 "code": "excludexml",
