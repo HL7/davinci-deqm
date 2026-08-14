@@ -187,8 +187,8 @@
                 "reference": "Organization/organization01"
               },
               "period": {
-                "end": "2018-01-01",
-                "start": "2018-12-31"
+                "start": "2018-01-01",
+                "end": "2018-12-31"
               },
               "improvementNotation": {
                 "coding": [
@@ -284,11 +284,6 @@
                   "measureScore": {
                     "value": 1
                   }
-                }
-              ],
-              "evaluatedResource": [
-                {
-                  "reference": "urn:uuid:b5cf5a8c-63f0-437f-84fd-dc8a3cf43cc5"
                 }
               ]
             },

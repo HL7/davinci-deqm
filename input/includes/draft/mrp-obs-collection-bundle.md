@@ -227,7 +227,7 @@
                                 "url": "detailed",
                                 "valueCoding": {
                                     "system": "urn:oid:2.16.840.1.113883.6.238",
-                                    "code": "2184-0",
+                                    "code": "2069-3",
                                     "display": "Dominican"
                                 }
                             },
@@ -235,8 +235,8 @@
                                 "url": "detailed",
                                 "valueCoding": {
                                     "system": "urn:oid:2.16.840.1.113883.6.238",
-                                    "code": "2148-5",
-                                    "display": "Mexican"
+                                    "code": "2070-1",
+                                    "display": "Dominica Islander"
                                 }
                             },
                             {
