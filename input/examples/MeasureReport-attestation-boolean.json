@@ -21,7 +21,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/uv/deqm/Measure/attestation-boolean-example|1.0.0-ballot",
+  "measure": "http://hl7.org/fhir/uv/deqm/Measure/attestation-boolean-example|1.0.0",
   "date": "2023-04-01",
   "reporter": {
     "reference": "Organization/organization01"
@@ -32,21 +32,10 @@
   },
   "group": [
     {
-			"extension" : [
-				{
-				"url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
-				"valueString" : "group-1"
-				}
-			],
+      "id": "group-1",
       "population": [
         {
 					"id": "initial-population",
-					"extension" : [
-						{
-						"url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-						"valueString" : "initial-population"
-						}
-					],
           "code": {
             "coding": [
               {
