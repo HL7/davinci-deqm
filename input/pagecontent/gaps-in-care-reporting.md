@@ -119,7 +119,7 @@ The `isDocument` in parameter determines which of two shapes the Server returns.
 |`isDocument`|`Bundle.type`|Composition|DetectedIssue|What the Client receives|
 |---|---|---|---|---|
 |`true` (default)|`document`|Required, first entry|Required, one or more per section|The gap determination: the Server states the gap status for each measure|
-|`false`|`collection`|Permitted, not required|Permitted, not required|At minimum the measure calculation: the MeasureReport(s) and ideally the data evaluated to produce them|
+|`false`|`collection`|Not present|Permitted, not required|At minimum the measure calculation: the MeasureReport(s) and ideally the data evaluated to produce them|
 {: .grid}
 
 When `isDocument` is true the bundle must additionally conform to the rules specified for a document bundle, which means it has a `type` of `document` and the DEQM Gaps In Care Composition as its first entry, as well as an identifier with a system and a value, and a `timestamp`.
