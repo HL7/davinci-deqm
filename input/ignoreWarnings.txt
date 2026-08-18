@@ -553,4 +553,6 @@ ERROR: Bundle/sde-example-patient-data-bundle: Bundle.entry[0].resource/*Patient
 # Inherited message
 INFORMATION: StructureDefinition/deqm-caregapremarkpatchparameters: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
+# The globals table is listing QI Core profiles, but this is an internal dependency. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Global.20profiles.20inherited.3F
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 

@@ -204,7 +204,10 @@ For the Gaps in Care Reporting Scenarios, the actors are Clients and Servers.
 
 #### Global Profiles
 
-{% include globals-table-en.xhtml %}
+This implementation guide does not define any global profiles.
+
+<!--Reintroduce once the issue with inheriting globals from internal dependencies is addressed: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Global.20profiles.20inherited.3F/with/617200945 -->
+<!--% lang-fragment globals-table.xhtml %-->
 
 #### IP Statements
 
