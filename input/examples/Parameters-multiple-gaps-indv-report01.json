@@ -1584,7 +1584,7 @@
             }
           },
           {
-            "fullUrl": "https://example.org/fhir/gaps/Organization/organization01",
+            "fullUrl": "http://example.org/fhir/gaps/Organization/organization01",
             "resource": {
               "id": "organization01",
               "meta": {
