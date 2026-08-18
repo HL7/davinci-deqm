@@ -102,11 +102,11 @@ The [care-gaps](OperationDefinition-care-gaps.html) operation returns zero or mo
 
 The [DEQM Gaps in Care Composition Profile] builds on the base FHIR Composition resource, where its type code is constrained to a fixed LOINC code to identify the Composition as a Gaps in Care Report. The `subject` of a Gaps In Care Composition is required, it is used to reference the patient, [QI Core Patient](https://hl7.org/fhir/us/qicore/StructureDefinition-qicore-patient.html), the Gaps in Care Report is for. The Gaps In Care Composition **SHALL** contain one to many section(s). Each `section` has a `focus` element that references an Individual MeasureReport for a specific measure. All Individual MeasureReport referenced **SHALL** be for the same patient specified in the Composition `subject`. Each `section` **SHALL** also contain one or more `entry` of `DetectedIssue` using the [DEQM Gaps In Care DetectedIssue Profile] for the measure regardless of its gap status (e.g., open or closed).
 
-- The Individual MeasureReport(s) **SHALL** conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [CQF Criteria Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria identified by the population criteria id that equals to `Measure.group.population.id`. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this can be represented by having two population reference extensions. One extension has `value` that references the denominator population criteria id and the other extension has `value` that references the numerator population criteria id.  
+- The Individual MeasureReport(s) **SHALL** conform to the [DEQM Individual MeasureReport Profile]. This profile contains an optional extension, [CQF Criteria Reference Extension], on the `evaluatedResource` element. This extension allows the Server to indicate how an evaluatedResource, such as a colonoscopy procedure, was used to produce the measure calculation results by linking it to a specific population criteria. The value of the extension is the `linkId` of the population, stratifier, or supplemental data criteria in which the resource was used. If an evaluatedResource contributes to multiple population criteria such as denominator and numerator, this will be represented by having two population reference extensions, one for each population criteria in which the resource was used.  Note that for backwards-compatibility, systems **MAY** populate the reference using the `id` element if no `linkId` is present.
 
 - The [DEQM Gaps In Care DetectedIssue Profile] has a fixed code CAREGAP indicating the detected issue is in the Care Gaps detected issue category. Each `DetectedIssue` **SHALL** contain at least one `evidence` element. Each evidence **SHALL** provide a detail that references either a DEQM Individual MeasureReport of the measure or a `GuidanceResponse`.  
 
-- The [DEQM Gaps in Care Composition Profile] may also contain all supporting resources referenced by the Composition and its contained measure reports. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
+- The [DEQM Gaps in Care Composition Profile] may also have entries referring to all the supporting resources referenced by the GuidanceResponse, DetectedIssue, and MeasureReport resources. As with other compositions, this resource can contain a narrative which can be displayed as a textual report.
 
 - The `date` element of the MeasureReport resource contains the date the open/closed gap was calculated.
 
@@ -118,7 +118,7 @@ The `isDocument` in parameter determines which of two shapes the Server returns.
 
 |`isDocument`|`Bundle.type`|Composition|DetectedIssue|What the Client receives|
 |---|---|---|---|---|
-|`true` (default)|`document`|Required, first entry|Required, one or more per section|The gap determination: the Server states the gap status for each measure|
+|`true` (default)|`document`|Required, first entry|Required, one or more per section|The gap determination: the Server states the gap status for each measure and ideally the data evaluated to produce them|
 |`false`|`collection`|Not present|Permitted, not required|At minimum the measure calculation: the MeasureReport(s) and ideally the data evaluated to produce them|
 {: .grid}
 
