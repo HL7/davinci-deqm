@@ -1644,10 +1644,6 @@
                 }
               ],
               "resourceType": "Organization"
-            },
-            "request": {
-              "method": "POST",
-              "url": "Organization"
             }
           },
           {
