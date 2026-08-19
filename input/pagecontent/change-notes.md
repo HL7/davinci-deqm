@@ -63,11 +63,11 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    - Change GIC text to reflect optional Composition ([FHIR-48730](https://jira.hl7.org/browse/FHIR-48730))Applied ([here](gaps-in-care-reporting.html#how-to-construct-a-gaps-in-care-report))
    - Added measurereport-category extension to all MeasureReport profiles ([FHIR-46195](https://jira.hl7.org/browse/FHIR-46195))([Applied here](StructureDefinition-deqm-individualmeasurereport.html), [here](StructureDefinition-deqm-dataexchangemeasurereport.html), [here](StructureDefinition-deqm-summarymeasurereport.html), and [here](StructureDefinition-deqm-subjectlistmeasurereport.html))
    - Added SubjectList MeasureReport to the Receiver Server and Reporter Client Capability statements ([FHIR-46482](https://jira.hl7.org/browse/FHIR-46482))([Applied Here](CapabilityStatement-receiver-server.html), [here](CapabilityStatement-reporter-client.html))
-   - Guidance to avoid confusion with same DEQM and base FHIR operation names ([FHIR-49369](https://jira.hl7.org/browse/FHIR-49369))([Applied here](datax.html#deqm-data-exchange-operations-naming))
+   - Guidance to avoid confusion with same DEQM and base FHIR operation names ([FHIR-49369](https://jira.hl7.org/browse/FHIR-49369))
    - The expression for the SubjectList Measure Report deqm-3 seems to be incorrectly written ([FHIR-47452](https://jira.hl7.org/browse/FHIR-47452))Applied ([here](StructureDefinition-deqm-individualmeasurereport.html)), ([here](StructureDefinition-deqm-subjectlistmeasurereport.html)) and ([here](StructureDefinition-deqm-summarymeasurereport.html))
    - change "QI Core" to "QI-Core" ([FHIR-48457](https://jira.hl7.org/browse/FHIR-48457))([Applied here](guidance.html)) and throughout.
    - Figure 1-4 change patient-list to subject-list ([FHIR-48450](https://jira.hl7.org/browse/FHIR-48450))([Applied here](index.html#exchange-scenarios))
-   - Changes to MeasureReport for Attestation example to point to QM Measure PI example. Added guidance around the change.  ([FHIR-48461](https://jira.hl7.org/browse/FHIR-48461))([Applied here](StructureDefinition-deqm-individualmeasurereport.html), [here](StructureDefinition-deqm-summarymeasurereport.html), [here](StructureDefinition-deqm-subjectlistmeasurereport.html), [here](MeasureReport-summ-attestation.html), and [here](guidance.html#group-stratifier-and-population-codes-and-ids))
+   - Changes to MeasureReport for Attestation example to point to QM Measure PI example. Added guidance around the change.  ([FHIR-48461](https://jira.hl7.org/browse/FHIR-48461))([Applied here](StructureDefinition-deqm-individualmeasurereport.html), [here](StructureDefinition-deqm-summarymeasurereport.html), [here](StructureDefinition-deqm-subjectlistmeasurereport.html), and [here](guidance.html#group-stratifier-and-population-codes-and-ids))
    - Reapply isDocument to $care-gaps ([FHIR-49659](https://jira.hl7.org/browse/FHIR-49659))
    - Versions needed in URLs for MeasureReport.measure ([FHIR-47535](https://jira.hl7.org/browse/FHIR-47535)) Applied([here](StructureDefinition-deqm-dataexchangemeasurereport.html)), ([here](StructureDefinition-deqm-individualmeasurereport.html)),([here](StructureDefinition-deqm-subjectlistmeasurereport.html)),([here](StructureDefinition-deqm-summarymeasurereport.html)), and numerous examples.
    - Made valueCodeableConcept in measureScoring profile 1..1, required binding. ([FHIR-48910](https://jira.hl7.org/browse/FHIR-48910))([Applied here](StructureDefinition-deqm-measureScoring.html))
@@ -124,9 +124,9 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
    -  Added populationDescription extension definition, and inclusion in MeasureReport profiles. ([FHIR-43324](https://jira.hl7.org/browse/FHIR-43324))  
    -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-deqm-reportingProgram.html))
    - Updated the parameter descriptions for reportType, subject, and the return ([FHIR-46253](https://jira.hl7.org/browse/FHIR-46253))([Applied here](OperationDefinition-evaluate.html))
-   - Updated example to make patient02 patient01 and datax-measurereport02 datax-measurereport01 ([FHIR-46162](https://jira.hl7.org/browse/FHIR-46162))([Applied here](Parameters-mrp-submit-obs.json.html))
+   - Updated example to make patient02 patient01 and datax-measurereport02 datax-measurereport01 ([FHIR-46162](https://jira.hl7.org/browse/FHIR-46162))
    - Added boolean as a possible value for alternateScore extension and added a summary measureReport using that scoring type ([FHIR-46232](https://jira.hl7.org/browse/FHIR-46232))
-   - Added a new operation to allow submission of multiple measures as a bundle ([FHIR-46373](https://jira.hl7.org/browse/FHIR-46373))([Applied here](OperationDefinition-submit-data.html))
+   - Added a new operation to allow submission of multiple measures as a bundle ([FHIR-46373](https://jira.hl7.org/browse/FHIR-46373))
    - Added IN parameter to $care-gaps to specify whether a Gaps in Care Composition is returned in the Bundle and updated profile, and documentation to align ([FHIR-46027](https://jira.hl7.org/browse/FHIR-46027))
    - Created 3 new extensions for numeratorMembership, denominatorMembership, and measurePopulationMembership and added to all 3 Measure Report profiles ([FHIR-44736](https://jira.hl7.org/browse/FHIR-44736))
    - Added section about Duplicate Data to the Guidance page ([FHIR-40511](https://jira.hl7.org/browse/FHIR-40511))([Applied here](guidance.html#duplicate-data))
@@ -206,11 +206,11 @@ The Data Exchange For Quality Measures Implementation Guide was developed under 
     -  Remove Coverage from Resource Diagram ([FHIR-41299](https://jira.hl7.org/browse/FHIR-41299))
     -  Add GuidanceResponse example to Examples page ([FHIR-41315](https://jira.hl7.org/browse/FHIR-41315))
     -  Summary profile requires a measureScore ([FHIR-41656](https://jira.hl7.org/browse/FHIR-41656))
-    -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))([Applied here](background.html#quality-improvement-core-implementation-guide-qi-core))
+    -  Remove QUICK reference (STU4 QA) ([FHIR-41521](https://jira.hl7.org/browse/FHIR-41521))
     -  Numerator-xxx codes are distracting in MeasureReport example ([FHIR-42954](https://jira.hl7.org/browse/FHIR-42954))([Applied here](Bundle-multiple-summ-report.html)) and ([here](MeasureReport-summ-medicare-stratification-example.html))
-    -  Criteria Reference Extension needs to be more generic and reusable across IGs ([FHIR-41242](https://jira.hl7.org/browse/FHIR-41242) Changes applied in json files
+    -  Criteria Reference Extension needs to be more generic and reusable across IGs ([FHIR-41242](https://jira.hl7.org/browse/FHIR-41242)) Changes applied in json files
     -  In order for Individual MeasureReport to be the equivalent of QRDA Category 1, it needs to share the evaluatedResources ([FHIR-42812](https://jira.hl7.org/browse/FHIR-42812))([Applied here](indv-reporting.html#request-body))
-    -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))([Applied here](indv-reporting.html#relationship-between-qi-core-deqm-and-cqms)) and ([here](summary-reporting.html#qualityMeasurementStandardsLandscapeSummary)
+    -  Add link to referenced section of IG ([FHIR-43011](https://jira.hl7.org/browse/FHIR-43011))
     -  Quality Program value set in Reporting Program extension should be bound less strictly ([FHIR-43321](https://jira.hl7.org/browse/FHIR-43321))([Applied here](StructureDefinition-deqm-reportingProgram.html))
 
 ### Changes and Updates for Version 3.1.0
@@ -337,7 +337,7 @@ The first official published version of the DEQM IG for FHIR R4.
     - Add required [`id`](StructureDefinition-deqm-summarymeasurereport-definitions.html#MeasureReport.group.population.code) element to the MeasureReport profiles ([FHIR-25716](https://jira.hl7.org/browse/FHIR-25716))
     - [Document](datax.html#provenance) that $submit-data and $collect-data should support the use of the X-Provenance header ([FHIR-25624](https://jira.hl7.org/browse/FHIR-25624))
     - A extensions for [software and version](StructureDefinition-deqm-dataexchangemeasurereport-definitions.html#MeasureReport.extension:software) ([FHIR-25721](https://jira.hl7.org/browse/FHIR-25721))
-    - Define [default profiles](guidance.html#default-profiles-used-in-the-evaluation-of-a-measure) for this implementation guide ([FHIR-27818](https://jira.hl7.org/browse/FHIR-27818))
+    - Define default profiles for this implementation guide ([FHIR-27818](https://jira.hl7.org/browse/FHIR-27818))
     - Add [`MeasureReport.group.population.count` as 0..1 Must Support](StructureDefinition-deqm-individualmeasurereport.html#profile) for individual report profile. ([FHIR-27862](https://jira.hl7.org/browse/FHIR-27862))
     - Add [guidance on standard error response](datax.html#usage-1) to the various transactions described in the framework. ([FHIR-18720](https://jira.hl7.org/browse/FHIR-18720))
     - Clarified retrospective reporting definition ([FHIR-28993](https://jira.hl7.org/browse/FHIR-28993))
