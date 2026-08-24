@@ -1,6 +1,65 @@
 
 The Data Exchange For Quality Measures Implementation Guide was developed under the  [Davinci Project](#)
 
+### Changes for STU1
+
+#### Non-compatible Changes
+
+* [FHIR-58211](https://jira.hl7.org/browse/FHIR-58211): Correct measure operation parameters
+* [FHIR-57140](https://jira.hl7.org/browse/FHIR-57140): Change SHOULD to SHALL 
+* [FHIR-57066](https://jira.hl7.org/browse/FHIR-57066): update operation parameters with R6
+* [FHIR-56483](https://jira.hl7.org/browse/FHIR-56483): remove references to DEQM $submit-data
+
+#### Compatible Substantive Changes
+
+* [FHIR-57893](https://jira.hl7.org/browse/FHIR-57893): Evaluate return bundle documentation clarification
+* [FHIR-57174](https://jira.hl7.org/browse/FHIR-57174): Stabilize Bulk and Operation Guidance
+* [FHIR-56506](https://jira.hl7.org/browse/FHIR-56506): deprecated extension for DEQM Population Description
+* [FHIR-56320](https://jira.hl7.org/browse/FHIR-56320): Replace inline stratifier/supplementalData parameters with $compose-measure
+* [FHIR-56296](https://jira.hl7.org/browse/FHIR-56296): Describe how in Gaps in Care reporting, a payer can exchange with a provider using only the Individual Measure Report
+
+#### Non-substantive Changes
+
+* [FHIR-58296](https://jira.hl7.org/browse/FHIR-58296): Constraint deqm-6 does not account for the possibility of an empty initial population
+* [FHIR-57871](https://jira.hl7.org/browse/FHIR-57871): Clarity on subjectGroup documentation
+* [FHIR-57628](https://jira.hl7.org/browse/FHIR-57628): Update 'Example Use Cases' workflow diagrams
+* [FHIR-57554](https://jira.hl7.org/browse/FHIR-57554): Update DEQM Background page
+* [FHIR-57202](https://jira.hl7.org/browse/FHIR-57202): default profiles for Data Exchange
+* [FHIR-57200](https://jira.hl7.org/browse/FHIR-57200): The diagrams numbering are off
+* [FHIR-57199](https://jira.hl7.org/browse/FHIR-57199): Quality Measurement and Data Model Standards Landscapes
+* [FHIR-57149](https://jira.hl7.org/browse/FHIR-57149): add examples 
+* [FHIR-57146](https://jira.hl7.org/browse/FHIR-57146): add implmentation note for CPT/HCPCS 
+* [FHIR-57143](https://jira.hl7.org/browse/FHIR-57143): Add a provider-burden guardrail for bound data requests 
+* [FHIR-57142](https://jira.hl7.org/browse/FHIR-57142): add guidance in gaps reports 
+* [FHIR-57016](https://jira.hl7.org/browse/FHIR-57016): Enhance the figure for gap reporting
+* [FHIR-57014](https://jira.hl7.org/browse/FHIR-57014): The QRDA link is broken.
+* [FHIR-56927](https://jira.hl7.org/browse/FHIR-56927): Unclear sentence
+* [FHIR-56926](https://jira.hl7.org/browse/FHIR-56926): Missing closing quotation mark around "snapshot"
+* [FHIR-56925](https://jira.hl7.org/browse/FHIR-56925): Typo: "certication"; "CERHT" typo 
+* [FHIR-56924](https://jira.hl7.org/browse/FHIR-56924): QA report shows 258 validation errors
+* [FHIR-56910](https://jira.hl7.org/browse/FHIR-56910): Gaps in Care Reporting section changes
+* [FHIR-56909](https://jira.hl7.org/browse/FHIR-56909): Subject List Reporting section changes
+* [FHIR-56908](https://jira.hl7.org/browse/FHIR-56908): Summary Measure Reporting section changes
+* [FHIR-56906](https://jira.hl7.org/browse/FHIR-56906): Individual Measure Reporting section changes
+* [FHIR-56902](https://jira.hl7.org/browse/FHIR-56902): Reference measures consistentlyÂ 
+* [FHIR-56901](https://jira.hl7.org/browse/FHIR-56901): 3.1.8 Default ProfilesÂ 
+* [FHIR-56900](https://jira.hl7.org/browse/FHIR-56900): 3.1.6 Referential Integrity in Bundles bad link
+* [FHIR-56899](https://jira.hl7.org/browse/FHIR-56899): 3.1.4.2 Duplicate Data
+* [FHIR-56898](https://jira.hl7.org/browse/FHIR-56898): 3.1.4.4 Data Quality
+* [FHIR-56897](https://jira.hl7.org/browse/FHIR-56897): 3.1.4 DEQM MeasureReport Profiles
+* [FHIR-56896](https://jira.hl7.org/browse/FHIR-56896): CQL reference in Preconditions and assumptions
+* [FHIR-56895](https://jira.hl7.org/browse/FHIR-56895): Clearly define roles and use consistently
+* [FHIR-56893](https://jira.hl7.org/browse/FHIR-56893): Figure 1-6 Reporting Scenarios
+* [FHIR-56892](https://jira.hl7.org/browse/FHIR-56892): Add explanatory text to Figure 1-5 (Exchange Scope)
+* [FHIR-56891](https://jira.hl7.org/browse/FHIR-56891): Home page TCs
+* [FHIR-56815](https://jira.hl7.org/browse/FHIR-56815): Operation Definitions hould be linked
+* [FHIR-56814](https://jira.hl7.org/browse/FHIR-56814): Support Conformance verbs tagging
+* [FHIR-56803](https://jira.hl7.org/browse/FHIR-56803): A Gaps in Care Bundle should include all Resources referenced by the MeasureReport
+* [FHIR-56800](https://jira.hl7.org/browse/FHIR-56800): Sentence cut off. Missing ending in paragraph.
+* [FHIR-56465](https://jira.hl7.org/browse/FHIR-56465): links go to HL7 page instead of specific IGs
+* [FHIR-56279](https://jira.hl7.org/browse/FHIR-56279): Clarify guidance on score calculation
+
+
 ### Changes for STU1 Ballot
 
 #### Compatible, Substantive Changes
