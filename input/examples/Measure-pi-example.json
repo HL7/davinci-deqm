@@ -170,7 +170,7 @@
             ]
           },
           "criteria": {
-            "language": "text/cql-identifier",
+            "language": "text/plain",
             "expression": "Initial Population"
           }
         },
@@ -193,7 +193,7 @@
           },
           "description": "The number of prescriptions in the denominator generated and transmitted electronically using CEHRT.",
           "criteria": {
-            "language": "text/cql-identifier",
+            "language": "text/plain",
             "expression": "Numerator"
           }
         },
@@ -216,7 +216,7 @@
           },
           "description": "Number of prescriptions written for drugs requiring a prescription in order to be dispensed other than controlled substances during the performance period; or number of prescriptions written for drugs requiring a prescription in order to be dispensed during the performance period.",
           "criteria": {
-            "language": "text/cql-identifier",
+            "language": "text/plain",
             "expression": "Denominator"
           }
         }

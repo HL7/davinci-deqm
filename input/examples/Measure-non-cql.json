@@ -74,6 +74,10 @@
 	"group": [
 		{
 			"extension": [
+                {
+                    "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Measure.group.linkId",
+                    "valueString": "Ventilators"
+                },
 				{
 					"extension": [
 						{
@@ -146,6 +150,12 @@
 			},
 			"population": [
 				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Measure.group.population.linkId",
+							"valueString": "Mechanical Ventilators"
+						}
+					],
 					"code": {
 						"coding": [
 							{
@@ -169,6 +179,12 @@
 					}
 				},
 				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Measure.group.population.linkId",
+							"valueString": "Mechanical Ventilators in Use"
+						}
+					],
 					"code": {
 						"coding": [
 							{
@@ -192,6 +208,12 @@
 					}
 				},
 				{
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Measure.group.population.linkId",
+							"valueString": "Mechanical Ventilators Available"
+						}
+					],
 					"code": {
 						"coding": [
 							{

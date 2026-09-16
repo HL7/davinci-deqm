@@ -88,7 +88,7 @@
 						"extension": [
 							{
 								"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.linkId",
-								"valueString": "group-1"
+								"valueString": "primary"
 							}
 						],
 						"population": [
@@ -96,7 +96,7 @@
 								"extension": [
 									{
 										"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-										"valueString": "initial-population"
+										"valueString": "primary-exm55-initial-population"
 									}
 								],
 								"code": {
@@ -113,7 +113,7 @@
 								"extension": [
 									{
 										"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-										"valueString": "measure-population"
+										"valueString": "primary-exm55-measure-population"
 									}
 								],
 								"code": {
@@ -130,7 +130,7 @@
 								"extension": [
 									{
 										"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-										"valueString": "measure-population-exclusion"
+										"valueString": "primary-exm55-measure-population-exclusion"
 									}
 								],
 								"code": {
@@ -152,7 +152,7 @@
 								"extension": [
 									{
 										"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.linkId",
-										"valueString": "Stratification 1"
+										"valueString": "primary-exm55-stratification-1"
 									}
 								],
 								"code": [
@@ -181,7 +181,7 @@
 												"extension": [
 													{
 														"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
-														"valueString": "initial-population"
+														"valueString": "primary-exm55-initial-population"
 													}
 												],
 												"code": {
@@ -195,10 +195,10 @@
 												"count": 1747
 											},
 											{
-													"extension": [
+												"extension": [
 													{
 														"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
-														"valueString": "denominator"
+														"valueString": "primary-exm55-denominator"
 													}
 												],
 												"code": {
@@ -212,10 +212,10 @@
 												"count": 392
 											},
 											{
-													"extension": [
+												"extension": [
 													{
 														"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
-														"valueString": "numerator"
+														"valueString": "primary-exm55-numerator"
 													}
 												],
 												"code": {
@@ -240,7 +240,7 @@
 								"extension": [
 									{
 										"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.linkId",
-										"valueString": "Stratification 2"
+										"valueString": "primary-exm55-stratification-1"
 									}
 								],
 								"code": [
@@ -270,7 +270,7 @@
 												"extension": [
 													{
 														"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
-														"valueString": "initial-population"
+														"valueString": "primary-exm55-initial-population"
 													}
 												],
 												"code": {
@@ -287,7 +287,7 @@
 												"extension": [
 													{
 														"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
-														"valueString": "denominator"
+														"valueString": "primary-exm55-denominator"
 													}
 												],
 												"code": {
@@ -304,7 +304,7 @@
 												"extension": [
 													{
 														"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.stratum.population.linkId",
-														"valueString": "numerator"
+														"valueString": "primary-exm55-numerator"
 													}
 												],
 												"code": {
@@ -329,7 +329,7 @@
 								"extension": [
 									{
 										"url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.stratifier.linkId",
-										"valueString": "Stratification 3"
+										"valueString": "primary-exm55-stratification-3"
 									}
 								],
 								"code": [

@@ -48,7 +48,7 @@
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "initial-population"
+                            "valueString": "Mechanical Ventilators"
                         }
                     ],
                     "code": {
@@ -65,14 +65,13 @@
                         ],
 						"text": "Total number of ventilators"
                     },
-                    "id": "denominator",
                     "count": 100
                 },
                 {
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "numerator"
+                            "valueString": "Mechanical Ventilators in Use"
                         }
                     ],
                     "code": {
@@ -89,14 +88,13 @@
 						],
 						"text": "Total number of ventilators in use"
                     },
-                    "id": "numerator",
                     "count": 60
                 },
                 {
                     "extension": [
                         {
                             "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.group.population.linkId",
-                            "valueString": "numerator-complement"
+                            "valueString": "Mechanical Ventilators Available"
                         }
                     ],
                     "code": {
@@ -113,7 +111,6 @@
 						],
 						"text": "Total number of ventilators not presently in use."
                     },
-                    "id": "numerator-complement",
                     "count": 40
                 }
             ],
