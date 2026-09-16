@@ -410,3 +410,17 @@ WARNING: Measure/FHIRPath-example: Measure.group[0].population[0].criteria: The 
 WARNING: Measure/FHIRPath-example: Measure.group[0].population[1].criteria: The expression language text/fhirpath is not supported, so can't be validated
 WARNING: Measure/FHIRPath-example: Measure.group[0].population[2].criteria: The expression language text/fhirpath is not supported, so can't be validated
 
+# Verified these stratifiers are present, there is a bug in the measure report validator, working on a fix, but the content is correct
+ERROR: MeasureReport/summ-medicare-stratification-example: MeasureReport.group[0].stratifier[1]: The linkId 'Stratification 2' for this group stratifier has no match in the measure definition
+ERROR: MeasureReport/summ-medicare-stratification-example: MeasureReport.group[0].stratifier[1]: The code for this group stratifier has no match in the measure definition
+ERROR: MeasureReport/summ-medicare-stratification-example: MeasureReport.group[0].stratifier[2]: The linkId 'Stratification 3' for this group stratifier has no match in the measure definition
+ERROR: MeasureReport/summ-medicare-stratification-example: MeasureReport.group[0].stratifier[2]: The code for this group stratifier has no match in the measure definition
+ERROR: MeasureReport/summ-medicare-stratification-example: MeasureReport.group[0]: The MeasureReport does not include a stratifier for the stratifier with code 'http://example.org/stratification#Stratification 2' (id = 'null')
+ERROR: MeasureReport/summ-medicare-stratification-example: MeasureReport.group[0]: The MeasureReport does not include a stratifier for the stratifier with code 'http://example.org/stratification#Stratification 3' (id = 'null')
+ERROR: Bundle/multiple-summ-report: Bundle.entry[1].resource/*MeasureReport/summ-medicare-stratification-example*/.group[0].stratifier[1]: The linkId 'Stratification 2' for this group stratifier has no match in the measure definition
+ERROR: Bundle/multiple-summ-report: Bundle.entry[1].resource/*MeasureReport/summ-medicare-stratification-example*/.group[0].stratifier[1]: The code for this group stratifier has no match in the measure definition
+ERROR: Bundle/multiple-summ-report: Bundle.entry[1].resource/*MeasureReport/summ-medicare-stratification-example*/.group[0].stratifier[2]: The linkId 'Stratification 3' for this group stratifier has no match in the measure definition
+ERROR: Bundle/multiple-summ-report: Bundle.entry[1].resource/*MeasureReport/summ-medicare-stratification-example*/.group[0].stratifier[2]: The code for this group stratifier has no match in the measure definition
+ERROR: Bundle/multiple-summ-report: Bundle.entry[1].resource/*MeasureReport/summ-medicare-stratification-example*/.group[0]: The MeasureReport does not include a stratifier for the stratifier with code 'http://example.org/stratification#Stratification 2' (id = 'null')
+ERROR: Bundle/multiple-summ-report: Bundle.entry[1].resource/*MeasureReport/summ-medicare-stratification-example*/.group[0]: The MeasureReport does not include a stratifier for the stratifier with code 'http://example.org/stratification#Stratification 3' (id = 'null')
+
